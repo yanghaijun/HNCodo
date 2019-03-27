@@ -1,0 +1,46 @@
+[data-ysp-modelid="login"] div.login {
+  width: 80%;
+  background: pink;
+  margin: 100px auto;
+}
+[data-ysp-modelid="login"] div.login > div:nth-child(1) {
+  text-align: center;
+  font-size: 15px;
+  color: blue;
+}
+[data-ysp-modelid="index"] div.index {
+  margin: 10px;
+}
+[data-ysp-modelid="index"] div.index > li {
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+[data-ysp-modelid="index"] div.index > li > span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+[data-ysp-modelid="index"] div.index > li > span > span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+}
+[data-ysp-modelid="index"] div.index > li > span .Upcoming {
+  background: url("../local/img/seal.png") no-repeat center;
+}
+[data-ysp-modelid="index"] div.index > li > span .loan {
+  background: url("../local/img/seal.png") no-repeat center;
+}
+[data-ysp-modelid="index"] div.index > li > span .Reimburse {
+  background: url("../local/img/seal.png") no-repeat center;
+}
+[data-ysp-modelid="index"] div.index > li > span .Inquire {
+  background: url("../local/img/seal.png") no-repeat center;
+}

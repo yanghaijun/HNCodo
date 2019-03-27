@@ -1,0 +1,163 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:30002/ReimbursePlatform/",
+  "jsFile": "index.js",
+  "chineseName": "登录",
+  "description": "",
+  "controls": {
+    "control0_MNFEsK": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"loginbox\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              11
+            ],
+            "value": "DIV.bg DIV"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_MNFEsK"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context0_MvwbK9": {
+      "controls": [
+        "control0_MNFEsK"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow0_3xDAmq": {
+      "toContexts": [
+        {
+          "toContextId": "context0_MvwbK9"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_QZdVHm": {
+      "contextId": "context0_MvwbK9",
+      "layout": [
+        {
+          "id": "uiControl0_HCHJWN",
+          "controlId": "control0_MNFEsK",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_HCHJWN",
+                "onGetTemplate": "getTemplate_uiControl0_HCHJWN"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_MvwbK9": [
+          "报销业务管理系统--登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_MvwbK9": [
+          "59.110.171.69:30002/ReimbursePlatform/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_MvwbK9": [
+          [
+            "loginbox",
+            "loginform",
+            "psw",
+            "tiJiaoForDengLu",
+            "userName"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_MvwbK9": [
+          [
+            "bg",
+            "btn",
+            "btn-info",
+            "control-group",
+            "controls",
+            "errorInfo",
+            "flip-link",
+            "form-actions",
+            "form-vertical",
+            "main_input_box",
+            "normal_text",
+            "psw",
+            "pull-left",
+            "userName"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_MvwbK9": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/INPUT-submit",
+            "FORM/DIV/DIV",
+            "FORM/DIV/H3",
+            "FORM/DIV/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

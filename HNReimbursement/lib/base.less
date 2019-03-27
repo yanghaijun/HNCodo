@@ -1,0 +1,67 @@
+// base.less 是整个工程全局的样式文件，会作用到所有的页面模板中
+// Less 的语法与 CSS 兼容，可以直接用 CSS 语法进行编写
+// 如需了解详情，请访问 http://www.lesscss.net/
+// 发布后，base.less 被编译成 base.css 文件
+// .editor-state	{
+//   background: #eeeeee;
+// }
+[data-ysp-modelid="login"]	{
+  div.login	{
+    width: 80%;
+    background: pink;
+    margin: 100px auto;
+    >div:nth-child(1)	{
+      text-align: center;
+      font-size: 15px;
+      color: blue;
+    }
+    // >div:nth-child(2)	{
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   >input	{
+    //     width: 100%;
+    //     border: none;
+    //     border-bottom: 1px solid #eeeeee;
+    //     margin-top: 10px;
+    //   }
+    // }
+  }
+}
+[data-ysp-modelid="index"]	{
+  div.index	{
+    margin: 10px;
+    >li	{
+      list-style: none;
+      height: 120px;
+      width: 100%;
+      text-align: center;
+      background: #fff;
+      margin-bottom: 8px;
+      font-weight: bold;
+      >span	{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+        >span	{
+          display: block;
+          width: 50px;
+          height: 50px;
+          margin: 10px auto;
+        }
+        .Upcoming {
+          background: url("../local/img/seal.png") no-repeat center;
+        }
+        .loan	{
+          background: url("../local/img/seal.png") no-repeat center;
+        }
+        .Reimburse {
+          background: url("../local/img/seal.png") no-repeat center;
+        }
+        .Inquire	{
+          background: url("../local/img/seal.png") no-repeat center;
+        }
+      }
+    }
+  }//index页面布局
+}
