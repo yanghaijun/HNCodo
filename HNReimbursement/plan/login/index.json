@@ -3,6 +3,9 @@
   "id": "login",
   "targetURL": "http://59.110.171.69:30002/ReimbursePlatform/",
   "jsFile": "index.js",
+  "requires": {
+    "Home": "../Home/index.json"
+  },
   "chineseName": "登录",
   "description": "",
   "controls": {
@@ -42,7 +45,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     }
@@ -61,6 +64,20 @@
       "toContexts": [
         {
           "toContextId": "context0_MvwbK9"
+        }
+      ]
+    },
+    "flow1_F9nGTS": {
+      "fromContextId": "context0_MvwbK9",
+      "fromAction": "doAction",
+      "fromControlId": "control0_MNFEsK",
+      "toContexts": [
+        {
+          "toContextId": "context0_MvwbK9"
+        },
+        {
+          "toContextId": "context1_IaSPKS",
+          "toModelId": "Home"
         }
       ]
     }

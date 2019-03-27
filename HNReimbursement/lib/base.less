@@ -8,27 +8,45 @@
 [data-ysp-modelid="login"]	{
   div.login	{
     width: 80%;
-    background: pink;
     margin: 100px auto;
     >div:nth-child(1)	{
       text-align: center;
-      font-size: 15px;
-      color: blue;
+      font-size: 25px;
+      color: #0a73cc;
+      font-weight: bold;
     }
-    // >div:nth-child(2)	{
-    //   display: flex;
-    //   flex-wrap: wrap;
-    //   >input	{
-    //     width: 100%;
-    //     border: none;
-    //     border-bottom: 1px solid #eeeeee;
-    //     margin-top: 10px;
-    //   }
-    // }
+    >div:nth-child(2)	{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 80px 0px 30px 0px;
+      >input	{
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #eeeeee;
+        height: 50px;
+      }
+    }
+    >div:nth-child(3)	{
+      display: flex;
+      justify-content: space-between;
+      >button	{
+        width: 45%;
+        height: 45px;
+        border: 1px solid #0a73cc;
+        color: #fff;
+        background: #0a73cc;
+        border-radius: 3px;
+        font-size: 17px;
+      }
+    }
   }
 }
-[data-ysp-modelid="index"]	{
-  div.index	{
+//登录页
+.editor-state	{
+  background: #eeeeee;
+}
+[data-ysp-modelid="Home"]	{
+  div.home	{
     margin: 10px;
     >li	{
       list-style: none;
@@ -36,7 +54,7 @@
       width: 100%;
       text-align: center;
       background: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-weight: bold;
       >span	{
         display: inline-block;
@@ -48,20 +66,22 @@
           width: 50px;
           height: 50px;
           margin: 10px auto;
+          border-radius: 10px;
         }
         .Upcoming {
-          background: url("../local/img/seal.png") no-repeat center;
+          background: url("../local/img/Upcoming.png") no-repeat center;
         }
         .loan	{
-          background: url("../local/img/seal.png") no-repeat center;
+          background: url("../local/img/loan.png") no-repeat center;
         }
         .Reimburse {
-          background: url("../local/img/seal.png") no-repeat center;
+          background: url("../local/img/Reimburse.png") no-repeat center;
         }
         .Inquire	{
-          background: url("../local/img/seal.png") no-repeat center;
+          background: url("../local/img/Inquire.png") no-repeat center;
         }
       }
     }
   }//index页面布局
 }
+//首页
