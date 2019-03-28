@@ -1,63 +1,18 @@
 {
   "version": "0.1",
-  "id": "Home",
-  "targetURL": "http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action",
+  "id": "reimburse",
+  "targetURL": "http://59.110.171.69:30002/ReimbursePlatform/myReimburse/index.action",
   "jsFile": "index.js",
-  "requires": {
-    "EmployeeLoan": "../EmployeeLoan/index.json",
-    "reimburse": "../reimburse/index.json"
-  },
-  "chineseName": "首页",
+  "chineseName": "报销",
   "description": "",
+  "shouldLogin": false,
+  "shouldReturnOriginalPage": false,
+  "firstPaintEnable": false,
   "controls": {
-    "control1_EbdNUR": {
+    "control5_KcRRt1": {
       "location": {
         "data": {
-          "tagName": "UL"
-        },
-        "userData": {
-          "data": [
-            {
-              "method": "XPath",
-              "value": ""
-            }
-          ],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 3,
-            "value": [
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]",
-              "descendant::UL[@id=\"navigate\"]"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control1_EbdNUR"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
-    "control2_SRXzDn": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
+          "tagName": "HTML"
         },
         "userData": {
           "data": [],
@@ -65,140 +20,58 @@
         },
         "locators": [
           {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "BODY.mainBody DIV.header"
-          },
-          {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]"
+            "value": "/HTML[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control2_SRXzDn"
+        "onGetData": "getData_control5_KcRRt1"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
-    },
-    "control3_huwEtx": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "我的待办"
-              ],
-              "visText": [
-                "我的待办"
-              ]
-            }
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.m_content_inner_main DIV.breadcrumb SPAN.path"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "text": " 我的待办 ",
-      "frameXPath": ""
     }
   },
   "contexts": {
-    "context1_IaSPKS": {
+    "context3_F61MQD": {
       "controls": [
-        "control1_EbdNUR",
-        "control2_SRXzDn"
+        "control5_KcRRt1"
       ],
-      "anchors": [
-        "control3_huwEtx"
-      ],
+      "anchors": [],
       "urlAnchor": []
     }
   },
   "flows": {
-    "flow2_ELFhZb": {
-      "toContexts": [
-        {
-          "toContextId": "context1_IaSPKS"
-        }
-      ]
-    },
-    "flow3_CfqaoQ": {
-      "fromContextId": "context1_IaSPKS",
+    "flow5_yvE8zc": {
+      "fromContextId": "context3_F61MQD",
       "fromAction": "doAction",
-      "fromControlId": "control1_EbdNUR",
+      "fromControlId": "control5_KcRRt1",
       "toContexts": [
         {
-          "toContextId": "context1_IaSPKS"
-        },
-        {
-          "toContextId": "context2_6szGT0",
-          "toModelId": "EmployeeLoan"
-        },
-        {
-          "toContextId": "context3_F61MQD",
-          "toModelId": "reimburse"
+          "toContextId": "context3_F61MQD"
         }
       ]
     }
   },
   "pages": {
-    "page1_8qaUma": {
-      "contextId": "context1_IaSPKS",
+    "page3_3CL8lr": {
+      "contextId": "context3_F61MQD",
       "layout": [
         {
-          "id": "uiControl2_zvx70n",
-          "controlId": "control2_SRXzDn",
+          "id": "uiControl4_q5ws8Z",
+          "controlId": "control5_KcRRt1",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl2_zvx70n",
-                "onGetTemplate": "getTemplate_uiControl2_zvx70n"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl1_oTfUO0",
-          "controlId": "control1_EbdNUR",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl1_oTfUO0",
-                "onGetTemplate": "getTemplate_uiControl1_oTfUO0"
+                "onDoAction": "doAction_uiControl4_q5ws8Z",
+                "onGetTemplate": "getTemplate_uiControl4_q5ws8Z"
               }
             }
           }
@@ -209,21 +82,22 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context1_IaSPKS": [
+        "context3_F61MQD": [
           "首页"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context1_IaSPKS": [
+        "context3_F61MQD": [
+          "59.110.171.69:30002/ReimbursePlatform/myReimburse/index.action",
           "59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context1_IaSPKS": [
+        "context3_F61MQD": [
           [
             "DataTables_Table__paginate",
             "_easyui_combobox_",
@@ -250,27 +124,25 @@
             "packUp",
             "page",
             "pageSizes",
+            "processType",
             "query_hint",
-            "rpName",
             "search",
             "startAmount",
             "startDate",
             "tableList",
             "tempCode",
-            "totalPage",
-            "type"
+            "totalPage"
           ]
         ]
       }
     },
     "page/classes": {
       "contexts": {
-        "context1_IaSPKS": [
+        "context3_F61MQD": [
           [
             "Wdate",
             "accountHeader",
             "alignC",
-            "alignL",
             "attachment_myQuery_hint",
             "black",
             "bold",
@@ -278,6 +150,8 @@
             "bt",
             "bt_green",
             "clearB",
+            "col_duckGreen",
+            "col_yellow",
             "combo",
             "combo-arrow",
             "combo-f",
@@ -290,7 +164,6 @@
             "combobox-group",
             "combobox-item",
             "da_content_div_bg",
-            "disabled",
             "droppable",
             "easyui-combobox",
             "ellipsis",
@@ -305,6 +178,8 @@
             "input_table",
             "list_Table",
             "logo",
+            "m_content",
+            "m_content_inner",
             "m_content_inner_main",
             "m_content_main",
             "main_wrap",
@@ -343,7 +218,7 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context1_IaSPKS": [
+        "context3_F61MQD": [
           [
             "-/-/DIV",
             "-/-/FORM",
@@ -364,8 +239,6 @@
             "DIV/DIV/FORM",
             "DIV/DIV/H1",
             "DIV/DIV/IMG",
-            "DIV/DIV/INPUT-hidden",
-            "DIV/DIV/LINK",
             "DIV/DIV/SPAN",
             "DIV/DIV/STYLE",
             "DIV/DIV/TABLE",
@@ -394,6 +267,7 @@
             "TR/TD/A",
             "TR/TD/DIV",
             "TR/TD/INPUT-button",
+            "TR/TD/INPUT-hidden",
             "TR/TD/INPUT-null",
             "TR/TD/INPUT-reset",
             "TR/TD/INPUT-text",
