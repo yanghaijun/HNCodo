@@ -1,7 +1,7 @@
 {
   "special_models": [
     {
-      "path": "plan/login/index.json"
+      "path": "plan/Login/index.json"
     }
   ],
   "common_js": [
@@ -10,27 +10,12 @@
     },
     {
       "path": "lib/customTemplate.js"
-    },
-    {
-      "path": "lib/amazeui.touch2.min.js",
-      "sourceType": "local",
-      "target": "face"
     }
   ],
   "common_css": [
     {
       "path": "lib/base.css"
-    },
-    {
-      "path": "lib/amazeui.touch2.min.css",
-      "sourceType": "local",
-      "target": "face"
-    },
-    {
-      "path": "lib/amazeui.touch1.override.css",
-      "sourceType": "local",
-      "target": "face"
     }
   ],
-  "path": "file://D:/Documents/enterplorer/enterprises/5ad86e209c7f5f0ec33dec22/apps/HNReimbursement/common.json"
+  "path": "file:///Users/yuhao/Documents/enterplorer/enterprises/577dea5f65cde032c3cb2145/apps/HNJT/common.json"
 }

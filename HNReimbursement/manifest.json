@@ -6,16 +6,69 @@
   "description": "",
   "options": {
     "resource_intercept": {
-      "type": [],
+      "type": [
+        "css"
+      ],
       "ignore": []
     },
-    "resource_inject": []
+    "resource_inject": [],
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/59\\.110\\.171\\.69:30002.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; InfoPath.3; hwvcloud4; hwcloud4)"
   },
-  "override_urls": [],
-  "adapter_urls": [],
-  "name": "华能报销系统",
-  "default_url": "http://59.110.171.69:30002/ReimbursePlatform/",
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/http:\\/\\/59\\.110\\.171\\.69:30002\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/attachment\\.js\\?.*"
+      ],
+      "target_url": "override/attachment.js",
+      "default_url": "http://59.110.171.69:30002/ReimbursePlatform/resources/scripts/reimburse/attachment.js?randomId=0.9316600108985983"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:30002\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/bill\\/alertBox\\.js"
+      ],
+      "target_url": "override/alertBox.js",
+      "default_url": "http://59.110.171.69:30002/ReimbursePlatform/resources/scripts/reimburse/bill/alertBox.js"
+    }
+  ],
+  "adapter_urls": [
+    {
+      "title": "Login",
+      "url": "adapter://NTSS-beta/plan/Login/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:30002\\/ReimbursePlatform\\/index\\.js.*",
+        "^http:\\/\\/59\\.110\\.171\\.69:30002\\/ReimbursePlatform.*"
+      ],
+      "demo": []
+    },
+    {
+      "title": "TodoList",
+      "url": "adapter://NTSS-beta/plan/TodoList/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:30002\\/ReimbursePlatform\\/myReimburse\\/index\\.action"
+      ],
+      "demo": []
+    }
+  ],
+  "name": "华能集团",
+  "default_url": "http://59.110.171.69:30002/ReimbursePlatform/index.jsp",
   "scope": "HNReimbursement",
-  "start_url": "enterplorer://HNReimbursement/local/index.html",
-  "update_time": 1553758472923
+  "start_url": "http://59.110.171.69:30002/ReimbursePlatform/index.jsp",
+  "update_time": 1553828296396,
+  "runtime_env": "2webview"
 }

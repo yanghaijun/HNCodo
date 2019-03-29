@@ -1,0 +1,1530 @@
+{
+  "version": "0.1",
+  "id": "TodoList",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
+  "jsFile": "index.js",
+  "requires": {
+    "EmployeeLoanSheet": "../EmployeeLoanSheet/index.json",
+    "TodoList": "../TodoList/index.json",
+    "backs": "../backs/index.json",
+    "shenqingdan1": "../shenqingdan1/index.json",
+    "checkList": "../checkList/index.json"
+  },
+  "chineseName": "待办列表",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control1_r4sf2l": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control1_r4sf2l"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control3_y5w8qx": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]",
+              "descendant::DIV[@id=\"tableList\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              7
+            ],
+            "value": "DIV.m_content_main DIV.m_content_inner_main DIV.tableList DIV"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_y5w8qx"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control4_WodLbR": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "首 页 我要审单 员工借款单"
+              ],
+              "visText": [
+                "首 页 我要审单 员工借款单"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_inner_main DIV.m_content DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 首 页 \n\t\t\t\t\n\t\t\t\t                   \n\t\t\t\t             我要审单\n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\n                      员工借款单 \n                ",
+      "frameXPath": "",
+      "customJS": "if(elem.textContent.indexOf('员工借款单') !== -1){return false}else if(!elem){return true};"
+    },
+    "control6_LtK38C": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
+              "descendant::UL[@id=\"navigate\"]//UL"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "我要填单我要审单我要查单委托管理个人信息管理",
+      "frameXPath": ""
+    },
+    "control7_Zv69Km": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\n\n\n\n\n\t\n\t\t\n\t\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        \n        \t\n        \t欢迎：范伟宁\n\t\t\t智能助手\n\t\t\t隐藏菜单\n\t\t\t退 出\n\t\t\t\n        \n      \n\n\t\n\t\t\n\t\t\n\t\n\t\t\n\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\n\t\n\t\t\n\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t 首 页 \n\t\t\t\t\n\t\t\t\t                   \n\t\t\t\t             我要审单\n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\n                      员工借款单 \n                \n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t    \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t    \n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t                   \n\t\t\t\t            返回待办列表 \n\t\t\t\t         \n\t\t\t\t         \n\t\t\t\t        \n\t\t\t\t        \n\t\t\t\t\t\n\t\t\t\t\n\t\t\t   \n\t\t\t   \n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t审批意见：\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t基本信息\n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t公司代码：\n\t\t\t\t\t\t\t\t3000-中国华能集团公司信息中心\n\t\t\t\t\t\t\t\t部门：\n\t\t\t\t\t\t\t\t资源处\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t                  单据号：\n\t\t\t                  3000JK18030610005\n\t\t\t                  创建日期：\n\t\t\t                  2018-03-06\n\t\t\t                \n\t\t\t                \n\t\t\t                  经办人：\n\t\t\t                  吴家乐\n\t\t\t                  单据状态：\n\t\t\t                  \n\t\t\t                     \n\t\t\t\t\t\t\t\t 审批中\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t                  \n\t\t\t                \n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t借款信息\n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t借款事由：\n\t\t\t\t\t\t\t\t\t\t测试开发 - 云适配 - POC演示流程\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t借款人：\n\t\t\t\t\t\t\t\t\t\t吴家乐\n\t\t\t\t\t\t\t\t\t\t借款类型：\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t借款出国\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t借款金额：\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t10000.00\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t币种：\n\t\t\t\t\t\t\t\t\t\t\t人民币\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t其他说明：\n\t\t\t\t\t\t\t\t\t\t\t测试 - 流程\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n                \n\t\t\t\t\t\n                \n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t收款信息\n\t\t\t\t\t\t\n\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t  员工个人银行账号信息\n\t\t\t\t     \n\t\t\t\t        \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n                    收款户名：\n                    吴家乐\n                    汇入行名：\n                    建设银行\n                  \n                  \n                    收款账号：\n                    62270000126201****3\n                    汇入行省份：\n                    010-北京\n                  \n                  \n                    汇入行城市：\n                    北京\n                    联系人姓名：\n                    吴家乐\n                  \n                  \n                    联系电话：\n                    \n                    金额：\n\t\t\t\t\t\n\t\t\t\t\t\n                  \n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t \t\n                \n                  \n                \n              \n            \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t附件\n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t附件类型附件上传时间其他附件新建文本文档.txt2018-03-06\n\t\t\t\t\t\t\n\t                        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t审批记录\n\t\n\t \n\t\n   \t\t\t\t\n      \n\t     \n\t\t    环节\n\t\t    审批人\n\t\t    接收时间\n\t\t    处理时间\n\t\t    审批结果\n\t\t    审批意见\n\t     \n\t   \n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t经办人\n\t\t\t\t吴家乐\n\t\t\t\t\n\t\t\t\t2018-03-06 11:00:04\n\t\t\t\t同意\n\t\t\t\t同意\n\t\t\t\n\t\t\n\t\t\n\t\t \n\t\t\t\t部门领导\n\t\t\t\t范伟宁\n\t\t\t\t2018-03-06 11:00:04\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\t   \n\n\n                        \n                        \n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\n\t\t\n\t\n    \n\n\n\t\t\t\n\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n﻿\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n电子报销系统我要填单我要审单我要查单委托管理个人信息管理\n\n\t\t\n\t\t\n\n\n \n\n",
+      "frameXPath": "",
+      "customJS": "if(elem.querySelector('.m_content_inner_main').textContent.indexOf('我的待办') !== -1){return true;}return false;"
+    },
+    "control12_zaMcnV": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[8]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_zaMcnV"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": false,
+      "monitored": false,
+      "frameXPath": ""
+    },
+    "control13_t52bRC": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[7]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control13_t52bRC"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": ""
+    },
+    "control14_rapNLN": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[7]"
+          }
+        ]
+      },
+      "intendedRole": "section",
+      "roles": "element,section",
+      "monitored": false,
+      "frameXPath": ""
+    },
+    "control19_MdNPFF": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
+              "descendant::UL[@id=\"navigate\"]//UL"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control19_MdNPFF"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control45_L3SP1I": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody DIV.main_wrap"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control45_L3SP1I"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control48_gaPxWD": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "我的待办"
+              ],
+              "visText": [
+                "我的待办"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_inner_main DIV.breadcrumb SPAN.path"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 我的待办 ",
+      "frameXPath": ""
+    },
+    "control79_pQpCQE": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody DIV.header"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control79_pQpCQE"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control80_F4rMVe": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control80_F4rMVe"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context1_RXxJco": {
+      "controls": [
+        "control1_r4sf2l",
+        "control3_y5w8qx",
+        "control12_zaMcnV",
+        "control13_t52bRC",
+        "control14_rapNLN",
+        "control19_MdNPFF",
+        "control45_L3SP1I",
+        "control79_pQpCQE",
+        "control80_F4rMVe"
+      ],
+      "anchors": [
+        "control7_Zv69Km",
+        "control48_gaPxWD"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow2_B231iH": {
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        },
+        {
+          "toContextId": "context1_RXxJco",
+          "toModelId": "TodoList"
+        }
+      ]
+    },
+    "flow3_TUKntN": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control3_y5w8qx",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        },
+        {
+          "toContextId": "context2_eL5U9i",
+          "toModelId": "EmployeeLoanSheet"
+        }
+      ]
+    },
+    "flow10_twMdZp": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control12_zaMcnV",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        }
+      ]
+    },
+    "flow11_h7Vy0l": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control13_t52bRC",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        }
+      ]
+    },
+    "flow12_fyh5Lh": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "section",
+      "fromControlId": "control3_y5w8qx",
+      "toContexts": [
+        {
+          "toContextId": "context4_K6hcfz",
+          "toModelId": "backs"
+        }
+      ]
+    },
+    "flow8_5cOIsu": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control19_MdNPFF",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        },
+        {
+          "toContextId": "context8_GgSlXb",
+          "toModelId": "shenqingdan1"
+        },
+        {
+          "toContextId": "context13_xMCZhe",
+          "toModelId": "checkList"
+        }
+      ]
+    },
+    "flow45_37sDrZ": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control45_L3SP1I",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        }
+      ]
+    },
+    "flow71_U2SWqb": {
+      "fromContextId": "context1_RXxJco",
+      "fromAction": "doAction",
+      "fromControlId": "control80_F4rMVe",
+      "toContexts": [
+        {
+          "toContextId": "context1_RXxJco"
+        },
+        {
+          "toContextId": "context13_xMCZhe",
+          "toModelId": "checkList"
+        },
+        {
+          "toContextId": "context8_GgSlXb",
+          "toModelId": "shenqingdan1"
+        },
+        {
+          "toContextId": "context2_eL5U9i",
+          "toModelId": "EmployeeLoanSheet"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_v9RoTt": {
+      "contextId": "context1_RXxJco",
+      "layout": [
+        {
+          "id": "uiControl10_MUQcsp",
+          "controlId": "control13_t52bRC",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl10_MUQcsp",
+                "onGetTemplate": "getTemplate_uiControl10_MUQcsp"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl3_nTyfES",
+          "controlId": "control3_y5w8qx",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl3_nTyfES",
+                "onGetTemplate": "getTemplate_uiControl3_nTyfES"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl11_tqsLUw",
+          "controlId": "control14_rapNLN",
+          "display": {
+            "adapterId": "section",
+            "type": "section",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": []
+        },
+        {
+          "id": "uiControl9_y1NyIS",
+          "controlId": "control12_zaMcnV",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_y1NyIS",
+                "onGetTemplate": "getTemplate_uiControl9_y1NyIS"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl7_0NEgbW",
+          "display": {
+            "type": "sticky",
+            "adapterId": "sticky",
+            "position": "top",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl7_0NEgbWbody",
+              "display": {
+                "type": "stickyBody",
+                "adapterId": "stickyBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl1_JCliUv",
+                  "controlId": "control1_r4sf2l",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl1_JCliUv",
+                        "onGetTemplate": "getTemplate_uiControl1_JCliUv"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "uiControl38_keMeUn",
+                  "controlId": "control45_L3SP1I",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl38_keMeUn",
+                        "onGetTemplate": "getTemplate_uiControl38_keMeUn"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "uiControl16_TvQrlB",
+                  "controlId": "control19_MdNPFF",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl16_TvQrlB",
+                        "onGetTemplate": "getTemplate_uiControl16_TvQrlB"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl68_4FroBi",
+          "controlId": "control79_pQpCQE",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl68_4FroBi",
+                "onGetTemplate": "getTemplate_uiControl68_4FroBi"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl69_TK3WR0",
+          "controlId": "control80_F4rMVe",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl69_TK3WR0",
+                "onGetTemplate": "getTemplate_uiControl69_TK3WR0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_RXxJco": [
+          "首页",
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_RXxJco": [
+          "10.1.128.155:85/ReimbursePlatform/myReimburse/index.action",
+          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
+          "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
+          "",
+          "59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_RXxJco": [
+          [
+            "DataTables_Table__paginate",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "attachment_myQuery_hint",
+            "clean",
+            "code",
+            "combobox",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currentPage",
+            "dataForm",
+            "endAmount",
+            "endDate",
+            "good",
+            "listForm",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "offOfPage",
+            "packUp",
+            "page",
+            "pageSizes",
+            "query_hint",
+            "rpName",
+            "search",
+            "startAmount",
+            "startDate",
+            "tableList",
+            "tempCode",
+            "totalPage",
+            "type"
+          ],
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "accountItemCode",
+            "accountItemDescription",
+            "accountantCourse",
+            "accountantDispose",
+            "addVendorBankInfo",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "bankAccount",
+            "bankCode",
+            "bankName",
+            "banksInfo",
+            "baseBorrowMoney",
+            "baseinfoId",
+            "bid",
+            "borrowLona",
+            "budgetItemCode",
+            "budgetItemName",
+            "cashFlow",
+            "cashFlowDescription",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "draftSave",
+            "erForm",
+            "good",
+            "headDiv",
+            "infoTrTd_",
+            "info_body",
+            "invalid",
+            "invalidTable",
+            "leadershipApproval",
+            "lineTable",
+            "loadSimulate",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "personalbank",
+            "personalbankAmount",
+            "popup",
+            "print",
+            "processOpinion",
+            "query_hint",
+            "rebackAccountingHandle",
+            "saveHeadBtn",
+            "submitClaimb",
+            "tbodyVendorBankInfo",
+            "td_",
+            "toSimulateTheAccount",
+            "tr_afafaccfa",
+            "tradePartner",
+            "tradePartnerDesc",
+            "vbInfoFrom",
+            "venderCode",
+            "venderName",
+            "vendorBankInfo",
+            "vid"
+          ],
+          [
+            "DataTables_Table__paginate",
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_overlay",
+            "TB_title",
+            "TB_window",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "attachment_myQuery_hint",
+            "clean",
+            "code",
+            "combobox",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currentPage",
+            "dataForm",
+            "endAmount",
+            "endDate",
+            "good",
+            "listForm",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "offOfPage",
+            "packUp",
+            "page",
+            "pageSizes",
+            "query_hint",
+            "rpName",
+            "search",
+            "startAmount",
+            "startDate",
+            "tableList",
+            "tempCode",
+            "totalPage",
+            "type"
+          ],
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_RXxJco": [
+          [
+            "Wdate",
+            "accountHeader",
+            "attachment_myQuery_hint",
+            "black",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "disabled",
+            "droppable",
+            "easyui-combobox",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "attachment_myQuery_hint",
+            "black",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "disabled",
+            "droppable",
+            "easyui-combobox",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-hover",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "alignL",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "disabled",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "accountItemCodeClass",
+            "attachment_myQuery_hint",
+            "baoXiaoIcon",
+            "basebox",
+            "bold",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "clearB",
+            "clearL",
+            "closeCon",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "droppable",
+            "fixdTable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "in",
+            "input_table",
+            "leadershipApproval",
+            "list_Table",
+            "loadAccountItem",
+            "logo",
+            "m_content",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "margin_top",
+            "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
+            "myMargin",
+            "myQuery_hint",
+            "mySteps",
+            "nav",
+            "navbackground",
+            "nowarp",
+            "num_Todo",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "showDetail",
+            "tablebox",
+            "tital",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "w",
+            "warp",
+            "wbg"
+          ],
+          [
+            "TB_overlayBG",
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "alignL",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "disabled",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "path"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_RXxJco": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/LINK",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/A",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/SPAN/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/INPUT-hidden",
+            "TD/DIV/STYLE",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/INPUT-hidden",
+            "TD/SPAN/INPUT-text",
+            "TD/SPAN/SPAN",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-reset",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/LINK",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/A",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/SPAN/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/INPUT-hidden",
+            "TD/DIV/STYLE",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/INPUT-hidden",
+            "TD/SPAN/INPUT-text",
+            "TD/SPAN/SPAN",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-reset",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TR/TD/A",
+            "TR/TD/B",
+            "TR/TD/H2",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "TR/TD/TEXTAREA",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IFRAME",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/LINK",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/A",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/SPAN/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/INPUT-hidden",
+            "TD/DIV/STYLE",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/INPUT-hidden",
+            "TD/SPAN/INPUT-text",
+            "TD/SPAN/SPAN",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-reset",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/A",
+            "-/-/SPAN",
+            "-/A/I"
+          ]
+        ]
+      }
+    }
+  }
+}

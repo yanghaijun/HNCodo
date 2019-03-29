@@ -1,0 +1,779 @@
+{
+  "version": "0.1",
+  "id": "checkList",
+  "targetURL": "http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action",
+  "jsFile": "index.js",
+  "requires": {
+    "TodoList": "../TodoList/index.json",
+    "staffLoan": "../staffLoan/index.json",
+    "travelClaim": "../travelClaim/index.json",
+    "dailyReimbursementForm": "../dailyReimbursementForm/index.json",
+    "shenqingdan1": "../shenqingdan1/index.json"
+  },
+  "chineseName": "我要查单",
+  "description": "",
+  "controls": {
+    "control46_ztTQCM": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "报账单综合查询"
+              ],
+              "visText": [
+                "报账单综合查询"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content DIV.breadcrumb SPAN.path"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 报账单综合查询 ",
+      "frameXPath": ""
+    },
+    "control47_FS7IZd": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
+              "descendant::UL[@id=\"navigate\"]//UL"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control47_FS7IZd"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control49_n31ik2": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::FORM[@id=\"listForm\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_inner_main DIV.main_wrap DIV.m_content FORM"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control49_n31ik2"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control50_K78z7e": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV",
+              "descendant::DIV[@id=\"tableList\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content DIV.m_content_inner DIV.tableList"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control50_K78z7e"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control61_BTKyg4": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody DIV.header"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control61_BTKyg4"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context13_xMCZhe": {
+      "controls": [
+        "control47_FS7IZd",
+        "control49_n31ik2",
+        "control50_K78z7e",
+        "control61_BTKyg4"
+      ],
+      "anchors": [
+        "control46_ztTQCM"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow46_FCZ4yn": {
+      "toContexts": [
+        {
+          "toContextId": "context13_xMCZhe"
+        }
+      ]
+    },
+    "flow47_Jikvy2": {
+      "fromContextId": "context13_xMCZhe",
+      "fromAction": "doAction",
+      "fromControlId": "control47_FS7IZd",
+      "toContexts": [
+        {
+          "toContextId": "context13_xMCZhe"
+        },
+        {
+          "toContextId": "context1_RXxJco",
+          "toModelId": "TodoList"
+        },
+        {
+          "toContextId": "context8_GgSlXb",
+          "toModelId": "shenqingdan1"
+        }
+      ]
+    },
+    "flow48_NR1COL": {
+      "fromContextId": "context13_xMCZhe",
+      "fromAction": "doAction",
+      "fromControlId": "control50_K78z7e",
+      "toContexts": [
+        {
+          "toContextId": "context13_xMCZhe"
+        },
+        {
+          "toContextId": "context14_D636DG",
+          "toModelId": "staffLoan"
+        },
+        {
+          "toContextId": "context15_0o4vcu",
+          "toModelId": "travelClaim"
+        },
+        {
+          "toContextId": "context16_GyLntM",
+          "toModelId": "dailyReimbursementForm"
+        }
+      ]
+    },
+    "flow49_G5c4lA": {
+      "fromContextId": "context13_xMCZhe",
+      "fromAction": "doAction",
+      "fromControlId": "control49_n31ik2",
+      "toContexts": [
+        {
+          "toContextId": "context13_xMCZhe"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page13_o1E5r4": {
+      "contextId": "context13_xMCZhe",
+      "layout": [
+        {
+          "id": "uiControl39_2TQxnI",
+          "controlId": "control47_FS7IZd",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl39_2TQxnI",
+                "onGetTemplate": "getTemplate_uiControl39_2TQxnI"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl40_fKgedU",
+          "controlId": "control49_n31ik2",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl40_fKgedU",
+                "onGetTemplate": "getTemplate_uiControl40_fKgedU"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl41_2PEF1E",
+          "controlId": "control50_K78z7e",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl41_2PEF1E",
+                "onGetTemplate": "getTemplate_uiControl41_2PEF1E"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl47_IHaJvT",
+          "controlId": "control61_BTKyg4",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl47_IHaJvT",
+                "onGetTemplate": "getTemplate_uiControl47_IHaJvT"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context13_xMCZhe": [
+          "首页"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context13_xMCZhe": [
+          "http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action",
+          "59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context13_xMCZhe": [
+          [
+            "DataTables_Table__paginate",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "attachment_myQuery_hint",
+            "clean",
+            "code",
+            "combobox",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currentPage",
+            "dataForm",
+            "endAmount",
+            "endDate",
+            "good",
+            "listForm",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "offOfPage",
+            "packUp",
+            "page",
+            "pageSizes",
+            "processType",
+            "query_hint",
+            "search",
+            "startAmount",
+            "startDate",
+            "tableList",
+            "tempCode",
+            "totalPage"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context13_xMCZhe": [
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_duckGreen",
+            "col_green",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_duckGreen",
+            "col_green",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "disabled",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_duckGreen",
+            "col_red",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_duckGreen",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context13_xMCZhe": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/A",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/SPAN/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/INPUT-hidden",
+            "TD/DIV/STYLE",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/INPUT-hidden",
+            "TD/SPAN/INPUT-text",
+            "TD/SPAN/SPAN",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-reset",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

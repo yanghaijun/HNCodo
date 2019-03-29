@@ -1,0 +1,417 @@
+getData_control1_r4sf2l: |
+  ;if (!elem) {
+    return false;
+  }
+doAction_uiControl1_JCliUv: ''
+getTemplate_uiControl1_JCliUv: "import {Component} from 'react';\nexport default class extends Component{\n  render(){\n    return (\n    \t<div className = 'TodoList-head'>\n      \t<span></span>\n        <span>我要审单</span>\n        <span className='reset' onClick={(e)=>{\n            if(confirm('是否清空用户信息,下次重新登录')){\n              ysp.customHelper.login();\n            }\n            \n          }}>重置</span>\n      </div>\n    )\n  }\n}"
+getData_control2_zmIZT7: >
+  ;if (!elem) {
+    return false;
+  }
+
+  var data = {};
+
+  data.yuangong = elem.querySelector('#tempCode').value;
+
+  data.yuangong = data.yuangong == '' ? "全部" : data.yuangong == 'RC' ?
+  '日常及其它费用报销单' : data.yuangong == 'HK' ? "员工还款单" : data.yuangong == 'JK' ?
+  "员工借款单" : data.yuangong == 'CL' ? "出差报销单" : '';
+
+  data.zero = elem.querySelector('#code').value;
+
+  data.startMoney = elem.querySelector('#startAmount').value;
+
+  data.endMoney = elem.querySelector('#endAmount').value;
+
+  data.six = elem.querySelector('#rpName').value;
+
+  data.startTime = elem.querySelector('#startDate').value;
+
+  data.endTime = elem.querySelector('#endDate').value;
+
+  data.baozhang =
+  elem.querySelector('#combobox').nextElementSibling.querySelector('input').value;
+
+  return data;
+doAction_uiControl2_Qo50KS: |
+  if (data.eventType == 'yuangong') {
+    elem.querySelector('#tempCode').value = data.dataCustom;
+  }
+  if (data.eventType == 'change') {
+    if (data.dataCustom.Index == 0) {
+      elem.querySelector('#code').value = data.dataCustom.Value;
+      rpName;
+    }
+
+    if (data.dataCustom.Index == 5) {
+      if (data.dataCustom.Value.indexOf('-') != -1) {
+        var arr = data.dataCustom.Value.split('-');
+        elem.querySelector('#startAmount').value = arr[0];
+        elem.querySelector('#endAmount').value = arr[1];
+      }
+    }
+
+    if (data.dataCustom.Index == 6) {
+      elem.querySelector('#rpName').value = data.dataCustom.Value;
+    }
+  }
+  if (data.eventType == 'date') {
+    if (data.dataCustom.Index == 2) {
+      elem.querySelector('#startDate').value = data.dataCustom.Value;
+    } else if (data.dataCustom.Index == 3) {
+      elem.querySelector('#endDate').value = data.dataCustom.Value;
+    }
+  }
+  if (data.eventType == 'baozhang') {
+    elem.querySelector('#combobox').nextElementSibling.querySelector('input').value = data.dataCustom;
+  }
+  if (data.eventType == 'clear') {
+    elem.querySelector('#clean').click();
+  }
+  if (data.eventType == 'commit') {
+    elem.querySelector('#search').click();
+  }
+getTemplate_uiControl2_Qo50KS: "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.state = {\n      show:false,\n      selected:false,\n      baozhang:false\n    }\n  }\n  toggle(){\n    this.setState({\n      show:!this.state.show\n    })\n  }\n  render(){\n    var _this = this;\n    return (\n\t\t\t<div className = 'Todo-serch'>\n      \t<div className = 'serch-head-icon'>\n        \t<span className = 'icon-title'>查询条件</span>\n          <span className='serch-right' onClick={(e)=>{\n              this.toggle();\n            }}>{this.state.show ? '收起':'展开'}</span>\n          <div className = {this.state.show ? 'serch-content active' : 'serch-content unactive'} ref='serchContent'>\n            <ul>\n            \t{[].map.call([{name:'报账单编号',placeholder:'请选择编号'},{name:'报账单类型',placeholder:'请选择类型'},{name:'开始日期',placeholder:'请选择开始日期'},{name:'结束日期',placeholder:'请选择结束日期'},{name:'报账部门',placeholder:'请选择报账部门'},{name:'金额',placeholder:'请选输入金额范围,以\"-\"隔开'},{name:'经办人',placeholder:'请输入经办人姓名'}],function(item,index){\n                if(index == 1){\n                  return (\n                \t<li data-index={index}>\n                      <span>{item.name}</span>\n                      <input type='text' \n                        value={_this.props.customData.yuangong}                                     \n                        placeholder={item.placeholder}\n                        onClick={(e)=>{\n                          _this.setState({\n                            selected:true\n                          })      \n                        }}/>\n                    {_this.state.selected && <div className = 'fixed-btn fixed-btn-select'>\n            <div>\n            \t<ul onClick={(e)=>{\n      var handler = _this.props.customHandler;\n                              if(e.target.nodeName !== 'LI'){\n                                e.target = e.target.children;\n                              }\n                              if(handler){\n                                handler({\n                                  data:e.target.dataset.title,\n                                  eventType:'yuangong'\n                                })\n                              }\n                              _this.setState({\n                 \t\t\t\t\t\t\t\tselected:false               \n                              })\n                            }}>\n                    <li data-title=''>全部</li>\n                    <li data-title='RC'>日常及其它费用报销单</li>\n                    <li data-title='HK'>员工还款单</li>\n                    <li data-title='JK'>员工借款单</li>\n                    <li data-title='CL'>出差报销单</li>\n              </ul>\n              <ul className='two-ul'>\n                <li onClick={(e)=>{\n                    _this.setState({\n                      selected:false\n                    })\n                  }}>取消</li>\n              </ul>\n            </div>\n          </div>}\n                    </li>\n                )\n                }else if(index == 2 || index == 3){\n                  return (\n                \t<li data-index={index}><span>{item.name}</span><input data-index={index} type='date' placeholder={item.placeholder} onChange={(e)=>{\n                          var handler = _this.props.customHandler;\n                          if(handler){\n                            handler({\n                              data:{Value:e.target.value,Index:e.target.dataset.index},\n                              eventType:'date'\n                            })\n                          }\n                        }}/></li>\n                )\n                }else if(index == 4){\n                  return (\n                \t<li data-index={index}><span>{item.name}</span><input type='text' placeholder={item.placeholder} value={_this.props.customData.baozhang} onClick={(e)=>{\n                    _this.setState({\n                      baozhang:true\n                    })      \n                        }}/>\n                    {_this.state.baozhang && <div className = 'fixed-btn fixed-btn-select' ><div><ul onClick={(e)=>{\n      var handler = _this.props.customHandler;\n                              if(e.target.nodeName !== 'LI'){\n                                e.target = e.target.children;\n                              }\n                              if(handler){\n                                handler({\n                                  data:e.target.textContent,\n                                  eventType:'baozhang'\n                                })\n                              }\n                              _this.setState({\n                 \t\t\t\t\t\t\t\tbaozhang:false               \n                              })\n                            }}>{[].map.call(['中国华能集团公司信息中心','主任','书记','王建','杨正新','纪检组长','综合处','规划处','技术处','资源处','运维处','监察处'],function(d,i){\n                            return (\n                            \t<li>{d}</li>\n                            )\n                          })}</ul><ul className='two-ul'>\n            \t<li onClick={(e)=>{\n                  _this.setState({\n                    baozhang:false\n                  })\n                }}>取消</li>\n            </ul></div></div>}\n                    </li>\n                )\n                }else{\n                  return (\n                \t<li data-index={index}><span>{item.name}</span><input data-index={index} type='text' placeholder={item.placeholder} onChange={(e)=>{\n                          var handler = _this.props.customHandler;\n                          if(handler){\n                            handler({\n                              data:{Value:e.target.value,Index:e.target.dataset.index},\n                              eventType:'change'\n                            })\n                          }\n                        }}/></li>\n                )\n                }\n                \n              })}\n            </ul>\n            <div className='serch-bottom'>\n            \t<button className='clear' onClick={()=>{\n                  var handler = this.props.customHandler;\n                  if(handler){\n                    handler({\n                      eventType:'clear'\n                    })\n                  }\n                }}>清除</button><button className='commit-serch' onClick={()=>{\n                  var handler = this.props.customHandler;\n                  if(handler){\n                    handler({\n                      eventType:'commit'\n                    })\n                  }\n                  _this.toggle();\n                }}>确定</button>\n            </div>\n          </div>\n        </div>\n      </div>    \n    )\n  }\n}"
+getData_control3_y5w8qx: >-
+  ;if (!elem) {
+    return false;
+  }
+
+  var data = {};
+
+  var titles = [];
+
+  var contents = [];
+
+  var conss = [];
+
+  var TD = [];
+
+  if
+  (elem.querySelector('.list_Table').querySelectorAll('tbody')[0].querySelectorAll('th').length
+  > 0 && elem.querySelector('.list_Table').querySelectorAll('tbody').length > 0)
+  {
+    var headTitles = elem.querySelector('.list_Table').querySelectorAll('tbody')[0].querySelectorAll('th');
+    headTitles && [].forEach.call(headTitles, function (item, index) {
+      if (headTitles && item && index > 0 && index < headTitles.length) {
+        titles.push(item.textContent);
+      }
+    });
+    var tbodys = elem.querySelector('.list_Table').querySelectorAll('tbody');
+    var cons = $(elem).find('.list_Table').children('tbody').filter('.tableOn');
+    cons.forEach(function (items, indexs) {
+      if ($(items).find('td').eq(7).find('input').length > 1) {
+        data.list = true;
+      } else {
+        data.list = false;
+      }
+    });
+
+    for (var i = 1; i < tbodys.length - 1; i++) {
+      var TD = [];
+      var tds = tbodys && tbodys[i].querySelectorAll('td');
+
+      for (var k = 1; k < tds.length; k++) {
+        if(k == tds.length-1){
+          var opts = [];
+          var inputs = tbodys[i].querySelectorAll('td')[k].querySelectorAll('input');
+          for(var j = 0;j<inputs.length;j++){
+            opts.push(inputs[j].value);
+          }
+          TD.push(opts);
+        }else{
+          TD.push(tbodys[i].querySelectorAll('td')[k].textContent.replace(/^(\s+)|(\s+)$|(\n+)|(\t+)/g, ''));
+        }
+        
+      }
+
+      contents.push(TD);
+    }
+
+    data.title = titles;
+    data.content = contents;
+    data.conss = conss;
+    return data;
+  }
+doAction_uiControl3_nTyfES: |+
+  if (data.eventType == "bottom") {
+    var valueData = data.dataCustom[0];
+    var index = parseInt(data.dataCustom[1])+1;
+    var inputs = elem.querySelector('.list_Table').querySelectorAll('tbody')[index].querySelectorAll('td')[elem.querySelector('.list_Table').querySelectorAll('tbody')[index].querySelectorAll('td').length-1].querySelectorAll('input');
+    for(var i=0;i<inputs.length;i++){
+      if(inputs[i].value==valueData){
+        inputs[i].click();
+        ysp.appMain.showLoading();
+        setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 2000);
+      }
+    }
+  }else if (data.eventType == 'openClick') {
+    elem.querySelectorAll('.tableOn')[data.dataCustom].querySelectorAll('a')[1].click();
+     ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+     
+  }
+
+getTemplate_uiControl3_nTyfES: "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.index = 0;\n  }\n  clickqiehuan=(e)=>{\n   var listuls=this.refs[\"listuls\"+e.target.dataset.key];\n   var listbots=this.refs[\"listbots\"+e.target.dataset.key]; \n    if(listuls.className==\"list-content-ul\"){\n      listuls.className=\"list-content-ul weng_none\"\n    }else{\n      listuls.className=\"list-content-ul\"\n    }\n    if(listbots.className==\"list-bottom weng_none\"){\n      listbots.className=\"list-bottom\"       \n    }else{\n      listbots.className=\"list-bottom weng_none\"       \n    }\n  }\n  backs=(e)=>{\n    \n    var handler = this.props.customHandler;\n    var index=e.target.dataset.key\n    if(handler){\n      handler({\n        data:index,\n        eventType:'backs'\n      })\n    }\n    handler({\n\t   eventType:'section-trigger',\n\t   data:'control14_rapNLN'\n\t })\n\n    \n  }\n  agree=(e)=>{\n    debugger\n    var handler = this.props.customHandler;\n    var index=e.target.dataset.key\n    if(handler){\n      handler({\n        data:index,\n        eventType:'agree'\n      })\n    }\n    handler({\n\t   eventType:'section-trigger',\n\t   data:'control14_rapNLN'\n\t })\n  }\n  // onClick=(e)=>{\n  //   if(e.target.nodeName !== 'UL'){\n  //     if(e.target.nodeName == 'LI'){\n  //       e.target = e.target.parentElement;\n  //     }\n  //     if(e.target.nodeName == 'SPAN'){\n  //       e.target = e.target.parentElement.parentElement;\n  //     }\n  //   }\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       data:e.target.dataset.index,\n  //       eventType:'click'\n  //     })\n  //   }\n  // }\n  bottom=(e)=>{\n    var handler = this.props.customHandler;\n    var target = e.target;\n    if(target.textContent.indexOf('同意')>-1||target.textContent.indexOf('退回')>-1){\n      if(handler){\n        handler({\n          data:[target.textContent,target.getAttribute('data-key')],\n          eventType:'bottom'\n        })\n        handler({\n          eventType:'section-trigger',\n          data:'control14_rapNLN'\n        })\n      }\n    }else{\n      if(handler){\n        handler({\n          data:[target.textContent,target.getAttribute('data-key')],\n          eventType:'bottom'\n        })\n      }\n    }\n  }\n  openClick=(e)=>{\n    var handler = this.props.customHandler;\n    var target = e.target;\n    if(handler){\n      handler({\n        data:target.getAttribute('data-key'),\n        eventType:'openClick'\n      })\n    }\n  }\n  render(){\n    var _this = this;\n    var data = this.props.customData;\n    if(data){\n      if(data&&data.content.length>0&&data.content[0].length>0){\n          return (\n          <div className='Todo-list-content' >\n            {data && data.content.map(function(item,index){\n                 if(item[0]!=\"\"){\n                  return (\n        <div style={{marginBottom:'20px'}}>\n         <ul className='list-content-ul show-false' style={{position:'relative'}}>\n            <li onClick={_this.openClick} data-key={index} className='title'>{item[1]}</li>      \n            {item&&item.map(function(c,i){\n              if(i==0){\n                  return (\n                  <li><span className='content-title'>{data.title[i]}</span><span>{item[i]}</span></li>\n                )\n              }\n            })}\n            <i className='list-icon-done' onClick={_this.clickqiehuan} style={{position:'absolute',top:'42px',right:'16px'}} data-key={index}></i>\n        </ul>\n         <ul className=\"list-content-ul weng_none\" ref={\"listuls\"+index}>\n            {item.map(function(v,j){\n                if(j!=0&&j!=1&&j!=6){\n                    return (\n                    <li><span className='content-title'>{data.title[j]}</span><span>{v}</span></li>\n                  )\n                }\n              })}   \n        </ul>\n        <div className=\"list-bottom weng_none\" ref={\"listbots\"+index}>\n          {item[item.length-1].map(function(d,i){\n            return(<li data-key={index} onClick={_this.bottom} className={'li'+item[item.length-1].length}>{d}</li>)  \n          })}\n        </div>    \n\n\n\n\n\n        </div>\n\n              )\n            } \n            })}\n          </div>\n        )\n      }\n      else if(data.title<0){\n        return (\n          <div className='Todo-list-content' style={{marginTop:'50px',color:'red',textAlign:'center'}}> * 暂无待办事项 * </div>\n        )\n      }\n      else{\n         return (\n          <div className='Todo-list-content' style={{marginTop:'50px',color:'red',textAlign:'center'}}> * 暂无待办事项 * </div>\n        )\n      }\n    }else{\n      return(<div className=\"loading\">数据加载中，请稍等 ... ...</div>)\n    }\n  }\n}\n"
+getData_control12_zaMcnV: |
+  if (!elem) {
+    return false;
+  }
+  if (elem && elem.style.display == "block") {
+    var data = {};
+    var title = $(elem).children('#TB_title').eq(1).children('div').eq(0).text();
+    data.title = title;
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    var liss = $(contetns).find('#approveForm').find('.setTb').children('tbody');
+
+    if ($(contetns).find('#approveForm').length > 0 && $(contetns).find('#approveForm').find('.setTb').length > 0 && $(contetns).find('#approveForm').find('.setTb').children('tbody').length > 0) {
+      var lits = liss.children('tr').eq(0).find('div').text().trim();
+    }
+
+    var titless = liss.children('tr').eq(0).find('th').text();
+    var chilis = liss.children('tr').eq(1).find('th').text();
+    var options = liss.children('tr').eq(1).find('select').find('option');
+    var opt = [];
+    options.forEach(function (items, index) {
+      opt.push({
+        value: items.textContent,
+        val: items.value
+      });
+    });
+    data.contents = [];
+    data.contents.push({
+      titles: titless,
+      con: lits
+    });
+    data.tits = chilis;
+    data.cons = opt;
+    data.isShow = true;
+    return data;
+  }
+doAction_uiControl9_y1NyIS: >
+  var contetns =
+  $(elem).find('iframe')[0].contentDocument.querySelector('body');
+
+  if (data.eventType == "submits") {
+    if ($(contetns).find('.p5').length > 0) {
+      $(contetns).find('.p5').children('.fr').eq(1).find('a').click();
+    } else {
+      $(contetns).find('#approveForm').find('.setTb').children('tbody').children('tr').eq(2).find('a').eq(0).click();
+    }
+  } else if (data.eventType == "backs") {
+    debugger;
+
+    if ($(contetns).find('.p5').length > 0) {
+      $(contetns).find('.p5').children('.fr').eq(0).find('a').click();
+    } else {
+      $(contetns).find('#approveForm').find('.setTb').children('tbody').children('tr').eq(2).find('a').eq(1).click();
+    }
+  }
+getTemplate_uiControl9_y1NyIS: |
+  module.exports = React.createClass({
+    // constructor:function(){
+    //   super();
+    //   this.state={
+    //     open:false
+    //   }
+    // },
+    // componentDidUpdate:function(props){
+    //   var isShow=props.customData.isShow;
+    //   if(isShow){
+    //     this.setState({
+    //       open:true
+    //     })
+    //   }
+    // },
+    handleClick:function(e){
+     
+      var handle = this.props.customHandler;
+      var index=e.target.dataset.key
+      if(handle){
+        handle({
+          data:index,
+          eventType:'click'
+        })
+      }
+    },
+    submits:function(e){
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'submits'
+        })
+      }
+      
+    },
+     backs:function(e){
+  //      var backs=this.refs.backs;
+       
+  //      backs.style.display='none'
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'backs'
+        })
+      }
+      
+    },
+    render: function() {
+      var data = this.props.customData;
+      
+        
+      
+      if(data&&data.cons.length>0){
+      var options=[];
+        options.push(
+      data.cons.map(function(items,index){
+        return(
+        <option>{items.value}</option>
+        )
+      })
+        )
+       return (
+        
+        <div ref="backs">
+            <div className='sucessMesbx'>
+          <div>
+          <h5>{data.title}</h5>
+          <p><ul><li style={{height:'44px',borderBottom:'1px solid #ddd'}}><span style={{width:"30%",display:'inline-block'}}>{data.contents[0].titles}</span><span>{data.contents[0].con}</span></li>
+         <li><span style={{width:'44%'}}>{data.tits}</span><select className="selecs">{options}</select></li>   
+            
+           </ul></p>
+          <p style={{marginTop:"100px",marginLeft:'30px'}}><button onClick={this.submits} className="btn" style={{marginRight:'15px'}}>提交</button> <button onClick={this.backs} className="btn">返回</button></p>
+          </div>
+              </div>
+        
+        </div>
+        
+      )
+      }else{
+        return(
+        <div></div>
+        )
+      }
+
+    }
+  });
+getData_control13_t52bRC: |
+  if (elem) {
+    return true;
+  } else {
+    return false;
+  }
+doAction_uiControl10_MUQcsp: |
+  if (data.eventType == "click") {
+    console.log("触发了");
+  }
+getTemplate_uiControl10_MUQcsp: |-
+  import {Component} from "react";
+  export default class extends Component{
+
+     componentDidMount(){   
+       var _this = this;  
+         var handler=_this.props.customHandler;
+          if(handler){
+            handler({
+              eventType:"click"
+            })
+          }  
+     }
+     render() {
+      return (
+        <span ref="click"></span>
+      )
+    }
+  }
+getTemplate_uiControl38_keMeUn: |-
+  module.exports = React.createClass({
+    componentDidMount:function(){
+      var _this = this;
+      var handler = _this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:'saveU'
+        })
+      }
+    },
+    render: function() {
+      return (
+        <div></div>
+      )
+    }
+  });
+getData_control45_L3SP1I: ;
+doAction_uiControl38_keMeUn: |-
+  if(data.eventType == 'saveU'){
+    ysp.customHelper.loginStatus(ysp.customHelper.USER,ysp.customHelper.PWD);
+  }
+getTemplate_uiControl16_TvQrlB: "module.exports = React.createClass({\n  jk:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"jk\"\n      })\n    }\n  },\n  sd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sd\"\n      })\n    }\n  },\n  bx:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"bx\"\n      })\n    }\n  },\n  cd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"cd\"\n      })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n     return (\n    \t<div className = 'TodoList-head2'>\n          <div className='div_lfj'>\n              <span className='active' onClick={_this.sd}>待办</span>\n         \t    <span onClick={_this.jk}>借款</span>\n              <span onClick={_this.bx}>报销</span>\n              <span onClick={_this.cd}>查询</span>\n         </div>\n      </div>\n    )\n  }\n});\n"
+getData_control19_MdNPFF: >-
+  ;if (!elem) {
+    return;
+  } // console.log(elem)
+
+  var data = [];
+
+  if
+  ($(elem).children('li').eq(2).children('div').attr('class').indexOf('selected')
+  !== -1) {
+    data.push('1');
+  } else {
+    data.push('2');
+  }
+
+  return data;
+doAction_uiControl16_TvQrlB: |
+  var event = data.eventType;
+  if (event == 'jk') {
+    $(elem).children('li').eq(0).find("ul").eq(0).find('div').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+  }
+  else if (event == 'sd') {
+    $(elem).children('li').eq(1).find('div').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+  }
+  else if (event == 'cd') {
+    $(elem).children('li').eq(2).find('div').eq(0).click();
+    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#cx";
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 5000);
+  }
+  else if (event == 'bx') {
+    $(elem).children('li').eq(2).find('div').eq(0).click();
+    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#bx";
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 4000);
+  }
+getTemplate_uiControl68_4FroBi: |-
+  module.exports = React.createClass({
+    componentWillMount() {
+      alert('数据加载中，请稍等... ...');
+      ysp.appMain.showLoading();
+      setTimeout(function(){
+        ysp.appMain.hideLoading();
+      },2000)
+    },
+    render: function() {
+      return (
+        ''
+      )
+    }
+  });
+getData_control79_pQpCQE: ;
+doAction_uiControl68_4FroBi: ''

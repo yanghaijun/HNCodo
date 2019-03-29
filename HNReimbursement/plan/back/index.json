@@ -1,0 +1,159 @@
+{
+  "version": "0.1",
+  "id": "back",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
+  "jsFile": "index.js",
+  "requires": {
+    "TodoList": "../TodoList/index.json"
+  },
+  "chineseName": "退回",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control16_w6esOh": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[31]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16_w6esOh"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context5_t1B0NJ": {
+      "controls": [
+        "control16_w6esOh"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow16_5iTrRZ": {
+      "toContexts": [
+        {
+          "toContextId": "context5_t1B0NJ"
+        }
+      ]
+    },
+    "flow17_e4uLlc": {
+      "fromContextId": "context5_t1B0NJ",
+      "fromAction": "doAction",
+      "fromControlId": "control16_w6esOh",
+      "toContexts": [
+        {
+          "toContextId": "context5_t1B0NJ"
+        },
+        {
+          "toContextId": "context1_RXxJco",
+          "toModelId": "TodoList"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page5_0lBcC7": {
+      "contextId": "context5_t1B0NJ",
+      "layout": [
+        {
+          "id": "uiControl13_NWwFyA",
+          "controlId": "control16_w6esOh",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl13_NWwFyA",
+                "onGetTemplate": "getTemplate_uiControl13_NWwFyA"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context5_t1B0NJ": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context5_t1B0NJ": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context5_t1B0NJ": [
+          [
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_title"
+          ],
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context5_t1B0NJ": [
+          [],
+          [
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "path"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context5_t1B0NJ": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/DIV/DIV",
+            "DIV/DIV/A"
+          ],
+          [
+            "-/-/A",
+            "-/-/SPAN",
+            "-/A/I"
+          ]
+        ]
+      }
+    }
+  }
+}

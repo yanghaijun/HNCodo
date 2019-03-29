@@ -1,0 +1,852 @@
+{
+  "version": "0.1",
+  "id": "reimbursement",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action###",
+  "jsFile": "index.js",
+  "chineseName": "报销金额",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control65_M5FTdb": {
+      "location": {
+        "data": {
+          "tagName": "BUTTON"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "返 回"
+              ],
+              "visText": [
+                "返 回"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.input_table TD.alignC BUTTON.bt.bt_green"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/BUTTON[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control65_M5FTdb"
+      },
+      "intendedRole": "custom",
+      "roles": "element,button,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control66_WVb2dU": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "首 页我要填单出差报销单添加明细"
+              ],
+              "visText": [
+                "首 页我要填单出差报销单添加明细"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::FORM[@id=\"lineForm\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_main DIV.m_content_inner_main DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\t\t\t首 页我要填单出差报销单添加明细\n\t\t",
+      "frameXPath": "",
+      "customJS": "if(elem.ownerDocument.querySelector('.breadcrumb').textContent.indexOf('出差报销单') !== -1){return true;}return false;"
+    },
+    "control67_nWnwXB": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.main_wrap DIV.m_content_main DIV.m_content_inner_main"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control67_nWnwXB"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control69_WOKhUk": {
+      "location": {
+        "data": {
+          "tagName": "H1"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "行程明细"
+              ],
+              "visText": [
+                "行程明细"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::FORM[@id=\"lineForm\"]//DIV[@id=\"add_mingXiList\"]/DIV[1]/DIV[2]/DIV[1]/H1[1]",
+              "descendant::FORM[@id=\"lineForm\"]//DIV[@id=\"add_mingXiList\"]//H1",
+              "descendant::DIV[@id=\"add_mingXiList\"]//H1"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              7
+            ],
+            "value": "DIV.box.border_b.p16.parentBox DIV.showDetail H1.tital.fl"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/H1[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              86,
+              104,
+              138
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "行程明细",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context17_AXqT6l": {
+      "controls": [
+        "control65_M5FTdb",
+        "control67_nWnwXB"
+      ],
+      "anchors": [
+        "control66_WVb2dU",
+        "control69_WOKhUk"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow58_S8as22": {
+      "toContexts": [
+        {
+          "toContextId": "context17_AXqT6l"
+        }
+      ]
+    },
+    "flow59_xSAPkx": {
+      "fromContextId": "context17_AXqT6l",
+      "fromAction": "doAction",
+      "fromControlId": "control65_M5FTdb",
+      "toContexts": [
+        {
+          "toContextId": "context17_AXqT6l"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page17_SrcIbp": {
+      "contextId": "context17_AXqT6l",
+      "layout": [
+        {
+          "id": "uiControl51_O7nNsO",
+          "controlId": "control65_M5FTdb",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl51_O7nNsO",
+                "onGetTemplate": "getTemplate_uiControl51_O7nNsO"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl52_0BEIU3",
+          "controlId": "control67_nWnwXB",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl52_0BEIU3",
+                "onGetTemplate": "getTemplate_uiControl52_0BEIU3"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context17_AXqT6l": [
+          "首页"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context17_AXqT6l": [
+          "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
+          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context17_AXqT6l": [
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "addDetailsBut",
+            "addOtherNodesBut",
+            "addSpea",
+            "addStayBut",
+            "add_mingXiList",
+            "attachment_myQuery_hint",
+            "boardSubsidy",
+            "borrowAmount",
+            "communicationSubsidy",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "costCenterCode",
+            "costCenterName",
+            "deduct",
+            "describe",
+            "detail",
+            "detailsIntroduction",
+            "detailsTr",
+            "endTime",
+            "feesTypeCode",
+            "feesTypeName",
+            "goBackTime",
+            "good",
+            "highOrBulletTrain",
+            "insideInvoiceNum",
+            "intracityTransSubsidy",
+            "isOverproof",
+            "leaveTime",
+            "lineForm",
+            "loginWatson",
+            "longRideSubsidy",
+            "longrideTransf",
+            "lvisNullFlag",
+            "moreCostCenter",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "nightTrainSubsidyEndtime",
+            "nightTrainSubsidyStarttime",
+            "nightTraninTransf",
+            "notLongRideHour",
+            "offOfPage",
+            "orgCode",
+            "orgName",
+            "other",
+            "otherDeduction",
+            "otherDeductionMoney",
+            "otherExpenseIntroduction",
+            "otherInvoiceNum",
+            "otherPtAmount",
+            "otherPtDuty",
+            "otherPtValence",
+            "otherTotleAmount",
+            "otherVatDuty",
+            "otherZpAmount",
+            "otherZpDuty",
+            "otherZpValence",
+            "other_table",
+            "plane",
+            "readOnly",
+            "reimburseName",
+            "reimburseUserId",
+            "rideHours",
+            "serialNo",
+            "ship",
+            "standard",
+            "startTime",
+            "stay",
+            "stayBox",
+            "stayDiv",
+            "stayFlagN",
+            "stayPtAmount",
+            "stayPtDuty",
+            "stayPtValence",
+            "stayZpAmount",
+            "stayZpDuty",
+            "stayZpValence",
+            "stay_table",
+            "sub_table",
+            "subsidy",
+            "subsidyAmount",
+            "subsidyIntroduction",
+            "table_area",
+            "table_del",
+            "table_id",
+            "table_month",
+            "table_province",
+            "table_stayStandard",
+            "table_travelIsVat",
+            "table_travelZsDays",
+            "table_travelZsDuty",
+            "table_travelZsMoney",
+            "table_travelZsValence",
+            "table_zsNodeCode",
+            "tbodyTravelDetails",
+            "totalInvoiceNum",
+            "totalMoney",
+            "totalvatMoney",
+            "totle",
+            "totlePtAmount",
+            "totlePtDuty",
+            "totlePtValence",
+            "totleSub",
+            "totleZpAmount",
+            "totleZpDuty",
+            "totleZpValence",
+            "tr_",
+            "trac",
+            "train",
+            "transGradeFlagN",
+            "transGradeFlagY",
+            "transGradeId",
+            "transWayId",
+            "travelDays",
+            "travelDaysCheck",
+            "travelId",
+            "travelSubsidy",
+            "travelZsInvoiceNum",
+            "travelZsMoney",
+            "travelZsVatMoney",
+            "wbs",
+            "wbsName",
+            "zsIntroduction",
+            "zsStandard"
+          ],
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "addDetailsBut",
+            "addOtherNodesBut",
+            "addSpea",
+            "addStayBut",
+            "add_mingXiList",
+            "attachment_myQuery_hint",
+            "boardSubsidy",
+            "borrowAmount",
+            "communicationSubsidy",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "costCenterCode",
+            "costCenterName",
+            "deduct",
+            "del",
+            "describe",
+            "detail",
+            "detailsIntroduction",
+            "detailsTr",
+            "endTime",
+            "feesTypeCode",
+            "feesTypeName",
+            "goBackTime",
+            "good",
+            "highOrBulletTrain",
+            "insideInvoiceNum",
+            "intracityTransSubsidy",
+            "isOverproof",
+            "leaveTime",
+            "lineForm",
+            "loginWatson",
+            "longRideSubsidy",
+            "longrideTransf",
+            "lvisNullFlag",
+            "moreCostCenter",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "nightTrainSubsidyEndtime",
+            "nightTrainSubsidyStarttime",
+            "nightTraninTransf",
+            "notLongRideHour",
+            "offOfPage",
+            "orgCode",
+            "orgName",
+            "other",
+            "otherDeduction",
+            "otherDeductionMoney",
+            "otherExpenseIntroduction",
+            "otherInvoiceNum",
+            "otherPtAmount",
+            "otherPtDuty",
+            "otherPtValence",
+            "otherTotleAmount",
+            "otherVatDuty",
+            "otherZpAmount",
+            "otherZpDuty",
+            "otherZpValence",
+            "other_table",
+            "otheramount",
+            "otherduty",
+            "otherisadd",
+            "otherisvat",
+            "othernodeCode",
+            "othernodeId",
+            "othertr_",
+            "othervalence",
+            "plane",
+            "readOnly",
+            "reimburseName",
+            "reimburseUserId",
+            "rideHours",
+            "serialNo",
+            "ship",
+            "standard",
+            "startTime",
+            "stay",
+            "stayBox",
+            "stayDiv",
+            "stayFlagN",
+            "stayPtAmount",
+            "stayPtDuty",
+            "stayPtValence",
+            "stayZpAmount",
+            "stayZpDuty",
+            "stayZpValence",
+            "stay_table",
+            "sub_table",
+            "subsidy",
+            "subsidyAmount",
+            "subsidyIntroduction",
+            "table_area",
+            "table_del",
+            "table_id",
+            "table_month",
+            "table_province",
+            "table_stayStandard",
+            "table_travelIsVat",
+            "table_travelZsDays",
+            "table_travelZsDuty",
+            "table_travelZsMoney",
+            "table_travelZsValence",
+            "table_zsNodeCode",
+            "tbodyTravelDetails",
+            "td_",
+            "totalInvoiceNum",
+            "totalMoney",
+            "totalvatMoney",
+            "totle",
+            "totlePtAmount",
+            "totlePtDuty",
+            "totlePtValence",
+            "totleSub",
+            "totleZpAmount",
+            "totleZpDuty",
+            "totleZpValence",
+            "tr_",
+            "trac",
+            "train",
+            "transGradeFlagN",
+            "transGradeFlagY",
+            "transGradeId",
+            "transWayId",
+            "travelDays",
+            "travelDaysCheck",
+            "travelId",
+            "travelSubsidy",
+            "travelZsInvoiceNum",
+            "travelZsMoney",
+            "travelZsVatMoney",
+            "wbs",
+            "wbsName",
+            "zsIntroduction",
+            "zsStandard"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context17_AXqT6l": [
+          [
+            "Wdate",
+            "add-on",
+            "addStay",
+            "alignC",
+            "alignR",
+            "attachment_myQuery_hint",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "class",
+            "clearB",
+            "closeCon",
+            "col_red",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "deleteDetails",
+            "detailsAmount",
+            "detailsId",
+            "droppable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "inputOutSide",
+            "input_table",
+            "invoiceNum",
+            "isvat",
+            "java.util.HashMap",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "max",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "openCon",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "parentBox",
+            "path",
+            "ptAmount",
+            "ptDuty",
+            "ptValence",
+            "showDetail",
+            "stayDays",
+            "tital",
+            "travelDetailData",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "vatMoney",
+            "width",
+            "zpAmount",
+            "zpDuty",
+            "zpValence"
+          ],
+          [
+            "Wdate",
+            "add-on",
+            "addStay",
+            "alignC",
+            "alignR",
+            "attachment_myQuery_hint",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "class",
+            "clearB",
+            "closeCon",
+            "col_red",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "deleteDetails",
+            "detailsAmount",
+            "detailsId",
+            "droppable",
+            "duty",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "inputOutSide",
+            "input_table",
+            "invoiceNum",
+            "isvat",
+            "java.util.HashMap",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "max",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nodeCode",
+            "nowarp",
+            "num_Todo",
+            "openCon",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "parentBox",
+            "path",
+            "ptAmount",
+            "ptDuty",
+            "ptValence",
+            "showDetail",
+            "stayDays",
+            "tital",
+            "travelDetailData",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "valence",
+            "vatMoney",
+            "width",
+            "zpAmount",
+            "zpDuty",
+            "zpValence"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context17_AXqT6l": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/META",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/INPUT-hidden",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/BUTTON",
+            "TD/DIV/BR",
+            "TD/DIV/INPUT-text",
+            "TD/DIV/SPAN",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/A",
+            "TR/TD/A",
+            "TR/TD/BUTTON",
+            "TR/TD/DIV",
+            "TR/TD/FONT",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/META",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/STRONG/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/INPUT-hidden",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/BUTTON",
+            "TD/DIV/BR",
+            "TD/DIV/INPUT-text",
+            "TD/DIV/SPAN",
+            "TD/SELECT/OPTION",
+            "TD/SPAN/A",
+            "TH/SPAN/STRONG",
+            "TR/TD/A",
+            "TR/TD/BUTTON",
+            "TR/TD/DIV",
+            "TR/TD/FONT",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-null",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TH/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}
