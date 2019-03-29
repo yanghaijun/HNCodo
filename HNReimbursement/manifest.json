@@ -69,6 +69,6 @@
   "default_url": "http://59.110.171.69:30002/ReimbursePlatform/index.jsp",
   "scope": "HNReimbursement",
   "start_url": "http://59.110.171.69:30002/ReimbursePlatform/index.jsp",
-  "update_time": 1553828296396,
+  "update_time": 1553839607429,
   "runtime_env": "2webview"
 }

@@ -279,49 +279,6 @@
       "monitored": false,
       "frameXPath": ""
     },
-    "control19_MdNPFF": {
-      "location": {
-        "data": {
-          "tagName": "UL"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": [
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
-              "descendant::UL[@id=\"navigate\"]//UL"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              0,
-              4
-            ],
-            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control19_MdNPFF"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": ""
-    },
     "control45_L3SP1I": {
       "location": {
         "data": {
@@ -463,7 +420,6 @@
         "control12_zaMcnV",
         "control13_t52bRC",
         "control14_rapNLN",
-        "control19_MdNPFF",
         "control45_L3SP1I",
         "control79_pQpCQE",
         "control80_F4rMVe"
@@ -529,24 +485,6 @@
         {
           "toContextId": "context4_K6hcfz",
           "toModelId": "backs"
-        }
-      ]
-    },
-    "flow8_5cOIsu": {
-      "fromContextId": "context1_RXxJco",
-      "fromAction": "doAction",
-      "fromControlId": "control19_MdNPFF",
-      "toContexts": [
-        {
-          "toContextId": "context1_RXxJco"
-        },
-        {
-          "toContextId": "context8_GgSlXb",
-          "toModelId": "shenqingdan1"
-        },
-        {
-          "toContextId": "context13_xMCZhe",
-          "toModelId": "checkList"
         }
       ]
     },
@@ -691,21 +629,6 @@
                       "events": {
                         "onDoAction": "doAction_uiControl38_keMeUn",
                         "onGetTemplate": "getTemplate_uiControl38_keMeUn"
-                      }
-                    }
-                  }
-                },
-                {
-                  "id": "uiControl16_TvQrlB",
-                  "controlId": "control19_MdNPFF",
-                  "display": {
-                    "adapterId": "custom",
-                    "type": "custom",
-                    "adapter": {
-                      "templateType": "react",
-                      "events": {
-                        "onDoAction": "doAction_uiControl16_TvQrlB",
-                        "onGetTemplate": "getTemplate_uiControl16_TvQrlB"
                       }
                     }
                   }

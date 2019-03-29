@@ -5,8 +5,7 @@
     getData_control0_sowRTW: function (elem) {
       ;if (!elem) {
         return false;
-      }var root = {};root.userName = elem.querySelector('#userName').value;root.pwd = elem.querySelector('#psw').value;
-      return root;
+      }var root = {};root.userName = elem.querySelector('#userName').value;root.pwd = elem.querySelector('#psw').value;return root;
     },
     doAction_uiControl0_qquLh1: function (data, elem) {
       if (data.eventType == 'change') {

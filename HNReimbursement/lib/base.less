@@ -4,7 +4,7 @@
 // 发布后，base.less 被编译成 base.css 文件
 
 
-  div.home	{
+div.home	{
     margin: 10px;
     >li	{
       list-style: none;
@@ -14,7 +14,7 @@
       background: #fff;
       margin-bottom: 10px;
       font-weight: bold;
-      background: #eeeeee;
+      background: #fff;
       >span	{
         display: inline-block;
         width: 100px;
@@ -42,8 +42,32 @@
       }
     }
   }
-
+[data-ysp-modelid=TodoList]{
+  background: #eeeeee;
+}
 //首页结束
+div.Darry_listTitle {
+    height: 44px;
+    width: 100%;
+    background: #0a73cc;
+    color: #fff;
+    line-height: 44px;
+    font-weight: bold;
+  >span	{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    >font {
+      height: 23px;
+      width: 23px;
+      position: absolute;
+      top: -16px;
+      left:16px;
+      background: url(../local/img/back.png) no-repeat center center;
+    }
+  }
+}
+//重新确定UI加上返回头部样式
 
 .zhehang_lfj{
   overflow: hidden;
@@ -263,6 +287,7 @@ li{
   background: #eee;
   border-bottom: 1px solid #ddd;
   line-height: 41px;
+  margin-top: 30px;//Darry添加back头部时添加
   .serch-head-icon{
     background: #fff;
     .icon-title{

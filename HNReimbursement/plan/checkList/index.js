@@ -1,40 +1,5 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
-    getData_control47_FS7IZd: function (elem) {
-      "use strict";
-
-      ;if (!elem) {
-        return;
-      } // console.log(elem)
-      var href = elem.ownerDocument.location.href;var tabPage = href.split("#")[1]; // if ($(elem).children('li').eq(2).children('div').attr('class').indexOf('selected') !== -1) {
-      //   data.push('1');
-      // } else {
-      //   data.push('2');
-      // }
-      return tabPage;
-    },
-    doAction_uiControl39_2TQxnI: function (data, elem) {
-      'use strict';
-
-      var event = data.eventType;if (event == 'jk') {
-        $(elem).children('li').eq(0).find("ul").eq(0).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
-          ysp.appMain.hideLoading();
-        }, 2000);
-      } else if (event == 'sd') {
-        $(elem).children('li').eq(1).find('div').eq(0).click();ysp.appMain.showLoading();
-        setTimeout(function () {
-          ysp.appMain.hideLoading();
-        }, 2000);
-      } else if (event == 'cd') {
-        $(elem).children('li').eq(2).find('div').eq(0).click();elem.ownerDocument.location.href = "http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#cx";
-      } else if (event == 'bx') {
-        $(elem).children('li').eq(2).find('div').eq(0).click();elem.ownerDocument.location.href = "http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#bx";
-      }
-    },
-    getTemplate_uiControl39_2TQxnI: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  // reset:function(e){\n  //   if(confirm('\u662F\u5426\u6E05\u7A7A\u7528\u6237\u4FE1\u606F,\u4E0B\u6B21\u91CD\u65B0\u767B\u5F55')){\n  //       ysp.customHelper.login();\n  //     }\n  // },\n  componentWillMount(){\n\n  },\n  jk:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"jk\"\n      })\n    }\n  },\n  sd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sd\"\n      })\n    }\n  },\n  bx:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"bx\"\n      })\n    }\n    // var tabCon=e.target.ownerDocument.getElementById(\"tabCon\");\n    // var tabCon_children=tabCon.querySelectorAll(\"div\");\n    // tabCon_children[1].classList.add(\"show\");\n    // tabCon_children[0].classList.remove(\"show\");\n  },\n  cd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"cd\"\n      })\n    }\n    // var tabCon=e.target.ownerDocument.getElementById(\"tabCon\");\n    // var tabCon_children=tabCon.querySelectorAll(\"div\");\n    // tabCon_children[0].classList.add(\"show\");\n    // tabCon_children[1].classList.remove(\"show\");\n    \n    \n     // tabList[i].classList.add(\"on\");\n     // tabList[i].classList.remove(\"on\");\n  },\n  componentWillReceiveProps:function(e){\n    \n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n     return (\n      <div className='head-yue'>\n        <div className = 'TodoList-head2' id=\"tabs\">\n           <div className='div_lfj'>\n\t\t\t\t\t\t\t<span onClick={_this.sd}>\u5F85\u529E</span>\n              <span onClick={_this.jk}>\u501F\u6B3E</span>\n             {data=='bx'?<span className='active' onClick={_this.bx}>\u62A5\u9500</span>:<span onClick={_this.bx}>\u62A5\u9500</span>}\n              {data=='bx'?<span onClick={_this.cd}>\u67E5\u8BE2</span>:<span className='active' onClick={_this.cd}>\u67E5\u8BE2</span>}\n           </div> \n        </div>\n      </div>\n    )\n  }\n});\n";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n\n  // reset:function(e){\n  //   if(confirm('\u662F\u5426\u6E05\u7A7A\u7528\u6237\u4FE1\u606F,\u4E0B\u6B21\u91CD\u65B0\u767B\u5F55')){\n  //       ysp.customHelper.login();\n  //     }\n  // },\n  componentWillMount: function componentWillMount() {},\n\n  jk: function jk(e) {\n    e.target.ownerDocument.querySelector('.active').className = '';\n    e.target.className = 'active';\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"jk\"\n      });\n    }\n  },\n  sd: function sd(e) {\n    e.target.ownerDocument.querySelector('.active').className = '';\n    e.target.className = 'active';\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"sd\"\n      });\n    }\n  },\n  bx: function bx(e) {\n    e.target.ownerDocument.querySelector('.active').className = '';\n    e.target.className = 'active';\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"bx\"\n      });\n    }\n    // var tabCon=e.target.ownerDocument.getElementById(\"tabCon\");\n    // var tabCon_children=tabCon.querySelectorAll(\"div\");\n    // tabCon_children[1].classList.add(\"show\");\n    // tabCon_children[0].classList.remove(\"show\");\n  },\n  cd: function cd(e) {\n    e.target.ownerDocument.querySelector('.active').className = '';\n    e.target.className = 'active';\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"cd\"\n      });\n    }\n    // var tabCon=e.target.ownerDocument.getElementById(\"tabCon\");\n    // var tabCon_children=tabCon.querySelectorAll(\"div\");\n    // tabCon_children[0].classList.add(\"show\");\n    // tabCon_children[1].classList.remove(\"show\");\n\n\n    // tabList[i].classList.add(\"on\");\n    // tabList[i].classList.remove(\"on\");\n  },\n  componentWillReceiveProps: function componentWillReceiveProps(e) {},\n  render: function render() {\n    var _this = this;\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      { className: 'head-yue' },\n      React.createElement(\n        'div',\n        { className: 'TodoList-head2', id: 'tabs' },\n        React.createElement(\n          'div',\n          { className: 'div_lfj' },\n          React.createElement(\n            'span',\n            { onClick: _this.sd },\n            '\\u5F85\\u529E'\n          ),\n          React.createElement(\n            'span',\n            { onClick: _this.jk },\n            '\\u501F\\u6B3E'\n          ),\n          data == 'bx' ? React.createElement(\n            'span',\n            { className: 'active', onClick: _this.bx },\n            '\\u62A5\\u9500'\n          ) : React.createElement(\n            'span',\n            { onClick: _this.bx },\n            '\\u62A5\\u9500'\n          ),\n          data == 'bx' ? React.createElement(\n            'span',\n            { onClick: _this.cd },\n            '\\u67E5\\u8BE2'\n          ) : React.createElement(\n            'span',\n            { className: 'active', onClick: _this.cd },\n            '\\u67E5\\u8BE2'\n          )\n        )\n      )\n    );\n  }\n});";
-    },
     getData_control49_n31ik2: function (elem) {
       'use strict';
 
@@ -110,6 +75,7 @@
     },
     getData_control50_K78z7e: function (elem) {
       'use strict';
+
       ;if (!elem) {
         return false;
       }var data = {};var data_All = {};var titles = [];var contents = [];var conss = [];var TD = [];var list;var num = [];var num1 = [];if (elem.querySelector('.list_Table').querySelectorAll('tbody')[0].querySelectorAll('th').length > 0 && elem.querySelector('.list_Table').querySelectorAll('tbody').length > 0) {
@@ -155,6 +121,7 @@
     },
     doAction_uiControl41_2PEF1E: function (data, elem) {
       'use strict';
+
       if (data.eventType == 'openClick') {
         elem.querySelectorAll('.tableOn')[data.dataCustom].querySelectorAll('a')[1].click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -206,6 +173,16 @@
     getTemplate_uiControl47_IHaJvT: function () {
       var selfTemplate = "module.exports = React.createClass({\n  componentWillMount(){\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n  render: function() {\n    return (\n      <div className=\"loading\">\u6570\u636E\u52A0\u8F7D\u4E2D\uFF0C\u8BF7\u7A0D\u540E... ...</div>\n    )\n  }\n});";
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      { className: \"loading\" },\n      \"\\u6570\\u636E\\u52A0\\u8F7D\\u4E2D\\uFF0C\\u8BF7\\u7A0D\\u540E... ...\"\n    );\n  }\n});";
+    },
+    getData_control19_XadXO7: function (elem) {},
+    doAction_uiControl16_OoecKz: function (data, elem) {
+      if (data.eventType == 'back') {
+        $(elem).find('ul').find('#_easyui_tree_7').click();
+      }
+    },
+    getTemplate_uiControl16_OoecKz: function () {
+      var selfTemplate = 'module.exports = React.createClass({\n  handle: function(data, eventType) {\n    var handler = this.props.customHandler;\n    handler && handler({\n      data,\n      eventType\n    });\n  },\n  render: function() {\n    var me = this;\n    return (\n      <div className=\'Darry_listTitle\'>\n        <span onClick={()=>{\n            me.handle("","back");\n          }}><font style={{\'top\':\'10px\'}}></font></span>\n        <span>\u67E5\u8BE2</span> \n      </div>\n    )\n  }\n});';
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  handle: function handle(data, eventType) {\n    var handler = this.props.customHandler;\n    handler && handler({\n      data: data,\n      eventType: eventType\n    });\n  },\n  render: function render() {\n    var me = this;\n    return React.createElement(\n      "div",\n      { className: "Darry_listTitle" },\n      React.createElement(\n        "span",\n        { onClick: function onClick() {\n            me.handle("", "back");\n          } },\n        React.createElement("font", { style: { \'top\': \'10px\' } })\n      ),\n      React.createElement(\n        "span",\n        null,\n        "\\u67E5\\u8BE2"\n      )\n    );\n  }\n});';
     }
   }, "checkList");
 })(window, ysp);

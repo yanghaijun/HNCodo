@@ -6,10 +6,9 @@ div.home > li {
   height: 120px;
   width: 100%;
   text-align: center;
-  background: #fff;
   margin-bottom: 10px;
   font-weight: bold;
-  background: #eeeeee;
+  background: #fff;
 }
 div.home > li > span {
   display: inline-block;
@@ -35,6 +34,30 @@ div.home > li > span .Reimburse {
 }
 div.home > li > span .Inquire {
   background: url("../local/img/Inquire.png") no-repeat center;
+}
+[data-ysp-modelid=TodoList] {
+  background: #eeeeee;
+}
+div.Darry_listTitle {
+  height: 44px;
+  width: 100%;
+  background: #0a73cc;
+  color: #fff;
+  line-height: 44px;
+  font-weight: bold;
+}
+div.Darry_listTitle > span {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+div.Darry_listTitle > span > font {
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  background: url(../local/img/back.png) no-repeat center center;
 }
 .zhehang_lfj {
   overflow: hidden;
@@ -239,6 +262,7 @@ li {
   background: #eee;
   border-bottom: 1px solid #ddd;
   line-height: 41px;
+  margin-top: 30px;
 }
 .Todo-serch .serch-head-icon {
   background: #fff;

@@ -57,50 +57,6 @@
       "text": " 报账单综合查询 ",
       "frameXPath": ""
     },
-    "control47_FS7IZd": {
-      "location": {
-        "data": {
-          "tagName": "UL"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": [
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
-              "descendant::UL[@id=\"navigate\"]//UL"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              0,
-              4
-            ],
-            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control47_FS7IZd"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
     "control49_n31ik2": {
       "location": {
         "data": {
@@ -207,15 +163,58 @@
       "monitored": false,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control19_XadXO7": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]",
+              "descendant::UL[@id=\"navigate\"]/LI[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              14
+            ],
+            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control19_XadXO7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context13_xMCZhe": {
       "controls": [
-        "control47_FS7IZd",
         "control49_n31ik2",
         "control50_K78z7e",
-        "control61_BTKyg4"
+        "control61_BTKyg4",
+        "control19_XadXO7"
       ],
       "anchors": [
         "control46_ztTQCM"
@@ -228,24 +227,6 @@
       "toContexts": [
         {
           "toContextId": "context13_xMCZhe"
-        }
-      ]
-    },
-    "flow47_Jikvy2": {
-      "fromContextId": "context13_xMCZhe",
-      "fromAction": "doAction",
-      "fromControlId": "control47_FS7IZd",
-      "toContexts": [
-        {
-          "toContextId": "context13_xMCZhe"
-        },
-        {
-          "toContextId": "context1_RXxJco",
-          "toModelId": "TodoList"
-        },
-        {
-          "toContextId": "context8_GgSlXb",
-          "toModelId": "shenqingdan1"
         }
       ]
     },
@@ -287,21 +268,6 @@
       "contextId": "context13_xMCZhe",
       "layout": [
         {
-          "id": "uiControl39_2TQxnI",
-          "controlId": "control47_FS7IZd",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl39_2TQxnI",
-                "onGetTemplate": "getTemplate_uiControl39_2TQxnI"
-              }
-            }
-          }
-        },
-        {
           "id": "uiControl40_fKgedU",
           "controlId": "control49_n31ik2",
           "display": {
@@ -312,6 +278,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl40_fKgedU",
                 "onGetTemplate": "getTemplate_uiControl40_fKgedU"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl16_OoecKz",
+          "controlId": "control19_XadXO7",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl16_OoecKz",
+                "onGetTemplate": "getTemplate_uiControl16_OoecKz"
               }
             }
           }
