@@ -321,7 +321,7 @@ li {
   bottom: 0px;
   right: 0px;
   width: 100px;
-  height: 100px;
+  height: 95px;
   color: #fff;
 }
 .Todo-list-content .list-bottom .li2 {
@@ -336,7 +336,7 @@ li {
 }
 .Todo-list-content .list-bottom > li:nth-child(2) {
   background: #BABABA;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .Todo-list-content .list-bottom .li1 {
   width: 65px;
@@ -666,6 +666,9 @@ li {
   height: 20px;
   background: url(../local/img/done.png) no-repeat center center;
   background-size: 79%;
+}
+.Todo-list-content .D-list-icon-up {
+  transform: rotate(-180deg);
 }
 .bg_none {
   min-height: 70vh;
@@ -1611,4 +1614,13 @@ div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton .alone,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton .alone,
 div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   width: 94%;
+}
+.Dselect-right {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url(../local/img/arrow.png) no-repeat scroll right center transparent;
+}
+.Dselect-right::-ms-expand {
+  display: none;
 }

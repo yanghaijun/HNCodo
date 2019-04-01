@@ -437,7 +437,7 @@ li{
     bottom: 0px;
     right: 0px;
     width: 100px;
-    height: 100px;
+    height: 95px;
     color: #fff;
     .li2 {
       width: 65px;
@@ -451,7 +451,7 @@ li{
      }
      >li:nth-child(2) {
       background: #BABABA;
-      margin-top: 20px;
+      margin-top: 15px;
      }
     .li1 {
       width: 65px;
@@ -790,6 +790,11 @@ li{
     background-size: 79%;
    
   }
+  //列表页的上下箭头切换UI改变20190329开始
+  .D-list-icon-up {
+    transform:rotate(-180deg);
+  }
+  //列表页的上下箭头切换UI改变20190329结束
 }
 .bg_none{
   min-height: 70vh;
@@ -1531,3 +1536,11 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
   }
   
 }
+
+.Dselect-right{  
+		appearance:none;   
+    -moz-appearance:none;   
+    -webkit-appearance:none;  
+    background:url(../local/img/arrow.png) no-repeat scroll right center transparent; 
+}
+.Dselect-right::-ms-expand { display: none; }
