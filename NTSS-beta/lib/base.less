@@ -324,6 +324,9 @@ li{
         overflow: hidden;
   			text-overflow: ellipsis;
       }
+      span:nth-child(1){
+        font-weight: bold;
+      }
     }
     
   }
@@ -436,30 +439,24 @@ li{
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 100px;
+    width: 90px;
     height: 95px;
     color: #fff;
-    .li2 {
-      width: 65px;
-      height: 30px;
+    >li {
+      width: 60px;
+      height: 25px;
       text-align: center;
-      line-height: 30px;
+      line-height: 25px;
       border-radius: 30px;
+      font-size: 15px;
+      margin: 5px 5px;
     }
-     >li:nth-child(1) {
+     .Detail-d {
       background: #25d4ad;
      }
-     >li:nth-child(2) {
+     .Back-d {
       background: #BABABA;
-      margin-top: 15px;
      }
-    .li1 {
-      width: 65px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 30px;
-    }
   }
   //3.29号修改UI图片将删除和详情从底下放到右边结束
   
@@ -971,9 +968,20 @@ div[data-componentsid="uiControl2_Qo50KS"]{
     font-weight: bold;
     // border-left: 5px solid rgb(16,92,193);
     }
-  .icon-title:before{
+  .icon-titleT:before{
       content: "";
-      background: url(../local/img/LoanIMG.png) no-repeat center center;
+      background: url(../local/img/tie.png) no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      top:2px;
+      left:10px;
+      width: 20px;
+      height: 20px;
+    	border-radius: 50%;
+    }
+  .icon-titleM:before{
+      content: "";
+      background: url(../local/img/saveM.png) no-repeat center center;
       background-size: contain;
       position: absolute;
       top:2px;
@@ -1332,17 +1340,15 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
           display: block;
           width: 50px;
           height: 50px;
-          background: url(../local/img/arrow.png) no-repeat center center;
+          background: url(../local/img/shouqi.png) no-repeat center center;
           background-size: 8px 13px;
-          transform:rotate(0deg);
-          // transform:rotate(90deg); 箭头从向下修改到向右 3.29UI图
+         // transform:rotate(90deg); 
           position: absolute;
           right: 0px;
           top: 0px;
         }
         .arr{
-          transform:rotate(90deg);
-          // transform:rotate(-90deg); 箭头从向上修改到向下 3.29UI图
+          transform:rotate(90deg); 
         }
         .nor{
           transform:rotate(0deg);
@@ -1537,10 +1543,21 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
   
 }
 
+//UI图修改select的三角符号0329开始
 .Dselect-right{  
 		appearance:none;   
     -moz-appearance:none;   
     -webkit-appearance:none;  
-    background:url(../local/img/arrow.png) no-repeat scroll right center transparent; 
+    background:url(../local/img/shouqi.png) no-repeat scroll right center transparent; 
+  	background-size: 9px 15px;
+}
+.Dselect-down{  
+		appearance:none;   
+    -moz-appearance:none;   
+    -webkit-appearance:none;  
+    background:url(../local/img/xianshi.png) no-repeat scroll right center transparent; 
+  	background-size: 15px 9px;
 }
 .Dselect-right::-ms-expand { display: none; }
+.Dselect-down::-ms-expand { display: none; }
+//UI图修改select的三角符号0329结束

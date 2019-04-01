@@ -316,34 +316,31 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.Todo-list-content .list-content-ul li span:nth-child(1) {
+  font-weight: bold;
+}
 .Todo-list-content .list-bottom {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 100px;
+  width: 90px;
   height: 95px;
   color: #fff;
 }
-.Todo-list-content .list-bottom .li2 {
-  width: 65px;
-  height: 30px;
+.Todo-list-content .list-bottom > li {
+  width: 60px;
+  height: 25px;
   text-align: center;
-  line-height: 30px;
+  line-height: 25px;
   border-radius: 30px;
+  font-size: 15px;
+  margin: 5px 5px;
 }
-.Todo-list-content .list-bottom > li:nth-child(1) {
+.Todo-list-content .list-bottom .Detail-d {
   background: #25d4ad;
 }
-.Todo-list-content .list-bottom > li:nth-child(2) {
+.Todo-list-content .list-bottom .Back-d {
   background: #BABABA;
-  margin-top: 15px;
-}
-.Todo-list-content .list-bottom .li1 {
-  width: 65px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 30px;
 }
 .Todo-list-content .title {
   font-size: 16px;
@@ -820,9 +817,20 @@ div[data-componentsid="uiControl2_Qo50KS"] {
   position: relative;
   font-weight: bold;
 }
-.faqiBox_lfj .icon-title:before {
+.faqiBox_lfj .icon-titleT:before {
   content: "";
-  background: url(../local/img/LoanIMG.png) no-repeat center center;
+  background: url(../local/img/tie.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.faqiBox_lfj .icon-titleM:before {
+  content: "";
+  background: url(../local/img/saveM.png) no-repeat center center;
   background-size: contain;
   position: absolute;
   top: 2px;
@@ -1226,9 +1234,8 @@ div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanArrow {
   display: block;
   width: 50px;
   height: 50px;
-  background: url(../local/img/arrow.png) no-repeat center center;
+  background: url(../local/img/shouqi.png) no-repeat center center;
   background-size: 8px 13px;
-  transform: rotate(0deg);
   position: absolute;
   right: 0px;
   top: 0px;
@@ -1619,8 +1626,19 @@ div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: url(../local/img/arrow.png) no-repeat scroll right center transparent;
+  background: url(../local/img/shouqi.png) no-repeat scroll right center transparent;
+  background-size: 9px 15px;
+}
+.Dselect-down {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url(../local/img/xianshi.png) no-repeat scroll right center transparent;
+  background-size: 15px 9px;
 }
 .Dselect-right::-ms-expand {
+  display: none;
+}
+.Dselect-down::-ms-expand {
   display: none;
 }
