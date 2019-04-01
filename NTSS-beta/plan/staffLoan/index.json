@@ -1,0 +1,970 @@
+{
+  "version": "0.1",
+  "id": "staffLoan",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
+  "jsFile": "index.js",
+  "chineseName": "员工借款单",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control51_FVdbQI": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "员工借款单"
+              ],
+              "visText": [
+                "员工借款单"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content DIV.breadcrumb SPAN.path"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 员工借款单 ",
+      "frameXPath": "",
+      "customJS": "if(elem.ownerDocument.querySelector('.breadcrumb').querySelector('span').textContent.indexOf('员工借款单') !== -1){return true;}return false;"
+    },
+    "control54_KFEPqw": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_inner_main DIV.m_content DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control54_KFEPqw"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control2_nMD6MN": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"headDiv\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_inner_main DIV.m_content DIV.myAccount.myMargin.margin_top40"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control2_nMD6MN"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control60_sai2SN": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.m_content DIV.fixdTable TABLE.input_table TBODY TR"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control60_sai2SN"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control62_QLABMD": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[19]"
+          }
+        ]
+      },
+      "intendedRole": "section",
+      "roles": "element,link,section",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "section"
+    }
+  },
+  "contexts": {
+    "context14_D636DG": {
+      "controls": [
+        "control54_KFEPqw",
+        "control2_nMD6MN",
+        "control60_sai2SN",
+        "control62_QLABMD"
+      ],
+      "anchors": [
+        "control51_FVdbQI"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow50_o51saH": {
+      "toContexts": [
+        {
+          "toContextId": "context14_D636DG"
+        }
+      ]
+    },
+    "flow55_pATxey": {
+      "fromContextId": "context14_D636DG",
+      "fromAction": "doAction",
+      "fromControlId": "control54_KFEPqw",
+      "toContexts": [
+        {
+          "toContextId": "context14_D636DG"
+        }
+      ]
+    },
+    "flow53_gO75cR": {
+      "fromContextId": "context14_D636DG",
+      "fromAction": "doAction",
+      "fromControlId": "control2_nMD6MN",
+      "toContexts": [
+        {
+          "toContextId": "context14_D636DG"
+        }
+      ]
+    },
+    "flow70_tahsca": {
+      "fromContextId": "context14_D636DG",
+      "fromAction": "doAction",
+      "fromControlId": "control60_sai2SN",
+      "toContexts": [
+        {
+          "toContextId": "context14_D636DG"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page14_FEVUD0": {
+      "contextId": "context14_D636DG",
+      "layout": [
+        {
+          "id": "uiControl42_JZiqkn",
+          "controlId": "control54_KFEPqw",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl42_JZiqkn",
+                "onGetTemplate": "getTemplate_uiControl42_JZiqkn"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl2_li6doq",
+          "controlId": "control2_nMD6MN",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_li6doq",
+                "onGetTemplate": "getTemplate_uiControl2_li6doq"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl46_BCdrhQ",
+          "display": {
+            "type": "sticky",
+            "adapterId": "sticky",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl46_BCdrhQbody",
+              "display": {
+                "type": "stickyBody",
+                "adapterId": "stickyBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl48_17cXto",
+                  "controlId": "control60_sai2SN",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl48_17cXto",
+                        "onGetTemplate": "getTemplate_uiControl48_17cXto"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl67_lBgcMN",
+          "controlId": "control62_QLABMD",
+          "display": {
+            "adapterId": "section",
+            "type": "section",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": []
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context14_D636DG": [
+          "首页"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context14_D636DG": [
+          "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
+          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context14_D636DG": [
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "accountItemCode",
+            "accountItemDescription",
+            "accountantCourse",
+            "accountantDispose",
+            "addVendorBankInfo",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attSubmit",
+            "attachType",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "bankAccount",
+            "bankCode",
+            "bankName",
+            "banksInfo",
+            "baseBorrowMoney",
+            "baseinfoId",
+            "bid",
+            "bizType",
+            "borrowLona",
+            "borrowReason",
+            "borrowTypeName",
+            "budgetItemCode",
+            "budgetItemName",
+            "cashFlow",
+            "cashFlowDescription",
+            "commonAttachmentFileDoc",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currencyCode",
+            "draftSave",
+            "editForm",
+            "empId",
+            "empName",
+            "erForm",
+            "good",
+            "headDiv",
+            "info_body",
+            "invalid",
+            "invalidTable",
+            "leadershipApproval",
+            "lineTable",
+            "loadSimulate",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "personalbank",
+            "personalbankAmount",
+            "popup",
+            "print",
+            "processOpinion",
+            "query_hint",
+            "rebackAccountingHandle",
+            "saveHeadBtn",
+            "submitClaimb",
+            "summary",
+            "tbodyVendorBankInfo",
+            "toSimulateTheAccount",
+            "tradePartner",
+            "tradePartnerDesc",
+            "vbInfoFrom",
+            "venderCode",
+            "venderName",
+            "vendorBankInfo",
+            "vid"
+          ],
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "accountItemCode",
+            "accountItemDescription",
+            "accountantCourse",
+            "accountantDispose",
+            "addVendorBankInfo",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attSubmit",
+            "attachType",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "bankAccount",
+            "bankCode",
+            "bankName",
+            "banksInfo",
+            "baseBorrowMoney",
+            "baseinfoId",
+            "bid",
+            "bizType",
+            "borrowLona",
+            "borrowReason",
+            "borrowTypeName",
+            "budgetItemCode",
+            "budgetItemName",
+            "cashFlow",
+            "cashFlowDescription",
+            "commonAttachmentFileDoc",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currencyCode",
+            "draftSave",
+            "editForm",
+            "empId",
+            "empName",
+            "erForm",
+            "good",
+            "headDiv",
+            "info_body",
+            "invalid",
+            "invalidTable",
+            "leadershipApproval",
+            "lineTable",
+            "loadSimulate",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "personalbank",
+            "personalbankAmount",
+            "popup",
+            "print",
+            "processOpinion",
+            "query_hint",
+            "rebackAccountingHandle",
+            "saveHeadBtn",
+            "submitClaimb",
+            "summary",
+            "tbodyVendorBankInfo",
+            "td_",
+            "toSimulateTheAccount",
+            "tr_aedccc",
+            "tr_aeecb",
+            "tradePartner",
+            "tradePartnerDesc",
+            "vbInfoFrom",
+            "venderCode",
+            "venderName",
+            "vendorBankInfo",
+            "vid"
+          ],
+          [
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_overlay",
+            "TB_title",
+            "TB_window",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "accountItemCode",
+            "accountItemDescription",
+            "accountantCourse",
+            "accountantDispose",
+            "addVendorBankInfo",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attSubmit",
+            "attachType",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "bankAccount",
+            "bankCode",
+            "bankName",
+            "banksInfo",
+            "baseBorrowMoney",
+            "baseinfoId",
+            "bid",
+            "bizType",
+            "borrowLona",
+            "borrowReason",
+            "borrowTypeName",
+            "budgetItemCode",
+            "budgetItemName",
+            "cashFlow",
+            "cashFlowDescription",
+            "commonAttachmentFileDoc",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "currencyCode",
+            "draftSave",
+            "editForm",
+            "empId",
+            "empName",
+            "erForm",
+            "good",
+            "headDiv",
+            "info_body",
+            "invalid",
+            "invalidTable",
+            "leadershipApproval",
+            "lineTable",
+            "loadSimulate",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "personalbank",
+            "personalbankAmount",
+            "popup",
+            "print",
+            "processOpinion",
+            "query_hint",
+            "rebackAccountingHandle",
+            "saveHeadBtn",
+            "submitClaimb",
+            "summary",
+            "tbodyVendorBankInfo",
+            "td_",
+            "toSimulateTheAccount",
+            "tr_aedccc",
+            "tr_aeecb",
+            "tradePartner",
+            "tradePartnerDesc",
+            "vbInfoFrom",
+            "venderCode",
+            "venderName",
+            "vendorBankInfo",
+            "vid"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context14_D636DG": [
+          [
+            "accountItemCodeClass",
+            "attachment_myQuery_hint",
+            "baoXiaoIcon",
+            "basebox",
+            "bold",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "clearB",
+            "clearL",
+            "closeCon",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "droppable",
+            "fixdTable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "in",
+            "input_table",
+            "leadershipApproval",
+            "list_Table",
+            "loadAccountItem",
+            "logo",
+            "m_content",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "margin_top",
+            "max",
+            "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
+            "myMargin",
+            "myQuery_hint",
+            "mySteps",
+            "nav",
+            "navbackground",
+            "nowarp",
+            "num_Todo",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "showDetail",
+            "tablebox",
+            "tital",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "w",
+            "warp",
+            "{required:true}"
+          ],
+          [
+            "accountItemCodeClass",
+            "attachment_myQuery_hint",
+            "baoXiaoIcon",
+            "basebox",
+            "bold",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "clearB",
+            "clearL",
+            "closeCon",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "droppable",
+            "fixdTable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "in",
+            "input_table",
+            "leadershipApproval",
+            "list_Table",
+            "loadAccountItem",
+            "logo",
+            "m_content",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "margin_top",
+            "max",
+            "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
+            "myMargin",
+            "myQuery_hint",
+            "mySteps",
+            "nav",
+            "navbackground",
+            "nowarp",
+            "num_Todo",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "showDetail",
+            "tablebox",
+            "tital",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "w",
+            "warp",
+            "wbg",
+            "{required:true}"
+          ],
+          [
+            "TB_overlayBG",
+            "accountItemCodeClass",
+            "attachment_myQuery_hint",
+            "baoXiaoIcon",
+            "basebox",
+            "bold",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "clearB",
+            "clearL",
+            "closeCon",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "droppable",
+            "fixdTable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "in",
+            "input_table",
+            "leadershipApproval",
+            "list_Table",
+            "loadAccountItem",
+            "logo",
+            "m_content",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "margin_top",
+            "max",
+            "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
+            "myMargin",
+            "myQuery_hint",
+            "mySteps",
+            "nav",
+            "navbackground",
+            "nowarp",
+            "num_Todo",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "showDetail",
+            "tablebox",
+            "tital",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "w",
+            "warp",
+            "wbg",
+            "{required:true}"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context14_D636DG": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/FORM/TABLE",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "FORM/TABLE/TBODY",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/BUTTON",
+            "TD/SELECT/OPTION",
+            "TR/TD/A",
+            "TR/TD/B",
+            "TR/TD/DIV",
+            "TR/TD/H2",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-file",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TD/TEXTAREA",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IFRAME",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/FORM/TABLE",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "FORM/DIV/TABLE",
+            "FORM/TABLE/TBODY",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/BUTTON",
+            "TD/SELECT/OPTION",
+            "TR/TD/A",
+            "TR/TD/B",
+            "TR/TD/DIV",
+            "TR/TD/H2",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-file",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TD/TEXTAREA",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

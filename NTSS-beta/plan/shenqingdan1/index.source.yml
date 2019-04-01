@@ -1,0 +1,433 @@
+getData_control17_FXUuB8: >
+  ;if (!elem) {
+    return;
+  } // console.log(elem)
+
+  var data = [];
+
+  if
+  ($(elem).children('li').eq(1).children('div').attr('class').indexOf('selected')
+  !== -1) {
+    data.push('1');
+  } else {
+    data.push('2');
+  }
+
+  return data;
+doAction_uiControl14_1t6QxA: |
+  var event = data.eventType;
+  if (event == 'jk') {
+    $(elem).children('li').eq(0).find("ul").eq(0).find('div').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+  }
+  else if (event == 'sd') {
+    $(elem).children('li').eq(1).find('div').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+  }
+  else if (event == 'cd') {
+    $(elem).children('li').eq(2).find('div').eq(0).click();
+    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#cx";
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 4000);
+  }
+  else if (event == 'bx') {
+    $(elem).children('li').eq(2).find('div').eq(0).click();
+    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#bx";
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 4000);
+  }
+getTemplate_uiControl14_1t6QxA: "module.exports = React.createClass({\n  // reset:function(e){\n  //   if(confirm('是否清空用户信息,下次重新登录')){\n  //       ysp.customHelper.login();\n  //     }\n  // },\n  jk:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"jk\"\n      })\n    }\n  },\n  sd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sd\"\n      })\n    }\n  },\n  bx:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"bx\"\n      })\n    }\n  },\n  cd:function(e){\n    e.target.ownerDocument.querySelector('.active').className='';\n    e.target.className='active';\n\t\tvar handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"cd\"\n      })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n     return (\n      <div className='head-yue'>\n        <div className = 'TodoList-head2' id=\"tabs\">\n           <div className='div_lfj'>\n\t\t\t\t\t\t\t<span onClick={_this.sd}>待办</span>\n              <span className='active' onClick={_this.jk}>借款</span>\n              <span onClick={_this.bx}>报销</span>\n              <span onClick={_this.cd}>查询</span>\n           </div> \n        </div>\n      </div>\n    )\n  }\n});\n"
+getData_control17_xnr3cw: |
+  ;if (!elem) {
+    return;
+  }
+  var data = {
+    d1: [],
+    d2: []
+  };
+  var elem1 = $(elem).children('.basebox')[0];
+  $(elem1).find("tr").each(function () {
+    var arr = [];
+    $(this).find("th").each(function () {
+      if ($(this).find('span').length == 0) {
+        if ($(this).next().find('select').length > 0) {
+          var arrs = [];
+          $(this).next().find('select').find('option').each(function () {
+            arrs.push($(this).text());
+          });
+          arr.push({
+            title: $(this).text().trim().replace(/\*/, ''),
+            mark: '0',
+            content: arrs,
+            type: 'select'
+          });
+        } else {
+          arr.push({
+            title: $(this).text().trim().replace(/\*/, ''),
+            mark: '0',
+            content: $(this).next().text().trim(),
+            type: 'txt'
+          });
+        }
+      } else {
+        if ($(this).next().find('select').length > 0) {
+          var arrs = [];
+          $(this).next().find('select').find('option').each(function () {
+            arrs.push($(this).text());
+          });
+          arr.push({
+            title: $(this).text().trim().replace(/\*/, ''),
+            mark: '1',
+            content: arrs,
+            type: 'select'
+          });
+        } else {
+          arr.push({
+            title: $(this).text().trim().replace(/\*/, ''),
+            mark: '1',
+            content: $(this).next().text().trim(),
+            type: 'txt'
+          });
+        }
+      }
+    });
+    data.d1.push(arr);
+  });
+  var elem2 = $(elem).children('.myAccount_con').find('table').eq(0)[0];
+  $(elem2).find("tr").each(function (i) {
+    if (i > 0) {
+      var arr = [];
+      $(this).find(".nowarp").each(function (i1) {
+        if ($(this).find('span').length == 0) {
+          if ($(this).next().find('select').length > 0) {
+            var arrs = [];
+            $(this).next().find('select').find('option').each(function () {
+              arrs.push($(this).text());
+            });
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "0",
+              content: arrs,
+              type: 'select'
+            });
+          } else if ($(this).next().find('textarea').length > 0) {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "0",
+              content: $(this).next().find('textarea').prop('value').trim(),
+              type: 'textarea'
+            });
+          } else if ($(this).next().find('input').length == 1) {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "0",
+              content: $(this).next().find('input').prop('value').trim(),
+              type: 'input'
+            });
+          } else {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "0",
+              content: $(this).next().text().trim(),
+              type: 'txt'
+            });
+          }
+        } else {
+          if ($(this).next().find('select').length > 0) {
+            var arrs = [];
+            $(this).next().find('select').find('option').each(function () {
+              arrs.push($(this).text());
+            });
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "1",
+              content: arrs,
+              type: 'select'
+            });
+          } else if ($(this).next().find('textarea').length > 0) {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "1",
+              content: $(this).next().find('textarea').prop('value').trim(),
+              type: 'textarea'
+            });
+          } else if ($(this).next().find('input').length == 1) {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "1",
+              content: $(this).next().find('input').prop('value').trim(),
+              type: 'input'
+            });
+          } else {
+            arr.push({
+              title: $(this).text().trim().replace(/\*/, ''),
+              mark: "1",
+              content: $(this).next().text().trim(),
+              type: 'txt'
+            });
+          }
+        }
+      });
+      data.d2.push(arr);
+    }
+  });
+  return data;
+doAction_uiControl14_EUVHLO: |
+  var event = data.eventType;
+  if (event == 'change1') {
+    //debugger;
+    var no1 = parseInt(data.dataCustom.no1);
+    var no2 = parseInt(data.dataCustom.no2);
+    var index = data.dataCustom.index;
+    var elem1 = $(elem).children('.basebox')[0];
+    var elem2 = $(elem).children('.myAccount_con').find('table').eq(0)[0];
+    $(elem1).find('tr').eq(no1).find('select').eq(no1)[0].selected = true;
+  }
+  if (event == 'change2') {
+    //debugger;
+    var no1 = parseInt(data.dataCustom.no1) + 1;
+    var no2 = data.dataCustom.no2;
+    var index = data.dataCustom.index;
+    var elem1 = $(elem).children('.basebox')[0];
+    var elem2 = $(elem).children('.myAccount_con').find('table').eq(0)[0];
+    $(elem2).find('tr').eq(no1).find('select').eq(0).find('option').eq(index)[0].selected = true;
+  }
+  if (event == 'textarea') {
+    var val = data.dataCustom;
+    var elem2 = $(elem).children('.myAccount_con').find('table').eq(0)[0];
+    $(elem2).find('textarea').prop('value', val);
+  }
+  if (event == 'input') {
+    //debugger;
+    var no1 = parseInt(data.dataCustom.no1) + 1;
+    var val = data.dataCustom.value;
+    var elem1 = $(elem).children('.basebox')[0];
+    var elem2 = $(elem).children('.myAccount_con').find('table').eq(0)[0];
+    $(elem2).find('tr').eq(no1).find('input').eq(0).prop('value', val);
+  }
+getTemplate_uiControl14_EUVHLO: |-
+  module.exports = React.createClass({
+    textarea:function(e){
+      var handler = this.props.customHandler;
+      if(handler){
+        handler({
+          data:e.target.value,
+          eventType:'textarea' 
+        })
+      }
+    },
+    input:function(e){
+      var handler = this.props.customHandler;
+      if(handler){
+        handler({
+          data:{
+            value:e.target.value,
+            no1:e.target.getAttribute('data-index1'),
+          },
+          eventType:'input' 
+        })
+      }
+    },
+    change1:function(e){
+      var handler = this.props.customHandler;
+      if(handler){
+        handler({
+          data:{
+            index:e.target.selectedIndex,
+            no1:e.target.getAttribute('data-index1'),
+            no2:e.target.getAttribute('data-index2'),
+          },
+          eventType:'change1' 
+        })
+      }
+    },
+     change2:function(e){
+      var handler = this.props.customHandler;
+      if(handler){
+        handler({
+          data:{
+            index:e.target.selectedIndex,
+            no1:e.target.getAttribute('data-index1'),
+            no2:e.target.getAttribute('data-index2'),
+          },
+          eventType:'change2' 
+        })
+      }
+    },
+    render: function() {
+      var data = this.props.customData;
+      var _this = this;
+    var item = data && data.d1.map(function(d,i){
+      return(<li>
+        
+        {
+            d.map(function(d2,i2){
+        if(d2.type=='txt'){
+           return (<div>
+               {d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }
+               <div className='content'>{d2.content}</div>
+             
+             </div>)
+         }
+        else if(d2.type=='select'){
+          var select = d2.content.map(function(d1,i1){
+            return (<option>{d1}</option>)
+          })
+           return (<div>{d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }<div className='content'><select data-index1={i} data-index2={i2} onChange={_this.change1}>{select}</select></div></div>)
+        }
+      })
+          }
+        </li>)
+      
+     })
+    
+     var item2 = data && data.d2.map(function(d,i){
+      return(<li>
+        
+        {
+            d.map(function(d2,i2){
+        if(d2.type=='txt'){
+           return (<div> {d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }<div className='content'>{d2.content}</div></div>)
+         }
+       else if(d2.type=='input'){
+           return (<div> {d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }
+               <div className='content'><AInput onBlur={_this.input} data-index1={i} value={d2.content} /></div></div>)
+         }
+       else if(d2.type=='textarea'){
+           return (<div> {d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }<div className='content'><ATextarea onBlur={_this.textarea} value={d2.content} /></div></div>)
+         }
+        else if(d2.type=='select'){
+          var select = d2.content.map(function(d1,i1){
+            return (<option>{d1}</option>)
+          })
+           return (<div> {d2.mark=='0' ?
+                 <div className='title'>{d2.title}</div>
+                 :
+                 <div className='title'><span style={{color:'red'}}>*</span>{d2.title}</div>
+               }<div className='content'><select data-index1={i} data-index2={i2} onChange={_this.change2}>{select}</select></div></div>)
+        }
+      })
+          }
+        </li>)
+      
+     })
+    
+    
+      return (
+        <div className='faqiBox_lfj'>
+         <ul className='Basic'><span className='icon-title'>员工借款单</span>{item}</ul>
+          <ul className='Basic'><span className='icon-title'>借款信息</span>{item2}</ul>
+        </div>
+      )
+    }
+  });
+getData_control17_eQ8WpK: |
+  if (!elem) {
+    return;
+  }
+  var data = [];
+  return data;
+doAction_uiControl14_pq9TAM: |
+  var event = data.eventType;
+  if (event == 'click1') {
+    // debugger;
+    $(elem).find('input').eq(0).click();
+  }
+  if (event == 'click2') {
+    $(elem).find('input').eq(1).click();
+  }
+getTemplate_uiControl14_pq9TAM: "module.exports = React.createClass({\n  click1:function(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click1'\n      })\n    }\n  },\n   click2:function(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click2'\n      })\n    }\n  },\n  render: function() {\n    var _this= this;\n    return (\n      <div className='bar2_lfj'>\n        <div onClick={_this.click1}>\n        \t<span>\n          \t保存\n          </span>\n        </div>\n         <div onClick={_this.click2}>\n        \t<span>\n          \t取消\n          </span>\n        </div>\n      </div>\n    )\n  }\n});"
+getData_control31_oMGsCm: >
+  if (!elem) {
+    return;
+  }
+
+  var data = [];
+
+  if (elem.querySelector('iframe') &&
+  elem.querySelector('iframe').contentDocument.querySelector('table')) {
+    var elem = elem.querySelector('iframe').contentDocument.querySelector('table');
+    data.push({
+      content: $(elem).find('td').eq(0).text().trim(),
+      btn: $(elem).find('td').eq(1).text().trim()
+    });
+  }
+
+  return data;
+doAction_uiControl25_fTIQ2M: |
+  if (data.eventType == 'click') {
+    //debugger;
+
+    if (elem.querySelector('iframe') && elem.querySelector('iframe').contentDocument.querySelector('table')) {
+      var elem = elem.querySelector('iframe').contentDocument.querySelector('table');
+      $(elem).find('td').eq(1).find('button').click();
+      setTimeout(function(){ysp.appMain.hideLoading()}, 3000);
+    }
+  }
+getTemplate_uiControl25_fTIQ2M: |-
+  module.exports = React.createClass({
+    click:function(e){
+      var handler = this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:'click'
+        })
+      }
+    },
+    render: function() {
+      var _this = this;
+      var data = this.props.customData;
+      return (
+        <div className='weng_sucessMesbx2'>
+          <h5>提示</h5>
+          <p>{data[0].content}</p>
+          <p onClick={_this.click}><button>{data[0].btn}</button></p>
+        </div>
+      )
+    }
+  });
+getTemplate_uiControl21_AeqWTZ: "import {Component} from 'react';\nexport default class extends Component{\n  render(){\n    return (\n    \t<div className = 'TodoList-head'>\n      \t<span onClick={()=>{\n            var handler = this.props.customHandler;\n            if(handler){\n              handler({\n                eventType:'click'\n              })\n            }\n          }}>返回</span>\n        <span>{this.props.customData}</span>\n      </div>\n    )\n  }\n}"
+getData_control26_8U9N90: |
+  if (!elem) {
+    return false;
+  }
+  //console.log(elem)
+  return elem.ownerDocument.querySelector('span.path').textContent;
+doAction_uiControl21_AeqWTZ: |-
+  if (data.eventType == 'click') {
+    elem.ownerDocument.querySelector('#_easyui_tree_7').click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 2000);
+  }
