@@ -1628,6 +1628,7 @@ div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   -webkit-appearance: none;
   background: url(../local/img/shouqi.png) no-repeat scroll right center transparent;
   background-size: 9px 15px;
+  border-bottom: 1px solid #eeeeee !important;
 }
 .Dselect-down {
   appearance: none;
@@ -1635,6 +1636,7 @@ div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   -webkit-appearance: none;
   background: url(../local/img/xianshi.png) no-repeat scroll right center transparent;
   background-size: 15px 9px;
+  border-bottom: 1px solid #eeeeee !important;
 }
 .Dselect-right::-ms-expand {
   display: none;
