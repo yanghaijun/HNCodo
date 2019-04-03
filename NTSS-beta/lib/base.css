@@ -63,7 +63,7 @@ li {
 }
 .ysp-login button {
   padding: 10px 55px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 16px;
 }
 .ysp-login .userName,
@@ -84,9 +84,10 @@ li {
 }
 .ysp-login .login-head {
   text-align: center;
-  padding: 50% 0;
-  color: #065187;
+  padding: 25% 0;
+  color: #0A73CC;
   font-size: 24px;
+  font-weight: bold;
 }
 .ysp-login .selected {
   margin-top: 80px;
@@ -107,9 +108,9 @@ li {
   margin-top: 35px;
 }
 .ysp-login .reset {
-  border: 1px solid #063185;
+  border: 1px solid #0A73CC;
   background: #fff;
-  color: #063185;
+  color: #0A73CC;
 }
 .ysp-login .login {
   float: right;
@@ -120,6 +121,9 @@ li {
 .ysp-login .login.active {
   background-color: #2b357c;
   color: #fff;
+}
+div[data-ysp-modelid="Login"] {
+  padding-bottom: 0px;
 }
 /*_________________TodoList - SAP待办列表____________________*/
 .editor-state [data-ysp="component"] {
