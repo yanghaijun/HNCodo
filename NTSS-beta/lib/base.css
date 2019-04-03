@@ -199,15 +199,16 @@ li {
   padding: 0;
   overflow: hidden;
   background: #eee;
-  border-bottom: 1px solid #ddd;
   line-height: 41px;
+  padding-bottom: 15px;
 }
 .Todo-serch .serch-head-icon {
   background: #fff;
 }
 .Todo-serch .serch-head-icon .icon-title {
-  border-left: 5px solid #105cc1;
+  border-left: 5px solid #0A73CC;
   padding-left: 15px;
+  color: #333333;
 }
 .Todo-serch .serch-right {
   float: right;
@@ -294,9 +295,11 @@ li {
   position: fixed;
   bottom: 0;
   left: 0;
+  display: flex;
+  justify-content: space-around;
 }
 .Todo-serch .serch-content .serch-bottom button {
-  width: 45%;
+  width: 40%;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -304,9 +307,9 @@ li {
   font-size: 16px;
 }
 .Todo-serch .serch-content .serch-bottom .clear {
-  border: 1px solid #063185;
+  border: 1px solid #0A73CC;
   background: #fff;
-  color: #063185;
+  color: #0A73CC;
 }
 .Todo-serch .serch-content .serch-bottom .commit-serch {
   float: right;
