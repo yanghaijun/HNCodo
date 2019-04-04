@@ -59,10 +59,9 @@
         // 以下两个方法用于修改原页面中的错误, 但执行时机不同
         // 当目标页面加载完onload时执行, aWin为当前页面的window对象, doc为当前页面的document对象
         onTargetLoad: function onTargetLoad(aWin, doc) {
-
             if (aWin.location.href == 'http://59.110.171.69:30002/ReimbursePlatform/index.jsp') {
                 setInterval(function () {
-                    if (topWin.frames[1] && topWin.frames[1].document.querySelectorAll('iframe[name="browserFrame2"]').length > 0 && topWin.frames[1].document.querySelector('iframe[name="browserFrame2"]').contentWindow.document.body.textContent == '') {
+                    if (topWin.frames[1] && topWin.frames[1].document.querySelectorAll('iframe[name="browserFrame2"]').length > 0 && topWin.frames[1].document.querySelector('iframe[name="browserFrame2"]').contentWindow.document.body&&topWin.frames[1].document.querySelector('iframe[name="browserFrame2"]').contentWindow.document.body.textContent == '') {
                         ysp.customHelper.login();
                         location.reload();
                     }

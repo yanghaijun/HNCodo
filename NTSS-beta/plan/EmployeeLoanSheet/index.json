@@ -711,21 +711,6 @@
           }
         },
         {
-          "id": "uiControl27_oOQT9X",
-          "controlId": "control33_13OgQC",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl27_oOQT9X",
-                "onGetTemplate": "getTemplate_uiControl27_oOQT9X"
-              }
-            }
-          }
-        },
-        {
           "id": "uiControl65_qVHa4d",
           "display": {
             "type": "sticky",
@@ -802,6 +787,21 @@
               ]
             }
           ]
+        },
+        {
+          "id": "uiControl27_oOQT9X",
+          "controlId": "control33_13OgQC",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl27_oOQT9X",
+                "onGetTemplate": "getTemplate_uiControl27_oOQT9X"
+              }
+            }
+          }
         },
         {
           "id": "uiControl5_Lt5dZk",

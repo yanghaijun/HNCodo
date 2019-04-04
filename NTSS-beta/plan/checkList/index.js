@@ -191,16 +191,14 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      null,\n      \"\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7528\\u6765\\u9002\\u914D\\u57FA\\u672C\\u7EC4\\u4EF6\\u65E0\\u6CD5\\u9002\\u914D\\u7684\\u9875\\u9762\\u5143\\u7D20\\uFF0C\\u60A8\\u53EF\\u4EE5\\u901A\\u8FC7\\u53F3\\u952E\\u6253\\u5F00\\u8BE5\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7F16\\u8F91\\u5668\\u8FDB\\u884C\\u7F16\\u8F91\"\n    );\n  }\n});";
     },
     getData_control61_BTKyg4: function (elem) {
-      "use strict";
-
       ;var href = elem.ownerDocument.location.href;var tabPage = href.split("#")[1];return tabPage;
     },
     doAction_uiControl47_IHaJvT: function (data, elem) {
       "use strict";
     },
     getTemplate_uiControl47_IHaJvT: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  componentWillMount(){\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n  render: function() {\n    return (\n      <div className=\"loading\">\u6570\u636E\u52A0\u8F7D\u4E2D\uFF0C\u8BF7\u7A0D\u540E... ...</div>\n    )\n  }\n});";
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      { className: \"loading\" },\n      \"\\u6570\\u636E\\u52A0\\u8F7D\\u4E2D\\uFF0C\\u8BF7\\u7A0D\\u540E... ...\"\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  componentWillMount(){\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n  render: function() {\n    // \u6570\u636E\u52A0\u8F7D\u4E2D\uFF0C\u8BF7\u7A0D\u540E... ...\n    return (\n      <div className=\"loading\"></div>\n    )\n  }\n});";
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    // ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n\n  render: function render() {\n    // \u6570\u636E\u52A0\u8F7D\u4E2D\uFF0C\u8BF7\u7A0D\u540E... ...\n    return React.createElement(\"div\", { className: \"loading\" });\n  }\n});";
     }
   }, "checkList");
 })(window, ysp);

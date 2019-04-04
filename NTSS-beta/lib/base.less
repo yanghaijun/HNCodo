@@ -248,7 +248,7 @@ div[data-ysp-modelid="Login"]{
     height: 50px;
     background-size: 15px 10px;
     position: absolute;
-    right: 20px;
+    right: 5px;
     top: 0px;
   }
   .list-icon-done{
@@ -474,7 +474,7 @@ div[data-ysp-modelid="Login"]{
     bottom: 0px;
     right: 0px;
     width: 90px;
-    height:120px;
+    height:123px;
     color: #fff;
     >li {
       width: 60px;
@@ -943,7 +943,6 @@ div[data-ysp-modelid="Login"]{
 .btn{
     width: 24%;
     height: 36px;
-    
     font-size: 16px;
 }
 
@@ -1599,3 +1598,64 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
 .Dselect-right::-ms-expand { display: none; }
 .Dselect-down::-ms-expand { display: none; }
 //UI图修改select的三角符号0329结束
+.D-backlist {
+  padding: 10px;
+  >li{
+    width: 100%;
+    height: 100px;
+    > span{
+      width: 100%;
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+    }
+    >span:nth-child(1) {
+      font-weight: bold;
+    }
+    >span:nth-child(2) {
+      background: #fafafa;
+      border: 1px solid #ccc;
+    }
+    >select {
+      width: 100%;
+    }
+  }
+}
+.D-backP	{
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  .btn{
+    width: 45%;
+    height: 45px;
+    font-size: 16px;
+    margin: 10px 0px !important;
+	}
+}
+.error-D {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #eeeeee;
+  >div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    background: #2f87c1;
+    color: #fff;
+    padding: 0px 10px;
+  }
+  >div:nth-child(2) {
+    text-align: center;
+    height: 150px;
+    background: #f5f5f5;
+    padding: 20px 0px;
+    font-weight: bold;
+    >p{
+      margin: 10px;
+    }
+  }
+}
