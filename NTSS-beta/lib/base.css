@@ -1773,3 +1773,14 @@ div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   height: 25px;
   width: 25px;
 }
+.D_meng {
+  background: #fff;
+  background-size: contain;
+  border-radius: 5px;
+}
+.D_meng > p:nth-child(1) {
+  margin-top: 150px !important;
+}
+.D_meng > p:nth-child(2) > button {
+  margin: 5px;
+}
