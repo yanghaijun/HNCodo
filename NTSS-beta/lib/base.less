@@ -1659,3 +1659,45 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
     }
   }
 }
+.D-yema {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  //background: #eeeeee;
+  position: absolute;
+  bottom: -200px;
+  >li {
+    display: inline-block;
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 20px;
+  }
+  li[indexYema='0'] {
+    background:url(../local/img/D-yema.gif) no-repeat; 
+  	background-size: contain;
+    height: 25px;
+    width: 25px;
+  }
+  li[indexYema='1'] {
+    background:url(../local/img/D-yema2.gif) no-repeat; 
+  	background-size: contain;
+    height: 25px;
+    width: 25px;
+  }
+  >li:nth-last-child(1) {
+    background:url(../local/img/D-yema.gif) no-repeat; 
+  	background-size: contain;
+    transform: rotate(180deg);
+    height: 25px;
+    width: 25px;
+  }
+  >li:nth-last-child(2) {
+    background:url(../local/img/D-yema2.gif) no-repeat; 
+  	background-size: contain;
+    transform: rotate(180deg);
+    height: 25px;
+    width: 25px;
+  }
+}

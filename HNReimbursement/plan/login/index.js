@@ -18,7 +18,8 @@
         if (data.dataCustom == '重置') {
           ysp.customHelper.login();elem.querySelector('#userName').value = '';elem.querySelector('#psw').value = '';
         } else if (data.dataCustom == '登录') {
-          var user = elem.querySelector('#userName').value;var pwd = elem.querySelector('#psw').value;ysp.customHelper.USER = user;ysp.customHelper.PWD = pwd; //ysp.customHelper.loginStatus(user, pwd);
+          var user = elem.querySelector('#userName').value;var pwd = elem.querySelector('#psw').value;ysp.customHelper.USER = user;
+          ysp.customHelper.PWD = pwd; //ysp.customHelper.loginStatus(user, pwd);
           elem.querySelector('#tiJiaoForDengLu').click();ysp.appMain.showLoading();setTimeout(function () {
             ysp.appMain.hideLoading();
           }, 3000);
