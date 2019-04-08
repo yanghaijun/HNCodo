@@ -1735,7 +1735,9 @@ div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  bottom: -200px;
+  bottom: -100px;
+  width: 80%;
+  margin: 20px 10%;
 }
 .D-yema > li {
   display: inline-block;
