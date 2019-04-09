@@ -3,6 +3,9 @@
   "id": "loginOA",
   "targetURL": "http://oa1.chngsc.cn/",
   "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
   "chineseName": "登录",
   "description": "",
   "controls": {
@@ -52,6 +55,20 @@
       "toContexts": [
         {
           "toContextId": "context1_QXbhsT"
+        }
+      ]
+    },
+    "flow5_c2043L": {
+      "fromContextId": "context1_QXbhsT",
+      "fromAction": "doAction",
+      "fromControlId": "control0_smV5Jh",
+      "toContexts": [
+        {
+          "toContextId": "context1_QXbhsT"
+        },
+        {
+          "toContextId": "context0_qAFAFP",
+          "toModelId": "index"
         }
       ]
     }
