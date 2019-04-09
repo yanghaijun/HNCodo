@@ -12,6 +12,10 @@
         "data": {
           "tagName": "UL"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -41,12 +45,72 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control6_uBXHGv": {
+      "location": {
+        "data": {
+          "tagName": "DD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"left_panel\"]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              27
+            ],
+            "value": "DIV.table_blk TABLE.Information DL.table_list_blk DD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[4]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control6_uBXHGv"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control7_9k4Pkb": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control7_9k4Pkb"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context3_RVmBzr": {
       "controls": [
-        "control3_pfWerD"
+        "control3_pfWerD",
+        "control6_uBXHGv",
+        "control7_9k4Pkb"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -54,6 +118,16 @@
   },
   "flows": {
     "flow4_yZLnMs": {
+      "toContexts": [
+        {
+          "toContextId": "context3_RVmBzr"
+        }
+      ]
+    },
+    "flow7_tbE8rg": {
+      "fromContextId": "context3_RVmBzr",
+      "fromAction": "doAction",
+      "fromControlId": "control3_pfWerD",
       "toContexts": [
         {
           "toContextId": "context3_RVmBzr"
@@ -76,6 +150,36 @@
               "events": {
                 "onDoAction": "doAction_uiControl3_Ux5ohk",
                 "onGetTemplate": "getTemplate_uiControl3_Ux5ohk"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl6_7aXMK8",
+          "controlId": "control6_uBXHGv",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl6_7aXMK8",
+                "onGetTemplate": "getTemplate_uiControl6_7aXMK8"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl7_IlizWN",
+          "controlId": "control7_9k4Pkb",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl7_IlizWN",
+                "onGetTemplate": "getTemplate_uiControl7_IlizWN"
               }
             }
           }

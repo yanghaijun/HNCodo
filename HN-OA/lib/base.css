@@ -35,42 +35,48 @@
   margin: 25px 0px 50px 62px;
 }
 .D_login .loginText {
-  display: flex;
+  position: relative;
 }
 .D_login .loginText > span {
+  position: absolute;
+  top: 10px;
+  left: 5px;
   display: inline-block;
-  width: 40px;
-  height: 44px;
+  width: 25px;
+  height: 25px;
   background: url("../local/img/people.png") no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid #9ac2e1;
+  background-size: contain;
 }
 .D_login .loginText > input {
   background: #ceebff;
   border: 1px solid #9ac2e1;
   border-left: none;
   margin: 0px !important;
+  padding-left: 40px;
 }
 .D_login .loginTextp {
-  margin-top: -16x;
-  display: flex;
+  position: relative;
 }
 .D_login .loginTextp > span {
+  position: absolute;
+  top: 10px;
+  left: 5px;
   display: inline-block;
-  width: 40px;
-  height: 44px;
+  width: 25px;
+  height: 25px;
   background: url("../local/img/lock.png") no-repeat;
-  background-size: cover;
-  border-top: 1px solid #9ac2e1;
+  background-size: contain;
 }
 .D_login .loginTextp > input {
   background: #ceebff;
   border: 1px solid #9ac2e1;
   border-left: none;
   margin: 0px !important;
+  padding-left: 40px;
 }
 .D_login .loginButton {
   margin-top: 80px;
+  font-size: 20px;
 }
 .D_login .loginButton > button {
   border: none;
@@ -123,6 +129,13 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   color: #fff;
   height: 50px;
   padding: 0px 10px;
+}
+.ysp-header > div:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  background: url("../local/img/arrow.png") no-repeat;
+  background-size: contain;
+  margin-left: 10px;
 }
 .ysp-header > div:nth-child(2) {
   width: 60%;
