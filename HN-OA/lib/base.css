@@ -127,3 +127,60 @@ div[data-componentsid="uiControl0_lFVvUR"] {
 .ysp-header > div:nth-child(2) {
   width: 60%;
 }
+.ysp-content-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  background: #ececec;
+}
+.ysp-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0px 15px;
+}
+.ysp-content-header span {
+  background: #ececec;
+  padding: 5px 0px;
+  border-radius: 5px;
+  width: 25%;
+  text-align: center;
+}
+.ysp-content-header-button {
+  background: #0a73cc !important;
+  color: #fff;
+}
+.ysp-content-body {
+  background: #ececec;
+  padding: 10px;
+  min-height: 80px;
+}
+.ysp-content-bottom {
+  padding: 0px 10px 0px 15px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.ysp-content-bottom span:nth-child(1) {
+  width: 45%;
+  padding: 4px 0px;
+  color: #0a73cc;
+  border: 0.5px solid #0a73cc;
+  margin: 0px 10px 0px 0px;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+}
+.ysp-content-bottom span:nth-child(2) {
+  width: 45%;
+  padding: 4px 0px;
+  color: #fff;
+  margin: 0px 0px 0px 15px;
+  background: #0a73cc;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+}
