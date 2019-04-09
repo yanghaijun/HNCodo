@@ -5,19 +5,77 @@
   "jsFile": "index.js",
   "chineseName": "登录",
   "description": "",
-  "controls": {},
+  "controls": {
+    "control0_smV5Jh": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.bgstretcher-page DIV.login_blk DIV.login_banner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_smV5Jh"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
   "contexts": {
     "context1_QXbhsT": {
-      "controls": [],
+      "controls": [
+        "control0_smV5Jh"
+      ],
       "anchors": [],
       "urlAnchor": []
     }
   },
-  "flows": {},
+  "flows": {
+    "flow0_UJDHCR": {
+      "toContexts": [
+        {
+          "toContextId": "context1_QXbhsT"
+        }
+      ]
+    }
+  },
   "pages": {
     "page1_F0fbrU": {
       "contextId": "context1_QXbhsT",
-      "layout": []
+      "layout": [
+        {
+          "id": "uiControl0_acry19",
+          "controlId": "control0_smV5Jh",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_acry19",
+                "onGetTemplate": "getTemplate_uiControl0_acry19"
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "matchers": {
