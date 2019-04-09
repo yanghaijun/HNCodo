@@ -1,0 +1,127 @@
+{
+  "version": "0.1",
+  "id": "loginOA",
+  "targetURL": "http://oa1.chngsc.cn/",
+  "jsFile": "index.js",
+  "chineseName": "登录",
+  "description": "",
+  "controls": {},
+  "contexts": {
+    "context1_QXbhsT": {
+      "controls": [],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {},
+  "pages": {
+    "page1_F0fbrU": {
+      "contextId": "context1_QXbhsT",
+      "layout": []
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_QXbhsT": [
+          "欢迎登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_QXbhsT": [
+          "oa1.chngsc.cn/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "bgstretcher",
+            "ex",
+            "freeow-br",
+            "freeow-msg",
+            "freeow-show"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "bgs-current",
+            "bgstretcher",
+            "bgstretcher-area",
+            "bgstretcher-page",
+            "bottom_blk",
+            "bottom_fixed",
+            "bottom_tips",
+            "btn_off",
+            "down_link",
+            "enter_system",
+            "forget_pw_text",
+            "freeow",
+            "freeow-bottom-right",
+            "ibutton-container",
+            "ibutton-handle",
+            "ibutton-handle-middle",
+            "ibutton-handle-right",
+            "ibutton-label-off",
+            "ibutton-label-on",
+            "ibutton-padding-left",
+            "ibutton-padding-right",
+            "img-loaded",
+            "login_banner",
+            "login_blk",
+            "login_form",
+            "login_form_text",
+            "login_panel",
+            "mask",
+            "password",
+            "row",
+            "text_off",
+            "top_bar",
+            "top_fixed",
+            "username"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "DD/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/P/INPUT-submit",
+            "DIV/SPAN/A",
+            "DIV/SPAN/LABEL",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DD/INPUT-button",
+            "DL/DD/INPUT-password",
+            "DL/DD/INPUT-text",
+            "DL/DD/SPAN",
+            "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "UL/LI/IMG"
+          ]
+        ]
+      }
+    }
+  }
+}
