@@ -119,7 +119,34 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     justify-content: space-between;
     align-items: center;
     .ysp-index-db-content-ping{
-      width: 30%;
+      width: 10%;
+      color: #fff;
+      background: #0a73cc;
+      padding: 3px 4px;
+      text-align: center;
+      border-radius: 5px;
+      margin-right: 10px;
+      position: relative;
+      .ysp-index-db-content-ping-red{
+        position: absolute;
+        top: -4px;
+        left: -6px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: url("../local/img/red.png") no-repeat;
+        background-size: contain;
+      }
+      .ysp-index-db-content-ping-clue{
+        position: absolute;
+        top: -4px;
+        left: -6px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: url("../local/img/clue.png") no-repeat;
+        background-size: contain;
+      }
     }
     .ysp-index-db-content-title{
       width: 100%;
@@ -199,7 +226,7 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 
 .ysp-content-body{
   background: #ececec;
-  padding: 10px;
+  //padding: 10px;
   min-height: 80px;
 }
 .ysp-content-bottom{
@@ -367,3 +394,39 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     }
   }
 }
+
+
+
+//内容start
+
+.ysp-contentSW{
+  background: #fff;
+  border-top: 10px solid #ececec;
+  padding: 10px;
+  margin-bottom: 80px;
+  div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    span:nth-child(1){
+      width: 80px;
+    }
+    span:nth-child(2){
+      border-bottom: 1px solid #ececec;
+      width: 75%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    textarea{
+      min-height: 0rem !important;
+      margin-top: 40px !important;
+    }
+  }
+}
+
+//内容end
+
