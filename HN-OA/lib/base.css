@@ -100,14 +100,20 @@ div[data-componentsid="uiControl0_lFVvUR"] {
 .ysp-index-db .ysp-index-db-content {
   background: #fff;
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .ysp-index-db .ysp-index-db-content .ysp-index-db-content-ping {
-  width: 30%;
+  width: 10%;
+  color: #fff;
+  background: #0a73cc;
+  padding: 3px 4px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 .ysp-index-db .ysp-index-db-content .ysp-index-db-content-title {
   width: 100%;
