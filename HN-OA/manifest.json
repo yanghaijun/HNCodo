@@ -12,10 +12,31 @@
     "resource_inject": []
   },
   "override_urls": [],
-  "adapter_urls": [],
+  "adapter_urls": [
+    {
+      "title": "loginOA",
+      "url": "adapter://HN-OA/plan/loginOA/index.json",
+      "matcher": [
+        "^http:\\/\\/oa1\\.chngsc\\.cn\\/"
+      ],
+      "demo": [
+        "http://oa1.chngsc.cn/"
+      ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://HN-OA/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/oa1\\.chngsc\\.cn\\/WebOffice\\/home4\\.nsf\\/index\\.html"
+      ],
+      "demo": [
+        "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html"
+      ]
+    }
+  ],
   "name": "华能集团",
   "default_url": "http://oa1.chngsc.cn/",
   "scope": "HN-OA",
   "start_url": "enterplorer://HN-OA/local/index.html",
-  "update_time": 1554803165015
+  "update_time": 1554860551246
 }
