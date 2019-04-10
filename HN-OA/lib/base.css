@@ -100,20 +100,14 @@ div[data-componentsid="uiControl0_lFVvUR"] {
 .ysp-index-db .ysp-index-db-content {
   background: #fff;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .ysp-index-db .ysp-index-db-content .ysp-index-db-content-ping {
-  width: 10%;
-  color: #fff;
-  background: #0a73cc;
-  padding: 3px 4px;
-  text-align: center;
-  border-radius: 5px;
-  margin-right: 10px;
+  width: 30%;
 }
 .ysp-index-db .ysp-index-db-content .ysp-index-db-content-title {
   width: 100%;
@@ -181,11 +175,12 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   min-height: 80px;
 }
 .ysp-content-bottom {
-  padding: 0px 10px 0px 15px;
+  padding: 5px 10px 5px 15px;
   position: fixed;
   bottom: 0;
   text-align: center;
   width: 100%;
+  background: #fff;
 }
 .ysp-content-bottom span:nth-child(1) {
   width: 45%;
@@ -244,6 +239,91 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   padding-left: 8px;
   font-size: 15px;
   width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.D_liucheng {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  height: 90px;
+}
+.D_liucheng > div:nth-child(1) {
+  width: 10%;
+  padding-left: 5%;
+}
+.D_liucheng > div:nth-child(1) > span:nth-child(1) {
+  display: block;
+  margin-left: -6px;
+  height: 15px;
+  width: 15px;
+  background: url("../local/img/point.png") no-repeat;
+  background-size: contain;
+}
+.D_liucheng > div:nth-child(1) .d_xian {
+  display: block;
+  height: 100px;
+  width: 3px;
+  background: #e3eff9;
+}
+.D_liucheng > div:nth-child(2) {
+  background: #f0f8ff;
+  width: 85%;
+  height: 80px;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(1) {
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) {
+  position: relative;
+  font-size: 12px;
+  margin: 0px;
+  width: 48%;
+  padding-top: 10px;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 0%;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("../local/img/people.png") no-repeat;
+  background-size: contain;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(2) {
+  margin-left: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+  position: relative;
+  font-size: 12px;
+  margin: 0px;
+  width: 48%;
+  padding-top: 10px;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 0%;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("../local/img/people.png") no-repeat;
+  background-size: contain;
+}
+.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(2) {
+  margin-left: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
