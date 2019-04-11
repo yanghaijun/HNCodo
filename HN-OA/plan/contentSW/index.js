@@ -47,27 +47,32 @@
           var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('exe') > -1 == true ? 'exe' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();data.fujian.push(obj);
         });
       } else {
-        var obj = {};obj.typeP = '';obj.text = '暂无附件附件';obj.time = '';data.fujian.push(obj);
+        var obj = {};obj.typeP = '';obj.text = '暂无附件';obj.time = '';data.fujian.push(obj);
+      } //附件完
+      var liuchengTable = $(elem).find("#comment_table").find("tbody");if (liuchengTable.length == 0) {
+        var obj = {};obj.text = '暂无流程';data.liucheng.push(obj);
+      } else {
+        liuchengTable.map(function (d, t) {
+          if (d > 0) {
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "").replace(/\。/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];var date = new Date();var day = date.getDay();if (day == '1') {
+              day = '一';
+            } else if (day == '2') {
+              day = '二';
+            } else if (day == '3') {
+              day = '三';
+            } else if (day == '4') {
+              day = '四';
+            } else if (day == '5') {
+              day = '五';
+            } else if (day == '6') {
+              day = '六';
+            } else if (day == '7') {
+              day = '天';
+            }obj.day = '星期' + day;data.liucheng.push(obj);
+          }
+        });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
-      var liuchengTable = $(elem).find("#comment_table").find("tbody");liuchengTable.map(function (d, t) {
-        if (d > 0) {
-          var obj = {};obj.text = $(t).find("td").eq(0).text();var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];var date = new Date();var day = date.getDay();if (day == '1') {
-            day = '一';
-          } else if (day == '2') {
-            day = '二';
-          } else if (day == '3') {
-            day = '三';
-          } else if (day == '4') {
-            day = '四';
-          } else if (day == '5') {
-            day = '五';
-          } else if (day == '6') {
-            day = '六';
-          } else if (day == '7') {
-            day = '天';
-          }obj.day = '星期' + day;data.liucheng.push(obj);
-        }
-      });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);return data;
+      return data;
     },
     doAction_uiControl7_IlizWN: function (data, elem) {
       if (data.eventType == "textareaChange") {

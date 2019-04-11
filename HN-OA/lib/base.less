@@ -15,6 +15,9 @@
 [data-ysp-modelid='content'] {
   background: #eeeeee;
 }
+[data-ysp-modelid='contentSW'] {
+  background: #eeeeee;
+}
 .D_login{
   width: 100%;
   padding: 0px 30px;
@@ -292,7 +295,16 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 .D_fujian {
     width: 100%;
     height: 100px;
-  >div {
+  .D_zanwuFJ {
+    height: 50px;
+    background: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    margin: 8px 0px;
+    padding: 8px;
+  }
+  .D_zanwuFJT {
     display: flex;
     margin: 8px 0px;
     padding: 8px;
@@ -331,93 +343,105 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   }
 }
 //流程开始
-.D_liucheng {
-  background: #fff;
-  display: flex;
-  width: 100%;
-  height: 90px;
-  >div:nth-child(1) {
-    width: 10%;
-    padding-left: 5%;
-    >span:nth-child(1) {
-      display:block;
-      margin-left: -6px;
-      height:15px;
-      width: 15px;
-      background: url("../local/img/point.png") no-repeat;
-    	background-size: contain;
-    }
-    .d_xian {
-      display:block;
-      height: 100px;
-      width: 3px;
-      background: #e3eff9;
-    }
+.D_LC {
+  border-top: 10px solid #fff;
+  margin-top: 8px;
+  .D_zanwuLC {
+    height: 40px;
+    background: #fff;
+    font-weight: bold;
+    text-align: center;
   }
-  >div:nth-child(2) {
-    background: #f0f8ff;
-    width: 85%;
-    height: 80px;
+  .D_liucheng {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    height: 90px;
     >div:nth-child(1) {
-      height: 40px;
-      line-height: 40px;
-      font-weight: bold;
+      width: 10%;
+      padding-left: 5%;
+      >span:nth-child(1) {
+        display:block;
+        margin-left: -6px;
+        height:15px;
+        width: 15px;
+        background: url("../local/img/point.png") no-repeat;
+        background-size: contain;
+      }
+      .d_xian {
+        display:block;
+        height: 100px;
+        width: 3px;
+        background: #e3eff9;
+      }
     }
     >div:nth-child(2) {
-      height: 40px;
-      display: flex;
-      justify-content: space-around;
-      
-      >p:nth-child(1) {
-        position: relative;
-        font-size: 12px;
-        margin: 0px;
-        width: 48%;
-        padding-top: 10px;
-        >span:nth-child(1){
-          position: absolute;
-          top: 10px;
-          left: 0%;
-          display: inline-block;
-          width: 17px;
-          height: 17px;
-          background: url("../local/img/people.png") no-repeat;
-          background-size: contain;
-        }
-        >span:nth-child(2){
-          margin-left: 22px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
+      background: #f0f8ff;
+      width: 85%;
+      height: 80px;
+      padding-left: 10px;
+      >div:nth-child(1) {
+        height: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
-      >p:nth-child(2) {
-        position: relative;
-        font-size: 12px;
-        margin: 0px;
-        width: 48%;
-        padding-top: 10px;
-        >span:nth-child(1){
-          position: absolute;
-          top: 10px;
-          left: 0%;
-          display: inline-block;
-          width: 17px;
-          height: 17px;
-          background: url("../local/img/people.png") no-repeat;
-          background-size: contain;
+      >div:nth-child(2) {
+        height: 40px;
+        display: flex;
+        >p:nth-child(1) {
+          position: relative;
+          font-size: 12px;
+          margin: 0px;
+          width: 48%;
+          padding-top: 10px;
+          >span:nth-child(1){
+            position: absolute;
+            top: 10px;
+            left: 0%;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background: url("../local/img/account.png") no-repeat;
+            background-size: contain;
+          }
+          >span:nth-child(2){
+            margin-left: 22px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
         }
-        >span:nth-child(2){
-          margin-left: 22px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
+        >p:nth-child(2) {
+          position: relative;
+          font-size: 12px;
+          margin: 0px;
+          width: 48%;
+          padding-top: 10px;
+          >span:nth-child(1){
+            position: absolute;
+            top: 10px;
+            left: 0%;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background: url("../local/img/time.png") no-repeat;
+            background-size: contain;
+          }
+          >span:nth-child(2){
+            margin-left: 22px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
         }
       }
     }
   }
 }
-
 
 
 //内容start
