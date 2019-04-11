@@ -416,8 +416,54 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   height: 50px;
   background: #fff;
   line-height: 50px;
-  padding: 0px 20px;
+  padding: 0px 25px;
   border-bottom: 2px solid #eeeeee;
+  display: flex;
+}
+.D_choiseFlow .D_flowList > li > span:nth-child(1) {
+  letter-spacing: 3px;
+  width: 90%;
+}
+.D_choiseFlow .D_flowList .changC {
+  color: blue;
+}
+.D_choiseFlow .reBack {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  line-height: 300px;
+  font-weight: bold;
+}
+.D_choiseFlow .D_chiosePeople {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #eeeeee;
+  width: 100%;
+  height: 100%;
+}
+.D_choiseFlow .D_chiosePeople > li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+  background: #fff;
+  line-height: 50px;
+  padding: 0px 55px;
+  border-bottom: 2px solid #eeeeee;
+}
+.D_choiseFlow .D_chiosePeople > li > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../local/img/noPoint.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 15px;
+  left: 25px;
 }
 .ysp-contentSW {
   background: #fff;
