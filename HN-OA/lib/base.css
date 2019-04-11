@@ -7,6 +7,9 @@
 [data-ysp-modelid='content'] {
   background: #eeeeee;
 }
+[data-ysp-modelid='contentSW'] {
+  background: #eeeeee;
+}
 .D_login {
   width: 100%;
   padding: 0px 30px;
@@ -232,13 +235,22 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   width: 100%;
   height: 100px;
 }
-.D_fujian > div {
+.D_fujian .D_zanwuFJ {
+  height: 50px;
+  background: #fff;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  margin: 8px 0px;
+  padding: 8px;
+}
+.D_fujian .D_zanwuFJT {
   display: flex;
   margin: 8px 0px;
   padding: 8px;
   background: #fff;
 }
-.D_fujian > div > span {
+.D_fujian .D_zanwuFJT > span {
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -247,20 +259,20 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   color: #fff;
   border-radius: 5px;
 }
-.D_fujian > div .classTypeW {
+.D_fujian .D_zanwuFJT .classTypeW {
   background: #4499e2;
 }
-.D_fujian > div .classTypeP {
+.D_fujian .D_zanwuFJT .classTypeP {
   background: #ffa96f;
 }
-.D_fujian > div .classTypeX {
+.D_fujian .D_zanwuFJT .classTypeX {
   background: #56da9f;
 }
-.D_fujian > div .classTypeo {
+.D_fujian .D_zanwuFJT .classTypeo {
   background: url("../local/img/noP.png") no-repeat;
   background-size: contain;
 }
-.D_fujian > div > p {
+.D_fujian .D_zanwuFJT > p {
   line-height: 30px;
   padding-left: 8px;
   font-size: 15px;
@@ -269,17 +281,27 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   overflow: hidden;
   white-space: nowrap;
 }
-.D_liucheng {
+.D_LC {
+  border-top: 10px solid #fff;
+  margin-top: 8px;
+}
+.D_LC .D_zanwuLC {
+  height: 40px;
+  background: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.D_LC .D_liucheng {
   background: #fff;
   display: flex;
   width: 100%;
   height: 90px;
 }
-.D_liucheng > div:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(1) {
   width: 10%;
   padding-left: 5%;
 }
-.D_liucheng > div:nth-child(1) > span:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(1) > span:nth-child(1) {
   display: block;
   margin-left: -6px;
   height: 15px;
@@ -287,68 +309,72 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   background: url("../local/img/point.png") no-repeat;
   background-size: contain;
 }
-.D_liucheng > div:nth-child(1) .d_xian {
+.D_LC .D_liucheng > div:nth-child(1) .d_xian {
   display: block;
   height: 100px;
   width: 3px;
   background: #e3eff9;
 }
-.D_liucheng > div:nth-child(2) {
+.D_LC .D_liucheng > div:nth-child(2) {
   background: #f0f8ff;
   width: 85%;
   height: 80px;
+  padding-left: 10px;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(1) {
   height: 40px;
   line-height: 40px;
   font-weight: bold;
+  width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) {
   height: 40px;
   display: flex;
-  justify-content: space-around;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) {
   position: relative;
   font-size: 12px;
   margin: 0px;
   width: 48%;
   padding-top: 10px;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(1) {
   position: absolute;
   top: 10px;
   left: 0%;
   display: inline-block;
   width: 17px;
   height: 17px;
-  background: url("../local/img/people.png") no-repeat;
+  background: url("../local/img/account.png") no-repeat;
   background-size: contain;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(2) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) > span:nth-child(2) {
   margin-left: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
   position: relative;
   font-size: 12px;
   margin: 0px;
   width: 48%;
   padding-top: 10px;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(1) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(1) {
   position: absolute;
   top: 10px;
   left: 0%;
   display: inline-block;
   width: 17px;
   height: 17px;
-  background: url("../local/img/people.png") no-repeat;
+  background: url("../local/img/time.png") no-repeat;
   background-size: contain;
 }
-.D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(2) {
+.D_LC .D_liucheng > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > span:nth-child(2) {
   margin-left: 22px;
   text-overflow: ellipsis;
   overflow: hidden;
