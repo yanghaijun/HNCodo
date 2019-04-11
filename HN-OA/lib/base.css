@@ -432,3 +432,32 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   min-height: 0rem !important;
   margin-top: 40px !important;
 }
+.ysp-contentSW .ysp-contentSW-button {
+  background: #f5a623;
+  border-radius: 4px;
+  color: #fff;
+  width: 25% !important;
+  text-align: center;
+  min-height: 40px !important;
+  line-height: 40px !important;
+}
+.ysp-contentSW-yj {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+.ysp-contentSW-yj .ysp-contentSW-yjtitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px;
+}
