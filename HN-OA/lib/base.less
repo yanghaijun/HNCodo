@@ -191,6 +191,29 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   }
 }
 
+.ysp-header-index{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a73cc;
+  color: #fff;
+  height: 50px;
+  padding: 0px 10px;
+  >div:nth-child(1){
+    width: 20px;
+    height: 20px;
+    background: url("../local/img/arrow.png") no-repeat;
+  	background-size: contain;
+    margin-left: 10px;
+  }
+  >div:nth-child(3){
+    width: 20px;
+    height: 20px;
+    background: url("../local/img/refreh.png") no-repeat;
+  	background-size: contain;
+    margin-right: 10px;
+  }
+}
 //头部end
 
 //详情start
@@ -408,7 +431,7 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 50px;
+    min-height:50px;
     line-height: 50px;
     span:nth-child(1){
       width: 80px;
@@ -419,6 +442,8 @@ div[data-componentsid="uiControl0_lFVvUR"]{
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      min-height: 50px;
+      line-height: 50px;
     }
     
     textarea{

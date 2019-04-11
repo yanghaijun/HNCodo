@@ -50,34 +50,30 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control2_dyArdh": {
+    "control8_nKsKJd": {
       "location": {
         "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
+          "tagName": "BODY"
         },
         "locators": [
           {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.panel.layout-panel.layout-panel-north DIV.hn_header.panel-body.panel-body-noheader.layout-body DIV.messages_tips"
+            "value": "HTML.panel-fit BODY.easyui-layout.layout.panel-noscroll"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]"
+            "value": "/HTML[1]/BODY[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control2_dyArdh"
+        "onGetData": "getData_control8_nKsKJd"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     }
@@ -86,7 +82,7 @@
     "context0_qAFAFP": {
       "controls": [
         "control0_mN1KMs",
-        "control2_dyArdh"
+        "control8_nKsKJd"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -117,6 +113,16 @@
           "toModelId": "contentSW"
         }
       ]
+    },
+    "flow3_UbS47i": {
+      "fromContextId": "context0_qAFAFP",
+      "fromAction": "doAction",
+      "fromControlId": "control8_nKsKJd",
+      "toContexts": [
+        {
+          "toContextId": "context0_qAFAFP"
+        }
+      ]
     }
   },
   "pages": {
@@ -124,16 +130,16 @@
       "contextId": "context0_qAFAFP",
       "layout": [
         {
-          "id": "uiControl2_nqvyV5",
-          "controlId": "control2_dyArdh",
+          "id": "uiControl8_RNaMJ8",
+          "controlId": "control8_nKsKJd",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl2_nqvyV5",
-                "onGetTemplate": "getTemplate_uiControl2_nqvyV5"
+                "onDoAction": "doAction_uiControl8_RNaMJ8",
+                "onGetTemplate": "getTemplate_uiControl8_RNaMJ8"
               }
             }
           }
