@@ -499,13 +499,22 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     background: #eeeeee;
     width: 100%;
     height: 100%;
-    >li {
+    .treeBody{
+      background: #fff;
+      list-style: none;
+      >li:nth-child(1) {
+        padding: 10px 20px;
+      }
+      >li {
+        padding: 10px 40px;
+      }
+      
+    }
+    .pTre {
       position: relative;
       list-style: none;
-      height: 50px;
       background: #fff;
-      line-height: 50px;
-      padding: 0px 40px;
+      padding: 10px 40px;
       border-bottom: 2px solid #eeeeee;
       .changeRadio {
         display:inline-block;

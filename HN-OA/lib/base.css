@@ -466,16 +466,24 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   width: 100%;
   height: 100%;
 }
-.D_choiseFlow .D_chiosePeople > li {
+.D_choiseFlow .D_chiosePeople .treeBody {
+  background: #fff;
+  list-style: none;
+}
+.D_choiseFlow .D_chiosePeople .treeBody > li:nth-child(1) {
+  padding: 10px 20px;
+}
+.D_choiseFlow .D_chiosePeople .treeBody > li {
+  padding: 10px 40px;
+}
+.D_choiseFlow .D_chiosePeople .pTre {
   position: relative;
   list-style: none;
-  height: 50px;
   background: #fff;
-  line-height: 50px;
-  padding: 0px 40px;
+  padding: 10px 40px;
   border-bottom: 2px solid #eeeeee;
 }
-.D_choiseFlow .D_chiosePeople > li .changeRadio {
+.D_choiseFlow .D_chiosePeople .pTre .changeRadio {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -485,7 +493,7 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   top: 17px;
   left: 20px;
 }
-.D_choiseFlow .D_chiosePeople > li .changeRadioB {
+.D_choiseFlow .D_chiosePeople .pTre .changeRadioB {
   display: inline-block;
   width: 15px;
   height: 15px;
