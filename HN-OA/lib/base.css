@@ -254,6 +254,26 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   text-align: center;
   float: left;
 }
+.ysp-content-bottomWC {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 45px;
+  min-height: 50px;
+  line-height: 50px;
+}
+.ysp-content-bottomWC span {
+  display: block;
+  background: #0a73cc;
+  color: #fff;
+  width: 80%;
+  border-radius: 5px;
+  min-height: 40px;
+  line-height: 40px;
+  margin: 10px 10%;
+}
 .D_fujian {
   width: 100%;
   height: 100px;
@@ -479,7 +499,7 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   background: #fff;
   border-top: 10px solid #ececec;
   padding: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .ysp-contentSW div {
   display: flex;
