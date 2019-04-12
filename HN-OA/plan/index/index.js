@@ -17,7 +17,7 @@
       }return data;
     }, doAction_uiControl0_lFVvUR: function (data, elem) {
       if (data.eventType == "click") {
-        var index = parseInt(data.customData);var a = [];var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
+        ysp.appMain.showLoading();var index = parseInt(data.customData);var a = [];var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
           var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[1].querySelector("a") && trs[i].querySelectorAll("td")[1].querySelector("a").textContent;if (title.indexOf("发文") > -1 || title.indexOf("收文") > -1 || title.indexOf("签报") > -1) {
             a.push(trs[i]);
           }
@@ -35,12 +35,14 @@
         //$(elem).find('.logout7_16') && $(elem).find('.logout7_16').find('a').click();
         elem.ownerDocument.querySelector(".logout7_16") && elem.ownerDocument.querySelector(".logout7_16").querySelector("a").click();
       }if (data.eventType == "clickSX") {
-        elem.ownerDocument.querySelector("#tp") && elem.ownerDocument.querySelector("#tp").querySelector(".panel-tool") && elem.ownerDocument.querySelector("#tp").querySelector(".panel-tool").querySelectorAll("a")[1].click();
+        elem.ownerDocument.querySelector("#tp") && elem.ownerDocument.querySelector("#tp").querySelector(".panel-tool") && elem.ownerDocument.querySelector("#tp").querySelector(".panel-tool").querySelectorAll("a")[1].click();ysp.appMain.showLoading();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 500);
       }
     },
     getTemplate_uiControl8_RNaMJ8: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  },\n  handlerSX(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"clickSX\"\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div className=\"ysp-header-index\" >\n        <div onClick={this.handlerClick.bind(this)}></div>\n        <div>OA</div>\n        <div onClick={this.handlerSX.bind(this)}></div>\n       </div>\n    )\n  }\n});";
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n  handlerSX: function handlerSX() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"clickSX\"\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header-index\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        \"OA\"\n      ),\n      React.createElement(\"div\", { onClick: this.handlerSX.bind(this) })\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  \n  componentDidMount(){\n    ysp.appMain.showLoading();\n    setTimeout(function(){\n      ysp.appMain.hideLoading();\n    },500)\n  },\n  componentDidUpdate(){\n    ysp.appMain.showLoading();\n    setTimeout(function(){\n      ysp.appMain.hideLoading();\n    },500)\n  },\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  },\n  handlerSX(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"clickSX\"\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div className=\"ysp-header-index\" >\n        <div onClick={this.handlerClick.bind(this)}></div>\n        <div>OA</div>\n        <div onClick={this.handlerSX.bind(this)}></div>\n       </div>\n    )\n  }\n});";
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentDidMount: function componentDidMount() {\n    ysp.appMain.showLoading();\n    setTimeout(function () {\n      ysp.appMain.hideLoading();\n    }, 500);\n  },\n  componentDidUpdate: function componentDidUpdate() {\n    ysp.appMain.showLoading();\n    setTimeout(function () {\n      ysp.appMain.hideLoading();\n    }, 500);\n  },\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n  handlerSX: function handlerSX() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"clickSX\"\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header-index\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        \"OA\"\n      ),\n      React.createElement(\"div\", { onClick: this.handlerSX.bind(this) })\n    );\n  }\n});";
     }
   }, "index");
 })(window, ysp);
