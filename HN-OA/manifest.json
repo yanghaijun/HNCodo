@@ -9,7 +9,16 @@
       "type": [],
       "ignore": []
     },
-    "resource_inject": []
+    "resource_inject": [],
+    "unadapted": {
+      "timeout": 30000,
+      "rules": [
+        {
+          "match": "*",
+          "type": "block"
+        }
+      ]
+    },
   },
   "override_urls": [],
   "adapter_urls": [
