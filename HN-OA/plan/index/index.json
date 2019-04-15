@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "index",
-  "targetURL": "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html",
+  "targetURL": "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html",
   "jsFile": "index.js",
   "requires": {
     "content": "../content/index.json",
@@ -177,7 +177,7 @@
     "page/urls": {
       "contexts": {
         "context0_qAFAFP": [
-          "oa1.chngsc.cn/WebOffice/home4.nsf/index.html"
+          "123.56.221.127:20070/WebOffice/home4.nsf/index.html"
         ]
       }
     },
