@@ -9,7 +9,17 @@
       "type": [],
       "ignore": []
     },
-    "resource_inject": []
+    "resource_inject": [],
+    "unadapted": {
+      "timeout": 300000,
+      "rules": [
+        {
+          "match": "*",
+          "type": "block"
+        }
+      ]
+    },
+    "component_match_mode": "polling"
   },
   "override_urls": [],
   "adapter_urls": [
@@ -17,24 +27,26 @@
       "title": "loginOA",
       "url": "adapter://HN-OA/plan/loginOA/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.chngsc\\.cn\\/"
+        "^http:\\/\\/123\\.56\\.221\\.127:20070\\/"
       ],
-      "demo": []
+      "demo": [
+        "http://123.56.221.127:20070/"
+      ]
     },
     {
       "title": "index",
       "url": "adapter://HN-OA/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.chngsc\\.cn\\/WebOffice\\/home4\\.nsf\\/index\\.html"
+        "^http:\\/\\/123\\.56\\.221\\.127:20070\\/WebOffice\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
-        "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html"
+        "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html"
       ]
     }
   ],
   "name": "华能集团",
-  "default_url": "http://oa1.chngsc.cn/",
+  "default_url": "http://123.56.221.127:20070/",
   "scope": "HN-OA",
   "start_url": "enterplorer://HN-OA/local/index.html",
-  "update_time": 1555323407697
+  "update_time": 1555397542339
 }
