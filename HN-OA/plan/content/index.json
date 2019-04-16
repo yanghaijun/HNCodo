@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "content",
-  "targetURL": "http://oa1.chngsc.cn/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
+  "targetURL": "http://123.56.221.127:20070/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
   "jsFile": "index.js",
   "chineseName": "详情发文",
   "description": "",
@@ -217,9 +217,9 @@
     "page/urls": {
       "contexts": {
         "context2_049iR8": [
-          "oa1.chngsc.cn/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
-          "oa1.chngsc.cn/WebOffice/MoaWebQianBao.nsf/0/58419B9D4349A90A4825835C0013A68B?EditDocument&fldadocid=15AE825CC7C8DDF24825835C0013BB4A",
-          "oa1.chngsc.cn/WebOffice/MoaWebFaWen.nsf/0/88E6AC27BA8B3E8D4825835B002F7A95?EditDocument&fldadocid=F397FECC406D0A4C482583D70011B4DA"
+          "123.56.221.127:20070/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
+          "123.56.221.127:20070/WebOffice/MoaWebQianBao.nsf/0/58419B9D4349A90A4825835C0013A68B?EditDocument&fldadocid=15AE825CC7C8DDF24825835C0013BB4A",
+          "123.56.221.127:20070/WebOffice/MoaWebFaWen.nsf/0/88E6AC27BA8B3E8D4825835B002F7A95?EditDocument&fldadocid=F397FECC406D0A4C482583D70011B4DA"
         ]
       }
     },
