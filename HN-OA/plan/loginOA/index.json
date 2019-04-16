@@ -1,13 +1,14 @@
 {
   "version": "0.1",
   "id": "loginOA",
-  "targetURL": "http://oa1.chngsc.cn/",
+  "targetURL": "http://123.56.221.127:20070/",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
   },
   "chineseName": "登录",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control0_smV5Jh": {
       "location": {
@@ -47,7 +48,10 @@
         "control0_smV5Jh"
       ],
       "anchors": [],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/",
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/names\\.nsf\\?login"
+      ]
     }
   },
   "flows": {
@@ -106,7 +110,7 @@
     "page/urls": {
       "contexts": {
         "context1_QXbhsT": [
-          "oa1.chngsc.cn/"
+          "123.56.221.127:20070/"
         ]
       }
     },
