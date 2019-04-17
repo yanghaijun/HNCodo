@@ -19,7 +19,7 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        data == \"\u516C\u53F8\u7B7E\u62A5\" ? \"\u516C\u53F8\u7B7E\u62A5\u6D41\u7A0B\" : \"\u516C\u53F8\u53D1\u6587\u6D41\u7A0B\"\n      )\n    );\n  }\n});";
     },
     getData_control5_6FHMUS: function (elem) {
-      var data = [];var title = elem.querySelector("input").value;data.push(title);return data;
+      var data = [];var title = elem.querySelector("input") ? elem.querySelector("input").value : elem.textContent;data.push(title);return data;
     },
     doAction_uiControl5_2SEJrT: function (data, elem) {},
     getTemplate_uiControl5_2SEJrT: function () {
@@ -118,7 +118,8 @@
           } else if (d == 1) {
             //树结构
             trees.find('label').map(function (dt, t) {
-              var content = {};if (dt == 0) {
+              var content = {};
+              if (dt == 0) {
                 content.title = t.textContent;content.idxtree = dt;content.dis = 'block';data.treeBar.push(content);
               } else {
                 content.title = t.textContent;content.idxtree = dt;if (trees.children()[0].getAttribute('class') == 't_node last-child' || trees.children()[0].getAttribute('class') == 't_node last-child selected') {
@@ -131,8 +132,7 @@
           }
         });
       } //选择办理人，需要跨iframe获取数据
-      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");
-      for (var i = 0; i < lis.length; i++) {
+      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
         data.yijian.push(lis[i].querySelector("a").textContent);
       } //常用意见end
       //按钮数量（暂存、退回）start
@@ -142,8 +142,7 @@
         }
       } //按钮数量（暂存、退回）end
       //退回数据start
-      var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;
-      var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+      var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
         var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
@@ -167,6 +166,13 @@
         var iframes = $(elem).find('.ui_border').find('.ui_title_buttons').find('.ui_close').eq(0);iframes.click(); //关闭选人的弹框
       } else if (data.eventType == 'peopleChioseClick') {
         var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click(); //选人的确定按钮
+        var lis = elem.querySelectorAll("li");var index;for (var i = 0; i < lis && lis.length; i++) {
+          if (" 退出 " == lis[i].textContent) {
+            index = i;
+          }
+        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
+          dialog.click();
+        } //选人后手动点击关闭
       } else if (data.eventType == 'radioClick') {
         var data = data.dataCustom;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
@@ -186,7 +192,8 @@
           }
         }a && a[0].querySelector("a").click();
       }if (type == "TH") {
-        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+        var a = [];var release = elem.ownerDocument.querySelector(".Release");
+        var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
@@ -200,7 +207,8 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();
+        }
+        var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();
       }
     },
     getTemplate_uiControl1_rKnnex: function () {
