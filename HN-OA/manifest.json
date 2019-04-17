@@ -41,32 +41,12 @@
       "demo": [
         "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html"
       ]
-    },
-    {
-      "title": "contentSW",
-      "url": "adapter://HN-OA/plan/contentSW/index.json",
-      "matcher": [
-        "^http:\\/\\/123\\.56\\.221\\.127:20070\\/WebOffice\\/MoaWebShouWen\\.nsf\\/0\\/DDF0488BF0D173E2482582D7003071CC\\?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5"
-      ],
-      "demo": [
-        "http://123.56.221.127:20070/WebOffice/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5"
-      ]
-    },
-    {
-      "title": "content",
-      "url": "adapter://HN-OA/plan/content/index.json",
-      "matcher": [
-        "^http:\\/\\/123\\.56\\.221\\.127:20070\\/WebOffice\\/MoaWebFaWen\\.nsf\\/0\\/D31A72FC5B0CB1214825835B00266ABA\\?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA"
-      ],
-      "demo": [
-        "http://123.56.221.127:20070/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA"
-      ]
     }
   ],
   "name": "华能集团",
   "default_url": "http://123.56.221.127:20070/",
   "scope": "HN-OA",
   "start_url": "http://123.56.221.127:20070/",
-  "update_time": 1555468493974,
+  "update_time": 1555480947170,
   "runtime_env": "1webview"
 }
