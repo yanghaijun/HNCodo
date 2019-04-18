@@ -492,17 +492,22 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     background: #eeeeee;
     width: 100%;
     height: 100%;
-    .treeBody{
+	.treeBody{
       background: #fff;
       list-style: none;
-      margin-bottom: 10px;
-      >li:nth-child(1) {
-        padding: 10px 20px;
-      }
-      >li {
-        padding: 10px 40px;
-      }
-      
+      margin: 10px 0px;
+      height: 60%;
+      overflow: scroll;
+      padding: 0px 20px;
+      >div {
+        margin: 10px 0px;
+        >div{
+          padding-left: 20px;
+          .blueColor {
+            color: blue;
+          }
+        }
+      }    
     }
     .pTre {
       position: relative;

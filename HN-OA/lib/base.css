@@ -464,13 +464,19 @@ div[data-componentsid="uiControl0_lFVvUR"] {
 .D_choiseFlow .D_chiosePeople .treeBody {
   background: #fff;
   list-style: none;
-  margin-bottom: 10px;
+  margin: 10px 0px;
+  height: 60%;
+  overflow: scroll;
+  padding: 0px 20px;
 }
-.D_choiseFlow .D_chiosePeople .treeBody > li:nth-child(1) {
-  padding: 10px 20px;
+.D_choiseFlow .D_chiosePeople .treeBody > div {
+  margin: 10px 0px;
 }
-.D_choiseFlow .D_chiosePeople .treeBody > li {
-  padding: 10px 40px;
+.D_choiseFlow .D_chiosePeople .treeBody > div > div {
+  padding-left: 20px;
+}
+.D_choiseFlow .D_chiosePeople .treeBody > div > div .blueColor {
+  color: blue;
 }
 .D_choiseFlow .D_chiosePeople .pTre {
   position: relative;
