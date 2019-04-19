@@ -19,10 +19,29 @@
         }
       ]
     },
+    "resource_filter": [{
+		"url_match": [
+			"^http:\\/\\/123\\.56\\.221\\.127:20070.*"
+		],
+		"charset": "utf-8",
+		"Accept-Language": "zh-Hans-CN",
+		"replaces": [{
+			"regexp": "\\btop\\b",
+			"sub_str": "_ysp_top"
+		}]
+	}],
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
   },
-  "override_urls": [],
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/WebOffice\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
+      ],
+      "target_url": "override/model.js",
+      "default_url": "http://123.56.221.127:20070/WebOffice/MoaWebConfigSet.nsf/flow/selectflow/model.js"
+    }
+  ],
   "adapter_urls": [
     {
       "title": "loginOA",
@@ -47,6 +66,6 @@
   "default_url": "http://123.56.221.127:20070/",
   "scope": "HN-OA",
   "start_url": "http://123.56.221.127:20070/",
-  "update_time": 1555577392464,
+  "update_time": 1555670665053,
   "runtime_env": "1webview"
 }
