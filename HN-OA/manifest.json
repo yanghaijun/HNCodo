@@ -44,6 +44,90 @@
       ],
       "target_url": "override/model.js",
       "default_url": "http://123.56.221.127:20070/WebOffice/MoaWebConfigSet.nsf/flow/selectflow/model.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
+      ],
+      "target_url": "override/jquery.ztree.all.min.js",
+      "default_url": "http://123.56.221.127:20070/moa2/zTree/js/jquery.ztree.all.min.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
+      ],
+      "target_url": "override/cn.ml.oa.js",
+      "default_url": "http://123.56.221.127:20070/moa2/script/cn.ml.oa.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa\\/jsfw\\/Themes\\/bjml\\/SplitBar\\/css\\.css"
+      ],
+      "target_url": "override/css.css",
+      "default_url": "http://123.56.221.127:20070/moa/jsfw/Themes/bjml/SplitBar/css.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/DatePicker\\/skin\\/bjml\\/left\\.gif"
+      ],
+      "target_url": "override/left.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/DatePicker/skin/bjml/left.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/DatePicker\\/skin\\/bjml\\/navLeft\\.gif"
+      ],
+      "target_url": "override/navLeft.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/DatePicker/skin/bjml/navLeft.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/DatePicker\\/skin\\/bjml\\/navRight\\.gif"
+      ],
+      "target_url": "override/navRight.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/DatePicker/skin/bjml/navRight.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/DatePicker\\/skin\\/bjml\\/right\\.gif"
+      ],
+      "target_url": "override/right.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/DatePicker/skin/bjml/right.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/script\\/jquery-1\\.12\\.4\\.min\\.js"
+      ],
+      "target_url": "override/jquery-1.12.4.min.js",
+      "default_url": "http://123.56.221.127:20070/moa2/script/jquery-1.12.4.min.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/icons\\/ecblank\\.gif"
+      ],
+      "target_url": "override/ecblank.gif",
+      "default_url": "http://123.56.221.127:20070/icons/ecblank.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/basic\\/bootstrap\\/images\\/blank\\.gif"
+      ],
+      "target_url": "override/blank.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/basic/bootstrap/images/blank.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/moa2\\/images\\/nav_menu_ico\\.gif"
+      ],
+      "target_url": "override/nav_menu_ico.gif",
+      "default_url": "http://123.56.221.127:20070/moa2/images/nav_menu_ico.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/123\\.56\\.221\\.127:20070\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
+      ],
+      "target_url": "override/jquery-1.5.2.min.js",
+      "default_url": "http://123.56.221.127:20070/domcfg.nsf/js/jquery-1.5.2.min.js"
     }
   ],
   "adapter_urls": [
@@ -70,6 +154,6 @@
   "default_url": "http://123.56.221.127:20070/",
   "scope": "HN-OA",
   "start_url": "http://123.56.221.127:20070/",
-  "update_time": 1555898324938,
+  "update_time": 1555903274061,
   "runtime_env": "1webview"
 }
