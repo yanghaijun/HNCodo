@@ -160,17 +160,20 @@
       } else if (data.eventType == 'closeChiosep') {
         var iframes = $(elem).find('.ui_border').find('.ui_title_buttons').find('.ui_close').eq(0);iframes.click(); //关闭选人的弹框
       } else if (data.eventType == 'peopleChioseClick') {
+        //选人之后的确定按钮，手动关闭和手动给select赋值
         var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector("#selectflowuser");if (datagrid != null) {
-          var selectsDiv = datagrid.querySelectorAll("div") && datagrid.querySelectorAll("div")[2];var options = selectsDiv.querySelector("select") && selectsDiv.querySelector("select").querySelectorAll("option");var aa = [];for (var i = 0; i < options.length; i++) {
-            var selected = options[i].getAttribute("selected");if ("selected" == selected) {
-              aa.push(i);
+          var selectsDiv = datagrid.querySelectorAll("div") && datagrid.querySelectorAll("div")[2];var options = selectsDiv.querySelector("select") && selectsDiv.querySelector("select").querySelectorAll("option");if (options != null) {
+            var aa = [];for (var i = 0; i < options.length; i++) {
+              var selected = options[i].getAttribute("selected");if ("selected" == selected) {
+                aa.push(i);
+              }
             }
           }
         }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var lis = elem.querySelectorAll("li");var index;for (var i = 0; i < lis && lis.length; i++) {
           if (" 退出 " == lis[i].textContent) {
             index = i;
           }
-        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
+        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index] && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
           dialog.click();
         } //选人后手动点击关闭
       } else if (data.eventType == 'radioClick') {
@@ -211,8 +214,7 @@
           }
         }ss && ss[0].click();
       }if (type == "THTitle") {
-        var index = data.dataCustom;
-        var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+        var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
         }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();
       }

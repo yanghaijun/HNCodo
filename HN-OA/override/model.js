@@ -78,14 +78,18 @@ var SelectedList = Backbone.Collection.extend({
 		},
 		getSelected: function(isOrder){
       var num = localStorage.getItem("personNum");
-      if("" != num){
+      if("" != num&&num!="null"&&num!="undefined"){
          var numArry = num.split(",");
         var numArryLength = numArry.length;
         var modelsLength = this.models.length;
         if(modelsLength >= numArryLength){
-          for(var i=0;i<numArry.length;i++){
-            this.models[parseInt(numArry[i])].changed.selected = true;
-            this.models[parseInt(numArry[i])].attributes.selected = true;
+          // for(var i=0;i<numArry.length;i++){
+          //   this.models[parseInt(numArry[i])].changed.selected = true;
+          //   this.models[parseInt(numArry[i])].attributes.selected = true;
+          // }
+          for(var i=0;i<this.models.length;i++){
+            this.models[i].changed.selected = true;
+            this.models[i].attributes.selected = true;
           }
         }
 //         if(numArry.length == modelsLength){
