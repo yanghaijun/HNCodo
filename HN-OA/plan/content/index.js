@@ -169,13 +169,19 @@
               }
             }
           }
-        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var lis = elem.querySelectorAll("li");var index;for (var i = 0; i < lis && lis.length; i++) {
-          if (" 退出 " == lis[i].textContent) {
-            index = i;
-          }
-        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index] && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
-          dialog.click();
-        } //选人后手动点击关闭
+        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url); //   var lis = elem.querySelectorAll("li");
+        //   var index;
+        //   for (var i = 0; i < lis && lis.length; i++) {
+        //     if (" 退出 " == lis[i].textContent) {
+        //       index = i;
+        //     }
+        //   }
+        //   elem.querySelectorAll("li") && elem.querySelectorAll("li")[index] && elem.querySelectorAll("li")[index].querySelector("a").click();
+        //   var elem = elem.ownerDocument;
+        //   var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);
+        //   if (dialog.val() == '不保存') {
+        //     dialog.click();
+        //   } //选人后手动点击关闭
       } else if (data.eventType == 'radioClick') {
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
@@ -188,11 +194,15 @@
           }
         } //选人的多选
       } else if (data.eventType == 'flowTitle') {
-        var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
+        var data = data.customData;
+        var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
       } else if (data.eventType == 'flowTitleChild') {
-        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
-      }var type = data.eventType;if (type == "textareaChange") {
-        var text = data.customData;elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
+        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');
+        var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
+      }var type = data.eventType;
+      if (type == "textareaChange") {
+        var text = data.customData;
+        elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
       }if (type == "yijian") {
         var index = parseInt(data.customData);var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");lis && lis[index].querySelector("a").click();
       }if (type == "ZC") {
@@ -200,14 +210,15 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();
+        }a && a[0].querySelector("a").click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (type == "TH") {
         var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
         }a && a[0].querySelector("a").click();
-      }if (type == "THClose") {
+      }
+      if (type == "THClose") {
         var ss = [];var ass = elem.ownerDocument.querySelector(".ui_title_buttons") && elem.ownerDocument.querySelector(".ui_title_buttons").querySelectorAll("a");for (var i = 0; i < ass.length; i++) {
           if ("关闭(esc键)" == ass[i].getAttribute("title")) {
             ss.push(ass[i]);
@@ -216,7 +227,7 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }
     },
     getTemplate_uiControl1_rKnnex: function () {
