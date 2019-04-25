@@ -79,8 +79,20 @@ html {
   width: 100%;
   height: 40px;
 }
+.D_login .freeow-br {
+  height: 70px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+.D_login .freeow-br > p {
+  margin: 5px 0px;
+  font-size: 13px;
+}
 .D_login .loginButton {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .D_login .loginButton > button {
   border: none;
