@@ -84,7 +84,7 @@
               day = '五';
             } else if (day == '6') {
               day = '六';
-            } else if (day == '7') {
+            } else if (day == '0') {
               day = '天';
             }obj.day = '星期' + day;data.liucheng.push(obj);
           }
@@ -156,7 +156,7 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();
+        }a && a[0].querySelector("a").click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (type == "TH") {
         var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
@@ -172,7 +172,7 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();ysp.appMain.showLoading();
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);ysp.appMain.showLoading();
       }if (data.eventType == 'Liclick') {
         ysp.appMain.showLoading();var data = data.dataCustom;var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn');commitLZS.find('a').eq(data).click();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -189,13 +189,19 @@
               }
             }
           }
-        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var lis = elem.querySelectorAll("li");var index;for (var i = 0; i < lis && lis.length; i++) {
-          if (" 退出 " == lis[i].textContent) {
-            index = i;
-          }
-        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index] && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
-          dialog.click();
-        } //选人后手动点击关闭
+        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var url = "http://123.56.221.127:20070/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url); //   var lis = elem.querySelectorAll("li");
+        //   var index;
+        //   for (var i = 0; i < lis && lis.length; i++) {
+        //     if (" 退出 " == lis[i].textContent) {
+        //       index = i;
+        //     }
+        //   }
+        //   var elem = elem.ownerDocument;
+        //   var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);
+        //   if (dialog.val() == '不保存') {
+        //     dialog.click();
+        //   } 
+        //选人后手动点击关闭
       } else if (data.eventType == 'radioClick') {
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
