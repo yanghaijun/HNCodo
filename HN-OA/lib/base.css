@@ -1,3 +1,7 @@
+.view-wrapper {
+  height: 100vh;
+  overflow: auto;
+}
 html {
   background: #ececec;
 }
