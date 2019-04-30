@@ -7,6 +7,8 @@
 .view-wrapper{
   height:100vh;
   overflow: auto;
+  background: #ececec;
+  position: relative;
 }
 //登录开始
 html{
@@ -27,6 +29,9 @@ html{
 [data-ysp-modelid='index'] {
   padding: 0px;
   background: #ececec;
+}
+[data-componentsid='uiControl4_pPoU5D'],[data-componentsid='uiControl8_RNaMJ8'],[data-componentsid='uiControl3_Ux5ohk']{
+  height: 50px;
 }
 .D_login{
   width: 100%;
@@ -124,7 +129,7 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 }
 .ysp-index-db{
   background: #ececec;
-  min-height: 100vh;
+ // min-height: 100vh;
   .ysp-index-db-content{
     background: #fff;
     margin: 10px;
@@ -192,10 +197,9 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   color: #fff;
   height: 50px;
   padding: 0px 10px;
-    // position: fixed;
-    // top: 0px;
-    // width: 100%;
-    // z-index: 99999;
+  position: fixed;
+  top: 0px;
+  width: 100%;
   >div:nth-child(1){
     width: 20px;
     height: 20px;
@@ -215,6 +219,10 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   color: #fff;
   height: 50px;
   padding: 0px 10px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
   >div:nth-child(1){
     width: 20px;
     height: 20px;
@@ -325,7 +333,6 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 //附件开始
 .D_fujian {
     width: 100%;
-    min-height: 100px;
   	overflow: scroll;
    	margin-bottom: 100px;
   .D_zanwuFJ {
@@ -486,7 +493,9 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   top: 0px;
   left: 0px;
 	background: #eeeeee;
+  padding-top: 52px;
   .D_flowList {
+    // margin-top: 52px;
     >li {
       list-style: none;
       height: 50px;
@@ -522,6 +531,7 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     background: #eeeeee;
     width: 100%;
     height: 100%;
+    padding-top: 55px;
 	.treeBody{
       background: #fff;
       list-style: none;
@@ -643,11 +653,17 @@ div[data-componentsid="uiControl0_lFVvUR"]{
   height: 100vh;
   width: 100%;
   background: #fff;
+  min-height: 200px;
+  overflow: scroll;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   .ysp-contentSW-thTitle{
     padding: 10px;
     border-bottom: 1px solid #ececec;
     min-height:40px;
-    line-height:40px; 
+    line-height:40px;
     span:nth-child(1){
       padding-right: 10px;
     }
