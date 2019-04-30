@@ -68,27 +68,33 @@
         var obj = {};obj.typeP = '';obj.text = '暂无附件';obj.time = '';data.fujian.push(obj);
       } //附件完
       var liuchengTable = $(elem).find("#comment_table").find("tbody");if (liuchengTable.length == 0) {
-        var obj = {};obj.text = '暂无流程';data.liucheng.push(obj);
+        var obj = {};
+        obj.text = '暂无流程';data.liucheng.push(obj);
       } else {
         liuchengTable.map(function (d, t) {
           if (d > 0) {
-            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];var date = new Date();var day = date.getDay();if (day == '1') {
-              day = '一';
-            } else if (day == '2') {
-              day = '二';
-            } else if (day == '3') {
-              day = '三';
-            } else if (day == '4') {
-              day = '四';
-            } else if (day == '5') {
-              day = '五';
-            } else if (day == '6') {
-              day = '六';
-            } else if (day == '0') {
-              day = '天';
-            }obj.day = '星期' + day;data.liucheng.push(obj);
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3]; //       var date = new Date();
+            //       var day = date.getDay();
+            //       if (day == '1') {
+            //         day = '一';
+            //       } else if (day == '2') {
+            //         day = '二';
+            //       } else if (day == '3') {
+            //         day = '三';
+            //       } else if (day == '4') {
+            //         day = '四';
+            //       } else if (day == '5') {
+            //         day = '五';
+            //       } else if (day == '6') {
+            //         day = '六';
+            //       } else if (day == '0') {
+            //         day = '天';
+            //       }
+            //       obj.day = '星期' + day;
+            data.liucheng.push(obj);
           }
-        });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
+        });var obj2 = {};
+        obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       //常用意见start
       var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
@@ -122,14 +128,12 @@
           if (d > 1 && t.style.display != 'none') {
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
               $(t).find('p').map(function (q, l) {
-                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'P';
-                data.selectApar.push(obj);
+                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'P';data.selectApar.push(obj);
               });
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
                 $(t).find('option').map(function (q, l) {
-                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
-                  obj.type = 'OPTION';data.selectApar.push(obj);
+                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'OPTION';data.selectApar.push(obj);
                 });
               }
             }
@@ -137,8 +141,7 @@
             //树结构
             var domtree = trees.find('.t_node');domtree.map(function (d, t) {
               var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];$(t).find('.t_leaf').map(function (q, l) {
-                var obj2 = {};
-                obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
+                var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
               });data.treeBar.push(obj);
             });
           }
@@ -197,10 +200,12 @@
         //     }
         //   }
         //   var elem = elem.ownerDocument;
+
         //   var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);
         //   if (dialog.val() == '不保存') {
         //     dialog.click();
         //   } 
+
         //选人后手动点击关闭
       } else if (data.eventType == 'radioClick') {
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
