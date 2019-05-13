@@ -22,7 +22,7 @@
     "resource_filter": [
       {
         "url_match": [
-          "^http:\\/\\/123\\.56\\.221\\.127:30011.*"
+          "^http:\\/\\/oa1\\.chngsc\\.cn.*"
         ],
         "charset": "utf-8",
         "Accept-Language": "zh-Hans-CN",
@@ -40,94 +40,94 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/WebOffice\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/WebOffice\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
       ],
       "target_url": "override/model.js",
-      "default_url": "http://123.56.221.127:30011/WebOffice/MoaWebConfigSet.nsf/flow/selectflow/model.js"
+      "default_url": "http://oa1.chngsc.cn/WebOffice/MoaWebConfigSet.nsf/flow/selectflow/model.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
       ],
       "target_url": "override/jquery.ztree.all.min.js",
-      "default_url": "http://123.56.221.127:30011/moa2/zTree/js/jquery.ztree.all.min.js"
+      "default_url": "http://oa1.chngsc.cn/moa2/zTree/js/jquery.ztree.all.min.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
       ],
       "target_url": "override/cn.ml.oa.js",
-      "default_url": "http://123.56.221.127:30011/moa2/script/cn.ml.oa.js"
+      "default_url": "http://oa1.chngsc.cn/moa2/script/cn.ml.oa.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa\\/jsfw\\/Themes\\/bjml\\/SplitBar\\/css\\.css"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa\\/jsfw\\/Themes\\/bjml\\/SplitBar\\/css\\.css"
       ],
       "target_url": "override/css.css",
-      "default_url": "http://123.56.221.127:30011/moa/jsfw/Themes/bjml/SplitBar/css.css"
+      "default_url": "http://oa1.chngsc.cn/moa/jsfw/Themes/bjml/SplitBar/css.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/DatePicker\\/skin\\/bjml\\/left\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/left\\.gif"
       ],
       "target_url": "override/left.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/DatePicker/skin/bjml/left.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/DatePicker/skin/bjml/left.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/DatePicker\\/skin\\/bjml\\/navLeft\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/navLeft\\.gif"
       ],
       "target_url": "override/navLeft.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/DatePicker/skin/bjml/navLeft.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/DatePicker/skin/bjml/navLeft.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/DatePicker\\/skin\\/bjml\\/navRight\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/navRight\\.gif"
       ],
       "target_url": "override/navRight.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/DatePicker/skin/bjml/navRight.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/DatePicker/skin/bjml/navRight.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/DatePicker\\/skin\\/bjml\\/right\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/right\\.gif"
       ],
       "target_url": "override/right.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/DatePicker/skin/bjml/right.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/DatePicker/skin/bjml/right.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/script\\/jquery-1\\.12\\.4\\.min\\.js"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/script\\/jquery-1\\.12\\.4\\.min\\.js"
       ],
       "target_url": "override/jquery-1.12.4.min.js",
-      "default_url": "http://123.56.221.127:30011/moa2/script/jquery-1.12.4.min.js"
+      "default_url": "http://oa1.chngsc.cn/moa2/script/jquery-1.12.4.min.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/icons\\/ecblank\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/icons\\/ecblank\\.gif"
       ],
       "target_url": "override/ecblank.gif",
-      "default_url": "http://123.56.221.127:30011/icons/ecblank.gif"
+      "default_url": "http://oa1.chngsc.cn/icons/ecblank.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/basic\\/bootstrap\\/images\\/blank\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/basic\\/bootstrap\\/images\\/blank\\.gif"
       ],
       "target_url": "override/blank.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/basic/bootstrap/images/blank.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/basic/bootstrap/images/blank.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/moa2\\/images\\/nav_menu_ico\\.gif"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/moa2\\/images\\/nav_menu_ico\\.gif"
       ],
       "target_url": "override/nav_menu_ico.gif",
-      "default_url": "http://123.56.221.127:30011/moa2/images/nav_menu_ico.gif"
+      "default_url": "http://oa1.chngsc.cn/moa2/images/nav_menu_ico.gif"
     },
     {
       "origin_url": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
+        "http:\\/\\/oa1\\.chngsc\\.cn\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
       ],
       "target_url": "override/jquery-1.5.2.min.js",
-      "default_url": "http://123.56.221.127:30011/domcfg.nsf/js/jquery-1.5.2.min.js"
+      "default_url": "http://oa1.chngsc.cn/domcfg.nsf/js/jquery-1.5.2.min.js"
     }
   ],
   "adapter_urls": [
@@ -135,7 +135,7 @@
       "title": "loginOA",
       "url": "adapter://HN-OA/plan/loginOA/index.json",
       "matcher": [
-        "^http:\\/\\/123\\.56\\.221\\.127:30011\\/"
+        "^http:\\/\\/oa1\\.chngsc\\.cn\\/"
       ],
       "demo": []
     },
@@ -143,17 +143,17 @@
       "title": "index",
       "url": "adapter://HN-OA/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/123\\.56\\.221\\.127:30011\\/WebOffice\\/home4\\.nsf\\/index\\.html"
+        "^http:\\/\\/oa1\\.chngsc\\.cn\\/WebOffice\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
-        "http://123.56.221.127:30011/WebOffice/home4.nsf/index.html"
+        "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html"
       ]
     }
   ],
   "name": "华能集团",
-  "default_url": "http://123.56.221.127:30011/",
+  "default_url": "http://oa1.chngsc.cn/",
   "scope": "HN-OA",
-  "start_url": "http://123.56.221.127:30011/",
-  "update_time": 1557450556103,
+  "start_url": "http://oa1.chngsc.cn/",
+  "update_time": 1557730242820,
   "runtime_env": "1webview"
 }

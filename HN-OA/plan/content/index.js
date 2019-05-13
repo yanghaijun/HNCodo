@@ -71,7 +71,7 @@
       //附件开始
       var fujianDls = $(elem).find('.down_table_list').find('#down_table_list_text') && $(elem).find('.down_table_list').find('#down_table_list_text').find('dl');if (fujianDls.length != 0) {
         fujianDls && fujianDls.map(function (j, q) {
-          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOffice/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://123.56.221.127:30011/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
+          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOffice/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://oa1.chngsc.cn/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
         });
       } else {
         var obj = {};obj.typeP = '';obj.text = '暂无附件';obj.time = '';data.fujian.push(obj);
@@ -104,8 +104,7 @@
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');commitLZS && commitLZS.map(function (d, t) {
-        var obj = {};obj.textC = t.textContent;
-        data.commitLZ.push(obj);
+        var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       });if ($(elem).find('.ui_border').find('.ui_content').find('.ui_loading').length != 0) {
         var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
           if (d > 1 && t.style.display != 'none') {
@@ -176,8 +175,9 @@
               }
             }
           }
-        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();var url = "http://123.56.221.127:30011/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url); //   var lis = elem.querySelectorAll("li");
-        //   var index;
+        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {
+          var url = "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        } //   var index;
         //   for (var i = 0; i < lis && lis.length; i++) {
         //     if (" 退出 " == lis[i].textContent) {
         //       index = i;
@@ -213,14 +213,14 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();var url = "http://123.56.221.127:30011/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }a && a[0].querySelector("a").click();var url = "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (type == "TH") {
-        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+        var a = [];var release = elem.ownerDocument.querySelector(".Release");
+        var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }
-        a && a[0].querySelector("a").click();
+        }a && a[0].querySelector("a").click();
       }if (type == "THClose") {
         var ss = [];var ass = elem.ownerDocument.querySelector(".ui_title_buttons") && elem.ownerDocument.querySelector(".ui_title_buttons").querySelectorAll("a");for (var i = 0; i < ass.length; i++) {
           if ("关闭(esc键)" == ass[i].getAttribute("title")) {
@@ -230,7 +230,7 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://123.56.221.127:30011/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://oa1.chngsc.cn/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       } //点击附件方法
       if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;huaneng.fujian(url, cookies, text);
