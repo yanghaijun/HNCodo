@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "loginOA",
-  "targetURL": "http://oa1.chngsc.cn/",
+  "targetURL": "http://123.56.221.127:30011/",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -49,8 +49,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.chngsc\\.cn\\/",
-        "http:\\/\\/oa1\\.chngsc\\.cn\\/names\\.nsf\\?login"
+        "http:\\/\\/123\\.56\\.221\\.127:30011\\/",
+        "http:\\/\\/123\\.56\\.221\\.127:30011\\/names\\.nsf\\?login"
       ]
     }
   },
@@ -110,8 +110,8 @@
     "page/urls": {
       "contexts": {
         "context1_QXbhsT": [
-          "oa1.chngsc.cn/",
-          "oa1.chngsc.cn/names.nsf?login"
+          "123.56.221.127:30011/",
+          "123.56.221.127:30011/names.nsf?login"
         ]
       }
     },
