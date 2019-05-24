@@ -1,0 +1,207 @@
+{
+  "version": "0.1",
+  "id": "loginOA",
+  "targetURL": "http://123.56.221.127:30011/",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control0_smV5Jh": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.bgstretcher-page DIV.login_blk DIV.login_banner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_smV5Jh"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context1_QXbhsT": {
+      "controls": [
+        "control0_smV5Jh"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/123\\.56\\.221\\.127:30011\\/",
+        "http:\\/\\/123\\.56\\.221\\.127:30011\\/names\\.nsf\\?login"
+      ]
+    }
+  },
+  "flows": {
+    "flow0_UJDHCR": {
+      "toContexts": [
+        {
+          "toContextId": "context1_QXbhsT"
+        }
+      ]
+    },
+    "flow5_c2043L": {
+      "fromContextId": "context1_QXbhsT",
+      "fromAction": "doAction",
+      "fromControlId": "control0_smV5Jh",
+      "toContexts": [
+        {
+          "toContextId": "context1_QXbhsT"
+        },
+        {
+          "toContextId": "context0_qAFAFP",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_F0fbrU": {
+      "contextId": "context1_QXbhsT",
+      "layout": [
+        {
+          "id": "uiControl0_acry19",
+          "controlId": "control0_smV5Jh",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_acry19",
+                "onGetTemplate": "getTemplate_uiControl0_acry19"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_QXbhsT": [
+          "欢迎登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_QXbhsT": [
+          "123.56.221.127:30011/",
+          "123.56.221.127:30011/names.nsf?login"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "bgstretcher",
+            "ex",
+            "freeow-br",
+            "freeow-msg",
+            "freeow-show"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "bgs-current",
+            "bgstretcher",
+            "bgstretcher-area",
+            "bgstretcher-page",
+            "bottom_blk",
+            "bottom_fixed",
+            "bottom_tips",
+            "btn_off",
+            "down_link",
+            "enter_system",
+            "forget_pw_text",
+            "freeow",
+            "freeow-bottom-right",
+            "ibutton-container",
+            "ibutton-handle",
+            "ibutton-handle-middle",
+            "ibutton-handle-right",
+            "ibutton-label-off",
+            "ibutton-label-on",
+            "ibutton-padding-left",
+            "ibutton-padding-right",
+            "img-loaded",
+            "login_banner",
+            "login_blk",
+            "login_form",
+            "login_form_text",
+            "login_panel",
+            "mask",
+            "password",
+            "row",
+            "text_off",
+            "top_bar",
+            "top_fixed",
+            "username"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_QXbhsT": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "DD/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/P/INPUT-submit",
+            "DIV/SPAN/A",
+            "DIV/SPAN/LABEL",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DD/INPUT-button",
+            "DL/DD/INPUT-password",
+            "DL/DD/INPUT-text",
+            "DL/DD/SPAN",
+            "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "UL/LI/IMG"
+          ]
+        ]
+      }
+    }
+  }
+}
