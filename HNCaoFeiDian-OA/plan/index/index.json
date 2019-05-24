@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "index",
-  "targetURL": "http://123.56.221.127:30011/WebOffice/home4.nsf/index.html",
+  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html",
   "jsFile": "index.js",
   "requires": {
     "content": "../content/index.json",
@@ -93,8 +93,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/WebOffice\\/home4\\.nsf\\/index.html",
-        "http:\\/\\/123\\.56\\.221\\.127:30011\\/WebOffice\\/home4\\.nsf\\/fomLogin\\?OpenForm"
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/WebOfficehncfd\\/home4\\.nsf\\/index.html",
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/WebOfficehncfd\\/home4\\.nsf\\/fomLogin\\?OpenForm"
       ]
     }
   },
@@ -187,7 +187,7 @@
     "page/urls": {
       "contexts": {
         "context0_qAFAFP": [
-          "123.56.221.127:30011/WebOffice/home4.nsf/index.html"
+          "oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html"
         ]
       }
     },

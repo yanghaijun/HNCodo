@@ -4,7 +4,7 @@
       "name": "登录",
       "app_id": "login",
       "icon": "local/img/OA.png",
-      "url": "http://123.56.221.127:30011/"
+      "url": "http://oa1.hnrl.chng.com/"
     }
   ]
 }
