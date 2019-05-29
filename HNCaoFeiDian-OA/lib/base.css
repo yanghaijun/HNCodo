@@ -163,20 +163,38 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   background: url("../local/img/clue.png") no-repeat;
   background-size: contain;
 }
-.ysp-index-db .ysp-index-db-content .ysp-index-db-content-title {
-  width: 100%;
-}
-.ysp-index-db .ysp-index-db-content .ysp-index-db-content-title > div:first-child {
+.ysp-index-db .ysp-index-db-content .ysp-index-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   color: #0a73cc;
   overflow: hidden;
   word-wrap: nowrap;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.ysp-index-db .ysp-index-db-content .ysp-index-time-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-index-db .ysp-index-db-content .ysp-index-db-content-title {
+  width: 90%;
+  display: inline-block;
+}
+.ysp-index-db .ysp-index-db-content .ysp-index-db-content-title > div:first-child {
+  display: inline-block;
+  color: #0a73cc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
+}
 .ysp-index-db .ysp-index-db-content .ysp-index-db-content-title > div:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 95%;
 }
 .ysp-header {
   display: flex;

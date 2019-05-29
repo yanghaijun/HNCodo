@@ -17,7 +17,7 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentDidMount: function componentDidMount() {\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function () {\n      elem.scrollTop = 0;\n    }, 500);\n  },\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header\", ref: \"toTop\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        \"\\u516C\\u53F8\\u6536\\u6587\\u6D41\\u7A0B\"\n      )\n    );\n  }\n});";
     },
     getData_control6_uBXHGv: function (elem) {
-      var data = [];var title = elem.querySelector("input").value;data.push(title);return data;
+      var data = [];var title = elem && elem.textContent;data.push(title);return data;
     },
     doAction_uiControl6_7aXMK8: function (data, elem) {},
     getTemplate_uiControl6_7aXMK8: function () {
@@ -92,11 +92,11 @@
             //       obj.day = '星期' + day;
             data.liucheng.push(obj);
           }
-        });var obj2 = {};obj2.num = liuchengTable.length - 2;
-        data.liuchengNUM.push(obj2);
+        });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       //常用意见start
-      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
+      var list = elem.ownerDocument.querySelector("#common_view_list");
+      var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
         for (var i = 0; i < lis.length; i++) {
           data.yijian.push(lis[i].querySelector("a").textContent);
         }
@@ -112,7 +112,8 @@
         }
       } //按钮数量（暂存、退回）end
       //退回数据start
-      var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+      var loading = elem.ownerDocument.querySelector(".ui_loading");
+      var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
         var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
@@ -129,7 +130,8 @@
         var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       }); //选择流向
       if ($(elem).find('.ui_border').find('.ui_content').find('.ui_loading').length != 0) {
-        var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
+        var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();
+        var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
           if (d > 1 && t.style.display != 'none') {
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
               $(t).find('p').map(function (q, l) {
@@ -164,7 +166,8 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }a && a[0].querySelector("a").click(); //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
       }if (type == "TH") {
         var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
@@ -180,7 +183,9 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);ysp.appMain.showLoading();
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click(); //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
+        ysp.appMain.showLoading();
       }if (data.eventType == 'Liclick') {
         ysp.appMain.showLoading();var data = data.dataCustom;var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn');commitLZS.find('a').eq(data).click();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -191,15 +196,16 @@
         //选人的确定，手动关闭页面和手动添加select内容
         var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector("#selectflowuser");if (datagrid != null) {
           var selectsDiv = datagrid.querySelectorAll("div") && datagrid.querySelectorAll("div")[2];var options = selectsDiv.querySelector("select") && selectsDiv.querySelector("select").querySelectorAll("option");if (options != null) {
-            var aa = [];for (var i = 0; i < options.length; i++) {
+            var aa = [];
+            for (var i = 0; i < options.length; i++) {
               var selected = options[i].getAttribute("selected");if ("selected" == selected) {
                 aa.push(i);
               }
             }
           }
-        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {
-          var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
-        } //   var lis = elem.querySelectorAll("li");
+        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {} //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
+        //   var lis = elem.querySelectorAll("li");
         //   var index;
         //   for (var i = 0; i < lis && lis.length; i++) {
         //       index = i;
@@ -221,9 +227,14 @@
             selects.setAttribute("selected", "noSelected");
           }
         } //选人的多选
+      } else if (data.eventType == 'flowTitle') {
+        var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
+      } else if (data.eventType == 'flowTitleChild') {
+        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
       } //点击附件方法
       if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text; //var cookieValue = cookies.split("LtpaToken=")[1]; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;
+        var text = data.customData.text; //var cookieValue = cookies.split("LtpaToken=")[1]; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
         //elem.ownerDocument.defaultView.huaneng.fujian(url, cookies, text); //elem.ownerDocument.defaultView.fujian(url, cookies, text);
         //EAPI.fujain(url, cookies, text);
         if (top.EAPI.isAndroid()) {

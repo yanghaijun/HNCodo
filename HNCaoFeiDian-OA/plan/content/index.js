@@ -15,8 +15,8 @@
       }
     },
     getTemplate_uiControl4_pPoU5D: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  componentDidMount(){\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function(){\n      elem.scrollTop=0;\n    },500)\n  },\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div className=\"ysp-header\" ref='toTop'>\n        <div onClick={this.handlerClick.bind(this)}></div>\n        <div>\n          {data == \"\u516C\u53F8\u7B7E\u62A5\" ? \"\u516C\u53F8\u7B7E\u62A5\u6D41\u7A0B\" : \"\u516C\u53F8\u53D1\u6587\u6D41\u7A0B\"}\n        </div>\n        \n      </div>\n    )\n  }\n});";
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentDidMount: function componentDidMount() {\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function () {\n      elem.scrollTop = 0;\n    }, 500);\n  },\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header\", ref: \"toTop\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        data == \"\u516C\u53F8\u7B7E\u62A5\" ? \"\u516C\u53F8\u7B7E\u62A5\u6D41\u7A0B\" : \"\u516C\u53F8\u53D1\u6587\u6D41\u7A0B\"\n      )\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  componentDidMount(){\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function(){\n      elem.scrollTop=0;\n    },500)\n  },\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData && this.props.customData[0];\n    return (\n      <div className=\"ysp-header\" ref='toTop'>\n        <div onClick={this.handlerClick.bind(this)}></div>\n        <div>\n          {data.indexOf(\"\u7B7E\u62A5\") > -1  ? \"\u516C\u53F8\u7B7E\u62A5\u6D41\u7A0B\" : \"\u516C\u53F8\u53D1\u6587\u6D41\u7A0B\"}\n        </div>\n        \n      </div>\n    )\n  }\n});";
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentDidMount: function componentDidMount() {\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function () {\n      elem.scrollTop = 0;\n    }, 500);\n  },\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData && this.props.customData[0];\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header\", ref: \"toTop\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        data.indexOf(\"\u7B7E\u62A5\") > -1 ? \"\u516C\u53F8\u7B7E\u62A5\u6D41\u7A0B\" : \"\u516C\u53F8\u53D1\u6587\u6D41\u7A0B\"\n      )\n    );\n  }\n});";
     },
     getData_control5_6FHMUS: function (elem) {
       var data = [];var title = elem.querySelector("input") ? elem.querySelector("input").value : elem.textContent;data.push(title);return data;
@@ -81,42 +81,25 @@
       } else {
         liuchengTable && liuchengTable.map(function (d, t) {
           if (d > 0) {
-            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3]; //       var date = new Date();
-            //       var day = date.getDay();
-            //       if (day == '1') {
-            //         day = '一';
-            //       } else if (day == '2') {
-            //         day = '二';
-            //       } else if (day == '3') {
-            //         day = '三';
-            //       } else if (day == '4') {
-            //         day = '四';
-            //       } else if (day == '5') {
-            //         day = '五';
-            //       } else if (day == '6') {
-            //         day = '六';
-            //       } else if (day == '0') {
-            //         day = '天';
-            //       }
-            //       obj.day = '星期' + day;
-            data.liucheng.push(obj);
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3];data.liucheng.push(obj);
           }
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');commitLZS && commitLZS.map(function (d, t) {
-        var obj = {};obj.textC = t.textContent;
-        data.commitLZ.push(obj);
+        var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       });if ($(elem).find('.ui_border').find('.ui_content').find('.ui_loading').length != 0) {
         var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
           if (d > 1 && t.style.display != 'none') {
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
               $(t).find('p').map(function (q, l) {
-                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'P';data.selectApar.push(obj);
+                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'P';
+                data.selectApar.push(obj);
               });
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
                 $(t).find('option').map(function (q, l) {
-                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'OPTION';data.selectApar.push(obj);
+                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'OPTION';
+                  data.selectApar.push(obj);
                 });
               }
             }
@@ -176,9 +159,9 @@
               }
             }
           }
-        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {
-          var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
-        } //   var index;
+        }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {} //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
+        //   var index;
         //   for (var i = 0; i < lis && lis.length; i++) {
         //     if (" 退出 " == lis[i].textContent) {
         //       index = i;
@@ -214,13 +197,15 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }a && a[0].querySelector("a").click(); //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
       }if (type == "TH") {
         var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();
+        }
+        a && a[0].querySelector("a").click();
       }if (type == "THClose") {
         var ss = [];var ass = elem.ownerDocument.querySelector(".ui_title_buttons") && elem.ownerDocument.querySelector(".ui_title_buttons").querySelectorAll("a");for (var i = 0; i < ass.length; i++) {
           if ("关闭(esc键)" == ass[i].getAttribute("title")) {
@@ -228,9 +213,11 @@
           }
         }ss && ss[0].click();
       }if (type == "THTitle") {
-        var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+        var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");
+        if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click(); //var url = "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html";
+        //ysp.appMain.reloadPage(url);
       } //点击附件方法
       if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];if (top.EAPI.isAndroid()) {

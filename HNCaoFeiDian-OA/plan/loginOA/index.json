@@ -49,8 +49,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/",
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/names\\.nsf\\?login"
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/",
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/names\\.nsf\\?login"
       ]
     }
   },
@@ -124,6 +124,15 @@
             "freeow-br",
             "freeow-msg",
             "freeow-show"
+          ],
+          [
+            "DtsSign",
+            "bgstretcher",
+            "ex",
+            "freeow-br",
+            "freeow-msg",
+            "freeow-show",
+            "freeow-show-key"
           ]
         ]
       }
@@ -197,6 +206,35 @@
             "DL/DD/INPUT-text",
             "DL/DD/SPAN",
             "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "UL/LI/IMG"
+          ],
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "DD/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/FORM/OBJECT",
+            "DIV/P/INPUT-submit",
+            "DIV/SPAN/A",
+            "DIV/SPAN/LABEL",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DD/INPUT-button",
+            "DL/DD/INPUT-password",
+            "DL/DD/INPUT-text",
+            "DL/DD/SPAN",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-null",
             "FORM/DIV/P",
             "UL/LI/IMG"
           ]
