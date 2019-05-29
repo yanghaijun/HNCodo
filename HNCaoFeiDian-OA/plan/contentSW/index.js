@@ -62,7 +62,7 @@
       //附件开始
       var fujianDls = $(elem).find('.down_table_list').find('#down_table_list_text') && $(elem).find('.down_table_list').find('#down_table_list_text').find('dl');if (fujianDls.length != 0) {
         fujianDls && fujianDls.map(function (j, q) {
-          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOffice/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://oa1.hnrl.chng.com/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
+          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOfficehncfd/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://oa1.hnrl.chng.com/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
         });
       } else {
         var obj = {};obj.typeP = '';obj.text = '暂无附件';obj.time = '';data.fujian.push(obj);
@@ -95,8 +95,7 @@
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       //常用意见start
-      var list = elem.ownerDocument.querySelector("#common_view_list");
-      var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
+      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
         for (var i = 0; i < lis.length; i++) {
           data.yijian.push(lis[i].querySelector("a").textContent);
         }
@@ -105,15 +104,13 @@
       } //常用意见end
       //常用意见end
       //按钮数量（暂存、退回）start
-      var release = elem.ownerDocument.querySelector(".Release");
-      var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+      var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
         if ("暂存" == lis[i].querySelector("span").textContent || "退回" == lis[i].querySelector("span").textContent) {
           data.but.push(lis[i]);
         }
       } //按钮数量（暂存、退回）end
       //退回数据start
-      var loading = elem.ownerDocument.querySelector(".ui_loading");
-      var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+      var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
         var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
@@ -148,7 +145,8 @@
             //树结构
             var domtree = trees.find('.t_node');domtree.map(function (d, t) {
               var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];$(t).find('.t_leaf').map(function (q, l) {
-                var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
+                var obj2 = {};obj2.text = $(l).find('label').text();
+                obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
               });data.treeBar.push(obj);
             });
           }
@@ -233,16 +231,17 @@
         var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
       } //点击附件方法
       if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;
-        var text = data.customData.text; //var cookieValue = cookies.split("LtpaToken=")[1]; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text; //var cookieValue = cookies.split("LtpaToken=")[1]; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
         //elem.ownerDocument.defaultView.huaneng.fujian(url, cookies, text); //elem.ownerDocument.defaultView.fujian(url, cookies, text);
         //EAPI.fujain(url, cookies, text);
         if (top.EAPI.isAndroid()) {
           huaneng.fujian(url, cookies, text);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
+
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1], "cookieDomain": "123.56.221.127" });
+          top.EAPI.postMessageToNative("openDocument", { "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1],
+            "cookieDomain": "123.56.221.127" });
         }
       }
     },

@@ -5,7 +5,7 @@
         return;
       }var data = { title: [], flag: [] };
       var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
-        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].querySelector("a").textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[4].textContent;if (title.indexOf("发文") > -1 || title.indexOf("收文") > -1 || title.indexOf("签报") > -1) {
+        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].querySelector("a").textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[4].textContent;if (title.indexOf("发文管理") > -1 || title.indexOf("收文管理") > -1 || title.indexOf("签报管理") > -1) {
           a.push(title);a.push(person);a.push(time);data.title.push(a);
         }
       }var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
@@ -19,7 +19,7 @@
       if (data.eventType == "click") {
         //ysp.appMain.showLoading();
         var index = parseInt(data.customData);var a = [];var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
-          var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].querySelector("a") && trs[i].querySelectorAll("td")[2].querySelector("a").textContent;if (title.indexOf("发文") > -1 || title.indexOf("收文") > -1 || title.indexOf("签报") > -1) {
+          var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].querySelector("a") && trs[i].querySelectorAll("td")[2].querySelector("a").textContent;if (title.indexOf("发文管理") > -1 || title.indexOf("收文管理") > -1 || title.indexOf("签报管理") > -1) {
             a.push(trs[i]);
           }
         }a[index].querySelectorAll("td")[2].querySelector("a").click(); //elem.querySelectorAll("tr")[index].querySelectorAll("td")[1].querySelector("a").click();

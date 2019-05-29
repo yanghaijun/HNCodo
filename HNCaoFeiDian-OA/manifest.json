@@ -40,94 +40,10 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/WebOfficehncfd\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
       ],
       "target_url": "override/model.js",
       "default_url": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebConfigSet.nsf/flow/selectflow/model.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
-      ],
-      "target_url": "override/jquery.ztree.all.min.js",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/zTree/js/jquery.ztree.all.min.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
-      ],
-      "target_url": "override/cn.ml.oa.js",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/script/cn.ml.oa.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa\\/jsfw\\/Themes\\/bjml\\/SplitBar\\/css\\.css"
-      ],
-      "target_url": "override/css.css",
-      "default_url": "http://oa1.hnrl.chng.com/moa/jsfw/Themes/bjml/SplitBar/css.css"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/left\\.gif"
-      ],
-      "target_url": "override/left.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/DatePicker/skin/bjml/left.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/navLeft\\.gif"
-      ],
-      "target_url": "override/navLeft.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/DatePicker/skin/bjml/navLeft.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/navRight\\.gif"
-      ],
-      "target_url": "override/navRight.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/DatePicker/skin/bjml/navRight.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/DatePicker\\/skin\\/bjml\\/right\\.gif"
-      ],
-      "target_url": "override/right.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/DatePicker/skin/bjml/right.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/script\\/jquery-1\\.12\\.4\\.min\\.js"
-      ],
-      "target_url": "override/jquery-1.12.4.min.js",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/script/jquery-1.12.4.min.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/icons\\/ecblank\\.gif"
-      ],
-      "target_url": "override/ecblank.gif",
-      "default_url": "http://oa1.hnrl.chng.com/icons/ecblank.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/basic\\/bootstrap\\/images\\/blank\\.gif"
-      ],
-      "target_url": "override/blank.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/basic/bootstrap/images/blank.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/moa2\\/images\\/nav_menu_ico\\.gif"
-      ],
-      "target_url": "override/nav_menu_ico.gif",
-      "default_url": "http://oa1.hnrl.chng.com/moa2/images/nav_menu_ico.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
-      ],
-      "target_url": "override/jquery-1.5.2.min.js",
-      "default_url": "http://oa1.hnrl.chng.com/domcfg.nsf/js/jquery-1.5.2.min.js"
     }
   ],
   "adapter_urls": [
@@ -135,15 +51,17 @@
       "title": "loginOA",
       "url": "adapter://HN-OA/plan/loginOA/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/"
+        "^http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/"
       ],
-      "demo": []
+      "demo": [
+        "http://oa1.hnrl.chng.com/"
+      ]
     },
     {
       "title": "index",
       "url": "adapter://HN-OA/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.hnrl\\.chng\\.cn\\/WebOfficehncfd\\/home4\\.nsf\\/index\\.html"
+        "^http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
         "http://oa1.hnrl.chng.com/WebOfficehncfd/home4.nsf/index.html"
@@ -154,6 +72,6 @@
   "default_url": "http://oa1.hnrl.chng.com/",
   "scope": "HN-OA",
   "start_url": "http://oa1.hnrl.chng.com/",
-  "update_time": 1559030956402,
+  "update_time": 1559109060852,
   "runtime_env": "1webview"
 }

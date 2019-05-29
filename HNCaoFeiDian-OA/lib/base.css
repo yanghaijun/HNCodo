@@ -240,11 +240,13 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   margin-right: 10px;
 }
 .ysp-content-top {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 40px;
   background: #f0f8ff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  text-align: center;
 }
 .ysp-content-header {
   display: flex;
