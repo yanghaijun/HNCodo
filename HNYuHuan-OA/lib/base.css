@@ -572,6 +572,22 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   top: 10px;
   left: 20px;
 }
+.D_choiseFlow .D_chiosePeople .tres {
+  background: #fff;
+  padding: 5px 22px;
+}
+.D_choiseFlow .D_chiosePeople .tres > div {
+  margin: 8px 0px;
+  display: flex;
+}
+.D_choiseFlow .D_chiosePeople .tres > div > span:nth-child(1) {
+  display: inline-block;
+  width: 15%;
+}
+.D_choiseFlow .D_chiosePeople .tres > div > span:nth-child(2) {
+  display: inline-block;
+  width: 85%;
+}
 .ysp-contentSW {
   background: #fff;
   border-top: 10px solid #ececec;

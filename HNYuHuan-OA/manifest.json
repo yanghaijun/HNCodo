@@ -40,10 +40,10 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
+        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/MoaWebConfigSet\\.nsf\\/flow\\/model-1\\.0\\.2\\.js"
       ],
       "target_url": "override/model.js",
-      "default_url": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebConfigSet.nsf/flow/selectflow/model.js"
+      "default_url": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebConfigSet.nsf/flow/model-1.0.2.js"
     }
   ],
   "adapter_urls": [
@@ -72,6 +72,6 @@
   "default_url": "http://oa1.zjfgs.chng.com/",
   "scope": "HN-OA",
   "start_url": "http://oa1.zjfgs.chng.com/",
-  "update_time": 1562232329978,
+  "update_time": 1562912443965,
   "runtime_env": "1webview"
 }
