@@ -117,6 +117,10 @@
         "data": {
           "tagName": "DD"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
