@@ -215,8 +215,8 @@
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
         } else {
-          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data];$(selects).mousedown().click().mouseup(); //     selects.selected = true;
-          //     if (selects.getAttribute('selected') != 'selected') {
+          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data]; // $(selects).mousedown().click().mouseup(); 
+          selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt); //     if (selects.getAttribute('selected') != 'selected') {
           //       selects.setAttribute("selected", "selected");
           //     } else {
           //       selects.setAttribute("selected", "noSelected");

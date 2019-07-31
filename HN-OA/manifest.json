@@ -37,99 +37,7 @@
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Vmeet.ccyanghaijun"
   },
-  "override_urls": [
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/WebOffice\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
-      ],
-      "target_url": "override/model.js",
-      "default_url": "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/flow/selectflow/model.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
-      ],
-      "target_url": "override/jquery.ztree.all.min.js",
-      "default_url": "http://59.110.171.69:31003/moa2/zTree/js/jquery.ztree.all.min.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
-      ],
-      "target_url": "override/cn.ml.oa.js",
-      "default_url": "http://59.110.171.69:31003/moa2/script/cn.ml.oa.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa\\/jsfw\\/Themes\\/bjml\\/SplitBar\\/css\\.css"
-      ],
-      "target_url": "override/css.css",
-      "default_url": "http://59.110.171.69:31003/moa/jsfw/Themes/bjml/SplitBar/css.css"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/DatePicker\\/skin\\/bjml\\/left\\.gif"
-      ],
-      "target_url": "override/left.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/DatePicker/skin/bjml/left.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/DatePicker\\/skin\\/bjml\\/navLeft\\.gif"
-      ],
-      "target_url": "override/navLeft.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/DatePicker/skin/bjml/navLeft.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/DatePicker\\/skin\\/bjml\\/navRight\\.gif"
-      ],
-      "target_url": "override/navRight.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/DatePicker/skin/bjml/navRight.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/DatePicker\\/skin\\/bjml\\/right\\.gif"
-      ],
-      "target_url": "override/right.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/DatePicker/skin/bjml/right.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery-1\\.12\\.4\\.min\\.js"
-      ],
-      "target_url": "override/jquery-1.12.4.min.js",
-      "default_url": "http://59.110.171.69:31003/moa2/script/jquery-1.12.4.min.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/icons\\/ecblank\\.gif"
-      ],
-      "target_url": "override/ecblank.gif",
-      "default_url": "http://59.110.171.69:31003/icons/ecblank.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/basic\\/bootstrap\\/images\\/blank\\.gif"
-      ],
-      "target_url": "override/blank.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/basic/bootstrap/images/blank.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/images\\/nav_menu_ico\\.gif"
-      ],
-      "target_url": "override/nav_menu_ico.gif",
-      "default_url": "http://59.110.171.69:31003/moa2/images/nav_menu_ico.gif"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31003\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
-      ],
-      "target_url": "override/jquery-1.5.2.min.js",
-      "default_url": "http://59.110.171.69:31003/domcfg.nsf/js/jquery-1.5.2.min.js"
-    }
-  ],
+  "override_urls": [],
   "adapter_urls": [
     {
       "title": "loginOA",
@@ -154,6 +62,6 @@
   "default_url": "http://59.110.171.69:31003/",
   "scope": "HN-OA",
   "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1564553649144,
+  "update_time": 1564559061162,
   "runtime_env": "1webview"
 }
