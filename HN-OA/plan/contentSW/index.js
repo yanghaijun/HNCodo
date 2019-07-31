@@ -92,8 +92,7 @@
             //       obj.day = '星期' + day;
             data.liucheng.push(obj);
           }
-        });var obj2 = {};obj2.num = liuchengTable.length - 2;
-        data.liuchengNUM.push(obj2);
+        });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       //常用意见start
       var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
@@ -102,11 +101,11 @@
         }
       } else {
         data.yijian.push('常用意见暂无数据');
-      } //常用意见end
+      }
+      //常用意见end
       //常用意见end
       //按钮数量（暂存、退回）start
-      var release = elem.ownerDocument.querySelector(".Release");
-      var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+      var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
         if ("暂存" == lis[i].querySelector("span").textContent || "退回" == lis[i].querySelector("span").textContent) {
           data.but.push(lis[i]);
         }
@@ -133,12 +132,14 @@
           if (d > 1 && t.style.display != 'none') {
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
               $(t).find('p').map(function (q, l) {
-                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'P';data.selectApar.push(obj);
+                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false'; // obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
+                obj.type = 'P';data.selectApar.push(obj);
               });
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
                 $(t).find('option').map(function (q, l) {
-                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';obj.type = 'OPTION';data.selectApar.push(obj);
+                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false'; // obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
+                  obj.type = 'OPTION';data.selectApar.push(obj);
                 });
               }
             }
@@ -214,12 +215,12 @@
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
         } else {
-          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data]; //$(selects).mousedown().click().mouseup();
-          selects.selected = true;if (selects.getAttribute('selected') != 'selected') {
-            selects.setAttribute("selected", "selected");
-          } else {
-            selects.setAttribute("selected", "noSelected");
-          }
+          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data];$(selects).mousedown().click().mouseup(); //     selects.selected = true;
+          //     if (selects.getAttribute('selected') != 'selected') {
+          //       selects.setAttribute("selected", "selected");
+          //     } else {
+          //       selects.setAttribute("selected", "noSelected");
+          //     }
         } //选人的多选
       } //点击附件方法
       if (data.eventType == 'fujian') {
