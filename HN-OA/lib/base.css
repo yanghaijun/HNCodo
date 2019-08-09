@@ -637,3 +637,79 @@ div[data-componentsid="uiControl0_lFVvUR"] {
 .ysp-contentSW-th .ysp-contentSW-thTitleColor {
   color: #0081c2;
 }
+.ysp-pages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+.ysp-pages div:first-child {
+  display: flex;
+}
+.ysp-pages div:first-child span:nth-child(1) {
+  padding-right: 10px;
+}
+.ysp-pages .oneGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowL.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .onNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowL11.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .twoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow1.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .twoNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow12.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages div:nth-child(2) {
+  display: flex;
+}
+.ysp-pages div:nth-child(2) span:nth-child(1) {
+  padding-right: 10px;
+}
+.ysp-pages .threeGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow2.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .threeNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow13.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .fourGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowR.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .fourNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowR14.png") no-repeat;
+  background-size: contain;
+}

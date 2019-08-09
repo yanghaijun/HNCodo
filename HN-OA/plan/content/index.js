@@ -9,7 +9,8 @@
           if (" 退出 " == lis[i].textContent) {
             index = i;
           }
-        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);if (dialog.val() == '不保存') {
+        }elem.querySelectorAll("li") && elem.querySelectorAll("li")[index].querySelector("a").click();var elem = elem.ownerDocument;var dialog = $(elem).find('.ui_state_lock').find('table').find('.ui_buttons').find('input').eq(1);
+        if (dialog.val() == '不保存') {
           dialog.click();
         }
       }

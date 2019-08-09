@@ -217,7 +217,8 @@
       "contexts": {
         "context3_RVmBzr": [
           "59.110.171.69:31003/WebOffice/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5",
-          "59.110.171.69:31003/WebOffice/MoaWebShouWen.nsf/0/04F5788650FE3955482583DA002FFFDB?EditDocument&fldadocid=638593005CF56BAE482583E700369CF6"
+          "59.110.171.69:31003/WebOffice/MoaWebShouWen.nsf/0/04F5788650FE3955482583DA002FFFDB?EditDocument&fldadocid=638593005CF56BAE482583E700369CF6",
+          "59.110.171.69:31003/WebOffice/MoaWebShouWen.nsf/0/6CD96AC7BC89BB8C4825844F002C704D?EditDocument&fldadocid=6EAA2349044BFEE04825844F002C704D"
         ]
       }
     },
@@ -271,6 +272,32 @@
             "fldTM",
             "fldYS",
             "fldYWH",
+            "fldZBBMShow",
+            "fldZRZ",
+            "fldbc",
+            "friend_list",
+            "left_panel",
+            "savetobwyj",
+            "savetoyj",
+            "yj_down_table_list"
+          ],
+          [
+            "BWComments_table",
+            "RunSignAgent",
+            "RunWorkAgent",
+            "_myDP",
+            "bwcommon_view_list",
+            "comment_sort",
+            "comment_table",
+            "common_view_list",
+            "div_Att_list",
+            "down_table_list_text",
+            "fldBMQX",
+            "fldJJCD",
+            "fldMJ",
+            "fldShowOption",
+            "fldTM",
+            "fldYS",
             "fldZBBMShow",
             "fldZRZ",
             "fldbc",
