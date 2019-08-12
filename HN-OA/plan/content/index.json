@@ -3,8 +3,9 @@
   "id": "content",
   "targetURL": "http://59.110.171.69:31003/WebOffice/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
   "jsFile": "index.js",
-  "chineseName": "详情发文",
+  "chineseName": "签报",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control1_wc8USK": {
       "location": {
@@ -121,7 +122,9 @@
         "control5_6FHMUS"
       ],
       "anchors": [],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/WebOffice\\/MoaWebQianBao\\.nsf.*"
+      ]
     }
   },
   "flows": {
