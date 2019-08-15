@@ -111,7 +111,8 @@
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
               $(t).find('p').map(function (q, l) {
                 var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false'; // obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
-                obj.type = 'P';data.selectApar.push(obj);
+                obj.type = 'P';
+                data.selectApar.push(obj);
               });
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
@@ -131,8 +132,7 @@
           }
         });
       } //选择办理人，需要跨iframe获取数据
-      var list = elem.ownerDocument.querySelector("#common_view_list");
-      var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
+      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
         for (var i = 0; i < lis.length; i++) {
           data.yijian.push(lis[i].querySelector("a").textContent);
         }

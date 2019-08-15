@@ -18,8 +18,7 @@
       if (!elem) {
         return;
       }var data = { title: [], flag: [] };var trs = elem.querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
-        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;var titles = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[6].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[7].textContent; // if (title.indexOf("发文") > -1 || title.indexOf("收文") > -1 || title.indexOf("签报") > -1 || title.indexOf('部门会议纪要') > -1 || title.indexOf('信息变更管理')) {
-        if (title == '测试收文流程' || title == '测试发文流程' || title == '测试签报' || title == '测试部门会议纪要' || title == '测试通知公告' || title == '测试部门发文' || title == '测试人员变动' || title == '测试公司会议纪要' || title == '测试考勤审批' || title == '测试请假审批' || title == '付款测试' || title == '测试工作联系单' || title == '测试会议通知' || title == '测试车辆管理' || title == '测试信息变更') {
+        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;var titles = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[6].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[7].textContent;if (title == '测试收文流程' || title == '测试发文流程' || title == '测试签报' || title == '测试部门会议纪要' || title == '测试通知公告' || title == '测试部门发文' || title == '测试人员变动' || title == '测试公司会议纪要' || title == '测试考勤审批' || title == '测试请假审批' || title == '付款测试' || title == '测试工作联系单' || title == '测试会议通知' || title == '测试车辆管理' || title == '测试信息变更') {
           a.push(titles);a.push(person);a.push(time);data.title.push(a);
         }
       }var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
