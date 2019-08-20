@@ -201,7 +201,7 @@
         var data = data.customData;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.children('.t_node');domtree.find('.t_node').eq(data).find('label').eq(0).find('input').click();
         //domtree.eq(data).find('label').eq(0).find('input').click();
       } else if (data.eventType == 'flowTitleChilds') {
-        debugger;var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.children('.t_node');domtree.find('.t_node').eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click(); //$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
+        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.children('.t_node');domtree.find('.t_node').eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click(); //$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
       }var type = data.eventType;if (type == "textareaChange") {
         var text = data.customData;elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
       }if (type == "yijian") {
@@ -234,7 +234,8 @@
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1], "cookieDomain": "59.110.171.69" });
+          top.EAPI.postMessageToNative("openDocument", {
+            "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1], "cookieDomain": "59.110.171.69" });
         }
       }
     },
