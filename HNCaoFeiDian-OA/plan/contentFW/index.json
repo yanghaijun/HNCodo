@@ -1,0 +1,524 @@
+{
+  "version": "0.1",
+  "id": "contentFW",
+  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693",
+  "jsFile": "index.js",
+  "chineseName": "公司发文、部门发文、会议、工作联系单",
+  "description": "公司发文",
+  "firstPaintEnable": false,
+  "controls": {
+    "control8_qhrSgM": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body FORM"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control8_qhrSgM"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control12_XMOSRx": {
+      "location": {
+        "data": {
+          "tagName": "DD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::DIV[@id=\"left_panel\"]//DL[@id=\"dltest\"]//DD[@id=\"ddtest\"]",
+              "descendant::DL[@id=\"dltest\"]//DD[@id=\"ddtest\"]",
+              "descendant::DD[@id=\"ddtest\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              29
+            ],
+            "value": "DIV.table_blk TABLE.Information DL.table_list_blk DD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[4]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_XMOSRx"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control13_T5by2s": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body FORM"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control13_T5by2s"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context4_docOJt": {
+      "controls": [
+        "control8_qhrSgM",
+        "control12_XMOSRx",
+        "control13_T5by2s"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebFaWen\\.nsf.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow3_nettef": {
+      "toContexts": [
+        {
+          "toContextId": "context4_docOJt"
+        }
+      ]
+    },
+    "flow11_bfSqzm": {
+      "fromContextId": "context4_docOJt",
+      "fromAction": "doAction",
+      "fromControlId": "control8_qhrSgM",
+      "toContexts": [
+        {
+          "toContextId": "context4_docOJt"
+        }
+      ]
+    },
+    "flow21_N75twi": {
+      "fromContextId": "context4_docOJt",
+      "fromAction": "doAction",
+      "fromControlId": "control13_T5by2s",
+      "toContexts": [
+        {
+          "toContextId": "context4_docOJt"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page4_mFlugl": {
+      "contextId": "context4_docOJt",
+      "layout": [
+        {
+          "id": "uiControl8_bt899M",
+          "controlId": "control8_qhrSgM",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl8_bt899M",
+                "onGetTemplate": "getTemplate_uiControl8_bt899M"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl11_S4Pt2H",
+          "controlId": "control12_XMOSRx",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl11_S4Pt2H",
+                "onGetTemplate": "getTemplate_uiControl11_S4Pt2H"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl12_mGFTI4",
+          "controlId": "control13_T5by2s",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl12_mGFTI4",
+                "onGetTemplate": "getTemplate_uiControl12_mGFTI4"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context4_docOJt": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context4_docOJt": [
+          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context4_docOJt": [
+          [
+            "RunSignAgent",
+            "RunWorkAgent",
+            "_myDP",
+            "button_qbfj",
+            "button_qbsm",
+            "comment_sort",
+            "comment_table",
+            "common_view_list",
+            "ddtest",
+            "div_Att_list",
+            "dltest",
+            "down_table_list_text",
+            "dttest",
+            "fldFWLB",
+            "fldFaWenCebId",
+            "fldHasQBSMCeb",
+            "fldHasQBSMCeb_",
+            "fldJJCD",
+            "fldMJLX",
+            "fldShowOption",
+            "fldTM",
+            "fldYS",
+            "fldZBBMShow",
+            "fldZRZ",
+            "friend_list",
+            "left_panel",
+            "savetoyj",
+            "tempsave",
+            "yj_down_table_list"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context4_docOJt": [
+          [
+            "Information",
+            "Release",
+            "Separated",
+            "UpLayer",
+            "Wdate",
+            "about_file",
+            "blue_btn",
+            "bottom",
+            "btn_r",
+            "btns",
+            "common_view",
+            "data",
+            "down_table_list",
+            "down_table_list_text",
+            "easyui-combobox",
+            "easyui-textbox",
+            "fill_view",
+            "fill_view_text",
+            "flex_menu",
+            "friend_add_btn",
+            "friend_bottom_blk",
+            "friend_class",
+            "friend_close_btn",
+            "friend_list",
+            "friend_list_btn",
+            "friend_list_menu",
+            "group",
+            "left_concent",
+            "left_normal_style",
+            "left_panel",
+            "m_t",
+            "menu",
+            "menu_small",
+            "navbox",
+            "normal_btn_gray",
+            "num_",
+            "path",
+            "path_btn",
+            "path_btn_style",
+            "path_fix_ico",
+            "path_list",
+            "read",
+            "right_concent",
+            "right_panel",
+            "selected",
+            "shrink",
+            "sort_blk",
+            "sort_table",
+            "sub_concent",
+            "subnav",
+            "table_blk",
+            "table_list_blk",
+            "text",
+            "tit",
+            "title",
+            "top",
+            "top_fix_bar",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons"
+          ],
+          [
+            "Information",
+            "Release",
+            "Separated",
+            "UpLayer",
+            "Wdate",
+            "about_file",
+            "blue_btn",
+            "bottom",
+            "btn_r",
+            "btns",
+            "common_view",
+            "data",
+            "down_table_list",
+            "down_table_list_text",
+            "easyui-combobox",
+            "easyui-textbox",
+            "fill_view",
+            "fill_view_text",
+            "flex_menu",
+            "friend_add_btn",
+            "friend_bottom_blk",
+            "friend_class",
+            "friend_close_btn",
+            "friend_list",
+            "friend_list_btn",
+            "friend_list_menu",
+            "group",
+            "left_concent",
+            "left_normal_style",
+            "left_panel",
+            "m_t",
+            "menu",
+            "menu_small",
+            "navbox",
+            "normal_btn_gray",
+            "num_",
+            "path",
+            "path_btn",
+            "path_btn_style",
+            "path_fix_ico",
+            "path_list",
+            "read",
+            "right_concent",
+            "right_panel",
+            "selected",
+            "shrink",
+            "sort_blk",
+            "sort_table",
+            "sub_concent",
+            "subnav",
+            "table_blk",
+            "table_list_blk",
+            "text",
+            "tit",
+            "title",
+            "top",
+            "top_fix_bar",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_loading",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_state_focus",
+            "ui_state_visible",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context4_docOJt": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/IFRAME",
+            "-/DIV/TABLE",
+            "-/FORM/BR",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "A/SPAN/EM",
+            "DD/LABEL/INPUT-radio",
+            "DD/SELECT/OPTION",
+            "DIV/A/B",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FONT",
+            "DIV/DIV/H1",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/P/A",
+            "DIV/P/BR",
+            "DIV/P/FONT",
+            "DIV/P/INPUT-button",
+            "DIV/P/INPUT-null",
+            "DIV/P/TABLE",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "DL/DD/INPUT-hidden",
+            "DL/DD/INPUT-null",
+            "DL/DD/LABEL",
+            "DL/DD/SELECT",
+            "DL/DT/A",
+            "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "LI/A/SPAN",
+            "LI/DIV/A",
+            "LI/DIV/UL",
+            "P/FONT/INPUT-null",
+            "P/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/DL/DD",
+            "TD/DL/DT",
+            "TD/TABLE/TBODY",
+            "TH/DL/DD",
+            "TH/DL/DT",
+            "THEAD/TR/TH",
+            "TR/TD/DIV",
+            "TR/TD/DL",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-null",
+            "TR/TD/TABLE",
+            "TR/TH/B",
+            "TR/TH/DL",
+            "UL/LI/A",
+            "UL/LI/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

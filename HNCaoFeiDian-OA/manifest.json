@@ -22,7 +22,7 @@
     "resource_filter": [
       {
         "url_match": [
-          "^http:\\/\\/oa1\\.hnrl\\.chng\\.cn.*"
+          "^http:\\/\\/oa1\\.hnrl\\.chng\\.com.*"
         ],
         "charset": "utf-8",
         "Accept-Language": "zh-Hans-CN",
@@ -37,15 +37,7 @@
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Vmeet.ccyanghaijun"
   },
-  "override_urls": [
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebConfigSet\\.nsf\\/flow\\/selectflow\\/model\\.js"
-      ],
-      "target_url": "override/model.js",
-      "default_url": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebConfigSet.nsf/flow/selectflow/model.js"
-    }
-  ],
+  "override_urls": [],
   "adapter_urls": [
     {
       "title": "loginOA",
@@ -53,9 +45,7 @@
       "matcher": [
         "^http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/"
       ],
-      "demo": [
-        "http://oa1.hnrl.chng.com/"
-      ]
+      "demo": []
     },
     {
       "title": "index",
@@ -72,6 +62,6 @@
   "default_url": "http://oa1.hnrl.chng.com/",
   "scope": "HN-OA",
   "start_url": "http://oa1.hnrl.chng.com/",
-  "update_time": 1564563014966,
+  "update_time": 1566455771095,
   "runtime_env": "1webview"
 }
