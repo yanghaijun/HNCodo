@@ -171,40 +171,22 @@ div[data-componentsid="uiControl0_lFVvUR"]{
         background-size: contain;
       }
     }
-    .ysp-index-title{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      color: #0a73cc;
-      overflow: hidden;
-      word-wrap: nowrap;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      //width: 90%;
-    }
-    .ysp-index-time-person{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
     .ysp-index-db-content-title{
-      width: 90%;
-      display: inline-block;
+      width: 100%;
       >div:first-child{
-        display: inline-block;
         color: #0a73cc;
         overflow: hidden;
+        word-wrap: nowrap;
         white-space: nowrap;
-        text-overflow: ellipsis;
-        width: 95%;
+        text-overflow: ellipsis
       }
       >div:last-child{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
       }
     }
+    
   }
 }
 //代办列表end
@@ -257,14 +239,12 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 //头部end
 //详情start
 .ysp-content-top{
-  height: 40px;
-  line-height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40px;
   background: #f0f8ff;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 0px 5px;
-  text-align: center;
+  padding: 5px;
 }
 
 //详情中的内容start
@@ -551,68 +531,51 @@ div[data-componentsid="uiControl0_lFVvUR"]{
     background: #eeeeee;
     width: 100%;
     height: 100%;
-    .treeBody{
-        background: #fff;
-        list-style: none;
-        margin: 10px 0px;
-        min-height: 50px;
-        max-height: 60%;
-        overflow: scroll;
-        padding: 0px 20px;
-        >div {
-          margin: 10px 0px;
-          >div{
-            padding-left: 20px;
-            .blueColor {
-              color: blue;
-            }
-          }
-        }    
-      }
-    .pTre {
-        position: relative;
-        list-style: none;
-        background: #fff;
-        padding: 7px 40px;
-        max-height: 39px;
-        overflow: auto;
-        border-bottom: 2px solid #eeeeee;
-        .changeRadio {
-          display:inline-block;
-          width: 15px;
-          height: 15px;
-          background: url("../local/img/noPoint.png") no-repeat;
-          background-size: cover;
-          position: absolute;
-          top: 10px;
-          left: 20px;
-        }
-        .changeRadioB {
-          display:inline-block;
-          width: 15px;
-          height: 15px;
-          background: url("../local/img/point.png") no-repeat;
-          background-size: cover;
-          position: absolute;
-          top: 10px;
-          left: 20px;
-        }
-      }
-    .tres{
+	.treeBody{
       background: #fff;
-      padding: 5px 22px;
+      list-style: none;
+      margin: 10px 0px;
+      min-height: 50px;
+     	max-height: 50%;
+      overflow: auto;
+      padding: 0px 20px;
       >div {
-        margin: 8px 0px;
-        display: flex;
-        >span:nth-child(1){
-          display: inline-block;
-          width: 15%;   
+        margin: 10px 0px;
+        >div{
+          padding-left: 20px;
+          .blueColor {
+            color: blue;
+          }
         }
-        >span:nth-child(2){
-          display: inline-block;
-          width: 85%;
-          
-        }
+      }    
+    }
+    .pTre {
+      position: relative;
+      list-style: none;
+      background: #fff;
+      padding: 7px 40px;
+      max-height: 39px;
+      overflow: auto;
+      border-bottom: 2px solid #eeeeee;
+      .changeRadio {
+        display:inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("../local/img/noPoint.png") no-repeat;
+  			background-size: cover;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+      .changeRadioB {
+        display:inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("../local/img/point.png") no-repeat;
+  			background-size: cover;
+        position: absolute;
+        top: 10px;
+        left: 20px;
       }
     }
   }
@@ -710,3 +673,98 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 }
 //内容end
 
+.ysp-pages{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+  div:first-child{
+    display: flex;
+    span:nth-child(1){
+      padding-right: 10px;
+    }
+  }
+  .oneGo{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrowL.png") no-repeat;
+    background-size: contain;
+  }
+  .onNoGo{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrowL11.png") no-repeat;
+    background-size: contain;
+  }
+  .twoGo{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrow1.png") no-repeat;
+    background-size: contain;
+  }
+  .twoNoGo{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrow12.png") no-repeat;
+    background-size: contain;
+  }
+  div:nth-child(2){
+    display: flex;
+    span:nth-child(1){
+      padding-right: 10px;
+    }
+  }
+  .threeGo{
+		display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrow2.png") no-repeat;
+    background-size: contain;
+  }
+  .threeNoGo{
+		display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrow13.png") no-repeat;
+    background-size: contain;
+  }
+  .fourGo{
+		display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrowR.png") no-repeat;
+    background-size: contain;
+  }
+  .fourNoGo{
+		display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../local/img/arrowR14.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.treeStyle{
+  margin-top: 40px;
+  // background: #fff;
+  // list-style: none;
+  // margin: 10px 0px;
+  // height: 150px;
+  // overflow: scroll;
+  // padding: 0px 20px;
+  // .pTree{
+  //   position: relative;
+  //   list-style: none;
+  //   background: #fff;
+  //   padding: 7px 40px;
+  //   min-height: 39px;
+  //   overflow: auto;
+  //   border-bottom: 2px solid #eeeeee;
+  // }
+}

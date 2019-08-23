@@ -37,15 +37,7 @@
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Vmeet.ccyanghaijun"
   },
-  "override_urls": [
-    {
-      "origin_url": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/MoaWebConfigSet\\.nsf\\/flow\\/model-1\\.0\\.2\\.js"
-      ],
-      "target_url": "override/model.js",
-      "default_url": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebConfigSet.nsf/flow/model-1.0.2.js"
-    }
-  ],
+  "override_urls": [],
   "adapter_urls": [
     {
       "title": "loginOA",
@@ -53,9 +45,7 @@
       "matcher": [
         "^http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/"
       ],
-      "demo": [
-        "http://oa1.zjfgs.chng.com/"
-      ]
+      "demo": []
     },
     {
       "title": "index",
@@ -68,10 +58,10 @@
       ]
     }
   ],
-  "name": "华能集团",
+  "name": "玉环电厂OA",
   "default_url": "http://oa1.zjfgs.chng.com/",
   "scope": "HN-OA",
   "start_url": "http://oa1.zjfgs.chng.com/",
-  "update_time": 1564563131794,
+  "update_time": 1566529118225,
   "runtime_env": "1webview"
 }
