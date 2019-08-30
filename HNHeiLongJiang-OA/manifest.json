@@ -1,0 +1,67 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "unadapted": {
+      "timeout": 300000,
+      "rules": [
+        {
+          "match": "*",
+          "type": "block"
+        }
+      ]
+    },
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/59\\.110\\.171\\.69:31007.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Vmeet.ccyanghaijun"
+  },
+  "override_urls": [],
+  "adapter_urls": [
+    {
+      "title": "loginOA",
+      "url": "adapter://HN-OA/plan/loginOA/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31007\\/"
+      ],
+      "demo": []
+    },
+    {
+      "title": "index",
+      "url": "adapter://HN-OA/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31007\\/WebOffice\\/home4\\.nsf\\/index\\.html"
+      ],
+      "demo": [
+        "http://59.110.171.69:31007/WebOffice/home4.nsf/index.html"
+      ]
+    }
+  ],
+  "name": "黑龙江OA",
+  "default_url": "http://59.110.171.69:31007/",
+  "scope": "HN-OA",
+  "start_url": "http://59.110.171.69:31007/",
+  "update_time": 1567143638715,
+  "runtime_env": "1webview"
+}
