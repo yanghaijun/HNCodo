@@ -19,7 +19,7 @@
     getData_control6_uBXHGv: function (elem) {
       if (!elem) {
         return;
-      }var data = [];var title = elem.textContent;data.push(title);return data;
+      }var data = [];var title = elem.querySelector('input') ? elem.querySelector('input').value : elem.textContent;data.push(title);return data;
     },
     doAction_uiControl6_7aXMK8: function (data, elem) {},
     getTemplate_uiControl6_7aXMK8: function () {
