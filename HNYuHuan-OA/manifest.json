@@ -60,7 +60,7 @@
   ],
   "name": "玉环电厂OA",
   "default_url": "http://oa1.zjfgs.chng.com/",
-  "scope": "HN-OA",
+  "scope": "HNYuHuan-OA",
   "start_url": "http://oa1.zjfgs.chng.com/",
   "update_time": 1566529118225,
   "runtime_env": "1webview"
