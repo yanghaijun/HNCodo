@@ -60,8 +60,8 @@
   ],
   "name": "黑龙江OA",
   "default_url": "http://59.110.171.69:31007/",
-  "scope": "HN-OA",
+  "scope": "HNHeiLongJiang-OA",
   "start_url": "http://59.110.171.69:31007/",
-  "update_time": 1567143638715,
+  "update_time": 1567387009014,
   "runtime_env": "1webview"
 }
