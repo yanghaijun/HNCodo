@@ -1,5 +1,5 @@
 {
-  "name": "hn_oa",
+  "name": "hnheilongjiang_oa",
   "version": "1.0.0",
   "description": "华能oa",
   "main": "gulpfile.js",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-replace": "^1.0.0"
   }
 }

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "loginOA",
-  "targetURL": "http://oa2.hnhlj.chng.com.cn/",
+  "targetURL": "http://59.110.171.69:31007/",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -49,8 +49,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa2\\.hnhlj\\.chng\\.com\\.cn\\/",
-        "http:\\/\\/oa2\\.hnhlj\\.chng\\.com\\.cn\\/names\\.nsf\\?login"
+        "http:\\/\\/59\\.110\\.171\\.69:31007\\/",
+        "http:\\/\\/59\\.110\\.171\\.69:31007\\/names\\.nsf\\?login"
       ]
     }
   },
@@ -110,8 +110,8 @@
     "page/urls": {
       "contexts": {
         "context1_QXbhsT": [
-          "oa2.hnhlj.chng.com.cn/",
-          "oa2.hnhlj.chng.com.cn/names.nsf?login"
+          "59.110.171.69:31007/",
+          "59.110.171.69:31007/names.nsf?login"
         ]
       }
     },
