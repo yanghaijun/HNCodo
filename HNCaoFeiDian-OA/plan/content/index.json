@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "content",
-  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
+  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
   "jsFile": "index.js",
   "chineseName": "签报",
   "description": "",
@@ -123,7 +123,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebQianBao\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:31000\\/WebOfficehncfd\\/MoaWebQianBao\\.nsf.*"
       ]
     }
   },
@@ -220,11 +220,11 @@
     "page/urls": {
       "contexts": {
         "context2_049iR8": [
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebQianBao.nsf/0/58419B9D4349A90A4825835C0013A68B?EditDocument&fldadocid=15AE825CC7C8DDF24825835C0013BB4A",
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/88E6AC27BA8B3E8D4825835B002F7A95?EditDocument&fldadocid=F397FECC406D0A4C482583D70011B4DA",
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebQianBao.nsf/0/A629F391A1BCE0ED4825844F002C8641?EditDocument&fldadocid=9D7B8E57FB2D7D124825844F002C8641",
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebQianBao.nsf/0/1C5B314BAE21E30E48258448003737E1?EditDocument&fldadocid=98BB936149E99C2B48258448003737E3"
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebFaWen.nsf/0/D31A72FC5B0CB1214825835B00266ABA?EditDocument&fldadocid=E14D9C40CF61EBD84825835B00266ABA",
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebQianBao.nsf/0/58419B9D4349A90A4825835C0013A68B?EditDocument&fldadocid=15AE825CC7C8DDF24825835C0013BB4A",
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebFaWen.nsf/0/88E6AC27BA8B3E8D4825835B002F7A95?EditDocument&fldadocid=F397FECC406D0A4C482583D70011B4DA",
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebQianBao.nsf/0/A629F391A1BCE0ED4825844F002C8641?EditDocument&fldadocid=9D7B8E57FB2D7D124825844F002C8641",
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebQianBao.nsf/0/1C5B314BAE21E30E48258448003737E1?EditDocument&fldadocid=98BB936149E99C2B48258448003737E3"
         ]
       }
     },

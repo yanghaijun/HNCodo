@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentPerson",
-  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebrybd.nsf/0/15FACAF883CD1B574825844F002CA5C6?EditDocument&fldadocid=2B30BCF27B6B63004825844F002CA5C6",
+  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebrybd.nsf/0/15FACAF883CD1B574825844F002CA5C6?EditDocument&fldadocid=2B30BCF27B6B63004825844F002CA5C6",
   "jsFile": "index.js",
   "chineseName": "人员变动",
   "description": "人员变动",
@@ -110,7 +110,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebrybd\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:31000\\/WebOfficehncfd\\/MoaWebrybd\\.nsf.*"
       ]
     }
   },
@@ -196,7 +196,7 @@
     "page/urls": {
       "contexts": {
         "context8_dSMKtJ": [
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebrybd.nsf/0/15FACAF883CD1B574825844F002CA5C6?EditDocument&fldadocid=2B30BCF27B6B63004825844F002CA5C6"
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebrybd.nsf/0/15FACAF883CD1B574825844F002CA5C6?EditDocument&fldadocid=2B30BCF27B6B63004825844F002CA5C6"
         ]
       }
     },

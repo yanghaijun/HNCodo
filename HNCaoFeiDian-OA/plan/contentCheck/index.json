@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentCheck",
-  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebKaoQin.nsf/0/BBDB997C1F7B084048258454002A0C60?EditDocument&fldadocid=97BF16922B7B5B6A48258454002A0C60",
+  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebKaoQin.nsf/0/BBDB997C1F7B084048258454002A0C60?EditDocument&fldadocid=97BF16922B7B5B6A48258454002A0C60",
   "jsFile": "index.js",
   "chineseName": "考勤审批流程",
   "description": "考勤审批流程",
@@ -184,7 +184,7 @@
     "page/urls": {
       "contexts": {
         "context11_NPlN9v": [
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebKaoQin.nsf/0/BBDB997C1F7B084048258454002A0C60?EditDocument&fldadocid=97BF16922B7B5B6A48258454002A0C60"
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebKaoQin.nsf/0/BBDB997C1F7B084048258454002A0C60?EditDocument&fldadocid=97BF16922B7B5B6A48258454002A0C60"
         ]
       }
     },

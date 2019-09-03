@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentFW",
-  "targetURL": "http://oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693",
+  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693",
   "jsFile": "index.js",
   "chineseName": "公司发文、部门发文、会议、工作联系单",
   "description": "公司发文",
@@ -123,7 +123,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.hnrl\\.chng\\.com\\/WebOfficehncfd\\/MoaWebFaWen\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:31000\\/WebOfficehncfd\\/MoaWebFaWen\\.nsf.*"
       ]
     }
   },
@@ -219,7 +219,7 @@
     "page/urls": {
       "contexts": {
         "context4_docOJt": [
-          "oa1.hnrl.chng.com/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693"
+          "59.110.171.69:31003/WebOfficehncfd/MoaWebFaWen.nsf/0/7C6884F4D820C7A84825845400114693?EditDocument&fldadocid=861E3F90784ED3F14825845400114693"
         ]
       }
     },

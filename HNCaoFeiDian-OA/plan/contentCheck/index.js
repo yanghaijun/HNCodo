@@ -18,7 +18,7 @@
         //   if (dialog.val() == '不保存') {
         //     dialog.click();
         //   }
-        var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        var url = "http://59.110.171.69:31003/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }
     },
     getTemplate_uiControl31_SBzDEL: function () {
@@ -78,7 +78,7 @@
       //附件开始
       var fujianDls = $(elem).find('.down_table_list').find('#down_table_list_text') && $(elem).find('.down_table_list').find('#down_table_list_text').find('dl');if (fujianDls.length != 0) {
         fujianDls && fujianDls.map(function (j, q) {
-          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOffice/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://oa1.hnrl.chng.com/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
+          var obj = {};var typePh = $(q).find('.file_name').find('a').text();var typeP = typePh.indexOf('xls') > -1 == true ? 'xls' : typePh.indexOf('ppt') > -1 == true ? 'ppt' : typePh.indexOf('docx') > -1 == true ? 'docx' : '';obj.typeP = typeP;obj.text = $(q).find('.file_name').find('a').text();obj.time = $(q).find('.file_num').find('span').text();var cwin = elem.ownerDocument;var attachUrl = '/WebOffice/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();var url = "http://59.110.171.69:31003/" + encodeURIComponent(attachUrl);obj.url = url;obj.cookies = cwin.cookie;data.fujian.push(obj);
         });
       } else {
         var obj = {};obj.typeP = '';obj.text = '暂无附件';obj.time = '';data.fujian.push(obj);
@@ -172,7 +172,7 @@
             }
           }
         }elem.ownerDocument.defaultView.localStorage.setItem("personNum", aa);var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;$(iframes).find('.ui_send').click();if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {
-          var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+          var url = "http://59.110.171.69:31003/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
         } //   var index;
         //   for (var i = 0; i < lis && lis.length; i++) {
         //     if (" 退出 " == lis[i].textContent) {
@@ -210,7 +210,7 @@
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
-        }a && a[0].querySelector("a").click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }a && a[0].querySelector("a").click();var url = "http://59.110.171.69:31003/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (type == "TH") {
         var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("退回" == lis[i].querySelector("span").textContent) {
@@ -226,7 +226,7 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://oa1.hnrl.chng.com/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://59.110.171.69:31003/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];if (top.EAPI.isAndroid()) {
           huaneng.fujian(url, cookies, text);
