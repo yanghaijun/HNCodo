@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentMoney",
-  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3",
+  "targetURL": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3",
   "jsFile": "index.js",
   "chineseName": "付款申请",
   "description": "付款申请流程",
@@ -203,7 +203,7 @@
     "page/urls": {
       "contexts": {
         "context6_ANAILc": [
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3"
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3"
         ]
       }
     },

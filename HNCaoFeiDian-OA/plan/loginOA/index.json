@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "loginOA",
-  "targetURL": "http://59.110.171.69:31003/",
+  "targetURL": "http://59.110.171.69:31000/",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -110,8 +110,7 @@
     "page/urls": {
       "contexts": {
         "context1_QXbhsT": [
-          "59.110.171.69:31003/",
-          "59.110.171.69:31003/names.nsf?login",
+          "59.110.171.69:31000/names.nsf?login",
           "59.110.171.69:31000/"
         ]
       }

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentCar",
-  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841",
+  "targetURL": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841",
   "jsFile": "index.js",
   "chineseName": "车辆管理",
   "description": "车辆管理",
@@ -189,7 +189,7 @@
     "page/urls": {
       "contexts": {
         "context10_660zPN": [
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841"
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841"
         ]
       }
     },

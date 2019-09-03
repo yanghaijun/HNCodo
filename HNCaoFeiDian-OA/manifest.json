@@ -41,27 +41,29 @@
   "adapter_urls": [
     {
       "title": "loginOA",
-      "url": "adapter://HN-OA/plan/loginOA/index.json",
+      "url": "adapter://HNCaoFeiDian-OA/plan/loginOA/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31000\\/"
       ],
-      "demo": []
+      "demo": [
+        "http://59.110.171.69:31000/"
+      ]
     },
     {
       "title": "index",
-      "url": "adapter://HN-OA/plan/index/index.json",
+      "url": "adapter://HNCaoFeiDian-OA/plan/index/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31000\\/WebOfficehncfd\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
-        "http://59.110.171.69:31003/WebOfficehncfd/home4.nsf/index.html"
+        "http://59.110.171.69:31000/WebOfficehncfd/home4.nsf/index.html"
       ]
     }
   ],
   "name": "曹妃甸OA",
   "default_url": "http://59.110.171.69:31000/",
   "scope": "HNCaoFeiDian-OA",
-  "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1567492675162,
+  "start_url": "http://59.110.171.69:31000/",
+  "update_time": 1567499704712,
   "runtime_env": "1webview"
 }

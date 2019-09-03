@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentSW",
-  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5",
+  "targetURL": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5",
   "jsFile": "index.js",
   "chineseName": "详情收文",
   "description": "",
@@ -218,10 +218,10 @@
     "page/urls": {
       "contexts": {
         "context3_RVmBzr": [
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5",
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebShouWen.nsf/0/04F5788650FE3955482583DA002FFFDB?EditDocument&fldadocid=638593005CF56BAE482583E700369CF6",
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebShouWen.nsf/0/6CD96AC7BC89BB8C4825844F002C704D?EditDocument&fldadocid=6EAA2349044BFEE04825844F002C704D",
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebShouWen.nsf/0/3F5A86A7ABBB112F4825840700233511?EditDocument&fldadocid=21A99D2194D205A6482584080036F671"
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebShouWen.nsf/0/DDF0488BF0D173E2482582D7003071CC?EditDocument&fldadocid=3100169ACA5B95B94825836D0020B2D5",
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebShouWen.nsf/0/04F5788650FE3955482583DA002FFFDB?EditDocument&fldadocid=638593005CF56BAE482583E700369CF6",
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebShouWen.nsf/0/6CD96AC7BC89BB8C4825844F002C704D?EditDocument&fldadocid=6EAA2349044BFEE04825844F002C704D",
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebShouWen.nsf/0/3F5A86A7ABBB112F4825840700233511?EditDocument&fldadocid=21A99D2194D205A6482584080036F671"
         ]
       }
     },

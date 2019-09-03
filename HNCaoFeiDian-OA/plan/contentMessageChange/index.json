@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentMessageChange",
-  "targetURL": "http://59.110.171.69:31003/WebOfficehncfd/MoaWebChangeManagement.nsf/0/279B3EC3684B9DF34825844F002D2E7F?EditDocument&fldadocid=B0F133AFFBFD27F04825844F002D2E7F",
+  "targetURL": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebChangeManagement.nsf/0/279B3EC3684B9DF34825844F002D2E7F?EditDocument&fldadocid=B0F133AFFBFD27F04825844F002D2E7F",
   "jsFile": "index.js",
   "chineseName": "信息变更管理",
   "description": "信息变更管理",
@@ -196,7 +196,7 @@
     "page/urls": {
       "contexts": {
         "context5_Tnxcci": [
-          "59.110.171.69:31003/WebOfficehncfd/MoaWebChangeManagement.nsf/0/279B3EC3684B9DF34825844F002D2E7F?EditDocument&fldadocid=B0F133AFFBFD27F04825844F002D2E7F"
+          "59.110.171.69:31000/WebOfficehncfd/MoaWebChangeManagement.nsf/0/279B3EC3684B9DF34825844F002D2E7F?EditDocument&fldadocid=B0F133AFFBFD27F04825844F002D2E7F"
         ]
       }
     },
