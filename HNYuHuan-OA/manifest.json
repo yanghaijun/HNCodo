@@ -41,15 +41,17 @@
   "adapter_urls": [
     {
       "title": "loginOA",
-      "url": "adapter://HN-OA/plan/loginOA/index.json",
+      "url": "adapter://HNYuHuan-OA/plan/loginOA/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31011\\/"
       ],
-      "demo": []
+      "demo": [
+        "http://59.110.171.69:31011/"
+      ]
     },
     {
       "title": "index",
-      "url": "adapter://HN-OA/plan/index/index.json",
+      "url": "adapter://HNYuHuan-OA/plan/index/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/home4\\.nsf\\/index\\.html"
       ],
@@ -62,6 +64,6 @@
   "default_url": "http://59.110.171.69:31011/",
   "scope": "HNYuHuan-OA",
   "start_url": "http://59.110.171.69:31011/",
-  "update_time": 1567492998532,
+  "update_time": 1567501461486,
   "runtime_env": "1webview"
 }
