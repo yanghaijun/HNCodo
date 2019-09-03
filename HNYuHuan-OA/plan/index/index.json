@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "index",
-  "targetURL": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html",
+  "targetURL": "http://59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html",
   "jsFile": "index.js",
   "requires": {
     "content": "../content/index.json",
@@ -230,7 +230,7 @@
         "control11_Qm11b0"
       ],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/home4.nsf\\/index.html"
+        "http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/home4.nsf\\/index.html"
       ]
     }
   },
@@ -396,7 +396,7 @@
     "page/urls": {
       "contexts": {
         "context0_qAFAFP": [
-          "oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html"
+          "59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html"
         ]
       }
     },

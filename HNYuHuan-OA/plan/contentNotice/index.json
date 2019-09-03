@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentNotice",
-  "targetURL": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebNotice.nsf/0/35CA869D4D5750964825844F002BDF9B?EditDocument&fldadocid=A003685959D8D4514825844F002BDF9B",
+  "targetURL": "http://59.110.171.69:31011/WebOfficeyhdc/MoaWebNotice.nsf/0/35CA869D4D5750964825844F002BDF9B?EditDocument&fldadocid=A003685959D8D4514825844F002BDF9B",
   "jsFile": "index.js",
   "chineseName": "通知公告流程",
   "description": "通知公告流程",
@@ -107,7 +107,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/MoaWebNotice\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/MoaWebNotice\\.nsf.*"
       ]
     }
   },
@@ -183,7 +183,7 @@
     "page/urls": {
       "contexts": {
         "context9_syHubA": [
-          "oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebNotice.nsf/0/35CA869D4D5750964825844F002BDF9B?EditDocument&fldadocid=A003685959D8D4514825844F002BDF9B"
+          "59.110.171.69:31011/WebOfficeyhdc/MoaWebNotice.nsf/0/35CA869D4D5750964825844F002BDF9B?EditDocument&fldadocid=A003685959D8D4514825844F002BDF9B"
         ]
       }
     },

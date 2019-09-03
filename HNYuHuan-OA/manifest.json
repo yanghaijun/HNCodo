@@ -22,7 +22,7 @@
     "resource_filter": [
       {
         "url_match": [
-          "^http:\\/\\/oa1\\.zjfgs\\.chng\\.com.*"
+          "^http:\\/\\/59\\.110\\.171\\.69:31011.*"
         ],
         "charset": "utf-8",
         "Accept-Language": "zh-Hans-CN",
@@ -43,7 +43,7 @@
       "title": "loginOA",
       "url": "adapter://HN-OA/plan/loginOA/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/"
+        "^http:\\/\\/59\\.110\\.171\\.69:31011\\/"
       ],
       "demo": []
     },
@@ -51,17 +51,17 @@
       "title": "index",
       "url": "adapter://HN-OA/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/home4\\.nsf\\/index\\.html"
+        "^http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
-        "http://oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html"
+        "http://59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html"
       ]
     }
   ],
   "name": "玉环电厂OA",
-  "default_url": "http://oa1.zjfgs.chng.com/",
+  "default_url": "http://59.110.171.69:31011/",
   "scope": "HNYuHuan-OA",
-  "start_url": "http://oa1.zjfgs.chng.com/",
-  "update_time": 1566529118225,
+  "start_url": "http://59.110.171.69:31011/",
+  "update_time": 1567474490151,
   "runtime_env": "1webview"
 }

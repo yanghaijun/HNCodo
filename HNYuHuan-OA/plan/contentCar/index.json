@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "contentCar",
-  "targetURL": "http://oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841",
+  "targetURL": "http://59.110.171.69:31011/WebOfficeyhdc/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841",
   "jsFile": "index.js",
   "chineseName": "车辆管理",
   "description": "车辆管理",
@@ -113,7 +113,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/WebOfficeyhdc\\/MoaWebCheLiang\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/MoaWebCheLiang\\.nsf.*"
       ]
     }
   },
@@ -189,7 +189,7 @@
     "page/urls": {
       "contexts": {
         "context10_660zPN": [
-          "oa1.zjfgs.chng.com/WebOfficeyhdc/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841"
+          "59.110.171.69:31011/WebOfficeyhdc/MoaWebCheLiang.nsf/0/9660B6BA6DF465A248258454002A3841?EditDocument&fldadocid=556CCD562589B17E48258454002A3841"
         ]
       }
     },

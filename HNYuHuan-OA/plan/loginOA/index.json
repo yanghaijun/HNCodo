@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "loginOA",
-  "targetURL": "http://oa1.zjfgs.chng.com/",
+  "targetURL": "http://59.110.171.69:31011/",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -49,8 +49,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/",
-        "http:\\/\\/oa1\\.zjfgs\\.chng\\.com\\/names\\.nsf\\?login"
+        "http:\\/\\/59\\.110\\.171\\.69:31011\\/",
+        "http:\\/\\/59\\.110\\.171\\.69:31011\\/names\\.nsf\\?login"
       ]
     }
   },
@@ -110,8 +110,8 @@
     "page/urls": {
       "contexts": {
         "context1_QXbhsT": [
-          "oa1.zjfgs.chng.com/",
-          "oa1.zjfgs.chng.com/names.nsf?login"
+          "59.110.171.69:31011/",
+          "59.110.171.69:31011/names.nsf?login"
         ]
       }
     },

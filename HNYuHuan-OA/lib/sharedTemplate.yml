@@ -223,7 +223,7 @@
         obj.time = $(q).find('.file_num').find('span').text();
         var cwin = elem.ownerDocument;
         var attachUrl = '/WebOfficeyhdc/' + cwin.forms[0].fldQxxxDbName.value + '/($All)/' + cwin.forms[0].fldQXXXID.value + '/$FILE/' + $(q).find('.file_name').find('a').text();
-        var url = "http://oa1.zjfgs.chng.com/" + encodeURIComponent(attachUrl);
+        var url = "http://59.110.171.69:31011/" + encodeURIComponent(attachUrl);
         obj.url = url;
         obj.cookies = cwin.cookie;
         data.fujian.push(obj);
@@ -492,7 +492,7 @@
       $(iframes).find('.ui_send').click();
 
       if ("" != aa && aa != "null" && aa != "undefined" && aa != undefined) {
-        var url = "http://oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html";
+        var url = "http://59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html";
         ysp.appMain.reloadPage(url);
       }
     } else if (data.eventType == 'radioClick') {
@@ -578,7 +578,7 @@
       }
 
       a && a[0].querySelector("a").click();
-      var url = "http://oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html";
+      var url = "http://59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html";
       ysp.appMain.reloadPage(url);
     }
     if (type == "TH") {
@@ -619,7 +619,7 @@
 
       var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");
       dialog && dialog.click();
-      var url = "http://oa1.zjfgs.chng.com/WebOfficeyhdc/home4.nsf/index.html";
+      var url = "http://59.110.171.69:31011/WebOfficeyhdc/home4.nsf/index.html";
       ysp.appMain.reloadPage(url);
     }
     if (data.eventType == 'fujian') {
