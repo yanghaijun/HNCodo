@@ -40,21 +40,23 @@
   "override_urls": [],
   "adapter_urls": [
     {
-      "title": "loginOA",
-      "url": "adapter://HN-OA/plan/loginOA/index.json",
-      "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31007\\/"
-      ],
-      "demo": []
-    },
-    {
       "title": "index",
-      "url": "adapter://HN-OA/plan/index/index.json",
+      "url": "adapter://HNHeiLongJiang-OA/plan/index/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31007\\/WebOffice\\/home4\\.nsf\\/index\\.html"
       ],
       "demo": [
         "http://59.110.171.69:31007/WebOffice/home4.nsf/index.html"
+      ]
+    },
+    {
+      "title": "loginOA",
+      "url": "adapter://HNHeiLongJiang-OA/plan/loginOA/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31007\\/"
+      ],
+      "demo": [
+        "http://59.110.171.69:31007/"
       ]
     }
   ],
@@ -62,6 +64,6 @@
   "default_url": "http://59.110.171.69:31007/",
   "scope": "HNHeiLongJiang-OA",
   "start_url": "http://59.110.171.69:31007/",
-  "update_time": 1567387009014,
+  "update_time": 1567502047252,
   "runtime_env": "1webview"
 }
