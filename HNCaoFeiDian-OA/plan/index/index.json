@@ -62,80 +62,6 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control9_QFsNKk": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"divData\"]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.datagrid-view DIV.datagrid-view2 DIV.datagrid-body"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control9_QFsNKk"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
-      "frameXPath": "//iframe[1]<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control10_igaWMQ": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"divData\"]/DIV[1]/DIV[1]/DIV[3]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.panel.datagrid DIV.datagrid-wrap.panel-body.panel-body-noheader DIV.datagrid-pager.pagination"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[3]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control10_igaWMQ"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
-      "frameXPath": "//iframe[1]<<IFRAME>>",
-      "componentType": "custom"
-    },
     "control11_Qm11b0": {
       "location": {
         "data": {
@@ -209,18 +135,137 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control14_6RfATx": {
+      "location": {
+        "data": {
+          "tagName": "IMG"
+        },
+        "locators": [
+          {
+            "id": "img/@src",
+            "prob": 1,
+            "value": {
+              "pathname": "/WebOfficeFrame/syslib.nsf/link/Logo/$file/hn_cfd.png",
+              "search": "openelement"
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "value": {
+              "funcName": "void",
+              "redirect": "IMG[1]"
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.layout-panel.layout-panel-north.panel-htop DIV.hn_header.panel-body.panel-body-noheader.panel-body-noborder.layout-body A.hn_logo IMG"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/A[1]/IMG[1]"
+          }
+        ]
+      },
+      "roles": "element,image,button",
+      "text": "",
+      "ignoreVisibility": true,
+      "frameXPath": ""
+    },
+    "control15_mnopo7": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1",
+              "tagName": "FORM",
+              "prefix": "",
+              "suffix": "/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]/TBODY[1]",
+              "ratio": 0.953
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.datagrid-view2 DIV.datagrid-body TABLE.datagrid-btable TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control15_mnopo7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control16_dvqD6V": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1",
+              "tagName": "FORM",
+              "prefix": "",
+              "suffix": "/DIV[2]/DIV[1]/DIV[3]",
+              "ratio": 0.953
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.datagrid.panel-htop.easyui-fluid DIV.datagrid-wrap.panel-body.panel-body-noheader DIV.datagrid-pager.pagination"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16_dvqD6V"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context0_qAFAFP": {
       "controls": [
         "control2_SwOSql",
-        "control9_QFsNKk",
-        "control10_igaWMQ",
-        "control35_R001Km"
+        "control35_R001Km",
+        "control15_mnopo7",
+        "control16_dvqD6V"
       ],
       "anchors": [
-        "control11_Qm11b0"
+        "control14_6RfATx"
       ],
       "urlAnchor": [
         "http:\\/\\/59\\.110\\.171\\.69:31000\\/WebOfficehncfd\\/home4.nsf\\/index.html"
@@ -249,28 +294,6 @@
         }
       ]
     },
-    "flow10_Phme8A": {
-      "fromContextId": "context0_qAFAFP",
-      "fromAction": "doAction",
-      "fromControlId": "control9_QFsNKk",
-      "toContexts": [
-        {
-          "toContextId": "context0_qAFAFP"
-        },
-        {
-          "toContextId": "context2_049iR8",
-          "toModelId": "content"
-        },
-        {
-          "toContextId": "context3_RVmBzr",
-          "toModelId": "contentSW"
-        },
-        {
-          "toContextId": "context4_docOJt",
-          "toModelId": "contentFW"
-        }
-      ]
-    },
     "flow17_Nx5n13": {
       "fromContextId": "context0_qAFAFP",
       "fromAction": "doAction",
@@ -278,6 +301,28 @@
       "toContexts": [
         {
           "toContextId": "context0_qAFAFP"
+        }
+      ]
+    },
+    "flow10_Tzu14A": {
+      "fromContextId": "context0_qAFAFP",
+      "fromAction": "doAction",
+      "fromControlId": "control15_mnopo7",
+      "toContexts": [
+        {
+          "toContextId": "context0_qAFAFP"
+        },
+        {
+          "toContextId": "context3_RVmBzr",
+          "toModelId": "contentSW"
+        },
+        {
+          "toContextId": "context2_049iR8",
+          "toModelId": "content"
+        },
+        {
+          "toContextId": "context4_docOJt",
+          "toModelId": "contentFW"
         }
       ]
     }
@@ -317,31 +362,31 @@
           }
         },
         {
-          "id": "uiControl9_fSWe0r",
-          "controlId": "control9_QFsNKk",
+          "id": "uiControl13_WDVXRF",
+          "controlId": "control15_mnopo7",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl9_fSWe0r",
-                "onGetTemplate": "getTemplate_uiControl9_fSWe0r"
+                "onDoAction": "doAction_uiControl13_WDVXRF",
+                "onGetTemplate": "getTemplate_uiControl13_WDVXRF"
               }
             }
           }
         },
         {
-          "id": "uiControl10_p96g1g",
-          "controlId": "control10_igaWMQ",
+          "id": "uiControl14_yQNoWv",
+          "controlId": "control16_dvqD6V",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl10_p96g1g",
-                "onGetTemplate": "getTemplate_uiControl10_p96g1g"
+                "onDoAction": "doAction_uiControl14_yQNoWv",
+                "onGetTemplate": "getTemplate_uiControl14_yQNoWv"
               }
             }
           }
@@ -5287,6 +5332,60 @@
             "TBODY/TR/TH",
             "TD/DIV/DIV",
             "TD/DIV/IFRAME",
+            "TD/DIV/TABLE",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-hidden",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/P"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/P",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H2/DIV",
+            "DIV/P/A",
+            "DIV/P/I",
+            "DIV/SPAN/A",
+            "DIV/SPAN/I",
+            "DIV/SPAN/INPUT-text",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "FORM/DIV/SCRIPT",
+            "H2/DIV/DIV",
+            "LI/A/SPAN",
+            "LI/I/SPAN",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
             "TD/DIV/TABLE",
             "THEAD/TR/TH",
             "TR/TD/A",
