@@ -8,14 +8,7 @@
     "contentSW": "../contentSW/index.json",
     "loginOA": "../loginOA/index.json",
     "index": "../index/index.json",
-    "contentFW": "../contentFW/index.json",
-    "contentMessageChange": "../contentMessageChange/index.json",
-    "contentMoney": "../contentMoney/index.json",
-    "contentLeave": "../contentLeave/index.json",
-    "contentPerson": "../contentPerson/index.json",
-    "contentNotice": "../contentNotice/index.json",
-    "contentCar": "../contentCar/index.json",
-    "contentCheck": "../contentCheck/index.json"
+    "contentFW": "../contentFW/index.json"
   },
   "chineseName": "首页代办",
   "description": "",
@@ -275,34 +268,6 @@
         {
           "toContextId": "context4_docOJt",
           "toModelId": "contentFW"
-        },
-        {
-          "toContextId": "context5_Tnxcci",
-          "toModelId": "contentMessageChange"
-        },
-        {
-          "toContextId": "context6_ANAILc",
-          "toModelId": "contentMoney"
-        },
-        {
-          "toContextId": "context7_3VRxQw",
-          "toModelId": "contentLeave"
-        },
-        {
-          "toContextId": "context8_dSMKtJ",
-          "toModelId": "contentPerson"
-        },
-        {
-          "toContextId": "context9_syHubA",
-          "toModelId": "contentNotice"
-        },
-        {
-          "toContextId": "context10_660zPN",
-          "toModelId": "contentCar"
-        },
-        {
-          "toContextId": "context11_NPlN9v",
-          "toModelId": "contentCheck"
         }
       ]
     },
