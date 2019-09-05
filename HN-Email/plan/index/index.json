@@ -1,0 +1,223 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://59.110.171.69:31009/",
+  "jsFile": "index.js",
+  "requires": {
+    "detail": "../detail/index.json"
+  },
+  "chineseName": "收件-首页",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control6_xBCCPl": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [
+            {
+              "method": "XPath",
+              "value": ""
+            }
+          ],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "HTML.x-viewport"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control6_xBCCPl"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control7_SvOBFA": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "查找:"
+              ],
+              "visText": [
+                "查找:"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              3
+            ],
+            "value": "TR.x-toolbar-right-row TD.x-toolbar-cell DIV.xtb-text"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "查找:",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>"
+    },
+    "control8_BagoMf": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-panel-header.x-tab-panel-header-noborder.x-unselectable DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱信息公司工作月报-第8期.do ",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.querySelectorAll('li')[1].getAttribute('class').indexOf('x-tab-strip-closable')==0){return false}else {return true}"
+    }
+  },
+  "contexts": {
+    "context1_vK0GRS": {
+      "controls": [
+        "control6_xBCCPl"
+      ],
+      "anchors": [
+        "control8_BagoMf"
+      ],
+      "urlAnchor": []
+    },
+    "context3_KlNdDA": {
+      "controls": [],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow4_x1S6XP": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control6_xBCCPl",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        },
+        {
+          "toContextId": "context2_fV0Gfo",
+          "toModelId": "detail"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_ydVPGE": {
+      "contextId": "context1_vK0GRS",
+      "layout": [
+        {
+          "id": "uiControl5_U714Mi",
+          "controlId": "control6_xBCCPl",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl5_U714Mi",
+                "onGetTemplate": "getTemplate_uiControl5_U714Mi"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "page3_6hwkU7": {
+      "contextId": "context3_KlNdDA",
+      "layout": []
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_vK0GRS": [
+          "华能信息技术有限公司邮件系统"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_vK0GRS": [
+          "59.110.171.69:31009/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_vK0GRS": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_vK0GRS": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_vK0GRS": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "version": "0.1",
+  "id": "detail",
+  "targetURL": "http://59.110.171.69:31009/",
+  "jsFile": "index.js",
+  "chineseName": "详情",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control14_yLf57s": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-panel-header.x-tab-panel-header-noborder.x-unselectable DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱信息公司工作月报-第8期.do ",
+      "ignoreVisibility": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.querySelectorAll('li')[1].getAttribute('class').indexOf('x-tab-strip-closable')==0){return true}else {return false}"
+    },
+    "control10_nkbIT5": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-panel-header.x-tab-panel-header-noborder.x-unselectable DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control10_nkbIT5"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control11_tnRl35": {
+      "location": {
+        "data": {
+          "tagName": "IFRAME"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap DIV.x-panel-body.x-panel-body-noheader.x-panel-body-noborder IFRAME"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control11_tnRl35"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context2_fV0Gfo": {
+      "controls": [
+        "control10_nkbIT5",
+        "control11_tnRl35"
+      ],
+      "anchors": [
+        "control14_yLf57s"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow5_pRX53q": {
+      "toContexts": [
+        {
+          "toContextId": "context2_fV0Gfo"
+        }
+      ]
+    },
+    "flow6_avevNq": {
+      "fromContextId": "context2_fV0Gfo",
+      "fromAction": "doAction",
+      "fromControlId": "control10_nkbIT5",
+      "toContexts": [
+        {
+          "toContextId": "context2_fV0Gfo"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2_nhZbW7": {
+      "contextId": "context2_fV0Gfo",
+      "layout": [
+        {
+          "id": "uiControl7_KK4W7A",
+          "controlId": "control10_nkbIT5",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl7_KK4W7A",
+                "onGetTemplate": "getTemplate_uiControl7_KK4W7A"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl8_a0ktAM",
+          "controlId": "control11_tnRl35",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl8_a0ktAM",
+                "onGetTemplate": "getTemplate_uiControl8_a0ktAM"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_fV0Gfo": [
+          "华能信息技术有限公司邮件系统"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_fV0Gfo": [
+          "59.110.171.69:31009/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_fV0Gfo": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_fV0Gfo": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_fV0Gfo": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}

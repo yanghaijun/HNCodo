@@ -1,0 +1,26 @@
+{
+  "special_models": [
+    {
+      "path": "plan/login/index.json"
+    }
+  ],
+  "common_js": [
+    {
+      "path": "lib/base.js"
+    },
+    {
+      "path": "lib/customTemplate.js"
+    }
+  ],
+  "common_css": [
+    {
+      "path": "lib/base.css"
+    },
+    {
+      "path": "lib/amazeui.touch1.override.css",
+      "sourceType": "local",
+      "target": "face"
+    }
+  ],
+  "path": "file://D:/Documents/enterplorer/enterprises/5ad86e209c7f5f0ec33dec22/apps/HN-Email/common.json"
+}
