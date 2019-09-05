@@ -1,0 +1,214 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:31008/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "登录页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control0_SvL7Wx": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              23
+            ],
+            "value": "BODY.login_blk_position.bgStretcher-container DIV.bgstretcher-area DIV.bgstretcher-page FORM DIV"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_SvL7Wx"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context0_Si6VWL": {
+      "controls": [
+        "control0_SvL7Wx"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31008\\/WebOfficeFrame\\/MoaWebMailAddress\\.nsf\\/fomLogin\\?OpenForm",
+        "http:\\/\\/59\\.110\\.171\\.69:31008\\/names\\.nsf\\?Login"
+      ]
+    }
+  },
+  "flows": {
+    "flow0_BMHZGQ": {
+      "toContexts": [
+        {
+          "toContextId": "context0_Si6VWL"
+        }
+      ]
+    },
+    "flow1_MWyxsA": {
+      "fromContextId": "context0_Si6VWL",
+      "fromAction": "doAction",
+      "fromControlId": "control0_SvL7Wx",
+      "toContexts": [
+        {
+          "toContextId": "context0_Si6VWL"
+        },
+        {
+          "toContextId": "context1_WCcJAS",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_OdrCSU": {
+      "contextId": "context0_Si6VWL",
+      "layout": [
+        {
+          "id": "uiControl0_liU5nH",
+          "controlId": "control0_SvL7Wx",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_liU5nH",
+                "onGetTemplate": "getTemplate_uiControl0_liU5nH"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_Si6VWL": [
+          "欢迎登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_Si6VWL": [
+          "59.110.171.69:31008/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_Si6VWL": [
+          [
+            "DtsSign",
+            "bgstretcher",
+            "ex",
+            "freeow-br",
+            "freeow-msg",
+            "freeow-show"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_Si6VWL": [
+          [
+            "bgs-current",
+            "bgstretcher",
+            "bgstretcher-area",
+            "bgstretcher-page",
+            "bottom_blk",
+            "bottom_fixed",
+            "bottom_tips",
+            "btn_off",
+            "down_link",
+            "enter_system",
+            "forget_pw_text",
+            "freeow",
+            "freeow-bottom-right",
+            "ibutton-container",
+            "ibutton-handle",
+            "ibutton-handle-middle",
+            "ibutton-handle-right",
+            "ibutton-label-off",
+            "ibutton-label-on",
+            "ibutton-padding-left",
+            "ibutton-padding-right",
+            "img-loaded",
+            "login_banner",
+            "login_blk",
+            "login_form",
+            "login_form_text",
+            "login_panel",
+            "mask",
+            "password",
+            "row",
+            "text_off",
+            "top_bar",
+            "top_fixed",
+            "username"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_Si6VWL": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "DD/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/FORM/OBJECT",
+            "DIV/P/INPUT-submit",
+            "DIV/SPAN/A",
+            "DIV/SPAN/LABEL",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DD/INPUT-button",
+            "DL/DD/INPUT-password",
+            "DL/DD/INPUT-text",
+            "DL/DD/SPAN",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-null",
+            "FORM/DIV/P",
+            "UL/LI/IMG"
+          ]
+        ]
+      }
+    }
+  }
+}

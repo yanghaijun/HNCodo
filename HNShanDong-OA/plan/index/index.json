@@ -1,0 +1,622 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://59.110.171.69:31008/WebOffice/home4.nsf/index.html",
+  "jsFile": "index.js",
+  "chineseName": "首页待办",
+  "description": "首页待办",
+  "firstPaintEnable": false,
+  "controls": {
+    "control1_TQ9daV": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"Main_Body\"]//DIV[@id=\"main_portal\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "@id/nonWord",
+            "prob": 1,
+            "disabled": true,
+            "fact": "tp",
+            "value": "descendant::DIV[@id=\"Main_Body\"]//DIV[@id=\"main_portal\"]//DIV[@id=\"tp\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "TD.portal-column-td DIV.portal-column-left.portal-column DIV.panel.portal-panel"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[3]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control1_TQ9daV"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control2_He1afQ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1:_id3:dataTablePanel",
+              "tagName": "DIV",
+              "prefix": "",
+              "suffix": "/DIV[1]/DIV[1]/DIV[2]/DIV[2]",
+              "ratio": 0.859
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder DIV.datagrid-view DIV.datagrid-view2"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control2_He1afQ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control3_dhWnFP": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1:_id3:dataTablePanel",
+              "tagName": "DIV",
+              "prefix": "",
+              "suffix": "/DIV[1]/DIV[1]/DIV[3]",
+              "ratio": 0.784
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.datagrid DIV.datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder DIV.datagrid-pager.pagination"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_dhWnFP"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control4_tKq03d": {
+      "location": {
+        "data": {
+          "tagName": "IMG"
+        },
+        "locators": [
+          {
+            "id": "img/@src",
+            "prob": 1,
+            "value": {
+              "pathname": "/WebOfficeFrame/syslib.nsf/link/Logo/$file/hn_xxjsgs.png",
+              "search": "openelement"
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.layout-panel.layout-panel-north DIV.hn_header.panel-body.panel-body-noheader.panel-body-noborder.layout-body A.hn_logo IMG"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/A[1]/IMG[1]"
+          }
+        ]
+      },
+      "roles": "element,image,button",
+      "text": "",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context1_WCcJAS": {
+      "controls": [
+        "control1_TQ9daV",
+        "control2_He1afQ",
+        "control3_dhWnFP"
+      ],
+      "anchors": [
+        "control4_tKq03d"
+      ],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31008\\/WebOffice\\/home4\\.nsf\\/index.html"
+      ]
+    }
+  },
+  "flows": {
+    "flow2_8tZZuP": {
+      "toContexts": [
+        {
+          "toContextId": "context1_WCcJAS"
+        }
+      ]
+    },
+    "flow3_P5uFCg": {
+      "fromContextId": "context1_WCcJAS",
+      "fromAction": "doAction",
+      "fromControlId": "control1_TQ9daV",
+      "toContexts": [
+        {
+          "toContextId": "context1_WCcJAS"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_OsscWO": {
+      "contextId": "context1_WCcJAS",
+      "layout": [
+        {
+          "id": "uiControl1_dNudaB",
+          "controlId": "control1_TQ9daV",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl1_dNudaB",
+                "onGetTemplate": "getTemplate_uiControl1_dNudaB"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl2_i4VUWK",
+          "controlId": "control2_He1afQ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_i4VUWK",
+                "onGetTemplate": "getTemplate_uiControl2_i4VUWK"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl3_6tBdrJ",
+          "controlId": "control3_dhWnFP",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl3_6tBdrJ",
+                "onGetTemplate": "getTemplate_uiControl3_6tBdrJ"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_WCcJAS": [
+          "华能信息技术有限公司OA办公管理系统"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_WCcJAS": [
+          "59.110.171.69:31008/WebOffice/home4.nsf/index.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_WCcJAS": [
+          [
+            "DECBC",
+            "DECDDDA",
+            "DECDDDB",
+            "DECDDDE",
+            "DECEADBC",
+            "DECECEC",
+            "DECF",
+            "Left_Body",
+            "Main_Body",
+            "_easyui_textbox_input",
+            "cc",
+            "dd",
+            "it_",
+            "li_backof",
+            "li_moduler_list",
+            "li_outof",
+            "main_portal",
+            "mk_bl",
+            "mk_br",
+            "mk_rt",
+            "mk_tp",
+            "profile",
+            "rt",
+            "style",
+            "todo",
+            "tp",
+            "公共信息",
+            "公文管理"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_WCcJAS": [
+          [
+            "Toolbar_Today",
+            "accordion",
+            "accordion-body",
+            "accordion-collapse",
+            "accordion-expand",
+            "accordion-header",
+            "accordion-header-selected",
+            "bk_tabs",
+            "body_bg",
+            "calendar",
+            "calendar-body",
+            "calendar-day",
+            "calendar-dtable",
+            "calendar-first",
+            "calendar-header",
+            "calendar-last",
+            "calendar-menu",
+            "calendar-menu-month-inner",
+            "calendar-menu-next",
+            "calendar-menu-prev",
+            "calendar-menu-year",
+            "calendar-menu-year-inner",
+            "calendar-nav",
+            "calendar-nextmonth",
+            "calendar-nextyear",
+            "calendar-other-month",
+            "calendar-prevmonth",
+            "calendar-prevyear",
+            "calendar-saturday",
+            "calendar-selected",
+            "calendar-sunday",
+            "calendar-text",
+            "calendar-title",
+            "calendar-today",
+            "cur",
+            "dashed",
+            "datelong",
+            "dateshort",
+            "defualt_layout",
+            "easyui-accordion",
+            "easyui-fluid",
+            "easyui-layout",
+            "easyui-linkbutton",
+            "easyui-menubutton",
+            "easyui-searchbox",
+            "easyui-tabs",
+            "float_r",
+            "general_table",
+            "hidden",
+            "hn_body_blk",
+            "hn_h_search",
+            "hn_head_blk",
+            "hn_header",
+            "hn_logo",
+            "hn_nav",
+            "hn_panel_west",
+            "hn_search_bar",
+            "hn_tabs",
+            "icon-bigpic",
+            "icon-gw",
+            "icon-home",
+            "icon-more",
+            "icon-refresh",
+            "icon-right",
+            "icon-smlpic",
+            "idTabs",
+            "l-btn",
+            "l-btn-icon",
+            "l-btn-icon-left",
+            "l-btn-left",
+            "l-btn-plain",
+            "l-btn-small",
+            "l-btn-text",
+            "layout",
+            "layout-body",
+            "layout-button-left",
+            "layout-panel",
+            "layout-panel-center",
+            "layout-panel-north",
+            "layout-panel-west",
+            "layout-split-proxy-h",
+            "layout-split-proxy-v",
+            "layout-split-west",
+            "layout_close",
+            "left_menu",
+            "logout_",
+            "m-btn",
+            "m-btn-downarrow",
+            "m-btn-line",
+            "m-btn-small",
+            "main_width",
+            "menu",
+            "menu-item",
+            "menu-line",
+            "menu-text",
+            "menu-top",
+            "messages_tips",
+            "mk_menu",
+            "moduler-panel",
+            "normal_style",
+            "oa_top",
+            "panel",
+            "panel-body",
+            "panel-body-noborder",
+            "panel-body-noheader",
+            "panel-header",
+            "panel-noscroll",
+            "panel-title",
+            "panel-tool",
+            "panel-tool-collapse",
+            "panel-tool-expand",
+            "portal",
+            "portal-column",
+            "portal-column-left",
+            "portal-column-right",
+            "portal-column-td",
+            "portal-p",
+            "portal-panel",
+            "searchbox",
+            "searchbox-button",
+            "searchbox-f",
+            "selected",
+            "setting",
+            "side-nav",
+            "side-nav-item",
+            "tab_blk",
+            "tab_concent",
+            "tabs",
+            "tabs-closable",
+            "tabs-close",
+            "tabs-container",
+            "tabs-first",
+            "tabs-header",
+            "tabs-header-noborder",
+            "tabs-icon",
+            "tabs-inner",
+            "tabs-last",
+            "tabs-panels",
+            "tabs-panels-noborder",
+            "tabs-scroller-left",
+            "tabs-scroller-right",
+            "tabs-selected",
+            "tabs-title",
+            "tabs-wrap",
+            "tabs_box",
+            "textbox",
+            "textbox-addon",
+            "textbox-addon-right",
+            "textbox-f",
+            "textbox-icon",
+            "textbox-prompt",
+            "textbox-text",
+            "textbox-value",
+            "tips_left_ico",
+            "title",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons",
+            "unsigned",
+            "user",
+            "user_",
+            "validatebox-text"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_WCcJAS": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/STYLE",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/P",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H2/DIV",
+            "DIV/P/A",
+            "DIV/P/I",
+            "DIV/SPAN/A",
+            "DIV/SPAN/I",
+            "DIV/SPAN/INPUT-hidden",
+            "DIV/SPAN/INPUT-text",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "H2/DIV/DIV",
+            "LI/A/SPAN",
+            "LI/DIV/DIV",
+            "LI/I/SPAN",
+            "SPAN/SPAN/A",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/SPAN",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/SPAN",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/P"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/STYLE",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/P",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H2/DIV",
+            "DIV/P/A",
+            "DIV/P/I",
+            "DIV/SPAN/A",
+            "DIV/SPAN/I",
+            "DIV/SPAN/INPUT-hidden",
+            "DIV/SPAN/INPUT-text",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "H2/DIV/DIV",
+            "LI/A/SPAN",
+            "LI/DIV/DIV",
+            "LI/I/SPAN",
+            "SPAN/SPAN/A",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/SPAN",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/SPAN",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/P"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": []
+  },
+  "override_urls": [],
+  "adapter_urls": [],
+  "name": "山东OA",
+  "default_url": "http://59.110.171.69:31008",
+  "scope": "HNShanDong-OA",
+  "start_url": "enterplorer://HNShanDong-OA/local/index.html",
+  "update_time": 1567651180664
+}
