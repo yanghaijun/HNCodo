@@ -8,14 +8,7 @@
     "contentSW": "../contentSW/index.json",
     "loginOA": "../loginOA/index.json",
     "index": "../index/index.json",
-    "contentFW": "../contentFW/index.json",
-    "contentMessageChange": "../contentMessageChange/index.json",
-    "contentMoney": "../contentMoney/index.json",
-    "contentLeave": "../contentLeave/index.json",
-    "contentPerson": "../contentPerson/index.json",
-    "contentNotice": "../contentNotice/index.json",
-    "contentCar": "../contentCar/index.json",
-    "contentCheck": "../contentCheck/index.json"
+    "contentFW": "../contentFW/index.json"
   },
   "chineseName": "首页代办",
   "description": "",
@@ -69,114 +62,6 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control9_QFsNKk": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"divData\"]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.datagrid-view DIV.datagrid-view2 DIV.datagrid-body"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control9_QFsNKk"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
-      "frameXPath": "//iframe[1]<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control10_igaWMQ": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"divData\"]/DIV[1]/DIV[1]/DIV[3]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.panel.datagrid DIV.datagrid-wrap.panel-body.panel-body-noheader DIV.datagrid-pager.pagination"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[3]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control10_igaWMQ"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
-      "frameXPath": "//iframe[1]<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control11_Qm11b0": {
-      "location": {
-        "data": {
-          "tagName": "IMG"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "img/@src",
-            "prob": 1,
-            "value": {
-              "pathname": "/WebOfficeFrame/syslib.nsf/link/Logo/$file/hnsc_logo1.png",
-              "search": "openelement"
-            }
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.panel.layout-panel.layout-panel-north DIV.hn_header.panel-body.panel-body-noheader.layout-body A.hn_logo IMG"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/A[1]/IMG[1]"
-          }
-        ]
-      },
-      "roles": "element,image,button",
-      "text": "",
-      "frameXPath": ""
-    },
     "control35_R001Km": {
       "location": {
         "data": {
@@ -216,18 +101,136 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control11_c55Pzz": {
+      "location": {
+        "data": {
+          "tagName": "IMG"
+        },
+        "locators": [
+          {
+            "id": "img/@src",
+            "prob": 1,
+            "value": {
+              "pathname": "/WebOfficeFrame/syslib.nsf/link/Logo/$file/yhdc_logo.png",
+              "search": "openelement"
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "value": {
+              "funcName": "void",
+              "redirect": "IMG[1]"
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.layout-panel.layout-panel-north.panel-htop DIV.hn_header.panel-body.panel-body-noheader.panel-body-noborder.layout-body A.hn_logo IMG"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/A[1]/IMG[1]"
+          }
+        ]
+      },
+      "roles": "element,image,button",
+      "text": "",
+      "frameXPath": ""
+    },
+    "control14_78889h": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1",
+              "tagName": "FORM",
+              "prefix": "",
+              "suffix": "/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]/TBODY[1]",
+              "ratio": 0.936
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.datagrid-view2 DIV.datagrid-body TABLE.datagrid-btable TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control14_78889h"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control15_J86Up9": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1",
+              "tagName": "FORM",
+              "prefix": "",
+              "suffix": "/DIV[2]/DIV[1]/DIV[3]",
+              "ratio": 0.936
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.panel.datagrid.panel-htop.easyui-fluid DIV.datagrid-wrap.panel-body.panel-body-noheader DIV.datagrid-pager.pagination"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control15_J86Up9"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[1]<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context0_qAFAFP": {
       "controls": [
         "control2_SwOSql",
-        "control9_QFsNKk",
-        "control10_igaWMQ",
-        "control35_R001Km"
+        "control35_R001Km",
+        "control14_78889h",
+        "control15_J86Up9"
       ],
       "anchors": [
-        "control11_Qm11b0"
+        "control11_c55Pzz"
       ],
       "urlAnchor": [
         "http:\\/\\/59\\.110\\.171\\.69:31011\\/WebOfficeyhdc\\/home4.nsf\\/index.html"
@@ -256,56 +259,6 @@
         }
       ]
     },
-    "flow10_Phme8A": {
-      "fromContextId": "context0_qAFAFP",
-      "fromAction": "doAction",
-      "fromControlId": "control9_QFsNKk",
-      "toContexts": [
-        {
-          "toContextId": "context0_qAFAFP"
-        },
-        {
-          "toContextId": "context2_049iR8",
-          "toModelId": "content"
-        },
-        {
-          "toContextId": "context3_RVmBzr",
-          "toModelId": "contentSW"
-        },
-        {
-          "toContextId": "context4_docOJt",
-          "toModelId": "contentFW"
-        },
-        {
-          "toContextId": "context5_Tnxcci",
-          "toModelId": "contentMessageChange"
-        },
-        {
-          "toContextId": "context6_ANAILc",
-          "toModelId": "contentMoney"
-        },
-        {
-          "toContextId": "context7_3VRxQw",
-          "toModelId": "contentLeave"
-        },
-        {
-          "toContextId": "context8_dSMKtJ",
-          "toModelId": "contentPerson"
-        },
-        {
-          "toContextId": "context9_syHubA",
-          "toModelId": "contentNotice"
-        },
-        {
-          "toContextId": "context10_660zPN",
-          "toModelId": "contentCar"
-        },
-        {
-          "toContextId": "context11_NPlN9v",
-          "toModelId": "contentCheck"
-        }
-      ]
-    },
     "flow17_Nx5n13": {
       "fromContextId": "context0_qAFAFP",
       "fromAction": "doAction",
@@ -313,6 +266,28 @@
       "toContexts": [
         {
           "toContextId": "context0_qAFAFP"
+        }
+      ]
+    },
+    "flow10_sKBfyn": {
+      "fromContextId": "context0_qAFAFP",
+      "fromAction": "doAction",
+      "fromControlId": "control14_78889h",
+      "toContexts": [
+        {
+          "toContextId": "context0_qAFAFP"
+        },
+        {
+          "toContextId": "context3_RVmBzr",
+          "toModelId": "contentSW"
+        },
+        {
+          "toContextId": "context2_049iR8",
+          "toModelId": "content"
+        },
+        {
+          "toContextId": "context4_docOJt",
+          "toModelId": "contentFW"
         }
       ]
     }
@@ -352,31 +327,31 @@
           }
         },
         {
-          "id": "uiControl9_fSWe0r",
-          "controlId": "control9_QFsNKk",
+          "id": "uiControl13_GIn8G9",
+          "controlId": "control14_78889h",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl9_fSWe0r",
-                "onGetTemplate": "getTemplate_uiControl9_fSWe0r"
+                "onDoAction": "doAction_uiControl13_GIn8G9",
+                "onGetTemplate": "getTemplate_uiControl13_GIn8G9"
               }
             }
           }
         },
         {
-          "id": "uiControl10_p96g1g",
-          "controlId": "control10_igaWMQ",
+          "id": "uiControl14_ZHdEzT",
+          "controlId": "control15_J86Up9",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl10_p96g1g",
-                "onGetTemplate": "getTemplate_uiControl10_p96g1g"
+                "onDoAction": "doAction_uiControl14_ZHdEzT",
+                "onGetTemplate": "getTemplate_uiControl14_ZHdEzT"
               }
             }
           }
@@ -389,7 +364,8 @@
       "contexts": {
         "context0_qAFAFP": [
           "华能四川水电OA办公管理系统",
-          "华能曹妃甸港口有限公司"
+          "华能曹妃甸港口有限公司",
+          "玉环电厂"
         ]
       }
     },
@@ -522,6 +498,34 @@
             "公共信息",
             "公文管理",
             "日常工作办公"
+          ],
+          [
+            "FAEDDDA",
+            "FAEDDDB",
+            "FAEDDDE",
+            "FAEEADBC",
+            "FAEECEC",
+            "Left_Body",
+            "Main_Body",
+            "cc",
+            "dd",
+            "it_",
+            "ldg_lockmask",
+            "li_backof",
+            "li_moduler_list",
+            "li_outof",
+            "main_portal",
+            "mk_bl",
+            "mk_br",
+            "mk_rt",
+            "mk_tp",
+            "profile",
+            "rt",
+            "style",
+            "todo",
+            "tp",
+            "公共信息",
+            "公文管理"
           ]
         ]
       }
@@ -4693,6 +4697,184 @@
             "user",
             "user_",
             "view"
+          ],
+          [
+            "Toolbar_Today",
+            "accordion",
+            "accordion-body",
+            "accordion-collapse",
+            "accordion-expand",
+            "accordion-header",
+            "accordion-header-selected",
+            "bk_tabs",
+            "body_bg",
+            "calendar",
+            "calendar-body",
+            "calendar-day",
+            "calendar-dtable",
+            "calendar-first",
+            "calendar-header",
+            "calendar-last",
+            "calendar-menu",
+            "calendar-menu-month-inner",
+            "calendar-menu-next",
+            "calendar-menu-prev",
+            "calendar-menu-year",
+            "calendar-menu-year-inner",
+            "calendar-nav",
+            "calendar-nextmonth",
+            "calendar-nextyear",
+            "calendar-other-month",
+            "calendar-prevmonth",
+            "calendar-prevyear",
+            "calendar-saturday",
+            "calendar-selected",
+            "calendar-sunday",
+            "calendar-text",
+            "calendar-title",
+            "calendar-today",
+            "cur",
+            "dashed",
+            "datagrid__link--office",
+            "datelong",
+            "defualt_layout",
+            "easyui-accordion",
+            "easyui-fluid",
+            "easyui-layout",
+            "easyui-linkbutton",
+            "easyui-menubutton",
+            "easyui-tabs",
+            "float_r",
+            "general_table",
+            "hidden",
+            "hn_body_blk",
+            "hn_head_blk",
+            "hn_header",
+            "hn_logo",
+            "hn_nav",
+            "hn_panel_west",
+            "hn_tabs",
+            "icon-bigpic",
+            "icon-gw",
+            "icon-home",
+            "icon-more",
+            "icon-refresh",
+            "icon-right",
+            "idTabs",
+            "l-btn",
+            "l-btn-icon",
+            "l-btn-icon-left",
+            "l-btn-left",
+            "l-btn-plain",
+            "l-btn-small",
+            "l-btn-text",
+            "layout",
+            "layout-body",
+            "layout-button-left",
+            "layout-panel",
+            "layout-panel-center",
+            "layout-panel-north",
+            "layout-panel-west",
+            "layout-split-proxy-h",
+            "layout-split-proxy-v",
+            "layout-split-west",
+            "layout_close",
+            "left_menu",
+            "logout_",
+            "m-btn",
+            "m-btn-downarrow",
+            "m-btn-line",
+            "m-btn-small",
+            "main-layout__body",
+            "main_width",
+            "menu",
+            "menu-item",
+            "menu-line",
+            "menu-text",
+            "menu-top",
+            "messages_tips",
+            "messages_tips__container",
+            "mk_menu",
+            "moduler-panel",
+            "normal_style",
+            "oa_top",
+            "panel",
+            "panel-body",
+            "panel-body-noborder",
+            "panel-body-noheader",
+            "panel-header",
+            "panel-htop",
+            "panel-last",
+            "panel-noscroll",
+            "panel-title",
+            "panel-tool",
+            "panel-tool-collapse",
+            "panel-tool-expand",
+            "portal",
+            "portal-column",
+            "portal-column-left",
+            "portal-column-right",
+            "portal-column-td",
+            "portal-p",
+            "portal-panel",
+            "redlink",
+            "selected",
+            "setting",
+            "side-nav",
+            "side-nav-item",
+            "tab_blk",
+            "tab_concent",
+            "tabs",
+            "tabs-closable",
+            "tabs-close",
+            "tabs-container",
+            "tabs-first",
+            "tabs-header",
+            "tabs-header-noborder",
+            "tabs-icon",
+            "tabs-inner",
+            "tabs-last",
+            "tabs-panels",
+            "tabs-panels-noborder",
+            "tabs-scroller-left",
+            "tabs-scroller-right",
+            "tabs-selected",
+            "tabs-title",
+            "tabs-wrap",
+            "tabs_box",
+            "tips_left_ico",
+            "title",
+            "tooltip-f",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons",
+            "user",
+            "user_",
+            "view"
           ]
         ]
       }
@@ -5138,6 +5320,60 @@
             "TBODY/TR/TH",
             "TD/DIV/DIV",
             "TD/DIV/IFRAME",
+            "TD/DIV/TABLE",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-hidden",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/P"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/P",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H2/DIV",
+            "DIV/P/A",
+            "DIV/P/I",
+            "DIV/SPAN/A",
+            "DIV/SPAN/I",
+            "DIV/SPAN/INPUT-text",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "FORM/DIV/SCRIPT",
+            "H2/DIV/DIV",
+            "LI/A/SPAN",
+            "LI/I/SPAN",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
             "TD/DIV/TABLE",
             "THEAD/TR/TH",
             "TR/TD/A",
