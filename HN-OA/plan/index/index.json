@@ -15,7 +15,8 @@
     "contentPerson": "../contentPerson/index.json",
     "contentNotice": "../contentNotice/index.json",
     "contentCar": "../contentCar/index.json",
-    "contentCheck": "../contentCheck/index.json"
+    "contentCheck": "../contentCheck/index.json",
+    "contentBuMenSW": "../contentBuMenSW/index.json"
   },
   "chineseName": "首页代办",
   "description": "",
@@ -261,6 +262,10 @@
         {
           "toContextId": "context11_NPlN9v",
           "toModelId": "contentCheck"
+        },
+        {
+          "toContextId": "context12_wwMrK6",
+          "toModelId": "contentBuMenSW"
         }
       ]
     }
