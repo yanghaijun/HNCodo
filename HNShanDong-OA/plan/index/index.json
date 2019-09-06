@@ -3,6 +3,10 @@
   "id": "index",
   "targetURL": "http://59.110.171.69:31008/WebOffice/home4.nsf/index.html",
   "jsFile": "index.js",
+  "requires": {
+    "content": "../content/index.json",
+    "contentFW": "../contentFW/index.json"
+  },
   "chineseName": "首页待办",
   "description": "首页待办",
   "firstPaintEnable": false,
@@ -11,6 +15,10 @@
       "location": {
         "data": {
           "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -56,6 +64,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/partialWord",
@@ -96,6 +108,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/partialWord",
@@ -135,6 +151,10 @@
       "location": {
         "data": {
           "tagName": "IMG"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -192,6 +212,24 @@
       "toContexts": [
         {
           "toContextId": "context1_WCcJAS"
+        }
+      ]
+    },
+    "flow4_sAnpzf": {
+      "fromContextId": "context1_WCcJAS",
+      "fromAction": "doAction",
+      "fromControlId": "control2_He1afQ",
+      "toContexts": [
+        {
+          "toContextId": "context1_WCcJAS"
+        },
+        {
+          "toContextId": "context2_cQWSti",
+          "toModelId": "content"
+        },
+        {
+          "toContextId": "context3_uvtUrE",
+          "toModelId": "contentFW"
         }
       ]
     }
