@@ -23,6 +23,10 @@
         } //目前不需要收文管理判断收文的index
         if ($(this).find('td')[1].style.display != 'none' && i < ysp.receiveIndex) {
           var obj = {};obj.name = $(this).find('td').eq(2).find('a').text();obj.people = $(this).find('td').eq(5).find('span').text();obj.date = $(this).find('td').eq(6).find('span').text();obj.index = i;data.shuju.push(obj);
+        } else {
+          if (i == 0) {
+            var obj = {};obj.name = '暂无内容';data.shuju.push(obj);
+          }
         }
       });return data;
     },
