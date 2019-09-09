@@ -12,10 +12,31 @@
     "resource_inject": []
   },
   "override_urls": [],
-  "adapter_urls": [],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://HNShanDong-OA/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31008\\/WebOfficeFrame\\/MoaWebMailAddress\\.nsf\\/fomLogin\\?OpenForm"
+      ],
+      "demo": [
+        "http://59.110.171.69:31008/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm"
+      ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://HNShanDong-OA/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31008\\/WebOffice\\/home4\\.nsf\\/index\\.html"
+      ],
+      "demo": [
+        "http://59.110.171.69:31008/WebOffice/home4.nsf/index.html"
+      ]
+    }
+  ],
   "name": "山东OA",
   "default_url": "http://59.110.171.69:31008",
   "scope": "HNShanDong-OA",
   "start_url": "enterplorer://HNShanDong-OA/local/index.html",
-  "update_time": 1568011870271
+  "update_time": 1567760771176
 }
