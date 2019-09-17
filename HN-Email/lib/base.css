@@ -53,6 +53,10 @@
   background-color: #ceebff;
   padding-left: 35px;
 }
+.d_denglu .d_denglu2 .login_alert {
+  text-align: center;
+  color: #fff;
+}
 .d_denglu .d_denglu2 .denglu {
   height: 40px;
   background: #1d8cff;
