@@ -10,233 +10,6 @@
   "description": "",
   "firstPaintEnable": false,
   "controls": {
-    "control0_CRvFeQ": {
-      "location": {
-        "data": {
-          "tagName": "INPUT"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "label",
-            "prob": 4,
-            "value": {
-              "text": [
-                "用户名:"
-              ],
-              "visText": [
-                "用户名:"
-              ]
-            }
-          },
-          {
-            "id": "elem/@name",
-            "prob": 2,
-            "value": "descendant::INPUT[@name=\"username\"]"
-          },
-          {
-            "id": "@id/partialWord",
-            "prob": 3,
-            "value": {
-              "elemId": "user-id",
-              "tagName": "INPUT",
-              "prefix": "",
-              "suffix": "",
-              "ratio": 0
-            }
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[3]/TD[2]/INPUT[1]"
-          },
-          {
-            "id": "input/type",
-            "verifyEnabled": true,
-            "value": "text"
-          }
-        ]
-      },
-      "intendedRole": "textbox",
-      "roles": "element,textbox",
-      "monitored": true,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "textbox"
-    },
-    "control1_I3yBHp": {
-      "location": {
-        "data": {
-          "tagName": "INPUT"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "label",
-            "prob": 4,
-            "value": {
-              "text": [
-                "密码:"
-              ],
-              "visText": [
-                "密码:"
-              ]
-            }
-          },
-          {
-            "id": "elem/@name",
-            "prob": 2,
-            "value": "descendant::INPUT[@name=\"password\"]"
-          },
-          {
-            "id": "@id/nonWord",
-            "prob": 1,
-            "disabled": true,
-            "fact": "pw-id",
-            "value": "descendant::INPUT[@id=\"pw-id\"]"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[4]/TD[2]/INPUT[1]"
-          },
-          {
-            "id": "input/type",
-            "verifyEnabled": true,
-            "value": "password"
-          }
-        ]
-      },
-      "intendedRole": "passwordbox",
-      "roles": "element,passwordbox,textbox",
-      "monitored": true,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "textbox"
-    },
-    "control2_q6J5I9": {
-      "location": {
-        "data": {
-          "tagName": "LABEL"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "用户名:"
-              ],
-              "visText": [
-                "用户名:"
-              ]
-            }
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/LABEL[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "content": true,
-      "monitored": false,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "content"
-    },
-    "control3_5NdELM": {
-      "location": {
-        "data": {
-          "tagName": "LABEL"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "密码:"
-              ],
-              "visText": [
-                "密码:"
-              ]
-            }
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[4]/TD[1]/LABEL[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "content": true,
-      "monitored": false,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "content"
-    },
-    "control4_qqPUpi": {
-      "location": {
-        "data": {
-          "tagName": "INPUT"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "input/button/@value",
-            "prob": 3,
-            "value": {
-              "text": [
-                "登录"
-              ]
-            }
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[6]/TD[2]/INPUT[1]"
-          },
-          {
-            "id": "input/type",
-            "verifyEnabled": true,
-            "value": "submit"
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button",
-      "monitored": false,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "button"
-    },
     "control5_Cok0fX": {
       "location": {
         "data": {
@@ -275,16 +48,38 @@
       "roles": "element",
       "text": "服务器登录",
       "frameXPath": "//frame[@name='Main']<<IFRAME>>"
+    },
+    "control0_hCU0e9": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_hCU0e9"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context0_CXVOQB": {
       "controls": [
-        "control0_CRvFeQ",
-        "control1_I3yBHp",
-        "control2_q6J5I9",
-        "control3_5NdELM",
-        "control4_qqPUpi"
+        "control0_hCU0e9"
       ],
       "anchors": [
         "control5_Cok0fX"
@@ -300,30 +95,10 @@
         }
       ]
     },
-    "flow1_XLy2BF": {
+    "flow2_p7ZP5R": {
       "fromContextId": "context0_CXVOQB",
-      "fromAction": "click",
-      "fromControlId": "control0_CRvFeQ",
-      "toContexts": [
-        {
-          "toContextId": "context0_CXVOQB"
-        }
-      ]
-    },
-    "flow2_LWFh2a": {
-      "fromContextId": "context0_CXVOQB",
-      "fromAction": "click",
-      "fromControlId": "control1_I3yBHp",
-      "toContexts": [
-        {
-          "toContextId": "context0_CXVOQB"
-        }
-      ]
-    },
-    "flow3_dPDZI7": {
-      "fromContextId": "context0_CXVOQB",
-      "fromAction": "click",
-      "fromControlId": "control4_qqPUpi",
+      "fromAction": "doAction",
+      "fromControlId": "control0_hCU0e9",
       "toContexts": [
         {
           "toContextId": "context0_CXVOQB"
@@ -340,57 +115,17 @@
       "contextId": "context0_CXVOQB",
       "layout": [
         {
-          "id": "uiControl2_xNCzmT",
-          "controlId": "control2_q6J5I9",
+          "id": "uiControl0_UK1PTt",
+          "controlId": "control0_hCU0e9",
           "display": {
-            "adapterId": "content",
-            "type": "content",
+            "adapterId": "custom",
+            "type": "custom",
             "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl0_DXz7Kk",
-          "controlId": "control0_CRvFeQ",
-          "display": {
-            "adapterId": "textbox",
-            "type": "textbox",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl3_czR1Oi",
-          "controlId": "control3_5NdELM",
-          "display": {
-            "adapterId": "content",
-            "type": "content",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl1_RumFye",
-          "controlId": "control1_I3yBHp",
-          "display": {
-            "adapterId": "passwordbox",
-            "type": "passwordbox",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl4_WJpJnU",
-          "controlId": "control4_qqPUpi",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "adapter": {
-              "templateType": ""
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_UK1PTt",
+                "onGetTemplate": "getTemplate_uiControl0_UK1PTt"
+              }
             }
           }
         }
