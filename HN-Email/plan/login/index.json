@@ -16,7 +16,12 @@
           "tagName": "H1"
         },
         "userData": {
-          "data": [],
+          "data": [
+            {
+              "method": "XPath",
+              "value": ""
+            }
+          ],
           "force": false
         },
         "locators": [

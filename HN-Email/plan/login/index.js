@@ -11,7 +11,10 @@
       } else if (data.eventType == 'password') {
         var data = data.dataCustom;var elem = $(elem) && $(elem).find('table');$(elem).find('tr').eq(3).find('input').eq(0).val(data);
       } else if (data.eventType == 'button') {
-        var elem = $(elem) && $(elem).find('table');$(elem).find('tr').eq(5).find('input').eq(0).click();
+        var elem = $(elem) && $(elem).find('table');$(elem).find('tr').eq(5).find('input').eq(0).click(); //计时器处理:如果用户名或者密码输入错误，组件模板不会随pc同步需要重新点击一次
+        var times = setTimeout(function () {
+          $(elem).find('tr').eq(5).find('input').eq(0).click();
+        }, 1000);
       }
     },
     getTemplate_uiControl0_UK1PTt: function () {
