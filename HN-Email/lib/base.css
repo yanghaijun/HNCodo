@@ -67,37 +67,87 @@
   border-radius: 5px;
   margin-top: 50px;
 }
-.d_indexList {
-  background: lightcyan;
-  padding: 8px;
-  margin: 8px;
-  font-size: 12px;
-}
-.d_indexList > div {
+.d_shoujian .d_shoujianHeader {
   width: 100%;
+  height: 45px;
+  background: #288ffb;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
 }
-.d_indexList > div > span {
+.d_shoujian .d_indexList {
+  border-bottom: 1px solid #e3e3e3;
+  margin-left: 5%;
+  padding: 8px 0px;
+  font-size: 15px;
+  position: relative;
+}
+.d_shoujian .d_indexList > span:nth-child(1) {
   display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../local/img/attach.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 15px;
+  left: -4%;
 }
-.d_indexList > div > span:nth-child(1) {
-  width: 15%;
+.d_shoujian .d_indexList > span:nth-child(2) {
+  font-weight: bold;
 }
-.d_indexList > div > span:nth-child(2) {
+.d_shoujian .d_indexList > span:nth-child(3) {
+  float: right;
+  margin-right: 10%;
+  color: #9b9b9b;
+}
+.d_shoujian .d_indexList > span:nth-child(4) {
+  display: block;
   width: 85%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.d_shoujian .d_indexList > span:nth-child(5) {
+  color: #9b9b9b;
+}
+.d_shoujian .d_indexList > span:nth-child(6) {
+  position: absolute;
+  top: 6px;
+  left: -4%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background: #ff2700;
+}
+.d_shoujian .d_indexList > div:nth-child(7) {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+}
+.d_shoujian .d_indexList > div:nth-child(7) > span:nth-child(1) {
+  display: inline-block;
+  margin: 10px;
+  width: 12px;
+  height: 12px;
+  background: url('../local/img/right.png') no-repeat;
+  background-size: contain;
+}
 .d_detialBack {
   width: 100%;
   height: 45px;
-  background: blue;
+  background: #288ffb;
   color: #fff;
   padding: 10px;
 }
-.d_detailTitle {
-  background: #eeeeee;
-  padding: 8px;
+.d_detail .d_detailTitle {
   margin: 8px;
   font-size: 12px;
+}
+.d_detail .d_fujian > div > span:nth-child(1) {
+  display: inline-block;
+}
+.d_detail .d_fujian > div > span:nth-child(2) {
+  display: inline-block;
 }
