@@ -107,6 +107,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.d_shoujian .d_indexList .red {
+  color: #ff3131;
+}
 .d_shoujian .d_indexList > span:nth-child(5) {
   color: #9b9b9b;
 }
