@@ -102,7 +102,7 @@
     }
     >span:nth-child(3){
       float: right;
-      margin-right: 10%;
+      margin-right: 15%;
       color: #9b9b9b;
     } 
     >span:nth-child(4){
@@ -125,44 +125,126 @@
       border-radius: 50px;
       background: #ff2700;
     }
-    >div:nth-child(7){
+    >span:nth-child(7){
       position: absolute;
-      top: 2px;
+      top: 8px;
       right: 8px;
-      width: 30px;
-      height: 30px;  
-      >span:nth-child(1){
       display: inline-block;
-      margin: 10px;
-      width: 12px;
-      height: 12px;
-      background: url('../local/img/right.png') no-repeat;
+      width: 20px;
+      height: 20px;
+      background:url('../local/img/right.png') no-repeat;
       background-size: contain;
-    } 
     } 
   }	
 }
 .d_detialBack{
     width: 100%;
     height: 45px;
-    background: #288ffb;
+    background: #2a8ff9;
     color: #fff;
     padding: 10px;
+  >span:nth-child(1){
+    display: inline-block;
+    width: 50%;
+  }
+  >span:nth-child(2){
+    display: inline-block;
+    width: 50%;
+  }
 }
 .d_detail{
+  padding: 8px;
+ // position: relative;
   .d_detailTitle{
-   
-    margin: 8px;
-    font-size: 12px;
+    &>div{
+      width: 100%;
+      font-size: 14px;
+      color: #000;
+    }
+    >h6{
+      border-top: 1px solid #ececec;
+      border-bottom: 1px solid #ececec;
+      line-height: 30px;
+      font-size: 16px;
+    }
 	}
   .d_fujian{
-    &>div{
-      >span:nth-child(1){
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    font-size: 13px;
+  	&>div{
+      background: #f6f6f8;
+      border-radius: 5px;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 8px;
+      position: relative;
+      .p{
+        position: absolute;
+        top: 10px;
+        left: 10px;
         display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../local/img/pdf.png') no-repeat;
+        background-size: contain;
+      }
+      .w{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../local/img/word.png') no-repeat;
+        background-size: contain;
+      }
+      .e{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../local/img/excel.png') no-repeat;
+        background-size: contain;
       }
       >span:nth-child(2){
         display: inline-block;
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10%;
+        overflow:hidden;
+        text-overflow:ellipsis; 
+        white-space:nowrap;
+      }
+     	>span:nth-child(3){
+        display: inline-block;
+        width: 17px;
+        height: 25px;
+        margin-right: 10px;
+        background: url('../local/img/down.png') no-repeat;
+        background-size: contain;
+      }
+      >span:nth-child(4){
+        display: inline-block;
+        width: 1px;
+        height: 30px;
+        background: #e3e3e5;
+      }
+      >span:nth-child(5){
+      	display: inline-block;
+        width: 17px;
+        height: 25px;
+        margin-left: 10px;
+       	background: url('../local/img/brow.jpg') no-repeat;
+       	background-size: contain;
+        
       }
     }
-  }
+}
 }

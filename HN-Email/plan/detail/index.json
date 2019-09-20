@@ -99,7 +99,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "ignoreVisibility": true,
+      "ignoreVisibility": false,
       "monitored": true,
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "componentType": "custom"
