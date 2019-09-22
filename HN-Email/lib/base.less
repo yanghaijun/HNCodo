@@ -2,10 +2,13 @@
 // Less 的语法与 CSS 兼容，可以直接用 CSS 语法进行编写
 // 如需了解详情，请访问 http://www.lesscss.net/
 // 发布后，base.less 被编译成 base.css 文件
-.d_denglu{
+[data-ysp-modelid='login'] {
   width: 100%;
-  height: 100%;
-  background: url("../local/img/bacground.png");
+  height: 100vh;
+  background: url("../local/img/bacground.png") no-repeat;
+  background-size: cover;
+}
+.d_denglu{
   padding: 15% 10%; 
   .d_denglu2{
     height: 70%;
@@ -53,6 +56,7 @@
         height: 100%;
         background-color: #ceebff;
         padding-left: 35px;
+        border: none;
       }
     }
     .login_alert{
@@ -80,11 +84,17 @@
     color: #fff;
 		text-align: center;
     line-height: 45px;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
   }
+  >div:nth-child(2){
+    margin-top: 45px;
   .d_indexList{
     border-bottom: 1px solid #e3e3e3;
     margin-left: 5%;
-    padding: 8px 0px;
+    padding: 4px 0px;
     font-size: 15px;
     position: relative;
     >span:nth-child(1){
@@ -94,7 +104,7 @@
       background: url("../local/img/attach.png") no-repeat;
       background-size: contain;
       position: absolute;
-      top: 15px;
+      top: 10px;
       left: -4%;
     }
     >span:nth-child(2){
@@ -102,7 +112,7 @@
     }
     >span:nth-child(3){
       float: right;
-      margin-right: 15%;
+      margin-right: 10%;
       color: #9b9b9b;
     } 
     >span:nth-child(4){
@@ -120,7 +130,7 @@
     }
     >span:nth-child(6){
       position: absolute;
-      top: 6px;
+      top: 4px;
       left: -4%;
       width: 6px;
       height: 6px;
@@ -129,15 +139,16 @@
     }
     >span:nth-child(7){
       position: absolute;
-      top: 8px;
+      top: 7px;
       right: 8px;
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
       background:url('../local/img/right.png') no-repeat;
       background-size: contain;
     } 
   }	
+	}
 }
 .d_detialBack{
     width: 100%;
@@ -168,12 +179,13 @@
       border-bottom: 1px solid #ececec;
       line-height: 30px;
       font-size: 16px;
+      padding: 8px 0px;
     }
 	}
+  .d_detailContent{
+    height: 100px;
+  }
   .d_fujian{
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
     width: 100%;
     font-size: 13px;
   	&>div{
