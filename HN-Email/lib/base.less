@@ -150,7 +150,9 @@
   }	
 	}
 }
-.d_detialBack{
+
+.d_detail{
+  .d_detialBack{
     width: 100%;
     height: 45px;
     background: #2a8ff9;
@@ -165,9 +167,8 @@
     width: 50%;
   }
 }
-.d_detail{
-  padding: 8px;
   .d_detailTitle{
+    padding: 8px;
     &>div{
       width: 100%;
       font-size: 14px;
@@ -178,12 +179,15 @@
       border-bottom: 1px solid #ececec;
       line-height: 30px;
       font-size: 16px;
-      padding: 8px 0px;
     }
 	}
   .d_fujian{
     width: 100%;
     font-size: 13px;
+    margin-top: 100px;
+    height: 120px;
+    overflow-y: scroll;
+    padding: 8px;
   	&>div{
       background: #f6f6f8;
       border-radius: 5px;
@@ -191,11 +195,14 @@
       height: 50px;
       padding: 10px;
       margin-bottom: 8px;
-      position: relative;
+      >div:nth-child(1){
+        width: 80%;
+        float: left;
+        position: relative;
       .p{
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -204,8 +211,8 @@
       }
       .w{
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -214,8 +221,8 @@
       }
       .e{
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -223,37 +230,41 @@
         background-size: contain;
       }
       >span:nth-child(2){
+        width: 100%;;
         display: inline-block;
-        width: 80%;
-        height: 30px;
         line-height: 30px;
-        padding-left: 10%;
+    		padding-left: 15%;
         overflow:hidden;
         text-overflow:ellipsis; 
-        white-space:nowrap;
+        white-space:nowrap;  
       }
-     	>span:nth-child(3){
-        display: inline-block;
-        width: 17px;
-        height: 25px;
-        margin-right: 10px;
-        background: url('../local/img/down.png') no-repeat;
-        background-size: contain;
       }
-      >span:nth-child(4){
-        display: inline-block;
-        width: 1px;
-        height: 30px;
-        background: #e3e3e5;
-      }
-      >span:nth-child(5){
-      	display: inline-block;
-        width: 17px;
-        height: 25px;
-        margin-left: 10px;
-       	background: url('../local/img/brow.jpg') no-repeat;
-       	background-size: contain;
-        
+      >div:nth-child(2){
+        width: 20%;
+        float: left;
+        >span:nth-child(1){
+          display: inline-block;
+          width: 17px;
+          height: 25px;
+          margin-right: 8px;
+          background: url('../local/img/down.png') no-repeat;
+          background-size: contain;
+        }
+        >span:nth-child(2){
+          display: inline-block;
+          width: 1px;
+          height: 30px;
+          background: #e3e3e5;
+        }
+        >span:nth-child(3){
+          display: inline-block;
+          width: 17px;
+          height: 25px;
+          margin-left: 8px;
+          background: url('../local/img/brow.jpg') no-repeat;
+          background-size: contain;
+
+        }
       }
     }
 }

@@ -143,22 +143,22 @@
   background: url('../local/img/right.png') no-repeat;
   background-size: contain;
 }
-.d_detialBack {
+.d_detail .d_detialBack {
   width: 100%;
   height: 45px;
   background: #2a8ff9;
   color: #fff;
   padding: 10px;
 }
-.d_detialBack > span:nth-child(1) {
+.d_detail .d_detialBack > span:nth-child(1) {
   display: inline-block;
   width: 50%;
 }
-.d_detialBack > span:nth-child(2) {
+.d_detail .d_detialBack > span:nth-child(2) {
   display: inline-block;
   width: 50%;
 }
-.d_detail {
+.d_detail .d_detailTitle {
   padding: 8px;
 }
 .d_detail .d_detailTitle > div {
@@ -171,11 +171,14 @@
   border-bottom: 1px solid #ececec;
   line-height: 30px;
   font-size: 16px;
-  padding: 8px 0px;
 }
 .d_detail .d_fujian {
   width: 100%;
   font-size: 13px;
+  margin-top: 100px;
+  height: 120px;
+  overflow-y: scroll;
+  padding: 8px;
 }
 .d_detail .d_fujian > div {
   background: #f6f6f8;
@@ -184,67 +187,74 @@
   height: 50px;
   padding: 10px;
   margin-bottom: 8px;
+}
+.d_detail .d_fujian > div > div:nth-child(1) {
+  width: 80%;
+  float: left;
   position: relative;
 }
-.d_detail .d_fujian > div .p {
+.d_detail .d_fujian > div > div:nth-child(1) .p {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   display: inline-block;
   width: 30px;
   height: 30px;
   background: url('../local/img/pdf.png') no-repeat;
   background-size: contain;
 }
-.d_detail .d_fujian > div .w {
+.d_detail .d_fujian > div > div:nth-child(1) .w {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   display: inline-block;
   width: 30px;
   height: 30px;
   background: url('../local/img/word.png') no-repeat;
   background-size: contain;
 }
-.d_detail .d_fujian > div .e {
+.d_detail .d_fujian > div > div:nth-child(1) .e {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   display: inline-block;
   width: 30px;
   height: 30px;
   background: url('../local/img/excel.png') no-repeat;
   background-size: contain;
 }
-.d_detail .d_fujian > div > span:nth-child(2) {
+.d_detail .d_fujian > div > div:nth-child(1) > span:nth-child(2) {
+  width: 100%;
   display: inline-block;
-  width: 80%;
-  height: 30px;
   line-height: 30px;
-  padding-left: 10%;
+  padding-left: 15%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.d_detail .d_fujian > div > span:nth-child(3) {
+.d_detail .d_fujian > div > div:nth-child(2) {
+  width: 20%;
+  float: left;
+}
+.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(1) {
   display: inline-block;
   width: 17px;
   height: 25px;
-  margin-right: 10px;
+  margin-right: 8px;
   background: url('../local/img/down.png') no-repeat;
   background-size: contain;
 }
-.d_detail .d_fujian > div > span:nth-child(4) {
+.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(2) {
   display: inline-block;
   width: 1px;
   height: 30px;
   background: #e3e3e5;
 }
-.d_detail .d_fujian > div > span:nth-child(5) {
+.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(3) {
   display: inline-block;
   width: 17px;
   height: 25px;
-  margin-left: 10px;
+  margin-left: 8px;
   background: url('../local/img/brow.jpg') no-repeat;
   background-size: contain;
 }
