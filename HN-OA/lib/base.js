@@ -1,8 +1,8 @@
 // base.js 是对原 PC 页面进行操作的脚本文件
 // 通常用于处理原 PC 页面的兼容性问题、页面跳转逻辑等
 (function (win, ysp) {
-
   var utils = ysp.utils;
+  var topWin = top;
   ysp.customHelper = {};
   utils.extend(ysp.customHelper, {
     /* 适配中定制的公共代码放在这里 */
@@ -17,12 +17,59 @@
     // 以下两个方法用于修改原页面中的错误, 但执行时机不同
     // 当目标页面加载完onload时执行, aWin为当前页面的window对象, doc为当前页面的document对象
     onTargetLoad: function(aWin, doc){
-
+			// if(topWin.EAPI.isIOS() && aWin.location.href == 'http://59.110.171.69:31003/'){
+			// var userName = topWin.yspUser.getUserName();
+			// var password = topWin.yspUser.getPassword();
+			// $.ajax({
+			// url: 'http://59.110.171.69:31003/names.nsf',
+			// type: 'post',
+			// data: {Login:'',Username:userName,Password:password},
+			// success:function(){
+			// aWin.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+			// }
+			// })
+			// }
     },
 
     // 目标页面加载前执行, aWin为当前页面的window对象, doc为当前页面的document对象
     beforeTargetLoad: function(aWin, doc) {
-
+			if(aWin.location.href == 'http://59.110.171.69:31003/' ||  aWin.location.href == 'http://59.110.171.69:31003/names.nsf?Login'){
+        //获取用户名和密码，自动登录
+        if (topWin.EAPI.isAndroid()) {
+          var userName = huaneng.getUserName();
+          var password = huaneng.getPassword();
+          $.ajax({
+            url: 'http://59.110.171.69:31003/names.nsf?Login',
+            type: 'post',
+            data: {Username:userName,Password:password},
+            success:function(){
+              aWin.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+            }
+          })
+        } else if (topWin.EAPI.isIOS()) {
+          // var userName = topWin.yspUser.getUserName();
+          // var password = topWin.yspUser.getPassword();
+          // $.ajax({
+          //   url: 'http://59.110.171.69:31003/names.nsf',
+          //   type: 'post',
+          //   data: {Login:'',Username:userName,Password:password},
+          //   success:function(){
+          //     aWin.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+          //   }
+          // })
+        } else {
+          // $.ajax({
+          //   url: 'http://59.110.171.69:31003/names.nsf?Login',
+          //   type: 'post',
+          //   data: {Username:'66666668',Password:'Vmeet1234**'},
+          //   success:function(){
+          //     aWin.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+          //   }
+          // })
+          
+        }
+        
+      }
     },
 
     //登录相关接口

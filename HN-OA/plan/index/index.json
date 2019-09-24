@@ -176,6 +176,65 @@
       "roles": "element,image,button",
       "text": "",
       "frameXPath": ""
+    },
+    "control43_Af6AKy": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待办待阅"
+              ],
+              "visText": [
+                "待办待阅"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "value": {
+              "funcName": "void",
+              "redirect": "SPAN[1]"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"Main_Body\"]/DIV[1]/DIV[3]/UL[1]/LI[2]/A[1]/SPAN[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "LI.tabs-last.tabs-selected A.tabs-inner SPAN.tabs-title.tabs-closable"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[5]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/UL[1]/LI[2]/A[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "content"
     }
   },
   "contexts": {
@@ -183,7 +242,8 @@
       "controls": [
         "control2_SwOSql",
         "control9_QFsNKk",
-        "control10_igaWMQ"
+        "control10_igaWMQ",
+        "control43_Af6AKy"
       ],
       "anchors": [
         "control11_Qm11b0"
@@ -212,6 +272,10 @@
       "toContexts": [
         {
           "toContextId": "context0_qAFAFP"
+        },
+        {
+          "toContextId": "context1_QXbhsT",
+          "toModelId": "loginOA"
         }
       ]
     },
@@ -286,6 +350,18 @@
                 "onDoAction": "doAction_uiControl2_cTk4Do",
                 "onGetTemplate": "getTemplate_uiControl2_cTk4Do"
               }
+            }
+          }
+        },
+        {
+          "id": "uiControl42_Cv7oya",
+          "controlId": "control43_Af6AKy",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "text": "待办待阅index",
+            "adapter": {
+              "templateType": ""
             }
           }
         },

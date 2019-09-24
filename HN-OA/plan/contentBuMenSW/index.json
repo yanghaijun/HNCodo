@@ -12,6 +12,10 @@
         "data": {
           "tagName": "FORM"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@class/word",
@@ -38,6 +42,10 @@
       "location": {
         "data": {
           "tagName": "DD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -80,6 +88,10 @@
       "location": {
         "data": {
           "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -200,7 +212,8 @@
     "page/urls": {
       "contexts": {
         "context12_wwMrK6": [
-          "59.110.171.69:31003/WebOffice/MoaWebShouWen_BM.nsf/0/AFB0F946F6CD963648258466002EE190?EditDocument&fldadocid=737A5AEE529373774825846D001FB9E8"
+          "59.110.171.69:31003/WebOffice/MoaWebShouWen_BM.nsf/0/AFB0F946F6CD963648258466002EE190?EditDocument&fldadocid=737A5AEE529373774825846D001FB9E8",
+          "59.110.171.69:31003/WebOffice/MoaWebShouWen_BM.nsf/0/AC1681FC5D46A2F548258466002B8D3A?EditDocument&fldadocid=0584D3F3138B452B482584710028BC8D"
         ]
       }
     },
@@ -311,6 +324,90 @@
             "ui_title",
             "ui_title_bar",
             "ui_title_buttons"
+          ],
+          [
+            "Information",
+            "Release",
+            "Separated",
+            "UpLayer",
+            "about_file",
+            "blue_btn",
+            "btn_r",
+            "btns",
+            "common_view",
+            "data",
+            "down_table_list",
+            "down_table_list_text",
+            "easyui-combobox",
+            "fill_view",
+            "fill_view_text",
+            "flex_menu",
+            "friend_add_btn",
+            "friend_bottom_blk",
+            "friend_class",
+            "friend_close_btn",
+            "friend_list",
+            "friend_list_btn",
+            "friend_list_bwbtn",
+            "friend_list_menu",
+            "left_concent",
+            "left_normal_style",
+            "left_panel",
+            "m_t",
+            "menu",
+            "menu_small",
+            "navbox",
+            "normal_btn_gray",
+            "num_",
+            "path",
+            "path_btn",
+            "path_btn_style",
+            "path_fix_ico",
+            "path_list",
+            "read",
+            "right_concent",
+            "right_panel",
+            "selected",
+            "shrink",
+            "sort_blk",
+            "sort_table",
+            "sub_concent",
+            "subnav",
+            "table_blk",
+            "table_list_blk",
+            "tit",
+            "title",
+            "top_fix_bar",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_loading",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_state_focus",
+            "ui_state_visible",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons"
           ]
         ]
       }
@@ -375,6 +472,73 @@
             "TR/TD/DL",
             "TR/TD/IMG",
             "TR/TD/INPUT-null",
+            "TR/TH/DL",
+            "UL/LI/A",
+            "UL/LI/DIV"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/IFRAME",
+            "-/DIV/TABLE",
+            "-/FORM/BR",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "A/SPAN/EM",
+            "DIV/A/B",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FONT",
+            "DIV/DIV/H1",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/FONT/INPUT-null",
+            "DIV/P/A",
+            "DIV/P/FONT",
+            "DIV/P/TABLE",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DT/A",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/FONT",
+            "FORM/DIV/INPUT-null",
+            "FORM/DIV/P",
+            "LI/A/SPAN",
+            "LI/DIV/A",
+            "LI/DIV/UL",
+            "P/FONT/INPUT-null",
+            "P/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/DL/DD",
+            "TD/DL/DT",
+            "TD/TABLE/TBODY",
+            "TH/DL/DD",
+            "TH/DL/DT",
+            "THEAD/TR/TH",
+            "TR/TD/DIV",
+            "TR/TD/DL",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-null",
+            "TR/TD/TABLE",
+            "TR/TH/B",
             "TR/TH/DL",
             "UL/LI/A",
             "UL/LI/DIV"

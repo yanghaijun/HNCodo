@@ -12,6 +12,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@class/word",
@@ -38,6 +42,10 @@
       "location": {
         "data": {
           "tagName": "DD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -84,6 +92,10 @@
       "location": {
         "data": {
           "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -203,7 +215,8 @@
     "page/urls": {
       "contexts": {
         "context6_ANAILc": [
-          "59.110.171.69:31003/WebOffice/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3"
+          "59.110.171.69:31003/WebOffice/MoaWebCWFK.nsf/0/EBDF3E105E25A4C04825844F002CFBD3?EditDocument&fldadocid=B289DCE3641E76B04825844F002CFBD3",
+          "59.110.171.69:31003/WebOffice/MoaWebCWFK.nsf/0/840DE62B850E7B7E482584560026C3DB?EditDocument&fldadocid=8FB76EF3DBABBFDD482584560026C3DB"
         ]
       }
     },

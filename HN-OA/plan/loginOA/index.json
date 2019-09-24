@@ -4,7 +4,8 @@
   "targetURL": "http://59.110.171.69:31003/",
   "jsFile": "index.js",
   "requires": {
-    "index": "../index/index.json"
+    "index": "../index/index.json",
+    "true_todoList": "../true_todoList/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -40,12 +41,44 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control38_UpuyAZ": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.login_blk_position.bgStretcher-container DIV.bgstretcher-area DIV.bgstretcher-page FORM"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control38_UpuyAZ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_QXbhsT": {
       "controls": [
-        "control0_smV5Jh"
+        "control0_smV5Jh",
+        "control38_UpuyAZ"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -73,6 +106,10 @@
         {
           "toContextId": "context0_qAFAFP",
           "toModelId": "index"
+        },
+        {
+          "toContextId": "context13_H6XhBB",
+          "toModelId": "true_todoList"
         }
       ]
     }
@@ -81,6 +118,21 @@
     "page1_F0fbrU": {
       "contextId": "context1_QXbhsT",
       "layout": [
+        {
+          "id": "uiControl37_8R9wFI",
+          "controlId": "control38_UpuyAZ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl37_8R9wFI",
+                "onGetTemplate": "getTemplate_uiControl37_8R9wFI"
+              }
+            }
+          }
+        },
         {
           "id": "uiControl0_acry19",
           "controlId": "control0_smV5Jh",

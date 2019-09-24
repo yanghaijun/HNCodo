@@ -6,7 +6,10 @@
   "description": "",
   "options": {
     "resource_intercept": {
-      "type": [],
+      "type": [
+        "image",
+        "css"
+      ],
       "ignore": []
     },
     "resource_inject": [],
@@ -37,7 +40,104 @@
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Vmeet.ccyanghaijun"
   },
-  "override_urls": [],
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery\\.easyui\\.min\\.js"
+      ],
+      "target_url": "override/easyui.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
+      ],
+      "target_url": "override/oa.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/lhgdialog\\/lhgdialog\\/lhgdialog\\.min\\.js.*"
+      ],
+      "target_url": "override/lhgdialog.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery-1\\.7\\.2\\.min\\.js"
+      ],
+      "target_url": "override/jquery.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery\\.qtip\\.min\\.js"
+      ],
+      "target_url": "override/jqueryqtip.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery\\.portal\\.js"
+      ],
+      "target_url": "override/jqueryportal.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa\\/jsfw\\/boot\\.js"
+      ],
+      "target_url": "override/boot.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/script\\/jquery-1\\.11\\.1\\.min\\.js"
+      ],
+      "target_url": "override/jquery1111.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/zTree\\/js\\/jquery\\.ztree\\.all\\.min\\.js"
+      ],
+      "target_url": "override/jqueryztree.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/themes\\/bjml\\/home\\.css"
+      ],
+      "target_url": "override/home.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/domcfg\\.nsf\\/js\\/jquery\\.ibutton\\.js"
+      ],
+      "target_url": "override/jquerybutton.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/zTree\\/css\\/zTreeStyle\\/zTreeStyle\\.css"
+      ],
+      "target_url": "override/zTreeStyle.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/domcfg\\.nsf\\/js\\/jquery\\.freeow\\.js"
+      ],
+      "target_url": "override/jqueryfreeow.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/qtip2\\/jquery\\.qtip\\.min\\.js"
+      ],
+      "target_url": "override/jqueryqtip2.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/moa2\\/basic\\/icons\\.css"
+      ],
+      "target_url": "override/icons.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:31003\\/domcfg\\.nsf\\/js\\/jquery-1\\.5\\.2\\.min\\.js"
+      ],
+      "target_url": "override/jquery152.js"
+    }
+  ],
   "adapter_urls": [
     {
       "title": "loginOA",
@@ -56,12 +156,22 @@
       "demo": [
         "http://59.110.171.69:31003/WebOffice/home4.nsf/index.html"
       ]
+    },
+    {
+      "title": "true_todoList",
+      "url": "adapter://HN-OA/plan/true_todoList/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31003\\/WebOffice\\/MoaWebConfigSet\\.nsf\\/fomBoxList4\\?OpenForm&v=viwInBox&d=MoaWebOffice\\.nsf"
+      ],
+      "demo": [
+        "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf"
+      ]
     }
   ],
   "name": "四川OA",
   "default_url": "http://59.110.171.69:31003/",
   "scope": "HN-OA",
   "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1567752036651,
+  "update_time": 1569230811802,
   "runtime_env": "1webview"
 }
