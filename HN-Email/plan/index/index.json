@@ -121,12 +121,62 @@
       "text": "收件箱信息公司工作月报-第8期.do ",
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "customJS": "if(elem.querySelectorAll('li')[1].getAttribute('class').indexOf('x-tab-strip-closable')==0){return false}else {return true}"
+    },
+    "control1_maLqHB": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "ext-comp-1002",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"tabgrid\"]//",
+              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "ratio": 0.169
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control1_maLqHB"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_vK0GRS": {
       "controls": [
-        "control6_xBCCPl"
+        "control6_xBCCPl",
+        "control1_maLqHB"
       ],
       "anchors": [
         "control8_BagoMf"
@@ -153,6 +203,23 @@
           "toModelId": "detail"
         }
       ]
+    },
+    "flow3_bEvpoL": {
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        }
+      ]
+    },
+    "flow6_nm9eOp": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control1_maLqHB",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        }
+      ]
     }
   },
   "pages": {
@@ -170,6 +237,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl5_U714Mi",
                 "onGetTemplate": "getTemplate_uiControl5_U714Mi"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl1_vTyKkZ",
+          "controlId": "control1_maLqHB",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl1_vTyKkZ",
+                "onGetTemplate": "getTemplate_uiControl1_vTyKkZ"
               }
             }
           }

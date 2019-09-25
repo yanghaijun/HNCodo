@@ -17,6 +17,50 @@
     }, getTemplate_uiControl5_U714Mi: function () {
       var selfTemplate = "module.exports = React.createClass({\n  getValue: function(e) {\n    var target = e.target;\n    var hanlder=this.props.customHandler;\n    if(hanlder){\n      hanlder({\n        eventType:\"getValue\",\n        data:target.getAttribute('index')\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    var me =this;\n    return (\n      <div className='d_shoujian'>\n        <div className='d_shoujianHeader'>\u6536\u4EF6\u7BB1</div>\n        <div> \n          {data.list&&data.list.map(function(i,h){\n              if(h>0){\n                 return ( <div className='d_indexList'>\n                    <span style={{'display':i.imgs==0?'none':'block'}}></span>\n                    <span>{i.name}</span>\n                    <span>{i.date}  {i.time}</span>\n                    <span className={i.titleColor}>{i.title}</span>\n                    <span>\u5927\u5C0F\uFF1A {i.cav}</span>\n                    <span style={{'display':i.imgs==2?'block':'none'}}></span>\n                    <span index={i.index} onClick={me.getValue}></span>\n                </div>)\n              }    \n            })}\n          </div>\n      </div>\n    )\n  }\n});";
       return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n\n  getValue: function getValue(e) {\n    var target = e.target;\n    var hanlder = this.props.customHandler;\n    if (hanlder) {\n      hanlder({\n        eventType: \"getValue\",\n        data: target.getAttribute('index')\n      });\n    }\n  },\n  render: function render() {\n    var data = this.props.customData;\n    var me = this;\n    return React.createElement(\n      'div',\n      { className: 'd_shoujian' },\n      React.createElement(\n        'div',\n        { className: 'd_shoujianHeader' },\n        '\\u6536\\u4EF6\\u7BB1'\n      ),\n      React.createElement(\n        'div',\n        null,\n        data.list && data.list.map(function (i, h) {\n          if (h > 0) {\n            return React.createElement(\n              'div',\n              { className: 'd_indexList' },\n              React.createElement('span', { style: { 'display': i.imgs == 0 ? 'none' : 'block' } }),\n              React.createElement(\n                'span',\n                null,\n                i.name\n              ),\n              React.createElement(\n                'span',\n                null,\n                i.date,\n                '  ',\n                i.time\n              ),\n              React.createElement(\n                'span',\n                { className: i.titleColor },\n                i.title\n              ),\n              React.createElement(\n                'span',\n                null,\n                '\\u5927\\u5C0F\\uFF1A ',\n                i.cav\n              ),\n              React.createElement('span', { style: { 'display': i.imgs == 2 ? 'block' : 'none' } }),\n              React.createElement('span', { index: i.index, onClick: me.getValue })\n            );\n          }\n        })\n      )\n    );\n  }\n});";
+    },
+    getData_control1_maLqHB: function (elem) {
+      if (!elem) {
+        return;
+      }var data = { flag1: [], flag2: [], flag3: [], flag4: [] };var tds = elem.querySelector("tr") && elem.querySelector("tr").querySelectorAll('td[class="x-toolbar-cell"]');var oneClassName = tds[0].querySelector("table").className;var twoClassName = tds[1].querySelector("table").className;var threeClassName = tds[7].querySelector("table").className;var fourClassName = tds[8].querySelector("table").className;if (oneClassName.indexOf("x-item-disabled") > -1) {
+        data.flag1.push(false);
+      } else {
+        data.flag1.push(true);
+      }if (twoClassName.indexOf("x-item-disabled") > -1) {
+        data.flag2.push(false);
+      } else {
+        data.flag2.push(true);
+      }if (threeClassName.indexOf("x-item-disabled") > -1) {
+        data.flag3.push(false);
+      } else {
+        data.flag3.push(true);
+      }if (fourClassName.indexOf("x-item-disabled") > -1) {
+        data.flag4.push(false);
+      } else {
+        data.flag4.push(true);
+      }return data;
+    },
+    doAction_uiControl1_vTyKkZ: function (data, elem) {
+      var types = data.eventType;var tds = elem.querySelector("tr") && elem.querySelector("tr").querySelectorAll('td[class="x-toolbar-cell"]');if (types == 'one') {
+        tds && tds[0].querySelector("em").click();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 1000);
+      }if (types == 'two') {
+        tds && tds[1].querySelector("em").click();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 1000);
+      }if (types == 'three') {
+        tds && tds[7].querySelector("em").click();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 1000);
+      }if (types == 'four') {
+        tds && tds[8].querySelector("em").click();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 1000);
+      }
+    },
+    getTemplate_uiControl1_vTyKkZ: function () {
+      var selfTemplate = 'module.exports = React.createClass({\n  handlerOne(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'one\'\n      })\n    }\n  },\n  handlerTwo(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'two\'\n      })\n    }\n  },\n  handlerThree(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'three\'\n      })\n    }\n  },\n  handlerFour(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'four\'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div className = "ysp-pages">\n        <div>\n          <span className = {data && data.flag1[0] == true ? "oneGo" : "onNoGo"} \n            onClick={this.handlerOne.bind(this)}></span>\n          <span className = {data && data.flag2[0] == true ? "twoGo" : "twoNoGo"} \n            onClick={this.handlerTwo.bind(this)}></span>\n        </div>\n        <div>\n        \t<span className = {data && data.flag3[0] == true ? "threeGo" : "threeNoGo"} \n            onClick={this.handlerThree.bind(this)}></span>\n          <span className = {data && data.flag4[0] == true ? "fourGo" : "fourNoGo"} \n            onClick={this.handlerFour.bind(this)}></span>\n        </div>\n      </div>\n    )\n  }\n});\n\n\n\n\n\n\n';
+      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n  handlerOne: function handlerOne() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'one\'\n      });\n    }\n  },\n  handlerTwo: function handlerTwo() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'two\'\n      });\n    }\n  },\n  handlerThree: function handlerThree() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'three\'\n      });\n    }\n  },\n  handlerFour: function handlerFour() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'four\'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \'div\',\n      { className: \'ysp-pages\' },\n      React.createElement(\n        \'div\',\n        null,\n        React.createElement(\'span\', { className: data && data.flag1[0] == true ? "oneGo" : "onNoGo",\n          onClick: this.handlerOne.bind(this) }),\n        React.createElement(\'span\', { className: data && data.flag2[0] == true ? "twoGo" : "twoNoGo",\n          onClick: this.handlerTwo.bind(this) })\n      ),\n      React.createElement(\n        \'div\',\n        null,\n        React.createElement(\'span\', { className: data && data.flag3[0] == true ? "threeGo" : "threeNoGo",\n          onClick: this.handlerThree.bind(this) }),\n        React.createElement(\'span\', { className: data && data.flag4[0] == true ? "fourGo" : "fourNoGo",\n          onClick: this.handlerFour.bind(this) })\n      )\n    );\n  }\n});';
     }
   }, "index");
 })(window, ysp);
