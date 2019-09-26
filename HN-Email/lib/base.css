@@ -106,11 +106,14 @@
 }
 .d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(2) {
   font-weight: bold;
+  display: inline-block;
+  width: 56%;
 }
 .d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(3) {
   float: right;
-  margin-right: 10%;
   color: #9b9b9b;
+  display: inline-block;
+  width: 44%;
 }
 .d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(4) {
   display: block;
@@ -124,6 +127,8 @@
 }
 .d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(5) {
   color: #9b9b9b;
+  display: inline-block;
+  width: 100%;
 }
 .d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(6) {
   position: absolute;
@@ -189,7 +194,7 @@
   margin-bottom: 8px;
 }
 .d_detail .d_fujian > div > div:nth-child(1) {
-  width: 80%;
+  width: 100%;
   float: left;
   position: relative;
 }
@@ -224,39 +229,13 @@
   background-size: contain;
 }
 .d_detail .d_fujian > div > div:nth-child(1) > span:nth-child(2) {
-  width: 100%;
+  width: 90%;
   display: inline-block;
   line-height: 30px;
   padding-left: 15%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.d_detail .d_fujian > div > div:nth-child(2) {
-  width: 20%;
-  float: left;
-}
-.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(1) {
-  display: inline-block;
-  width: 17px;
-  height: 25px;
-  margin-right: 8px;
-  background: url('../local/img/down.png') no-repeat;
-  background-size: contain;
-}
-.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(2) {
-  display: inline-block;
-  width: 1px;
-  height: 30px;
-  background: #e3e3e5;
-}
-.d_detail .d_fujian > div > div:nth-child(2) > span:nth-child(3) {
-  display: inline-block;
-  width: 17px;
-  height: 25px;
-  margin-left: 8px;
-  background: url('../local/img/brow.jpg') no-repeat;
-  background-size: contain;
 }
 .ysp-pages {
   position: fixed;
