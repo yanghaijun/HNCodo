@@ -26,7 +26,7 @@
         //以上是附件标题和附件的logo，一下是附件url
         $(fujianList).find('a').each(function (d, p) {
           if (this.style.display) {
-            var url = "http://59.110.171.69:31009/" + this.pathname;data.fujianOpen.push(url);
+            var url = "http://59.110.171.69:31009" + this.pathname;data.fujianOpen.push(url);
           }
         });data.cookies.push(elem.ownerDocument.cookie);
       }return data;
@@ -35,12 +35,18 @@
       if (data.eventType == 'back') {
         var back = elem.ownerDocument.querySelector('#ext-gen19');$(back).find('li').eq('1').find('a').click();
       } else if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];if (top.EAPI.isAndroid()) {
-          huaneng.fujian(url, cookies, text);
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];var dbNames = url.match(/mail\/.*nsf/)[0];var dbName = dbNames.split('mail/')[1];var dbids = url.split('/$file')[0];var dbid = dbids.split('.nsf/')[1];var db = dbid.split('/')[1];if (top.EAPI.isAndroid()) {
+          //huaneng.fujianEmail(url, cookies, text);
+          huaneng.fujian(dbName, db, text, cookiesValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
-          //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1], "cookieDomain": "59.110.171.69" });
+          // top.EAPI.postMessageToNative("openDocument", {
+          //   "url": url,
+          //   "cookieName": "LtpaToken",
+          //   "cookieValue": cookies.split("LtpaToken=")[1],
+          //   "cookieDomain": "59.110.171.69"
+          // });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": dbName, "dbid": db, "text": text, "cookie": cookies.split("LtpaToken=")[1] });
         }
       }
     },
