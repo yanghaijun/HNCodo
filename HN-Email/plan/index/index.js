@@ -3,22 +3,12 @@
     getData_control6_xBCCPl: function (elem) {
       if (!elem) {
         return;
-      }var data = { list: [] };var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;var name = elem.querySelector('input[name="mailfilename"]').value;var xmlhttp = null;if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest();
-      } else if (window.ActiveXObject) {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      }xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          //alert(JSON.parse(xmlhttp.responseText).ViewData);
-        }
-      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-      xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name);var titleLists = $(elem)[0].querySelector('#ext-gen36');$(titleLists).find('tr.x-grid3-hd-row').each(function (j) {
+      }var data = { list: [] };var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;var titleLists = $(elem)[0].querySelector('#ext-gen36');$(titleLists).find('tr.x-grid3-hd-row').each(function (j) {
         var titlelist = $(this).find('.x-grid3-hd-inner');var obj = {};obj.name = titlelist[2].textContent;obj.title = titlelist[3].textContent;obj.date = titlelist[4].textContent;obj.time = titlelist[5].textContent;obj.cav = titlelist[6].textContent;obj.index = j;data.list.push(obj);
       }); //上面是获取title
       var lists = $(elem)[0].querySelector('#ext-gen39');$(lists).find('tbody').each(function (i) {
         var tds = $(this).find('td').find('.x-grid3-cell-inner');var obj = {};obj.imgs = tds.eq(1).find('img').length;obj.name = tds[2].textContent;obj.title = tds[3].textContent;obj.titleColor = tds.eq(3).find('span').length == 1 ? 'red' : '';obj.date = tds[4].textContent;obj.time = tds[5].textContent;obj.cav = tds[6].textContent;obj.index = i;data.list.push(obj);
-      });
-      return data;
+      });return data;
     }, doAction_uiControl5_U714Mi: function (data, elem) {
       if (data.eventType == 'getValue') {
         var data = data.dataCustom;var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;$(elem).find('#ext-gen39').find('tbody').eq(data).find('td').find('.x-grid3-cell-inner').eq(3).find('a').click();
@@ -93,7 +83,30 @@
     getTemplate_uiControl2_Zr32Sv: function () {
       var selfTemplate = "module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7528\u6765\u9002\u914D\u57FA\u672C\u7EC4\u4EF6\u65E0\u6CD5\u9002\u914D\u7684\u9875\u9762\u5143\u7D20\uFF0C\u60A8\u53EF\u4EE5\u901A\u8FC7\u53F3\u952E\u6253\u5F00\u8BE5\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7F16\u8F91\u5668\u8FDB\u884C\u7F16\u8F91\n      </div>\n    )\n  }\n});";
       return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement(\n      "div",\n      null,\n      "\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7528\\u6765\\u9002\\u914D\\u57FA\\u672C\\u7EC4\\u4EF6\\u65E0\\u6CD5\\u9002\\u914D\\u7684\\u9875\\u9762\\u5143\\u7D20\\uFF0C\\u60A8\\u53EF\\u4EE5\\u901A\\u8FC7\\u53F3\\u952E\\u6253\\u5F00\\u8BE5\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7F16\\u8F91\\u5668\\u8FDB\\u884C\\u7F16\\u8F91"\n    );\n  }\n});';
-    }
+    },
 
+    getData_control3_LrtITJ: function (elem) {
+      var name = elem.querySelector('input[name="mailfilename"]').value;var xmlhttp = null;if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          //alert(JSON.parse(xmlhttp.responseText).ViewData);
+          ysp.viewData = JSON.parse(xmlhttp.responseText).ViewData;
+        }
+      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name);var data = [];ysp.viewData.map(function (a, b) {
+        data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
+      });if (top.EAPI.isAndroid()) {
+        top.huaneng.fujianCacheUrl(JSON.stringify({ cookie: document.cookie, fujianUrl: data.toString() }));
+      } else if (top.EAPI.isIOS()) {
+        top.EAPI.postMessageToNative('fujianCacheUrl', data);
+      }
+    },
+    doAction_uiControl3_1NCT6J: function (data, elem) {},
+    getTemplate_uiControl3_1NCT6J: function () {
+      var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7528\u6765\u9002\u914D\u57FA\u672C\u7EC4\u4EF6\u65E0\u6CD5\u9002\u914D\u7684\u9875\u9762\u5143\u7D20\uFF0C\u60A8\u53EF\u4EE5\u901A\u8FC7\u53F3\u952E\u6253\u5F00\u8BE5\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7F16\u8F91\u5668\u8FDB\u884C\u7F16\u8F91\n      </div>\n    )\n  }\n});';
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement(\n      "div",\n      null,\n      "\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7528\\u6765\\u9002\\u914D\\u57FA\\u672C\\u7EC4\\u4EF6\\u65E0\\u6CD5\\u9002\\u914D\\u7684\\u9875\\u9762\\u5143\\u7D20\\uFF0C\\u60A8\\u53EF\\u4EE5\\u901A\\u8FC7\\u53F3\\u952E\\u6253\\u5F00\\u8BE5\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7F16\\u8F91\\u5668\\u8FDB\\u884C\\u7F16\\u8F91"\n    );\n  }\n});';
+    }
   }, "index");
 })(window, ysp);

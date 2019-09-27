@@ -201,6 +201,37 @@
       "monitored": false,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control3_LrtITJ": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "HTML.x-viewport"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_LrtITJ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -208,7 +239,8 @@
       "controls": [
         "control6_xBCCPl",
         "control1_maLqHB",
-        "control2_d611JL"
+        "control2_d611JL",
+        "control3_LrtITJ"
       ],
       "anchors": [
         "control8_BagoMf"
@@ -269,6 +301,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl2_Zr32Sv",
                 "onGetTemplate": "getTemplate_uiControl2_Zr32Sv"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl3_1NCT6J",
+          "controlId": "control3_LrtITJ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl3_1NCT6J",
+                "onGetTemplate": "getTemplate_uiControl3_1NCT6J"
               }
             }
           }
