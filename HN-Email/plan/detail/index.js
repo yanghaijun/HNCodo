@@ -35,9 +35,9 @@
       if (data.eventType == 'back') {
         var back = elem.ownerDocument.querySelector('#ext-gen19');$(back).find('li').eq('1').find('a').click();
       } else if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];var dbNames = url.match(/mail\/.*nsf/)[0];var dbName = dbNames.split('mail/')[1];var dbids = url.split('/$file')[0];var dbid = dbids.split('.nsf/')[1];var db = dbid.split('/')[1];if (top.EAPI.isAndroid()) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];var dbNames = url.match(/mail\/.*nsf/)[0];var dbName = dbNames.split('mail/')[1];var dbs = url.split('/$file')[0];var dbss = dbs.split('.nsf/')[1];var dbid = dbss.split('/')[1];if (top.EAPI.isAndroid()) {
           //huaneng.fujianEmail(url, cookies, text);
-          huaneng.fujian(dbName, db, text, cookiesValue);
+          huaneng.fujian("Email", dbName, dbid, text, cookies);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           // top.EAPI.postMessageToNative("openDocument", {

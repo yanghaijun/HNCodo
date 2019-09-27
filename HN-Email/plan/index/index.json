@@ -174,13 +174,41 @@
       "monitored": true,
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control2_d611JL": {
+      "location": {
+        "data": {
+          "tagName": "FRAMESET"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/FRAMESET[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control2_d611JL"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_vK0GRS": {
       "controls": [
         "control6_xBCCPl",
-        "control1_maLqHB"
+        "control1_maLqHB",
+        "control2_d611JL"
       ],
       "anchors": [
         "control8_BagoMf"
@@ -230,6 +258,21 @@
     "page1_ydVPGE": {
       "contextId": "context1_vK0GRS",
       "layout": [
+        {
+          "id": "uiControl2_Zr32Sv",
+          "controlId": "control2_d611JL",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_Zr32Sv",
+                "onGetTemplate": "getTemplate_uiControl2_Zr32Sv"
+              }
+            }
+          }
+        },
         {
           "id": "uiControl5_U714Mi",
           "controlId": "control6_xBCCPl",
