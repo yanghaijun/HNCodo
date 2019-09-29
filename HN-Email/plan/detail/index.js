@@ -46,7 +46,7 @@
           //   "cookieValue": cookies.split("LtpaToken=")[1],
           //   "cookieDomain": "59.110.171.69"
           // });
-          top.EAPI.postMessageToNative("openDocument", { "dbname": dbName, "dbid": db, "text": text, "cookie": cookies.split("LtpaToken=")[1] });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": dbName, "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "Email" });
         }
       }
     },

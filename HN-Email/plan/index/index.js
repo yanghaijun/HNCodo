@@ -61,8 +61,7 @@
       var selfTemplate = 'module.exports = React.createClass({\n  handlerOne(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'one\'\n      })\n    }\n  },\n  handlerTwo(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'two\'\n      })\n    }\n  },\n  handlerThree(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'three\'\n      })\n    }\n  },\n  handlerFour(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'four\'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div className = "ysp-pages">\n        <div>\n          <span className = {data && data.flag1[0] == true ? "oneGo" : "onNoGo"} \n            onClick={this.handlerOne.bind(this)}></span>\n          <span className = {data && data.flag2[0] == true ? "twoGo" : "twoNoGo"} \n            onClick={this.handlerTwo.bind(this)}></span>\n        </div>\n        <div>\n        \t<span className = {data && data.flag3[0] == true ? "threeGo" : "threeNoGo"} \n            onClick={this.handlerThree.bind(this)}></span>\n          <span className = {data && data.flag4[0] == true ? "fourGo" : "fourNoGo"} \n            onClick={this.handlerFour.bind(this)}></span>\n        </div>\n      </div>\n    )\n  }\n});\n\n\n\n\n\n\n';
       return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n  handlerOne: function handlerOne() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'one\'\n      });\n    }\n  },\n  handlerTwo: function handlerTwo() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'two\'\n      });\n    }\n  },\n  handlerThree: function handlerThree() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'three\'\n      });\n    }\n  },\n  handlerFour: function handlerFour() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'four\'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \'div\',\n      { className: \'ysp-pages\' },\n      React.createElement(\n        \'div\',\n        null,\n        React.createElement(\'span\', { className: data && data.flag1[0] == true ? "oneGo" : "onNoGo",\n          onClick: this.handlerOne.bind(this) }),\n        React.createElement(\'span\', { className: data && data.flag2[0] == true ? "twoGo" : "twoNoGo",\n          onClick: this.handlerTwo.bind(this) })\n      ),\n      React.createElement(\n        \'div\',\n        null,\n        React.createElement(\'span\', { className: data && data.flag3[0] == true ? "threeGo" : "threeNoGo",\n          onClick: this.handlerThree.bind(this) }),\n        React.createElement(\'span\', { className: data && data.flag4[0] == true ? "fourGo" : "fourNoGo",\n          onClick: this.handlerFour.bind(this) })\n      )\n    );\n  }\n});';
     },
-    getData_control2_d611JL: function (elem) {
-      // var xmlhttp = null;
+    getData_control2_d611JL: function (elem) {// var xmlhttp = null;
       // if (window.XMLHttpRequest) {
       //   xmlhttp = new XMLHttpRequest();
       // } else if (window.ActiveXObject) {
@@ -77,12 +76,18 @@
       // xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
       // xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&dbName=mail/lidongliang.nsf&showUnread=true&reverse=true");
       //var a = elem.querySelector('input[name="mailfilename"]');
-      var data = { name: [] };var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;var aa = elem.querySelector('input[name="mailfilename"]').value;data.name.push(aa);return data;
+      // var data = {
+      //   name: []
+      // };
+      // var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;
+      // var aa = elem.querySelector('input[name="mailfilename"]').value;
+      // data.name.push(aa);
+      // return data;
     },
     doAction_uiControl2_Zr32Sv: function (data, elem) {},
     getTemplate_uiControl2_Zr32Sv: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7528\u6765\u9002\u914D\u57FA\u672C\u7EC4\u4EF6\u65E0\u6CD5\u9002\u914D\u7684\u9875\u9762\u5143\u7D20\uFF0C\u60A8\u53EF\u4EE5\u901A\u8FC7\u53F3\u952E\u6253\u5F00\u8BE5\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7F16\u8F91\u5668\u8FDB\u884C\u7F16\u8F91\n      </div>\n    )\n  }\n});";
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement(\n      "div",\n      null,\n      "\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7528\\u6765\\u9002\\u914D\\u57FA\\u672C\\u7EC4\\u4EF6\\u65E0\\u6CD5\\u9002\\u914D\\u7684\\u9875\\u9762\\u5143\\u7D20\\uFF0C\\u60A8\\u53EF\\u4EE5\\u901A\\u8FC7\\u53F3\\u952E\\u6253\\u5F00\\u8BE5\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7F16\\u8F91\\u5668\\u8FDB\\u884C\\u7F16\\u8F91"\n    );\n  }\n});';
+      var selfTemplate = "module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \n      </div>\n    )\n  }\n});";
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
     },
 
     getData_control3_LrtITJ: function (elem) {
@@ -93,20 +98,34 @@
       }xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           //alert(JSON.parse(xmlhttp.responseText).ViewData);
-          ysp.viewData = JSON.parse(xmlhttp.responseText).ViewData;
+          var viewData = JSON.parse(xmlhttp.responseText).ViewData;console.log("viewData");var data = [];viewData.map(function (a, b) {
+            data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
+          });if (top.EAPI.isAndroid()) {
+            top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
+          } else if (top.EAPI.isIOS()) {
+            top.EAPI.postMessageToNative('Email', data);
+          }
         }
-      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name);var data = [];ysp.viewData.map(function (a, b) {
-        data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
-      });if (top.EAPI.isAndroid()) {
-        top.huaneng.fujianCacheUrl(JSON.stringify({ cookie: document.cookie, fujianUrl: data.toString() }));
-      } else if (top.EAPI.isIOS()) {
-        top.EAPI.postMessageToNative('fujianCacheUrl', data);
-      }
+      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name); // var data = [];
+      // ysp.viewData.map(function (a, b) {
+      //   data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
+      // });
+      // if (top.EAPI.isAndroid()) {
+      //   top.huaneng.fujianCacheUrl(
+      //     JSON.stringify({
+      //       type: 'Email',  
+      //       cookie: document.cookie,
+      //       fujianUrl: data.toString()
+      //   })
+      //   );
+      // } else if (top.EAPI.isIOS()) {
+      //   top.EAPI.postMessageToNative('fujianCacheUrl', data);
+      // }
     },
     doAction_uiControl3_1NCT6J: function (data, elem) {},
     getTemplate_uiControl3_1NCT6J: function () {
-      var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7528\u6765\u9002\u914D\u57FA\u672C\u7EC4\u4EF6\u65E0\u6CD5\u9002\u914D\u7684\u9875\u9762\u5143\u7D20\uFF0C\u60A8\u53EF\u4EE5\u901A\u8FC7\u53F3\u952E\u6253\u5F00\u8BE5\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7F16\u8F91\u5668\u8FDB\u884C\u7F16\u8F91\n      </div>\n    )\n  }\n});';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement(\n      "div",\n      null,\n      "\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7528\\u6765\\u9002\\u914D\\u57FA\\u672C\\u7EC4\\u4EF6\\u65E0\\u6CD5\\u9002\\u914D\\u7684\\u9875\\u9762\\u5143\\u7D20\\uFF0C\\u60A8\\u53EF\\u4EE5\\u901A\\u8FC7\\u53F3\\u952E\\u6253\\u5F00\\u8BE5\\u81EA\\u5B9A\\u4E49\\u7EC4\\u4EF6\\u7F16\\u8F91\\u5668\\u8FDB\\u884C\\u7F16\\u8F91"\n    );\n  }\n});';
+      var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \n      </div>\n    )\n  }\n});';
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
     }
   }, "index");
 })(window, ysp);
