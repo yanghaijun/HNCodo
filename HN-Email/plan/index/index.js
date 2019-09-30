@@ -91,14 +91,15 @@
     },
 
     getData_control3_LrtITJ: function (elem) {
-      var name = elem.querySelector('input[name="mailfilename"]').value;var xmlhttp = null;if (window.XMLHttpRequest) {
+      var name = elem.querySelector('input[name="mailfilename"]').value;var numText = elem.querySelector("#main_center_frame").contentDocument.documentElement.querySelector("#ext-comp-1010").textContent;var nums = numText.split("共")[1];var num = nums.split("条")[0];var xmlhttp = null;if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
       } else if (window.ActiveXObject) {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
       }xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           //alert(JSON.parse(xmlhttp.responseText).ViewData);
-          var viewData = JSON.parse(xmlhttp.responseText).ViewData;console.log("viewData");var data = [];viewData.map(function (a, b) {
+          var viewData = JSON.parse(xmlhttp.responseText).ViewData; //console.log(viewData);
+          var data = [];viewData.map(function (a, b) {
             data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
           });if (top.EAPI.isAndroid()) {
             top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
@@ -106,21 +107,7 @@
             top.EAPI.postMessageToNative('Email', data);
           }
         }
-      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&limit=10&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name); // var data = [];
-      // ysp.viewData.map(function (a, b) {
-      //   data.push('http://59.110.171.69:31009/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
-      // });
-      // if (top.EAPI.isAndroid()) {
-      //   top.huaneng.fujianCacheUrl(
-      //     JSON.stringify({
-      //       type: 'Email',  
-      //       cookie: document.cookie,
-      //       fujianUrl: data.toString()
-      //   })
-      //   );
-      // } else if (top.EAPI.isIOS()) {
-      //   top.EAPI.postMessageToNative('fujianCacheUrl', data);
-      // }
+      };xmlhttp.open("post", "http://59.110.171.69:31009/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
     },
     doAction_uiControl3_1NCT6J: function (data, elem) {},
     getTemplate_uiControl3_1NCT6J: function () {
