@@ -52,6 +52,6 @@
   "default_url": "http://59.110.171.69:31009/",
   "scope": "HN-Email",
   "start_url": "enterplorer://HN-Email/local/index.html",
-  "update_time": 1569829649130,
+  "update_time": 1570516459314,
   "runtime_env": "1webview"
 }
