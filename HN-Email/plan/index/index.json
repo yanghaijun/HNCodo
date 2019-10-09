@@ -85,59 +85,6 @@
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "customJS": "if(elem.querySelectorAll('li')[1].getAttribute('class').indexOf('x-tab-strip-closable')==0){return false}else {return true}"
     },
-    "control1_maLqHB": {
-      "location": {
-        "data": {
-          "tagName": "TD"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          },
-          {
-            "id": "@id/partialWord",
-            "prob": 1,
-            "disabled": true,
-            "value": {
-              "elemId": "ext-comp-1002",
-              "tagName": "DIV",
-              "prefix": "DIV[@id=\"tabgrid\"]//",
-              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
-              "ratio": 0.169
-            }
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              1,
-              2
-            ],
-            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control1_maLqHB"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
-      "componentType": "custom"
-    },
     "control2_d611JL": {
       "location": {
         "data": {
@@ -165,41 +112,14 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control3_LrtITJ": {
-      "location": {
-        "data": {
-          "tagName": "HTML"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "HTML.x-viewport"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control3_LrtITJ"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": false,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "custom"
-    },
     "control4_bkU90V": {
       "location": {
         "data": {
           "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -226,15 +146,85 @@
       "monitored": true,
       "frameXPath": "//frame[@name='Main']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control6_OPQsbI": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "ext-comp-1002",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"tabgrid\"]//",
+              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "ratio": 0.17
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control6_OPQsbI"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control16_LEIhJn": {
+      "location": {
+        "data": {
+          "tagName": "FRAMESET"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/FRAMESET[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16_LEIhJn"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_vK0GRS": {
       "controls": [
-        "control1_maLqHB",
         "control2_d611JL",
-        "control3_LrtITJ",
-        "control4_bkU90V"
+        "control4_bkU90V",
+        "control6_OPQsbI",
+        "control16_LEIhJn"
       ],
       "anchors": [
         "control8_BagoMf"
@@ -255,16 +245,6 @@
         }
       ]
     },
-    "flow6_nm9eOp": {
-      "fromContextId": "context1_vK0GRS",
-      "fromAction": "doAction",
-      "fromControlId": "control1_maLqHB",
-      "toContexts": [
-        {
-          "toContextId": "context1_vK0GRS"
-        }
-      ]
-    },
     "flow4_M5WM2H": {
       "fromContextId": "context1_vK0GRS",
       "fromAction": "doAction",
@@ -276,6 +256,16 @@
         {
           "toContextId": "context2_fV0Gfo",
           "toModelId": "detail"
+        }
+      ]
+    },
+    "flow7_dVQuJu": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control6_OPQsbI",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
         }
       ]
     }
@@ -300,31 +290,31 @@
           }
         },
         {
-          "id": "uiControl3_1NCT6J",
-          "controlId": "control3_LrtITJ",
+          "id": "uiControl5_E2uAXz",
+          "controlId": "control6_OPQsbI",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl3_1NCT6J",
-                "onGetTemplate": "getTemplate_uiControl3_1NCT6J"
+                "onDoAction": "doAction_uiControl5_E2uAXz",
+                "onGetTemplate": "getTemplate_uiControl5_E2uAXz"
               }
             }
           }
         },
         {
-          "id": "uiControl1_vTyKkZ",
-          "controlId": "control1_maLqHB",
+          "id": "uiControl12_aFGI9c",
+          "controlId": "control16_LEIhJn",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl1_vTyKkZ",
-                "onGetTemplate": "getTemplate_uiControl1_vTyKkZ"
+                "onDoAction": "doAction_uiControl12_aFGI9c",
+                "onGetTemplate": "getTemplate_uiControl12_aFGI9c"
               }
             }
           }
