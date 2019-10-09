@@ -10,43 +10,6 @@
   "description": "",
   "firstPaintEnable": false,
   "controls": {
-    "control6_xBCCPl": {
-      "location": {
-        "data": {
-          "tagName": "HTML"
-        },
-        "userData": {
-          "data": [
-            {
-              "method": "XPath",
-              "value": ""
-            }
-          ],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "HTML.x-viewport"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control6_xBCCPl"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "ignoreVisibility": false,
-      "monitored": true,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
-      "componentType": "custom"
-    },
     "control7_SvOBFA": {
       "location": {
         "data": {
@@ -232,15 +195,46 @@
       "monitored": false,
       "frameXPath": "//frame[@name='Main']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control4_bkU90V": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.x-tab-panel-body.x-tab-panel-body-noborder.x-tab-panel-body-top DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control4_bkU90V"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_vK0GRS": {
       "controls": [
-        "control6_xBCCPl",
         "control1_maLqHB",
         "control2_d611JL",
-        "control3_LrtITJ"
+        "control3_LrtITJ",
+        "control4_bkU90V"
       ],
       "anchors": [
         "control8_BagoMf"
@@ -254,20 +248,6 @@
     }
   },
   "flows": {
-    "flow4_x1S6XP": {
-      "fromContextId": "context1_vK0GRS",
-      "fromAction": "doAction",
-      "fromControlId": "control6_xBCCPl",
-      "toContexts": [
-        {
-          "toContextId": "context1_vK0GRS"
-        },
-        {
-          "toContextId": "context2_fV0Gfo",
-          "toModelId": "detail"
-        }
-      ]
-    },
     "flow3_bEvpoL": {
       "toContexts": [
         {
@@ -282,6 +262,20 @@
       "toContexts": [
         {
           "toContextId": "context1_vK0GRS"
+        }
+      ]
+    },
+    "flow4_M5WM2H": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control4_bkU90V",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        },
+        {
+          "toContextId": "context2_fV0Gfo",
+          "toModelId": "detail"
         }
       ]
     }
@@ -321,21 +315,6 @@
           }
         },
         {
-          "id": "uiControl5_U714Mi",
-          "controlId": "control6_xBCCPl",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl5_U714Mi",
-                "onGetTemplate": "getTemplate_uiControl5_U714Mi"
-              }
-            }
-          }
-        },
-        {
           "id": "uiControl1_vTyKkZ",
           "controlId": "control1_maLqHB",
           "display": {
@@ -346,6 +325,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl1_vTyKkZ",
                 "onGetTemplate": "getTemplate_uiControl1_vTyKkZ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl4_q4BkFz",
+          "controlId": "control4_bkU90V",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl4_q4BkFz",
+                "onGetTemplate": "getTemplate_uiControl4_q4BkFz"
               }
             }
           }

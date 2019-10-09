@@ -22,8 +22,7 @@
         //     $(elem).find('tr').eq(5).find('input').eq(0).click();
         //   }, 1000);
         //这是用接口登录的方法
-        var el = $(elem) && $(elem).find('table');var trs = $(el).find('tr');
-        var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();var xmlhttp = null;if (window.XMLHttpRequest) {
+        var el = $(elem) && $(elem).find('table');var trs = $(el).find('tr');var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();var xmlhttp = null;if (window.XMLHttpRequest) {
           xmlhttp = new XMLHttpRequest();
         } else if (window.ActiveXObject) {
           xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
@@ -32,7 +31,8 @@
             //console.log(xmlhttp.responseText);
             var aa = xmlhttp.responseText;var bb = aa.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace("\"", "");elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ee;
           }
-        };xmlhttp.open("post", "http://59.110.171.69:31009/names.nsf?Login");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("username=" + name + "&password=" + password + "&redirectto=/afmail.nsf/frmWebMailExt_HNMail?OpenForm&PostCharset=GB2312");
+        };xmlhttp.open("post", "http://59.110.171.69:31009/names.nsf?Login");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded"); //xmlhttp.send("username=" + name + "&password=" + password + "&redirectto=/afmail.nsf/frmWebMailExt_HNMail?OpenForm&PostCharset=GB2312");
+        xmlhttp.send("username=80086350&password=Chng1234&redirectto=/afmail.nsf/frmWebMailExt_HNMail?OpenForm&PostCharset=GB2312");
       }
     },
     getTemplate_uiControl0_UK1PTt: function () {
