@@ -152,6 +152,10 @@
         "data": {
           "tagName": "TD"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -199,6 +203,10 @@
       "location": {
         "data": {
           "tagName": "FRAMESET"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -290,21 +298,6 @@
           }
         },
         {
-          "id": "uiControl5_E2uAXz",
-          "controlId": "control6_OPQsbI",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl5_E2uAXz",
-                "onGetTemplate": "getTemplate_uiControl5_E2uAXz"
-              }
-            }
-          }
-        },
-        {
           "id": "uiControl12_aFGI9c",
           "controlId": "control16_LEIhJn",
           "display": {
@@ -315,6 +308,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl12_aFGI9c",
                 "onGetTemplate": "getTemplate_uiControl12_aFGI9c"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl5_E2uAXz",
+          "controlId": "control6_OPQsbI",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl5_E2uAXz",
+                "onGetTemplate": "getTemplate_uiControl5_E2uAXz"
               }
             }
           }
