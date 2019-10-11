@@ -1,0 +1,818 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://59.110.171.69:31014/afmail.nsf",
+  "jsFile": "index.js",
+  "requires": {
+    "detail": "../detail/index.json"
+  },
+  "chineseName": "收件-首页",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control7_SvOBFA": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "查找:"
+              ],
+              "visText": [
+                "查找:"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              3
+            ],
+            "value": "TR.x-toolbar-right-row TD.x-toolbar-cell DIV.xtb-text"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "查找:",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>"
+    },
+    "control8_BagoMf": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-panel-header.x-tab-panel-header-noborder.x-unselectable DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱信息公司工作月报-第8期.do ",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.querySelectorAll('li')[1].getAttribute('class').indexOf('x-tab-strip-closable')==0){return false}else {return true}"
+    },
+    "control2_d611JL": {
+      "location": {
+        "data": {
+          "tagName": "FRAMESET"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/FRAMESET[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control2_d611JL"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control0_FNmJr1": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "ext-comp-1002",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"tabgrid\"]//",
+              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "ratio": 0.152
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_FNmJr1"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control9_WgSZ00": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "HTML.x-viewport BODY.ext-webkit.ext-chrome"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control9_WgSZ00"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control10_PlvMVk": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.x-tab-panel-body.x-tab-panel-body-noborder.x-tab-panel-body-top DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control10_PlvMVk"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control4_4RWwbq": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/THEAD[1]/TR[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-grid3-header-inner DIV.x-grid3-header-offset TR.x-grid3-hd-row"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/THEAD[1]/TR[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 状态发件人主题日期时间大小",
+      "frameXPath": ""
+    },
+    "control6_RsdBVI": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/THEAD[1]/TR[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-grid3-header-inner DIV.x-grid3-header-offset TR.x-grid3-hd-row"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/THEAD[1]/TR[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 状态发件人主题日期时间大小",
+      "frameXPath": ""
+    },
+    "control12_3ieQ3e": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "              第页共 2 页                     ",
+      "frameXPath": ""
+    },
+    "control13_FtWOCm": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "A.x-tab-right EM.x-tab-left SPAN.x-tab-strip-inner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]/A[2]/EM[1]/SPAN[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              0,
+              0,
+              238
+            ]
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": ""
+    },
+    "control15_oQ0XtW": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "查找:"
+              ],
+              "visText": [
+                "查找:"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              3
+            ],
+            "value": "TR.x-toolbar-right-row TD.x-toolbar-cell DIV.xtb-text"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "查找:",
+      "frameXPath": "",
+      "customJS": "if(elem.textContent == \"查找:\"){return true} else {return false}"
+    },
+    "control16_hRmNk4": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0){return true}else {return false}"
+    }
+  },
+  "contexts": {
+    "context1_vK0GRS": {
+      "controls": [
+        "control2_d611JL",
+        "control0_FNmJr1",
+        "control9_WgSZ00",
+        "control10_PlvMVk"
+      ],
+      "anchors": [
+        "control16_hRmNk4"
+      ],
+      "urlAnchor": []
+    },
+    "context3_KlNdDA": {
+      "controls": [],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow3_bEvpoL": {
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        }
+      ]
+    },
+    "flow6_cmBSom": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control10_PlvMVk",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        },
+        {
+          "toContextId": "context2_fV0Gfo",
+          "toModelId": "detail"
+        }
+      ]
+    },
+    "flow4_ww6cMA": {
+      "fromContextId": "context1_vK0GRS",
+      "fromAction": "doAction",
+      "fromControlId": "control0_FNmJr1",
+      "toContexts": [
+        {
+          "toContextId": "context1_vK0GRS"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_ydVPGE": {
+      "contextId": "context1_vK0GRS",
+      "layout": [
+        {
+          "id": "uiControl2_Zr32Sv",
+          "controlId": "control2_d611JL",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_Zr32Sv",
+                "onGetTemplate": "getTemplate_uiControl2_Zr32Sv"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl5_oOdoom",
+          "controlId": "control9_WgSZ00",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl5_oOdoom",
+                "onGetTemplate": "getTemplate_uiControl5_oOdoom"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl6_TcxCRg",
+          "controlId": "control10_PlvMVk",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl6_TcxCRg",
+                "onGetTemplate": "getTemplate_uiControl6_TcxCRg"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl0_Cwqa2n",
+          "controlId": "control0_FNmJr1",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_Cwqa2n",
+                "onGetTemplate": "getTemplate_uiControl0_Cwqa2n"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "page3_6hwkU7": {
+      "contextId": "context3_KlNdDA",
+      "layout": []
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_vK0GRS": [
+          "华能信息技术有限公司邮件系统",
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_vK0GRS": [
+          "59.110.171.69:31014/afmail.nsf",
+          "59.110.171.69:31014/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%E6%94%B6%E4%BB%B6%E7%AE%B1%22"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_vK0GRS": [
+          [],
+          [
+            "DBPath_id",
+            "FastSearchKey",
+            "ext-comp-",
+            "ext-comp-__ext-comp-",
+            "ext-gen",
+            "tabgrid"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_vK0GRS": [
+          [],
+          [
+            "col-move-bottom",
+            "col-move-top",
+            "linkcss",
+            "red",
+            "x-border-layout-ct",
+            "x-border-panel",
+            "x-btn",
+            "x-btn-arrow",
+            "x-btn-bc",
+            "x-btn-bl",
+            "x-btn-br",
+            "x-btn-icon",
+            "x-btn-icon-small-left",
+            "x-btn-mc",
+            "x-btn-ml",
+            "x-btn-mr",
+            "x-btn-small",
+            "x-btn-tc",
+            "x-btn-text",
+            "x-btn-text-icon",
+            "x-btn-tl",
+            "x-btn-tr",
+            "x-clear",
+            "x-dd-drag-ghost",
+            "x-dd-drag-proxy",
+            "x-dd-drop-icon",
+            "x-dd-drop-nodrop",
+            "x-form-empty-field",
+            "x-form-field",
+            "x-form-num-field",
+            "x-form-text",
+            "x-grid",
+            "x-grid-body",
+            "x-grid-cell",
+            "x-grid-cell-first",
+            "x-grid-cell-inner",
+            "x-grid-cell-last",
+            "x-grid-col",
+            "x-grid-col-",
+            "x-grid-col-checker",
+            "x-grid-col-dd",
+            "x-grid-focus",
+            "x-grid-hd",
+            "x-grid-hd-",
+            "x-grid-hd-btn",
+            "x-grid-hd-checker",
+            "x-grid-hd-inner",
+            "x-grid-hd-row",
+            "x-grid-header",
+            "x-grid-header-inner",
+            "x-grid-header-offset",
+            "x-grid-panel",
+            "x-grid-resize-marker",
+            "x-grid-resize-proxy",
+            "x-grid-row",
+            "x-grid-row-checker",
+            "x-grid-row-first",
+            "x-grid-row-last",
+            "x-grid-row-table",
+            "x-grid-scroller",
+            "x-grid-sort-icon",
+            "x-grid-td-",
+            "x-grid-td-checker",
+            "x-grid-viewport",
+            "x-item-disabled",
+            "x-panel",
+            "x-panel-bbar",
+            "x-panel-body",
+            "x-panel-body-noborder",
+            "x-panel-body-noheader",
+            "x-panel-bwrap",
+            "x-panel-noborder",
+            "x-panel-nofooter",
+            "x-panel-tbar",
+            "x-panel-tbar-noheader",
+            "x-small-editor",
+            "x-tab-edge",
+            "x-tab-left",
+            "x-tab-panel",
+            "x-tab-panel-body",
+            "x-tab-panel-body-noborder",
+            "x-tab-panel-body-top",
+            "x-tab-panel-bwrap",
+            "x-tab-panel-header",
+            "x-tab-panel-header-noborder",
+            "x-tab-panel-noborder",
+            "x-tab-right",
+            "x-tab-strip",
+            "x-tab-strip-active",
+            "x-tab-strip-close",
+            "x-tab-strip-inner",
+            "x-tab-strip-spacer",
+            "x-tab-strip-text",
+            "x-tab-strip-top",
+            "x-tab-strip-wrap",
+            "x-tbar-loading",
+            "x-tbar-page-first",
+            "x-tbar-page-last",
+            "x-tbar-page-next",
+            "x-tbar-page-number",
+            "x-tbar-page-prev",
+            "x-tip",
+            "x-tip-anchor",
+            "x-tip-anchor-top",
+            "x-tip-bc",
+            "x-tip-bl",
+            "x-tip-body",
+            "x-tip-br",
+            "x-tip-bwrap",
+            "x-tip-header",
+            "x-tip-header-text",
+            "x-tip-mc",
+            "x-tip-ml",
+            "x-tip-mr",
+            "x-tip-tc",
+            "x-tip-tl",
+            "x-tip-tr",
+            "x-toolbar",
+            "x-toolbar-cell",
+            "x-toolbar-ct",
+            "x-toolbar-extras-row",
+            "x-toolbar-layout-ct",
+            "x-toolbar-left",
+            "x-toolbar-left-row",
+            "x-toolbar-right",
+            "x-toolbar-right-ct",
+            "x-toolbar-right-row",
+            "x-unselectable",
+            "xtb-sep",
+            "xtb-text"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_vK0GRS": [
+          [
+            "-/-/FRAME"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "A/EM/SPAN",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/DIV",
+            "DIV/UL/LI",
+            "EM/SPAN/SPAN",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-null",
+            "LI/A/EM",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/DIV",
+            "TD/DIV/IMG",
+            "TD/DIV/SPAN",
+            "TD/EM/BUTTON",
+            "TD/TABLE/TBODY",
+            "THEAD/TR/TD",
+            "TR/TD/DIV",
+            "TR/TD/EM",
+            "TR/TD/I",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "UL/LI/A",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:31014/afmail.nsf",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control5_Cok0fX": {
+      "location": {
+        "data": {
+          "tagName": "H1"
+        },
+        "userData": {
+          "data": [
+            {
+              "method": "XPath",
+              "value": ""
+            }
+          ],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "服务器登录"
+              ],
+              "visText": [
+                "服务器登录"
+              ]
+            }
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/H1[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>"
+    },
+    "control1_TWLW7d": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录请输入您的用户名和密码 \n",
+      "frameXPath": ""
+    },
+    "control3_ZAEW2u": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_ZAEW2u"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context0_CXVOQB": {
+      "controls": [
+        "control3_ZAEW2u"
+      ],
+      "anchors": [
+        "control1_TWLW7d"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow0_uXuD5u": {
+      "toContexts": [
+        {
+          "toContextId": "context0_CXVOQB"
+        }
+      ]
+    },
+    "flow2_ztXiKm": {
+      "fromContextId": "context0_CXVOQB",
+      "fromAction": "doAction",
+      "fromControlId": "control3_ZAEW2u",
+      "toContexts": [
+        {
+          "toContextId": "context0_CXVOQB"
+        },
+        {
+          "toContextId": "context1_vK0GRS",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_ncchuI": {
+      "contextId": "context0_CXVOQB",
+      "layout": [
+        {
+          "id": "uiControl1_urXA0v",
+          "controlId": "control3_ZAEW2u",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl1_urXA0v",
+                "onGetTemplate": "getTemplate_uiControl1_urXA0v"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_CXVOQB": [
+          "华能信息技术有限公司邮件系统",
+          "服务器登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_CXVOQB": [
+          "59.110.171.69:31014/afmail.nsf"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_CXVOQB": [
+          [],
+          [
+            "pw-id",
+            "user-id"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_CXVOQB": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_CXVOQB": [
+          [
+            "-/-/FRAME"
+          ],
+          [
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/FORM/TABLE",
+            "FORM/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/BR",
+            "TR/TD/H1",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-password",
+            "TR/TD/INPUT-submit",
+            "TR/TD/INPUT-text",
+            "TR/TD/LABEL"
+          ]
+        ]
+      }
+    }
+  }
+}
