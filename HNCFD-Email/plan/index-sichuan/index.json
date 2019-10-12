@@ -1,0 +1,179 @@
+{
+  "version": "0.1",
+  "id": "index-sichuan",
+  "targetURL": "http://59.110.171.69:31016/afmail.nsf",
+  "jsFile": "index.js",
+  "requires": {
+    "detailSC": "../detailSC/index.json"
+  },
+  "chineseName": "首页四川",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control22_f1TLsI": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-panel.x-tab-panel-noborder DIV.x-tab-panel-bwrap DIV.x-tab-panel-body.x-tab-panel-body-noborder.x-tab-panel-body-top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control22_f1TLsI"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control23_LQdR7s": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return true}else {return false}"
+    }
+  },
+  "contexts": {
+    "context6_XW3Wgz": {
+      "controls": [
+        "control22_f1TLsI"
+      ],
+      "anchors": [
+        "control23_LQdR7s"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow9_ITpIOf": {
+      "toContexts": [
+        {
+          "toContextId": "context6_XW3Wgz"
+        }
+      ]
+    },
+    "flow10_q384tR": {
+      "fromContextId": "context6_XW3Wgz",
+      "fromAction": "doAction",
+      "fromControlId": "control22_f1TLsI",
+      "toContexts": [
+        {
+          "toContextId": "context6_XW3Wgz"
+        },
+        {
+          "toContextId": "context5_WH3u3D",
+          "toModelId": "detailSC"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page6_OeqDWw": {
+      "contextId": "context6_XW3Wgz",
+      "layout": [
+        {
+          "id": "uiControl8_kPhoOC",
+          "controlId": "control22_f1TLsI",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl8_kPhoOC",
+                "onGetTemplate": "getTemplate_uiControl8_kPhoOC"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context6_XW3Wgz": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context6_XW3Wgz": [
+          "59.110.171.69:31016/afmail.nsf"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context6_XW3Wgz": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context6_XW3Wgz": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context6_XW3Wgz": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}

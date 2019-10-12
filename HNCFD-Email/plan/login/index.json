@@ -4,7 +4,8 @@
   "targetURL": "http://59.110.171.69:31014/afmail.nsf",
   "jsFile": "index.js",
   "requires": {
-    "index": "../index/index.json"
+    "index": "../index/index.json",
+    "index-sichuan": "../index-sichuan/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -133,6 +134,10 @@
         {
           "toContextId": "context1_vK0GRS",
           "toModelId": "index"
+        },
+        {
+          "toContextId": "context6_XW3Wgz",
+          "toModelId": "index-sichuan"
         }
       ]
     }

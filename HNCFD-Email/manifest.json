@@ -54,6 +54,6 @@
   "default_url": "http://59.110.171.69:31014/afmail.nsf",
   "scope": "HNCFD-Email",
   "start_url": "enterplorer://HNCFD-Email/local/index.html",
-  "update_time": 1570776701727,
+  "update_time": 1570853452107,
   "runtime_env": "1webview"
 }

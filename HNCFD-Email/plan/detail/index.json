@@ -40,6 +40,10 @@
         "data": {
           "tagName": "IFRAME"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@class/word",
@@ -72,6 +76,10 @@
       "location": {
         "data": {
           "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -112,7 +120,9 @@
       "anchors": [
         "control18_5y6XFS"
       ],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69.*"
+      ]
     }
   },
   "flows": {

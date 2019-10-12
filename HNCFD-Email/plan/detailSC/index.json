@@ -1,0 +1,229 @@
+{
+  "version": "0.1",
+  "id": "detailSC",
+  "targetURL": "http://59.110.171.69:31016/afmail.nsf",
+  "jsFile": "index.js",
+  "chineseName": "详情四川",
+  "description": "详情四川页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control20_CwGHle": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"cont\"]/DIV[1]",
+              "descendant::DIV[@id=\"cont\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.mail_top"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[5]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control20_CwGHle"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>//iframe[contains(@id,'iframeD') and contains(@id,'CCC') and contains(@id,'FF') and contains(@id,'FBB')]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control21_G3QwA6": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return false}else {return true}"
+    },
+    "control25_gElFrN": {
+      "location": {
+        "data": {
+          "tagName": "IFRAME"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap DIV.x-panel-body.x-panel-body-noheader.x-panel-body-noborder IFRAME"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control25_gElFrN"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context5_WH3u3D": {
+      "controls": [
+        "control20_CwGHle",
+        "control25_gElFrN"
+      ],
+      "anchors": [
+        "control21_G3QwA6"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow8_zvTHVn": {
+      "toContexts": [
+        {
+          "toContextId": "context5_WH3u3D"
+        }
+      ]
+    },
+    "flow11_u3kAOJ": {
+      "fromContextId": "context5_WH3u3D",
+      "fromAction": "doAction",
+      "fromControlId": "control25_gElFrN",
+      "toContexts": [
+        {
+          "toContextId": "context5_WH3u3D"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page5_0ocWnE": {
+      "contextId": "context5_WH3u3D",
+      "layout": [
+        {
+          "id": "uiControl7_ZUZ5vJ",
+          "controlId": "control20_CwGHle",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl7_ZUZ5vJ",
+                "onGetTemplate": "getTemplate_uiControl7_ZUZ5vJ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl10_5Bz3z1",
+          "controlId": "control25_gElFrN",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl10_5Bz3z1",
+                "onGetTemplate": "getTemplate_uiControl10_5Bz3z1"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context5_WH3u3D": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context5_WH3u3D": [
+          "59.110.171.69:31016/afmail.nsf"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context5_WH3u3D": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context5_WH3u3D": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context5_WH3u3D": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}
