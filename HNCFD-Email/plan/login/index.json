@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://59.110.171.69:31014/afmail.nsf",
+  "targetURL": "http://59.110.171.69:31014/#31014",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json",
@@ -102,6 +102,27 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control19_oFrlvv": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录请输入您的用户名和密码 \n",
+      "frameXPath": ""
     }
   },
   "contexts": {
@@ -110,9 +131,11 @@
         "control3_ZAEW2u"
       ],
       "anchors": [
-        "control1_TWLW7d"
+        "control19_oFrlvv"
       ],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31014\\/\\#"
+      ]
     }
   },
   "flows": {
@@ -176,7 +199,8 @@
     "page/urls": {
       "contexts": {
         "context0_CXVOQB": [
-          "59.110.171.69:31014/afmail.nsf"
+          "59.110.171.69:31014/#31014",
+          "59.110.171.69:31014/"
         ]
       }
     },

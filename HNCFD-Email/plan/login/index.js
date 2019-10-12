@@ -11,7 +11,7 @@
       } else if (data.eventType == 'password') {
         var data = data.dataCustom;var elem = $(elem) && $(elem).find('table');$(elem).find('tr').eq(3).find('input').eq(0).val(data);
       } else if (data.eventType == 'button') {
-        ysp.appMain.showLoading();setTimeout(function () {
+        debugger;var aa = elem.ownerDocument.defaultView.location.href;var bb = aa.split('#')[1];ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 10000); //这是点击PC端登录按钮方法
         //   var elem = $(elem) && $(elem).find('table');
@@ -25,35 +25,41 @@
         //   }, 1000);
         //这是用接口登录的方法
         //曹妃甸邮件登录
-        var el = $(elem) && $(elem).find('table');var trs = $(el).find('tr');var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();$.ajax({ url: 'http://59.110.171.69:31014/names.nsf?Login',
-          type: 'post', data: { username: name, password: password,
-            redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, success: function success(data) {
-            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");elem.ownerDocument.location.href = 'http://59.110.171.69:31014' + ff;
-          }, error: function (e) {
-            alert('登录失败,请重新登录！');
-          } }); //四川邮件登录
+        // var el = $(elem) && $(elem).find('table');
+        // var trs = $(el).find('tr');
+        // var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();
+        // var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();
         // $.ajax({
-        //   url: 'http://59.110.171.69:31016/names.nsf?Login',
+        //   url: 'http://59.110.171.69:31014/names.nsf?Login',
         //   type: 'post',
         //   data: {
-        //     //Username=66666668&Password=Vmeet1234**&RememberPwd=on
-        //     Username: '66666666',
-        //     Password: 'Vmeet1234**',
-        //     RememberPwd: 'on'
+        //     username: name,
+        //     password: password,
+        //     redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
         //   },
         //   success: function success(data) {
-        //     elem.ownerDocument.location.href = 'http://59.110.171.69:31016/afmail.nsf';
+        //     var bb = data.split('id="main_center_frame"')[1];
+        //     var cc = bb.split('width="100%"')[0];
+        //     var dd = cc.split("src=")[1];
+        //     var ee = dd.replace(" ", "");
+        //     var ff = ee.replace(/\"/g, "");
+        //     elem.ownerDocument.location.href = 'http://59.110.171.69:31014' + ff;
         //   },
         //   error: function (e) {
         //     alert('登录失败,请重新登录！');
         //   }
-        // }); //   setTimeout(function () {
+        // }); //四川邮件登录
+        $.ajax({ url: 'http://59.110.171.69:31016/names.nsf?Login', type: 'post', data: { //Username=66666668&Password=Vmeet1234**&RememberPwd=on
+            Username: '66666666', Password: 'Vmeet1234**', RememberPwd: 'on' }, success: function success(data) {
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31016/afmail.nsf';
+          }, error: function (e) {
+            alert('登录失败,请重新登录！');
+          } }); //   setTimeout(function () {
         //     var el = $(elem) && $(elem).find('table');
         //     var trs = $(el).find('tr');
         //     var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();
         //     var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();
         //     var xmlhttp = null;
-
         //     if (window.XMLHttpRequest) {
         //       xmlhttp = new XMLHttpRequest();
         //     } else if (window.ActiveXObject) {
@@ -67,6 +73,7 @@
         //         var cc = bb.split('width="100%"')[0];
         //         var dd = cc.split("src=")[1];
         //         var ee = dd.replace("\"", "");
+
         //         elem.ownerDocument.location.href = 'http://59.110.171.69:31014' + ee;
         //       }
         //     };

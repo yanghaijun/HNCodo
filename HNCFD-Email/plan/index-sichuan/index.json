@@ -79,12 +79,131 @@
       "text": "收件箱",
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return true}else {return false}"
+    },
+    "control24_MwRzzs": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "ext-comp-1002",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"tabgrid\"]//",
+              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "ratio": 0.243
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control24_MwRzzs"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": false,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control26_6UTy3O": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-border-layout-ct DIV.x-panel.x-grid-panel.x-border-panel DIV.x-panel-bwrap"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control26_6UTy3O"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control27_7v3rGB": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "HTML.x-viewport BODY.ext-webkit.ext-chrome DIV.x-tab-panel.x-tab-panel-noborder"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 751,
+              "height": 416
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control27_7v3rGB"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context6_XW3Wgz": {
       "controls": [
-        "control22_f1TLsI"
+        "control22_f1TLsI",
+        "control24_MwRzzs",
+        "control26_6UTy3O",
+        "control27_7v3rGB"
       ],
       "anchors": [
         "control23_LQdR7s"
@@ -120,6 +239,36 @@
       "contextId": "context6_XW3Wgz",
       "layout": [
         {
+          "id": "uiControl11_Bko6mH",
+          "controlId": "control26_6UTy3O",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl11_Bko6mH",
+                "onGetTemplate": "getTemplate_uiControl11_Bko6mH"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl12_4ZTpb5",
+          "controlId": "control27_7v3rGB",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl12_4ZTpb5",
+                "onGetTemplate": "getTemplate_uiControl12_4ZTpb5"
+              }
+            }
+          }
+        },
+        {
           "id": "uiControl8_kPhoOC",
           "controlId": "control22_f1TLsI",
           "display": {
@@ -130,6 +279,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl8_kPhoOC",
                 "onGetTemplate": "getTemplate_uiControl8_kPhoOC"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl9_aQkm0T",
+          "controlId": "control24_MwRzzs",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_aQkm0T",
+                "onGetTemplate": "getTemplate_uiControl9_aQkm0T"
               }
             }
           }

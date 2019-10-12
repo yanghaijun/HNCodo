@@ -51,9 +51,9 @@
     }
   ],
   "name": "曹妃甸信息技术邮箱",
-  "default_url": "http://59.110.171.69:31014/afmail.nsf",
+  "default_url": "http://59.110.171.69:31014/#31009",
   "scope": "HNCFD-Email",
   "start_url": "enterplorer://HNCFD-Email/local/index.html",
-  "update_time": 1570853452107,
+  "update_time": 1570857372983,
   "runtime_env": "1webview"
 }
