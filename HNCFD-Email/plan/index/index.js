@@ -75,7 +75,7 @@
     },
     getData_control9_WgSZ00: function (elem) {
       setTimeout(function () {
-        // var el = elem.querySelectorAll('frame') && elem.querySelectorAll('frame')[1].contentDocument.documentElement.querySelector("#ext-gen3");
+        var demoUrl = elem.ownerDocument.defaultView.location.href;var urlIP = demoUrl.split("afmail.nsf")[0]; // var el = elem.querySelectorAll('frame') && elem.querySelectorAll('frame')[1].contentDocument.documentElement.querySelector("#ext-gen3");
         var name = elem.querySelector('input[name="mailfilename"]').value;var numText = elem.querySelector("#ext-comp-1010").textContent;var nums = numText.split("共")[1];var num = nums.split("条")[0];var xmlhttp = null;if (window.XMLHttpRequest) {
           xmlhttp = new XMLHttpRequest();
         } else if (window.ActiveXObject) {
@@ -85,25 +85,25 @@
             //alert(JSON.parse(xmlhttp.responseText).ViewData);
             var viewData = JSON.parse(xmlhttp.responseText).ViewData; //console.log(viewData);
             var data = [];viewData.map(function (a, b) {
-              data.push('http://59.110.171.69:31014/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
+              data.push(urlIP + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
             });if (top.EAPI.isAndroid()) {
               top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
             } else if (top.EAPI.isIOS()) {
               top.EAPI.postMessageToNative('Email', data);
             }
           }
-        };xmlhttp.open("post", "http://59.110.171.69:31014/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
+        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
       }, 4000);
     },
     doAction_uiControl5_oOdoom: function (data, elem) {},
     getTemplate_uiControl5_oOdoom: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n        \n      </div>\n    )\n  }\n});';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\"div\", null);\n  }\n});";
     },
     getData_control10_PlvMVk: function (elem) {
       if (!elem) {
         return;
-      }console.log(elem);var data = { list: [] }; // var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;
+      }var data = { list: [] }; // var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;
       // var titleLists = $(elem)[0].querySelector('#ext-gen36');
       var titleLists = elem;$(titleLists).find('tr.x-grid3-hd-row').each(function (j) {
         var titlelist = $(this).find('.x-grid3-hd-inner');var obj = {};obj.name = titlelist[2].textContent;obj.title = titlelist[3].textContent;obj.date = titlelist[4].textContent;obj.time = titlelist[5].textContent;obj.cav = titlelist[6].textContent;obj.index = j;data.list.push(obj);

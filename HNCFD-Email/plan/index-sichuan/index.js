@@ -69,7 +69,7 @@
     },
     getData_control27_7v3rGB: function (elem) {
       setTimeout(function () {
-        // var el = elem.querySelectorAll('frame') && elem.querySelectorAll('frame')[1].contentDocument.documentElement.querySelector("#ext-gen3");
+        var demoUrl = elem.ownerDocument.defaultView.location.href;var urlIP = demoUrl.split('afmail.nsf')[0]; // var el = elem.querySelectorAll('frame') && elem.querySelectorAll('frame')[1].contentDocument.documentElement.querySelector("#ext-gen3");
         var el = elem.parentElement;var name = el.querySelector('input[name="mailfilename"]').value;var numText = el.querySelector("#ext-comp-1010").textContent;var nums = numText.split("共")[1];var num = nums.split("条")[0];var xmlhttp = null;if (window.XMLHttpRequest) {
           xmlhttp = new XMLHttpRequest();
         } else if (window.ActiveXObject) {
@@ -77,15 +77,16 @@
         }xmlhttp.onreadystatechange = function () {
           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             //alert(JSON.parse(xmlhttp.responseText).ViewData);
-            var viewData = JSON.parse(xmlhttp.responseText).ViewData;var data = [];viewData.map(function (a, b) {
-              data.push('http://59.110.171.69:31016/' + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
+            var viewData = JSON.parse(xmlhttp.responseText).ViewData; //console.log(viewData);
+            var data = [];viewData.map(function (a, b) {
+              data.push(urlIP + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
             });if (top.EAPI.isAndroid()) {
               top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
             } else if (top.EAPI.isIOS()) {
               top.EAPI.postMessageToNative('Email', data);
             }
           }
-        };xmlhttp.open("post", "http://59.110.171.69:31016/afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
+        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
       }, 4000);
     },
     doAction_uiControl12_4ZTpb5: function (data, elem) {},
