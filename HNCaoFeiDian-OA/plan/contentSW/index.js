@@ -81,8 +81,9 @@
       } else {
         liuchengTable && liuchengTable.map(function (d, t) {
           if (d > 0) {
-            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');
-            obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3];data.liucheng.push(obj);
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");
+            var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3];
+            data.liucheng.push(obj);
           }
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
@@ -94,8 +95,7 @@
           if (d > 1 && t.style.display != 'none') {
             if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'p') {
               $(t).find('p').map(function (q, l) {
-                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false';
-                obj.type = 'P';data.selectApar.push(obj);
+                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false';obj.type = 'P';data.selectApar.push(obj);
               });
             } else if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
               $(t).find('option').map(function (q, l) {
@@ -137,7 +137,8 @@
               //树结构
               //var domtree = trees.find('.t_node');
               var domtree = trees.children('.t_node');domtree.map(function (d, t) {
-                var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];obj.array1 = [];obj.array2 = [];$(t).children('.title').siblings('.t_container').children('.t_leaf').map(function (q, l) {
+                var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];obj.array1 = [];
+                obj.array2 = [];$(t).children('.title').siblings('.t_container').children('.t_leaf').map(function (q, l) {
                   var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
                 });$(t).find('.t_node') && $(t).find('.t_node').map(function (i, v) {
                   var obj3 = {};obj3.title = $(v).find('label').eq(0).text();obj3.dis = v.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj3.indx = i;obj.array1.push(obj3);$(v).find('.t_leaf').map(function (ii, vv) {
@@ -255,15 +256,14 @@
         }ss && ss[0].click();
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
-          var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
+          var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");
+          trs && trs[index].click();
         }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var url = "http://59.110.171.69:31000/WebOffice/home4.nsf/index.html";ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies.split("LtpaToken=")[1];if (top.EAPI.isAndroid()) {
-          huaneng.fujian(url, cookies, text);
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var dbid = data.dataCustom.dbid;var cookieValue = cookies;if (top.EAPI.isAndroid()) {
+          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
-          //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
-          //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "url": url, "cookieName": "LtpaToken", "cookieValue": cookies.split("LtpaToken=")[1], "cookieDomain": "59.110.171.69" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },

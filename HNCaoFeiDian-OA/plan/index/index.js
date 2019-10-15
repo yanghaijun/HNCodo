@@ -29,7 +29,7 @@
       if (!elem) {
         return;
       }var data = { title: [], flag: [] };var trs = elem.querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
-        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;var titles = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[6].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[7].textContent;if (title == '测试收文管理' || title == '收文管理' || title == '发文管理' || title == '签报管理') {
+        var a = [];var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;var titles = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[6].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[7].textContent;if (title == '测试收文管理' || title == '收文管理' || title == '发文管理' || title == '签报管理' || title == '发文内发') {
           a.push(titles);a.push(person);a.push(time);data.title.push(a);
         }
       }var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
@@ -46,7 +46,7 @@
       if (data.eventType == "click") {
         //ysp.appMain.showLoading();
         var index = parseInt(data.customData);var a = [];var trs = elem.querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
-          var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;if (title == '测试收文管理' || title == '收文管理' || title == '发文管理' || title == '签报管理') {
+          var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[2].textContent;if (title == '测试收文管理' || title == '收文管理' || title == '发文管理' || title == '签报管理' || title == '发文内发') {
             a.push(trs[i]);
           }
         }a[index].querySelectorAll("td")[3].querySelector("a").click(); //elem.querySelectorAll("tr")[index].querySelectorAll("td")[1].querySelector("a").click();
