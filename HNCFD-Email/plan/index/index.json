@@ -464,38 +464,6 @@
       "text": "收件箱",
       "frameXPath": "",
       "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0){return true}else {return false}"
-    },
-    "control11_t5SnIs": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.x-grid3-viewport DIV.x-grid3-scroller DIV.x-grid3-body"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control11_t5SnIs"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "custom"
     }
   },
   "contexts": {
@@ -504,13 +472,14 @@
         "control2_d611JL",
         "control0_FNmJr1",
         "control9_WgSZ00",
-        "control10_PlvMVk",
-        "control11_t5SnIs"
+        "control10_PlvMVk"
       ],
       "anchors": [
         "control16_hRmNk4"
       ],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69.*"
+      ]
     },
     "context3_KlNdDA": {
       "controls": [],
@@ -581,21 +550,6 @@
               "events": {
                 "onDoAction": "doAction_uiControl5_oOdoom",
                 "onGetTemplate": "getTemplate_uiControl5_oOdoom"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl4_wXL5XG",
-          "controlId": "control11_t5SnIs",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl4_wXL5XG",
-                "onGetTemplate": "getTemplate_uiControl4_wXL5XG"
               }
             }
           }
