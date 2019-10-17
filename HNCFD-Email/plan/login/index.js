@@ -60,15 +60,13 @@
         //     alert('登录失败,请重新登录！');
         //   }
         // }); //山东邮件登录
-        $.ajax({ url: 'http://59.110.171.69:31009/names.nsf?Login', type: 'post', data: { username: name, password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
-          }, xhrFields: { withCredentials: true }, success: function success(data) {
-            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];
-            var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, ""); //elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff; //elem.ownerDocument.defaultView.location.href = 'http://59.110.171.69:31009/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%25E6%2594%25B6%25E4%25BB%25B6%25E7%25AE%25B1';
-            if (top.EAPI.isAndroid() || top.EAPI.isIOS()) {
-              ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
-            } else {
-              elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
-            }
+        $.ajax({ url: 'http://59.110.171.69:31009/names.nsf?Login', type: 'post', data: { username: name, password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true
+          }, success: function success(data) {
+            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff; // if (top.EAPI.isAndroid() || top.EAPI.isIOS()) {
+            //   ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
+            // } else {
+            //   elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
+            // }
           }, error: function (e) {
             alert('登录失败,请重新登录！');
           } }); //   setTimeout(function () {
