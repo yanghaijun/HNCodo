@@ -1,0 +1,303 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0;  font-style: inherit;  font-family: inherit; }
+:focus { outline: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { font-weight: normal; }
+a img, iframe { border: none; }
+ol, ul { list-style: none; }
+input, textarea, select, button { font-size: 100%; font-family: inherit; }
+select { margin: inherit; }
+body{ margin:0px; padding:0px;font-size:13px; overflow:hidden;}
+/* == clearfix == */
+.clearfix:after { /*/*/content: "."; /* IE8 hack */ display: block; height: 0; clear: both; visibility: hidden; }
+/* IE7 hack */
+.clearfix { display: inline-block; }
+/* IE-mac, IE5, IE6 */
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+html,body{ height:100%;}
+a{ color:#1f376d; text-decoration:none; font-size:13px;}
+a:hover{ color:#000;}
+.mail_index{ width:710px; position: absolute; background:#e5e5e5; height:320px; top:50%; left:50%; margin:-160px 0 0 -355px;}
+.mail_index .mailbox{ width:710px; height:320px; background:#fff; border:1px solid #91bfd2; position:absolute; left:-7px; top:-7px;}
+.mailbox h2.title{ background:url(title_bg.jpg); height:35px; line-height:35px; border-bottom:1px solid #91bfd2;}
+.mailbox h2.title span.title_ico{ display: inline-block; padding-left:40px; background:url(icon_1.jpg) no-repeat; font-size:14px; color:#000; font-weight:bold; margin-left:10px;}
+.mailbox h2.title .join_mailbox{ float:right; font-weight:normal; margin-right:20px;}
+.mailbox h2.title .join_mailbox a{ display:inline-block; padding-right:10px; background:url(jt.gif) right 12px no-repeat;}
+.mailbox .concent{ background:url(con_bg.jpg) #fff top repeat-x;}
+.mailbox .concent .xm{ background:url(box_bg.jpg) right 13px no-repeat; display:block; padding:20px 25px;}
+.mailbox .concent .xm li{ display:block; padding:3px 0px;}
+.xm li span.wl{ display:inline-block; width:155px;}
+.xm li span.hx{ display:inline-block; height:18px; line-height:18px;}
+.xm li span.icon1{ padding-left:22px; background:url(icon.gif) 0px 2px no-repeat;}
+.xm li span.icon2{ padding-left:22px; background:url(icon.gif) 0px -32px no-repeat;}
+.xm li span.icon3{ padding-left:22px; background:url(icon.gif) 0px -66px no-repeat;}
+.xm li span.icon4{ padding-left:22px; background:url(icon.gif) 0px -103px no-repeat;}
+.xm li span.icon5{ padding-left:22px; background:url(icon.gif) 0px -138px no-repeat; margin-left:10px;}
+.xm li span.icon6{ padding-left:22px; background:url((05,48).png) no-repeat;}
+.xm li span.red{ color:#d90000; font-family: Verdana, Geneva, sans-serif; font-weight:bold;}
+
+.xm li ul{ display:block;}
+.xm li ul li{ float:left; padding:0px; margin-right:10px; display:block; padding-left:22px!important;}
+.xm li ul li.ico1{ background:url(icon.gif) 0px -177px no-repeat;}
+.xm li ul li.ico2{ background:url(icon.gif) 0px -210px no-repeat;}
+.xm li ul li.ico3{ background:url(icon.gif) 0px -244px no-repeat;}
+.xm li ul li.ico4{ background:url(icon.gif) 0px -283px no-repeat;}
+.xm li ul li.unread{ background:url((08,33).png) no-repeat;}
+.xm li ul li.allmail{ background:url((39,45).png) no-repeat;}
+.xm li ul li.backup{ background:url((00,05).png) no-repeat;}
+.xm li ul li.nobackup{ background:url((27,31).png) no-repeat;}
+.xm li .bar{ background:url(bar.jpg) no-repeat; width:537px; height:14px; position:relative;}
+.xm li .bar .now{ position:absolute; background:url(bar_green.jpg) no-repeat;height:14px; text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif;}
+.xm li .bar .errer{ position:absolute; background:url(bar_red.jpg) no-repeat;height:14px; text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif;}
+/*新邮件*/
+.adder_mail{ padding:10px 20px 20px 20px;}
+.adder_mail .add_1{ padding-left:60px; line-height:20px; height:22px;}
+.adder_mail .project{ display:block; padding:5px 0px; clear:both;}
+.pdt{ float:left; width:70px; display:block; text-align:right; line-height:20px;}
+.pdd{ display:inline-block; margin:0px; padding:0px; width:93%;}
+.pddspan{ overflow:hidden; _zoom:1; padding-right:10px; display:block;}
+.adder_mail .right_l{ float:right; padding-right:2%;}
+.adder_mail .right_l input{ border:none; background:none; width:auto; height:auto; vertical-align:middle;}
+/*.adder_mail .project dd input{ vertical-align:middle; width:99%; font-size:12px;word-wrap: break-word;}*/
+.ddinput{ vertical-align:middle;border-width:0px; height:18px;background-color:#ffffFF;font-size:12px;word-wrap: break-word;}
+.dddiv{border-style:solid;border-color:#a9bfd3;width:99%;height:24px;background-color:#ffffff;border-width:1px;}
+.ddtextarea{border:none; width:99.8%; font-size:12px; line-height:21px;height:21px;overflow-x:visible;overflow-y:hidden}
+.on{ border:1px solid #a9bfd3; background:#fffdea; height:23px; line-height:18px;}
+.off{ border:1px solid #a9bfd3; background:#fff; height:23px; line-height:18px;}
+
+/*查看邮件*/
+.mail_top{ background:#eff6f9; border-bottom:1px solid #91bfd2; padding:10px 15px;}
+.mail_top h1{ font-weight:bold; color:#000; font-size:13px;}
+.mail_top ul.list_tit{ display:block; padding-top:5px; color:#7d7d7d;}
+.mail_top ul.list_tit li{ padding-top:5px;}
+.mail_top ul.list_tit li span.import{ color:#000;}
+.mail_top ul.list_tit li a.fj{ padding-left:13px; display:inline-block; background:url(icon02.gif) 0px 1px no-repeat; height:20px; line-height:20px; text-decoration:underline;}
+.mail_content{ padding:10px; line-height:25px;}
+.mail_content .fj_list{ margin:5px 0px; background:#edf4f8; border:1px solid #c9dce7; padding:1px;}
+.mail_content .fj_list h2{ font-size:13px;height:30px; line-height:30px; display:block; padding-left:18px; background:url(icon02.gif) 6px 6px no-repeat; font-weight:normal;}
+.mail_content .fj_list .text{ padding:5px 5px;background:#fff;}
+.mail_foot{ height:28px; line-height:28px; background:#edf4f8; border-bottom:1px solid #bed9e8; padding:0px 10px;}
+.mail_content div table{border:1px #000 solid;}
+.mail_content div table td{border:1px #000 solid;}
+/*发送成功*/
+.mail_successfull{ width:446px; height:212px; position:absolute; left:50%; top:50%; margin:-106px 0 0 -223px;}
+.mail_successfull .blk{ background:url(ok_bg.gif); width:446px; height:169px;}
+.blk ul.fs{ display:block; position:absolute; left:125px; top:78px; width:300px; height:77px;}
+.blk ul.fs li{ display:block; padding:3px 0px; color:#6e6e6e;}
+.blk ul.fs li a.index{ background: url(but.gif) no-repeat; width:119px; height:27px; line-height:27px; display:inline-block; color:#000; text-decoration:none;}
+.blk ul.fs li a.index span.b1{ padding-left:25px; background:url(jt2.gif) 17px 10px no-repeat; display:inline-block; height:27px; line-height:27px; cursor:pointer;}
+.blk ul.fs li a.index span.b2{ padding:0 10px 0 35px; background:url(jt3.gif) right 10px no-repeat; display:inline-block; height:27px; line-height:27px; cursor:pointer; margin-right:20px;}
+.mail_successfull .list_fs{ padding:0 10px;}
+.mail_successfull .list_fs h2{ display:block; height:20px; line-height:20px; color:#6e6e6f; font-weight:normal; border-bottom:1px solid #ebebeb;}
+
+/*修改EXTJS界面字体样式表*/
+/*TAB栏位*/
+.x-tab-strip span.x-tab-strip-text {
+	font:normal 13px tahoma,arial,helvetica;
+}
+
+/*BUTTON按钮*/
+.x-btn button{
+	font:normal 13px arial,tahoma,verdana,helvetica;
+}
+
+/*工具栏文字*/
+.x-toolbar td,.x-toolbar span,.x-toolbar input,.x-toolbar div,.x-toolbar select,.x-toolbar label{
+    font:normal 13px arial,tahoma, helvetica, sans-serif;
+}
+
+/*表单输入栏位*/
+.x-small-editor .x-form-field {
+    font:normal 13px arial, tahoma, helvetica, sans-serif;
+}
+
+/*GRID-表格头TD*/
+.x-grid3-hd-row td {
+	font:normal 13px/15px arial, tahoma, helvetica, sans-serif;
+}
+
+/*GRID-表格内容TD*/
+.x-grid3-row td, .x-grid3-summary-row td{
+	font:normal 13px/13px arial, tahoma, helvetica, sans-serif;
+}
+
+.x-panel-header-text{
+    font-size: 13px;
+	font-weight:normal;
+}
+
+/*导航PANEL-栏位头*/
+.x-panel-header {
+    font-size: 13px;
+	font-weight:normal;
+}
+
+/*导航树-节点*/
+.x-tree-node{
+	font: normal 13px arial, tahoma, helvetica, sans-serif;
+}
+
+/*菜单条目*/
+.x-menu-list-item{
+	font:normal 13px arial,tahoma,sans-serif;
+}
+
+/*修改EXTJS界面字体样式表*/
+
+
+/*----------标签单元格-------------*/
+.LableCell{
+	BORDER-RIGHT: #d7d7d7 1px solid;
+	BORDER-TOP: #d7d7d7 1px solid;
+	BORDER-LEFT: #d7d7d7 1px solid;
+	BORDER-BOTTOM: #d7d7d7 1px solid;
+	PADDING-LEFT: 2pt;
+	FONT-SIZE: 12px;
+	WHITE-SPACE: nowrap;
+	BACKGROUND-COLOR: #F5F5F5;
+	height:24px;
+}
+
+/*----------内容行单元格-------------*/
+.ContentCell{
+	height:24px;
+    background-color: #fff; color:#000;
+    font-family : 宋体; font-weight : normal
+    FONT-SIZE: 12px;
+    line-height: 18px;
+    
+    border-top :    1px solid #CCCCCC;
+    border-bottom :    1px solid #CCCCCC;
+    border-left :    1px solid #CCCCCC;
+    border-right :    1px solid #CCCCCC;
+
+    padding-top :    2px;
+    padding-bottom :2px;
+    padding-left :    2px;
+    padding-right :    2px;
+}
+
+/*仿ext按钮样式 竖方向*/
+
+.btA  a {
+	float: none;
+	height: 22px;
+	line-height: 22px;
+	text-decoration: none;
+	color: #000000;
+	padding-left: 3px;
+	margin-left: 10px;
+	background: url(btAimg.png) no-repeat left top;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+
+
+.btA  a  span {
+	padding-right: 15px;
+	padding-left: 12px;
+	font-size: 12px;
+	background: url(btAimg.png) no-repeat right -44px;
+	line-height: 22px;
+	display: inline-block;
+	position: relative;
+}
+
+.btA  a:hover{
+	background: url(btAimg.png) no-repeat left -22px;
+}
+.btA  a:hover span{
+	background: url(btAimg.png) no-repeat right -66px;
+	cursor: hand;
+}
+.icoleft {
+	background: no-repeat left;
+	padding-left: 15px;
+	margin-left: -5px;
+}
+.icoright {
+	background: no-repeat right;
+	padding-right: 15px;
+	margin-right: -5px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*仿ext按钮样式 横方向*/
+
+   
+.btB  a {
+	height: 22px;
+	line-height: 22px;
+	text-decoration: none;
+	color: #000000;
+	padding-left: 3px;
+	margin-left: 10px;
+	background: url(btAimg.png) no-repeat left top;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+.btB  a  span {
+	padding-right: 15px;
+	padding-left: 12px;
+	font-size: 12px;
+	background: url(btAimg.png) no-repeat right -44px;
+	line-height: 22px;
+	display: inline-block;
+	position: relative;
+}
+.btB  a:hover{
+	background: url(btAimg.png) no-repeat left -22px;
+	text-decoration: none;
+}
+.btB  a:hover span{
+	background: url(btAimg.png) no-repeat right -66px;
+	cursor: hand;
+}
+/*-----------------------------------------------------------------------------------*/
+
+	/*表单框线*/
+        .main_border{ border-left: 1px solid #c5c5c5;border-right: 1px solid #c5c5c5;border-bottom: 1px solid #c5c5c5; border-top: 1px solid #c5c5c5;}
+
+	.field_desc{ 
+		background-color: #f7f7f4; 
+		font-size:12px; 
+		COLOR: #171680; 
+		text-align:center; 
+		letter-spacing:3px;  
+		border-bottom: 1px solid #e9e9e9; 
+		/*width:10%; */
+		height:28px;
+	};/*字段描述单元格第一格*/
+
+	.field_desc2{ background-color: #f7f7f4; font-size:12px; COLOR: #171680; text-align:center;  letter-spacing:3px; border-left: 1px solid #e9e9e9;border-bottom: 1px solid #e9e9e9; width:10%; height:28px };/*字段描述单元格*/
+
+	.field_value{ 
+		padding:3px; 
+		border-left: 1px solid #e9e9e9;
+		border-right: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+		height:28px; 
+		/*width:20%;*/
+	} /*值单元格*/
+
+textarea {
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	font-size: 12px;
+}
+
+	/*一般文本框*/
+	.input_text{
+		font-size:12px; 
+		color:#2F2F2F; 
+		border-left: #FFFFFF 1px solid;
+		border-right: #FFFFFF 1px solid;
+		border-top: #FFFFFF 1px solid; 
+		border-bottom: #a3abb0 1px solid; 
+		width:100%
+	} 

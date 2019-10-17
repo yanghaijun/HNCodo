@@ -1,0 +1,355 @@
+{
+  "version": "0.1",
+  "id": "detail",
+  "targetURL": "http://59.110.171.69:31014/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%E6%94%B6%E4%BB%B6%E7%AE%B1#",
+  "jsFile": "index.js",
+  "chineseName": "邮件详情",
+  "description": "邮件详情页面",
+  "controls": {
+    "control7_ThhtLL": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return false}else {return true}"
+    },
+    "control12_D1R03S": {
+      "location": {
+        "data": {
+          "tagName": "IFRAME"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap DIV.x-panel-body.x-panel-body-noheader.x-panel-body-noborder IFRAME"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_D1R03S"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context2_00JS2m": {
+      "controls": [
+        "control12_D1R03S"
+      ],
+      "anchors": [
+        "control7_ThhtLL"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow5_MO6MB5": {
+      "toContexts": [
+        {
+          "toContextId": "context2_00JS2m"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2_LNeJ9T": {
+      "contextId": "context2_00JS2m",
+      "layout": [
+        {
+          "id": "uiControl9_UUh8uZ",
+          "controlId": "control12_D1R03S",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_UUh8uZ",
+                "onGetTemplate": "getTemplate_uiControl9_UUh8uZ"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_00JS2m": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_00JS2m": [
+          "59.110.171.69:31014/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%E6%94%B6%E4%BB%B6%E7%AE%B1"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_00JS2m": [
+          [
+            "DBPath_id",
+            "DCEAEEC",
+            "FastSearchKey",
+            "ext-comp-",
+            "ext-comp-__DCEAEEC",
+            "ext-comp-__ext-comp-",
+            "ext-gen",
+            "iframeDCEAEEC",
+            "tabgrid"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_00JS2m": [
+          [
+            "col-move-bottom",
+            "col-move-top",
+            "linkcss",
+            "x-border-layout-ct",
+            "x-border-panel",
+            "x-btn",
+            "x-btn-arrow",
+            "x-btn-bc",
+            "x-btn-bl",
+            "x-btn-br",
+            "x-btn-icon",
+            "x-btn-icon-small-left",
+            "x-btn-mc",
+            "x-btn-ml",
+            "x-btn-mr",
+            "x-btn-small",
+            "x-btn-tc",
+            "x-btn-text",
+            "x-btn-text-icon",
+            "x-btn-tl",
+            "x-btn-tr",
+            "x-clear",
+            "x-dd-drag-ghost",
+            "x-dd-drag-proxy",
+            "x-dd-drop-icon",
+            "x-dd-drop-nodrop",
+            "x-form-empty-field",
+            "x-form-field",
+            "x-form-num-field",
+            "x-form-text",
+            "x-grid",
+            "x-grid-body",
+            "x-grid-cell",
+            "x-grid-cell-first",
+            "x-grid-cell-inner",
+            "x-grid-cell-last",
+            "x-grid-col",
+            "x-grid-col-",
+            "x-grid-col-checker",
+            "x-grid-col-dd",
+            "x-grid-focus",
+            "x-grid-hd",
+            "x-grid-hd-",
+            "x-grid-hd-btn",
+            "x-grid-hd-checker",
+            "x-grid-hd-inner",
+            "x-grid-hd-row",
+            "x-grid-header",
+            "x-grid-header-inner",
+            "x-grid-header-offset",
+            "x-grid-panel",
+            "x-grid-resize-marker",
+            "x-grid-resize-proxy",
+            "x-grid-row",
+            "x-grid-row-checker",
+            "x-grid-row-first",
+            "x-grid-row-last",
+            "x-grid-row-table",
+            "x-grid-scroller",
+            "x-grid-sort-icon",
+            "x-grid-td-",
+            "x-grid-td-checker",
+            "x-grid-viewport",
+            "x-hide-display",
+            "x-item-disabled",
+            "x-panel",
+            "x-panel-bbar",
+            "x-panel-body",
+            "x-panel-body-noborder",
+            "x-panel-body-noheader",
+            "x-panel-bwrap",
+            "x-panel-noborder",
+            "x-panel-nofooter",
+            "x-panel-tbar",
+            "x-panel-tbar-noheader",
+            "x-shadow",
+            "x-small-editor",
+            "x-tab-edge",
+            "x-tab-left",
+            "x-tab-panel",
+            "x-tab-panel-body",
+            "x-tab-panel-body-noborder",
+            "x-tab-panel-body-top",
+            "x-tab-panel-bwrap",
+            "x-tab-panel-header",
+            "x-tab-panel-header-noborder",
+            "x-tab-panel-noborder",
+            "x-tab-right",
+            "x-tab-strip",
+            "x-tab-strip-active",
+            "x-tab-strip-closable",
+            "x-tab-strip-close",
+            "x-tab-strip-inner",
+            "x-tab-strip-spacer",
+            "x-tab-strip-text",
+            "x-tab-strip-top",
+            "x-tab-strip-wrap",
+            "x-tbar-loading",
+            "x-tbar-page-first",
+            "x-tbar-page-last",
+            "x-tbar-page-next",
+            "x-tbar-page-number",
+            "x-tbar-page-prev",
+            "x-tip",
+            "x-tip-anchor",
+            "x-tip-anchor-top",
+            "x-tip-bc",
+            "x-tip-bl",
+            "x-tip-body",
+            "x-tip-br",
+            "x-tip-bwrap",
+            "x-tip-header",
+            "x-tip-header-text",
+            "x-tip-mc",
+            "x-tip-ml",
+            "x-tip-mr",
+            "x-tip-tc",
+            "x-tip-tl",
+            "x-tip-tr",
+            "x-toolbar",
+            "x-toolbar-cell",
+            "x-toolbar-ct",
+            "x-toolbar-extras-row",
+            "x-toolbar-layout-ct",
+            "x-toolbar-left",
+            "x-toolbar-left-row",
+            "x-toolbar-right",
+            "x-toolbar-right-ct",
+            "x-toolbar-right-row",
+            "x-unselectable",
+            "xsb",
+            "xsbc",
+            "xsbl",
+            "xsbr",
+            "xsc",
+            "xsmc",
+            "xsml",
+            "xsmr",
+            "xst",
+            "xstc",
+            "xstl",
+            "xstr",
+            "xtb-sep",
+            "xtb-text"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_00JS2m": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "A/EM/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/DIV",
+            "DIV/UL/LI",
+            "EM/SPAN/SPAN",
+            "FORM/DIV/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-null",
+            "LI/A/EM",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/DIV",
+            "TD/DIV/IMG",
+            "TD/EM/BUTTON",
+            "TD/TABLE/TBODY",
+            "THEAD/TR/TD",
+            "TR/TD/DIV",
+            "TR/TD/EM",
+            "TR/TD/I",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "UL/LI/A",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

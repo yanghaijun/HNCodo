@@ -3,7 +3,8 @@
     getData_control17_uuhvRC: function (elem) {
       if (!elem) {
         return false;
-      }var data = { shujuTitle: [], content: [], fujian: [], fujianlogo: [], fujianOpen: [], cookies: [] };var elem = elem && elem.contentDocument && elem.contentDocument.documentElement;var topMess = $(elem).find('#cont').find('.mail_top');var obj = {};obj.title = $(topMess).find('h1').eq(0).text();var lis = $(topMess).find('li');obj.postMan = $(lis).eq(0) && $(lis).eq(0).text();obj.postTime = $(lis).eq(1) && $(lis).eq(1).text();obj.saveMan = $(lis).eq(2) && $(lis).eq(2).text();obj.postRecman = $(lis).eq(3) && $(lis).eq(3).text();obj.postAttachment = $(lis).eq(4) && $(lis).eq(4).text();data.shujuTitle.push(obj); //以上邮件人员信息
+      }var data = { shujuTitle: [], content: [], fujian: [],
+        fujianlogo: [], fujianOpen: [], cookies: [] };var elem = elem && elem.contentDocument && elem.contentDocument.documentElement;var topMess = $(elem).find('#cont').find('.mail_top');var obj = {};obj.title = $(topMess).find('h1').eq(0).text();var lis = $(topMess).find('li');obj.postMan = $(lis).eq(0) && $(lis).eq(0).text();obj.postTime = $(lis).eq(1) && $(lis).eq(1).text();obj.saveMan = $(lis).eq(2) && $(lis).eq(2).text();obj.postRecman = $(lis).eq(3) && $(lis).eq(3).text();obj.postAttachment = $(lis).eq(4) && $(lis).eq(4).text();data.shujuTitle.push(obj); //以上邮件人员信息
       //内容部分
       var content = $(elem).find('#mail_content') && $(elem).find('#mail_content'); //var text = content[0] && content[0].innerHTML.replace(/&nbsp;/g, '').replace(/\n/g, '').split('<br>');
       var text = content[0] && content[0].textContent.replace(/\n/g, '').replace(/\t/g, '');data.content = text; //附件开始

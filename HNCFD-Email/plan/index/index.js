@@ -102,7 +102,7 @@
     getData_control10_PlvMVk: function (elem) {
       if (!elem) {
         return;
-      }var data = { list: [] }; // var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;
+      }console.log(elem);var data = { list: [] }; // var elem = $(elem) && $(elem).find('#main_center_frame')[0] && $(elem).find('#main_center_frame')[0].contentDocument && $(elem).find('#main_center_frame')[0].contentDocument.documentElement;
       // var titleLists = $(elem)[0].querySelector('#ext-gen36');
       var titleLists = elem;$(titleLists).find('tr.x-grid3-hd-row').each(function (j) {
         var titlelist = $(this).find('.x-grid3-hd-inner');var obj = {};obj.name = titlelist[2].textContent;obj.title = titlelist[3].textContent;obj.date = titlelist[4].textContent;obj.time = titlelist[5].textContent;obj.cav = titlelist[6].textContent;obj.index = j;data.list.push(obj);

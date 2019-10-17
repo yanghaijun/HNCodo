@@ -1,0 +1,60 @@
+html, body,div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size:100%
+}
+
+table {border-collapse: collapse; border-spacing: 0;}
+
+caption, th, td { font-weight: normal; }
+a img, iframe { border: none; }
+ol, ul { list-style: none; }
+input, select, button { font-size: 100%; font-family: inherit}
+textarea{ font-size: 100%; font-family: inherit; width:100% }
+select { margin: inherit; }
+body{ margin:0px; padding:0px;font-size:13px; overflow:hidden}
+/* == clearfix == */
+.clearfix:after { /*/*/content: "."; /* IE8 hack */ display: block; height: 0; clear: both; visibility: hidden; }
+/* IE7 hack */
+.clearfix { display: inline-block; }
+/* IE-mac, IE5, IE6 */
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+ html,body{ height:100%;}
+
+
+.Toolbar{ background: url(/weboa/images/Toolbar_ico/add_mail_bar.jpg); width:100%;}
+.Toolbar a{ color:#1f376d;text-decoration:none; font-size:13px;white-space:nowrap;}
+/*下拉按钮*/
+.dropdown{background: url(/weboa/images/Toolbar_ico/hover_bg_tree.gif); border:1px solid #8db6cc; border-bottom:none; color:#000!important;display:block;  font-size:12px; font-weight: normal; text-decoration: none; height:27px; line-height:15px; float:left;}
+.drop span,.dropdown span{ display:inline-block; padding-left:20px; padding-top:8px; background:url(/weboa/images/Toolbar_ico/movefile.gif) 0 5px no-repeat;}
+.dropcontent{position:relative; z-index:999!important; height:0px; line-height:0px; font-size:12px; float:left; clear:both;}
+.dropcontent div{ background:#fff; border:1px solid #8db6cc; border-top:none; line-height:200%;width:150px; position:absolute; z-index:1000; display:none; border-top:none;/*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);opacity: .5;z-index: -1;*/
+}
+.dropcontent a{ color:#000;text-decoration:none; display:block; height:25px; line-height:25px; text-align:left; clear:both; padding-left:25px; background: url(/weboa/images/Toolbar_ico/movefile.gif) 5px 4px no-repeat;}
+.dropcontent a:hover{ color: #84d718; text-decoration:none; font-weight:normal;}
+
+.Toolbar ul{ display:block;height:28px;}
+.Toolbar li{ display:block; float:left; background:url(/weboa/images/Toolbar_ico/line.jpg) right 8px no-repeat;}
+.Toolbar a.normal{ display:inline-block; margin-right:5px; padding-left:20px; line-height:28px; padding-left:10px; float:left;}
+.Toolbar a.normal span{padding-right:8px; display:inline-block;float:left;}
+.Toolbar h5{ font-weight:normal; display:inline-block; padding-left:20px;line-height:28px;}
+/*鼠标经过效果*/
+.Toolbar a.normal:hover{ display:inline-block; margin-right:5px; padding-left:20px; line-height:28px; background:url(/weboa/images/Toolbar_ico/on_bg.jpg) 5px 3px no-repeat; padding-left:10px; text-decoration:none;float:left;}
+.Toolbar a.normal:hover span{background:url(/weboa/images/Toolbar_ico/on_bg.jpg) right 3px no-repeat; padding-right:8px; display:inline-block;}
+.Toolbar a.normal h5{ font-weight:normal; display:inline-block; padding-left:20px; cursor:pointer;float:left;}
+
+.Toolbar a.normal h5.cancel{ background: url(/weboa/images/Toolbar_ico/cancel.gif) 0 5px no-repeat;}/*关闭取消*/
+.Toolbar a.normal h5.sign{ background: url(/weboa/images/Toolbar_ico/icon-show-complete.gif) 0 5px no-repeat;}/*签收*/
+.Toolbar a.normal h5.save{ background: url(save.gif) 0 5px no-repeat;}/*暂存*/
+.Toolbar a.normal h5.finish{ background: url(/weboa/images/Toolbar_ico/finish.gif) 0 5px no-repeat;}/*完成*/
+.Toolbar a.normal h5.countersign{ background: url(/weboa/images/Toolbar_ico/group.png) 0 5px no-repeat;}/*会签*/
+.Toolbar a.normal h5.back{ background: url(/weboa/images/Toolbar_ico/left2.gif) 0 5px no-repeat;}/*退回*/
+.Toolbar a.normal h5.att{ background: url(/weboa/images/Toolbar_ico/page_attach.png) 0 5px no-repeat;}/*附件管理*/
+.Toolbar a.normal h5.edityj{ background: url(/weboa/images/Toolbar_ico/logs.gif) 0 5px no-repeat;}/*填写意见*/
+.Toolbar a.normal h5.flow{ background: url(/weboa/images/Toolbar_ico/lctx.png) 0 5px no-repeat;}/*图形流程*/
+.Toolbar a.normal h5.edit{ background: url(/weboa/images/Toolbar_ico/edit.gif) 0 5px no-repeat;}/*编辑*/
+.Toolbar a.normal h5.send{ background: url(/weboa/images/Toolbar_ico/email_go.png) 0 5px no-repeat;}/*发送

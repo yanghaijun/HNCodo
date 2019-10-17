@@ -1,0 +1,173 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:31014/#31014",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "登录页",
+  "firstPaintEnable": false,
+  "controls": {
+    "control0_x428Jp": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_x428Jp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control1_4fpGVT": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录请输入您的用户名和密码 \n",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context0_3B3LPe": {
+      "controls": [
+        "control0_x428Jp"
+      ],
+      "anchors": [
+        "control1_4fpGVT"
+      ],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31014/#.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow0_DRdh97": {
+      "toContexts": [
+        {
+          "toContextId": "context0_3B3LPe"
+        }
+      ]
+    },
+    "flow1_ysxHqg": {
+      "fromContextId": "context0_3B3LPe",
+      "fromAction": "doAction",
+      "fromControlId": "control0_x428Jp",
+      "toContexts": [
+        {
+          "toContextId": "context0_3B3LPe"
+        },
+        {
+          "toContextId": "context1_cVLEfl",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_NXVJCs": {
+      "contextId": "context0_3B3LPe",
+      "layout": [
+        {
+          "id": "uiControl0_8J1tbW",
+          "controlId": "control0_x428Jp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_8J1tbW",
+                "onGetTemplate": "getTemplate_uiControl0_8J1tbW"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_3B3LPe": [
+          "服务器登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_3B3LPe": [
+          "59.110.171.69:31014/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_3B3LPe": [
+          [
+            "pw-id",
+            "user-id"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_3B3LPe": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_3B3LPe": [
+          [
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/FORM/TABLE",
+            "FORM/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/BR",
+            "TR/TD/H1",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-password",
+            "TR/TD/INPUT-submit",
+            "TR/TD/INPUT-text",
+            "TR/TD/LABEL"
+          ]
+        ]
+      }
+    }
+  }
+}

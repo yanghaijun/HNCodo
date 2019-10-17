@@ -1,0 +1,43 @@
+body{ margin:0px; padding:0px;font-size:13px; overflow:hidden}
+
+/*修改EXTJS界面字体样式表*/
+/*TAB栏位*/
+.x-tab-strip span.x-tab-strip-text {
+	font:normal 13px 宋体;
+}
+/*BUTTON按钮*/
+.x-btn button{
+	font:normal 13px arial,tahoma,verdana,helvetica;
+}
+/*工具栏文字*/
+.x-toolbar td,.x-toolbar span,.x-toolbar input,.x-toolbar div,.x-toolbar select,.x-toolbar label{
+    font:normal 13px arial,tahoma, helvetica, sans-serif;
+}
+/*表单输入栏位*/
+.x-small-editor .x-form-field {
+    font:normal 13px arial, tahoma, helvetica, sans-serif;
+}
+/*GRID-表格头TD*/
+.x-grid3-hd-row td {
+	font:normal 13px/15px arial, tahoma, helvetica, sans-serif;
+}
+/*GRID-表格内容TD*/
+.x-grid3-row td, .x-grid3-summary-row td{
+	font:normal 13px/13px arial, tahoma, helvetica, sans-serif;
+}
+.x-panel-header-text{
+	font:normal 13px 宋体;
+}
+/*导航PANEL-栏位头*/
+.x-panel-header {
+    font-size: 13px;
+	font-weight:normal;
+}
+/*导航树-节点*/
+.x-tree-node{
+	font: normal 13px arial, tahoma, helvetica, sans-serif;
+}
+/*菜单条目*/
+.x-menu-list-item{
+	font:normal 13px arial,tahoma,sans-serif;
+}

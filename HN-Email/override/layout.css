@@ -1,0 +1,129 @@
+﻿@charset "utf-8";
+
+
+/************
+* 页面布局样式
+*************/
+/*页面加载时样式-*/
+#loading {
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 45%;
+            top: 40%;
+            padding: 2px;
+            z-index: 20001;
+            height: auto;
+        }
+ #loading a {
+            color: #225588;
+        }
+#loading .loadingIndicator {
+            background: white;
+            font: bold 13px tahoma, arial, helvetica;
+            padding: 10px;
+            margin: 0;
+            height: auto;
+            color: #444;
+        }
+ #loadingMsg {font: normal 10px arial, tahoma, sans-serif;}
+ 
+ /*logo样式-*/
+#head{ background:url(../images/top_bg.jpg); height:60px; font-size:12px;}
+.logo{ background:url(../images/logo.jpg) left top no-repeat;}
+.l_right{ background:url(../images/l_right_bg.jpg) right top no-repeat; height:60px;}
+
+.mes_center{ text-align:right; float:right; padding:40px 10px 0 0;}
+.mes_center span.name{ color: #FF3; font-family:Tahoma;}
+.mes_center span.red{ color:#c00; font-family:Tahoma; padding:0 3px; font-weight:bold;}
+.mes_center a.messages{ color:#000; text-decoration:none; display:inline-block; padding-left:20px; background:url(../images/ling.gif) no-repeat;}
+.mes_center a{ color:#000; text-decoration:underline; display:inline-block; padding-left:5px;}
+
+  
+/*自定义样式-*/
+.main-toolbar{background-image:url(../images/new_nav_bg.jpg)!important; height:38px; border:none!important;}
+.main-toolbar .xtb-text { color:#fff;}
+.left_menu_panel_body{ padding:6px; background:url(../images/l_menu_bg.jpg) repeat-y;}
+.x-tree-root-node{ background:transparent; margin-top:10px;}
+.x-splitbar-h,.x-layout-cmini-west{ width:5px; background:url(../images/nav_bar_bg_left.jpg) repeat-y!important;}
+.centerPanel_bg_bottom{ background:url(../images/box_bg.jpg) #fff repeat-x top;}
+#middle{ background:url(../images/box_bg.jpg) #fff repeat 0 31px;}
+#bottom{ text-align:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; position:relative; padding-left:10px;}
+.Statistics{ padding-top:8px;}
+.Statistics span.red{ color:#c00; font-weight:bold; padding:0 3px;}
+.Statistics span.text{ color:#7a7a7a;}
+#bottom .Service{ position:absolute; right:10px; top:8px; width:252px; height:32px; background:url(../images/Service-online.jpg);}
+.Control-Bar{ background:url(../images/Control-Bar-bg.jpg); border:1px solid #c8dae9; height:42px; margin:10px;}
+.x_menu_panel_head {
+background:url(../images/global_bg.jpg) right no-repeat;
+border-color:#99BBE8;
+color:#15428B;
+font-family:tahoma,arial,verdana,sans-serif;
+font-size:12px;
+font-weight:bold;
+height:33px;
+-height:23px;
+line-height:33px;
+padding:0px;
+-padding-top:10px;
+border:1px solid #67acbf;
+border-bottom:none;
+border-top:none;
+padding-left:10px;
+}
+.x_menu_body_style{ background:#fff; border:1px solid #869fac; border-top:none; border-bottom:none;}
+.x_menu_body_style .x-panel-body{ background:url(../images/global_con_bg.jpg) repeat-x top #fff!important;}
+.left_menu_panel_head{background-image:url("../images/left_title_bg.jpg"); height:33px; line-height:33px; color:#fff; font-weight:bold; padding-left:10px; font-size:14px; text-align:center;}
+
+/*当前菜单提示-*/
+.selected-menu{ display:inline-block; padding-right:20px!important; background: url(../images/selected-menu.png) no-repeat right 2px;vertical-align:top;}
+
+
+/*当前登录人提示-*/
+.currentUser{font-family:Arial, Helvetica, sans-serif; color:#000;}
+.currentUser span.name{ font-size:12px; font-weight:bold; color:#0e7d0a; padding-right:5px;}
+  
+/*主导航栏日期提示-*/
+span.currentDateTime{ position:absolute; right:-25px; top:6px; margin-left:4px; *margin-left:10px; overflow:hidden; padding:2px 0 0 10px; font-family:Arial, Helvetica, sans-serif; color:#00417e; background:url(../images/time_bg.gif) no-repeat 3px 0px; width:230px; height:19px;}
+span.currentDateTime span.time{font-size:12px; font-weight:bold; color:#00417e; padding-right:40px;}
+
+/*导航提示栏-*/
+.nav_line{ font-size:12px; line-height:30px; padding:2px 5px;  background:url(../images/nav_line_bg.jpg); padding:0 0 0 10px; height:30px; color:#fff; display:none;}
+.nav_line .nav_line_right{background:url(../images/nav_line_right_bg.jpg) no-repeat right top; height:30px;}
+.nav_line .ico_index{ height:30px; background:url(../images/nav_line_ico.gif) no-repeat left; padding-left:20px; display:block;}
+.nav_line a{ text-decoration:underline; color:#fff;}
+.left_menu_panel_head .x-tool,.x_menu_panel_head .x-tool{margin:8px 10px 0 2px; -margin:0 5px 0 0; -display:inline;}
+.left_menu_panel_head .x-tool{-margin:8px 5px 0 2px;}
+/*欢迎页-*/
+.welcome{ background:url(../images/welcome_bg.jpg); width:632px; height:255px; position:absolute; left:50%; top:40%; margin:-120px 0 0 -310px;}
+
+/*内容区样式*/
+.form_panel_body{ background: url(../images/content_bg.gif) #fff repeat-x!important; padding:30px;}
+/************
+* 数据表单样式
+*************/
+.main_from{}
+.main_from .form_title_style{ background:url(../images/form/form_title_bg.gif); height:21px;}
+.main_from .form_title_style .left_bg{ background:url(../images/form/form_title_left.gif) left no-repeat;}
+.main_from .form_title_style .right_bg{ background:url(../images/form/form_title_right.gif) right no-repeat; height:21px; position:relative;}
+.main_from .form_content_left{ background:url(../images/form/form_content_left.gif) #e2effa left repeat-y; padding-left:20px;}
+.main_from .form_content_left .form_content_right{ background:url(../images/form/form_content_right.gif) #e2effa right repeat-y; padding-right:20px;}
+.main_from .form_title_style .right_bg .title{ position:absolute; background:url(../images/form/form_h2_bg.gif); height:31px; top:-15px;}
+.main_from .form_title_style .right_bg .title .shadow{ position:absolute; right:-6px; top:20px; background:url(../images/form/form_h2_shadow.gif) no-repeat; width:7px; height:12px;}
+.main_from .form_title_style .right_bg .title .title_l{ background:url(../images/form/form_h2_left.gif) no-repeat left; padding-left:10px; float:left;}
+.main_from .form_title_style .right_bg .title .title_l .title_r{ background:url(../images/form/form_h2_right.gif) no-repeat right; height:31px; padding-right:10px; font-size:12px; line-height:31px; float:left;}
+.main_from .form_title_style .right_bg .title .title_l .title_r span{ padding-left:20px; display:inline-block; background-repeat:no-repeat; background-position:1px 7px;background-image:url(../images/form_ico.gif);}
+.main_from .form_bottom_bg{ background:url(../images/form/form_bottom_bg.gif); height:8px;}
+.main_from .form_bottom_bg .form_bottom_left{ background:url(../images/form/form_bottom_left.gif) no-repeat left; padding-left:10px;height:8px; font-size:0px; line-height:0px;}
+.main_from .form_bottom_bg .form_bottom_left .form_bottom_right{ background:url(../images/form/form_bottom_right.gif) no-repeat right; padding-right:10px;height:8px;}
+.main_from .form-table{ font-size:12px;}
+.main_from input{ border:1px solid #7f9db9; background: url(../images/form/input_border.gif) no-repeat; height:22px; line-height:22px; font-size:12px; padding-left:5px;}
+.form-table{ width:100%;}
+/*----字段标签所处单元格的颜色----*/
+.form-table .form-TdLabel {height:30px ; text-align:right; font-size:12px; padding-right:10px;}
+/*----表单字段所处单元格的颜色----*/
+.form-table .form-TdField { height:30px ;font-size:12px;}
+
+
+
+
+
