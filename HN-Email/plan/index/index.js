@@ -26,7 +26,7 @@
               top.EAPI.postMessageToNative('Email', data);
             }
           }
-        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=10');
+        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
       }, 4000);
     },
     doAction_uiControl2_IyikCv: function (data, elem) {},
