@@ -15,6 +15,10 @@
         "data": {
           "tagName": "LI"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "text",
@@ -50,6 +54,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -82,6 +90,10 @@
         "data": {
           "tagName": "BODY"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@class/word",
@@ -108,6 +120,10 @@
       "location": {
         "data": {
           "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -139,6 +155,10 @@
       "location": {
         "data": {
           "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -179,6 +199,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
+      "ignoreVisibility": true,
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
@@ -195,7 +216,11 @@
       "anchors": [
         "control2_2M6XmS"
       ],
-      "urlAnchor": []
+      "urlAnchor": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31014\\/afmail\\.nsf.*",
+        "^http:\\/\\/59\\.110\\.171\\.69:31009\\/afmail\\.nsf.*",
+        "^http:\\/\\/59\\.110\\.171\\.69:31016\\/afmail\\.nsf.*"
+      ]
     }
   },
   "flows": {

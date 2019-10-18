@@ -19,14 +19,14 @@
             var viewData = JSON.parse(xmlhttp.responseText).ViewData; //console.log(viewData);
             var data = [];viewData.map(function (a, b) {
               data.push(urlIP + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
-            });
-            if (top.EAPI.isAndroid()) {
-              top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
+            });if (top.EAPI.isAndroid()) {
+              top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie,
+                fujianUrl: data.toString() }));
             } else if (top.EAPI.isIOS()) {
               top.EAPI.postMessageToNative('Email', data);
             }
           }
-        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
+        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=10');
       }, 4000);
     },
     doAction_uiControl2_IyikCv: function (data, elem) {},

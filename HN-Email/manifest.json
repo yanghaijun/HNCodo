@@ -368,15 +368,15 @@
       "title": "index",
       "url": "adapter://HN-Email/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31014\\/afmail\\.nsf.*,^http:\\/\\/59\\.110\\.171\\.69:31009\\/afmail\\.nsf.*,^http:\\/\\/59\\.110\\.171\\.69:31016\\/afmail\\.nsf.*"
+        "^http:\\/\\/59\\.110\\.171\\.69.*\\/afmail\\.nsf.*"
       ],
       "demo": []
     }
   ],
   "name": "华能邮件系统",
-  "default_url": "http://59.110.171.69:31014/#31014",
+  "default_url": "http://59.110.171.69:31014/#31009",
   "scope": "HN-Email",
   "start_url": "enterplorer://HN-Email/local/index.html",
-  "update_time": 1571305817654,
+  "update_time": 1571384281099,
   "runtime_env": "1webview"
 }
