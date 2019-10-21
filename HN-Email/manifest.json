@@ -351,6 +351,97 @@
       ],
       "target_url": "override/accept.png",
       "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/accept.png"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/default\\/s\\.gif"
+      ],
+      "target_url": "override/s.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/default/s.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/images\\/Toolbar_ico\\/viewlist_search\\.gif"
+      ],
+      "target_url": "override/viewlist_search.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/viewlist_search.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/grid\\/grid3-special-col-bg\\.gif"
+      ],
+      "target_url": "override/grid3-special-col-bg.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/grid/grid3-special-col-bg.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/form\\/trigger\\.gif"
+      ],
+      "target_url": "override/trigger.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/form/trigger.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/images\\/Toolbar_ico\\/attach\\.gif"
+      ],
+      "target_url": "override/attach.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/attach.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/grid\\/row-over\\.gif"
+      ],
+      "target_url": "override/row-over.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/grid/row-over.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/tabs\\/tab-close\\.gif"
+      ],
+      "target_url": "override/tab-close.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/tabs/tab-close.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/mail.*\\.nsf\\/down1\\.gif"
+      ],
+      "target_url": "override/down1.gif",
+      "default_url": "http://59.110.171.69:31016/mail/ydbgcs3.nsf/down1.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/images\\/Toolbar_ico\\/add_mail_bar\\.jpg"
+      ],
+      "target_url": "override/add_mail_bar.jpg",
+      "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/add_mail_bar.jpg"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/grid\\/page-last\\.gif"
+      ],
+      "target_url": "override/page-last.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/grid/page-last.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/grid\\/page-next\\.gif"
+      ],
+      "target_url": "override/page-next.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/ext3/ajax/ext/resources/images/blue/grid/page-next.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/mail\\/ydbgcs1\\.nsf\\/collapse\\.gif"
+      ],
+      "target_url": "override/collapse.gif",
+      "default_url": "http://59.110.171.69:31016/mail/ydbgcs1.nsf/collapse.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/weboa\\/images\\/Toolbar_ico\\/cancel\\.gif"
+      ],
+      "target_url": "override/cancel.gif",
+      "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/cancel.gif"
     }
   ],
   "adapter_urls": [
@@ -374,9 +465,9 @@
     }
   ],
   "name": "华能邮件系统",
-  "default_url": "http://59.110.171.69:31014/#31009",
+  "default_url": "http://59.110.171.69:31014/#31016",
   "scope": "HN-Email",
   "start_url": "enterplorer://HN-Email/local/index.html",
-  "update_time": 1571384281099,
+  "update_time": 1571643793622,
   "runtime_env": "1webview"
 }
