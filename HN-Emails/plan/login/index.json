@@ -1,0 +1,249 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:31016/#31016",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "登录页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control0_fU3kUB": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.bgstretcher-page DIV.login_blk DIV.login_banner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_fU3kUB"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control1_S9MWoM": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "ordinal": [
+              2,
+              4
+            ],
+            "value": {
+              "text": [
+                "OFFON 记住密码"
+              ],
+              "visText": [
+                "OFFON 记住密码"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.bgstretcher-page DIV.login_blk DIV.login_banner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n         \n            \n            \n                \n                \n                \n                \n                \n                \n                  \n                    OFFON \n                  \n                  记住密码\n                \n  \n                \n                \n                \n            \n            \n            \n         \n      ",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context0_TTNugu": {
+      "controls": [
+        "control0_fU3kUB"
+      ],
+      "anchors": [
+        "control1_S9MWoM"
+      ],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31016/#.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow0_GPdpSS": {
+      "toContexts": [
+        {
+          "toContextId": "context0_TTNugu"
+        }
+      ]
+    },
+    "flow1_bqp5ge": {
+      "fromContextId": "context0_TTNugu",
+      "fromAction": "doAction",
+      "fromControlId": "control0_fU3kUB",
+      "toContexts": [
+        {
+          "toContextId": "context0_TTNugu"
+        },
+        {
+          "toContextId": "context1_XXZwdI",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_trnksp": {
+      "contextId": "context0_TTNugu",
+      "layout": [
+        {
+          "id": "uiControl0_96OUGz",
+          "controlId": "control0_fU3kUB",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_96OUGz",
+                "onGetTemplate": "getTemplate_uiControl0_96OUGz"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_TTNugu": [
+          "欢迎登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_TTNugu": [
+          "59.110.171.69:31016/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_TTNugu": [
+          [
+            "bgstretcher",
+            "ex",
+            "freeow-br",
+            "freeow-msg",
+            "freeow-show"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_TTNugu": [
+          [
+            "bgs-current",
+            "bgstretcher",
+            "bgstretcher-area",
+            "bgstretcher-page",
+            "bottom_blk",
+            "bottom_fixed",
+            "bottom_tips",
+            "btn_off",
+            "down_link",
+            "enter_system",
+            "forget_pw_text",
+            "freeow",
+            "freeow-bottom-right",
+            "ibutton-container",
+            "ibutton-handle",
+            "ibutton-handle-middle",
+            "ibutton-handle-right",
+            "ibutton-label-off",
+            "ibutton-label-on",
+            "ibutton-padding-left",
+            "ibutton-padding-right",
+            "img-loaded",
+            "login_banner",
+            "login_blk",
+            "login_form",
+            "login_form_text",
+            "login_panel",
+            "mask",
+            "password",
+            "row",
+            "text_off",
+            "top_bar",
+            "top_fixed",
+            "username"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_TTNugu": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "DD/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/P/INPUT-submit",
+            "DIV/SPAN/A",
+            "DIV/SPAN/LABEL",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DD/INPUT-button",
+            "DL/DD/INPUT-password",
+            "DL/DD/INPUT-text",
+            "DL/DD/SPAN",
+            "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "UL/LI/IMG"
+          ]
+        ]
+      }
+    }
+  }
+}

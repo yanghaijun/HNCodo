@@ -25,7 +25,7 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69.*\\/afmail.nsf\\/public.js"
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/afmail\\.nsf\\/public\\.js"
       ],
       "target_url": "override/public.js",
       "default_url": "http://59.110.171.69:31016/afmail.nsf/public.js"
@@ -134,13 +134,6 @@
       ],
       "target_url": "override/ext-lang-zh_CN.js",
       "default_url": "http://59.110.171.69:31016/weboa/ext3/ext-lang-zh_CN.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69.*\\/afmail\\.nsf\\/Attachment_NTKO\\.js"
-      ],
-      "target_url": "override/Attachment_NTKO.js",
-      "default_url": "http://59.110.171.69:31016/afmail.nsf/Attachment_NTKO.js"
     },
     {
       "origin_url": [
@@ -403,7 +396,7 @@
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69.*\\/mail.*\\.nsf\\/down1\\.gif"
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/mail\\/ydbgcs3\\.nsf\\/down1\\.gif"
       ],
       "target_url": "override/down1.gif",
       "default_url": "http://59.110.171.69:31016/mail/ydbgcs3.nsf/down1.gif"
@@ -442,32 +435,41 @@
       ],
       "target_url": "override/cancel.gif",
       "default_url": "http://59.110.171.69:31016/weboa/images/Toolbar_ico/cancel.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69.*\\/mail\\/.*\\.nsf\\/expand\\.gif"
+      ],
+      "target_url": "override/expand.gif",
+      "default_url": "http://59.110.171.69:31016/mail/ydbgcs1.nsf/expand.gif"
     }
   ],
   "adapter_urls": [
     {
       "title": "login",
-      "url": "adapter://HN-Email/plan/login/index.json",
+      "url": "adapter://HN-Emails/plan/login/index.json",
       "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31014\\/#.*"
+        "^http:\\/\\/59\\.110\\.171\\.69:31016\\/#.*"
       ],
       "demo": [
-        "http://59.110.171.69:31014/#31014"
+        "http://59.110.171.69:31016/#31016"
       ]
     },
     {
       "title": "index",
-      "url": "adapter://HN-Email/plan/index/index.json",
+      "url": "adapter://HN-Emails/plan/index/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69.*\\/afmail\\.nsf.*"
       ],
-      "demo": []
+      "demo": [
+        "http://59.110.171.69:31016/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%E6%94%B6%E4%BB%B6%E7%AE%B1"
+      ]
     }
   ],
-  "name": "华能邮件系统",
-  "default_url": "http://59.110.171.69:31014/#31016",
-  "scope": "HN-Email",
-  "start_url": "enterplorer://HN-Email/local/index.html",
-  "update_time": 1571712747183,
+  "name": "邮件系统",
+  "default_url": "http://59.110.171.69:31016/#31014",
+  "scope": "HN-Emails",
+  "start_url": "enterplorer://HN-Emails/local/index.html",
+  "update_time": 1571738513699,
   "runtime_env": "1webview"
 }
