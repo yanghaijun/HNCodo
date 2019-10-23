@@ -48,50 +48,79 @@
         //     alert('登录失败,请重新登录！');
         //   }
         // }); //四川邮件登录
-        $.ajax({ url: 'http://59.110.171.69:31016/names.nsf?Login', type: 'post', data: { Username: name, Password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true }, success: function (data) {
+        //   $.ajax({
+        //     url: 'http://59.110.171.69:31016/names.nsf?Login',
+        //     type: 'post',
+        //     data: {
+        //       Username: name,
+        //       Password: password,
+        //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+        //     },
+        //     xhrFields: {
+        //       withCredentials: true
+        //     },
+        //     success: function (data) {
+        //       var bb = data.split('id="main_center_frame"')[1];
+        //       var cc = bb.split('width="100%"')[0];
+        //       var dd = cc.split("src=")[1];
+        //       var ee = dd.replace(" ", "");
+        //       var ff = ee.replace(/\"/g, "");
+        //       if (top.EAPI.isIOS()) {
+        //         ysp.appMain.openWindow('http://59.110.171.69:31016' + ff);
+        //       } else {
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31016' + ff;
+        //       }
+        //     },
+        //     error: function (e) {
+        //       alert('登录失败,请重新登录！');
+        //     }
+        //   }); //信息公司邮件登录
+        $.ajax({
+          url: 'http://59.110.171.69:31009/names.nsf?Login', type: 'post', data: { username: name,
+            password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true }, success: function (data) {
             var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");if (top.EAPI.isIOS()) {
-              ysp.appMain.openWindow('http://59.110.171.69:31016' + ff);
+              ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
             } else {
-              elem.ownerDocument.location.href = 'http://59.110.171.69:31016' + ff;
+              elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
             }
           }, error: function (e) {
             alert('登录失败,请重新登录！');
-          } }); //山东邮件登录
-        // $.ajax({
-        //   url: 'http://59.110.171.69:31009/names.nsf?Login',
-        //   type: 'post',
-        //   data: {
-        //     username: name,
-        //     password: password,
-        //     redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
-        //   },
-        //   xhrFields: {
-        //     withCredentials: true
-        //   },
-        //   success: function(data) {
-        //     var bb = data.split('id="main_center_frame"')[1];
-        //     var cc = bb.split('width="100%"')[0];
-        //     var dd = cc.split("src=")[1];
-        //     var ee = dd.replace(" ", "");
-        //     var ff = ee.replace(/\"/g, "");
-        //     if (top.EAPI.isIOS()) {
-        //       ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
-        //     } else {
-        //       elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
+          } }); //新疆邮件
+        //   $.ajax({
+        //     url: 'http://59.110.171.69:31026/names.nsf?Login',
+        //     type: 'post',
+        //     data: {
+        //       username: name,
+        //       password: password,
+        //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+        //     },
+        //     xhrFields: {
+        //       withCredentials: true
+        //     },
+        //     success: function (data) {
+        //       var bb = data.split('id="main_center_frame"')[1];
+
+        //       var cc = bb.split('width="100%"')[0];
+        //       var dd = cc.split("src=")[1];
+        //       var ee = dd.replace(" ", "");
+        //       var ff = ee.replace(/\"/g, "");
+        //       if (top.EAPI.isIOS()) {
+        //         ysp.appMain.openWindow('http://59.110.171.69:31026' + ff);
+        //       } else {
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31026' + ff;
+        //       }
+        //     },
+        //     error: function (e) {
+        //       alert('登录失败,请重新登录！');
         //     }
-        //   },
-        //   error: function (e) {
-        //     alert('登录失败,请重新登录！');
-        //   }
-        // });
-        // setTimeout(function () {
+        //   }); // setTimeout(function () {
         //   var el = $(elem) && $(elem).find('table');
         //   var trs = $(el).find('tr');
         //   var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();
         //   var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();
         //   var xmlhttp = null;
-        //   if (window.XMLHttpRequest) {
 
+        //   if (window.XMLHttpRequest) {
         //     xmlhttp = new XMLHttpRequest();
         //   } else if (window.ActiveXObject) {
         //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
@@ -101,6 +130,7 @@
         //       //console.log(xmlhttp.responseText);
         //       var aa = xmlhttp.responseText;
         //       var bb = aa.split('id="main_center_frame"')[1];
+
         //       var cc = bb.split('width="100%"')[0];
         //       var dd = cc.split("src=")[1];
         //       var ee = dd.replace(" ", "");

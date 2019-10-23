@@ -9,7 +9,7 @@
     getData_control4_wELmw1: function (elem) {
       setTimeout(function () {
         var demoUrl = elem.ownerDocument.defaultView.location.href;var urlIP = demoUrl.split("afmail.nsf")[0]; // var el = elem.querySelectorAll('frame') && elem.querySelectorAll('frame')[1].contentDocument.documentElement.querySelector("#ext-gen3");
-        var name = elem.querySelector('input[name="mailfilename"]').value;var numText = elem.querySelector("#ext-comp-1010").textContent;var nums = numText.split("共")[1];var num = parseInt(nums.split("条")[0]);var xmlhttp = null;if (window.XMLHttpRequest) {
+        var name = elem.querySelector('input[name="mailfilename"]').value;var numText = elem.querySelector("#ext-comp-1010").textContent;var nums = numText.split("共")[1];var num = parseInt(nums.split("条")[0]);var number = num <= 20 ? num : 20;var xmlhttp = null;if (window.XMLHttpRequest) {
           xmlhttp = new XMLHttpRequest();
         } else if (window.ActiveXObject) {
           xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
@@ -20,13 +20,12 @@
             var data = [];viewData.map(function (a, b) {
               data.push(urlIP + name + '/($Inbox)/' + a.SID + '?OpenDocument&TabID=' + a.SID + '&LinkTarget=NewTabWindow');
             });if (top.EAPI.isAndroid()) {
-              top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie,
-                fujianUrl: data.toString() }));
+              top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'Email', cookie: document.cookie, fujianUrl: data.toString() }));
             } else if (top.EAPI.isIOS()) {
               top.EAPI.postMessageToNative('Email', data);
             }
           }
-        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + num);
+        };xmlhttp.open("post", urlIP + "afmail.nsf/agent_CustomViewGetData?openagent");xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");xmlhttp.withCredentials = true;xmlhttp.send("start&filterKey&viewName=($Inbox)&showUnread=true&reverse=true&dbName=" + name + '&limit=' + number);
       }, 4000);
     },
     doAction_uiControl2_IyikCv: function (data, elem) {},
@@ -98,5 +97,5 @@
       var selfTemplate = "module.exports = React.createClass({\n  handlerOne(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'one'\n      })\n    }\n  },\n  handlerTwo(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'two'\n      })\n    }\n  },\n  handlerThree(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'three'\n      })\n    }\n  },\n  handlerFour(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'four'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div className = \"ysp-pages\">\n        <div>\n          <span className = {data && data.flag1[0] == true ? \"oneGo\" : \"onNoGo\"} \n            onClick={this.handlerOne.bind(this)}></span>\n          <span className = {data && data.flag2[0] == true ? \"twoGo\" : \"twoNoGo\"} \n            onClick={this.handlerTwo.bind(this)}></span>\n        </div>\n        <div>\n        \t<span className = {data && data.flag3[0] == true ? \"threeGo\" : \"threeNoGo\"} \n            onClick={this.handlerThree.bind(this)}></span>\n          <span className = {data && data.flag4[0] == true ? \"fourGo\" : \"fourNoGo\"} \n            onClick={this.handlerFour.bind(this)}></span>\n        </div>\n      </div>\n    )\n  }\n});";
       return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerOne: function handlerOne() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'one'\n      });\n    }\n  },\n  handlerTwo: function handlerTwo() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'two'\n      });\n    }\n  },\n  handlerThree: function handlerThree() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'three'\n      });\n    }\n  },\n  handlerFour: function handlerFour() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'four'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      { className: 'ysp-pages' },\n      React.createElement(\n        'div',\n        null,\n        React.createElement('span', { className: data && data.flag1[0] == true ? \"oneGo\" : \"onNoGo\",\n          onClick: this.handlerOne.bind(this) }),\n        React.createElement('span', { className: data && data.flag2[0] == true ? \"twoGo\" : \"twoNoGo\",\n          onClick: this.handlerTwo.bind(this) })\n      ),\n      React.createElement(\n        'div',\n        null,\n        React.createElement('span', { className: data && data.flag3[0] == true ? \"threeGo\" : \"threeNoGo\",\n          onClick: this.handlerThree.bind(this) }),\n        React.createElement('span', { className: data && data.flag4[0] == true ? \"fourGo\" : \"fourNoGo\",\n          onClick: this.handlerFour.bind(this) })\n      )\n    );\n  }\n});";
     }
-  });
+  }, "index");
 })(window, ysp);
