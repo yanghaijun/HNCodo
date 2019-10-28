@@ -22,12 +22,11 @@
       return '\'use strict\';\n\nvar _appRenderer = require(\'appRenderer\');\n\nvar HeaderCustom = React.createClass({\n  displayName: \'HeaderCustom\',\n\n  click: function click() {\n    var callBack = this.props.customHandler;\n    if (callBack) {\n      callBack({\n        eventType: \'click\'\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    return React.createElement(\n      \'header\',\n      { className: \'navbar navbar-primary header\', style: { background: "#0a73cc" } },\n      React.createElement(\n        \'h2\',\n        { className: \'navbar-title navbar-center\' },\n        this.props.customData\n      ),\n      React.createElement(\n        \'div\',\n        { className: \'navbar-nav navbar-left\' },\n        React.createElement(\n          \'a\',\n          { onClick: _this.click, className: \'navbar-nav-item\' },\n          React.createElement(\'span\', { className: \'navbar-nav-title\' }),\n          React.createElement(\'span\', { className: \'icon icon-left-nav navbar-icon\' })\n        )\n      )\n    );\n  }\n});\n\nmodule.exports = HeaderCustom;';
     },
     getData_control59_MOBJiQ: function (elem) {
-      'use strict';
-
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.querySelectorAll('.input_table')[3];var basic2 = elem.querySelectorAll('.input_table')[5]; // var basic3 = elem.querySelector('#detailTable');
         // var basicTr3 = basic3.querySelectorAll('tr');
-        var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')];data.data[2] = ['报销类型', '部门费用' + '-差旅费'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
+        var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')]; //data.data[2] = ['报销类型', '部门费用' + '-差旅费'];
+        data.data[2] = ['报销类型', '部门费用'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input').value];
         } else {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];
@@ -81,8 +80,6 @@
       }
     },
     doAction_uiControl45_216hQV: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'upload') {
         elem.querySelector('#commonAttachmentFileDoc').click();var uploadTimer = setInterval(function () {
           if (elem.querySelector('#commonAttachmentFileDoc').value.length > 0) {
@@ -105,7 +102,8 @@
           // top.EAPI.openDocument(JSON.stringify(jsonStr));
           // alert(2);
         } else {
-          console.log(JSON.stringify(options));top.yspUser.openDocument(JSON.stringify(options));
+          //console.log(JSON.stringify(options));
+          top.yspUser.openDocument(JSON.stringify(options));
         }
       }
     },
@@ -115,6 +113,7 @@
     },
     getData_control71_JsLTmr: function (elem) {
       'use strict';
+
       ;;var data = [];if (elem) {
         if (elem.querySelectorAll('input')[0].parentNode.style.display != 'none') {
           data.push(elem.querySelectorAll('input')[0].value.replace(/\s+/g, ''));data.push(elem.querySelectorAll('input')[1].value.replace(/\s+/g, ''));
@@ -123,6 +122,7 @@
     },
     doAction_uiControl57_aecEHU: function (data, elem) {
       'use strict';
+
       if (data.eventType == 'save') {
         elem.querySelectorAll('input')[0].click();
       } else if (data.eventType == 'submit') {
@@ -133,5 +133,5 @@
       var selfTemplate = 'module.exports = React.createClass({\n  save: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'save\'\n      })\n    }\n  },\n  submit: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'submit\'\n      })\n      handler({\n       eventType:\'section-trigger\',\n       data:\'control72_Oe1hBd\'\n     })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData||[];\n    return (\n      data.length>0?\n      <div className="bottomButton">\n        <li onClick={_this.save}>{data[0]}</li>\n        <li onClick={_this.submit}>{data[1]}</li>\n      </div>\n      :\'\'\n    )\n  }\n});';
       return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  save: function save(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'save\'\n      });\n    }\n  },\n  submit: function submit(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'submit\'\n      });\n      handler({\n        eventType: \'section-trigger\',\n        data: \'control72_Oe1hBd\'\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    var data = this.props.customData || [];\n    return data.length > 0 ? React.createElement(\n      \'div\',\n      { className: \'bottomButton\' },\n      React.createElement(\n        \'li\',\n        { onClick: _this.save },\n        data[0]\n      ),\n      React.createElement(\n        \'li\',\n        { onClick: _this.submit },\n        data[1]\n      )\n    ) : \'\';\n  }\n});';
     }
-  });
+  }, "dailyReimbursementForm");
 })(window, ysp);
