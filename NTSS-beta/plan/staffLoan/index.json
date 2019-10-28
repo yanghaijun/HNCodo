@@ -3,9 +3,6 @@
   "id": "staffLoan",
   "targetURL": "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
   "jsFile": "index.js",
-  "requires": {
-    "back": "../back/index.json"
-  },
   "chineseName": "员工借款单",
   "description": "",
   "firstPaintEnable": false,
@@ -235,17 +232,6 @@
       "toContexts": [
         {
           "toContextId": "context14_D636DG"
-        }
-      ]
-    },
-    "flow71_9tPM4k": {
-      "fromContextId": "context14_D636DG",
-      "fromAction": "section",
-      "fromControlId": "control60_sai2SN",
-      "toContexts": [
-        {
-          "toContextId": "context5_t1B0NJ",
-          "toModelId": "back"
         }
       ]
     }

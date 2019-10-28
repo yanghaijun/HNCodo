@@ -384,7 +384,7 @@ doAction_uiControl16_TvQrlB: |
   }
   else if (event == 'cd') {
     $(elem).children('li').eq(2).find('div').eq(0).click();
-    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#cx";
+    elem.ownerDocument.location.href="http://59.110.171.69:31002/ReimbursePlatform/reimburse/loginAction.action#cx";
     ysp.appMain.showLoading();
     setTimeout(function () {
       ysp.appMain.hideLoading();
@@ -392,7 +392,7 @@ doAction_uiControl16_TvQrlB: |
   }
   else if (event == 'bx') {
     $(elem).children('li').eq(2).find('div').eq(0).click();
-    elem.ownerDocument.location.href="http://59.110.171.69:30002/ReimbursePlatform/reimburse/loginAction.action#bx";
+    elem.ownerDocument.location.href="http://59.110.171.69:31002/ReimbursePlatform/reimburse/loginAction.action#bx";
     ysp.appMain.showLoading();
     setTimeout(function () {
       ysp.appMain.hideLoading();

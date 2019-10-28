@@ -23,7 +23,7 @@ body{
   position: fixed;
   top: 30%;
   left: 20%;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bolder;
   z-index: 1000;
 }
@@ -59,7 +59,7 @@ li{
   }
   button{
     padding: 10px 55px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
   }
   .userName,.pwdName{
@@ -79,12 +79,9 @@ li{
   }
   .login-head{
     text-align: center;
-   	//padding : 50% 0;
-    padding : 25% 0;
-    //color: #065187;
-    color: #0A73CC;
+   	padding : 50% 0;
+    color: #065187;
     font-size: 24px;
-    font-weight: bold;
   }
   .selected{
     margin-top: 80px;
@@ -105,10 +102,9 @@ li{
     margin-top: 35px;
   }
   .reset{
-    border: 1px solid #0A73CC;
+    border: 1px solid #063185;
     background: #fff;
-    //color: #063185;
-    color: #0A73CC;
+    color: #063185;
   }
   .login {
     float: right;
@@ -120,9 +116,6 @@ li{
       color: #fff;
     }
   }
-}
-div[data-ysp-modelid="Login"]{
-  padding-bottom: 0px;
 }
 
 /*_________________TodoList - SAP待办列表____________________*/
@@ -225,15 +218,13 @@ div[data-ysp-modelid="Login"]{
   //margin: 10px 0;
   overflow: hidden;
   background: #eee;
-  //border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   line-height: 41px;
-  padding-bottom: 15px;
   .serch-head-icon{
     background: #fff;
     .icon-title{
-      border-left: 5px solid #0A73CC;
+      border-left: 5px solid rgb(16,92,193);
       padding-left: 15px;
-      color: #333333;
     }
   }
   .serch-right{
@@ -241,29 +232,6 @@ div[data-ysp-modelid="Login"]{
     margin-right: 20px;
     color: #005aa0;
   }
-  .list-icon-up{
-    display: inline-block;
-    background: url(../local/img/up.png) no-repeat center center;
-    width: 50px;
-    height: 50px;
-    background-size: 15px 10px;
-    position: absolute;
-    right: 5px;
-    top: 0px;
-  }
-  .list-icon-done{
-    background: url(../local/img/done.png) no-repeat center center;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-size: 15px 10px;
-    position: absolute;
-    right: 5px;
-    top: 0px;
-   
-  }
-  
-  
   .active{
     display: block;
   }
@@ -311,11 +279,9 @@ div[data-ysp-modelid="Login"]{
       position: fixed;
       bottom: 0;
       left: 0;
-      display: flex;
-      justify-content: space-around;
       button{
         // padding: 10px 55px;
-        width: 40%;
+        width: 45%;
         height: 40px;
         line-height: 40px;
         text-align: center;
@@ -323,9 +289,9 @@ div[data-ysp-modelid="Login"]{
         font-size: 16px;
       }
       .clear{
-        border: 1px solid #0A73CC;
+        border: 1px solid #063185;
         background: #fff;
-        color: #0A73CC;
+        color: #063185;
       }
       .commit-serch {
         float: right;
@@ -358,148 +324,116 @@ div[data-ysp-modelid="Login"]{
         overflow: hidden;
   			text-overflow: ellipsis;
       }
-      span:nth-child(1){
-        font-weight: bold;
-      }
     }
     
   }
-  //3.29号修改UI图片将删除和详情从底下放到右边开始
-//   .list-bottom{
-//       width: 100%;
-//       height: 50px;
-//       line-height: 72px;
-//       text-align: center;
-//       background: #FCFCFC;
-//     	overflow:hidden; 
-//       li{
-//         float: left;
-//         color: #929292;
-//         font-size: 12px;
-//       }
-      
-//       .li1{
-//         width: 100%;
-//         position: relative;
-//       }
-//     	.li1:first-child::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/details.png) no-repeat center center;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//       .li2{
-//         width: 48%;
-//         position: relative;
-//       }
-//       .li2:first-child::after{
-//         position: absolute;
-//         content: "";
-//         height: 30px;
-//         width: 1px;
-//         background: rgba(211, 211, 211, 0.5);
-//         top: 10px;
-//         right: 0px;
-//       }
-//     	.li2:first-child::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/delete.png) no-repeat;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//     	.li2:last-child::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/details.png) no-repeat;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//     	.li3{
-//         width: 33%;
-//         position: relative;
-//       }
-//     	.li3:first-child::after,.li3:nth-child(2)::after{
-//         position: absolute;
-//         content: "";
-//         height: 30px;
-//         width: 1px;
-//         background: rgba(211, 211, 211, 0.5);
-//         top: 10px;
-//         right: 0px;
-//       }
-//     	.li3:last-child::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/return.png) no-repeat;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//     	.li3:first-child::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/details.png) no-repeat;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//     	.li3:nth-child(2)::before{
-// 				position: absolute;
-//         content: "";
-//         height: 20px;
-//         width: 20px;
-//         background: url(../local/img/confirm.png) no-repeat;
-//         background-size: 20px 20px;
-//         top: 5px;
-//         margin: auto;
-//       }
-//     }
-   .list-bottom {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 90px;
-    height:123px;
-    color: #fff;
-    >li {
-      width: 60px;
-      height: 25px;
+  .list-bottom{
+      width: 100%;
+      height: 50px;
+      line-height: 72px;
       text-align: center;
-      line-height: 25px;
-      border-radius: 30px;
-      font-size: 15px;
-      margin: 11px 5px;
+      background: #FCFCFC;
+    	overflow:hidden; 
+      li{
+        float: left;
+        color: #929292;
+        font-size: 12px;
+      }
+      
+      .li1{
+        width: 100%;
+        position: relative;
+      }
+    	.li1:first-child::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/details.png) no-repeat center center;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
+      .li2{
+        width: 48%;
+        position: relative;
+      }
+      .li2:first-child::after{
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 1px;
+        background: rgba(211, 211, 211, 0.5);
+        top: 10px;
+        right: 0px;
+      }
+    	.li2:first-child::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/delete.png) no-repeat;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
+    	.li2:last-child::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/details.png) no-repeat;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
+    	.li3{
+        width: 33%;
+        position: relative;
+      }
+    	.li3:first-child::after,.li3:nth-child(2)::after{
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 1px;
+        background: rgba(211, 211, 211, 0.5);
+        top: 10px;
+        right: 0px;
+      }
+    	.li3:last-child::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/return.png) no-repeat;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
+    	.li3:first-child::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/details.png) no-repeat;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
+    	.li3:nth-child(2)::before{
+				position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: url(../local/img/confirm.png) no-repeat;
+        background-size: 20px 20px;
+        top: 5px;
+        margin: auto;
+      }
     }
-     .Detail-d {
-      background: #25d4ad;
-     }
-     .Back-d {
-      background: #BABABA;
-     }
-  }
-  //3.29号修改UI图片将删除和详情从底下放到右边结束
-  
- 
-  
   .title{
     font-size: 16px;
-    // color: #333;
-    color: #0a73cc;
+    color: #333;
     margin-bottom: 10px;
     font-weight: bold;
   }
@@ -667,10 +601,9 @@ div[data-ysp-modelid="Login"]{
   padding-top: 10px;
   i.icon-false{
     display: inline-block;
-    width: 20px ;
+    width: 15px ;
     height: 15px;
-    //background: url(../local/img/shouqi.png) no-repeat center center;
-    background: url(../local/img/up.png) no-repeat center center;
+    background: url(../local/img/shouqi.png) no-repeat center center;
     background-size: 100%;
     margin-right:15px; 
   }
@@ -678,8 +611,7 @@ div[data-ysp-modelid="Login"]{
     display: inline-block;
     width: 20px ;
     height: 15px;
-    // background: url(../local/img/xianshi.png) no-repeat center center;
-    background: url(../local/img/done.png) no-repeat center center;
+    background: url(../local/img/xianshi.png) no-repeat center center;
     background-size: 100%;
     margin-right:15px; 
   }
@@ -823,11 +755,6 @@ div[data-ysp-modelid="Login"]{
     background-size: 79%;
    
   }
-  //列表页的上下箭头切换UI改变20190329开始
-  .D-list-icon-up {
-    transform:rotate(-180deg);
-  }
-  //列表页的上下箭头切换UI改变20190329结束
 }
 .bg_none{
   min-height: 70vh;
@@ -943,6 +870,7 @@ div[data-ysp-modelid="Login"]{
 .btn{
     width: 24%;
     height: 36px;
+    
     font-size: 16px;
 }
 
@@ -996,36 +924,11 @@ div[data-componentsid="uiControl2_Qo50KS"]{
     font-size:16px;
   }
   .icon-title{
-    display: block;
-    margin: 10px 0;
-    padding-left: 40px;
-    position: relative;
-    font-weight: bold;
-    // border-left: 5px solid rgb(16,92,193);
+   	 display: block;
+	    margin: 10px 0;
+      border-left: 5px solid rgb(16,92,193);
+      padding-left: 15px;
     }
-  .icon-titleT:before{
-      content: "";
-      background: url(../local/img/tie.png) no-repeat center center;
-      background-size: contain;
-      position: absolute;
-      top:2px;
-      left:10px;
-      width: 20px;
-      height: 20px;
-    	border-radius: 50%;
-    }
-  .icon-titleM:before{
-      content: "";
-      background: url(../local/img/saveM.png) no-repeat center center;
-      background-size: contain;
-      position: absolute;
-      top:2px;
-      left:10px;
-      width: 20px;
-      height: 20px;
-    	border-radius: 50%;
-    }
-  
 .Basic,.loan,.cashier{
     padding-bottom: 10px;
     background: #fff;
@@ -1294,35 +1197,25 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
   background: #FFFFFF;
   .details{
     margin-top: 50px;
-    //3.29号修改UI图片将基本信息前面的蓝色竖条改成图片开始
     .detailsHead{
       font-size: 18px;
-      // color: #0E75CD;
+      color: #0E75CD;
       font-weight: bold;
       margin-top: 15px;
-      // margin-left: 15px;
-      margin-left: 50px;
+      margin-left: 15px;
       position: relative;
     }
     .detailsHead:before{
       content: "";
-      // background: #0A73CC;
-      // width: 5px;
-      // height: 20px;
-      // left: -15px;
-      // top: 3px;
-      background: url(../local/img/BasicInformation.png) no-repeat center center;
-      background-size: contain;
-      position: absolute;
-      top: 4px;
-      left: -37px;
-      width: 25px;
+      background: #0A73CC;
+      width: 5px;
       height: 20px;
+      position: absolute;
+      left: -15px;
+      top: 3px;
     }
-    //3.29号修改UI图片将基本信息前面的蓝色竖条改成图片开始
     .detailsContent{
       margin-top: 15px;
-      border-top: 1px solid #eeeeee;
       .contentTable{
         width: calc(100%-10px);
         margin-left: 15px;
@@ -1375,15 +1268,15 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
           display: block;
           width: 50px;
           height: 50px;
-          background: url(../local/img/shouqi.png) no-repeat center center;
+          background: url(../local/img/arrow.png) no-repeat center center;
           background-size: 8px 13px;
-         // transform:rotate(90deg); 
+          transform:rotate(90deg);
           position: absolute;
           right: 0px;
           top: 0px;
         }
         .arr{
-          transform:rotate(90deg); 
+          transform:rotate(-90deg);
         }
         .nor{
           transform:rotate(0deg);
@@ -1576,146 +1469,4 @@ div[data-ysp-modelid="travelClaim"],div[data-ysp-modelid="reimbursement"],div[da
     }
   }
   
-}
-
-//UI图修改select的三角符号0329开始
-.Dselect-right{  
-		appearance:none;   
-    -moz-appearance:none;   
-    -webkit-appearance:none;  
-    background:url(../local/img/shouqi.png) no-repeat scroll right center transparent; 
-  	background-size: 9px 15px;
- 	 	//border-bottom: 1px solid #eeeeee !important;
-}
-.Dselect-down{  
-		appearance:none;   
-    -moz-appearance:none;   
-    -webkit-appearance:none;  
-    background:url(../local/img/xianshi.png) no-repeat scroll right center transparent; 
-  	background-size: 15px 9px;
-  	//border-bottom: 1px solid #eeeeee !important;
-}
-.Dselect-right::-ms-expand { display: none; }
-.Dselect-down::-ms-expand { display: none; }
-//UI图修改select的三角符号0329结束
-.D-backlist {
-  padding: 10px;
-  >li{
-    width: 100%;
-    height: 100px;
-    > span{
-      width: 100%;
-      display: block;
-      height: 40px;
-      line-height: 40px;
-      text-align: left;
-    }
-    >span:nth-child(1) {
-      font-weight: bold;
-    }
-    >span:nth-child(2) {
-      background: #fafafa;
-      border: 1px solid #ccc;
-    }
-    >select {
-      width: 100%;
-    }
-  }
-}
-.D-backP	{
-  position: fixed;
-  bottom: 0px;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  .btn{
-    width: 45%;
-    height: 45px;
-    font-size: 16px;
-    margin: 10px 0px !important;
-	}
-}
-.error-D {
-  width: 100%;
-  height: 200px;
-  border: 1px solid #eeeeee;
-  >div:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    line-height: 50px;
-    background: #2f87c1;
-    color: #fff;
-    padding: 0px 10px;
-  }
-  >div:nth-child(2) {
-    text-align: center;
-    height: 150px;
-    background: #f5f5f5;
-    padding: 20px 0px;
-    font-weight: bold;
-    >p{
-      margin: 10px;
-    }
-  }
-}
-//页码开始
-.D-yema {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  //background: #eeeeee;
-  position: absolute;
-  bottom: -100px;
-  width: 80%;
-  margin: 20px 10%;
-  >li {
-    display: inline-block;
-    height: 25px;
-    width: 40px;
-    text-align: center;
-    line-height: 25px;
-    border-radius: 20px;
-  }
-  li[indexYema='0'] {
-    background:url(../local/img/D-yema.gif) no-repeat; 
-  	background-size: contain;
-    height: 25px;
-    width: 25px;
-  }
-  li[indexYema='1'] {
-    background:url(../local/img/D-yema2.gif) no-repeat; 
-  	background-size: contain;
-    height: 25px;
-    width: 25px;
-  }
-  >li:nth-last-child(1) {
-    background:url(../local/img/D-yema.gif) no-repeat; 
-  	background-size: contain;
-    transform: rotate(180deg);
-    height: 25px;
-    width: 25px;
-  }
-  >li:nth-last-child(2) {
-    background:url(../local/img/D-yema2.gif) no-repeat; 
-  	background-size: contain;
-    transform: rotate(180deg);
-    height: 25px;
-    width: 25px;
-  }
-}
-//页码结束
-.D_meng {
-  // background: url(../local/img/ip.png) no-repeat scroll right center transparent; 
-  background: #fff;
-  background-size: contain;
-  border-radius: 5px;
-  >p:nth-child(1) {
-    margin-top: 150px !important;
-  }
-  >p:nth-child(2) {
-    >button {
-      margin: 5px;
-    }
-  }
 }

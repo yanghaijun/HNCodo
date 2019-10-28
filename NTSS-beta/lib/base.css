@@ -19,7 +19,7 @@ body {
   position: fixed;
   top: 30%;
   left: 20%;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bolder;
   z-index: 1000;
 }
@@ -63,7 +63,7 @@ li {
 }
 .ysp-login button {
   padding: 10px 55px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
 }
 .ysp-login .userName,
@@ -84,10 +84,9 @@ li {
 }
 .ysp-login .login-head {
   text-align: center;
-  padding: 25% 0;
-  color: #0A73CC;
+  padding: 50% 0;
+  color: #065187;
   font-size: 24px;
-  font-weight: bold;
 }
 .ysp-login .selected {
   margin-top: 80px;
@@ -108,9 +107,9 @@ li {
   margin-top: 35px;
 }
 .ysp-login .reset {
-  border: 1px solid #0A73CC;
+  border: 1px solid #063185;
   background: #fff;
-  color: #0A73CC;
+  color: #063185;
 }
 .ysp-login .login {
   float: right;
@@ -121,9 +120,6 @@ li {
 .ysp-login .login.active {
   background-color: #2b357c;
   color: #fff;
-}
-div[data-ysp-modelid="Login"] {
-  padding-bottom: 0px;
 }
 /*_________________TodoList - SAP待办列表____________________*/
 .editor-state [data-ysp="component"] {
@@ -203,41 +199,20 @@ div[data-ysp-modelid="Login"] {
   padding: 0;
   overflow: hidden;
   background: #eee;
+  border-bottom: 1px solid #ddd;
   line-height: 41px;
-  padding-bottom: 15px;
 }
 .Todo-serch .serch-head-icon {
   background: #fff;
 }
 .Todo-serch .serch-head-icon .icon-title {
-  border-left: 5px solid #0A73CC;
+  border-left: 5px solid #105cc1;
   padding-left: 15px;
-  color: #333333;
 }
 .Todo-serch .serch-right {
   float: right;
   margin-right: 20px;
   color: #005aa0;
-}
-.Todo-serch .list-icon-up {
-  display: inline-block;
-  background: url(../local/img/up.png) no-repeat center center;
-  width: 50px;
-  height: 50px;
-  background-size: 15px 10px;
-  position: absolute;
-  right: 5px;
-  top: 0px;
-}
-.Todo-serch .list-icon-done {
-  background: url(../local/img/done.png) no-repeat center center;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-size: 15px 10px;
-  position: absolute;
-  right: 5px;
-  top: 0px;
 }
 .Todo-serch .active {
   display: block;
@@ -299,11 +274,9 @@ div[data-ysp-modelid="Login"] {
   position: fixed;
   bottom: 0;
   left: 0;
-  display: flex;
-  justify-content: space-around;
 }
 .Todo-serch .serch-content .serch-bottom button {
-  width: 40%;
+  width: 45%;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -311,9 +284,9 @@ div[data-ysp-modelid="Login"] {
   font-size: 16px;
 }
 .Todo-serch .serch-content .serch-bottom .clear {
-  border: 1px solid #0A73CC;
+  border: 1px solid #063185;
   background: #fff;
-  color: #0A73CC;
+  color: #063185;
 }
 .Todo-serch .serch-content .serch-bottom .commit-serch {
   float: right;
@@ -343,35 +316,113 @@ div[data-ysp-modelid="Login"] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.Todo-list-content .list-content-ul li span:nth-child(1) {
-  font-weight: bold;
-}
 .Todo-list-content .list-bottom {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  width: 90px;
-  height: 123px;
-  color: #fff;
-}
-.Todo-list-content .list-bottom > li {
-  width: 60px;
-  height: 25px;
+  width: 100%;
+  height: 50px;
+  line-height: 72px;
   text-align: center;
-  line-height: 25px;
-  border-radius: 30px;
-  font-size: 15px;
-  margin: 11px 5px;
+  background: #FCFCFC;
+  overflow: hidden;
 }
-.Todo-list-content .list-bottom .Detail-d {
-  background: #25d4ad;
+.Todo-list-content .list-bottom li {
+  float: left;
+  color: #929292;
+  font-size: 12px;
 }
-.Todo-list-content .list-bottom .Back-d {
-  background: #BABABA;
+.Todo-list-content .list-bottom .li1 {
+  width: 100%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li1:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat center center;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li2 {
+  width: 48%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li2:first-child::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background: rgba(211, 211, 211, 0.5);
+  top: 10px;
+  right: 0px;
+}
+.Todo-list-content .list-bottom .li2:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/delete.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li2:last-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3 {
+  width: 33%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li3:first-child::after,
+.Todo-list-content .list-bottom .li3:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background: rgba(211, 211, 211, 0.5);
+  top: 10px;
+  right: 0px;
+}
+.Todo-list-content .list-bottom .li3:last-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/return.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/confirm.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
 }
 .Todo-list-content .title {
   font-size: 16px;
-  color: #0a73cc;
+  color: #333;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -537,9 +588,9 @@ div[data-ysp-modelid="Login"] {
 }
 .show-btn-common i.icon-false {
   display: inline-block;
-  width: 20px ;
+  width: 15px ;
   height: 15px;
-  background: url(../local/img/up.png) no-repeat center center;
+  background: url(../local/img/shouqi.png) no-repeat center center;
   background-size: 100%;
   margin-right: 15px;
 }
@@ -547,7 +598,7 @@ div[data-ysp-modelid="Login"] {
   display: inline-block;
   width: 20px ;
   height: 15px;
-  background: url(../local/img/done.png) no-repeat center center;
+  background: url(../local/img/xianshi.png) no-repeat center center;
   background-size: 100%;
   margin-right: 15px;
 }
@@ -690,9 +741,6 @@ div[data-ysp-modelid="Login"] {
   height: 20px;
   background: url(../local/img/done.png) no-repeat center center;
   background-size: 79%;
-}
-.Todo-list-content .D-list-icon-up {
-  transform: rotate(-180deg);
 }
 .bg_none {
   min-height: 70vh;
@@ -840,31 +888,8 @@ div[data-componentsid="uiControl2_Qo50KS"] {
 .faqiBox_lfj .icon-title {
   display: block;
   margin: 10px 0;
-  padding-left: 40px;
-  position: relative;
-  font-weight: bold;
-}
-.faqiBox_lfj .icon-titleT:before {
-  content: "";
-  background: url(../local/img/tie.png) no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  top: 2px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.faqiBox_lfj .icon-titleM:before {
-  content: "";
-  background: url(../local/img/saveM.png) no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  top: 2px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
 }
 .faqiBox_lfj .Basic,
 .faqiBox_lfj .loan,
@@ -1140,9 +1165,10 @@ div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead,
 div[data-ysp-modelid="staffLoan"] .details .detailsHead {
   font-size: 18px;
+  color: #0E75CD;
   font-weight: bold;
   margin-top: 15px;
-  margin-left: 50px;
+  margin-left: 15px;
   position: relative;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsHead:before,
@@ -1151,13 +1177,12 @@ div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead:before,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead:before,
 div[data-ysp-modelid="staffLoan"] .details .detailsHead:before {
   content: "";
-  background: url(../local/img/BasicInformation.png) no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  top: 4px;
-  left: -37px;
-  width: 25px;
+  background: #0A73CC;
+  width: 5px;
   height: 20px;
+  position: absolute;
+  left: -15px;
+  top: 3px;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent,
@@ -1165,7 +1190,6 @@ div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent {
   margin-top: 15px;
-  border-top: 1px solid #eeeeee;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable,
@@ -1261,8 +1285,9 @@ div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanArrow {
   display: block;
   width: 50px;
   height: 50px;
-  background: url(../local/img/shouqi.png) no-repeat center center;
+  background: url(../local/img/arrow.png) no-repeat center center;
   background-size: 8px 13px;
+  transform: rotate(90deg);
   position: absolute;
   right: 0px;
   top: 0px;
@@ -1272,7 +1297,7 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent li .arr,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .arr,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .arr,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent li .arr {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent li .nor,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .nor,
@@ -1648,139 +1673,4 @@ div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton .alone,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton .alone,
 div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
   width: 94%;
-}
-.Dselect-right {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background: url(../local/img/shouqi.png) no-repeat scroll right center transparent;
-  background-size: 9px 15px;
-}
-.Dselect-down {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background: url(../local/img/xianshi.png) no-repeat scroll right center transparent;
-  background-size: 15px 9px;
-}
-.Dselect-right::-ms-expand {
-  display: none;
-}
-.Dselect-down::-ms-expand {
-  display: none;
-}
-.D-backlist {
-  padding: 10px;
-}
-.D-backlist > li {
-  width: 100%;
-  height: 100px;
-}
-.D-backlist > li > span {
-  width: 100%;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  text-align: left;
-}
-.D-backlist > li > span:nth-child(1) {
-  font-weight: bold;
-}
-.D-backlist > li > span:nth-child(2) {
-  background: #fafafa;
-  border: 1px solid #ccc;
-}
-.D-backlist > li > select {
-  width: 100%;
-}
-.D-backP {
-  position: fixed;
-  bottom: 0px;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.D-backP .btn {
-  width: 45%;
-  height: 45px;
-  font-size: 16px;
-  margin: 10px 0px !important;
-}
-.error-D {
-  width: 100%;
-  height: 200px;
-  border: 1px solid #eeeeee;
-}
-.error-D > div:nth-child(1) {
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  line-height: 50px;
-  background: #2f87c1;
-  color: #fff;
-  padding: 0px 10px;
-}
-.error-D > div:nth-child(2) {
-  text-align: center;
-  height: 150px;
-  background: #f5f5f5;
-  padding: 20px 0px;
-  font-weight: bold;
-}
-.error-D > div:nth-child(2) > p {
-  margin: 10px;
-}
-.D-yema {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  bottom: -100px;
-  width: 80%;
-  margin: 20px 10%;
-}
-.D-yema > li {
-  display: inline-block;
-  height: 25px;
-  width: 40px;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 20px;
-}
-.D-yema li[indexYema='0'] {
-  background: url(../local/img/D-yema.gif) no-repeat;
-  background-size: contain;
-  height: 25px;
-  width: 25px;
-}
-.D-yema li[indexYema='1'] {
-  background: url(../local/img/D-yema2.gif) no-repeat;
-  background-size: contain;
-  height: 25px;
-  width: 25px;
-}
-.D-yema > li:nth-last-child(1) {
-  background: url(../local/img/D-yema.gif) no-repeat;
-  background-size: contain;
-  transform: rotate(180deg);
-  height: 25px;
-  width: 25px;
-}
-.D-yema > li:nth-last-child(2) {
-  background: url(../local/img/D-yema2.gif) no-repeat;
-  background-size: contain;
-  transform: rotate(180deg);
-  height: 25px;
-  width: 25px;
-}
-.D_meng {
-  background: #fff;
-  background-size: contain;
-  border-radius: 5px;
-}
-.D_meng > p:nth-child(1) {
-  margin-top: 150px !important;
-}
-.D_meng > p:nth-child(2) > button {
-  margin: 5px;
 }
