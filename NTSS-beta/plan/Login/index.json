@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "Login",
-  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/",
+  "targetURL": "http://59.110.171.69:31002/ReimbursePlatform/index.jsp",
   "jsFile": "index.js",
   "requires": {
     "TodoList": "../TodoList/index.json",
@@ -55,7 +55,9 @@
         "control0_sowRTW"
       ],
       "anchors": [],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31002\\/ReimbursePlatform\\/index.jsp"
+      ]
     }
   },
   "flows": {
@@ -118,9 +120,6 @@
     "page/urls": {
       "contexts": {
         "context0_FoGTAd": [
-          "10.1.128.155:85/ReimbursePlatform/",
-          "223.71.99.53:85/ReimbursePlatform/",
-          "223.71.99.53:85/ReimbursePlatform/index.jsp",
           "59.110.171.69:31002/ReimbursePlatform/index.jsp"
         ]
       }
