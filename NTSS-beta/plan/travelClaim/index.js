@@ -100,7 +100,7 @@
         }, 1000);
       } else if (data.eventType == 'preview') {
         var _url = data.dataCustom[0];var type = '.' + data.dataCustom[1].replace(/\./, "");var options = { docName: '文档', docType: type, downloadUrl: _url };if (ysp.appMain.isIOS()) {
-          top.EAPI.postMessageToNative("openPreview", { "url": _url }); //top.EAPI.openWindow(_url + '?_ysp_filepreview=1'); // var jsonStr = {
+          top.EAPI.postMessageToNative("openDocument", { "url": _url, "type": "baoxiao" }); //top.EAPI.openWindow(_url + '?_ysp_filepreview=1'); // var jsonStr = {
           //   "type" : "document",
           //   "downloadUrl" : _url,
           //   "downloadHttpHeaders" : {},
