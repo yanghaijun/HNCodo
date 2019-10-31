@@ -51,7 +51,6 @@
         //   $.ajax({
         //     url: 'http://59.110.171.69:31016/names.nsf?Login',
         //     type: 'post',
-
         //     data: {
         //       Username: name,
         //       Password: password,
@@ -60,7 +59,6 @@
         //     xhrFields: {
         //       withCredentials: true
         //     },
-
         //     success: function (data) {
         //       var bb = data.split('id="main_center_frame"')[1];
         //       var cc = bb.split('width="100%"')[0];
@@ -93,7 +91,6 @@
         //       var cc = bb.split('width="100%"')[0];
         //       var dd = cc.split("src=")[1];
         //       var ee = dd.replace(" ", "");
-
         //       var ff = ee.replace(/\"/g, "");
         //       if (top.EAPI.isIOS()) {
         //         ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
@@ -115,8 +112,8 @@
         //     },
         //     xhrFields: {
         //       withCredentials: true
-        //     },
 
+        //     },
         //     success: function (data) {
         //       var bb = data.split('id="main_center_frame"')[1];
         //       var cc = bb.split('width="100%"')[0];
@@ -134,12 +131,41 @@
         //     }
         //   });
         //吉林邮件
-        $.ajax({ url: 'http://59.110.171.69:31023/names.nsf?Login', type: 'post', data: { Username: name, Password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true },
-          success: function (data) {
+        //   $.ajax({
+        //     url: 'http://59.110.171.69:31023/names.nsf?Login',
+        //     type: 'post',
+        //     data: {
+        //       Username: name,
+        //       Password: password,
+        //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+        //     },
+        //     xhrFields: {
+
+        //       withCredentials: true
+        //     },
+        //     success: function (data) {
+        //       var bb = data.split('id="main_center_frame"')[1];
+        //       var cc = bb.split('width="100%"')[0];
+        //       var dd = cc.split("src=")[1];
+        //       var ee = dd.replace(" ", "");
+        //       var ff = ee.replace(/\"/g, "");
+        //       if (top.EAPI.isIOS()) {
+        //         ysp.appMain.openWindow('http://59.110.171.69:31023' + ff);
+        //       } else {
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31023' + ff;
+        //       }
+        //     },
+        //     error: function (e) {
+        //       alert('登录失败,请重新登录！');
+        //     }
+        //   });
+        //福建邮件
+        $.ajax({ url: 'http://59.110.171.69:31032/names.nsf?Login', type: 'post', data: { Username: name, Password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true
+          }, success: function (data) {
             var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");if (top.EAPI.isIOS()) {
-              ysp.appMain.openWindow('http://59.110.171.69:31023' + ff);
+              ysp.appMain.openWindow('http://59.110.171.69:31032' + ff);
             } else {
-              elem.ownerDocument.location.href = 'http://59.110.171.69:31023' + ff;
+              elem.ownerDocument.location.href = 'http://59.110.171.69:31032' + ff;
             }
           }, error: function (e) {
             alert('登录失败,请重新登录！');
