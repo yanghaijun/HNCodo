@@ -1,0 +1,85 @@
+@charset "utf-8";
+.icon-home{background:url('icons/home.png') no-repeat center center;}
+.icon-gw{background:url('icons/home-gw.png') no-repeat center center;}
+.icon-save{background:url('icons/save.png') no-repeat center center;}
+.icon-close{background:url('icons/close.png') no-repeat center center;}
+.icon-add{background:url('icons/add.png') no-repeat center center;}
+.icon_edit {background:URL('icons/edit.png') no-repeat center center;}
+.icon-delete{background:url('icons/delete.png') no-repeat center center;}
+.icon-remove{background:url('icons/delete.png') no-repeat center center;}
+.icon-refresh{background:url('icons/refresh.png') no-repeat center center;}
+.icon-copy{background:url('icons/copy.png') no-repeat center center;}
+.icon-import{background:url('icons/import.png') no-repeat center center;}
+.icon-export{background:url('icons/export.png') no-repeat center center;}
+.icon-search{background:url('icons/search.png') no-repeat center center;}
+.icon-clear{background:url('icons/clear.png') no-repeat center center;}
+.icon-updateuser{background:url('icons/updateuser.png') no-repeat center center;}
+.icon-config{background:url('icons/config.png') no-repeat center center;}
+.icon-back{background:url('icons/back.png') no-repeat center center;}
+.icon-print {background: url('icons/print.png') no-repeat center	center;}
+.icon-down{background: url('icons/down.gif') no-repeat center	center;}
+.icon-downall {background: url('icons/downAll.gif') no-repeat center	center;}
+.icon-bigpic {background: url('icons/bigpic.gif') no-repeat center	center;}
+.icon-smlpic {background: url('icons/smlpic.gif') no-repeat center	center;}
+.icon-selall {background: url('icons/select.png') no-repeat center center;}
+.icon-nosel {background: url('icons/unselect.png') no-repeat center	center;}
+.icon-flowprocess {background: url('icons/flowprocess.png') no-repeat center center;}
+.icon-flowopen {background: url('icons/flowopen.png') no-repeat center	center;}
+.icon-pre {background: url('icons/pre.png') no-repeat center	center;}
+.icon-next {background: url('icons/next.png') no-repeat center	center;}
+.icon-more {background: url('icons/more.png') no-repeat center	center;}
+
+.icon-large-sw{background:url('icons/large_sw.gif') no-repeat center center;}
+.icon-large-cc{background:url('icons/large_cc.gif') no-repeat center center;}
+.icon-large-cg{background:url('icons/large_cg.gif') no-repeat center center;}
+.icon-large-jb{background:url('icons/large_jb.gif') no-repeat center center;}
+.icon-large-qb{background:url('icons/large_qb.gif') no-repeat center center;}
+.icon-large-qj{background:url('icons/large_qj.gif') no-repeat center center;}
+.icon-large-sq{background:url('icons/large_sq.gif') no-repeat center center;}
+.icon-large-lxd{background:url('icons/large_lxd.gif') no-repeat center center;}
+.icon-large-rzsq{background:url('icons/pic1_1.gif') no-repeat center center;}
+.icon-large-db{background:url('icons/pic1_2.gif') no-repeat center center;}
+.icon-large-rybdtx{background:url('icons/pic1_3.gif') no-repeat center center;}
+.icon-large-qjgllc{background:url('icons/pic1_4.gif') no-repeat center center;}
+.icon-large-ggsq{background:url('icons/pic2_1.gif') no-repeat center center;}
+.icon-large-xf{background:url('icons/pic2_2.gif') no-repeat center center;}
+.icon-large-xxyd{background:url('icons/pic2_3.gif') no-repeat center center;}
+.icon-large-yysp{background:url('icons/pic3_1.gif') no-repeat center center;}
+.icon-large-wlwz{background:url('icons/pic3_2.gif') no-repeat center center;}
+.icon-large-xwdt{background:url('icons/pic3_3.gif') no-repeat center center;}
+.icon-large-qsbg{background:url('icons/pic4_1.gif') no-repeat center center;}
+.icon-large-lzsp{background:url('icons/pic4_2.gif') no-repeat center center;}
+.icon-large-swlc{background:url('icons/pic4_3.gif') no-repeat center center;}
+.icon-large-fwlc{background:url('icons/pic5_1.gif') no-repeat center center;}
+.icon-large-zzsq{background:url('icons/pic5_2.gif') no-repeat center center;}
+.icon-large-hyglzjfb{background:url('icons/pic5_3.gif') no-repeat center center;}
+.icon-large-swlc{background:url('icons/pic6_1.gif') no-repeat center center;}
+.icon-large-rybd{background:url('icons/pic6_2.gif') no-repeat center center;}
+.icon-large-qbgl{background:url('icons/pic6_3.gif') no-repeat center center;}
+.icon-large-jtfw{background:url('icons/pic7_1.gif') no-repeat center center;}
+.icon-large-ccsp{background:url('icons/pic7_2.gif') no-repeat center center;}
+.icon-large-qjgl{background:url('icons/pic7_3.gif') no-repeat center center;}
+
+.Toolbar_Add {background:url('icons/add.png') no-repeat center center;}
+.Toolbar_Edit {background:url('icons/edit.png') no-repeat center center;}
+.Toolbar_Delete {background:url('icons/delete.png') no-repeat center center;}
+.Toolbar_UIConfig {background: url('icons/config.png') no-repeat center center;}
+.Toolbar_SelAll {background: url('icons/select.png') no-repeat center center;}
+.Toolbar_NoSel {background: url('icons/unselect.png') no-repeat center	center;}
+.Toolbar_Expview {background: url('icons/expview.png') no-repeat center center;}
+.Toolbar_Colview {background: url('icons/colview.png') no-repeat center	center;}
+.Toolbar_Undo {background: url('icons/undo.png') no-repeat center	center;}
+.Toolbar_Att {background:url('icons/attachment.png') no-repeat center center;}
+.Toolbar_ByDay {background:url('icons/byday.png') no-repeat center center;}
+.Toolbar_ByMonth {background:url('icons/bymonth.png') no-repeat center center;}
+.Toolbar_ByWeek {background:url('icons/byweek.png') no-repeat center center;}
+.Toolbar_NextPage {background:url('icons/nextpage.png') no-repeat center center;}
+.Toolbar_PreviousPage {background:url('icons/previouspage.png') no-repeat center center;}
+.Toolbar_Today {background:url('icons/today.png') no-repeat center center;}
+.Toolbar_FlowBatchHandle {background:url('icons/BatchHandle.png') no-repeat center center;}
+.Toolbar_FlowWorkTo {background:url('icons/to.png') no-repeat center center;}
+
+.Toolbar_NoCare {background:url('icons/delete.png') no-repeat center center;}
+.Toolbar_ACare {background:url('icons/aimp.jpg') no-repeat center center;}
+.Toolbar_BCare {background:url('icons/bimp.jpg') no-repeat center center;}
+.Toolbar_CCare {background:url('icons/cimp.jpg') no-repeat center center;}
