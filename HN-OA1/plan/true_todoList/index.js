@@ -104,12 +104,12 @@
     },
 
     getData_control44_mPQHMB: function (elem) {
-      'use strict';
-
       ;setTimeout(function () {
-        console.log(elem);var data = [];$(elem).children().each(function () {
-          data.push('http://59.110.171.69:31003' + $(this).children('td').eq(3).find('a').attr('href').replace('javascript:$ct.open(\"', '').replace('\")', ''));
-        });console.log(data);if (top.EAPI.isAndroid()) {
+        //console.log(elem);
+        debugger;var port = elem.ownerDocument.defaultView.location.port;var data = [];$(elem).children().each(function () {
+          data.push('http://59.110.171.69:' + port + $(this).children('td').eq(3).find('a').attr('href').replace('javascript:$ct.open(\"', '').replace('\")', ''));
+        }); //console.log(data);
+        if (top.EAPI.isAndroid()) {
           top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'OA', cookie: document.cookie, fujianUrl: data.toString() }));
         } else if (top.EAPI.isIOS()) {
           top.EAPI.postMessageToNative('OA', data);

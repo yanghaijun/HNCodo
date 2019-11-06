@@ -130,6 +130,110 @@
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
             }
+          } else if (port == '31059') {
+            if (localStorage && localStorage.xinnengyuanP && localStorage.xinnengyuanU) {
+              password = localStorage.xinnengyuanP;
+              userName = localStorage.xinnengyuanU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31060') {
+            if (localStorage && localStorage.jiangsuP && localStorage.jiangsuU) {
+              password = localStorage.jiangsuP;
+              userName = localStorage.jiangsuU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31017') {
+            if (localStorage && localStorage.zhaobiaoP && localStorage.zhaobiaoU) {
+              password = localStorage.zhaobiaoP;
+              userName = localStorage.zhaobiaoU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31067') {
+            if (localStorage && localStorage.hebeiP && localStorage.hebeiU) {
+              password = localStorage.hebeiP;
+              userName = localStorage.hebeiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31042') {
+            if (localStorage && localStorage.hunanP && localStorage.hunanU) {
+              password = localStorage.hunanP;
+              userName = localStorage.hunanU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31046') {
+            if (localStorage && localStorage.shanxiP && localStorage.shanxiU) {
+              password = localStorage.shanxiP;
+              userName = localStorage.shanxiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31069') {
+            if (localStorage && localStorage.guizhouP && localStorage.guizhouU) {
+              password = localStorage.guizhouP;
+              userName = localStorage.guizhouU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31020') {
+            if (localStorage && localStorage.jilinP && localStorage.jilinU) {
+              password = localStorage.jilinP;
+              userName = localStorage.jilinU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31039') {
+            if (localStorage && localStorage.qinghaiP && localStorage.qinghaiU) {
+              password = localStorage.qinghaiP;
+              userName = localStorage.qinghaiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31033') {
+            if (localStorage && localStorage.hainanP && localStorage.hainanU) {
+              password = localStorage.hainanP;
+              userName = localStorage.hainanU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31051') {
+            if (localStorage && localStorage.hubeiP && localStorage.hubeiU) {
+              password = localStorage.hubeiP;
+              userName = localStorage.hubeiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31029') {
+            if (localStorage && localStorage.xionganP && localStorage.xionganU) {
+              password = localStorage.xionganP;
+              userName = localStorage.xionganU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31037') {
+            if (localStorage && localStorage.yajiangP && localStorage.yajiangU) {
+              password = localStorage.yajiangP;
+              userName = localStorage.yajiangU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
           }
 
           $.ajax({
@@ -141,29 +245,13 @@
             },
             success: function(data) {
               if(data.indexOf('欢迎登录') == -1){
-                if (port == '31003') {
-                  //四川
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31000') {
+                if (port == '31000') {
                   //曹妃甸
                   aWin.location.href = 'http://59.110.171.69:'+port+'/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31044') {
-                  //华北分公司
-                  aWin.location.href = 'http://59.110.171.69:'+port+'/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31021') {
-                  //宁夏
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31025') {
-                  //甘肃
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31015') {
-                  //新疆
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31031') {
-                  //福建
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if (port == '31035') {
-                  //广东
+                } else if(port == '31039'){
+                  //青海
+                  aWin.location.href = 'http://59.110.171.69:'+port+'/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                } else {
                   aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
                 }
       				}
