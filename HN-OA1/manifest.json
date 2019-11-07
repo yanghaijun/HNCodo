@@ -2,7 +2,7 @@
   "type": "adapter",
   "short_name": "",
   "version": "0.0.1",
-  "runtime_version": "2.7.2",
+  "runtime_version": "2.7.0",
   "description": "",
   "options": {
     "resource_intercept": {
@@ -193,6 +193,6 @@
   "default_url": "http://59.110.171.69:31031/",
   "scope": "HN-OA1",
   "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1573028930999,
+  "update_time": 1573117538155,
   "runtime_env": "1webview"
 }

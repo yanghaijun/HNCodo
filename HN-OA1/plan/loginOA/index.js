@@ -137,6 +137,36 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31040') {
+            if (localStorage.liaoningP == undefined || localStorage.liaoningU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31048') {
+            if (localStorage.henanP == undefined || localStorage.henanU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31063') {
+            if (localStorage.xianregongyuanP == undefined || localStorage.xianregongyuanU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31064') {
+            if (localStorage.ranliaoP == undefined || localStorage.ranliaoU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31056') {
+            if (localStorage.jiangxiP == undefined || localStorage.jiangxiU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -269,12 +299,43 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31040') {
+            if (localStorage.liaoningP == undefined || localStorage.liaoningU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31048') {
+            if (localStorage.henanP == undefined || localStorage.henanU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31063') {
+            if (localStorage.xianregongyuanP == undefined || localStorage.xianregongyuanU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31064') {
+            if (localStorage.ranliaoP == undefined || localStorage.ranliaoU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
+          } else if (port == '31056') {
+            if (localStorage.jiangxiP == undefined || localStorage.jiangxiU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
         }
       } else {// if(localStorage.password){
         // obj4.display = "none";
+
         // console.log(localStorage.password)
         // }else if(!localStorage.password){
         // obj4.display = "block"; 
@@ -361,6 +422,21 @@
               } else if (port == '31037') {
                 //雅江
                 localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31040') {
+                //辽宁
+                localStorage.liaoningP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.liaoningU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31048') {
+                //河南
+                localStorage.henanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.henanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31063') {
+                //西安热工院
+                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31064') {
+                //燃料公司
+                localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31056') {
+                //江西
+                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }if (port == '31000') {
                 elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else if (port == '31039') {
@@ -530,6 +606,36 @@
         } else if (port == '31037') {
           if (localStorage && localStorage.yajiangP && localStorage.yajiangU) {
             password = localStorage.yajiangP;userName = localStorage.yajiangU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31040') {
+          if (localStorage && localStorage.liaoningP && localStorage.liaoningU) {
+            password = localStorage.liaoningP;userName = localStorage.liaoningU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31048') {
+          if (localStorage && localStorage.henanP && localStorage.henanU) {
+            password = localStorage.henanP;userName = localStorage.henanU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31063') {
+          if (localStorage && localStorage.xianregongyuanP && localStorage.xianregongyuanU) {
+            password = localStorage.xianregongyuanP;userName = localStorage.xianregongyuanU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31064') {
+          if (localStorage && localStorage.ranliaoP && localStorage.ranliaoU) {
+            password = localStorage.ranliaoP;userName = localStorage.ranliaoU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31056') {
+          if (localStorage && localStorage.jiangxiP && localStorage.jiangxiU) {
+            password = localStorage.jiangxiP;userName = localStorage.jiangxiU;
           } else {
             password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
           }

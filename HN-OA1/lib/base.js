@@ -234,6 +234,46 @@
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
             }
+          } else if (port == '31040') {
+            if (localStorage && localStorage.liaoningP && localStorage.liaoningU) {
+              password = localStorage.liaoningP;
+              userName = localStorage.liaoningU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31048') {
+            if (localStorage && localStorage.henanP && localStorage.henanU) {
+              password = localStorage.henanP;
+              userName = localStorage.henanU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31063') {
+            if (localStorage && localStorage.xianregongyuanP && localStorage.xianregongyuanU) {
+              password = localStorage.xianregongyuanP;
+              userName = localStorage.xianregongyuanU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31064') {
+            if (localStorage && localStorage.ranliaoP && localStorage.ranliaoU) {
+              password = localStorage.ranliaoP;
+              userName = localStorage.ranliaoU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31056') {
+            if (localStorage && localStorage.jiangxiP && localStorage.jiangxiU) {
+              password = localStorage.jiangxiP;
+              userName = localStorage.jiangxiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
           }
 
           $.ajax({
