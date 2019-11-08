@@ -27,8 +27,7 @@
             url: _url,
             type: 'get',
             data: '',
-            success: function success(data) {
-
+            success: function(data) {
               var _data = $(data).find("textarea")[0].innerHTML.split(/[\n]/);
               var _dataLength = $(data).find("textarea")[0].innerHTML.split(/[\n]/).length;
               if (_dataLength > 0) {
@@ -93,7 +92,7 @@
           } else if (port == '31021') {
             if (localStorage && localStorage.ningxiaP && localStorage.ningxiaU) {
               password = localStorage.ningxiaP;
-              userName = localStorage.ningixaU;
+              userName = localStorage.ningxiaU;
             } else {
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
@@ -270,6 +269,14 @@
             if (localStorage && localStorage.jiangxiP && localStorage.jiangxiU) {
               password = localStorage.jiangxiP;
               userName = localStorage.jiangxiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31071') {
+            if (localStorage && localStorage.guangxiP && localStorage.guangxiU) {
+              password = localStorage.guangxiP;
+              userName = localStorage.guangxiU;
             } else {
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();

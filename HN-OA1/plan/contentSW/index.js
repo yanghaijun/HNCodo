@@ -46,7 +46,6 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-content-top\" },\n      data\n    );\n  }\n});";
     },
     getData_control7_9k4Pkb: function (elem) {
-      "use strict";
       ;if (!elem) {
         return;
       }var data = { content: [], fujian: [], liucheng: [], liuchengNUM: [], yijian: [], but: [], tuihuiTitle: [], tuihuiTitleFlag: [], commitLZ: [], treeBar: [], selectApar: [] }; // 签发人：
@@ -107,45 +106,7 @@
         fldZYSW2.checked ? sfgd = "是" : sfgd = "否";
       } else {
         sfgd = fldZYSW2.value;
-      } // var zsdw = "";
-      // var csdw = "";
-      // var ngr = "";
-      // var rq = "";
-      // var jdmc = "";
-      // var dblx = "";
-      // var yj = "";
-      // var a = [];
-      // var b = [];
-      // var dts = elem.ownerDocument.querySelectorAll("dt");
-      // for (var i = 0; i < dts.length; i++) {
-      //   if ("收文日期:" == dts[i].textContent) {
-      //     a.push(dts[i]);
-      //   }
-      //   if ("主办部门:" == dts[i].textContent) {
-      //     b.push(dts[i]);
-      //   }
-      // } //日期
-      // var rqs = a && a[0].nextElementSibling.firstElementChild;
-      // if (null == rqs) {
-      //   var rq = a && a[0].nextElementSibling.textContent;
-      // } else {
-      //   var rq = rqs.value;
-      // } //主办部门
-      // var zbbms = b && b[0].nextElementSibling.firstElementChild;
-      // if (null == zbbms) {
-      //   var zbbm = b && b[0].nextElementSibling.textContent;
-      // } else {
-      //   var abbm = zbbms.value;
-      // }
-      // var comment_table = elem.ownerDocument.querySelector("#comment_table");
-      // var tbodys = comment_table && comment_table.querySelector("tbody");
-      // if (tbodys == null) {
-      //   var jdmc = "";
-
-      // } else {
-      //   var trs = tbodys.querySelectorAll("tr");
-      //   var jdmc = trs && trs[0].querySelectorAll("td")[0].textContent;
-      // } // 节点名称
+      } // 节点名称
       var _txyj = elem.ownerDocument.querySelector('textarea[name="fldYijian"]');if (_txyj) {
         data.txyj = elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value;
       } else {
@@ -169,7 +130,8 @@
       } else {
         liuchengTable.map(function (d, t) {
           if (d > 0) {
-            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3]; //       var date = new Date();
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();
+            var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3]; //       var date = new Date();
             //       var day = date.getDay();
             //       if (day == '1') {
             //         day = '一';
@@ -258,7 +220,6 @@
       return data;
     },
     doAction_uiControl7_IlizWN: function (data, elem) {
-      "use strict";
       var type = data.eventType;if (type == "textareaChange") {
         var text = data.customData;elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
       }if (type == "yijian") {
@@ -325,9 +286,10 @@
         var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(2);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
         } else {
-          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data]; // $(selects).mousedown().click().mouseup(); 
-          selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);
-          selects.dispatchEvent(evt); //     if (selects.getAttribute('selected') != 'selected') {
+          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data];
+          // $(selects).mousedown().click().mouseup(); 
+          selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt); //     if (selects.getAttribute('selected') != 'selected') {
+
           //       selects.setAttribute("selected", "selected");
           //     } else {
           //       selects.setAttribute("selected", "noSelected");
@@ -335,7 +297,17 @@
         } //选人的多选
       } //点击附件方法
       if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var dbid = data.dataCustom.dbid;var cookieValue = cookies; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao.' + fileType;
+        }if (text.indexOf('草稿2：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
+        }if (text.indexOf('正文：') > -1) {
+          if (text.indexOf('.pdf') > -1) {
+            text = text.substring(3, text.length);
+          } else {
+            var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
+          }
+        }var dbid = data.dataCustom.dbid;var cookieValue = cookies; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
         //elem.ownerDocument.defaultView.huaneng.fujian(url, cookies, text); //elem.ownerDocument.defaultView.fujian(url, cookies, text);
         //EAPI.fujain(url, cookies, text);
         if (top.EAPI.isAndroid()) {

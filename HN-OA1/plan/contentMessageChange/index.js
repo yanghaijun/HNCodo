@@ -35,7 +35,6 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentDidMount: function componentDidMount() {\n    var elem = this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function () {\n      elem.scrollTop = 0;\n    }, 500);\n  },\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"click\"\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData || [];\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-header\", ref: \"toTop\" },\n      React.createElement(\"div\", { onClick: this.handlerClick.bind(this) }),\n      React.createElement(\n        \"div\",\n        null,\n        data && data[0]\n      )\n    );\n  }\n});";
     },
     getData_control16_ThPwcA: function (elem) {
-      'use strict';
       ;if (!elem) {
         return;
       }var data = { content: [], fujian: [], liucheng: [], liuchengNUM: [], commitLZ: [], treeBar: [], selectApar: [], selectApars: [], yijian: [], but: [], tuihuiTitle: [], tuihuiTitleFlag: [] };var dds = elem.ownerDocument.querySelector('table[class="Information"]').querySelectorAll('dd');for (var i = 1; i < dds.length; i++) {
@@ -79,7 +78,8 @@
           }
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
-      var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');commitLZS && commitLZS.map(function (d, t) {
+      var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');
+      commitLZS && commitLZS.map(function (d, t) {
         var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       });if (elem.ownerDocument.querySelector('.ui_border') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').length != 0) {
         var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
@@ -91,8 +91,7 @@
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
                 $(t).find('option').map(function (q, l) {
-                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");
-                  obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false';obj.type = 'OPTION';data.selectApar.push(obj);
+                  var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false';obj.type = 'OPTION';data.selectApar.push(obj);
                 });
               }
             }
@@ -106,8 +105,7 @@
               //var domtree = trees.find('.t_node');
               var domtree = trees.children('.t_node');domtree.map(function (d, t) {
                 var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];obj.array1 = [];obj.array2 = [];$(t).children('.title').siblings('.t_container').children('.t_leaf').map(function (q, l) {
-                  var obj2 = {};
-                  obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
+                  var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
                 });$(t).find('.t_node') && $(t).find('.t_node').map(function (i, v) {
                   var obj3 = {};obj3.title = $(v).find('label').eq(0).text();obj3.dis = v.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj3.indx = i;obj.array1.push(obj3);$(v).find('.t_leaf').map(function (ii, vv) {
                     var obj4 = {};obj4.text = $(vv).find('label').text();obj4.indx = ii;obj4.dis = vv.parentElement.parentElement.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 && vv.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array2.push(obj4);
@@ -143,8 +141,7 @@
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
           }data.tuihuiTitle.push(c);
-        }
-        for (var j = 0; j < trs.length; j++) {
+        }for (var j = 0; j < trs.length; j++) {
           if (trs[j].className.indexOf("datagrid-row-selected") > -1) {
             data.tuihuiTitleFlag.push(true);
           } else {
@@ -155,7 +152,6 @@
       return data;
     },
     doAction_uiControl15_6Tu5RS: function (data, elem) {
-      'use strict';
       if (data.eventType == 'Liclick') {
         ysp.appMain.showLoading();var data = data.dataCustom;var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn');commitLZS.find('a').eq(data).click();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -233,7 +229,17 @@
         }
         var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao.' + fileType;
+        }if (text.indexOf('草稿2：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
+        }if (text.indexOf('正文：') > -1) {
+          if (text.indexOf('.pdf') > -1) {
+            text = text.substring(3, text.length);
+          } else {
+            var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
+          }
+        }var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
           huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
