@@ -35,7 +35,6 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-content-top\" },\n      data\n    );\n  }\n});";
     },
     getData_control34_WAc8IT: function (elem) {
-      'use strict';
       ;if (!elem) {
         return;
       }var data = { content: [], content2: [], fujian: [], liucheng: [], liuchengNUM: [], commitLZ: [], treeBar: [], selectApar: [], selectApars: [], yijian: [], but: [], tuihuiTitle: [], tuihuiTitleFlag: [] };var yj = elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value;data.content.push(yj);var dls = $(elem).find('#left_panel').find('div.table_blk').find('dl.table_list_blk');dls && dls.map(function (j, q) {
@@ -94,9 +93,7 @@
               //树结构
               var domtree = trees.find('.t_node');domtree.map(function (d, t) {
                 var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];$(t).find('.t_leaf').map(function (q, l) {
-                  var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;
-                  obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';
-                  obj.array.push(obj2);
+                  var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
                 });data.treeBar.push(obj);
               });
             }
@@ -111,7 +108,8 @@
         data.yijian.push('常用意见暂无数据');
       } //常用意见end
       //按钮数量（暂存、退回）start
-      var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+      var release = elem.ownerDocument.querySelector(".Release");
+      var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
         if ("暂存" == lis[i].querySelector("span").textContent || "退回" == lis[i].querySelector("span").textContent) {
           data.but.push(lis[i]);
         }
@@ -139,7 +137,6 @@
       return data;
     },
     doAction_uiControl33_48Qvex: function (data, elem) {
-      'use strict';
       if (data.eventType == 'Liclick') {
         ysp.appMain.showLoading();var data = data.dataCustom;var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn');commitLZS.find('a').eq(data).click();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -180,7 +177,8 @@
         var data = data.customData;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var selectflowuser = $(iframes).find('#selectflowuser').find('fieldset').eq(1);if (selectflowuser.children()[1].tagName == 'P') {
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
         } else {
-          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data];selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt);
+          var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data];selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);
+          selects.dispatchEvent(evt);
         } //选人的多选
       } else if (data.eventType == 'flowTitle') {
         var data = data.customData;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
@@ -221,7 +219,32 @@
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
         }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao.' + fileType;
+        }if (text.indexOf('草稿2：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
+        }if (text.indexOf('正文：') > -1) {
+          if (text.indexOf('.pdf') > -1) {
+            text = text.substring(3, text.length);
+          } else {
+            var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
+          }
+        }if (text.indexOf("办理单：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }if (text.indexOf("办理单2：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan2." + fileType;
+        }if (text.indexOf("CEB病文：") > -1) {
+          var fileType = text.split(".")[1];text = "errorceb." + fileType;
+        }if (text.indexOf("Word病文：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("Word病文2：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("签报单：") > -1) {
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
+        }if (text.indexOf("签报正文：") > -1) {
+          var fileType = text.split(".")[1];
+          text = "banlidan." + fileType;
+        }var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
           huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');

@@ -307,6 +307,21 @@
           } else {
             var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
           }
+        }if (text.indexOf("办理单：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }if (text.indexOf("办理单2：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan2." + fileType;
+        }if (text.indexOf("CEB病文：") > -1) {
+          var fileType = text.split(".")[1];
+          text = "errorceb." + fileType;
+        }if (text.indexOf("Word病文：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("Word病文2：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("签报单：") > -1) {
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
+        }if (text.indexOf("签报正文：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
         }var dbid = data.dataCustom.dbid;var cookieValue = cookies; //window.location.href = 'vmeet://download?url=' + url + '&cookie=' + cookie + '&filename=移动商业智能系统';
         //elem.ownerDocument.defaultView.huaneng.fujian(url, cookies, text); //elem.ownerDocument.defaultView.fujian(url, cookies, text);
         //EAPI.fujain(url, cookies, text);

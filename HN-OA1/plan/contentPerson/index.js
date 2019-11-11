@@ -35,7 +35,6 @@
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"ysp-content-top\" },\n      data\n    );\n  }\n});";
     },
     getData_control25_C5TQHH: function (elem) {
-      'use strict';
       ;if (!elem) {
         return;
       }var data = { content: [], fujian: [], liucheng: [], liuchengNUM: [], commitLZ: [], treeBar: [], selectApar: [], selectApars: [], yijian: [], but: [], tuihuiTitle: [], tuihuiTitleFlag: [] };var dds = elem.ownerDocument.querySelector('table[class="Information"]').querySelectorAll('dd');for (var i = 1; i < dds.length; i++) {
@@ -139,7 +138,6 @@
       return data;
     },
     doAction_uiControl24_RK9XUL: function (data, elem) {
-      'use strict';
       if (data.eventType == 'Liclick') {
         ysp.appMain.showLoading();var data = data.dataCustom;var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn');commitLZS.find('a').eq(data).click();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -175,8 +173,7 @@
           var selects = selectflowuser.find('select') && selectflowuser.find('p');
         } else {
           var selects = selectflowuser.find('select') && selectflowuser.find('select').find('option')[data]; //$(selects).mousedown().click().mouseup(); 
-          selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');
-          evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt); // if (selects.getAttribute('selected') != 'selected') {
+          selects.selected = true;selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt); // if (selects.getAttribute('selected') != 'selected') {
           //   selects.setAttribute("selected", "selected");
           // } else {
           //   selects.setAttribute("selected", "noSelected");
@@ -226,7 +223,32 @@
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
         }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao.' + fileType;
+        }if (text.indexOf('草稿2：') > -1) {
+          var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
+        }if (text.indexOf('正文：') > -1) {
+          if (text.indexOf('.pdf') > -1) {
+            text = text.substring(3, text.length);
+          } else {
+            var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
+          }
+        }if (text.indexOf("办理单：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }if (text.indexOf("办理单2：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan2." + fileType;
+        }if (text.indexOf("CEB病文：") > -1) {
+          var fileType = text.split(".")[1];text = "errorceb." + fileType;
+        }if (text.indexOf("Word病文：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }
+        if (text.indexOf("Word病文2：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("签报单：") > -1) {
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
+        }if (text.indexOf("签报正文：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
           huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');

@@ -271,6 +271,20 @@
           } else {
             var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
           }
+        }if (text.indexOf("办理单：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }if (text.indexOf("办理单2：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan2." + fileType;
+        }if (text.indexOf("CEB病文：") > -1) {
+          var fileType = text.split(".")[1];text = "errorceb." + fileType;
+        }if (text.indexOf("Word病文：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("Word病文2：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("签报单：") > -1) {
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
+        }if (text.indexOf("签报正文：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
         }var dbid = data.customData.dbid;var cookieValue = cookies;if (top.EAPI.isAndroid()) {
           huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {

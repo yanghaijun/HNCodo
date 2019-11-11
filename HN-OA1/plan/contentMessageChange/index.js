@@ -78,8 +78,7 @@
           }
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
-      var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');
-      commitLZS && commitLZS.map(function (d, t) {
+      var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');commitLZS && commitLZS.map(function (d, t) {
         var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       });if (elem.ownerDocument.querySelector('.ui_border') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading') && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').length != 0) {
         var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
@@ -199,7 +198,8 @@
       }if (type == "yijian") {
         var index = parseInt(data.customData);var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");lis && lis[index].querySelector("a").click();
       }if (type == "YB") {
-        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");
+        for (var i = 0; i < lis.length; i++) {
           if ("阅毕" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
@@ -226,8 +226,8 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }
-        var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";
+        ysp.appMain.reloadPage(url);
       }if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
           var fileType = text.split(".")[1];text = 'caogao.' + fileType;
@@ -239,6 +239,21 @@
           } else {
             var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
           }
+        }if (text.indexOf("办理单：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
+        }if (text.indexOf("办理单2：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan2." + fileType;
+        }if (text.indexOf("CEB病文：") > -1) {
+          var fileType = text.split(".")[1];text = "errorceb." + fileType;
+        }if (text.indexOf("Word病文：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("Word病文2：") > -1) {
+          var fileType = text.split(".")[1];text = "bingwen." + fileType;
+        }if (text.indexOf("签报单：") > -1) {
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
+        }
+        if (text.indexOf("签报正文：") > -1) {
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
         }var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
           huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
