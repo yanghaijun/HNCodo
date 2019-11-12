@@ -2,7 +2,7 @@
   "type": "adapter",
   "short_name": "",
   "version": "0.0.1",
-  "runtime_version": "2.7.0",
+  "runtime_version": "2.7.2",
   "description": "",
   "options": {
     "resource_intercept": {
@@ -187,12 +187,22 @@
       "demo": [
         "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf"
       ]
+    },
+    {
+      "title": "emailIndex",
+      "url": "adapter://HN-OA1/plan/emailIndex/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:.*\\/afmail\\.nsf"
+      ],
+      "demo": [
+        "http://59.110.171.69:31016/afmail.nsf"
+      ]
     }
   ],
   "name": "四川OA",
   "default_url": "http://59.110.171.69:31031/",
   "scope": "HN-OA1",
   "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1573446479455,
+  "update_time": 1573552102074,
   "runtime_env": "1webview"
 }

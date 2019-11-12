@@ -5,7 +5,8 @@
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json",
-    "true_todoList": "../true_todoList/index.json"
+    "true_todoList": "../true_todoList/index.json",
+    "emailIndex": "../emailIndex/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -110,6 +111,10 @@
         {
           "toContextId": "context13_H6XhBB",
           "toModelId": "true_todoList"
+        },
+        {
+          "toContextId": "context14_g5Ol8t",
+          "toModelId": "emailIndex"
         }
       ]
     }

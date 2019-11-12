@@ -5,10 +5,17 @@
 (function (win, ysp) {
   var utils = ysp.utils;
   var topWin = top;
+  topWin.getTitle = function(id){
+    //alert('id='+id);
+    if(id){
+      localStorage.setItem('appTitle',id);
+    }
+    //return id;
+  };
   ysp.customHelper = {};
   utils.extend(ysp.customHelper, {
     /* 适配中定制的公共代码放在这里 */
-
+     //getTitle:_getTitle,
     /*
     // 可以实现一个foo方法，在定制适配组件中被使用，如：ysp.customHelper.foo()
     foo: function(){
@@ -60,6 +67,9 @@
     // 目标页面加载前执行, aWin为当前页面的window对象, doc为当前页面的document对象
     beforeTargetLoad: function beforeTargetLoad(aWin, doc) {
       var port = aWin.location.port;
+      if(topWin.EAPI.isIOS){
+        topWin.EAPI.postMessageToNative('sendTitleToJS','');
+      }
       if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login') {
         //获取用户名和密码，自动登录
         if (topWin.EAPI.isAndroid()) {
@@ -281,6 +291,14 @@
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
             }
+          } else if (port == '31095') {
+            if (localStorage && localStorage.shandongP && localStorage.shandongU) {
+              password = localStorage.shandongP;
+              userName = localStorage.shandongU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
           }
 
           $.ajax({
@@ -346,5 +364,10 @@
       return false;
     }
 
+    // function _getTitle(){
+    //   return 'aa';
+    // }
   });
+  
+  
 })(window, ysp);

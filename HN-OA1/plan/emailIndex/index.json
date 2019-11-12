@@ -1,0 +1,129 @@
+{
+  "version": "0.1",
+  "id": "emailIndex",
+  "targetURL": "http://59.110.171.69:31016/afmail.nsf",
+  "jsFile": "index.js",
+  "chineseName": "邮件列表",
+  "description": "邮件列表页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control41_UPq6n7": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-grid3 DIV.x-grid3-viewport DIV.x-grid3-scroller"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control41_UPq6n7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context14_g5Ol8t": {
+      "controls": [
+        "control41_UPq6n7"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*/afmail\\.nsf"
+      ]
+    }
+  },
+  "flows": {
+    "flow30_o9xSNy": {
+      "toContexts": [
+        {
+          "toContextId": "context14_g5Ol8t"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page14_5VXXBm": {
+      "contextId": "context14_g5Ol8t",
+      "layout": [
+        {
+          "id": "uiControl40_XPIlzX",
+          "controlId": "control41_UPq6n7",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl40_XPIlzX",
+                "onGetTemplate": "getTemplate_uiControl40_XPIlzX"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context14_g5Ol8t": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context14_g5Ol8t": [
+          "59.110.171.69:31016/afmail.nsf",
+          "59.110.171.69:31045/afmail.nsf"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context14_g5Ol8t": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context14_g5Ol8t": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context14_g5Ol8t": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}
