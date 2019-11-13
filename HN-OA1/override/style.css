@@ -1,0 +1,26 @@
+ 
+/*----表单检验----*/
+label.error {
+ border: 0px;
+         color: red;
+	display: block;
+	margin-left: 1em;
+	width: auto;
+}
+.error { border: 1px dotted red; }
+.errorlabel{
+	background:url(../images/validate/exclamation.gif) no-repeat;
+	padding-left:16px;
+}
+.icon-user-tabs {
+    background-image:url( ../images/menu/system/user.png ) !important;
+} 
+.icon-role-tabs {
+    background-image:url( ../images/menu/system/role.png ) !important;
+}
+.icon-dept-tabs {
+    background-image:url( ../images/menu/system/department.png ) !important;
+}
+.icon-group-tabs {
+    background-image:url( ../images/menu/system/group.png ) !important;
+}

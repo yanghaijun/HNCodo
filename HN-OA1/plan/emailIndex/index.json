@@ -3,11 +3,14 @@
   "id": "emailIndex",
   "targetURL": "http://59.110.171.69:31016/afmail.nsf",
   "jsFile": "index.js",
+  "requires": {
+    "emailDetail": "../emailDetail/index.json"
+  },
   "chineseName": "邮件列表",
   "description": "邮件列表页面",
   "firstPaintEnable": false,
   "controls": {
-    "control41_UPq6n7": {
+    "control42_OU7Vgz": {
       "location": {
         "data": {
           "tagName": "DIV"
@@ -18,27 +21,119 @@
         },
         "locators": [
           {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]"
-          },
-          {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.x-grid3 DIV.x-grid3-viewport DIV.x-grid3-scroller"
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.x-tab-panel-body.x-tab-panel-body-noborder.x-tab-panel-body-top DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]"
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control41_UPq6n7"
+        "onGetData": "getData_control42_OU7Vgz"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control41_TmRsJK": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return true}else {return false}"
+    },
+    "control46_gmXUqe": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"tabgrid\"]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "ext-comp-1002",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"tabgrid\"]//",
+              "suffix": "/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "ratio": 0.171
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.x-toolbar.x-small-editor.x-toolbar-layout-ct TABLE.x-toolbar-ct TD.x-toolbar-left"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control46_gmXUqe"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
       "monitored": true,
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "componentType": "custom"
@@ -47,9 +142,12 @@
   "contexts": {
     "context14_g5Ol8t": {
       "controls": [
-        "control41_UPq6n7"
+        "control42_OU7Vgz",
+        "control46_gmXUqe"
       ],
-      "anchors": [],
+      "anchors": [
+        "control41_TmRsJK"
+      ],
       "urlAnchor": [
         "http:\\/\\/59\\.110\\.171\\.69:.*/afmail\\.nsf"
       ]
@@ -62,6 +160,20 @@
           "toContextId": "context14_g5Ol8t"
         }
       ]
+    },
+    "flow31_Phuofd": {
+      "fromContextId": "context14_g5Ol8t",
+      "fromAction": "doAction",
+      "fromControlId": "control42_OU7Vgz",
+      "toContexts": [
+        {
+          "toContextId": "context14_g5Ol8t"
+        },
+        {
+          "toContextId": "context15_Fdcy3H",
+          "toModelId": "emailDetail"
+        }
+      ]
     }
   },
   "pages": {
@@ -69,16 +181,31 @@
       "contextId": "context14_g5Ol8t",
       "layout": [
         {
-          "id": "uiControl40_XPIlzX",
-          "controlId": "control41_UPq6n7",
+          "id": "uiControl41_4JrhFQ",
+          "controlId": "control42_OU7Vgz",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl40_XPIlzX",
-                "onGetTemplate": "getTemplate_uiControl40_XPIlzX"
+                "onDoAction": "doAction_uiControl41_4JrhFQ",
+                "onGetTemplate": "getTemplate_uiControl41_4JrhFQ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl42_c8TkPc",
+          "controlId": "control46_gmXUqe",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl42_c8TkPc",
+                "onGetTemplate": "getTemplate_uiControl42_c8TkPc"
               }
             }
           }

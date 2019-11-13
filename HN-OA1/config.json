@@ -11,6 +11,12 @@
       "app_id": "login",
       "icon": "img/OA.png",
       "url": "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf"
+    },
+    {
+      "name": "emailIndex",
+      "app_id": "emailIndex",
+      "icon": "local/img/OA.png",
+      "url": "http://59.110.171.69:31016/afmail.nsf"
     }
   ]
 }

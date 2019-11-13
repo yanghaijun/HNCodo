@@ -2,7 +2,7 @@
   "type": "adapter",
   "short_name": "",
   "version": "0.0.1",
-  "runtime_version": "2.7.2",
+  "runtime_version": "2.7.0",
   "description": "",
   "options": {
     "resource_intercept": {
@@ -159,6 +159,181 @@
       ],
       "target_url": "override/tooltip-1.1.4.js",
       "default_url": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebConfigSet.nsf/util/open-view/tooltip-1.1.4.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/afmail\\.nsf\\/public\\.js"
+      ],
+      "target_url": "override/public.js",
+      "default_url": "http://59.110.171.69:31014/afmail.nsf/public.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/js\\/jquery\\.min\\.js"
+      ],
+      "target_url": "override/jquery.min.js",
+      "default_url": "http://59.110.171.69:31014/weboa/js/jquery.min.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/jquery\\/jquery-1\\.4\\.2\\.js"
+      ],
+      "target_url": "override/jquery-1.4.2.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/jquery/jquery-1.4.2.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/jquery\\/jquery\\.cookie\\.js"
+      ],
+      "target_url": "override/jquery.cookie.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/jquery/jquery.cookie.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/ext\\/adapter\\/jquery\\/ext-jquery-adapter\\.js"
+      ],
+      "target_url": "override/ext-jquery-adapter.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/ext/adapter/jquery/ext-jquery-adapter.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/adapter\\/ext\\/ext-base\\.js"
+      ],
+      "target_url": "override/ext-base.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/adapter/ext/ext-base.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ext-all\\.js"
+      ],
+      "target_url": "override/ext-all.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ext-all.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ext-lang-zh_CN\\.js"
+      ],
+      "target_url": "override/ext-lang-zh_CN.js",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ext-lang-zh_CN.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/css\\/ext-all\\.css"
+      ],
+      "target_url": "override/ext-all.css",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/ext/resources/css/ext-all.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/css\\/xtheme-blue_hn\\.css"
+      ],
+      "target_url": "override/xtheme-blue_hn.css",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/ext/resources/css/xtheme-blue_hn.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/framework\\/decorators\\/skins\\/blue_hn\\/css\\/ext-patch\\.css"
+      ],
+      "target_url": "override/ext-patch.css",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/framework/decorators/skins/blue_hn/css/ext-patch.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/framework\\/decorators\\/skins\\/blue_hn\\/css\\/layout\\.css"
+      ],
+      "target_url": "override/layout.css",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/framework/decorators/skins/blue_hn/css/layout.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/framework\\/decorators\\/skins\\/blue_hn\\/css\\/style\\.css"
+      ],
+      "target_url": "override/style.css",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/framework/decorators/skins/blue_hn/css/style.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/grid\\/grid3-special-col-sel-bg\\.gif"
+      ],
+      "target_url": "override/grid3-special-col-sel-bg.gif",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/ext/resources/images/blue/grid/grid3-special-col-sel-bg.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/ext3\\/ajax\\/ext\\/resources\\/images\\/blue\\/tabs\\/tab-close\\.gif"
+      ],
+      "target_url": "override/tab-close.gif",
+      "default_url": "http://59.110.171.69:31014/weboa/ext3/ajax/ext/resources/images/blue/tabs/tab-close.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/afmail\\.nsf\\/frm_Toolbar\\.css"
+      ],
+      "target_url": "override/frm_Toolbar.css",
+      "default_url": "http://59.110.171.69:31014/afmail.nsf/frm_Toolbar.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/afmail\\.nsf\\/frm_mail\\.css"
+      ],
+      "target_url": "override/frm_mail.css",
+      "default_url": "http://59.110.171.69:31014/afmail.nsf/frm_mail.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/mail\\/ceshizhanghao1\\.nsf\\/icon02\\.gif"
+      ],
+      "target_url": "override/icon02.gif",
+      "default_url": "http://59.110.171.69:31014/mail/ceshizhanghao1.nsf/icon02.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/images\\/Toolbar_ico\\/add_mail_bar\\.jpg"
+      ],
+      "target_url": "override/add_mail_bar.jpg",
+      "default_url": "http://59.110.171.69:31014/weboa/images/Toolbar_ico/add_mail_bar.jpg"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/images\\/Toolbar_ico\\/cancel\\.gif"
+      ],
+      "target_url": "override/cancel.gif",
+      "default_url": "http://59.110.171.69:31014/weboa/images/Toolbar_ico/cancel.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/mail\\/.*\\/down1\\.gif"
+      ],
+      "target_url": "override/down1.gif",
+      "default_url": "http://59.110.171.69:31014/mail/ceshizhanghao1.nsf/down1.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/mail\\/.*\\/viewlist_dele\\.gif"
+      ],
+      "target_url": "override/viewlist_dele.gif",
+      "default_url": "http://59.110.171.69:31014/mail/ceshizhanghao1.nsf/viewlist_dele.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/mail\\/.*\\/expand\\.gif"
+      ],
+      "target_url": "override/expand.gif",
+      "default_url": "http://59.110.171.69:31014/mail/ceshizhanghao1.nsf/expand.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/afmail\\.nsf\\/icon02\\.gif"
+      ],
+      "target_url": "override/icon02.gif",
+      "default_url": "http://59.110.171.69:31014/afmail.nsf/icon02.gif"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/weboa\\/images\\/Toolbar_ico\\/movefile\\.gif"
+      ],
+      "target_url": "override/movefile.gif",
+      "default_url": "http://59.110.171.69:31014/weboa/images/Toolbar_ico/movefile.gif"
     }
   ],
   "adapter_urls": [
@@ -202,7 +377,7 @@
   "name": "四川OA",
   "default_url": "http://59.110.171.69:31031/",
   "scope": "HN-OA1",
-  "start_url": "http://59.110.171.69:31003/",
-  "update_time": 1573552102074,
+  "start_url": "enterplorer://HN-OA1/local/index.html",
+  "update_time": 1573636603521,
   "runtime_env": "1webview"
 }

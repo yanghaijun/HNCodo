@@ -371,15 +371,17 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port;var appTitle;var appPort;if (top.EAPI.isIOS) {
-          var title = localStorage.getItem('appTitle');if (title) {
-            appTitle = title.split('/')[0];appPort = title.split('/')[1];
-          }
-        }$.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function success(data) {
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port;var port = '31014';var appTitle; //获取九宫格中的标题
+        if (top.EAPI.isIOS()) {
+          appTitle = localStorage.getItem('appTitle');
+        }if (top.EAPI.isAndroid()) {
+          appTitle = huaneng.sendTitleToJS();
+        }$.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
             debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+
             // }
             if (data.indexOf('欢迎登录') == -1) {
               if (port == '31003') {
@@ -417,8 +419,7 @@
                 localStorage.zhaobiaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhaobiaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31067') {
                 //河北公司
-                localStorage.hebeiP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.hebeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.hebeiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hebeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31042') {
                 //湖南
                 localStorage.hunanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hunanU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -448,7 +449,8 @@
                 localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31040') {
                 //辽宁
-                localStorage.liaoningP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.liaoningU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.liaoningP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.liaoningU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31048') {
                 //河南
                 localStorage.henanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.henanU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -467,23 +469,103 @@
               } else if (port == '31095') {
                 //山东
                 localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
-              }if (port == '31000') {
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              } else if (port == '31039') {
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+              }if (top.EAPI.isIOS() || top.EAPI.isAndroid()) {
+                if (appTitle.indexOf('OA') > -1) {
+                  if (port == '31000') {
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  } else if (port == '31039') {
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  } else {
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  }
+                }if (appTitle.indexOf('邮件') > -1) {
+                  if (port == '31003') {
+                    //四川
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31016/afmail.nsf';
+                  } else if (port == '31000') {
+                    //曹妃甸
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31014/afmail.nsf';
+                  } else if (port == '31044') {
+                    //华北分公司
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31045/afmail.nsf';
+                  } else if (port == '31021') {
+                    //宁夏
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31022/afmail.nsf';
+                  } else if (port == '31025') {
+                    //甘肃
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31050/afmail.nsf';
+                  } else if (port == '31015') {
+                    //新疆
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31026/afmail.nsf';
+                  } else if (port == '31031') {
+                    //福建
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31032/afmail.nsf';
+                  } else if (port == '31035') {
+                    //广东
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31036/afmail.nsf';
+                  } else if (port == '31059') {
+                    //新能源
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31062/afmail.nsf';
+                  } else if (port == '31060') {
+                    //江苏
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31061/afmail.nsf';
+                  } else if (port == '31017') {
+                    //招标公司
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
+                  } else if (port == '31067') {
+                    //河北公司
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
+                  } else if (port == '31042') {
+                    //湖南
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31043/afmail.nsf';
+                  } else if (port == '31046') {
+                    //山西
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31047/afmail.nsf';
+                  } else if (port == '31069') {
+                    //贵州
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31070/afmail.nsf';
+                  } else if (port == '31020') {
+                    //吉林
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
+                  } else if (port == '31039') {
+                    //青海
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
+                  } else if (port == '31033') {
+                    //海南
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31034/afmail.nsf';
+                  } else if (port == '31051') {
+                    //湖北
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31052/afmail.nsf';
+                  } else if (port == '31029') {//雄安
+                    //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
+                  } else if (port == '31037') {
+                    //雅江
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
+                  } else if (port == '31040') {
+                    //辽宁
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
+                  } else if (port == '31048') {
+                    //河南
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
+                  } else if (port == '31063') {
+                    //西安热工院
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
+                  } else if (port == '31064') {
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31065/afmail.nsf';
+                  } else if (port == '31056') {
+                    //江西
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31057/afmail.nsf';
+                  } else if (port == '31071') {
+                    //广西
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31072/afmail.nsf';
+                  } else if (port == '31095') {
+                    //山东  黄台电厂
+                    elem.ownerDocument.location.href = 'http://59.110.171.69:31085/afmail.nsf';
+                  }
+                }
               } else {
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              } // if (port == '31000' && appTitle.indexOf('OA') > -1) {
-              //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              // } else if (port == '31039' && appTitle.indexOf('OA') > -1) {
-
-              //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              // } else if (port != '31000' && port != '31039' && appTitle.indexOf('OA') > -1) {
-              //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-
-              // } else if (appTitle.indexOf('邮件') > -1) {
-              //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + appPort + 'afmail.nsf';
-              // }
+                elem.ownerDocument.location.href = 'http://59.110.171.69:31014/afmail.nsf';
+              }
             } else {
               ysp.appMain.hideLoading();alert('登录失败，请重新登录！');
             }
@@ -499,8 +581,8 @@
         //   var password = huaneng.getPassword();
         //   $(elem).find('.login_form_text').eq(0).find('input').val(userName);
         //   $(elem).find('.login_form_text').eq(1).find('input').val(password);
-
         //   $(elem).find('.enter_system').find('input').click();
+
         // } else if (top.EAPI.isIOS()) {
         //   var userName = top.yspUser.getUserName();
         //   var password = top.yspUser.getPassword();
@@ -520,11 +602,12 @@
     },
     getTemplate_uiControl0_acry19: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n         \n      </div>\n    )\n  }\n});\n';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      )\n    );\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"login\"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:\"login\"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: \"loginButton\",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'userName',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'passWorld',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'ButtonN'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: '123'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"D_login\" },\n      React.createElement(\n        \"div\",\n        { className: \"loginTitle\" },\n        React.createElement(\"div\", null),\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF\"\n        )\n      ),\n      React.createElement(\n        \"div\",\n        { style: { display: data[3].display }, ref: \"myInput\" },\n        React.createElement(\n          \"div\",\n          { className: \"loginText\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginTextp\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"freeow-br\" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                \"p\",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginButton\" },\n          React.createElement(\n            \"button\",\n            { onClick: me.ButtonN },\n            \"\\u767B\\u5F55\"\n          )\n        )\n      )\n    );\n  }\n});";
     },
     getData_control38_UpuyAZ: function (elem) {
       ;var port = elem.ownerDocument.defaultView.location.port;;if (top.EAPI.isIOS()) {
-        var password;var userName;if (port == '31003') {
+        var password;var userName;var appTitle = localStorage.getItem('appTitle'); //获取九宫格中的标题
+        if (port == '31003') {
           if (localStorage && localStorage.password) {
             password = localStorage.password;userName = localStorage.username;
           } else {
@@ -696,14 +779,99 @@
             // Password: "Abcd  4321"
           }, success: function (data) {
             if (data.indexOf('欢迎登录') == -1) {
-              if (port == '31000') {
-                //曹妃甸
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              } else if (port == '31039') {
-                //青海
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-              } else {
-                elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+              if (appTitle.indexOf('OA') > -1) {
+                if (port == '31000') {
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                } else if (port == '31039') {
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                } else {
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                }
+              }if (appTitle.indexOf('邮件') > -1) {
+                if (port == '31003') {
+                  //四川
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31016/afmail.nsf';
+                } else if (port == '31000') {
+                  //曹妃甸
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31014/afmail.nsf';
+                } else if (port == '31044') {
+                  //华北分公司
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31045/afmail.nsf';
+                } else if (port == '31021') {
+                  //宁夏
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31022/afmail.nsf';
+                } else if (port == '31025') {
+                  //甘肃
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31050/afmail.nsf';
+                } else if (port == '31015') {
+                  //新疆
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31026/afmail.nsf';
+                } else if (port == '31031') {
+                  //福建
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31032/afmail.nsf';
+                } else if (port == '31035') {
+                  //广东
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31036/afmail.nsf';
+                } else if (port == '31059') {
+                  //新能源
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31062/afmail.nsf';
+                } else if (port == '31060') {
+                  //江苏
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31061/afmail.nsf';
+                } else if (port == '31017') {
+                  //招标公司
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
+                } else if (port == '31067') {
+                  //河北公司
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
+                } else if (port == '31042') {
+                  //湖南
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31043/afmail.nsf';
+                } else if (port == '31046') {
+                  //山西
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31047/afmail.nsf';
+                } else if (port == '31069') {
+                  //贵州
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31070/afmail.nsf';
+                } else if (port == '31020') {
+                  //吉林
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
+                } else if (port == '31039') {
+                  //青海
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
+                } else if (port == '31033') {
+                  //海南
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31034/afmail.nsf';
+                } else if (port == '31051') {
+                  //湖北
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31052/afmail.nsf';
+                } else if (port == '31029') {//雄安
+                  //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
+                } else if (port == '31037') {
+                  //雅江
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
+                } else if (port == '31040') {
+                  //辽宁
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
+                } else if (port == '31048') {
+                  //河南
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
+                } else if (port == '31063') {
+                  //西安热工院
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
+                } else if (port == '31064') {
+                  //燃料公司
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31065/afmail.nsf';
+                } else if (port == '31056') {
+                  //江西
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31057/afmail.nsf';
+                } else if (port == '31071') {
+                  //广西
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31072/afmail.nsf';
+                } else if (port == '31095') {
+                  //山东  黄台电厂
+                  elem.ownerDocument.location.href = 'http://59.110.171.69:31085/afmail.nsf';
+                }
               }
             } // var _web = $(data)[7].querySelector("input[name='fldWebOfficeList']").value;
             // elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -736,7 +904,7 @@
     },
     getTemplate_uiControl37_8R9wFI: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n      </div>\n    )\n  }\n});';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\"div\", null);\n  }\n});";
     }
   }, "loginOA");
 })(window, ysp);

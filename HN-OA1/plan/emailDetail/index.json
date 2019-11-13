@@ -1,0 +1,178 @@
+{
+  "version": "0.1",
+  "id": "emailDetail",
+  "targetURL": "http://59.110.171.69:31016/afmail.nsf",
+  "jsFile": "index.js",
+  "chineseName": "邮件详情",
+  "description": "邮件详情页面",
+  "controls": {
+    "control43_DEeGSq": {
+      "location": {
+        "data": {
+          "tagName": "LI"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收件箱"
+              ],
+              "visText": [
+                "收件箱"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-tab-strip-wrap UL.x-tab-strip.x-tab-strip-top LI.x-tab-strip-active"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/UL[1]/LI[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收件箱",
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "customJS": "if(elem.getAttribute('class').indexOf(\" x-tab-strip-active\")==0 || elem.getAttribute('class').indexOf(\"x-tab-strip-active\")==0){return false}else {return true}"
+    },
+    "control45_LgEF05": {
+      "location": {
+        "data": {
+          "tagName": "IFRAME"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.x-panel.x-panel-noborder DIV.x-panel-bwrap DIV.x-panel-body.x-panel-body-noheader.x-panel-body-noborder IFRAME"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control45_LgEF05"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context15_Fdcy3H": {
+      "controls": [
+        "control45_LgEF05"
+      ],
+      "anchors": [
+        "control43_DEeGSq"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow32_RZOMES": {
+      "toContexts": [
+        {
+          "toContextId": "context15_Fdcy3H"
+        }
+      ]
+    },
+    "flow33_Ixb754": {
+      "fromContextId": "context15_Fdcy3H",
+      "fromAction": "doAction",
+      "fromControlId": "control45_LgEF05",
+      "toContexts": [
+        {
+          "toContextId": "context15_Fdcy3H"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page15_Uu9uvI": {
+      "contextId": "context15_Fdcy3H",
+      "layout": [
+        {
+          "id": "uiControl40_bbcK24",
+          "controlId": "control45_LgEF05",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl40_bbcK24",
+                "onGetTemplate": "getTemplate_uiControl40_bbcK24"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context15_Fdcy3H": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context15_Fdcy3H": [
+          "59.110.171.69:31016/afmail.nsf"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context15_Fdcy3H": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context15_Fdcy3H": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context15_Fdcy3H": [
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}

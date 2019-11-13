@@ -6,11 +6,9 @@
   var utils = ysp.utils;
   var topWin = top;
   topWin.getTitle = function(id){
-    //alert('id='+id);
     if(id){
       localStorage.setItem('appTitle',id);
     }
-    //return id;
   };
   ysp.customHelper = {};
   utils.extend(ysp.customHelper, {
@@ -67,7 +65,7 @@
     // 目标页面加载前执行, aWin为当前页面的window对象, doc为当前页面的document对象
     beforeTargetLoad: function beforeTargetLoad(aWin, doc) {
       var port = aWin.location.port;
-      if(topWin.EAPI.isIOS){
+      if(topWin.EAPI.isIOS()){//调用IOS的方法，让IOS调用getTitle()方法，返回九宫格中的标题
         topWin.EAPI.postMessageToNative('sendTitleToJS','');
       }
       if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login') {
@@ -75,6 +73,8 @@
         if (topWin.EAPI.isAndroid()) {
           var userName;
           var password;
+          var appTitle=huaneng.sendTitleToJS();//获取九宫格中的标题
+          debugger;
           if (port == '31003') {
             if (localStorage && localStorage.password && localStorage.username) {
               password = localStorage.password;
@@ -300,24 +300,110 @@
           		password = huaneng.getPassword();
             }
           }
-
           $.ajax({
             url: 'http://59.110.171.69:' + port + '/names.nsf?Login',
             type: 'post',
             data: {
-              Username: userName, 
+              Username: userName,
               Password: password 
             },
             success: function(data) {
               if(data.indexOf('欢迎登录') == -1){
-                if (port == '31000') {
-                  //曹妃甸
-                  aWin.location.href = 'http://59.110.171.69:'+port+'/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else if(port == '31039'){
-                  //青海
-                  aWin.location.href = 'http://59.110.171.69:'+port+'/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-                } else {
-                  aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                if (appTitle.indexOf('OA') > -1) {
+                  if (port == '31000') {
+                    aWin.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  } else if (port == '31039') {
+                    aWin.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  } else {
+                    aWin.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                  }
+                }
+
+                if (appTitle.indexOf('邮件') > -1) {
+                  if (port == '31003') {
+                    //四川
+                    aWin.location.href ='http://59.110.171.69:31016/afmail.nsf';
+                  } else if (port == '31000') {
+                    //曹妃甸
+                    aWin.location.href ='http://59.110.171.69:31014/afmail.nsf';
+                  } else if (port == '31044') {
+                    //华北分公司
+                    aWin.location.href ='http://59.110.171.69:31045/afmail.nsf';
+                  } else if (port == '31021') {
+                    //宁夏
+                    aWin.location.href ='http://59.110.171.69:31022/afmail.nsf';
+                  } else if (port == '31025') {
+                    //甘肃
+                    aWin.location.href = 'http://59.110.171.69:31050/afmail.nsf';
+                  } else if (port == '31015') {
+                    //新疆
+                    aWin.location.href ='http://59.110.171.69:31026/afmail.nsf';
+                  } else if (port == '31031') {
+                    //福建
+                    aWin.location.href ='http://59.110.171.69:31032/afmail.nsf';
+                  } else if (port == '31035') {
+                    //广东
+                    aWin.location.href ='http://59.110.171.69:31036/afmail.nsf';
+                  } else if (port == '31059') {
+                    //新能源
+                    aWin.location.href ='http://59.110.171.69:31062/afmail.nsf';
+                  } else if (port == '31060') {
+                    //江苏
+                    aWin.location.href = 'http://59.110.171.69:31061/afmail.nsf';
+                  } else if (port == '31017') {
+                    //招标公司
+                    aWin.location.href = 'http://59.110.171.69:31017/afmail.nsf';
+                  } else if (port == '31067') {
+                    //河北公司
+                    aWin.location.href = 'http://59.110.171.69:31068/afmail.nsf';
+                  } else if (port == '31042') {
+                    //湖南
+                    aWin.location.href = 'http://59.110.171.69:31043/afmail.nsf';
+                  } else if (port == '31046') {
+                    //山西
+                    aWin.location.href = 'http://59.110.171.69:31047/afmail.nsf';
+                  } else if (port == '31069') {
+                    //贵州
+                    aWin.location.href = 'http://59.110.171.69:31070/afmail.nsf';
+                  } else if (port == '31020') {
+                    //吉林
+                    aWin.location.href = 'http://59.110.171.69:31023/afmail.nsf';
+                  } else if (port == '31039') {
+                    //青海
+                    aWin.location.href = 'http://59.110.171.69:31039/afmail.nsf';
+                  } else if (port == '31033') {
+                    //海南
+                    aWin.location.href = 'http://59.110.171.69:31034/afmail.nsf';
+                  } else if (port == '31051') {
+                    //湖北
+                    aWin.location.href = 'http://59.110.171.69:31052/afmail.nsf';
+                  } else if (port == '31029') {//雄安
+                    //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
+                  } else if (port == '31037') {
+                    //雅江
+                    aWin.location.href = 'http://59.110.171.69:31038/afmail.nsf';
+                  } else if (port == '31040') {
+                    //辽宁
+                    aWin.location.href = 'http://59.110.171.69:31041/afmail.nsf';
+                  } else if (port == '31048') {
+                    //河南
+                    aWin.location.href = 'http://59.110.171.69:31049/afmail.nsf';
+                  } else if (port == '31063') {
+                    //西安热工院
+                    aWin.location.href = 'http://59.110.171.69:31063/afmail.nsf';
+                  } else if (port == '31064') {
+                    //燃料公司
+                    aWin.location.href = 'http://59.110.171.69:31065/afmail.nsf';
+                  } else if (port == '31056') {
+                    //江西
+                    aWin.location.href = 'http://59.110.171.69:31057/afmail.nsf';
+                  } else if (port == '31071') {
+                    //广西
+                    aWin.location.href = 'http://59.110.171.69:31072/afmail.nsf';
+                  } else if (port == '31095') {
+                    //山东  黄台电厂
+                    aWin.location.href ='http://59.110.171.69:31085/afmail.nsf';
+                  }
                 }
       				}
               // var _web = $(data)[7].querySelector("input[name='fldWebOfficeList']").value;
