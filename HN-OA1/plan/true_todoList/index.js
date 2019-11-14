@@ -9,8 +9,14 @@
         } else {
           var titles = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[3].textContent;
         }var person = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[6].textContent;var time = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[7].textContent; // if (title == '测试收文流程' || title == '测试发文流程' || title == '测试签报' || title == '测试部门会议纪要' || title == '测试通知公告' || title == '测试部门发文' || title == '测试人员变动' || title == '测试公司会议纪要' || title == '测试考勤审批' || title == '测试请假审批' || title == '付款测试' || title == '测试工作联系单' || title == '测试会议通知' || title == '测试车辆管理' || title == '测试信息变更' || title == '内发测试' || title == '公司收文' || title == '公司签报' || title == '公司发文' || title == '部门发文' || title == '内发子流程' || title == '通知公告' || title == '公司会议纪要' || title == '部门会议纪要' || title == '信息变更管理' || title == '考勤审批' || title == '请假审批' || title == '付款申请' || title == '工作联系单' || title == '会议（培训）通知') 
-        if (title.indexOf('收文') != -1 || title.indexOf('发文') != -1 || title.indexOf('签报') != -1 || title.indexOf('会议') != -1 || title.indexOf('车辆') != -1 || title.indexOf('信息变更') != -1 || title.indexOf('考勤') != -1 || title.indexOf('请假') != -1 || title.indexOf('付款') != -1 || title.indexOf('工作联系单') != -1 || title.indexOf('内发') != -1 || title.indexOf('便函') != -1 || title.indexOf('通知公告') != -1 || title.indexOf('人员变动') != -1) {
-          a.push(titles);a.push(person);a.push(time);data.title.push(a);
+        if (port == '31003') {
+          if (title.indexOf('收文') != -1 || title.indexOf('发文') != -1 || title.indexOf('签报') != -1 || title.indexOf('会议') != -1 || title.indexOf('车辆') != -1 || title.indexOf('信息变更') != -1 || title.indexOf('考勤') != -1 || title.indexOf('请假') != -1 || title.indexOf('付款') != -1 || title.indexOf('工作联系单') != -1 || title.indexOf('内发') != -1 || title.indexOf('便函') != -1 || title.indexOf('通知公告') != -1 || title.indexOf('人员变动') != -1) {
+            a.push(titles);a.push(person);a.push(time);data.title.push(a);
+          }
+        } else {
+          if (title.indexOf('收文') != -1 || title.indexOf('发文') != -1 || title.indexOf('签报') != -1) {
+            a.push(titles);a.push(person);a.push(time);data.title.push(a);
+          }
         }
       }var trs = elem.querySelectorAll("tr");for (var i = 1; i < trs.length; i++) {
         //   var title = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[0].className;
