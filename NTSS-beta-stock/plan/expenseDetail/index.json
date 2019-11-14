@@ -1,0 +1,397 @@
+{
+  "version": "0.1",
+  "id": "expenseDetail",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
+  "jsFile": "index.js",
+  "chineseName": "报账明细",
+  "description": "日常及其他费用报账明细",
+  "firstPaintEnable": false,
+  "controls": {
+    "control41_QJa1ea": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"add_mingXiList\"]/DIV[1]",
+              "descendant::DIV[@id=\"add_mingXiList\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_main DIV.m_content_inner_main DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control41_QJa1ea"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control42_2aQfXQ": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"add_mingXiList\"]//TABLE[@id=\"detail_table\"]/TBODY[1]",
+              "descendant::DIV[@id=\"add_mingXiList\"]//TABLE[@id=\"detail_table\"]//TBODY",
+              "descendant::TABLE[@id=\"detail_table\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_main DIV.m_content_inner_main TABLE.input_table.m10 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control42_2aQfXQ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control43_T9MzhT": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody DIV.main_wrap"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\t\t\n\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n    首 页我要审单日常及其他费用报销单报账明细 \n\t  \n\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t    部门(成本中心)：\n\t\t\t\t\t    山东信息技术公司-咨询服务部 \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t费用小类：\n\t\t\t\t\t\n\t\t\t\t\t    其他\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t*单据张数：\n\t\t\t\t\t张  ,  其中发票张数\n\t\t\t\t\t\t张\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t票据1：  票号NO：\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  金额：\n\t\t\t\t\t\t\t  税额：\n\t\t\t\t\t\t\t  价税合计：\n\t\t\t\t\t\t\t        是否为增值税专用票\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t普通价税合计：\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t  普通金额合计：\n\t\t\t\t\t\t  普通税额合计：\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t专票价税合计：\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t  专票金额合计：\n\t\t\t\t\t\t  专票税额合计：\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t*金额(价税合计)：\n\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t      金额合计：\n\t\t\t\t\t\t\t      税额合计：\n\t\t\t\t\t\n\t\t\t\t\t其中含增值税：\n\t\t\t\t\t元\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t备注：\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n            \n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\n\t\n\n\n\t\t\t\n\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n﻿\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n电子报销系统我要填单我要审单我要查单委托管理个人信息管理\n\n\t\t",
+      "frameXPath": "",
+      "customJS": "\nif(elem.querySelector('.m_content_inner_main').textContent.indexOf('明细') !== -1){return true;}return false;"
+    },
+    "control44_4voFoe": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "首 页我要审单日常及其他费用报销单报账明细"
+              ],
+              "visText": [
+                "首 页我要审单日常及其他费用报销单报账明细"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"add_mingXiList\"]/DIV[1]",
+              "descendant::DIV[@id=\"add_mingXiList\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content_main DIV.m_content_inner_main DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "首 页我要审单日常及其他费用报销单报账明细 ",
+      "frameXPath": "",
+      "customJS": "if(elem.textContent.indexOf('报账明细')>-1){\nreturn true;\n}else{\nreturn false;\n}"
+    }
+  },
+  "contexts": {
+    "context12_JWaqBp": {
+      "controls": [
+        "control41_QJa1ea",
+        "control42_2aQfXQ"
+      ],
+      "anchors": [
+        "control43_T9MzhT",
+        "control44_4voFoe"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow41_uGkQQd": {
+      "toContexts": [
+        {
+          "toContextId": "context12_JWaqBp"
+        }
+      ]
+    },
+    "flow42_ogRQzV": {
+      "fromContextId": "context12_JWaqBp",
+      "fromAction": "doAction",
+      "fromControlId": "control41_QJa1ea",
+      "toContexts": [
+        {
+          "toContextId": "context12_JWaqBp"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page12_6oQZme": {
+      "contextId": "context12_JWaqBp",
+      "layout": [
+        {
+          "id": "uiControl36_1HSZnS",
+          "controlId": "control41_QJa1ea",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl36_1HSZnS",
+                "onGetTemplate": "getTemplate_uiControl36_1HSZnS"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl37_G5p9JG",
+          "controlId": "control42_2aQfXQ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl37_G5p9JG",
+                "onGetTemplate": "getTemplate_uiControl37_G5p9JG"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context12_JWaqBp": [
+          "首页"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context12_JWaqBp": [
+          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context12_JWaqBp": [
+          [
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "add_mingXiList",
+            "amount",
+            "attachment_myQuery_hint",
+            "close",
+            "companyCode",
+            "companyId",
+            "controlMenu",
+            "dectNum",
+            "detail_table",
+            "duty",
+            "good",
+            "insideInvoiceNum",
+            "isadd",
+            "isvat",
+            "loginWatson",
+            "money",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "navigate",
+            "nodeCode",
+            "offOfPage",
+            "ptAmount",
+            "ptDuty",
+            "ptValence",
+            "summary",
+            "td_",
+            "totleDuty",
+            "totleValence",
+            "tr_",
+            "valence",
+            "vatAmount",
+            "vatDuty",
+            "vatMoney",
+            "vatValence"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context12_JWaqBp": [
+          [
+            "add-on",
+            "attachment_myQuery_hint",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "col_red",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "detailsAmount",
+            "droppable",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "logo",
+            "m",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "red",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context12_JWaqBp": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/IMG",
+            "DIV/DIV/META",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "SPAN/STRONG/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TH/FONT/SPAN",
+            "TH/SPAN/STRONG",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN",
+            "TR/TD/TEXTAREA",
+            "TR/TH/FONT",
+            "TR/TH/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

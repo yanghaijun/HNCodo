@@ -1,0 +1,244 @@
+getTemplate_uiControl29_lcRcZ1: |-
+  module.exports = React.createClass({
+    handleClick:function(e){
+     
+      var handle = this.props.customHandler;
+      var index=e.target.dataset.key
+      if(handle){
+        handle({
+          data:index,
+          eventType:'click'
+        })
+      }
+    },
+    backguanbi:function(e){
+     var handle = this.props.customHandler;
+     
+      if(handle){
+        handle({
+         
+          eventType:'backguanbi'
+        })
+      }
+      
+      
+      
+    },
+    submits:function(e){
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'submits'
+        })
+      }
+      
+    },
+     backs:function(e){
+  //      var backs=this.refs.backs;
+       
+  //      backs.style.display='none'
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'backs'
+        })
+      }
+      
+    },
+    submits2:function(e){
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'submits2'
+        })
+      }
+      
+    },
+     backs2:function(e){
+  //      var backs=this.refs.backs;
+       
+  //      backs.style.display='none'
+      var handle = this.props.customHandler;
+      if(handle){
+        handle({    
+          eventType:'backs2'
+        })
+      }
+      
+    },
+    render: function() {
+      var data = this.props.customData;
+      
+        
+      
+      if(data&&data.cons&&data.cons.length>0&&data.title=="确认提交"){
+      var options=[];
+        options.push(
+      data.cons.map(function(items,index){
+        return(
+        <option>{items.value}</option>
+        )
+      })
+        )
+       return (
+        
+        <div ref="backs">
+            <div className='weng_sucessMesbx'>
+          <div>
+          <h5>{data.title}</h5>
+          <p><ul><li style={{height:'44px',borderBottom:'1px solid #ddd'}}><span style={{width:"30%",display:'inline-block'}}>{data.contents[0].titles}</span><span>{data.contents[0].con}</span></li>
+         <li><span style={{width:'44%'}}>{data.tits}</span><select className="selecs">{options}</select></li>   
+            
+           </ul></p>
+          <p style={{marginTop:"100px",marginLeft:'30px'}}><button onClick={this.submits} className="btn" style={{marginRight:'15px'}}>提交</button> <button onClick={this.backs} className="btn">返回</button></p>
+          </div>
+              </div>
+        
+        
+        </div>
+        
+      )
+      }else if(data&&data.title=="提示"){
+        return(
+         <div>
+         
+            <div className='sucessMesbx'>
+          <div>
+          <h5>{data.title}</h5>
+          <p style={{paddingTop:'30px'}}>{data.contents}</p>
+          <p style={{marginTop:"7px"}}><button onClick={this.backguanbi} >关闭</button></p>
+          </div>
+              </div>
+            :
+        
+        </div>
+        
+        )
+      }
+      
+     else if(data&&data.cons&&data.cons.length>0&&data.title=="确认退回"){
+      var options=[];
+        options.push(
+      data.cons.map(function(items,index){
+        return(
+        <option>{items.value}</option>
+        )
+      })
+        )
+       return (
+        
+        <div ref="backs">
+            <div className='weng_sucessMesbx'>
+          <div>
+          <h5>{data.title}</h5>
+          <p><ul><li style={{height:'44px',borderBottom:'1px solid #ddd'}}><span style={{width:"30%",display:'inline-block'}}>{data.contents[0].titles}</span><span>{data.contents[0].con}</span></li>
+         <li><span style={{width:'44%'}}>{data.tits}</span><select className="selecs">{options}</select></li>   
+            
+           </ul></p>
+          <p style={{marginTop:"100px",marginLeft:'30px'}}><button onClick={this.submits2} className="btn" style={{marginRight:'15px'}}>提交</button> <button onClick={this.backs2} className="btn">返回</button></p>
+          </div>
+              </div>
+        
+        
+        </div>
+        
+      )
+      }
+      else{
+        return(
+        <div></div>
+        )
+      }
+
+    }
+  });
+getData_control35_BcV458: |
+  if (!elem) {
+    return false;
+  }
+  var data = {};
+  if (elem && elem.style.display == "block") {
+    var title = $(elem).children('#TB_title').eq(0).children('div').eq(0).text();
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+
+    if (title == "提示") {
+      data.title = title;
+      var liss = $(contetns).find('tr').eq(1).text().trim();
+      data.contents = liss;
+    } else {
+      data.title = title;
+      var liss = $(contetns).find('#approveForm').find('.setTb').children('tbody');
+
+      if ($(contetns).find('#approveForm').length > 0 && $(contetns).find('#approveForm').find('.setTb').length > 0 && $(contetns).find('#approveForm').find('.setTb').children('tbody').length > 0) {
+        var lits = liss.children('tr').eq(0).find('div').text().trim();
+      }
+
+      var titless = liss.children('tr').eq(0).find('th').text();
+      var chilis = liss.children('tr').eq(1).find('th').text();
+      var options = liss.children('tr').eq(1).find('select').find('option');
+      var opt = [];
+      options.forEach(function (items, index) {
+        opt.push({
+          value: items.textContent,
+          val: items.value
+        });
+      });
+      data.contents = [];
+      data.contents.push({
+        titles: titless,
+        con: lits
+      });
+      data.tits = chilis;
+      data.cons = opt;
+    }
+
+    return data;
+  }
+doAction_uiControl29_lcRcZ1: >-
+  var contetns =
+  $(elem).find('iframe')[0].contentDocument.querySelector('body');
+
+  if (data.eventType == "backguanbi") {
+    $(contetns).find('tr').eq(3).find("button").click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 3000);
+  } else if (data.eventType == "backs") {
+    
+    //debugger;
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('#approveForm').children('.setTb').eq(0).find('tr').eq(2).find('a').eq(1).click();
+    //ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      ysp.appMain.back();
+    }, 3000);
+  } else if (data.eventType == "submits") {
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('#approveForm').children('.setTb').eq(0).find('tr').eq(2).find('a').eq(0).click();
+   // ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      ysp.appMain.back();
+    }, 3000);
+  }
+
+  else if (data.eventType == "backs2") {
+    debugger;
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('.p5').find('a').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      //ysp.appMain.back();
+    }, 3000);
+  } else if (data.eventType == "submits2") {
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('.p5').find('a').eq(1).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      //ysp.appMain.back();
+    }, 3000);
+  }

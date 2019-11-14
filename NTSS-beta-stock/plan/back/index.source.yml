@@ -1,0 +1,128 @@
+getTemplate_uiControl13_NWwFyA: "module.exports = React.createClass({\n  handleClick:function(e){\n   \n    var handle = this.props.customHandler;\n    var index=e.target.dataset.key\n    if(handle){\n      handle({\n        data:index,\n        eventType:'click'\n      })\n    }\n  },\n  backguanbi:function(e){\n   var handle = this.props.customHandler;\n   \n    if(handle){\n      handle({\n       \n        eventType:'backguanbi'\n      })\n    }\n    \n    \n    \n  },\n  submits:function(e){\n    var handle = this.props.customHandler;\n    if(handle){\n      handle({    \n        eventType:'submits'\n      })\n    }\n    \n  },\n   backs:function(e){\n//      var backs=this.refs.backs;\n     \n//      backs.style.display='none'\n    var handle = this.props.customHandler;\n    if(handle){\n      handle({    \n        eventType:'backs'\n      })\n    }\n    \n  },\n  submits2:function(e){\n    var handle = this.props.customHandler;\n    if(handle){\n      handle({    \n        eventType:'submits2'\n      })\n    }\n    \n  },\n   backs2:function(e){\n//      var backs=this.refs.backs;\n     \n//      backs.style.display='none'\n    var handle = this.props.customHandler;\n    if(handle){\n      handle({    \n        eventType:'backs2'\n      })\n    }\n    \n  },\n  change:function(e){\n    var handle = this.props.customHandler;\n    if(handle){\n      handle({    \n        eventType:'change',\n        data:e.target.selectedIndex\n      })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n    \n      \n    \n    if(data&&data.cons&&data.cons.length>0&&data.title==\"确认提交\"){\n    var options=[];\n      options.push(\n    data.cons.map(function(items,index){\n      return(\n      <option>{items.value}</option>\n      )\n    })\n      )\n     return (\n      \n      <div ref=\"backs\">\n         \n          <div className='weng_sucessMesbx'>\n        <div>\n        <h5>{data.title}</h5>\n        <p><ul><li style={{height:'44px',borderBottom:'1px solid #ddd'}}><span style={{width:'auto',display:'inline-block'}}>{data.contents[0].titles}</span><span>{data.contents[0].con}</span></li>\n       <li><span style={{width:'44%'}}>{data.tits}</span><select onChange={this.change} className=\"selecs\">{options}</select></li>   \n          \n         </ul></p>\n        <p style={{marginTop:\"100px\",marginLeft:'30px'}}><button onClick={this.submits} className=\"btn\" style={{marginRight:'15px'}}>提交</button> <button onClick={this.backs} className=\"btn\">返回</button></p>\n        </div>\n            </div>\n      \n      \n      </div>\n      \n    )\n    }else if(data&&data.title==\"提示\"){\n      return(\n       <div>\n          \n          \t\n       \n          <div className='sucessMesbx'>\n        <div>\n        <h5>{data.title}</h5>\n        <p style={{paddingTop:'30px'}}>{data.contents}</p>\n        <p style={{marginTop:\"7px\"}}><button onClick={this.backguanbi} >关闭</button></p>\n        </div>\n            </div>\n          :\n      \n      </div>\n      \n      )\n    }\n    \n   else if(data&&data.cons&&data.cons.length>0&&data.title==\"确认退回\"){\n    var options=[];\n      options.push(\n    data.cons.map(function(items,index){\n      return(\n      <option>{items.value}</option>\n      )\n    })\n      )\n     return (\n      \n      <div ref=\"backs\">\n         \t<div className = 'TodoList-head'>\n      \n        \t\t\t<span>{data.title}</span>\n     \t\t\t </div>\n          <div className='weng_sucessMesbx'>\n        \t<div>\n          \n        \t<h5>{data.title}</h5>\n          \n        <p><ul><li style={{height:'44px',borderBottom:'1px solid #ddd'}}><span style={{width:\"30%\",display:'inline-block'}}>{data.contents[0].titles}</span><span>{data.contents[0].con}</span></li>\n       <li><span style={{width:'44%'}}>{data.tits}</span><select onChange={_this.change} className=\"selecs\">{options}</select></li>   \n          \n         </ul></p>\n        <p style={{marginTop:\"100px\",marginLeft:'30px'}}><button onClick={this.submits2} className=\"btn\" style={{marginRight:'15px'}}>提交</button> <button onClick={this.backs2} className=\"btn\">返回</button></p>\n        </div>\n            </div>\n      \n      \n      </div>\n      \n    )\n    }\n    else{\n      return(\n      <div></div>\n      )\n    }\n\n  }\n});\n"
+getData_control16_w6esOh: |
+  ;if (!elem) {
+    return false;
+  }
+  var data = {};
+  if (elem && elem.style.display == "block") {
+    var title = $(elem).children('#TB_title').eq(0).children('div').eq(0).text();
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+
+    if (title == "提示") {
+      data.title = title;
+      var liss = $(contetns).find('tr').eq(1).text().trim();
+      data.contents = liss;
+    } else {
+      data.title = title;
+      var liss = $(contetns).find('#approveForm').find('.setTb').children('tbody');
+
+      if ($(contetns).find('#approveForm').length > 0 && $(contetns).find('#approveForm').find('.setTb').length > 0 && $(contetns).find('#approveForm').find('.setTb').children('tbody').length > 0) {
+        var lits = liss.children('tr').eq(0).find('div').text().trim();
+      }
+
+      var titless = liss.children('tr').eq(0).find('th').text();
+      var chilis = liss.children('tr').eq(1).find('th').text();
+      var options = liss.children('tr').eq(1).find('select').find('option');
+      var opt = [];
+      options.forEach(function (items, index) {
+        opt.push({
+          value: items.textContent,
+          val: items.value
+        });
+      });
+      data.contents = [];
+      data.contents.push({
+        titles: titless,
+        con: lits
+      });
+      data.tits = chilis;
+      data.cons = opt;
+    }
+
+    return data;
+  }
+doAction_uiControl13_NWwFyA: >-
+  var contetns =
+  $(elem).find('iframe')[0].contentDocument.querySelector('body');
+
+  if (data.eventType == "backguanbi") {
+    $(contetns).find('tr').eq(3).find("button").click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 3000);
+  } else if (data.eventType == "backs") {
+    
+    //debugger;
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('#approveForm').children('.setTb').eq(0).find('tr').eq(2).find('a').eq(1).click();
+    //ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 3000);
+  } else if (data.eventType == "submits") {
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('#approveForm').children('.setTb').eq(0).find('tr').eq(2).find('a').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+    }, 3000);
+  }
+
+  else if (data.eventType == "backs2") {
+    debugger;
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('.p5').find('a').eq(0).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      //ysp.appMain.back();
+    }, 3000);
+  } else if (data.eventType == "submits2") {
+    var contetns = $(elem).find('iframe')[0].contentDocument.querySelector('body');
+    $(contetns).find('.p5').find('a').eq(1).click();
+    ysp.appMain.showLoading();
+    setTimeout(function () {
+      ysp.appMain.hideLoading();
+      //ysp.appMain.back();
+    }, 3000);
+  }else if(data.eventType == "change") {
+    var index = data.dataCustom;
+    ($(contetns).find('#approveForm').find('.setTb').children('tbody').children('tr').eq(1).find('select'))[0].value=($(contetns).find('#approveForm').find('.setTb').children('tbody').children('tr').eq(1).find('select'))[0].querySelectorAll('option')[index].value;
+    ($(contetns).find('#approveForm').find('.setTb').children('tbody').children('tr').eq(1).find('select'))[0].dispatchEvent(new Event('change'));
+  }
+getTemplate_uiControl28_pM3rCP: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control34_5hQfvk: ''
+doAction_uiControl28_pM3rCP: ''
+getTemplate_: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_undefined: ''
+doAction_: ''
+getTemplate_uiControl5_Lt5dZk: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+doAction_uiControl5_Lt5dZk: ''

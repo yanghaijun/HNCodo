@@ -1,0 +1,139 @@
+{
+  "version": "0.1",
+  "id": "success",
+  "targetURL": "http://223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
+  "jsFile": "index.js",
+  "chineseName": "上传成功",
+  "description": "",
+  "controls": {
+    "control37_AhpRTp": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"TB_window\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[31]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control37_AhpRTp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context10_NA7T7F": {
+      "controls": [
+        "control37_AhpRTp"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow29_JL0ZTq": {
+      "toContexts": [
+        {
+          "toContextId": "context10_NA7T7F"
+        }
+      ]
+    },
+    "flow21_8MOTCm": {
+      "fromContextId": "context10_NA7T7F",
+      "fromAction": "doAction",
+      "fromControlId": "control37_AhpRTp",
+      "toContexts": [
+        {
+          "toContextId": "context10_NA7T7F"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page10_zye2wm": {
+      "contextId": "context10_NA7T7F",
+      "layout": [
+        {
+          "id": "uiControl31_cEE9BN",
+          "controlId": "control37_AhpRTp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl31_cEE9BN",
+                "onGetTemplate": "getTemplate_uiControl31_cEE9BN"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context10_NA7T7F": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context10_NA7T7F": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context10_NA7T7F": [
+          [
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_title"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context10_NA7T7F": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context10_NA7T7F": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/DIV/DIV",
+            "DIV/DIV/A"
+          ]
+        ]
+      }
+    }
+  }
+}
