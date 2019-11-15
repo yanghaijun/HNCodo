@@ -15,7 +15,9 @@
     "contentCheck": "../contentCheck/index.json",
     "contentPerson": "../contentPerson/index.json",
     "contentNotice": "../contentNotice/index.json",
-    "loginOA": "../loginOA/index.json"
+    "loginOA": "../loginOA/index.json",
+    "contentNew": "../contentNew/index.json",
+    "contentYongYin": "../contentYongYin/index.json"
   },
   "chineseName": "真待办列表",
   "description": "",
@@ -200,6 +202,14 @@
         {
           "toContextId": "context9_syHubA",
           "toModelId": "contentNotice"
+        },
+        {
+          "toContextId": "context16_C8tkOB",
+          "toModelId": "contentNew"
+        },
+        {
+          "toContextId": "context17_xtpAGJ",
+          "toModelId": "contentYongYin"
         }
       ]
     },

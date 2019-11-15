@@ -371,7 +371,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31003'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port;var port = '31059'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -379,8 +379,7 @@
         //     appTitle = huaneng.sendTitleToJS();
         //   }
         $.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
-            debugger;
-            // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
+            debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -406,15 +405,14 @@
                 localStorage.xinjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31031') {
                 //福建
-                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31035') {
                 //广东
-                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31059') {
                 //新能源
-                localStorage.xinnengyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinnengyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xinnengyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.xinnengyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31060') {
                 //江苏
                 localStorage.jiangsuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangsuU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -444,13 +442,15 @@
                 localStorage.hainanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hainanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31051') {
                 //湖北
-                localStorage.hubeiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hubeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.hubeiP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.hubeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31029') {
                 //雄安
                 localStorage.xionganP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xionganU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31037') {
                 //雅江
-                localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31040') {
                 //辽宁
                 localStorage.liaoningP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.liaoningU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -465,8 +465,7 @@
                 localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31056') {
                 //江西
-                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31071') {
                 //广西
                 localStorage.guangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -486,6 +485,7 @@
               //             } else if (port == '31039') {
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             } else {
+
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             }
               //           }
@@ -523,6 +523,7 @@
               //             } else if (port == '31017') {
               //               //招标公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
+
               //             } else if (port == '31067') {
               //               //河北公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
@@ -538,7 +539,6 @@
               //             } else if (port == '31020') {
               //               //吉林
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
-
               //             } else if (port == '31039') {
               //               //青海
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
@@ -551,16 +551,17 @@
               //             } else if (port == '31029') {//雄安
               //               //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
               //             } else if (port == '31037') {
+
               //               //雅江
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
               //             } else if (port == '31040') {
               //               //辽宁
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
               //             } else if (port == '31048') {
+
               //               //河南
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
               //             } else if (port == '31063') {
-
               //               //西安热工院
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
               //             } else if (port == '31064') {
@@ -903,7 +904,6 @@
         // 	data: {Login:'',Username:userName,Password:password},
         // 	success:function(){
         // 	aWin.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
-        // 	}
         // })
       } else {//   console.log('1');
           //   $.ajax({

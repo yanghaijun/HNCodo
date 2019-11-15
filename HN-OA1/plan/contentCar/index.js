@@ -31,7 +31,29 @@
       ;if (!elem) {
         return;
       }var data = { content: [], fujian: [], liucheng: [], liuchengNUM: [], commitLZ: [], treeBar: [], selectApar: [], selectApars: [], yijian: [], but: [], tuihuiTitle: [], tuihuiTitleFlag: [] };var jdmc = "";var yj = "";var dds = elem.ownerDocument.querySelector('table[class="Information"]').querySelectorAll("dd");for (var i = 1; i < dds.length; i++) {
-        data.content.push(dds[i].textContent);
+        if (dds[i].querySelector('input') && dds[i].querySelector('input').getAttribute('type') == null) {
+          data.content.push(dds[i].querySelector('input').value);
+        } else if (dds[i].querySelector('input') && dds[i].querySelector('input').getAttribute('type') == 'hidden') {
+          if (dds[i].querySelector('label')) {
+            var labels = dds[i].querySelectorAll('label');if (labels) {
+              for (var k = 0; k < labels.length; k++) {
+                if (labels[k] && labels[k].querySelector('input').getAttribute('checked') != null) {
+                  data.content.push(labels[k].textContent);
+                }
+              }
+            }
+          }if (dds[i].querySelector('select')) {
+            var options = dds[i].querySelectorAll('option');if (options) {
+              for (var j = 0; j < options.length; j++) {
+                if (options[j] && options[j].getAttribute('selected') != null) {
+                  data.content.push(options[j].textContent);
+                }
+              }
+            }
+          }
+        } else {
+          data.content.push(dds[i].textContent);
+        }
       }var comment_table = elem.ownerDocument.querySelector("#comment_table");var tbodys = comment_table && comment_table.querySelector("tbody");if (tbodys == null) {
         var jdmc = "";
       } else {
@@ -83,11 +105,9 @@
             } else {
               //树结构
               var domtree = trees.find('.t_node');domtree.map(function (d, t) {
-                var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';
-                obj.indx = d;obj.array = [];$(t).find('.t_leaf').map(function (q, l) {
+                var obj = {};obj.title = $(t).find('label').eq(0).text();obj.dis = 'block';obj.indx = d;obj.array = [];$(t).find('.t_leaf').map(function (q, l) {
                   var obj2 = {};obj2.text = $(l).find('label').text();obj2.indx = q;obj2.dis = l.parentElement.parentElement.getAttribute('class').indexOf('expanded') > -1 ? 'block' : 'none';obj.array.push(obj2);
-                });
-                data.treeBar.push(obj);
+                });data.treeBar.push(obj);
               });
             }
           }
@@ -113,7 +133,8 @@
         }
       } //按钮数量（暂存、退回）end
       //退回数据start
-      var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
+      var loading = elem.ownerDocument.querySelector(".ui_loading");
+      var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
         var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
@@ -163,9 +184,11 @@
           selects.setAttribute('class', 'selected');var evt = document.createEvent('MouseEvent');evt.initMouseEvent('change', true, true);selects.dispatchEvent(evt);
         } //选人的多选
       } else if (data.eventType == 'flowTitle') {
-        var data = data.customData;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
+        var data = data.customData;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');
+        domtree.eq(data).find('label').eq(0).find('input').click();
       } else if (data.eventType == 'flowTitleChild') {
-        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
+        var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling && elem.ownerDocument.querySelector('.ui_border').querySelector('.ui_content').querySelector('.ui_loading').nextElementSibling.contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');
+        var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
       }var type = data.eventType;if (type == "textareaChange") {
         var text = data.customData;elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
       }if (type == "yijian") {
@@ -178,8 +201,7 @@
         }a && a[0].querySelector("a").click(); // var url = "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";
         // ysp.appMain.reloadPage(url);
       }if (type == "ZC") {
-        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");
-        for (var i = 0; i < lis.length; i++) {
+        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
@@ -203,8 +225,7 @@
       }if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
           var fileType = text.split(".")[1];text = 'caogao.' + fileType;
-        }
-        if (text.indexOf('草稿2：') > -1) {
+        }if (text.indexOf('草稿2：') > -1) {
           var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
         }if (text.indexOf('正文：') > -1) {
           if (text.indexOf('.pdf') > -1) {
@@ -223,8 +244,7 @@
         }if (text.indexOf("Word病文2：") > -1) {
           var fileType = text.split(".")[1];text = "bingwen." + fileType;
         }if (text.indexOf("签报单：") > -1) {
-          var fileType = text.split(".")[1];
-          text = "qianbaodan." + fileType;
+          var fileType = text.split(".")[1];text = "qianbaodan." + fileType;
         }if (text.indexOf("签报正文：") > -1) {
           var fileType = text.split(".")[1];text = "banlidan." + fileType;
         }var cookieValue = cookies;var dbid = data.customData.dbid;if (top.EAPI.isAndroid()) {
