@@ -87,7 +87,7 @@
           }
         }, 1000);
       } else if (data.eventType == 'preview') {
-        var _url = data.dataCustom[0];var type = '.' + data.dataCustom[1].replace(/\./, "");var _name = data.dataCustom[2];var options = { docName: '文档', docType: type, downloadUrl: _url };if (ysp.appMain.isIOS()) {
+        var _url = data.dataCustom[0];var type = '.' + data.dataCustom[1].replace(/\./, "");var _name = data.dataCustom[2];var cookies = elem.ownerDocument.cookie;var options = { docName: '文档', docType: type, downloadUrl: _url };if (ysp.appMain.isIOS()) {
           top.EAPI.postMessageToNative("openDocument", { "url": _url, "type": "baoxiao" }); //top.EAPI.openWindow(_url + '?_ysp_filepreview=1'); // var jsonStr = {
           //   "type" : "document",
           //   "downloadUrl" : _url,
@@ -104,7 +104,7 @@
         } else {
           //console.log(JSON.stringify(options));
           //top.yspUser.openDocument(JSON.stringify(options));
-          huaneng.fujian("baoxiao", _url, _name, '', '');
+          huaneng.fujian("baoxiao", _url, _name, '', cookies);
         }
       }
     },

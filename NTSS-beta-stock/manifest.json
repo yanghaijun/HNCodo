@@ -193,25 +193,21 @@
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31099\\/ReimbursePlatform\\/index\\.jsp"
       ],
-      "demo": [
-        "http://59.110.171.69:31099/ReimbursePlatform/index.jsp"
-      ]
+      "demo": []
     },
     {
       "title": "TodoList",
       "url": "adapter://NTSS-beta-stock/plan/TodoList/index.json",
       "matcher": [
-        "^http:\\/\\/223\\.71\\.99\\.53:85\\/ReimbursePlatform\\/myReimburse\\/index\\.action"
+        "^http:\\/\\/59\\.110\\.171\\.69:31099\\/ReimbursePlatform\\/reimburse\\/singleLoginForSDAction\\.action.*"
       ],
-      "demo": [
-        "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action"
-      ]
+      "demo": []
     }
   ],
   "name": "华能股份",
   "default_url": "http://59.110.171.69:31099/ReimbursePlatform/index.jsp",
   "scope": "NTSS-beta-stock",
   "start_url": "enterplorer://NTSS-beta-stock/local/index.html",
-  "update_time": 1573724261789,
+  "update_time": 1573783754021,
   "runtime_env": "1webview"
 }
