@@ -136,7 +136,7 @@
     getData_control44_mPQHMB: function (elem) {
       ;setTimeout(function () {
         //console.log(elem);
-        debugger;var port = elem.ownerDocument.defaultView.location.port;var data = [];$(elem).children().each(function () {
+        var port = elem.ownerDocument.defaultView.location.port;var data = [];$(elem).children().each(function () {
           data.push('http://59.110.171.69:' + port + $(this).children('td').eq(3).find('a').attr('href').replace('javascript:$ct.open(\"', '').replace('\")', ''));
         }); //console.log(data);
         if (top.EAPI.isAndroid()) {

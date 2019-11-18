@@ -371,7 +371,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port;var port = '31059'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31037'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -379,7 +379,8 @@
         //     appTitle = huaneng.sendTitleToJS();
         //   }
         $.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
-            debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
+            debugger;
+            // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -405,14 +406,15 @@
                 localStorage.xinjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31031') {
                 //福建
-                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31035') {
                 //广东
-                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31059') {
                 //新能源
-                localStorage.xinnengyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.xinnengyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xinnengyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinnengyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31060') {
                 //江苏
                 localStorage.jiangsuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangsuU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -442,15 +444,13 @@
                 localStorage.hainanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hainanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31051') {
                 //湖北
-                localStorage.hubeiP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.hubeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.hubeiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.hubeiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31029') {
                 //雄安
                 localStorage.xionganP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xionganU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31037') {
                 //雅江
-                localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.yajiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.yajiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31040') {
                 //辽宁
                 localStorage.liaoningP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.liaoningU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -465,7 +465,8 @@
                 localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31056') {
                 //江西
-                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31071') {
                 //广西
                 localStorage.guangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -485,7 +486,6 @@
               //             } else if (port == '31039') {
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             } else {
-
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             }
               //           }
@@ -523,7 +523,6 @@
               //             } else if (port == '31017') {
               //               //招标公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
-
               //             } else if (port == '31067') {
               //               //河北公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
@@ -539,6 +538,7 @@
               //             } else if (port == '31020') {
               //               //吉林
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
+
               //             } else if (port == '31039') {
               //               //青海
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
@@ -551,17 +551,16 @@
               //             } else if (port == '31029') {//雄安
               //               //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
               //             } else if (port == '31037') {
-
               //               //雅江
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
               //             } else if (port == '31040') {
               //               //辽宁
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
               //             } else if (port == '31048') {
-
               //               //河南
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
               //             } else if (port == '31063') {
+
               //               //西安热工院
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
               //             } else if (port == '31064') {
@@ -615,7 +614,7 @@
     },
     getTemplate_uiControl0_acry19: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n         \n      </div>\n    )\n  }\n});\n';
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"login\"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:\"login\"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: \"loginButton\",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'userName',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'passWorld',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'ButtonN'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: '123'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"D_login\" },\n      React.createElement(\n        \"div\",\n        { className: \"loginTitle\" },\n        React.createElement(\"div\", null),\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF\"\n        )\n      ),\n      React.createElement(\n        \"div\",\n        { style: { display: data[3].display }, ref: \"myInput\" },\n        React.createElement(\n          \"div\",\n          { className: \"loginText\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginTextp\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"freeow-br\" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                \"p\",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginButton\" },\n          React.createElement(\n            \"button\",\n            { onClick: me.ButtonN },\n            \"\\u767B\\u5F55\"\n          )\n        )\n      )\n    );\n  }\n});";
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      )\n    );\n  }\n});';
     },
     getData_control38_UpuyAZ: function (elem) {
       ;var port = elem.ownerDocument.defaultView.location.port;;if (top.EAPI.isIOS()) {
