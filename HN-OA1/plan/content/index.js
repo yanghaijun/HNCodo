@@ -96,40 +96,20 @@
       } else {
         liuchengTable && liuchengTable.map(function (d, t) {
           if (d > 0) {
-            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3]; //       var date = new Date();
-            //       var day = date.getDay();
-            //       if (day == '1') {
-            //         day = '一';
-            //       } else if (day == '2') {
-            //         day = '二';
-            //       } else if (day == '3') {
-            //         day = '三';
-            //       } else if (day == '4') {
-
-            //         day = '四';
-            //       } else if (day == '5') {
-            //         day = '五';
-            //       } else if (day == '6') {
-            //         day = '六';
-            //       } else if (day == '0') {
-            //         day = '天';
-            //       }
-            //       obj.day = '星期' + day;
-            data.liucheng.push(obj);
+            var obj = {};obj.text = $(t).find("td").eq(0).text().replace(/\s/g, "");var str = $(t).find("td").eq(1).text();var arr = str.split(' ');obj.content = arr[1];obj.day = arr[2] + ' ' + arr[3];data.liucheng.push(obj);
           }
         });var obj2 = {};obj2.num = liuchengTable.length - 2;data.liuchengNUM.push(obj2);
       } //流程完
       var commitLZS = $(elem).find('.path') && $(elem).find('.path').find('ul.path_btn') && $(elem).find('.path').find('ul.path_btn').find('span');commitLZS && commitLZS.map(function (d, t) {
-        var obj = {};
-        obj.textC = t.textContent;data.commitLZ.push(obj);
+        var obj = {};obj.textC = t.textContent;data.commitLZ.push(obj);
       });if ($(elem).find('.ui_border').find('.ui_content').find('.ui_loading').length != 0) {
         var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var divs = $(iframes).find('#selectflowuser').children();var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');divs.map(function (d, t) {
           if (d > 1 && t.style.display != 'none') {
-            if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'P') {
+            if ($(t).find('legend').next()[0] && ($(t).find('legend').next()[0].tagName == 'P' || $(t).find('legend').next()[0].tagName == 'DIV')) {
               $(t).find('p').map(function (q, l) {
-                var obj = {};obj.text = $(l).text().replace(/\√/g, "");
-                obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false'; // obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
-                obj.type = 'P';data.selectApar.push(obj);
+                var obj = {};obj.text = $(l).text().replace(/\√/g, "");obj.trueFalse = $(l).text().indexOf('√') > -1 ? 'true' : 'false'; // obj.trueFalse = $(l)[0].getAttribute("selected") == 'noSelected' || $(l)[0].getAttribute("selected") == null ? 'false' : 'true';
+                obj.type = 'P';
+                data.selectApar.push(obj);
               });
             } else {
               if ($(t).find('legend').next()[0] && $(t).find('legend').next()[0].tagName == 'SELECT') {
@@ -149,8 +129,7 @@
           }
         });
       } //选择办理人，需要跨iframe获取数据
-      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");
-      if (lis.length > 0) {
+      var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");if (lis.length > 0) {
         for (var i = 0; i < lis.length; i++) {
           data.yijian.push(lis[i].querySelector("a").textContent);
         }
@@ -171,8 +150,7 @@
       } //按钮数量（暂存、退回）end
       //退回数据start
       var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
-        var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");
-        for (var i = 0; i < trs.length; i++) {
+        var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
           var c = [];var tds = trs[i].querySelectorAll("td");for (var j = 0; j < tds.length; j++) {
             c.push(tds[j].textContent);
           }data.tuihuiTitle.push(c);
@@ -198,7 +176,7 @@
         var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector("#selectflowuser");if (datagrid != null) {
           var selectsDiv = datagrid.querySelectorAll("div") && datagrid.querySelectorAll("div")[2];var options = selectsDiv.querySelector("select") && selectsDiv.querySelector("select").querySelectorAll("option");if (options != null) {
             var aa = [];for (var i = 0; i < options.length; i++) {
-              var selected = options[i].getAttribute("selected");if ("selected" == selected) {
+              var selected = options[i].getAttribute("selected");var selectedClass = options[i].getAttribute('class');if ("selected" == selected || "selected" == selectedClass) {
                 aa.push(i);
               }
             }
@@ -229,17 +207,16 @@
           // }
         } //选人的多选
       } else if (data.eventType == 'flowTitle') {
-        var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
+        var data = data.customData;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;
+        var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');domtree.eq(data).find('label').eq(0).find('input').click();
       } else if (data.eventType == 'flowTitleChild') {
         var data1 = data.customData.data1;var data2 = data.customData.data2;var iframes = $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0] && $(elem).find('.ui_border').find('.ui_content').find('.ui_loading').next()[0].contentDocument.documentElement;var trees = $(iframes).find('#selectflowuser') && $(iframes).find('#selectflowuser').find('.t_root');var domtree = trees.find('.t_node');$(domtree).eq(data2).find('.t_leaf').eq(data1).find('label').find('input').click();
       }var type = data.eventType;if (type == "textareaChange") {
         var text = data.customData;elem.ownerDocument.querySelector('textarea[name="fldYijian"]').value = text;
       }if (type == "yijian") {
         var index = parseInt(data.customData);var list = elem.ownerDocument.querySelector("#common_view_list");var lis = list && list.querySelectorAll("li");lis && lis[index].querySelector("a").click();
-      }
-      if (type == "ZC") {
-        var a = [];
-        var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
+      }if (type == "ZC") {
+        var a = [];var release = elem.ownerDocument.querySelector(".Release");var lis = release && release.querySelectorAll("li");for (var i = 0; i < lis.length; i++) {
           if ("暂存" == lis[i].querySelector("span").textContent) {
             a.push(lis[i]);
           }
@@ -266,23 +243,22 @@
       }if (type == "THTitle") {
         var index = data.dataCustom;var loading = elem.ownerDocument.querySelector(".ui_loading");var iframe = loading && loading.nextElementSibling;var datagrid = iframe && iframe.contentDocument.querySelector(".datagrid-view2");if (datagrid != null) {
           var trs = datagrid.querySelector('table[class="datagrid-btable"]').querySelector("tbody").querySelectorAll("tr");trs && trs[index].click();
-        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
-      }
-      if (data.eventType == 'fujian') {
+        }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];
+        var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
+      }if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
           var fileType = text.split(".")[1];text = 'caogao.' + fileType;
         }if (text.indexOf('草稿2：') > -1) {
-          var fileType = text.split(".")[1];text = 'caogao2.' + fileType;
+          var fileType = text.split(".")[1];
+          text = 'caogao2.' + fileType;
         }if (text.indexOf('正文：') > -1) {
           if (text.indexOf('.pdf') > -1) {
             text = text.substring(3, text.length);
           } else {
-            var fileType = text.split(".")[1];var a = fileType.length;
-            text = 'zhengwen.' + fileType;
+            var fileType = text.split(".")[1];var a = fileType.length;text = 'zhengwen.' + fileType;
           }
         }if (text.indexOf("办理单：") > -1) {
-          var fileType = text.split(".")[1];
-          text = "banlidan." + fileType;
+          var fileType = text.split(".")[1];text = "banlidan." + fileType;
         }if (text.indexOf("办理单2：") > -1) {
           var fileType = text.split(".")[1];text = "banlidan2." + fileType;
         }if (text.indexOf("CEB病文：") > -1) {
