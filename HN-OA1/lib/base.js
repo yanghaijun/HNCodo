@@ -27,12 +27,20 @@
         if (aWin.location.href.indexOf("EditDocument") != "-1") {
           var port = aWin.location.port;
           var _web = aWin.location.href.split('/')[3];
-          var _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value;
+          var _url;
+          if(port == '31003'){ //四川公司
+            _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value;
+          } else if(port == '31046' || port == '31017') { //山西、招标公司
+            _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value + "&tm=" + encodeURIComponent(doc.getElementsByName("fldTM")[0].value);
+          } else {
+            _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value + "&tm=" + encodeURIComponent(doc.getElementsByName("fldTM")[0].value) + "&caseid=" + doc.getElementsByName("fldCaseDocUNID")[0].value;
+          }
           $.ajax({
             url: _url,
             type: 'get',
             data: '',
             success: function(data) {
+              console.log(data)
               var _data = $(data).find("textarea")[0].innerHTML.split(/[\n]/);
               var _dataLength = $(data).find("textarea")[0].innerHTML.split(/[\n]/).length;
               if (_dataLength > 0) {
