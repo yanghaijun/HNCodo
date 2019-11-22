@@ -76,7 +76,7 @@
       // if(topWin.EAPI.isIOS()){//调用IOS的方法，让IOS调用getTitle()方法，返回九宫格中的标题
       //   topWin.EAPI.postMessageToNative('sendTitleToJS','');
       // }
-      if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login') {
+      if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login' || aWin.location.href == 'http://59.110.171.69:' +port+'/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm') {
         //获取用户名和密码，自动登录
         if (topWin.EAPI.isAndroid()) {
           var userName;
