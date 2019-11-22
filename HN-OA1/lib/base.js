@@ -28,9 +28,9 @@
           var port = aWin.location.port;
           var _web = aWin.location.href.split('/')[3];
           var _url;
-          if(port == '31003'){ //四川公司
+          if(port == '31003' || port == '31020'){ //四川公司、吉林
             _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value;
-          } else if(port == '31046' || port == '31017') { //山西、招标公司
+          } else if(port == '31046' || port == '31017' || port == '31008' || port == '31069') { //山西、招标公司、信息公司、贵州
             _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value + "&tm=" + encodeURIComponent(doc.getElementsByName("fldTM")[0].value);
           } else {
             _url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomDownFile?OpenForm&QxxxDbName=" + doc.getElementsByName("fldQxxxDbName")[0].value + "&QXXXID=" + doc.getElementsByName("fldQXXXID")[0].value + "&tm=" + encodeURIComponent(doc.getElementsByName("fldTM")[0].value) + "&caseid=" + doc.getElementsByName("fldCaseDocUNID")[0].value;
@@ -302,6 +302,22 @@
             if (localStorage && localStorage.shandongP && localStorage.shandongU) {
               password = localStorage.shandongP;
               userName = localStorage.shandongU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31008') {
+            if (localStorage && localStorage.xinxigongsiP && localStorage.xinxigongsiU) {
+              password = localStorage.xinxigongsiP;
+              userName = localStorage.xinxigongsiU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31058') {
+            if (localStorage && localStorage.zhiyeP && localStorage.zhiyeU) {
+              password = localStorage.zhiyeP;
+              userName = localStorage.zhiyeU;
             } else {
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
