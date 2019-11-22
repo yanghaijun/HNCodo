@@ -26,17 +26,38 @@
         //     $(elem).find('tr').eq(5).find('input').eq(0).click();
         //   }, 1000);
         //这是用接口登录的方法
-        var el = $(elem) && $(elem).find('table');var trs = $(el).find('tr');var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();var password = $(trs) && $(trs).eq(3).find('input').eq(0).val();debugger;var ipConfig;var ipPort;if (top.EAPI.isAndroid()) {
-          ipConfig = huaneng.getProt();ipPort = ipConfig.split('#')[1];alert(ipPort);$.ajax({ url: 'http://59.110.171.69:' + ipPort + '/names.nsf?Login', type: 'post', data: { username: name, password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
-            }, // xhrFields: {
-            //   withCredentials: true
-            // },
-            success: function (data) {
-              var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");elem.ownerDocument.location.href = 'http://59.110.171.69:' + ipPort + ff;
-            }, error: function (e) {
-              alert('登录失败,请重新登录！');
-            } });
-        } //曹妃甸邮件登录
+        var el = $(elem) && $(elem).find('table');var trs = $(el).find('tr');var name = $(trs) && $(trs).eq(2).find('input').eq(0).val();var password = $(trs) && $(trs).eq(3).find('input').eq(0).val(); //   debugger;
+        //   var ipConfig;
+        //   var ipPort;
+        //   if (top.EAPI.isAndroid()) {
+        //     ipConfig = huaneng.getProt();
+        //     ipPort = ipConfig.split('#')[1];
+        //     alert(ipPort);
+        //     $.ajax({
+        //       url: 'http://59.110.171.69:' + ipPort + '/names.nsf?Login',
+        //       type: 'post',
+        //       data: {
+        //         username: name,
+        //         password: password,
+        //         redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+        //       },
+        //       // xhrFields: {
+        //       //   withCredentials: true
+        //       // },
+        //       success: function (data) {
+        //         var bb = data.split('id="main_center_frame"')[1];
+        //         var cc = bb.split('width="100%"')[0];
+        //         var dd = cc.split("src=")[1];
+        //         var ee = dd.replace(" ", "");
+        //         var ff = ee.replace(/\"/g, "");
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:' + ipPort + ff;
+        //       },
+        //       error: function (e) {
+        //         alert('登录失败,请重新登录！');
+
+        //       }
+        //     });
+        //   } //曹妃甸邮件登录
         // $.ajax({
         //   url: 'http://59.110.171.69:31014/names.nsf?Login',
         //   type: 'post',
@@ -58,26 +79,14 @@
         //   },
         //   error: function (e) {
         //     alert('登录失败,请重新登录！');
-
         //   }
         // }); //四川邮件登录
-        $.ajax({ url: 'http://59.110.171.69:31016/names.nsf?Login', type: 'post', data: {
-            Username: name, Password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true }, success: function (data) {
-            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");if (top.EAPI.isIOS()) {
-              ysp.appMain.openWindow('http://59.110.171.69:31016' + ff);
-            } else {
-              elem.ownerDocument.location.href = 'http://59.110.171.69:31016' + ff;
-            }
-          }, error: function (e) {
-            alert('登录失败,请重新登录！');
-          }
-        }); //信息公司邮件登录
         //   $.ajax({
-        //     url: 'http://59.110.171.69:31009/names.nsf?Login',
+        //     url: 'http://59.110.171.69:31016/names.nsf?Login',
         //     type: 'post',
         //     data: {
-        //       username: name,
-        //       password: password,
+        //       Username: name,
+        //       Password: password,
         //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
         //     },
         //     xhrFields: {
@@ -90,15 +99,25 @@
         //       var ee = dd.replace(" ", "");
         //       var ff = ee.replace(/\"/g, "");
         //       if (top.EAPI.isIOS()) {
-        //         ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
+        //         ysp.appMain.openWindow('http://59.110.171.69:31016' + ff);
         //       } else {
-        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31016' + ff;
         //       }
         //     },
         //     error: function (e) {
         //       alert('登录失败,请重新登录！');
         //     }
-        //   }); //新疆邮件
+        //   }); //信息公司邮件登录
+        $.ajax({ url: 'http://59.110.171.69:31009/names.nsf?Login', type: 'post', data: { username: name, password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+          }, xhrFields: { withCredentials: true }, success: function (data) {
+            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");if (top.EAPI.isIOS()) {
+              ysp.appMain.openWindow('http://59.110.171.69:31009' + ff);
+            } else {
+              elem.ownerDocument.location.href = 'http://59.110.171.69:31009' + ff;
+            }
+          }, error: function (e) {
+            alert('登录失败,请重新登录！');
+          } }); //新疆邮件
         //   $.ajax({
         //     url: 'http://59.110.171.69:31026/names.nsf?Login',
         //     type: 'post',
@@ -131,7 +150,6 @@
         //     url: 'http://59.110.171.69:31023/names.nsf?Login',
         //     type: 'post',
         //     data: {
-
         //       Username: name,
         //       Password: password,
         //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
@@ -150,6 +168,7 @@
         //       } else {
         //         elem.ownerDocument.location.href = 'http://59.110.171.69:31023' + ff;
         //       }
+
         //     },
         //     error: function (e) {
         //       alert('登录失败,请重新登录！');
@@ -172,6 +191,7 @@
         //       var cc = bb.split('width="100%"')[0];
         //       var dd = cc.split("src=")[1];
         //       var ee = dd.replace(" ", "");
+
         //       var ff = ee.replace(/\"/g, "");
         //       if (top.EAPI.isIOS()) {
         //         ysp.appMain.openWindow('http://59.110.171.69:31032' + ff);
@@ -186,8 +206,8 @@
         //海南邮件  用户名中文转码有问题
         //   $.ajax({
         //     url: 'http://59.110.171.69:31034/names.nsf?Login',
-
         //     type: 'post',
+
         //     data: {
         //       username: name,
         //       password: password,
@@ -201,7 +221,6 @@
         //       var bb = data.split('id="main_center_frame"')[1];
         //       var cc = bb.split('width="100%"')[0];
         //       var dd = cc.split("src=")[1];
-
         //       var ee = dd.replace(" ", "");
         //       var ff = ee.replace(/\"/g, "");
         //       if (top.EAPI.isIOS()) {
@@ -266,7 +285,6 @@
         //         elem.ownerDocument.location.href = 'http://59.110.171.69:31043' + ff;
         //       }
         //     },
-
         //     error: function (e) {
         //       alert('登录失败,请重新登录！');
         //     }
@@ -314,6 +332,7 @@
         //     success: function (data) {
         //       var bb = data.split('id="main_center_frame"')[1];
         //       var cc = bb.split('width="100%"')[0];
+
         //       var dd = cc.split("src=")[1];
         //       var ee = dd.replace(" ", "");
         //       var ff = ee.replace(/\"/g, "");
@@ -365,6 +384,7 @@
         //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
         //     },
         //     xhrFields: {
+
         //       withCredentials: true
         //     },
         //     success: function (data) {
@@ -412,23 +432,40 @@
         //     }
         //   });
         //招标公司邮件
-        $.ajax({ url: 'http://59.110.171.69:31017/names.nsf?Login',
-          type: 'post',
-          data: { Username: name, Password: password, redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm' }, xhrFields: { withCredentials: true }, success: function (data) {
-            var bb = data.split('id="main_center_frame"')[1];var cc = bb.split('width="100%"')[0];var dd = cc.split("src=")[1];
-            var ee = dd.replace(" ", "");var ff = ee.replace(/\"/g, "");if (top.EAPI.isIOS()) {
-              ysp.appMain.openWindow('http://59.110.171.69:31017' + ff);
-            } else {
-              elem.ownerDocument.location.href = 'http://59.110.171.69:31017' + ff;
-            }
-          }, error: function (e) {
-            alert('登录失败,请重新登录！');
-          } });
+        //   $.ajax({
+        //     url: 'http://59.110.171.69:31017/names.nsf?Login',
+
+        //     type: 'post',
+        //     data: {
+        //       Username: name,
+        //       Password: password,
+        //       redirectto: '/afmail.nsf/frmWebMailExt_HNMail?OpenForm'
+        //     },
+        //     xhrFields: {
+        //       withCredentials: true
+        //     },
+        //     success: function (data) {
+        //       var bb = data.split('id="main_center_frame"')[1];
+        //       var cc = bb.split('width="100%"')[0];
+        //       var dd = cc.split("src=")[1];
+        //       var ee = dd.replace(" ", "");
+        //       var ff = ee.replace(/\"/g, "");
+        //       if (top.EAPI.isIOS()) {
+        //         ysp.appMain.openWindow('http://59.110.171.69:31017' + ff);
+        //       } else {
+        //         elem.ownerDocument.location.href = 'http://59.110.171.69:31017' + ff;
+
+        //       }
+        //     },
+        //     error: function (e) {
+        //       alert('登录失败,请重新登录！');
+        //     }
+        //   });
       }
     },
     getTemplate_uiControl0_8J1tbW: function () {
       var selfTemplate = '\nmodule.exports = React.createClass({\n  handle: function(data,eventType) {  \n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({data,eventType});\n    }\n  },\n  render: function() {\n    var data =this.props.customData;\n    var _this = this;\n    if(data&&data[0]&&data[1]){\n     return (\n      <div className=\'d_denglu\'>\n        <div className=\'d_denglu2\'>\n          <div className=\'logo\'></div>\n          <div>\u90AE\u4EF6\u7CFB\u7EDF</div>\n          <div className=\'userPassword\'>\n            <span className=\'user\'></span>\n            <AInput value={data[0].value} onChange={(e)=>{_this.handle(e.target.value,\'nameValue\')}} type=\'text\'/>\n          </div>\n          <div className=\'userPassword\'>\n            <span className=\'password\'></span>\n            <AInput value={data[1].value} onChange={(e)=>{_this.handle(e.target.value,\'password\')}} type=\'password\'/>\n          </div>\n          <div className=\'login_alert\'>{data[2].value}</div>\n         \n          <div className=\'denglu\' onClick={()=>{_this.handle(\'\',\'button\')}}>\u767B\u5F55</div>\n        </div>\n      </div>\n    )\n    }else {\n      return <div></div>\n    }\n\n  }\n});\n';
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n\n  handle: function handle(data, eventType) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({ data: data, eventType: eventType });\n    }\n  },\n  render: function render() {\n    var data = this.props.customData;\n    var _this = this;\n    if (data && data[0] && data[1]) {\n      return React.createElement(\n        'div',\n        { className: 'd_denglu' },\n        React.createElement(\n          'div',\n          { className: 'd_denglu2' },\n          React.createElement('div', { className: 'logo' }),\n          React.createElement(\n            'div',\n            null,\n            '\\u90AE\\u4EF6\\u7CFB\\u7EDF'\n          ),\n          React.createElement(\n            'div',\n            { className: 'userPassword' },\n            React.createElement('span', { className: 'user' }),\n            React.createElement(AInput, { value: data[0].value, onChange: function onChange(e) {\n                _this.handle(e.target.value, 'nameValue');\n              }, type: 'text' })\n          ),\n          React.createElement(\n            'div',\n            { className: 'userPassword' },\n            React.createElement('span', { className: 'password' }),\n            React.createElement(AInput, { value: data[1].value, onChange: function onChange(e) {\n                _this.handle(e.target.value, 'password');\n              }, type: 'password' })\n          ),\n          React.createElement(\n            'div',\n            { className: 'login_alert' },\n            data[2].value\n          ),\n          React.createElement(\n            'div',\n            { className: 'denglu', onClick: function onClick() {\n                _this.handle('', 'button');\n              } },\n            '\\u767B\\u5F55'\n          )\n        )\n      );\n    } else {\n      return React.createElement('div', null);\n    }\n  }\n});";
+      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  handle: function handle(data, eventType) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({ data: data, eventType: eventType });\n    }\n  },\n  render: function render() {\n    var data = this.props.customData;\n    var _this = this;\n    if (data && data[0] && data[1]) {\n      return React.createElement(\n        \'div\',\n        { className: \'d_denglu\' },\n        React.createElement(\n          \'div\',\n          { className: \'d_denglu2\' },\n          React.createElement(\'div\', { className: \'logo\' }),\n          React.createElement(\n            \'div\',\n            null,\n            \'\\u90AE\\u4EF6\\u7CFB\\u7EDF\'\n          ),\n          React.createElement(\n            \'div\',\n            { className: \'userPassword\' },\n            React.createElement(\'span\', { className: \'user\' }),\n            React.createElement(AInput, { value: data[0].value, onChange: function onChange(e) {\n                _this.handle(e.target.value, \'nameValue\');\n              }, type: \'text\' })\n          ),\n          React.createElement(\n            \'div\',\n            { className: \'userPassword\' },\n            React.createElement(\'span\', { className: \'password\' }),\n            React.createElement(AInput, { value: data[1].value, onChange: function onChange(e) {\n                _this.handle(e.target.value, \'password\');\n              }, type: \'password\' })\n          ),\n          React.createElement(\n            \'div\',\n            { className: \'login_alert\' },\n            data[2].value\n          ),\n          React.createElement(\n            \'div\',\n            { className: \'denglu\', onClick: function onClick() {\n                _this.handle(\'\', \'button\');\n              } },\n            \'\\u767B\\u5F55\'\n          )\n        )\n      );\n    } else {\n      return React.createElement(\'div\', null);\n    }\n  }\n});';
     }
   }, "login");
 })(window, ysp);
