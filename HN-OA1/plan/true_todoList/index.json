@@ -17,7 +17,8 @@
     "contentNotice": "../contentNotice/index.json",
     "loginOA": "../loginOA/index.json",
     "contentNew": "../contentNew/index.json",
-    "contentYongYin": "../contentYongYin/index.json"
+    "contentYongYin": "../contentYongYin/index.json",
+    "haveBeen_todoList": "../haveBeen_todoList/index.json"
   },
   "chineseName": "真待办列表",
   "description": "",
@@ -124,6 +125,41 @@
       "monitored": false,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control55_f2IBJ3": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"divData\"]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]",
+              "descendant::DIV[@id=\"divData\"]//TABLE"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.datagrid-view2 DIV.datagrid-body TABLE.datagrid-btable"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control55_f2IBJ3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -131,7 +167,8 @@
       "controls": [
         "control39_W4gLzy",
         "control40_ZDve4w",
-        "control44_mPQHMB"
+        "control44_mPQHMB",
+        "control55_f2IBJ3"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -222,6 +259,20 @@
           "toContextId": "context13_H6XhBB"
         }
       ]
+    },
+    "flow34_KxS4WZ": {
+      "fromContextId": "context13_H6XhBB",
+      "fromAction": "doAction",
+      "fromControlId": "control55_f2IBJ3",
+      "toContexts": [
+        {
+          "toContextId": "context13_H6XhBB"
+        },
+        {
+          "toContextId": "context18_9aZPJA",
+          "toModelId": "haveBeen_todoList"
+        }
+      ]
     }
   },
   "pages": {
@@ -239,6 +290,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl43_SBIoQH",
                 "onGetTemplate": "getTemplate_uiControl43_SBIoQH"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl52_cRxtug",
+          "controlId": "control55_f2IBJ3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl52_cRxtug",
+                "onGetTemplate": "getTemplate_uiControl52_cRxtug"
               }
             }
           }
