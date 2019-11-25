@@ -529,7 +529,7 @@ div[data-componentsid="uiControl0_lFVvUR"] {
   list-style: none;
   background: #fff;
   padding: 7px 40px;
-  max-height: 39px;
+  min-height: 39px;
   overflow: auto;
   border-bottom: 2px solid #eeeeee;
 }

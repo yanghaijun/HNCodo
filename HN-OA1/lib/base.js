@@ -40,7 +40,7 @@
             type: 'get',
             data: '',
             success: function(data) {
-              console.log(data)
+              //console.log(data)
               var _data = $(data).find("textarea")[0].innerHTML.split(/[\n]/);
               var _dataLength = $(data).find("textarea")[0].innerHTML.split(/[\n]/).length;
               if (_dataLength > 0) {
@@ -318,6 +318,14 @@
             if (localStorage && localStorage.zhiyeP && localStorage.zhiyeU) {
               password = localStorage.zhiyeP;
               userName = localStorage.zhiyeU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
+          } else if (port == '31104') {
+            if (localStorage && localStorage.nengjiaoP && localStorage.nengjiaoU) {
+              password = localStorage.nengjiaoP;
+              userName = localStorage.nengjiaoU;
             } else {
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();

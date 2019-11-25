@@ -191,6 +191,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31104') {
+            if (localStorage.nengjiaoP == undefined || localStorage.nengjiaoU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -377,6 +383,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31104') {
+            if (localStorage.nengjiaoP == undefined || localStorage.nengjiaoU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -395,7 +407,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31058'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31044'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -503,6 +515,9 @@
               } else if (port == '31058') {
                 //置业
                 localStorage.zhiyeP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhiyeU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31104') {
+                //能交公司
+                localStorage.nengjiaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.nengjiaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }if (port == '31000') {
                 elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else if (port == '31039') {
@@ -530,6 +545,7 @@
               //               //华北分公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31045/afmail.nsf';
               //             } else if (port == '31021') {
+
               //               //宁夏
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31022/afmail.nsf';
               //             } else if (port == '31025') {
@@ -554,6 +570,7 @@
               //               //招标公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
               //             } else if (port == '31067') {
+
               //               //河北公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
               //             } else if (port == '31042') {
@@ -565,10 +582,10 @@
               //             } else if (port == '31069') {
               //               //贵州
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31070/afmail.nsf';
+
               //             } else if (port == '31020') {
               //               //吉林
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
-
               //             } else if (port == '31039') {
               //               //青海
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
@@ -590,7 +607,6 @@
               //               //河南
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
               //             } else if (port == '31063') {
-
               //               //西安热工院
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
               //             } else if (port == '31064') {
@@ -639,6 +655,7 @@
         //   } else if (top.EAPI.isIOS()) {
         //     top.EAPI.postMessageToNative("OAPasswordIsError");
         //   }
+
         // }
       }
     },
@@ -829,6 +846,12 @@
           } else {
             password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
           }
+        } else if (port == '31104') {
+          if (localStorage && localStorage.nengjiaoP && localStorage.nengjiaoU) {
+            password = localStorage.nengjiaoP;userName = localStorage.nengjiaoU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
         }$.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: userName, Password: password // Username: 80111719,
             // Password: "Abcd  4321"
           }, success: function (data) {
@@ -963,7 +986,7 @@
     },
     getTemplate_uiControl37_8R9wFI: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n      </div>\n    )\n  }\n});';
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\"div\", null);\n  }\n});";
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
     }
   }, "loginOA");
 })(window, ysp);
