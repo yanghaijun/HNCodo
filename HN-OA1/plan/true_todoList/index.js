@@ -156,7 +156,7 @@
     getData_control55_f2IBJ3: function (elem) {},
     doAction_uiControl52_cRxtug: function (data, elem) {
       var type = data.eventType;if (type == 'click') {
-        elem.ownerDocument.location.href = 'http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel';
+        var port = elem.ownerDocument.defaultView.location.port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel';
       }
     },
     getTemplate_uiControl52_cRxtug: function () {

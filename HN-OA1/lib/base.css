@@ -900,6 +900,9 @@ div[data-ysp-modelid="emailIndex"] {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.havebeen .havebeen-text-color {
+  color: red;
+}
 .havebeen .havebeen-other {
   display: flex;
   justify-content: space-between;

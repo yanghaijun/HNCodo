@@ -197,6 +197,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31007') {
+            if (localStorage.heilongjiangP == undefined || localStorage.heilongjiangU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -389,6 +395,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31007') {
+            if (localStorage.heilongjiangP == undefined || localStorage.heilongjiangU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -516,6 +528,9 @@
               } else if (port == '31104') {
                 //能交公司
                 localStorage.nengjiaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.nengjiaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31007') {
+                //黑龙江
+                localStorage.heilongjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.heilongjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }if (port == '31000') {
                 elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else if (port == '31039') {
@@ -845,6 +860,12 @@
         } else if (port == '31104') {
           if (localStorage && localStorage.nengjiaoP && localStorage.nengjiaoU) {
             password = localStorage.nengjiaoP;userName = localStorage.nengjiaoU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31007') {
+          if (localStorage && localStorage.heilongjiangP && localStorage.heilongjiangU) {
+            password = localStorage.heilongjiangP;userName = localStorage.heilongjiangU;
           } else {
             password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
           }
