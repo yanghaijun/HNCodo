@@ -50,13 +50,6 @@
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:.*\\/moa2\\/script\\/cn\\.ml\\.oa\\.js"
-      ],
-      "target_url": "override/oa.js",
-      "default_url": "http://59.110.171.69:31003/moa2/script/cn.ml.oa.js"
-    },
-    {
-      "origin_url": [
         "http:\\/\\/59\\.110\\.171\\.69:.*\\/moa2\\/lhgdialog\\/lhgdialog\\/lhgdialog\\.min\\.js.*"
       ],
       "target_url": "override/lhgdialog.js",
@@ -152,13 +145,6 @@
       ],
       "target_url": "override/jquery152.js",
       "default_url": "http://59.110.171.69:31003/domcfg.nsf/js/jquery-1.5.2.min.js"
-    },
-    {
-      "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebConfigSet\\.nsf\\/util\\/open-view\\/tooltip-1\\.1\\.4\\.js"
-      ],
-      "target_url": "override/tooltip-1.1.4.js",
-      "default_url": "http://59.110.171.69:31000/WebOfficehncfd/MoaWebConfigSet.nsf/util/open-view/tooltip-1.1.4.js"
     },
     {
       "origin_url": [
@@ -378,6 +364,6 @@
   "default_url": "http://59.110.171.69:31031/",
   "scope": "HN-OA1",
   "start_url": "enterplorer://HN-OA1/local/index.html",
-  "update_time": 1574736370503,
+  "update_time": 1574741703232,
   "runtime_env": "1webview"
 }

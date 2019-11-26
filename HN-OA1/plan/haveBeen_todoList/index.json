@@ -5,11 +5,16 @@
   "jsFile": "index.js",
   "chineseName": "已办待收列表",
   "description": "已办待收列表页面",
+  "firstPaintEnable": false,
   "controls": {
-    "control56_Vx3fHk": {
+    "control57_q3EPeZ": {
       "location": {
         "data": {
           "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -17,31 +22,38 @@
             "prob": 1,
             "disabled": true,
             "value": {
-              "elemId": "view:_id1:_id3:dataTablePanel",
-              "tagName": "DIV",
+              "elemId": "view:_id1",
+              "tagName": "FORM",
               "prefix": "",
-              "suffix": "/DIV[1]/DIV[1]/DIV[2]/DIV[2]",
-              "ratio": 0.639
+              "suffix": "/DIV[2]/DIV[1]",
+              "ratio": 0.686
             }
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder DIV.datagrid-view DIV.datagrid-view2"
+            "value": "FORM.xspForm.panel-noscroll DIV.panel.datagrid.panel-htop.easyui-fluid DIV.datagrid-wrap.panel-body.panel-body-noheader"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[2]"
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 913,
+              "height": 518
+            }
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control56_Vx3fHk"
+        "onGetData": "getData_control57_q3EPeZ"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "ignoreVisibility": true,
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
@@ -50,14 +62,26 @@
   "contexts": {
     "context18_9aZPJA": {
       "controls": [
-        "control56_Vx3fHk"
+        "control57_q3EPeZ"
       ],
       "anchors": [],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebConfigSet\\.nsf\\/.*d=MoaWebOffice\\.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel"
+      ]
     }
   },
   "flows": {
     "flow37_NxoFDw": {
+      "toContexts": [
+        {
+          "toContextId": "context18_9aZPJA"
+        }
+      ]
+    },
+    "flow40_skLJnM": {
+      "fromContextId": "context18_9aZPJA",
+      "fromAction": "doAction",
+      "fromControlId": "control57_q3EPeZ",
       "toContexts": [
         {
           "toContextId": "context18_9aZPJA"
@@ -70,16 +94,16 @@
       "contextId": "context18_9aZPJA",
       "layout": [
         {
-          "id": "uiControl53_22ElXs",
-          "controlId": "control56_Vx3fHk",
+          "id": "uiControl54_z42RSP",
+          "controlId": "control57_q3EPeZ",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl53_22ElXs",
-                "onGetTemplate": "getTemplate_uiControl53_22ElXs"
+                "onDoAction": "doAction_uiControl54_z42RSP",
+                "onGetTemplate": "getTemplate_uiControl54_z42RSP"
               }
             }
           }
@@ -98,7 +122,8 @@
     "page/urls": {
       "contexts": {
         "context18_9aZPJA": [
-          "59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel"
+          "59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel",
+          "59.110.171.69:31044/WebOffice/MoaWebConfigSet.nsf/openView2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel"
         ]
       }
     },
@@ -121,6 +146,14 @@
             "view:_id:fldDbView",
             "view:_id:fldJSON",
             "view:_id:fldViewDb",
+            "view:_id__VUID"
+          ],
+          [
+            "OperationBar",
+            "datagrid-row-r--",
+            "dg",
+            "errors",
+            "view:_id",
             "view:_id__VUID"
           ]
         ]
@@ -217,6 +250,198 @@
             "ui_title_buttons",
             "xspForm",
             "xspTextComputedField"
+          ],
+          [
+            "Offset-",
+            "ToggleRowImg",
+            "Toolbar_Colview",
+            "Toolbar_Expview",
+            "datagrid",
+            "datagrid-body",
+            "datagrid-body-inner",
+            "datagrid-btable",
+            "datagrid-cell",
+            "datagrid-cell-c-dollar-",
+            "datagrid-cell-c-fldKeyWord",
+            "datagrid-f",
+            "datagrid-footer",
+            "datagrid-footer-inner",
+            "datagrid-header",
+            "datagrid-header-inner",
+            "datagrid-header-row",
+            "datagrid-htable",
+            "datagrid-pager",
+            "datagrid-row",
+            "datagrid-sort-icon",
+            "datagrid-td-merged",
+            "datagrid-toolbar",
+            "datagrid-view",
+            "datagrid-wrap",
+            "dg-table",
+            "dg__button-list",
+            "dg__button-list__clear-search",
+            "dg__button-list__do-search",
+            "dg__button-list__nd-search",
+            "dg__cat-num",
+            "easyui-fluid",
+            "easyui-linkbutton",
+            "hidden",
+            "icon-back",
+            "l-btn",
+            "l-btn-disabled",
+            "l-btn-empty",
+            "l-btn-icon",
+            "l-btn-icon-left",
+            "l-btn-left",
+            "l-btn-plain",
+            "l-btn-plain-disabled",
+            "l-btn-plain-selected",
+            "l-btn-selected",
+            "l-btn-small",
+            "l-btn-text",
+            "message-list--error",
+            "pagination",
+            "pagination-btn-separator",
+            "pagination-first",
+            "pagination-last",
+            "pagination-link",
+            "pagination-links",
+            "pagination-load",
+            "pagination-next",
+            "pagination-num",
+            "pagination-prev",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "panel-htop",
+            "panel-noscroll",
+            "tooltip-f",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons",
+            "xspForm"
+          ],
+          [
+            "Offset-",
+            "ToggleRowImg",
+            "Toolbar_Colview",
+            "Toolbar_Expview",
+            "datagrid",
+            "datagrid-body",
+            "datagrid-body-inner",
+            "datagrid-btable",
+            "datagrid-cell",
+            "datagrid-cell-c-dollar-",
+            "datagrid-cell-c-fldKeyWord",
+            "datagrid-f",
+            "datagrid-footer",
+            "datagrid-footer-inner",
+            "datagrid-header",
+            "datagrid-header-inner",
+            "datagrid-header-row",
+            "datagrid-htable",
+            "datagrid-pager",
+            "datagrid-row",
+            "datagrid-sort-icon",
+            "datagrid-td-merged",
+            "datagrid-toolbar",
+            "datagrid-view",
+            "datagrid-wrap",
+            "dg-table",
+            "dg__button-list",
+            "dg__button-list__clear-search",
+            "dg__button-list__do-search",
+            "dg__button-list__nd-search",
+            "dg__cat-num",
+            "easyui-fluid",
+            "easyui-linkbutton",
+            "hidden",
+            "icon-back",
+            "l-btn",
+            "l-btn-disabled",
+            "l-btn-empty",
+            "l-btn-icon",
+            "l-btn-icon-left",
+            "l-btn-left",
+            "l-btn-plain",
+            "l-btn-plain-disabled",
+            "l-btn-plain-selected",
+            "l-btn-selected",
+            "l-btn-small",
+            "l-btn-text",
+            "message-list--error",
+            "pagination",
+            "pagination-btn-separator",
+            "pagination-first",
+            "pagination-last",
+            "pagination-link",
+            "pagination-links",
+            "pagination-load",
+            "pagination-next",
+            "pagination-num",
+            "pagination-prev",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "panel-htop",
+            "panel-noscroll",
+            "tooltip",
+            "tooltip-arrow",
+            "tooltip-arrow-outer",
+            "tooltip-content",
+            "tooltip-f",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons",
+            "xspForm"
           ]
         ]
       }
@@ -263,6 +488,83 @@
             "TD/DIV/TABLE",
             "TD/SPAN/FONT",
             "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "-/FORM/TABLE",
+            "-/FORM/UL",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "FORM/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/SPAN",
+            "TD/DIV/A",
+            "TD/DIV/DIV",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/SCRIPT",
+            "-/FORM/STYLE",
+            "-/FORM/TABLE",
+            "-/FORM/UL",
+            "A/SPAN/SPAN",
+            "DIV/A/B",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "FORM/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/SPAN",
+            "TD/DIV/A",
+            "TD/DIV/DIV",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
             "TR/TD/A",
             "TR/TD/DIV",
             "TR/TD/INPUT-text",
