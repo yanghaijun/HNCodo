@@ -1,0 +1,365 @@
+{
+  "version": "0.1",
+  "id": "haveBeen_content",
+  "targetURL": "http://59.110.171.69:31059/WebOffice/MoaWebQianBao.nsf/0/65386A99358073EF482584550025A203?EditDocument",
+  "jsFile": "index.js",
+  "chineseName": "已办待收中的签报",
+  "description": "已办待收中的签报页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control60_w19A0h": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body DIV.sub_concent"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control60_w19A0h"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control61_Zu053G": {
+      "location": {
+        "data": {
+          "tagName": "DD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"left_panel\"]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DL[1]/DD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              14
+            ],
+            "value": "TABLE.Information DL.table_list_blk DD.read"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DL[1]/DD[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control61_Zu053G"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control62_XsxWSW": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body DIV.sub_concent"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control62_XsxWSW"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context20_qgcyRa": {
+      "controls": [
+        "control60_w19A0h",
+        "control61_Zu053G",
+        "control62_XsxWSW"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebQianBao.nsf.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow44_ez19i5": {
+      "toContexts": [
+        {
+          "toContextId": "context20_qgcyRa"
+        }
+      ]
+    },
+    "flow45_6BKSWK": {
+      "fromContextId": "context20_qgcyRa",
+      "fromAction": "doAction",
+      "fromControlId": "control60_w19A0h",
+      "toContexts": [
+        {
+          "toContextId": "context20_qgcyRa"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page20_GMt5n2": {
+      "contextId": "context20_qgcyRa",
+      "layout": [
+        {
+          "id": "uiControl57_HEcxbl",
+          "controlId": "control60_w19A0h",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl57_HEcxbl",
+                "onGetTemplate": "getTemplate_uiControl57_HEcxbl"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl58_E9A0vU",
+          "controlId": "control61_Zu053G",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl58_E9A0vU",
+                "onGetTemplate": "getTemplate_uiControl58_E9A0vU"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl59_GKWJ2k",
+          "controlId": "control62_XsxWSW",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl59_GKWJ2k",
+                "onGetTemplate": "getTemplate_uiControl59_GKWJ2k"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context20_qgcyRa": [
+          "签报管理"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context20_qgcyRa": [
+          "59.110.171.69:31059/WebOffice/MoaWebQianBao.nsf/0/65386A99358073EF482584550025A203?EditDocument"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context20_qgcyRa": [
+          [
+            "RunSignAgent",
+            "RunWorkAgent",
+            "RunWorkAgentAsync",
+            "_myDP",
+            "comment_sort",
+            "comment_table",
+            "div_Att_list",
+            "down_table_list_text",
+            "fldShowOption",
+            "left_panel",
+            "yj_down_table_list"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context20_qgcyRa": [
+          [
+            "Information",
+            "Release",
+            "Separated",
+            "about_file",
+            "blue_btn",
+            "btns",
+            "button-list",
+            "button-list--left",
+            "button-list--right",
+            "button-list__link-button",
+            "data",
+            "down_other_file",
+            "down_table_list",
+            "down_table_list_text",
+            "easyui-combobox",
+            "file_name",
+            "fill_view",
+            "flex_menu",
+            "group",
+            "left_concent",
+            "left_normal_style",
+            "left_panel_center",
+            "m_t",
+            "menu",
+            "menu_small",
+            "navbox",
+            "num_",
+            "read",
+            "right_concent",
+            "right_panel",
+            "selected",
+            "shrink",
+            "sort_blk",
+            "sort_table",
+            "sub_concent",
+            "subnav",
+            "table_blk",
+            "table_list_blk",
+            "text",
+            "tit",
+            "title",
+            "top_fix_bar",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context20_qgcyRa": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/IFRAME",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "A/SPAN/EM",
+            "DD/DIV/A",
+            "DIV/A/B",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FONT",
+            "DIV/DIV/H1",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/P/A",
+            "DIV/P/BR",
+            "DIV/P/FONT",
+            "DIV/P/INPUT-null",
+            "DIV/P/TABLE",
+            "DIV/P/TEXTAREA",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "FORM/DIV/DIV",
+            "FORM/DIV/P",
+            "LI/A/SPAN",
+            "LI/DIV/A",
+            "LI/DIV/UL",
+            "LI/DL/DD",
+            "P/FONT/INPUT-null",
+            "P/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/DL/DD",
+            "TD/DL/DT",
+            "TR/TD/DIV",
+            "TR/TD/DL",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-null",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/DL"
+          ]
+        ]
+      }
+    }
+  }
+}

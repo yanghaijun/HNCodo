@@ -3,6 +3,11 @@
   "id": "haveBeen_todoList",
   "targetURL": "http://59.110.171.69:31003/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel",
   "jsFile": "index.js",
+  "requires": {
+    "haveBeen_contentFW": "../haveBeen_contentFW/index.json",
+    "haveBeen_content": "../haveBeen_content/index.json",
+    "haveBeen_contentSW": "../haveBeen_contentSW/index.json"
+  },
   "chineseName": "已办待收列表",
   "description": "已办待收列表页面",
   "firstPaintEnable": false,
@@ -85,6 +90,18 @@
       "toContexts": [
         {
           "toContextId": "context18_9aZPJA"
+        },
+        {
+          "toContextId": "context19_nRktta",
+          "toModelId": "haveBeen_contentFW"
+        },
+        {
+          "toContextId": "context20_qgcyRa",
+          "toModelId": "haveBeen_content"
+        },
+        {
+          "toContextId": "context21_HUF8Pp",
+          "toModelId": "haveBeen_contentSW"
         }
       ]
     }
