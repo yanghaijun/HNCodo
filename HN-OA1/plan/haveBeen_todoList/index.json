@@ -6,7 +6,12 @@
   "requires": {
     "haveBeen_contentFW": "../haveBeen_contentFW/index.json",
     "haveBeen_content": "../haveBeen_content/index.json",
-    "haveBeen_contentSW": "../haveBeen_contentSW/index.json"
+    "haveBeen_contentSW": "../haveBeen_contentSW/index.json",
+    "haveBeen_contentCar": "../haveBeen_contentCar/index.json",
+    "haveBeen_contentNew": "../haveBeen_contentNew/index.json",
+    "haveBeen_contentYongYin": "../haveBeen_contentYongYin/index.json",
+    "haveBeen_contentNotice": "../haveBeen_contentNotice/index.json",
+    "haveBeen_contentChangeManagent": "../haveBeen_contentChangeManagent/index.json"
   },
   "chineseName": "已办待收列表",
   "description": "已办待收列表页面",
@@ -102,6 +107,26 @@
         {
           "toContextId": "context21_HUF8Pp",
           "toModelId": "haveBeen_contentSW"
+        },
+        {
+          "toContextId": "context22_TvMOLQ",
+          "toModelId": "haveBeen_contentCar"
+        },
+        {
+          "toContextId": "context23_KhOktI",
+          "toModelId": "haveBeen_contentNew"
+        },
+        {
+          "toContextId": "context24_i75Anu",
+          "toModelId": "haveBeen_contentYongYin"
+        },
+        {
+          "toContextId": "context25_RpRR2n",
+          "toModelId": "haveBeen_contentNotice"
+        },
+        {
+          "toContextId": "context26_x4Kxip",
+          "toModelId": "haveBeen_contentChangeManagent"
         }
       ]
     }

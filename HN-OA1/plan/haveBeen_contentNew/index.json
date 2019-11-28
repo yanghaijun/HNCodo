@@ -1,20 +1,16 @@
 {
   "version": "0.1",
-  "id": "haveBeen_contentSW",
-  "targetURL": "http://59.110.171.69:31059/WebOffice/MoaWebShouWen.nsf/0/03AF2789D772B9084825847300161774?EditDocument",
+  "id": "haveBeen_contentNew",
+  "targetURL": "http://59.110.171.69:31059/WebOffice/MoaWebXinWen.nsf/0/32989FC253ADC1D0482584B30024C630?EditDocument",
   "jsFile": "index.js",
-  "chineseName": "已办待收中的收文",
-  "description": "已办待收中的收文页面",
+  "chineseName": "已办待收中的新闻管理",
+  "description": "已办待收中的新闻管理页面",
   "firstPaintEnable": false,
   "controls": {
-    "control63_dMcmCH": {
+    "control69_xA23Tw": {
       "location": {
         "data": {
           "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
         },
         "locators": [
           {
@@ -25,12 +21,12 @@
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[4]"
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control63_dMcmCH"
+        "onGetData": "getData_control69_xA23Tw"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -38,34 +34,33 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control64_DqUJU9": {
+    "control70_v8LN4k": {
       "location": {
         "data": {
           "tagName": "DD"
-        },
-        "userData": {
-          "data": [],
-          "force": false
         },
         "locators": [
           {
             "id": "@id/word",
             "prob": 1,
-            "value": "descendant::DIV[@id=\"left_panel\"]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+            "value": [
+              "descendant::DIV[@id=\"left_panel\"]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]",
+              "descendant::DIV[@id=\"left_panel\"]//DD"
+            ]
           },
           {
             "id": "@class/word",
             "prob": 1,
             "ordinal": [
               0,
-              29
+              9
             ],
             "value": "TABLE.Information DL.table_list_blk DD.read"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[4]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
           },
           {
             "id": "elderLevel",
@@ -76,7 +71,7 @@
         ]
       },
       "events": {
-        "onGetData": "getData_control64_DqUJU9"
+        "onGetData": "getData_control70_v8LN4k"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -84,14 +79,10 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control65_wVhOrl": {
+    "control71_wkQre3": {
       "location": {
         "data": {
           "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
         },
         "locators": [
           {
@@ -102,12 +93,12 @@
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[4]"
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control65_wVhOrl"
+        "onGetData": "getData_control71_wkQre3"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -118,72 +109,72 @@
     }
   },
   "contexts": {
-    "context21_HUF8Pp": {
+    "context23_KhOktI": {
       "controls": [
-        "control63_dMcmCH",
-        "control64_DqUJU9",
-        "control65_wVhOrl"
+        "control69_xA23Tw",
+        "control70_v8LN4k",
+        "control71_wkQre3"
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebShouWen\\.nsf.*"
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebXinWen\\.nsf.*"
       ]
     }
   },
   "flows": {
-    "flow43_uSgUQ3": {
+    "flow49_WwT7nh": {
       "toContexts": [
         {
-          "toContextId": "context21_HUF8Pp"
+          "toContextId": "context23_KhOktI"
         }
       ]
     }
   },
   "pages": {
-    "page21_VGZ17T": {
-      "contextId": "context21_HUF8Pp",
+    "page23_2LrHZk": {
+      "contextId": "context23_KhOktI",
       "layout": [
         {
-          "id": "uiControl60_1qbAGI",
-          "controlId": "control63_dMcmCH",
+          "id": "uiControl66_dxMcDk",
+          "controlId": "control69_xA23Tw",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl60_1qbAGI",
-                "onGetTemplate": "getTemplate_uiControl60_1qbAGI"
+                "onDoAction": "doAction_uiControl66_dxMcDk",
+                "onGetTemplate": "getTemplate_uiControl66_dxMcDk"
               }
             }
           }
         },
         {
-          "id": "uiControl61_EeXDzR",
-          "controlId": "control64_DqUJU9",
+          "id": "uiControl67_Wt7Dup",
+          "controlId": "control70_v8LN4k",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl61_EeXDzR",
-                "onGetTemplate": "getTemplate_uiControl61_EeXDzR"
+                "onDoAction": "doAction_uiControl67_Wt7Dup",
+                "onGetTemplate": "getTemplate_uiControl67_Wt7Dup"
               }
             }
           }
         },
         {
-          "id": "uiControl62_TIcgxx",
-          "controlId": "control65_wVhOrl",
+          "id": "uiControl68_trzskg",
+          "controlId": "control71_wkQre3",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl62_TIcgxx",
-                "onGetTemplate": "getTemplate_uiControl62_TIcgxx"
+                "onDoAction": "doAction_uiControl68_trzskg",
+                "onGetTemplate": "getTemplate_uiControl68_trzskg"
               }
             }
           }
@@ -194,58 +185,141 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context21_HUF8Pp": [
-          "收文管理"
+        "context23_KhOktI": [
+          "新闻管理"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context21_HUF8Pp": [
-          "59.110.171.69:31059/WebOffice/MoaWebShouWen.nsf/0/03AF2789D772B9084825847300161774?EditDocument"
+        "context23_KhOktI": [
+          "59.110.171.69:31059/WebOffice/MoaWebXinWen.nsf/0/32989FC253ADC1D0482584B30024C630?EditDocument"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context21_HUF8Pp": [
+        "context23_KhOktI": [
           [
             "RunSignAgent",
             "RunWorkAgent",
             "RunWorkAgentAsync",
             "_myDP",
+            "cke_",
+            "cke__label",
+            "cke__text",
+            "cke_bottom_fldCkeditor",
+            "cke_contents_fldCkeditor",
+            "cke_fldCkeditor",
+            "cke_fldCkeditor_arialbl",
+            "cke_path_fldCkeditor",
+            "cke_path_fldCkeditor_label",
+            "cke_top_fldCkeditor",
             "comment_sort",
             "comment_table",
             "div_Att_list",
             "down_table_list_text",
-            "fldShowOption",
-            "fldbc",
+            "fldCkeditor",
+            "hotFabu",
             "left_panel",
-            "yj_down_table_list"
+            "txfs"
           ]
         ]
       }
     },
     "page/classes": {
       "contexts": {
-        "context21_HUF8Pp": [
+        "context23_KhOktI": [
           [
             "Information",
             "Release",
             "Separated",
-            "about_file",
-            "blue_btn",
             "btns",
-            "button-list",
-            "button-list--left",
-            "button-list--right",
-            "button-list__link-button",
+            "cke_",
+            "cke_bottom",
+            "cke_break",
+            "cke_browser_quirks",
+            "cke_browser_webkit",
+            "cke_button",
+            "cke_button_bgcolor",
+            "cke_button_bidiltr",
+            "cke_button_bidirtl",
+            "cke_button_bold",
+            "cke_button_bulletedlist",
+            "cke_button_copy",
+            "cke_button_cut",
+            "cke_button_find",
+            "cke_button_flash",
+            "cke_button_horizontalrule",
+            "cke_button_image",
+            "cke_button_indent",
+            "cke_button_italic",
+            "cke_button_justifyblock",
+            "cke_button_justifycenter",
+            "cke_button_justifyleft",
+            "cke_button_justifyright",
+            "cke_button_link",
+            "cke_button_newpage",
+            "cke_button_numberedlist",
+            "cke_button_outdent",
+            "cke_button_pagebreak",
+            "cke_button_paste",
+            "cke_button_pastefromword",
+            "cke_button_pastetext",
+            "cke_button_preview",
+            "cke_button_print",
+            "cke_button_redo",
+            "cke_button_removeFormat",
+            "cke_button_replace",
+            "cke_button_selectAll",
+            "cke_button_showblocks",
+            "cke_button_smiley",
+            "cke_button_source",
+            "cke_button_specialchar",
+            "cke_button_strike",
+            "cke_button_subscript",
+            "cke_button_superscript",
+            "cke_button_table",
+            "cke_button_templates",
+            "cke_button_textcolor",
+            "cke_button_underline",
+            "cke_button_undo",
+            "cke_button_unlink",
+            "cke_buttonarrow",
+            "cke_contents",
+            "cke_disabled",
+            "cke_editor",
+            "cke_editor_fldCkeditor",
+            "cke_empty",
+            "cke_font",
+            "cke_fontSize",
+            "cke_format",
+            "cke_icon",
+            "cke_inline_label",
+            "cke_label",
+            "cke_ltr",
+            "cke_off",
+            "cke_openbutton",
+            "cke_path",
+            "cke_rcombo",
+            "cke_resizer",
+            "cke_resizer_ltr",
+            "cke_separator",
+            "cke_skin_bjml",
+            "cke_styles",
+            "cke_text",
+            "cke_toolbar",
+            "cke_toolbar_end",
+            "cke_toolbar_start",
+            "cke_toolbox",
+            "cke_toolbox_collapser",
+            "cke_toolgroup",
+            "cke_top",
+            "cke_voice_label",
+            "cke_wrapper",
             "data",
-            "down_other_file",
             "down_table_list",
             "down_table_list_text",
-            "easyui-combobox",
-            "file_name",
             "fill_view",
             "flex_menu",
             "left_concent",
@@ -255,7 +329,6 @@
             "menu",
             "menu_small",
             "navbox",
-            "num_",
             "read",
             "right_concent",
             "right_panel",
@@ -303,69 +376,80 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context21_HUF8Pp": [
+        "context23_KhOktI": [
           [
             "-/-/DIV",
             "-/-/FORM",
             "-/-/SCRIPT",
             "-/DIV/IFRAME",
             "-/DIV/TABLE",
-            "-/FORM/BR",
             "-/FORM/DIV",
             "-/FORM/INPUT-hidden",
             "-/FORM/LINK",
             "-/FORM/SCRIPT",
-            "A/SPAN/EM",
-            "DD/DIV/A",
+            "-/FORM/TABLE",
+            "A/SPAN/SPAN",
             "DIV/A/B",
             "DIV/DIV/A",
+            "DIV/DIV/DD",
             "DIV/DIV/DIV",
-            "DIV/DIV/FONT",
             "DIV/DIV/H1",
-            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/P",
             "DIV/DIV/SCRIPT",
-            "DIV/DIV/SELECT",
             "DIV/DIV/SPAN",
             "DIV/DIV/TABLE",
             "DIV/DIV/UL",
-            "DIV/FONT/INPUT-null",
             "DIV/P/A",
-            "DIV/P/FONT",
             "DIV/P/TABLE",
-            "DIV/SELECT/OPTION",
             "DIV/SPAN/EM",
+            "DIV/SPAN/SPAN",
             "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
             "DIV/UL/LI",
-            "DL/DD/DIV",
-            "DL/DT/A",
+            "DL/DT/BR",
+            "FORM/DIV/A",
             "FORM/DIV/BR",
             "FORM/DIV/DIV",
-            "FORM/DIV/FONT",
             "FORM/DIV/INPUT-null",
             "FORM/DIV/P",
-            "LI/A/SPAN",
+            "FORM/TABLE/TBODY",
             "LI/DIV/A",
             "LI/DIV/UL",
-            "LI/DL/DD",
-            "P/FONT/INPUT-null",
             "P/TABLE/TBODY",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/SPAN",
+            "SPAN/SPAN/STYLE",
+            "SPAN/SPAN/TABLE",
+            "SPAN/TABLE/TBODY",
             "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
             "TBODY/TR/TD",
             "TBODY/TR/TH",
+            "TD/A/SPAN",
             "TD/DIV/DIV",
+            "TD/DIV/SPAN",
             "TD/DIV/TABLE",
             "TD/DL/DD",
             "TD/DL/DT",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/TBODY",
             "TH/DL/DD",
             "TH/DL/DT",
+            "THEAD/TR/TH",
+            "TR/TD/A",
             "TR/TD/DIV",
             "TR/TD/DL",
+            "TR/TD/IFRAME",
             "TR/TD/IMG",
             "TR/TD/INPUT-null",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TD/TEXTAREA",
+            "TR/TH/B",
             "TR/TH/DL",
             "UL/LI/A",
-            "UL/LI/DIV",
-            "UL/LI/DL"
+            "UL/LI/DIV"
           ]
         ]
       }

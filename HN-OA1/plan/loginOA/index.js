@@ -203,6 +203,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31110') {
+            if (localStorage.chongqingP == undefined || localStorage.chongqingU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -401,6 +407,12 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31110') {
+            if (localStorage.chongqingP == undefined || localStorage.chongqingU == undefined) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else {
           obj4.display = "none";
@@ -412,7 +424,8 @@
         // obj4.display = "block"; 
         // }
         // obj4.display = "block";
-      }data.push(obj4);return data;
+      }
+      data.push(obj4);return data;
     }, doAction_uiControl0_acry19: function (data, elem) {
       if (data.eventType == "userName") {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(0).find('input').val(data);
@@ -454,10 +467,12 @@
                 localStorage.xinjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31031') {
                 //福建
-                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.fujianP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.fujianU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31035') {
                 //广东
-                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.guangdongP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.guangdongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31059') {
                 //新能源
                 localStorage.xinnengyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinnengyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -505,25 +520,23 @@
                 localStorage.henanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.henanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31063') {
                 //西安热工院
-                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31064') {
                 //燃料公司
                 localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31056') {
                 //江西
-                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.jiangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.jiangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31071') {
                 //广西
                 localStorage.guangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31095') {
                 //山东
-                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31008') {
                 //信息公司
-                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31058') {
                 //置业
                 localStorage.zhiyeP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhiyeU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -533,12 +546,14 @@
               } else if (port == '31007') {
                 //黑龙江
                 localStorage.heilongjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.heilongjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31110') {
+                //重庆
+                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }var dd = $(data);var dom;for (var i = 0; i < dd.length; i++) {
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }
-              var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
+              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               // } else if (port == '31039') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -591,11 +606,9 @@
               //               //河北公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
               //             } else if (port == '31042') {
-
               //               //湖南
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31043/afmail.nsf';
               //             } else if (port == '31046') {
-
               //               //山西
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31047/afmail.nsf';
               //             } else if (port == '31069') {
@@ -621,6 +634,7 @@
               //             } else if (port == '31040') {
               //               //辽宁
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
+
               //             } else if (port == '31048') {
               //               //河南
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
@@ -648,13 +662,14 @@
               ysp.appMain.hideLoading();alert('登录失败，请重新登录！');
             }
           }, error: function () {
-            ysp.appMain.hideLoading();alert('登录失败，请重新登录！');
+            ysp.appMain.hideLoading();
+            alert('登录失败，请重新登录！');
           } }); // $(elem).find('.enter_system').find('input').click();
         // setTimeout(function () {
         //   ysp.appMain.hideLoading();
-
         // }, 500);
       }if (data.eventType == 'login') {//获取用户名和密码，自动登录
+
         // if (top.EAPI.isAndroid()) {
         //   var userName = huaneng.getUserName();
         //   var password = huaneng.getPassword();
@@ -667,7 +682,8 @@
         //   $(elem).find('.login_form_text').eq(1).find('input').val(password);
         //   $(elem).find('.enter_system').find('input').click();
         // } else {}
-      }if (data.eventType == "loginButton") {//密码错误时调用
+      }
+      if (data.eventType == "loginButton") {//密码错误时调用
         // var text = data.dataCustom;
         // if (text && text != "" && (text.indexOf("账号或密码填写错误") > -1 || text.indexOf("密码不能为空") > -1)) {
         //   if (top.EAPI.isAndroid()) {
@@ -680,7 +696,7 @@
     },
     getTemplate_uiControl0_acry19: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n         \n      </div>\n    )\n  }\n});\n';
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"login\"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:\"login\"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: \"loginButton\",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'userName',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'passWorld',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'ButtonN'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: '123'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"D_login\" },\n      React.createElement(\n        \"div\",\n        { className: \"loginTitle\" },\n        React.createElement(\"div\", null),\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF\"\n        )\n      ),\n      React.createElement(\n        \"div\",\n        { style: { display: data[3].display }, ref: \"myInput\" },\n        React.createElement(\n          \"div\",\n          { className: \"loginText\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginTextp\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"freeow-br\" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                \"p\",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginButton\" },\n          React.createElement(\n            \"button\",\n            { onClick: me.ButtonN },\n            \"\\u767B\\u5F55\"\n          )\n        )\n      )\n    );\n  }\n});";
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      )\n    );\n  }\n});';
     },
     getData_control38_UpuyAZ: function (elem) {
       ;var port = elem.ownerDocument.defaultView.location.port;;if (top.EAPI.isIOS()) {
@@ -877,9 +893,13 @@
           } else {
             password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
           }
-        }$.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: userName, Password: password // Username: 80111719,
-            // Password: "Abcd  4321"
-          }, success: function (data) {
+        } else if (port == '31110') {
+          if (localStorage && localStorage.chongqingP && localStorage.chongqingU) {
+            password = localStorage.chongqingP;userName = localStorage.chongqingU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        }$.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: userName, Password: password }, success: function (data) {
             if (data.indexOf('欢迎登录') == -1) {
               var dd = $(data);var dom;for (var i = 0; i < dd.length; i++) {
                 var tag = dd[i].tagName;if (tag == 'FORM') {
@@ -1007,7 +1027,6 @@
           //     },
           //     success: function () {
           //     }
-          //   });
         }
     },
     doAction_uiControl37_8R9wFI: function (data, elem) {

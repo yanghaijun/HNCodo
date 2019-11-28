@@ -164,8 +164,8 @@
       }
     },
     getTemplate_uiControl52_cRxtug: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div onClick={this.handlerClick.bind(this)}>\n        {\n          /*\n          \u5DF2\u529E\u5F85\u6536\n          */\n        }\n      </div>\n    )\n  }\n});";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement('div', { onClick: this.handlerClick.bind(this) });\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div onClick={this.handlerClick.bind(this)}>\n        \n          \u5DF2\u529E\u5F85\u6536\n          \n        \n      </div>\n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      'div',\n      { onClick: this.handlerClick.bind(this) },\n      '\\u5DF2\\u529E\\u5F85\\u6536'\n    );\n  }\n});";
     }
   }, "true_todoList");
 })(window, ysp);

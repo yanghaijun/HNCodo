@@ -3,10 +3,20 @@
     getData_control57_q3EPeZ: function (elem) {
       if (!elem) {
         return;
-      }var data = [];var datagrid = elem.querySelector('div[class="datagrid-view2"]') && elem.querySelector('div[class="datagrid-view2"]').querySelector('div[class="datagrid-body"]');var trs = datagrid && datagrid.querySelector('tbody') && datagrid.querySelector('tbody').querySelectorAll('tr');for (var i = 0; i < trs.length; i++) {
+      }var data = [];var datagrid = elem.querySelector('div[class="datagrid-view2"]') && elem.querySelector('div[class="datagrid-view2"]').querySelector('div[class="datagrid-body"]');var trs = datagrid && datagrid.querySelector('tbody') && datagrid.querySelector('tbody').querySelectorAll('tr');var port = elem.ownerDocument.defaultView.location.port;for (var i = 0; i < trs.length; i++) {
         var flags = trs[i].querySelectorAll("td") && trs[i].querySelectorAll("td")[0].getAttribute("class");var obj = {};if (flags == "datagrid-td-merged") {
-          var text = trs[i].querySelectorAll("td")[0].textContent;if (text.indexOf('收文') > -1 || text.indexOf('发文') > -1 || text.indexOf('签报') > -1) {
-            obj.text = trs[i].querySelectorAll("td")[0].textContent;obj.person = "";obj.time = "";obj.flag = "merged";obj.index = i;data.push(obj);
+          var text = trs[i].querySelectorAll("td")[0].textContent;if (port == '31003') {
+            if (text.indexOf('收文') != -1 || text.indexOf('发文') != -1 || text.indexOf('签报') != -1 || text.indexOf('会议') != -1 || text.indexOf('车辆') != -1 || text.indexOf('信息变更') != -1 || text.indexOf('考勤') != -1 || text.indexOf('请假') != -1 || text.indexOf('付款') != -1 || text.indexOf('工作联系单') != -1 || text.indexOf('内发') != -1 || text.indexOf('便函') != -1 || text.indexOf('通知公告') != -1 || text.indexOf('人员变动') != -1) {
+              obj.text = trs[i].querySelectorAll("td")[0].textContent;obj.person = "";obj.time = "";obj.flag = "merged";obj.index = i;data.push(obj);
+            }
+          } else if (port == '31059') {
+            if (text.indexOf('收文') > -1 || text.indexOf('发文') > -1 || text.indexOf('签报') > -1 || text.indexOf('车辆管理') > -1 || text.indexOf('新闻管理') > -1 || text.indexOf('用印审批') > -1 || text.indexOf('内发') > -1) {
+              obj.text = trs[i].querySelectorAll("td")[0].textContent;obj.person = "";obj.time = "";obj.flag = "merged";obj.index = i;data.push(obj);
+            }
+          } else {
+            if (text.indexOf('收文') > -1 || text.indexOf('发文') > -1 || text.indexOf('签报') > -1 || text.indexOf('内发') > -1) {
+              obj.text = trs[i].querySelectorAll("td")[0].textContent;obj.person = "";obj.time = "";obj.flag = "merged";obj.index = i;data.push(obj);
+            }
           }
         } else {
           obj.text = trs[i].querySelectorAll("td")[1].textContent;obj.person = trs[i].querySelectorAll("td")[3].textContent;obj.time = trs[i].querySelectorAll("td")[4].textContent;obj.flag = "";obj.index = i;data.push(obj);
@@ -17,10 +27,6 @@
       var type = data.eventType;var flag = data.dataCustom.flag;
       var index = parseInt(data.dataCustom.index);if (type == 'click') {
         var datagrid = elem.querySelector('div[class="datagrid-view2"]') && elem.querySelector('div[class="datagrid-view2"]').querySelector('div[class="datagrid-body"]');var trs = datagrid && datagrid.querySelector('tbody') && datagrid.querySelector('tbody').querySelectorAll('tr');if (flag == "merged") {
-          //     var text = trs[index] && trs[index].querySelectorAll("td")[0].textContent;
-          //     if (text.indexOf('收文') > -1 || text.indexOf('发文') > -1 || text.indexOf('签报') > -1) {
-          //       trs[index] && trs[index].querySelectorAll("td")[0] && trs[index].querySelectorAll("td")[0].querySelector("a").click();
-          //     }
           trs[index] && trs[index].querySelectorAll("td")[0] && trs[index].querySelectorAll("td")[0].querySelector("a").click();
         } else {
           trs[index] && trs[index].querySelectorAll("td")[1] && trs[index].querySelectorAll("td")[1].querySelector("a").click();

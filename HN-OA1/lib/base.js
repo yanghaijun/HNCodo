@@ -338,6 +338,14 @@
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
             }
+          } else if (port == '31110') {
+            if (localStorage && localStorage.chongqingP && localStorage.chongqingU) {
+              password = localStorage.chongqingP;
+              userName = localStorage.chongqingU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
           }
           $.ajax({
             url: 'http://59.110.171.69:' + port + '/names.nsf?Login',
