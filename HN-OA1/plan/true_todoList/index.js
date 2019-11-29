@@ -153,19 +153,30 @@
       var selfTemplate = "module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n      </div>\n    )\n  }\n});";
       return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\"div\", null);\n  }\n});";
     },
-    getData_control55_f2IBJ3: function (elem) {},
+    getData_control55_f2IBJ3: function (elem) {
+      if (!elem) {
+        return;
+      }var data = elem.ownerDocument.defaultView.location.port;return data;
+    },
     doAction_uiControl52_cRxtug: function (data, elem) {
       var type = data.eventType;if (type == 'click') {
-        var port = elem.ownerDocument.defaultView.location.port;if (port == '31044') {
+        var port = elem.ownerDocument.defaultView.location.port;if (port == '31044' || port == '31025' || port == '31067' || port == '31056' || port == '31058' || port == '31000' || port == '31051' || port == '31042' || port == '31039' || port == '31031' || port == '31015' || port == '31000') {
+          //华北、甘肃、河北、江西、置业、燃料公司、湖北、湖南、青海、福建、新疆、曹妃甸
           elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/openView2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel';
+        } else if (port == '31060' || port == '31040' || port == '31071' || port == '31029' || port == '31069' || port == '31035' || port == '31033') {
+          //江苏、辽宁、广西、雄安、贵州、广东、海南
+          elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/list_view2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1';
+        } else if (port == '31021' || port == '31104' || port == '31020') {
+          //宁夏、能交、吉林
+          elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomOpenView2?Open&d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1';
         } else {
           elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel';
         }
       }
     },
     getTemplate_uiControl52_cRxtug: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div onClick={this.handlerClick.bind(this)}>\n        \n          \u5DF2\u529E\u5F85\u6536\n          \n        \n      </div>\n    )\n  }\n});";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      'div',\n      { onClick: this.handlerClick.bind(this) },\n      '\\u5DF2\\u529E\\u5F85\\u6536'\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div onClick={this.handlerClick.bind(this)}>\n        {\n          data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n        }\n      </div>\n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      { onClick: this.handlerClick.bind(this) },\n      data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n    );\n  }\n});";
     }
   }, "true_todoList");
 })(window, ysp);
