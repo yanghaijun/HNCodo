@@ -1,0 +1,350 @@
+{
+  "version": "0.1",
+  "id": "haveBeen_contentLeave",
+  "targetURL": "http://59.110.171.69:31003/WebOffice/MoaWebQingJiaShenPi.nsf/0/E862C65F587E94BE482584C5002D9CA9?EditDocument",
+  "jsFile": "index.js",
+  "chineseName": "已办待收中的请假审批",
+  "description": "已办待收中的请假审批页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control81_xVtlkg": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body DIV.sub_concent"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control81_xVtlkg"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control82_7rv8Dz": {
+      "location": {
+        "data": {
+          "tagName": "DD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"left_panel\"]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              15
+            ],
+            "value": "TABLE.Information DL.table_list_blk DD.read"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TH[1]/DL[1]/DD[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control82_7rv8Dz"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control83_D2sM6t": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.sub_page_body DIV.sub_concent"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control83_D2sM6t"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context27_n5BHta": {
+      "controls": [
+        "control81_xVtlkg",
+        "control82_7rv8Dz",
+        "control83_D2sM6t"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebQingJiaShenPi\\.nsf.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow56_Lz3hbz": {
+      "toContexts": [
+        {
+          "toContextId": "context27_n5BHta"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page27_LJUieq": {
+      "contextId": "context27_n5BHta",
+      "layout": [
+        {
+          "id": "uiControl78_sd56tO",
+          "controlId": "control81_xVtlkg",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl78_sd56tO",
+                "onGetTemplate": "getTemplate_uiControl78_sd56tO"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl79_h7TSW2",
+          "controlId": "control82_7rv8Dz",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl79_h7TSW2",
+                "onGetTemplate": "getTemplate_uiControl79_h7TSW2"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl80_9JeBbo",
+          "controlId": "control83_D2sM6t",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl80_9JeBbo",
+                "onGetTemplate": "getTemplate_uiControl80_9JeBbo"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context27_n5BHta": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context27_n5BHta": [
+          "59.110.171.69:31003/WebOffice/MoaWebQingJiaShenPi.nsf/0/E862C65F587E94BE482584C5002D9CA9?EditDocument"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context27_n5BHta": [
+          [
+            "RunSignAgent",
+            "RunWorkAgent",
+            "_myDP",
+            "comment_sort",
+            "comment_table",
+            "div_Att_list",
+            "down_table_list_text",
+            "left_panel"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context27_n5BHta": [
+          [
+            "Information",
+            "Release",
+            "Separated",
+            "blue_btn",
+            "btns",
+            "data",
+            "down_other_file",
+            "down_table_list",
+            "down_table_list_text",
+            "file_name",
+            "fill_view",
+            "flex_menu",
+            "left_concent",
+            "left_normal_style",
+            "left_panel_center",
+            "m_t",
+            "menu",
+            "menu_small",
+            "navbox",
+            "num_",
+            "read",
+            "right_concent",
+            "right_panel",
+            "selected",
+            "shrink",
+            "sort_blk",
+            "sort_table",
+            "sub_concent",
+            "subnav",
+            "table_blk",
+            "table_list_blk",
+            "tit",
+            "title",
+            "top_fix_bar",
+            "ui_b",
+            "ui_border",
+            "ui_buttons",
+            "ui_c",
+            "ui_close",
+            "ui_content",
+            "ui_dialog",
+            "ui_icon",
+            "ui_inner",
+            "ui_l",
+            "ui_lb",
+            "ui_lt",
+            "ui_main",
+            "ui_max",
+            "ui_max_b",
+            "ui_min",
+            "ui_min_b",
+            "ui_r",
+            "ui_rb",
+            "ui_res",
+            "ui_res_b",
+            "ui_res_t",
+            "ui_rt",
+            "ui_t",
+            "ui_title",
+            "ui_title_bar",
+            "ui_title_buttons"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context27_n5BHta": [
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/DIV/IFRAME",
+            "-/DIV/TABLE",
+            "-/FORM/DIV",
+            "-/FORM/INPUT-hidden",
+            "-/FORM/LINK",
+            "-/FORM/SCRIPT",
+            "-/FORM/SPAN",
+            "A/SPAN/EM",
+            "DD/DIV/A",
+            "DIV/A/B",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/P/A",
+            "DIV/P/TABLE",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DD/DIV",
+            "DL/DT/BR",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-null",
+            "FORM/DIV/P",
+            "FORM/SPAN/INPUT-null",
+            "LI/A/SPAN",
+            "LI/DIV/A",
+            "LI/DIV/UL",
+            "LI/DL/DD",
+            "P/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/DL/DD",
+            "TD/DL/DT",
+            "TD/TABLE/TBODY",
+            "TH/DL/DD",
+            "TH/DL/DT",
+            "THEAD/TR/TH",
+            "TR/TD/DIV",
+            "TR/TD/DL",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-null",
+            "TR/TD/TABLE",
+            "TR/TH/B",
+            "TR/TH/DL",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/DL"
+          ]
+        ]
+      }
+    }
+  }
+}

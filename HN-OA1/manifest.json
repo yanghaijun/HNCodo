@@ -360,10 +360,10 @@
       ]
     }
   ],
-  "name": "四川OA",
-  "default_url": "http://59.110.171.69:31031/",
+  "name": "华能OA",
+  "default_url": "http://59.110.171.69:31003/",
   "scope": "HN-OA1",
   "start_url": "enterplorer://HN-OA1/local/index.html",
-  "update_time": 1575019093083,
+  "update_time": 1575431863590,
   "runtime_env": "1webview"
 }

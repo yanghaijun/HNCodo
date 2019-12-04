@@ -909,3 +909,6 @@ div[data-ysp-modelid="emailIndex"] {
   align-items: center;
   padding: 10px;
 }
+.havebeen-title-header {
+  justify-content: space-around;
+}

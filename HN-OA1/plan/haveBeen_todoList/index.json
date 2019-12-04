@@ -11,7 +11,9 @@
     "haveBeen_contentNew": "../haveBeen_contentNew/index.json",
     "haveBeen_contentYongYin": "../haveBeen_contentYongYin/index.json",
     "haveBeen_contentNotice": "../haveBeen_contentNotice/index.json",
-    "haveBeen_contentChangeManagent": "../haveBeen_contentChangeManagent/index.json"
+    "haveBeen_contentChangeManagent": "../haveBeen_contentChangeManagent/index.json",
+    "haveBeen_contentLeave": "../haveBeen_contentLeave/index.json",
+    "haveBeen_contentCheck": "../haveBeen_contentCheck/index.json"
   },
   "chineseName": "已办待收列表",
   "description": "已办待收列表页面",
@@ -127,6 +129,14 @@
         {
           "toContextId": "context26_x4Kxip",
           "toModelId": "haveBeen_contentChangeManagent"
+        },
+        {
+          "toContextId": "context27_n5BHta",
+          "toModelId": "haveBeen_contentLeave"
+        },
+        {
+          "toContextId": "context29_tuZmUJ",
+          "toModelId": "haveBeen_contentCheck"
         }
       ]
     }
