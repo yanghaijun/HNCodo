@@ -69,12 +69,52 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control90_OekIs6": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "view:_id1:_id3:dataTablePanel",
+              "tagName": "DIV",
+              "prefix": "",
+              "suffix": "/DIV[1]/DIV[1]/DIV[2]/DIV[2]",
+              "ratio": 0.637
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder DIV.datagrid-view DIV.datagrid-view2"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control90_OekIs6"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context18_9aZPJA": {
       "controls": [
-        "control57_q3EPeZ"
+        "control57_q3EPeZ",
+        "control90_OekIs6"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -145,6 +185,21 @@
     "page18_rzRRXt": {
       "contextId": "context18_9aZPJA",
       "layout": [
+        {
+          "id": "uiControl87_MrzSxu",
+          "controlId": "control90_OekIs6",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl87_MrzSxu",
+                "onGetTemplate": "getTemplate_uiControl87_MrzSxu"
+              }
+            }
+          }
+        },
         {
           "id": "uiControl54_z42RSP",
           "controlId": "control57_q3EPeZ",
