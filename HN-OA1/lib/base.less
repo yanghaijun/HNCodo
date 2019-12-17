@@ -765,16 +765,35 @@ div[data-componentsid="uiControl0_lFVvUR"]{
 //邮件样式
 .d_shoujian{ 
   .d_shoujianHeader{
-    width: 100%;
-    height: 45px;
-    background: #288ffb;
+		// width: 100%;
+		// height: 45px;
+		// background: #288ffb;
+		// color: #fff;
+		// text-align: center;
+		// line-height: 45px;
+		// position:fixed;
+		// top: 0px;
+		// left: 0px;
+		// z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a73cc;
     color: #fff;
-		text-align: center;
-    line-height: 45px;
-    position:fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 999;
+    height: 50px;
+    padding: 0px 10px;
+    width: 100%;
+    
+    >div:nth-child(1){
+      width: 20px;
+      height: 20px;
+      background: url("../local/img/arrow.png") no-repeat;
+      background-size: contain;
+      margin-left: 10px;
+    }
+    >div:nth-child(2){
+      width: 60%;
+    }
   }
   >div:nth-child(2){
     margin-top: 45px;
@@ -973,7 +992,13 @@ div[data-ysp-modelid="emailDetail"],div[data-ysp-modelid="emailIndex"]{
 
 //已办待阅
 
-
+.havebeen-title{
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
 .havebeen{
   background: #fff;
  	margin: 10px;
@@ -997,4 +1022,7 @@ div[data-ysp-modelid="emailDetail"],div[data-ysp-modelid="emailIndex"]{
 
 .havebeen-title-header{
 	justify-content: space-around;
+}
+.view-item{
+ background-color: #ececec; 
 }

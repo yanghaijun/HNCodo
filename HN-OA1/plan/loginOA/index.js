@@ -432,11 +432,13 @@
       } else {// if(localStorage.password){
         // obj4.display = "none";
         // console.log(localStorage.password)
+
         // }else if(!localStorage.password){
         // obj4.display = "block"; 
         // }
         // obj4.display = "block";
-      }data.push(obj4);return data;
+      }data.push(obj4);
+      return data;
     }, doAction_uiControl0_acry19: function (data, elem) {
       if (data.eventType == "userName") {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(0).find('input').val(data);
@@ -451,7 +453,8 @@
         //     appTitle = huaneng.sendTitleToJS();
         //   }
         $.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
-            console.log(data);debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
+            //console.log(data);
+            debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -528,7 +531,8 @@
                 localStorage.henanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.henanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31063') {
                 //西安热工院
-                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31064') {
                 //燃料公司
                 localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -540,10 +544,12 @@
                 localStorage.guangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31095') {
                 //山东
-                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31008') {
                 //信息公司
-                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31058') {
                 //置业
                 localStorage.zhiyeP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhiyeU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -563,7 +569,7 @@
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
+              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               // } else if (port == '31039') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -573,6 +579,7 @@
               //             if (port == '31000') {
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             } else if (port == '31039') {
+
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               //             } else {
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -589,7 +596,6 @@
               //               //华北分公司
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31045/afmail.nsf';
               //             } else if (port == '31021') {
-
               //               //宁夏
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31022/afmail.nsf';
               //             } else if (port == '31025') {
@@ -640,6 +646,7 @@
               //             } else if (port == '31029') {//雄安
               //               //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
               //             } else if (port == '31037') {
+
               //               //雅江
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
               //             } else if (port == '31040') {
@@ -651,6 +658,7 @@
               //             } else if (port == '31063') {
               //               //西安热工院
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
+
               //             } else if (port == '31064') {
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31065/afmail.nsf';
               //             } else if (port == '31056') {
@@ -696,7 +704,6 @@
         //   if (top.EAPI.isAndroid()) {
         //     huaneng.showPasswordError();
         //   } else if (top.EAPI.isIOS()) {
-
         //     top.EAPI.postMessageToNative("OAPasswordIsError");
         //   }
         // }
@@ -919,7 +926,7 @@
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
+              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               // } else if (port == '31039') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';

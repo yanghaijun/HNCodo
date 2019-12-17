@@ -18,7 +18,8 @@
     "loginOA": "../loginOA/index.json",
     "contentNew": "../contentNew/index.json",
     "contentYongYin": "../contentYongYin/index.json",
-    "haveBeen_todoList": "../haveBeen_todoList/index.json"
+    "haveBeen_todoList": "../haveBeen_todoList/index.json",
+    "emailIndex": "../emailIndex/index.json"
   },
   "chineseName": "真待办列表",
   "description": "",
@@ -275,6 +276,10 @@
         {
           "toContextId": "context18_9aZPJA",
           "toModelId": "haveBeen_todoList"
+        },
+        {
+          "toContextId": "context14_g5Ol8t",
+          "toModelId": "emailIndex"
         }
       ]
     }

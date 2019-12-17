@@ -172,11 +172,183 @@
         } else {
           elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/dgview2.xsp?d=MoaWebOffice.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel';
         }
+      }if (type == 'email') {
+        var port = elem.ownerDocument.defaultView.location.port;if (top.EAPI.isIOS()) {
+          ysp.appMain.openWindow('http://59.110.171.69:31016/afmail.nsf');if (port == '31003') {
+            //四川
+            ysp.appMain.openWindow('http://59.110.171.69:31016/afmail.nsf');
+          } else if (port == '31000') {
+            //曹妃甸
+            ysp.appMain.openWindow('http://59.110.171.69:31014/afmail.nsf');
+          } else if (port == '31044') {
+            //华北分公司
+            ysp.appMain.openWindow('http://59.110.171.69:31045/afmail.nsf');
+          } else if (port == '31021') {
+            //宁夏
+            ysp.appMain.openWindow('http://59.110.171.69:31022/afmail.nsf');
+          } else if (port == '31025') {
+            //甘肃
+            ysp.appMain.openWindow('http://59.110.171.69:31050/afmail.nsf');
+          } else if (port == '31015') {
+            //新疆
+            ysp.appMain.openWindow('http://59.110.171.69:31026/afmail.nsf');
+          } else if (port == '31031') {
+            //福建
+            ysp.appMain.openWindow('http://59.110.171.69:31032/afmail.nsf');
+          } else if (port == '31035') {
+            //广东
+            ysp.appMain.openWindow('http://59.110.171.69:31036/afmail.nsf');
+          } else if (port == '31059') {
+            //新能源
+            ysp.appMain.openWindow('http://59.110.171.69:31062/afmail.nsf');
+          } else if (port == '31060') {
+            //江苏
+            ysp.appMain.openWindow('http://59.110.171.69:31061/afmail.nsf');
+          } else if (port == '31017') {
+            //招标公司
+            ysp.appMain.openWindow('http://59.110.171.69:31017/afmail.nsf');
+          } else if (port == '31067') {
+            //河北公司
+            ysp.appMain.openWindow('http://59.110.171.69:31068/afmail.nsf');
+          } else if (port == '31042') {
+            //湖南
+            ysp.appMain.openWindow('http://59.110.171.69:31043/afmail.nsf');
+          } else if (port == '31046') {
+            //山西
+            ysp.appMain.openWindow('http://59.110.171.69:31047/afmail.nsf');
+          } else if (port == '31069') {
+            //贵州
+            ysp.appMain.openWindow('http://59.110.171.69:31070/afmail.nsf');
+          } else if (port == '31020') {
+            //吉林
+            ysp.appMain.openWindow('http://59.110.171.69:31023/afmail.nsf');
+          } else if (port == '31039') {
+            //青海
+            ysp.appMain.openWindow('http://59.110.171.69:31039/afmail.nsf');
+          } else if (port == '31033') {
+            //海南
+            ysp.appMain.openWindow('http://59.110.171.69:31034/afmail.nsf');
+          } else if (port == '31051') {
+            //湖北
+            ysp.appMain.openWindow('http://59.110.171.69:31052/afmail.nsf');
+          } else if (port == '31029') {//雄安
+            //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
+          } else if (port == '31037') {
+            //雅江
+            ysp.appMain.openWindow('http://59.110.171.69:31038/afmail.nsf');
+          } else if (port == '31040') {
+            //辽宁
+            ysp.appMain.openWindow('http://59.110.171.69:31041/afmail.nsf');
+          } else if (port == '31048') {
+            //河南
+            ysp.appMain.openWindow('http://59.110.171.69:31049/afmail.nsf');
+          } else if (port == '31063') {
+            //西安热工院
+            ysp.appMain.openWindow('http://59.110.171.69:31063/afmail.nsf');
+          } else if (port == '31064') {
+            //燃料公司
+            ysp.appMain.openWindow('http://59.110.171.69:31065/afmail.nsf');
+          } else if (port == '31056') {
+            //江西
+            ysp.appMain.openWindow('http://59.110.171.69:31057/afmail.nsf');
+          } else if (port == '31071') {
+            //广西
+            ysp.appMain.openWindow('http://59.110.171.69:31072/afmail.nsf');
+          } else if (port == '31008') {
+            //信息公司
+            ysp.appMain.openWindow('http://59.110.171.69:31009/afmail.nsf');
+          }
+        } else {
+          if (port == '31003') {
+            //四川
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31016/afmail.nsf';
+          } else if (port == '31000') {
+            //曹妃甸
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31014/afmail.nsf';
+          } else if (port == '31044') {
+            //华北分公司
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31045/afmail.nsf';
+          } else if (port == '31021') {
+            //宁夏
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31022/afmail.nsf';
+          } else if (port == '31025') {
+            //甘肃
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31050/afmail.nsf';
+          } else if (port == '31015') {
+            //新疆
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31026/afmail.nsf';
+          } else if (port == '31031') {
+            //福建
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31032/afmail.nsf';
+          } else if (port == '31035') {
+            //广东
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31036/afmail.nsf';
+          } else if (port == '31059') {
+            //新能源
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31062/afmail.nsf';
+          } else if (port == '31060') {
+            //江苏
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31061/afmail.nsf';
+          } else if (port == '31017') {
+            //招标公司
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31017/afmail.nsf';
+          } else if (port == '31067') {
+            //河北公司
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31068/afmail.nsf';
+          } else if (port == '31042') {
+            //湖南
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31043/afmail.nsf';
+          } else if (port == '31046') {
+            //山西
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31047/afmail.nsf';
+          } else if (port == '31069') {
+            //贵州
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31070/afmail.nsf';
+          } else if (port == '31020') {
+            //吉林
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31023/afmail.nsf';
+          } else if (port == '31039') {
+            //青海
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31039/afmail.nsf';
+          } else if (port == '31033') {
+            //海南
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31034/afmail.nsf';
+          } else if (port == '31051') {
+            //湖北
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31052/afmail.nsf';
+          } else if (port == '31029') {//雄安
+            //elem.ownerDocument.location.href ='http://59.110.171.69:31052/afmail.nsf';
+          } else if (port == '31037') {
+            //雅江
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31038/afmail.nsf';
+          } else if (port == '31040') {
+            //辽宁
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31041/afmail.nsf';
+          } else if (port == '31048') {
+            //河南
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31049/afmail.nsf';
+          } else if (port == '31063') {
+            //西安热工院
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31063/afmail.nsf';
+          } else if (port == '31064') {
+            //燃料公司
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31065/afmail.nsf';
+          } else if (port == '31056') {
+            //江西
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31057/afmail.nsf';
+          } else if (port == '31071') {
+            //广西
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31072/afmail.nsf';
+          } else if (port == '31008') {
+            //信息公司
+            elem.ownerDocument.location.href = 'http://59.110.171.69:31009/afmail.nsf';
+          }
+        }
       }
     },
     getTemplate_uiControl52_cRxtug: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div onClick={this.handlerClick.bind(this)}>\n        {\n          data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n        }\n      </div>\n    )\n  }\n});";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      { onClick: this.handlerClick.bind(this) },\n      data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  handlerClickEmail(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'email'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div className=\"havebeen-title\">\n      \t<span onClick={this.handlerClick.bind(this)}>\n          {\n            data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n          }\n        </span>\n        <span onClick={this.handlerClickEmail.bind(this)}>\u90AE\u4EF6</span>\n      </div>\n      \n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n  handlerClickEmail: function handlerClickEmail() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'email'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      { className: 'havebeen-title' },\n      React.createElement(\n        'span',\n        { onClick: this.handlerClick.bind(this) },\n        data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n      ),\n      React.createElement(\n        'span',\n        { onClick: this.handlerClickEmail.bind(this) },\n        '\\u90AE\\u4EF6'\n      )\n    );\n  }\n});";
     }
   }, "true_todoList");
 })(window, ysp);

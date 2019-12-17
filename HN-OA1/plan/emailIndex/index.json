@@ -138,45 +138,6 @@
       "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
       "componentType": "custom"
     },
-    "control47_g8J3n5": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "HTML.x-viewport BODY.ext-webkit.ext-chrome DIV.x-tab-panel.x-tab-panel-noborder"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]"
-          },
-          {
-            "id": "shield",
-            "value": {
-              "zIndex": "auto",
-              "width": 751,
-              "height": 416
-            }
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control47_g8J3n5"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": false,
-      "frameXPath": "//frame[@name='Main']<<IFRAME>>//iframe[@name='main_center_frame'][@id='main_center_frame']<<IFRAME>>",
-      "componentType": "custom"
-    },
     "control50_2BeSZd": {
       "location": {
         "data": {
@@ -215,7 +176,6 @@
       "controls": [
         "control42_OU7Vgz",
         "control46_gmXUqe",
-        "control47_g8J3n5",
         "control50_2BeSZd"
       ],
       "anchors": [
@@ -253,21 +213,6 @@
     "page14_5VXXBm": {
       "contextId": "context14_g5Ol8t",
       "layout": [
-        {
-          "id": "uiControl44_pmIqtL",
-          "controlId": "control47_g8J3n5",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl44_pmIqtL",
-                "onGetTemplate": "getTemplate_uiControl44_pmIqtL"
-              }
-            }
-          }
-        },
         {
           "id": "uiControl47_tgxhl3",
           "controlId": "control50_2BeSZd",
