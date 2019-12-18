@@ -10,13 +10,29 @@
       "ignore": []
     },
     "resource_inject": [],
-    "user_agent": " Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)"
+    "user_agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64;   Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR   3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)"
   },
-  "override_urls": [],
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20000\\/htmlb\\/jslib\\/popup_ie6\\.js"
+      ],
+      "target_url": "override/popup_ie6.js",
+      "default_url": "http://ihn.chng.com.cn:20000/htmlb/jslib/popup_ie6.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20000\\/htmlb\\/jslib\\/sapUrMapi_ie6\\.js"
+      ],
+      "target_url": "override/sapUrMapi_ie6.js",
+      "default_url": "http://ihn.chng.com.cn:20000/htmlb/jslib/sapUrMapi_ie6.js"
+    }
+  ],
   "adapter_urls": [],
   "name": "ERP",
   "default_url": "http://ihn.chng.com.cn:20000/irj/portal",
   "scope": "HNERP",
   "start_url": "enterplorer://HNERP/local/index.html",
-  "update_time": 1575252592241
+  "update_time": 1576663154620,
+  "runtime_env": "1webview"
 }
