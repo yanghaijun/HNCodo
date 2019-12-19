@@ -1,0 +1,469 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://ihn.chng.com.cn:20000/irj/portal",
+  "jsFile": "index.js",
+  "chineseName": "首页",
+  "description": "首页页面",
+  "firstPaintEnable": false,
+  "controls": {
+    "control4_82qHM6": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]//DIV[@id=\"DetailedNavigationTree\"]",
+              "descendant::DIV[@id=\"nav_container_div\"]//DIV[@id=\"DetailedNavigationTree\"]",
+              "descendant::DIV[@id=\"DetailedNavigationTree\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TD.urTrcBodyHdr.urTrcBodyBdrHdr DIV.urTrcBodyHdr.urTrcBodyHdrBdr.urTrcBodyHdrPd DIV.SItree"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[2]/TD[3]/DIV[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>",
+      "componentType": "content"
+    },
+    "control5_83bT6g": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "欢迎 BPM接口 帮助 个性化设置 退出"
+              ],
+              "visText": [
+                "欢迎 BPM接口 帮助 个性化设置 退出"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"myTable\"]/TBODY[1]/TR[1]",
+              "descendant::TABLE[@id=\"myTable\"]//TR"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.prtlBody.urFontBaseFam.urScrl TABLE.prtlHeaderCon TABLE.prtlHdrWhl.prtlFocus TBODY TR"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\t    \t\t\n\t    \t\t\t\n\t    \t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t欢迎   BPM接口  \n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t  \n\t\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                      \n                                      帮助\n                                    \t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t  \n  \t\t\t\t\t\t\t\t   \t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\t\n\t\t\t\t\t\t\t   \t\t\t\n\t\t\t\t\t\t\t   \t\t\t个性化设置\n\t\t\t\t\t\t\t   \t\t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t    \t\n        \t        \t  \n            \t            \n                \t        \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t \n                                                  \n                                                  退出\n\t\t                            \t     \n    \t\t\t\t\t\t\t\t\t\t\t    \t\t\t\t\t\t\t  \t\n    \t\t\t\t\t\t\t\t   \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\n  \t\t     \n  \t\t    \t\n\t\t\t\t \t \n\t\t\t\t \n  \t\t    \n\t\t",
+      "frameXPath": ""
+    },
+    "control6_EQiVsm": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "帮助 个性化设置 退出"
+              ],
+              "visText": [
+                "帮助 个性化设置 退出"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::TABLE[@id=\"myTable\"]/TBODY[1]/TR[1]/TD[4]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.prtlHeaderCon TABLE.prtlHdrWhl.prtlFocus TD.prtlHeaderFunctionsTable"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[4]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                      \n                                      帮助\n                                    \t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t  \n  \t\t\t\t\t\t\t\t   \t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\t\n\t\t\t\t\t\t\t   \t\t\t\n\t\t\t\t\t\t\t   \t\t\t个性化设置\n\t\t\t\t\t\t\t   \t\t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t    \t\n        \t        \t  \n            \t            \n                \t        \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t \n                                                  \n                                                  退出\n\t\t                            \t     \n    \t\t\t\t\t\t\t\t\t\t\t    \t\t\t\t\t\t\t  \t\n    \t\t\t\t\t\t\t\t   \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context1_7vbiCf": {
+      "controls": [
+        "control4_82qHM6"
+      ],
+      "anchors": [
+        "control6_EQiVsm"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow4_xITviF": {
+      "toContexts": [
+        {
+          "toContextId": "context1_7vbiCf"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page1_K9Kvgu": {
+      "contextId": "context1_7vbiCf",
+      "layout": [
+        {
+          "id": "uiControl3_nHyFDU",
+          "controlId": "control4_82qHM6",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_7vbiCf": [
+          "公告通知 - SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_7vbiCf": [
+          "ihn.chng.com.cn:20000/irj/portal"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_7vbiCf": [
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenub",
+            "HoverMenub-r",
+            "HoverMenub_",
+            "HoverMenudefef",
+            "HoverMenudefef-r",
+            "HoverMenudefef_",
+            "Imagea",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Link",
+            "Linkad",
+            "Linkbc",
+            "MenuScroll",
+            "MessageBara",
+            "MessageBara-img",
+            "MessageBara-txt",
+            "MessageBaraa",
+            "MessageBaraa-img",
+            "MessageBaraa-txt",
+            "MessageBaraf",
+            "MessageBaraf-img",
+            "MessageBaraf-txt",
+            "MessageBard",
+            "MessageBard-img",
+            "MessageBard-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenubfc",
+            "HoverMenubfc-r",
+            "HoverMenubfc_",
+            "HoverMenuff",
+            "HoverMenuff-r",
+            "HoverMenuff_",
+            "Imageee",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkbf",
+            "Linkdfb",
+            "Linkecc",
+            "MenuScroll",
+            "MessageBarbac",
+            "MessageBarbac-img",
+            "MessageBarbac-txt",
+            "MessageBarcd",
+            "MessageBarcd-img",
+            "MessageBarcd-txt",
+            "MessageBardca",
+            "MessageBardca-img",
+            "MessageBardca-txt",
+            "MessageBareee",
+            "MessageBareee-img",
+            "MessageBareee-txt",
+            "MessageBarfbe",
+            "MessageBarfbe-img",
+            "MessageBarfbe-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_7vbiCf": [
+          [
+            "prtlDivListEntries",
+            "prtlDivScrollerLeft",
+            "prtlDivScrollerRight",
+            "prtlFocus",
+            "prtlHdrBrandImgContainer",
+            "prtlHdrLogoContainer",
+            "prtlHdrSep",
+            "prtlHdrWelcome",
+            "prtlHdrWhl",
+            "prtlHeaderCon",
+            "prtlHeaderFunctionsContainer",
+            "prtlHeaderFunctionsTable",
+            "prtlHeaderNotch",
+            "prtlHeaderNotchImgWidth",
+            "prtlTopNavAct",
+            "prtlTopNavContainer",
+            "prtlTopNavContentSep",
+            "prtlTopNavLnk",
+            "prtlTopNavNotch",
+            "prtlTopNavWhl",
+            "prtlTopNavndAct",
+            "prtlTopNavndLvl-a",
+            "prtlTopNavndLvlRight",
+            "prtlTopNavndLvlWhl",
+            "prtlTopNavstLvl-a",
+            "prtlTopNavstLvl-i",
+            "prtlTopNavstLvl-right",
+            "urBrcAct",
+            "urBrcDiv",
+            "urBrcWhl",
+            "urFontStd",
+            "urGrpBdyWeb",
+            "urGrpWhlWeb",
+            "urLnkDsbl",
+            "urLnkFunction",
+            "urMnu",
+            "urMnuRowDsbl",
+            "urMnuRowOff",
+            "urMnuScrDwn",
+            "urMnuScrUp",
+            "urMnuSub",
+            "urMnuTxt",
+            "urMsgBarErrBtm",
+            "urMsgBarImg",
+            "urMsgBarImgError",
+            "urMsgBarImgOk",
+            "urMsgBarStd",
+            "urMsgBarStdBtm",
+            "urPopUpTrB",
+            "urPopUpTrgInAct",
+            "urPopUpTrgWhl",
+            "urScrl",
+            "urTxtStd"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_7vbiCf": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/LINK",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/SPAN/FORM",
+            "-/SPAN/SCRIPT",
+            "-/SPAN/TABLE",
+            "-/TABLE/TBODY",
+            "A/SPAN/NOBR",
+            "A/SPAN/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/TFOOT",
+            "DIV/TABLE/THEAD",
+            "FORM/TABLE/TBODY",
+            "SPAN/DIV/TABLE",
+            "SPAN/FORM/INPUT-hidden",
+            "SPAN/SPAN/BUTTON",
+            "SPAN/SPAN/DIV",
+            "SPAN/SPAN/SPAN",
+            "SPAN/SPAN/STRONG",
+            "SPAN/TABLE/TBODY",
+            "TABLE/TBODY/SCRIPT",
+            "TABLE/TBODY/TR",
+            "TABLE/TFOOT/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/A/SPAN",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/FORM/INPUT-hidden",
+            "TD/FORM/INPUT-submit",
+            "TD/FORM/SCRIPT",
+            "TD/FORM/TABLE",
+            "TD/SPAN/DIV",
+            "TD/SPAN/IMG",
+            "TD/SPAN/SCRIPT",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/TBODY",
+            "TFOOT/TR/TD",
+            "THEAD/TR/TD",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/FORM",
+            "TR/TD/IFRAME",
+            "TR/TD/IMG",
+            "TR/TD/SCRIPT",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE"
+          ]
+        ]
+      }
+    }
+  }
+}

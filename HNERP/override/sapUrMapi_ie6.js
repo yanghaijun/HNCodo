@@ -805,7 +805,7 @@ var sapUrMapi_Resize_Timeout = null;
 var sapUrMapi_Resize_Set = false;
 function sapUrMapi_Resize_Capture() {
 	if (sapUrMapi_Resize_Set == false) {
-		window.attachEvent("onresize", sapUrMapi_Resize_CheckSize);
+		window.addEventListener("onresize", sapUrMapi_Resize_CheckSize);
 		sapUrMapi_Resize_Set = true;
 	}
 }
@@ -852,7 +852,7 @@ var sapUrMapi_Create_Set = false;
 var sapUrMapi_Create_Timeout = null;
 function sapUrMapi_Create_Capture() {
 	if (!ur_system.createTimeFrameworkControlled && !sapUrMapi_Create_Set) {
-		window.document.attachEvent("onreadystatechange", sapUrMapi_Create_CreateItems);
+		window.document.addEventListener("onreadystatechange", sapUrMapi_Create_CreateItems);
 		sapUrMapi_Create_Set = true;
 	}
 }
@@ -908,7 +908,7 @@ function sapUrMapi_init() {
 	
 	try {
 		if (ptrPopup && ptrPopup.ptrGetSourceWindow(window) == window) {
-			window.attachEvent("onresize",sapUrMapi_PopupMenu_hideAll);
+			window.addEventListener("onresize",sapUrMapi_PopupMenu_hideAll);
 		}
 	} catch (ex) {}	
   oPopup=null;
@@ -935,8 +935,8 @@ function sapUrMapi_init() {
 var _ur_focused=false;
 var _ur_focusedElement=null;
 function ur_attachFocusEvent() {
-  window.detachEvent("onfocus",ur_onfocus);
-  window.attachEvent("onfocus",ur_onfocus);
+  window.removeEventListener("onfocus",ur_onfocus);
+  window.addEventListener("onfocus",ur_onfocus);
 }
 function ur_onfocus(oEvt) {
   if (!_ur_focused && _ur_focusedElement) {
@@ -963,30 +963,30 @@ function ur_getAttD(o,sAtt,def) {
 function sapUrMapi_cleanUp() {
   try {
 		
-		window.detachEvent("onresize", sapUrMapi_Resize_CheckSize);
-    document.detachEvent("onreadystatechange", sapUrMapi_Create_CreateItems);
+		window.removeEventListener("onresize", sapUrMapi_Resize_CheckSize);
+    document.removeEventListener("onreadystatechange", sapUrMapi_Create_CreateItems);
 		
 		
-		window.detachEvent("onfocus",ur_onfocus);
-		window.detachEvent("onblur",ur_onblur);
+		window.removeEventListener("onfocus",ur_onfocus);
+		window.removeEventListener("onblur",ur_onblur);
 		
-		document.detachEvent("onactivate",ur_focus_activate_handler); 
-		document.detachEvent("ondeactivate",sapUrMapi_Focus_hideFocusRect);
-		
-		
-		document.detachEvent("onactivate",ur_defaultbutton_activate_handler); 
-		document.detachEvent("ondeactivate",sapUrMapi_DBTN_hideDBtn);
+		document.removeEventListener("onactivate",ur_focus_activate_handler); 
+		document.removeEventListener("ondeactivate",sapUrMapi_Focus_hideFocusRect);
 		
 		
-		document.detachEvent("onactivate", ur_SCR_activate);
+		document.removeEventListener("onactivate",ur_defaultbutton_activate_handler); 
+		document.removeEventListener("ondeactivate",sapUrMapi_DBTN_hideDBtn);
 		
-		document.detachEvent("onactivate", ur_activateEvents);
+		
+		document.removeEventListener("onactivate", ur_SCR_activate);
+		
+		document.removeEventListener("onactivate", ur_activateEvents);
 		
 		
-	  window.document.detachEvent("onactivate",sapUrMapi_hideDatePicker);
-    document.detachEvent("onmousedown",sapUrMapi_PopupMenu_hideAll);
+	  window.document.removeEventListener("onactivate",sapUrMapi_hideDatePicker);
+    document.removeEventListener("onmousedown",sapUrMapi_PopupMenu_hideAll);
 		
-		window.detachEvent("onresize",sapUrMapi_PopupMenu_hideAll);
+		window.removeEventListener("onresize",sapUrMapi_PopupMenu_hideAll);
     
 	} catch(ex) {
 	}
@@ -1377,8 +1377,8 @@ function sapUrMapi_relaxDomain(integrated, standalone, maxrelax) {
 }
 function ur_attachActivateEvent() {
 	if (ur_system.eventPrefix) {
-		document.detachEvent("onactivate", ur_activateEvents);
-		document.attachEvent("onactivate", ur_activateEvents);
+		document.removeEventListener("onactivate", ur_activateEvents);
+		document.addEventListener("onactivate", ur_activateEvents);
 	}
 }
 function ur_activateEvents(oEvent) {
@@ -1438,10 +1438,10 @@ function ur_getNextHtmlParentByTagName(oDomRef, sTagName){
 	return null;
 };
 function ur_attachEvent(oDomRef, sEventName, fEventHandler) {
-	oDomRef.attachEvent("on"+sEventName, fEventHandler);
+	oDomRef.addEventListener("on"+sEventName, fEventHandler);
 }
 function ur_detachEvent(oDomRef, sEventName, fEventHandler) {
-	oDomRef.detachEvent("on"+sEventName, fEventHandler);
+	oDomRef.removeEventListener("on"+sEventName, fEventHandler);
 }
 function ur_setCapture(oDomRef) {
 	oDomRef.setCapture();
@@ -1732,11 +1732,11 @@ function ur_handle_onITSDynproFocus(oEvt) {
 	}
 }
 function ur_removeDynproFocus() {
-	document.detachEvent("onfocusin",ur_handle_onITSDynproFocus)
+	document.removeEventListener("onfocusin",ur_handle_onITSDynproFocus)
 }
 function ur_attachDynproFocus(pFunction) {
 	ur_onITSDynproFocus = pFunction;
-	document.attachEvent("onfocusin",ur_handle_onITSDynproFocus);
+	document.addEventListener("onfocusin",ur_handle_onITSDynproFocus);
 }
 function sapUrTextSelectionPrevention(oEvt){
 	if(oEvt.shiftKey && oEvt.srcElement) {
@@ -2339,7 +2339,7 @@ function ur_CAL_init(sId) {
   ur_CAL_draw(sId);
   var obj=ur_CAL_getObj(sId);
   
-  obj.ref.attachEvent("onactivate",ur_CAL_activate); 
+  obj.ref.addEventListener("onactivate",ur_CAL_activate); 
   
   
   if (obj.type == "Y" || obj.type == "HM") {
@@ -3365,7 +3365,7 @@ function ur_CAL_Month_initNavigation(obj) {
 		  
 		  if (obj.tabChain[i].navObj.type=="CELL")
 				obj.tabChain[i].navObj.ref.setAttribute("ic",obj.tabChain[i].navObj.entries.length);
-		  obj.tabChain[i].navObj.ref.attachEvent("onkeydown",ur_CAL_Month_itemKeyDown);
+		  obj.tabChain[i].navObj.ref.addEventListener("onkeydown",ur_CAL_Month_itemKeyDown);
 		}
 		obj.monthInit=true;
 	}
@@ -3915,7 +3915,7 @@ function ur_ColumnLayout_getObj(sId) {
 		var obj = new Array();
 		
 		obj.ref = oDomRef;
-		oDomRef.attachEvent("onkeydown",ur_ColumnLayout_keydown);
+		oDomRef.addEventListener("onkeydown",ur_ColumnLayout_keydown);
 		obj.oNavigationList = [];
 	  
     
@@ -4020,9 +4020,9 @@ function ur_ColumnLayout_getObj(sId) {
 			if (oTD.getAttribute("ct") != "CLC") continue;
 			var oStart = oTD.firstChild;
 			var oEnd = oTD.lastChild;
-			oStart.attachEvent("onfocus",ur_ColumnLayout_focus);
+			oStart.addEventListener("onfocus",ur_ColumnLayout_focus);
 			sapUrMapi_setTabIndex(oStart,"0");
-			oEnd.attachEvent("onfocus",ur_ColumnLayout_focusOut);
+			oEnd.addEventListener("onfocus",ur_ColumnLayout_focusOut);
 			sapUrMapi_setTabIndex(oEnd,"0");
 		}
   } 
@@ -4794,8 +4794,8 @@ function sapUrMapi_DataTip_show(sId,sEvtType) {
 		else sapPopupPositionBehavior.MENULEFT;	
 		oPopup.show(true);
 		if(iTo==-1){
-			oPopup.frame.window.document.body.attachEvent("onmouseover",ur_Dt_mouseover);
-			oPopup.frame.window.document.body.attachEvent("onmouseleave",ur_Dt_mouseleave);
+			oPopup.frame.window.document.body.addEventListener("onmouseover",ur_Dt_mouseover);
+			oPopup.frame.window.document.body.addEventListener("onmouseleave",ur_Dt_mouseleave);
 		}
 	}
 	if (iTo>0) {
@@ -4809,8 +4809,8 @@ function sapUrMapi_DataTip_hide(sId) {
 	if(oDT.getAttribute("op")!="true") return; 
 	clearTimeout(_ur_DataTip_timer);
 	if ((oPopup!=null && _ur_DataTip.hover==false)||(oPopup!=null && _ur_DataTip.leave==true)){
-		oPopup.frame.window.document.body.detachEvent("onmouseover",ur_Dt_mouseover);
-		oPopup.frame.window.document.body.detachEvent("onmouseleave",ur_Dt_mouseleave);
+		oPopup.frame.window.document.body.removeEventListener("onmouseover",ur_Dt_mouseover);
+		oPopup.frame.window.document.body.removeEventListener("onmouseleave",ur_Dt_mouseleave);
 		oPopup.hide();
 		_ur_DataTip.hover=false;
 		_ur_DataTip.leave=false;
@@ -4818,8 +4818,8 @@ function sapUrMapi_DataTip_hide(sId) {
 	var oInput = ur_get(sId+"-r");
 		if(oInput!=null){
 		  if(oInput.getAttribute("evt")!=null){
-			oInput.detachEvent("onmouseover",ur_L_mm);
-			oInput.detachEvent("onmouseout",ur_L_ml);
+			oInput.removeEventListener("onmouseover",ur_L_mm);
+			oInput.removeEventListener("onmouseout",ur_L_ml);
 			oInput.removeAttribute("evt");
 		  }
 		}
@@ -5490,7 +5490,7 @@ function sapUrMapi_Focus_showFocusRect(sId) {
 		return;
 	}
 	if (ur_getAttD(oNewActive,"ct","")=="IF") {
-	  oNewActive.firstChild.attachEvent("onactivate",sapUrMapi_Focus_hideFocusRect);
+	  oNewActive.firstChild.addEventListener("onactivate",sapUrMapi_Focus_hideFocusRect);
 	  return;
 	}
   var sType=sapUrMapi_getControlTypeFromObject(oNewActive);
@@ -5628,9 +5628,9 @@ function sapUrMapi_Focus_addFocusRect(sFocusElementId) {
 		oBody.appendChild(oDefaultRight);
 	  sapUrMapi_Resize_AddItem("ur-DBtn-rect", "sapUrMapi_DBTN_showDBtn()");
 		ur_defaultbutton_activate_handler=function (){sapUrMapi_DBTN_showDBtn()};
-		document.attachEvent("onactivate",ur_defaultbutton_activate_handler); 
-		document.attachEvent("ondeactivate",ur_defaultbutton_activate_handler);
-  	document.attachEvent("onactivate",ur_defaultbutton_activate_handler);
+		document.addEventListener("onactivate",ur_defaultbutton_activate_handler); 
+		document.addEventListener("ondeactivate",ur_defaultbutton_activate_handler);
+  	document.addEventListener("onactivate",ur_defaultbutton_activate_handler);
 	}
 	try {
   	sapUrMapi_focusElement(sFocusElementId);
@@ -6570,7 +6570,7 @@ function sapUrMapi_InputField_showDatePicker(sId,iYear,iMonth,iDay,iFirstDayOfWe
 		oDatePicker.inp=sId;
 		oInput.setAttribute("dp","1");
 		oDatePicker.frame.window.document.getElementById("dp").focus();
-		window.document.attachEvent("onactivate",sapUrMapi_hideDatePicker);
+		window.document.addEventListener("onactivate",sapUrMapi_hideDatePicker);
 	sDtPicker=true;
   }
 	sapUrMapi_Focus_hideFocusRect();
@@ -6580,7 +6580,7 @@ function sapUrMapi_hideDatePicker() {
 	if (window.event && window.event.type=="activate" && window.event.srcElement.id.indexOf(oDatePicker.inp+"-btn")>-1) {
 	  return;
 	}
-	window.document.detachEvent("onactivate",sapUrMapi_hideDatePicker);
+	window.document.removeEventListener("onactivate",sapUrMapi_hideDatePicker);
 	if (oDatePicker) {
 		oOldFocus=oDatePicker.source.object;
 		var oInput=ur_get(oDatePicker.inp);
@@ -7392,7 +7392,7 @@ function ur_getWeek(oDate,minDays) {
   return iAbsoluteWeekNum - Math.floor(Date.UTC(iWeekYearNum-1, 11, 31)/x7days) 
 }
 if(!ur_system.is508)
-   window.document.attachEvent("onkeydown", ur_focusRoInp);
+   window.document.addEventListener("onkeydown", ur_focusRoInp);
 function ur_focusRoInp(oEvt){
 	
 	if (oEvt.altKey) return;
@@ -11488,7 +11488,7 @@ if(o.getAttribute("isscroll")=="true") {
 }
 var oPopup;
 function sapUrMapi_PopupMenu_hideAll() {
-  window.document.detachEvent("ondeactivate",closeIfDeactivated);
+  window.document.removeEventListener("ondeactivate",closeIfDeactivated);
   for (var n=0;n<sapPopupMenuLevel+1;n++) {
 		if (subMenus[n]!=null) {
 			subMenus[n].hide();	
@@ -11525,7 +11525,7 @@ function sapUrMapi_PopupMenu_hideAll() {
 		}
   } catch (ex) {}
   window.document.onmousedown=null;
-  document.detachEvent("onmousedown",sapUrMapi_PopupMenu_hideAll);
+  document.removeEventListener("onmousedown",sapUrMapi_PopupMenu_hideAll);
   sapPopupMenuLevel=0;
 }
 function sapUrMapi_PopupMenu_showMenu(idTrigger,idContent,enumAlignment,e,bRemoveOnClose) {
@@ -11559,8 +11559,8 @@ function sapUrMapi_PopupMenu_showMenu(idTrigger,idContent,enumAlignment,e,bRemov
 		oPopup.remove = sapUrMapi_PopupMenu_removeAll;
 	}
   oPopup.show();
-  document.attachEvent("onmousedown",sapUrMapi_PopupMenu_hideAll);
-  window.document.attachEvent("ondeactivate",closeIfDeactivated);
+  document.addEventListener("onmousedown",sapUrMapi_PopupMenu_hideAll);
+  window.document.addEventListener("ondeactivate",closeIfDeactivated);
   
 	var items = oPopup.frame.window.document.body.childNodes.item(0).childNodes.item(0).childNodes.item(0).childNodes.item(1).childNodes;
   var menu = new sapUrMapi_PopupMenu(items);
@@ -15240,10 +15240,10 @@ URPopupWindow.prototype._getCSS = function()
 }
 function helperAddEventListener(element,type, method)
 {
-  if (element.attachEvent)
+  if (element.addEventListener)
 	{
 		
-		element.attachEvent("on" + type, method);
+		element.addEventListener("on" + type, method);
 	}
 	else
 	{
@@ -15252,9 +15252,9 @@ function helperAddEventListener(element,type, method)
 }
 function helperRemoveEventListener(element,type, method)
 {
-	if (element.detachEvent)
+	if (element.removeEventListener)
 	{
-		element.detachEvent("on" + type, method);
+		element.removeEventListener("on" + type, method);
 	}
 	else
 	{
@@ -15769,13 +15769,13 @@ function ur_RTE_IframeLoad(sId,sText)
 	oDoc.body.disabled = true;
 	oDoc.body.contentEditable = true;
 	oDoc.body.disabled = false;
-	oDoc.attachEvent("onkeydown",ur_RTE_keyHandler);
-	oDoc.attachEvent("onkeyup",ur_RTE_keyHandler);
+	oDoc.addEventListener("onkeydown",ur_RTE_keyHandler);
+	oDoc.addEventListener("onkeyup",ur_RTE_keyHandler);
 	
-	oDoc.attachEvent("onclick",ur_RTE_handleClick); 
-	oDoc.attachEvent("onselect",ur_RTE_handleClick);
+	oDoc.addEventListener("onclick",ur_RTE_handleClick); 
+	oDoc.addEventListener("onselect",ur_RTE_handleClick);
 	
-	oDoc.body.attachEvent("onblur",ur_RTE_blur);
+	oDoc.body.addEventListener("onblur",ur_RTE_blur);
 	}catch(ex){};
 	
 }
@@ -17965,7 +17965,7 @@ function sapUrMapi_SapTable_setBorderCollapse(sTableId, bCollapse){
 }
 //** ScreenReader.ie5 **
 
-document.attachEvent("onactivate", ur_SCR_activate);
+document.addEventListener("onactivate", ur_SCR_activate);
 var _ur_cnt=new Array();
 _ur_cnt[ur_type.Group]="";
 _ur_cnt[ur_type.PopupTrigger]="";
@@ -19212,8 +19212,8 @@ function sapUrMapi_Scrollbar_handler(oEvt) {
     if (ur_SCB_src.id.indexOf("-h")>-1) { 
       ur_SCB_handle=ur_SCB_src;
       ur_SCB_handle.setCapture();
-      ur_SCB_handle.attachEvent("onmousemove",sapUrMapi_Scrollbar_handler);
-      ur_SCB_handle.attachEvent("onmouseup",sapUrMapi_Scrollbar_handler);
+      ur_SCB_handle.addEventListener("onmousemove",sapUrMapi_Scrollbar_handler);
+      ur_SCB_handle.addEventListener("onmouseup",sapUrMapi_Scrollbar_handler);
       ur_SCB_handle.firstChild.className="urSCBBtnPressed";
       if (ur_SCB_obj.sdir=="v") {
         ur_SCB_initialHandlePos=parseInt(ur_SCB_src.style.marginTop);
@@ -19255,16 +19255,16 @@ function sapUrMapi_Scrollbar_handler(oEvt) {
         ur_SCB_timer=setInterval("ur_Scrollbar_pageStart(ur_SCB_obj,'down')",300);
       }
       
-      ur_SCB_src.attachEvent("onmouseup",ur_Scrollbar_stopButton);
-      ur_SCB_src.attachEvent("onmouseout",ur_Scrollbar_stopButton);
-      ur_SCB_src.attachEvent("onmousemove",ur_Scrollbar_correctStopValue);
+      ur_SCB_src.addEventListener("onmouseup",ur_Scrollbar_stopButton);
+      ur_SCB_src.addEventListener("onmouseout",ur_Scrollbar_stopButton);
+      ur_SCB_src.addEventListener("onmousemove",ur_Scrollbar_correctStopValue);
     
     } else if ("ebudpn".indexOf(sArea)>-1) {
       ur_SCB_handle=ur_get(o.id+"-h");
       ur_SCB_src.setCapture();
       ur_SCB_src.className=ur_SCB_src.className.replace("urSCBBtn","urSCBBtnPressed");
-      ur_SCB_src.attachEvent("onmouseup",ur_Scrollbar_stopButton);
-      ur_SCB_src.attachEvent("onmouseout",ur_Scrollbar_stopButton);
+      ur_SCB_src.addEventListener("onmouseup",ur_Scrollbar_stopButton);
+      ur_SCB_src.addEventListener("onmouseout",ur_Scrollbar_stopButton);
       ur_SCB_handle.firstChild.className="urSCBBtnPressed";
       if (sArea=="e") {
         ur_Scrollbar_bounce(ur_SCB_obj,"down");
@@ -19321,8 +19321,8 @@ function sapUrMapi_Scrollbar_handler(oEvt) {
   } else if (oEvt.type=="mouseup") {
     if(!ur_SCB_handle) ur_SCB_handle=ur_get(o.id+"-h");
     ur_SCB_handle.releaseCapture();
-    ur_SCB_handle.detachEvent("onmousemove",sapUrMapi_Scrollbar_handler);
-    ur_SCB_handle.detachEvent("onmouseup",sapUrMapi_Scrollbar_handler);
+    ur_SCB_handle.removeEventListener("onmousemove",sapUrMapi_Scrollbar_handler);
+    ur_SCB_handle.removeEventListener("onmouseup",sapUrMapi_Scrollbar_handler);
     ur_SCB_handle.firstChild.className="urSCBBtn";
     ur_SCB_handle=null;
     ur_Scrollbar_applyHandlePos(ur_SCB_obj);
@@ -19381,9 +19381,9 @@ function ur_Scrollbar_stopButton(oEvt) {
   
   if (ur_SCB_src) {
     ur_SCB_src.className=ur_SCB_src.className.replace("urSCBBtnPressed","urSCBBtn");
-    ur_SCB_src.detachEvent("onmouseup",ur_Scrollbar_stopButton);
-    ur_SCB_src.detachEvent("onmouseout",ur_Scrollbar_stopButton);
-    ur_SCB_src.detachEvent("onmousemove",ur_Scrollbar_correctStopValue);
+    ur_SCB_src.removeEventListener("onmouseup",ur_Scrollbar_stopButton);
+    ur_SCB_src.removeEventListener("onmouseout",ur_Scrollbar_stopButton);
+    ur_SCB_src.removeEventListener("onmousemove",ur_Scrollbar_correctStopValue);
     ur_SCB_handle.firstChild.className="urSCBBtn";
     ur_SCB_src.releaseCapture();
     ur_SCB_src=null;
@@ -19485,13 +19485,13 @@ function ur_Scrollbar_getObj(sId) {
     } else {
       
     }
-    oDomRefScrollbar.attachEvent("onresize",ur_Scrollbar_resize);
+    oDomRefScrollbar.addEventListener("onresize",ur_Scrollbar_resize);
     
     if(obj.sdir == "v" && obj.sid) {
     	
     	var oScrolledElement = document.getElementById(obj.sid);
     	if(oScrolledElement && !oScrolledElement.getAttribute("urScrlbar")) {
-    		oScrolledElement.attachEvent("onmousewheel", sapUrMapi_Scrollbar_handler);
+    		oScrolledElement.addEventListener("onmousewheel", sapUrMapi_Scrollbar_handler);
     		oScrolledElement.setAttribute("urScrlbar", obj.id);
     	}
     }
@@ -19708,9 +19708,9 @@ function urSp_addEventListener(node, eventname, listener, useCapturePhase)
 			}
 			else {
 				_eventname = 'on'+eventname;
-				if (node.attachEvent) {
+				if (node.addEventListener) {
 					
-					node.attachEvent(_eventname, listener);
+					node.addEventListener(_eventname, listener);
 					}
 				else {
 					
@@ -19766,9 +19766,9 @@ function urSp_removeEventListener(node, eventname, listener, useCapturePhase)
 			else
 			{
 				_eventname = 'on'+eventname;
-				if (node.detachEvent)
+				if (node.removeEventListener)
 				{ 
-					node.detachEvent(_eventname, listener);
+					node.removeEventListener(_eventname, listener);
 				}
 				else
 				{ 	
