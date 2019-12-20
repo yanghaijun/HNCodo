@@ -8,6 +8,7 @@
   },
   "chineseName": "登录",
   "description": "登录",
+  "firstPaintEnable": false,
   "controls": {
     "control0_LTugRe": {
       "location": {
@@ -197,6 +198,58 @@
       "monitored": false,
       "frameXPath": "",
       "componentType": "button"
+    },
+    "control4_0sbPtX": {
+      "location": {
+        "data": {
+          "tagName": "IMG"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@alt",
+            "prob": 2,
+            "value": {
+              "text": [
+                "Branding Image"
+              ]
+            }
+          },
+          {
+            "id": "img/@src",
+            "prob": 2,
+            "value": {
+              "pathname": "/chng_logon_sd/layout/branding-image.jpg"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::SPAN[@id=\"UMELogon\"]//TABLE[@id=\"tblFrmUI\"]//TABLE[@id=\"tblInnerCnt\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/IMG[1]",
+              "descendant::SPAN[@id=\"UMELogon\"]//TABLE[@id=\"tblFrmUI\"]//TABLE[@id=\"tblInnerCnt\"]//IMG",
+              "descendant::TABLE[@id=\"tblFrmUI\"]//TABLE[@id=\"tblInnerCnt\"]//IMG",
+              "descendant::TABLE[@id=\"tblInnerCnt\"]//IMG"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.prtlBody.urFontBaseFam.urScrl DIV.urBrandImage IMG"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[2]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/IMG[1]"
+          }
+        ]
+      },
+      "roles": "element,image,button",
+      "text": "",
+      "frameXPath": ""
     }
   },
   "contexts": {
@@ -206,7 +259,9 @@
         "control1_OrKWpV",
         "control2_8Qm8bc"
       ],
-      "anchors": [],
+      "anchors": [
+        "control4_0sbPtX"
+      ],
       "urlAnchor": []
     }
   },

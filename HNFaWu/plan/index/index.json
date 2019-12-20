@@ -5,6 +5,7 @@
   "jsFile": "index.js",
   "chineseName": "待办列表",
   "description": "待办列表页面",
+  "firstPaintEnable": false,
   "controls": {
     "control3_swDVPh": {
       "location": {
@@ -55,6 +56,10 @@
         "data": {
           "tagName": "TABLE"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -81,6 +86,45 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control6_oe0AKt": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "帮助 个性化设置 注销"
+              ],
+              "visText": [
+                "帮助 个性化设置 注销"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::TABLE[@id=\"myTable\"]/TBODY[1]/TR[1]/TD[4]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.prtlHeaderCon TABLE.prtlHdrWhl.prtlFocus TD.prtlHeaderFunctionsTable"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[4]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                      \n                                      帮助\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t  \n  \t\t\t\t\t\t\t\t   \t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\t\n\t\t\t\t\t\t\t   \t\t\t\n\t\t\t\t\t\t\t   \t\t\t个性化设置\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t   \t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t    \t\n            \t            \n                \t        \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t\n    \t\t\t\t\t\t\t\t\t\t \n                                                  \n                                                  注销\n    \t\t\t\t\t\t\t\t\t\t\t    \t\t\t\t\t\t\t  \t\n    \t\t\t\t\t\t\t\t   \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t",
+      "frameXPath": ""
     }
   },
   "contexts": {
@@ -89,7 +133,9 @@
         "control3_swDVPh",
         "control5_fISI5U"
       ],
-      "anchors": [],
+      "anchors": [
+        "control6_oe0AKt"
+      ],
       "urlAnchor": []
     }
   },

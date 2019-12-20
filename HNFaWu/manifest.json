@@ -25,9 +25,87 @@
         ]
       }
     ],
-    "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
   },
-  "override_urls": [],
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.portaldesigndata\\/themes\\/portal\\/custom_theme\\/prtl_std\\/prtl_std_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/prtl_std_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.portaldesigndata/themes/portal/custom_theme/prtl_std/prtl_std_sf3.css?v=7.31.7.0.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.portaldesigndata\\/themes\\/portal\\/custom_theme\\/glbl\\/glbl_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/glbl_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.portaldesigndata/themes/portal/custom_theme/glbl/glbl_sf3.css?v=7.31.7.0.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.epcf\\.loader\\/script\\/optimize\\/js13_epcf\\.js\\?.*"
+      ],
+      "target_url": "override/js13_epcf.js",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.epcf.loader/script/optimize/js13_epcf.js?7.310000012"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.urdesigndata\\/themes\\/portal\\/custom_theme\\/ur\\/ur_efc_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/ur_efc_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.urdesigndata/themes/portal/custom_theme/ur/ur_efc_sf3.css?f7b048c5cd5c334874971740c4ed6621?v=7.33.3.26.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.urdesigndata\\/themes\\/portal\\/custom_theme\\/ur\\/ur_fc_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/ur_fc_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.urdesigndata/themes/portal/custom_theme/ur/ur_fc_sf3.css?f7b048c5cd5c334874971740c4ed6621?v=7.33.3.26.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.portaldesigndata\\/themes\\/portal\\/custom_theme\\/nav\\/nav_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/nav_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.portaldesigndata/themes/portal/custom_theme/nav/nav_sf3.css?d27231467b23a1dcba8f7740c4e1c57c?v=7.31.7.0.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.portaldesigndata\\/themes\\/portal\\/custom_theme\\/tree\\/tree_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/tree_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.portaldesigndata/themes/portal/custom_theme/tree/tree_sf3.css?d27231467b23a1dcba8f7740c4e1c57c?v=7.31.7.0.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.portal\\.design\\.urdesigndata\\/themes\\/portal\\/custom_theme\\/ur\\/ur_tray_sf3\\.css\\?.*"
+      ],
+      "target_url": "override/ur_tray_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.portal.design.urdesigndata/themes/portal/custom_theme/ur/ur_tray_sf3.css?f7b048c5cd5c334874971740c4ed6621?v=7.33.3.26.3"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.ui\\.lightspeed\\/themes\\/sap_tradeshow_plus\\/ls\\/ls_sf3\\.css"
+      ],
+      "target_url": "override/ls_sf3.css",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.ui.lightspeed/themes/sap_tradeshow_plus/ls/ls_sf3.css"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.ui\\.lightspeed\\/js\\/domainrelax\\.js\\?.*"
+      ],
+      "target_url": "override/domainrelax.js",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.ui.lightspeed/js/domainrelax.js?jKYejNnF43wd0A2l_9Io9g=="
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.ui\\.lightspeed\\/js\\/lightspeed\\.js\\?.*"
+      ],
+      "target_url": "override/lightspeed.js",
+      "default_url": "http://ihn.chng.com.cn:10001/com.sap.ui.lightspeed/js/lightspeed.js?jKYejNnF43wd0A2l_9Io9g=="
+    }
+  ],
   "adapter_urls": [
     {
       "title": "login",
@@ -44,6 +122,6 @@
   "default_url": "http://ihn.chng.com.cn:10000/irj/portal",
   "scope": "HNFaWu",
   "start_url": "enterplorer://HNFaWu/local/index.html",
-  "update_time": 1575344876229,
+  "update_time": 1576827842270,
   "runtime_env": "1webview"
 }
