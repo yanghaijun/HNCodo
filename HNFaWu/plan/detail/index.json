@@ -1,0 +1,258 @@
+{
+  "version": "0.1",
+  "id": "detail",
+  "targetURL": "http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D99195b3c223211ea98ff00000177047f%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D99195b3c223211ea98ff00000177047f%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=sUOtioM6LVs8k4KC7qKEGg%3D%3D",
+  "jsFile": "index.js",
+  "chineseName": "详情",
+  "description": "详情页面",
+  "controls": {
+    "control7_IImVC3": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control7_IImVC3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control8_7zTv0W": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]",
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TBODY",
+              "descendant::TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TBODY",
+              "descendant::DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.urPgH TABLE.urPgHT2 TABLE.urPgHTTbl TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control8_7zTv0W"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control9_O5wz6J": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.PageHeader\"]//DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.Area_Content\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.HtAllView.Tray\"]/TBODY[2]/TR[1]/TD[1]/SPAN[1]/SPAN[1]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.Area_Content\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.HtAllView.Tray\"]/TBODY[2]/TR[1]/TD[1]/SPAN[1]/SPAN[1]",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.HtAllView.Tray\"]/TBODY[2]/TR[1]/TD[1]/SPAN[1]/SPAN[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              7,
+              8
+            ],
+            "value": "TD.urBorderBox.urTrcBodyBox.urTrcBodyBoxBdr.urTrcBodyBoxPd SPAN.urFlowLayout SPAN.urLinStd"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[11]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/SPAN[1]/SPAN[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control9_O5wz6J"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context2_3svq1k": {
+      "controls": [
+        "control7_IImVC3",
+        "control8_7zTv0W",
+        "control9_O5wz6J"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow7_VElzTr": {
+      "toContexts": [
+        {
+          "toContextId": "context2_3svq1k"
+        }
+      ]
+    },
+    "flow8_e6pOFu": {
+      "fromContextId": "context2_3svq1k",
+      "fromAction": "doAction",
+      "fromControlId": "control7_IImVC3",
+      "toContexts": [
+        {
+          "toContextId": "context2_3svq1k"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2_Kt4cyC": {
+      "contextId": "context2_3svq1k",
+      "layout": [
+        {
+          "id": "uiControl4_09AuTR",
+          "controlId": "control7_IImVC3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl4_09AuTR",
+                "onGetTemplate": "getTemplate_uiControl4_09AuTR"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl6_mWC7LF",
+          "controlId": "control8_7zTv0W",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl6_mWC7LF",
+                "onGetTemplate": "getTemplate_uiControl6_mWC7LF"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl7_Kw2Tcg",
+          "controlId": "control9_O5wz6J",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl7_Kw2Tcg",
+                "onGetTemplate": "getTemplate_uiControl7_Kw2Tcg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_3svq1k": [
+          "SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_3svq1k": [
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D99195b3c223211ea98ff00000177047f%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D99195b3c223211ea98ff00000177047f%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=sUOtioM6LVs8k4KC7qKEGg%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Db76fe1e5252211ea97620000017704e2%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3Db76fe1e5252211ea97620000017704e2%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=sUOtioM6LVs8k4KC7qKEGg%3D%3D"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_3svq1k": [
+          [
+            "NavigationTarget_navForms",
+            "RelativeNavBase",
+            "contentAreaDiv",
+            "divChangeContent",
+            "frmChangeContent",
+            "fullPageDiv",
+            "isolatedWorkArea",
+            "obnNavForm",
+            "obnNavIFrame"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_3svq1k": [
+          [
+            "prtlPrtlFullPageAppBody"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_3svq1k": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "-/SPAN/FORM",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SCRIPT",
+            "SPAN/FORM/INPUT-hidden"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://ihn.chng.com.cn:20002/irj/portal",
+  "jsFile": "index.js",
+  "chineseName": "首页",
+  "description": "首页页面",
+  "controls": {
+    "control4_PAmTZG": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::TD[@id=\"nav_panel_td\"]//DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.navPanFooter DIV.nav TABLE.urTrcWhlHdr"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control4_PAmTZG"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context1_UXMkSO": {
+      "controls": [
+        "control4_PAmTZG"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {},
+  "pages": {
+    "page1_CuPSVb": {
+      "contextId": "context1_UXMkSO",
+      "layout": [
+        {
+          "id": "uiControl3_vTJhaf",
+          "controlId": "control4_PAmTZG",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl3_vTJhaf",
+                "onGetTemplate": "getTemplate_uiControl3_vTJhaf"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context1_UXMkSO": [
+          "公告通知 - SAP NetWeaver Portal",
+          "待办工作 - SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context1_UXMkSO": [
+          "ihn.chng.com.cn:20002/irj/portal"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context1_UXMkSO": [
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenucf",
+            "HoverMenucf-r",
+            "HoverMenucf_",
+            "HoverMenuebeed",
+            "HoverMenuebeed-r",
+            "HoverMenuebeed_",
+            "Imagecfa",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkcafb",
+            "Linkeceaf",
+            "Linkff",
+            "MenuScroll",
+            "MessageBarabcc",
+            "MessageBarabcc-img",
+            "MessageBarabcc-txt",
+            "MessageBaradf",
+            "MessageBaradf-img",
+            "MessageBaradf-txt",
+            "MessageBarbbe",
+            "MessageBarbbe-img",
+            "MessageBarbbe-txt",
+            "MessageBard",
+            "MessageBard-img",
+            "MessageBard-txt",
+            "MessageBareac",
+            "MessageBareac-img",
+            "MessageBareac-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenubfa",
+            "HoverMenubfa-r",
+            "HoverMenubfa_",
+            "HoverMenuf",
+            "HoverMenuf-r",
+            "HoverMenuf_",
+            "Imagedcb",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkadb",
+            "Linkbaaa",
+            "Linkd",
+            "MenuScroll",
+            "MessageBarafea",
+            "MessageBarafea-img",
+            "MessageBarafea-txt",
+            "MessageBardae",
+            "MessageBardae-img",
+            "MessageBardae-txt",
+            "MessageBardcbe",
+            "MessageBardcbe-img",
+            "MessageBardcbe-txt",
+            "MessageBarf",
+            "MessageBarf-img",
+            "MessageBarf-txt",
+            "MessageBarfad",
+            "MessageBarfad-img",
+            "MessageBarfad-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context1_UXMkSO": [
+          [
+            "prtlDivListEntries",
+            "prtlDivScrollerLeft",
+            "prtlDivScrollerRight",
+            "prtlFocus",
+            "prtlHdrBrandImgContainer",
+            "prtlHdrLogoContainer",
+            "prtlHdrSep",
+            "prtlHdrWelcome",
+            "prtlHdrWhl",
+            "prtlHeaderCon",
+            "prtlHeaderFunctionsContainer",
+            "prtlHeaderFunctionsTable",
+            "prtlHeaderNotch",
+            "prtlHeaderNotchImgWidth",
+            "prtlTopNavAct",
+            "prtlTopNavContainer",
+            "prtlTopNavContentSep",
+            "prtlTopNavLnk",
+            "prtlTopNavNotch",
+            "prtlTopNavWhl",
+            "prtlTopNavndAct",
+            "prtlTopNavndLvl-a",
+            "prtlTopNavndLvlRight",
+            "prtlTopNavndLvlWhl",
+            "prtlTopNavstLvl-a",
+            "prtlTopNavstLvl-i",
+            "prtlTopNavstLvl-right",
+            "urBrcAct",
+            "urBrcDiv",
+            "urBrcWhl",
+            "urFontStd",
+            "urGrpBdyWeb",
+            "urGrpWhlWeb",
+            "urLnkDsbl",
+            "urLnkFunction",
+            "urMnu",
+            "urMnuRowDsbl",
+            "urMnuRowOff",
+            "urMnuScrDwn",
+            "urMnuScrUp",
+            "urMnuSub",
+            "urMnuTxt",
+            "urMsgBarErrBtm",
+            "urMsgBarImg",
+            "urMsgBarImgError",
+            "urMsgBarImgOk",
+            "urMsgBarStd",
+            "urMsgBarStdBtm",
+            "urPopUpTrB",
+            "urPopUpTrgInAct",
+            "urPopUpTrgWhl",
+            "urScrl",
+            "urTxtStd"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context1_UXMkSO": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/LINK",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/SPAN/FORM",
+            "-/SPAN/SCRIPT",
+            "-/SPAN/TABLE",
+            "-/TABLE/TBODY",
+            "A/SPAN/NOBR",
+            "A/SPAN/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/TFOOT",
+            "DIV/TABLE/THEAD",
+            "FORM/TABLE/TBODY",
+            "SPAN/DIV/TABLE",
+            "SPAN/FORM/INPUT-hidden",
+            "SPAN/SPAN/BUTTON",
+            "SPAN/SPAN/DIV",
+            "SPAN/SPAN/SPAN",
+            "SPAN/SPAN/STRONG",
+            "SPAN/TABLE/TBODY",
+            "TABLE/TBODY/SCRIPT",
+            "TABLE/TBODY/TR",
+            "TABLE/TFOOT/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/A/SPAN",
+            "TD/DIV/DIV",
+            "TD/DIV/TABLE",
+            "TD/FORM/INPUT-hidden",
+            "TD/FORM/INPUT-submit",
+            "TD/FORM/SCRIPT",
+            "TD/FORM/TABLE",
+            "TD/SPAN/DIV",
+            "TD/SPAN/IMG",
+            "TD/SPAN/SCRIPT",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/TBODY",
+            "TFOOT/TR/TD",
+            "THEAD/TR/TD",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/FORM",
+            "TR/TD/IFRAME",
+            "TR/TD/IMG",
+            "TR/TD/SCRIPT",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE"
+          ]
+        ]
+      }
+    }
+  }
+}

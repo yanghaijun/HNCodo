@@ -1,0 +1,33 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+  },
+  "override_urls": [],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://ERP1/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/irj\\/portal"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:20002/irj/portal"
+      ]
+    }
+  ],
+  "name": "ERP1",
+  "default_url": "http://ihn.chng.com.cn:20002/irj/portal",
+  "scope": "ERP1",
+  "start_url": "enterplorer://ERP1/local/index.html",
+  "update_time": 1577160369001
+}
