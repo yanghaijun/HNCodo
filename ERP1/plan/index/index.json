@@ -11,6 +11,10 @@
         "data": {
           "tagName": "TABLE"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -34,21 +38,85 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control5_T8HU3v": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]",
+              "descendant::DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]",
+              "descendant::TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TD.urTbsWhl DIV.urTbsCnt TABLE.urFontStd"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control5_T8HU3v"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": false,
+      "monitored": true,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
     }
   },
   "contexts": {
     "context1_UXMkSO": {
       "controls": [
-        "control4_PAmTZG"
+        "control4_PAmTZG",
+        "control5_T8HU3v"
       ],
       "anchors": [],
       "urlAnchor": []
     }
   },
-  "flows": {},
+  "flows": {
+    "flow4_s5M4kp": {
+      "toContexts": [
+        {
+          "toContextId": "context1_UXMkSO"
+        }
+      ]
+    },
+    "flow5_CLDy4m": {
+      "fromContextId": "context1_UXMkSO",
+      "fromAction": "doAction",
+      "fromControlId": "control4_PAmTZG",
+      "toContexts": [
+        {
+          "toContextId": "context1_UXMkSO"
+        }
+      ]
+    }
+  },
   "pages": {
     "page1_CuPSVb": {
       "contextId": "context1_UXMkSO",
@@ -67,6 +135,21 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl4_AnNOzG",
+          "controlId": "control5_T8HU3v",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl4_AnNOzG",
+                "onGetTemplate": "getTemplate_uiControl4_AnNOzG"
+              }
+            }
+          }
         }
       ]
     }
@@ -76,7 +159,8 @@
       "contexts": {
         "context1_UXMkSO": [
           "公告通知 - SAP NetWeaver Portal",
-          "待办工作 - SAP NetWeaver Portal"
+          "待办工作 - SAP NetWeaver Portal",
+          "新待办工作 - SAP NetWeaver Portal"
         ]
       }
     },
@@ -203,6 +287,83 @@
             "MessageBarfad",
             "MessageBarfad-img",
             "MessageBarfad-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenudaada",
+            "HoverMenudaada-r",
+            "HoverMenudaada_",
+            "HoverMenue",
+            "HoverMenue-r",
+            "HoverMenue_",
+            "Imagefd",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkadcae",
+            "Linkcdd",
+            "Linkfb",
+            "MenuScroll",
+            "MessageBara",
+            "MessageBara-img",
+            "MessageBara-txt",
+            "MessageBarbeed",
+            "MessageBarbeed-img",
+            "MessageBarbeed-txt",
+            "MessageBaree",
+            "MessageBaree-img",
+            "MessageBaree-txt",
+            "MessageBarefdde",
+            "MessageBarefdde-img",
+            "MessageBarefdde-txt",
+            "MessageBarfe",
+            "MessageBarfe-img",
+            "MessageBarfe-txt",
             "NavigationTarget_navForms",
             "NotchTD",
             "OptionsCover",
