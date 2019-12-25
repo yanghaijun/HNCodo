@@ -122,6 +122,6 @@
   "default_url": "http://ihn.chng.com.cn:10000/irj/portal",
   "scope": "HNFaWu",
   "start_url": "enterplorer://HNFaWu/local/index.html",
-  "update_time": 1577173528953,
+  "update_time": 1577262261282,
   "runtime_env": "1webview"
 }

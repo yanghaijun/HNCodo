@@ -6,19 +6,39 @@ div[data-componentsid="uiControl5_WTvL19"] {
   padding: 10px;
   background: #fff;
 }
+.ysp-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a73cc;
+  color: #fff;
+  height: 50px;
+  padding: 0px 10px;
+  width: 100%;
+}
+.ysp-detail-header > div:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  background: url("../local/img/arrow.png") no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+}
+.ysp-detail-header > div:nth-child(2) {
+  width: 60%;
+}
 .detail_head {
   padding: 10px;
   font-weight: bold;
 }
 .liuchenglishi {
   padding: 10px;
-  background: red;
+  background: #ececec;
 }
 .liuchenglishianniu {
   margin: 10px;
   border-radius: 5px;
   padding: 10px;
-  border: 1px solid red;
+  border: 1px solid #ececec;
   text-align: center;
 }
 .liuchenglishishuju {

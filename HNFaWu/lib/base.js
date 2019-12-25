@@ -17,12 +17,18 @@
     // 以下两个方法用于修改原页面中的错误, 但执行时机不同
     // 当目标页面加载完onload时执行, aWin为当前页面的window对象, doc为当前页面的document对象
     onTargetLoad: function(aWin, doc){
-			//alert('目标页面加载完onload时执行');
+			//debugger;
+      if(aWin.location.href.indexOf("Terminator") > -1){
+        aWin.close();
+      }
     },
 
     // 目标页面加载前执行, aWin为当前页面的window对象, doc为当前页面的document对象
     beforeTargetLoad: function(aWin, doc) {
-			//alert('目标页面加载前执行');
+      //debugger;
+      if(aWin.location.href.indexOf("Terminator") > -1){
+        aWin.close();
+      }
     },
 
     //登录相关接口
