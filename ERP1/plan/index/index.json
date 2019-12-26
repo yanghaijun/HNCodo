@@ -3,6 +3,9 @@
   "id": "index",
   "targetURL": "http://ihn.chng.com.cn:20002/irj/portal",
   "jsFile": "index.js",
+  "requires": {
+    "detail": "../detail/index.json"
+  },
   "chineseName": "首页",
   "description": "首页页面",
   "controls": {
@@ -82,7 +85,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "ignoreVisibility": false,
+      "ignoreVisibility": true,
       "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
@@ -113,6 +116,20 @@
       "toContexts": [
         {
           "toContextId": "context1_UXMkSO"
+        }
+      ]
+    },
+    "flow6_vG0nCS": {
+      "fromContextId": "context1_UXMkSO",
+      "fromAction": "doAction",
+      "fromControlId": "control5_T8HU3v",
+      "toContexts": [
+        {
+          "toContextId": "context1_UXMkSO"
+        },
+        {
+          "toContextId": "context2_5NFwbz",
+          "toModelId": "detail"
         }
       ]
     }
