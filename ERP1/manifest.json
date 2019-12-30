@@ -37,7 +37,15 @@
     "component_match_mode": "polling",
     "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
   },
-  "override_urls": [],
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/com\\.sap\\.portal\\.ui\\.uiservice\\/script\\/crossBrowserLib_nn6\\.js\\?.*"
+      ],
+      "target_url": "override/crossBrowserLib_nn6.js",
+      "default_url": "http://ihn.chng.com.cn:20002/com.sap.portal.ui.uiservice/script/crossBrowserLib_nn6.js?4a26073b84287c8652992538114a7acc"
+    }
+  ],
   "adapter_urls": [
     {
       "title": "login",
@@ -54,5 +62,5 @@
   "default_url": "http://ihn.chng.com.cn:20002/irj/portal",
   "scope": "ERP1",
   "start_url": "enterplorer://ERP1/local/index.html",
-  "update_time": 1577349479256
+  "update_time": 1577695451902
 }
