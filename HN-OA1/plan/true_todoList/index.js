@@ -174,7 +174,7 @@
         }
       }if (type == 'email') {
         var port = elem.ownerDocument.defaultView.location.port;if (top.EAPI.isIOS()) {
-          ysp.appMain.openWindow('http://59.110.171.69:31016/afmail.nsf');if (port == '31003') {
+          if (port == '31003') {
             //四川
             ysp.appMain.openWindow('http://59.110.171.69:31016/afmail.nsf');
           } else if (port == '31000') {
@@ -202,7 +202,6 @@
             //新能源
             ysp.appMain.openWindow('http://59.110.171.69:31062/afmail.nsf');
           } else if (port == '31060') {
-            //江苏
             ysp.appMain.openWindow('http://59.110.171.69:31061/afmail.nsf');
           } else if (port == '31017') {
             //招标公司
@@ -347,8 +346,8 @@
       }
     },
     getTemplate_uiControl52_cRxtug: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  handlerClickEmail(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'email'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div>\n      \t{\n        /*\n        \t<div className=\"havebeen-title\">\n      \t<span onClick={this.handlerClick.bind(this)}>\n          {\n            data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n          }\n        </span>\n        <span onClick={this.handlerClickEmail.bind(this)}>\u90AE\u4EF6</span>\n      </div>\n        \n        */\n      }\n      </div>\n      \n      \n      \n    )\n  }\n});";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n  handlerClickEmail: function handlerClickEmail() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'email'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement('div', null);\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  handlerClickEmail(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'email'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div>\n      \t{\n        \n        \t<div className=\"havebeen-title\">\n      \t<span onClick={this.handlerClick.bind(this)}>\n          {\n            data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n          }\n        </span>\n        <span onClick={this.handlerClickEmail.bind(this)}>\u90AE\u4EF6</span>\n      </div>\n        \n        \n      }\n      </div>\n      \n      \n      \n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n  handlerClickEmail: function handlerClickEmail() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'email'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      'div',\n      null,\n      React.createElement(\n        'div',\n        { className: 'havebeen-title' },\n        React.createElement(\n          'span',\n          { onClick: this.handlerClick.bind(this) },\n          data && data == '31037' ? '' : '\u5DF2\u529E\u5F85\u6536'\n        ),\n        React.createElement(\n          'span',\n          { onClick: this.handlerClickEmail.bind(this) },\n          '\\u90AE\\u4EF6'\n        )\n      )\n    );\n  }\n});";
     }
   }, "true_todoList");
 })(window, ysp);

@@ -445,7 +445,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31095'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31003'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -454,7 +454,7 @@
         //   }
         $.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
             //console.log(data);
-            debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
+            //debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -566,8 +566,10 @@
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
+              }
+              var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; // if (port == '31000') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficehncfd/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+
               // } else if (port == '31039') {
               //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOfficexny/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               // } else {} //elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -609,6 +611,7 @@
               //             } else if (port == '31059') {
               //               //新能源
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31062/afmail.nsf';
+
               //             } else if (port == '31060') {
               //               //江苏
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31061/afmail.nsf';
@@ -657,7 +660,6 @@
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31065/afmail.nsf';
               //             } else if (port == '31056') {
               //               //江西
-
               //               elem.ownerDocument.location.href = 'http://59.110.171.69:31057/afmail.nsf';
               //             } else if (port == '31071') {
               //               //广西
@@ -1025,8 +1027,7 @@
             } // var _web = $(data)[7].querySelector("input[name='fldWebOfficeList']").value;
             // elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
           } });
-      } else if (top.EAPI.isAndroid()) {// var userName = topWin.yspUser.getUserName();
-        // var password = topWin.yspUser.getPassword();
+      } else if (top.EAPI.isAndroid()) {// var password = topWin.yspUser.getPassword();
         // $.ajax({
         // 	url: 'http://59.110.171.69:31003/names.nsf',
         // 	type: 'post',
@@ -1050,7 +1051,7 @@
     },
     getTemplate_uiControl37_8R9wFI: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  render: function() {\n    return (\n      <div>\n      </div>\n    )\n  }\n});';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    return React.createElement(\"div\", null);\n  }\n});";
     }
   }, "loginOA");
 })(window, ysp);

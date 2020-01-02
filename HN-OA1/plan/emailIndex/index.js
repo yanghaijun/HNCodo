@@ -15,10 +15,8 @@
       if (data.eventType == 'getValue') {
         var data = data.dataCustom;$(elem).find('#ext-gen39').find('tbody').eq(data).find('td').find('.x-grid3-cell-inner').eq(3).find('a').click();
       }if (data.eventType == 'click') {
-        var _web = localStorage.allWeb;var _port = localStorage.allPort;var url = 'http://59.110.171.69:' + _port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf'; //elem.ownerDocument.location.href =
-        if (top.EAPI.isIOS()) {
-          //ysp.appMain.openWindow(url);
-          elem.ownerDocument.defaultView.close();
+        var _web = localStorage.allWeb;var _port = localStorage.allPort;var url = 'http://59.110.171.69:' + _port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';if (top.EAPI.isIOS()) {
+          ysp.appMain.back();
         } else {
           ysp.appMain.reloadPage(url);
         }

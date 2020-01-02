@@ -165,6 +165,78 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control47_cTqVQf": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "ordinal": [
+              3,
+              4
+            ],
+            "value": {
+              "text": [
+                "工作移交"
+              ],
+              "visText": [
+                "工作移交"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "ordinal": [
+              4,
+              14
+            ],
+            "value": {
+              "funcName": "void",
+              "redirect": "SPAN[1]/SPAN[1]"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"divData\"]//DIV[@id=\"OperationBar\"]/A[1]/SPAN[1]/SPAN[1]",
+              "descendant::DIV[@id=\"OperationBar\"]/A[1]/SPAN[1]/SPAN[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              4,
+              8
+            ],
+            "value": "A.easyui-linkbutton.l-btn.l-btn-small.l-btn-plain SPAN.l-btn-left.l-btn-icon-left SPAN.l-btn-text.l-btn-font.datagrid-cellbig"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/A[1]/SPAN[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "工作移交",
+      "frameXPath": ""
     }
   },
   "contexts": {
