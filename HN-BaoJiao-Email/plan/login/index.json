@@ -1,0 +1,198 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://59.110.171.69:31093/afmail.nsf/#31093",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登录",
+  "description": "登录",
+  "firstPaintEnable": false,
+  "controls": {
+    "control0_F7Qt2Q": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录请输入您的用户名和密码 \n",
+      "frameXPath": ""
+    },
+    "control1_6tfD7A": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control1_6tfD7A"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control7_DTDpTs": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "服务器登录请输入您的用户名和密码 \n",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context0_2Zf47q": {
+      "controls": [
+        "control1_6tfD7A"
+      ],
+      "anchors": [
+        "control7_DTDpTs"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow0_bvJ5dA": {
+      "toContexts": [
+        {
+          "toContextId": "context0_2Zf47q"
+        }
+      ]
+    },
+    "flow1_fd4qLD": {
+      "fromContextId": "context0_2Zf47q",
+      "fromAction": "doAction",
+      "fromControlId": "control1_6tfD7A",
+      "toContexts": [
+        {
+          "toContextId": "context0_2Zf47q"
+        },
+        {
+          "toContextId": "context1_s9vU5z",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_9Hbsnz": {
+      "contextId": "context0_2Zf47q",
+      "layout": [
+        {
+          "id": "uiControl0_47n95i",
+          "controlId": "control1_6tfD7A",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_47n95i",
+                "onGetTemplate": "getTemplate_uiControl0_47n95i"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_2Zf47q": [
+          "服务器登录",
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_2Zf47q": [
+          "59.110.171.69:31093/afmail.nsf",
+          "59.110.171.69:31093/afmail.nsf/"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_2Zf47q": [
+          [
+            "pw-id",
+            "user-id"
+          ],
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_2Zf47q": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_2Zf47q": [
+          [
+            "-/-/FORM",
+            "-/-/SCRIPT",
+            "-/FORM/TABLE",
+            "FORM/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/BR",
+            "TR/TD/H1",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-password",
+            "TR/TD/INPUT-submit",
+            "TR/TD/INPUT-text",
+            "TR/TD/LABEL"
+          ],
+          [
+            "-/-/FRAME"
+          ]
+        ]
+      }
+    }
+  }
+}

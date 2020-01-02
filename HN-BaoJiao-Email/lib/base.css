@@ -1,0 +1,320 @@
+[data-ysp-modelid='login'] {
+  width: 100%;
+  height: 100vh;
+  background: url("../local/img/bacground.png") no-repeat;
+  background-size: cover;
+}
+.d_denglu {
+  padding: 15% 10%;
+}
+.d_denglu .d_denglu2 {
+  height: 70%;
+  width: 100%;
+}
+.d_denglu .d_denglu2 .logo {
+  width: 100%;
+  height: 80px;
+  background: url("../local/img/logo.png") no-repeat;
+  background-size: contain;
+}
+.d_denglu .d_denglu2 > div:nth-child(2) {
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+.d_denglu .d_denglu2 .userPassword {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #005698;
+  position: relative;
+}
+.d_denglu .d_denglu2 .userPassword .user {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../local/img/user.png") no-repeat;
+  background-size: contain;
+}
+.d_denglu .d_denglu2 .userPassword .password {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../local/img/password.png") no-repeat;
+  background-size: contain;
+}
+.d_denglu .d_denglu2 .userPassword input {
+  width: 100%;
+  height: 100%;
+  background-color: #ceebff;
+  padding-left: 35px;
+  border: none;
+}
+.d_denglu .d_denglu2 .login_alert {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.d_denglu .d_denglu2 .denglu {
+  height: 40px;
+  background: #1d8cff;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.d_shoujian .d_shoujianHeader {
+  width: 100%;
+  height: 45px;
+  background: #288ffb;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+.d_shoujian > div:nth-child(2) {
+  margin-top: 45px;
+  margin-bottom: 65px;
+}
+.d_shoujian > div:nth-child(2) .d_indexList {
+  border-bottom: 1px solid #e3e3e3;
+  margin-left: 5%;
+  padding: 4px 0px;
+  font-size: 15px;
+  position: relative;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(1) {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../local/img/attach.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  left: -4%;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(2) {
+  font-weight: bold;
+  display: inline-block;
+  width: 56%;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(3) {
+  float: right;
+  color: #9b9b9b;
+  display: inline-block;
+  width: 44%;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(4) {
+  display: block;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.d_shoujian > div:nth-child(2) .d_indexList .red {
+  color: #ff3131;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(5) {
+  color: #9b9b9b;
+  display: inline-block;
+  width: 100%;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(6) {
+  position: absolute;
+  top: 4px;
+  left: -4%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background: #ff2700;
+}
+.d_shoujian > div:nth-child(2) .d_indexList > span:nth-child(7) {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url('../local/img/right.png') no-repeat;
+  background-size: contain;
+}
+.d_detail .d_detialBack {
+  width: 100%;
+  height: 45px;
+  background: #2a8ff9;
+  color: #fff;
+  padding: 10px;
+}
+.d_detail .d_detialBack > span:nth-child(1) {
+  display: inline-block;
+  width: 50%;
+}
+.d_detail .d_detialBack > span:nth-child(2) {
+  display: inline-block;
+  width: 50%;
+}
+.d_detail .d_detailTitle {
+  padding: 8px;
+}
+.d_detail .d_detailTitle > div {
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+}
+.d_detail .d_detailTitle > h6 {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  line-height: 30px;
+  font-size: 16px;
+}
+.d_detail .d_fujian {
+  background: #fff;
+  width: 100%;
+  font-size: 13px;
+  margin-top: 150px;
+  padding: 8px;
+}
+.d_detail .d_fujian > div {
+  background: #f6f6f8;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.d_detail .d_fujian > div > div:nth-child(1) {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.d_detail .d_fujian > div > div:nth-child(1) .p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('../local/img/pdf.png') no-repeat;
+  background-size: contain;
+}
+.d_detail .d_fujian > div > div:nth-child(1) .w {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('../local/img/word.png') no-repeat;
+  background-size: contain;
+}
+.d_detail .d_fujian > div > div:nth-child(1) .e {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('../local/img/excel.png') no-repeat;
+  background-size: contain;
+}
+.d_detail .d_fujian > div > div:nth-child(1) > span:nth-child(2) {
+  width: 90%;
+  display: inline-block;
+  line-height: 30px;
+  padding-left: 15%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-pages {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+.ysp-pages div:first-child {
+  display: flex;
+}
+.ysp-pages div:first-child span:nth-child(1) {
+  padding-right: 10px;
+}
+.ysp-pages .oneGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowL.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .onNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowL11.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .twoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow1.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .twoNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow12.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages div:nth-child(2) {
+  display: flex;
+}
+.ysp-pages div:nth-child(2) span:nth-child(1) {
+  padding-right: 10px;
+}
+.ysp-pages .threeGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow2.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .threeNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrow13.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .fourGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowR.png") no-repeat;
+  background-size: contain;
+}
+.ysp-pages .fourNoGo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("../local/img/arrowR14.png") no-repeat;
+  background-size: contain;
+}

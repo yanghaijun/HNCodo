@@ -1,0 +1,69 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "unadapted": {
+      "timeout": 300000,
+      "rules": [
+        {
+          "match": "*",
+          "type": "block"
+        }
+      ]
+    },
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/59\\.110\\.171\\.69:31093\\/afmail\\.nsf\\/#.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
+  },
+  "override_urls": [],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://HN-BaoJiao-Email/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31093\\/afmail\\.nsf\\/#.*"
+      ],
+      "demo": [
+        "http://59.110.171.69:31093/afmail.nsf/#31093"
+      ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://HN-BaoJiao-Email/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31093\\/afmail\\.nsf\\/v_Key_frmView\\/.*"
+      ],
+      "demo": [
+        "http://59.110.171.69:31093/afmail.nsf/v_Key_frmView/2781985C4B886B5348257EEB0024C19F?OpenDocument&RefMenuID=7907BC8CBEEF621648257EEB0025FDE3&RefMenuTitle=%E6%94%B6%E4%BB%B6%E7%AE%B1"
+      ]
+    }
+  ],
+  "name": "八角电厂邮件",
+  "default_url": "http://59.110.171.69:31093/afmail.nsf/#31093",
+  "scope": "HN-BaoJiao-Email",
+  "start_url": "enterplorer://HN-BaoJiao-Email/local/index.html",
+  "update_time": 1577929596791,
+  "runtime_env": "1webview"
+}
