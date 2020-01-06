@@ -377,6 +377,7 @@
                   var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
                   localStorage.allWeb = _web;
                   localStorage.allPort = port;
+                  localStorage.removeItem("inputCode");
                   aWin.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
                 } else {
                   alert('登录失败！请重新登录！');

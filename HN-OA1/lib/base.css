@@ -941,3 +941,8 @@ div[data-ysp-modelid="emailIndex"] {
   overflow: auto;
   padding: 10px 0px;
 }
+.havebeen-email .havebeen-email-button {
+  text-align: right;
+  padding: 10px 30px;
+  background: #f0f8ff;
+}

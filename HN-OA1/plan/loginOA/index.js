@@ -9,10 +9,16 @@
         //var obj3 = {};
         obj3.text = t.textContent;
       });data.push(obj3);var obj4 = {};var port = elem.ownerDocument.defaultView.location.port;
-      if (top.EAPI.isIOS()) {
-        var password = top.yspUser.getPassword();if (password == "" || password == undefined || password == null) {
+      var password;if (top.EAPI.isIOS()) {
+        password = top.yspUser.getPassword();
+      }if (top.EAPI.isAndroid()) {
+        password = huaneng.getPassword();
+      }if (top.EAPI.isIOS() || top.EAPI.isAndroid()) {
+        if (password == "" || password == undefined || password == null) {
           if (port == '31003') {
             if (localStorage.password == undefined || localStorage.username == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.password || localStorage.username) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -20,223 +26,7 @@
           } else if (port == '31000') {
             if (localStorage.caofeidianP == undefined || localStorage.caofeidianU == undefined) {
               obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31044') {
-            if (localStorage.huabeiP == undefined || localStorage.huabeiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31021') {
-            if (localStorage.ningxiaP == undefined || localStorage.ningxiaU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31025') {
-            if (localStorage.gansuP == undefined || localStorage.gansuU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31015') {
-            if (localStorage.xinjiangP == undefined || localStorage.xinjiangU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31031') {
-            if (localStorage.fujianP == undefined || localStorage.fujianU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31035') {
-            if (localStorage.guangdongP == undefined || localStorage.guangdongU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31059') {
-            if (localStorage.xinnengyuanP == undefined || localStorage.xinnengyuanU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31060') {
-            if (localStorage.jiangsuP == undefined || localStorage.jiangsuU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31017') {
-            if (localStorage.zhaobiaoP == undefined || localStorage.zhaobiaoU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31067') {
-            if (localStorage.hebeiP == undefined || localStorage.hebeiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31042') {
-            if (localStorage.hunanP == undefined || localStorage.hunanU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31046') {
-            if (localStorage.shanxiP == undefined || localStorage.shanxiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31069') {
-            if (localStorage.guizhouP == undefined || localStorage.guizhouU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31020') {
-            if (localStorage.jilinP == undefined || localStorage.jilinU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31039') {
-            if (localStorage.qinghaiP == undefined || localStorage.qinghaiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31033') {
-            if (localStorage.hainanP == undefined || localStorage.hainanU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31051') {
-            if (localStorage.hubeiP == undefined || localStorage.hubeiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31029') {
-            if (localStorage.xionganP == undefined || localStorage.xionganU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31037') {
-            if (localStorage.yajiangP == undefined || localStorage.yajiangU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31040') {
-            if (localStorage.liaoningP == undefined || localStorage.liaoningU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31048') {
-            if (localStorage.henanP == undefined || localStorage.henanU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31063') {
-            if (localStorage.xianregongyuanP == undefined || localStorage.xianregongyuanU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31064') {
-            if (localStorage.ranliaoP == undefined || localStorage.ranliaoU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31056') {
-            if (localStorage.jiangxiP == undefined || localStorage.jiangxiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31071') {
-            if (localStorage.guangxiP == undefined || localStorage.guangxiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31095') {
-            if (localStorage.shandongP == undefined || localStorage.shandongU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31008') {
-            if (localStorage.xinxigongsiP == undefined || localStorage.xinxigongsiU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31058') {
-            if (localStorage.zhiyeP == undefined || localStorage.zhiyeU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31104') {
-            if (localStorage.nengjiaoP == undefined || localStorage.nengjiaoU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31007') {
-            if (localStorage.heilongjiangP == undefined || localStorage.heilongjiangU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31110') {
-            if (localStorage.chongqingP == undefined || localStorage.chongqingU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31112') {
-            if (localStorage.caiwuP == undefined || localStorage.caiwuU == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          }if (localStorage.inputCode) {
-            obj4.display = "block";
-          } else {
-            obj4.display = "none";
-          }
-        } else {
-          if (localStorage.inputCode) {
-            obj4.display = "block";
-          } else {
-            obj4.display = "none";
-          }
-        }
-      } else if (top.EAPI.isAndroid()) {
-        var password = huaneng.getPassword();if (password == "" || password == undefined || password == null) {
-          if (port == '31003') {
-            if (localStorage.password == undefined || localStorage.username == undefined) {
-              obj4.display = "block";
-            } else {
-              obj4.display = "none";
-            }
-          } else if (port == '31000') {
-            if (localStorage.caofeidianP == undefined || localStorage.caofeidianU == undefined) {
+            } else if ((localStorage.caofeidianP || localStorage.caofeidianU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -244,11 +34,15 @@
           } else if (port == '31044') {
             if (localStorage.huabeiP == undefined || localStorage.huabeiU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.huabeiP || localStorage.huabeiU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31021') {
             if (localStorage.ningxiaP == undefined || localStorage.ningxiaU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.ningxiaP || localStorage.ningxiaU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -256,11 +50,15 @@
           } else if (port == '31025') {
             if (localStorage.gansuP == undefined || localStorage.gansuU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.gansuP || localStorage.gansuU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31015') {
             if (localStorage.xinjiangP == undefined || localStorage.xinjiangU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.xinjiangP || localStorage.xinjiangU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -268,11 +66,15 @@
           } else if (port == '31031') {
             if (localStorage.fujianP == undefined || localStorage.fujianU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.fujianP || localStorage.fujianU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31035') {
             if (localStorage.guangdongP == undefined || localStorage.guangdongU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.guangdongP || localStorage.guangdongU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -280,11 +82,15 @@
           } else if (port == '31059') {
             if (localStorage.xinnengyuanP == undefined || localStorage.xinnengyuanU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.xinnengyuanP || localStorage.xinnengyuanU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31060') {
             if (localStorage.jiangsuP == undefined || localStorage.jiangsuU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.jiangsuP || localStorage.jiangsuU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -292,11 +98,15 @@
           } else if (port == '31017') {
             if (localStorage.zhaobiaoP == undefined || localStorage.zhaobiaoU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.zhaobiaoP || localStorage.zhaobiaoU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31067') {
             if (localStorage.hebeiP == undefined || localStorage.hebeiU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.hebeiP || localStorage.hebeiU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -304,11 +114,15 @@
           } else if (port == '31042') {
             if (localStorage.hunanP == undefined || localStorage.hunanU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.hunanP || localStorage.hunanU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31046') {
             if (localStorage.shanxiP == undefined || localStorage.shanxiU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.shanxiP || localStorage.shanxiU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -316,11 +130,15 @@
           } else if (port == '31069') {
             if (localStorage.guizhouP == undefined || localStorage.guizhouU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.guizhouP || localStorage.guizhouU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31020') {
             if (localStorage.jilinP == undefined || localStorage.jilinU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.jilinP || localStorage.jilinU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -328,11 +146,15 @@
           } else if (port == '31039') {
             if (localStorage.qinghaiP == undefined || localStorage.qinghaiU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.qinghaiP || localStorage.qinghaiU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31033') {
             if (localStorage.hainanP == undefined || localStorage.hainanU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.hainanP || localStorage.hainanU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -340,11 +162,15 @@
           } else if (port == '31051') {
             if (localStorage.hubeiP == undefined || localStorage.hubeiU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.hubeiP || localStorage.hubeiU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31029') {
             if (localStorage.xionganP == undefined || localStorage.xionganU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.xionganP || localStorage.xionganU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -352,11 +178,15 @@
           } else if (port == '31037') {
             if (localStorage.yajiangP == undefined || localStorage.yajiangU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.yajiangP || localStorage.yajiangU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31040') {
             if (localStorage.liaoningP == undefined || localStorage.liaoningU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.liaoningP || localStorage.liaoningU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -364,11 +194,15 @@
           } else if (port == '31048') {
             if (localStorage.henanP == undefined || localStorage.henanU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.henanP || localStorage.henanU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31063') {
             if (localStorage.xianregongyuanP == undefined || localStorage.xianregongyuanU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.xianregongyuanP || localStorage.xianregongyuanU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -376,11 +210,15 @@
           } else if (port == '31064') {
             if (localStorage.ranliaoP == undefined || localStorage.ranliaoU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.ranliaoP || localStorage.ranliaoU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31056') {
             if (localStorage.jiangxiP == undefined || localStorage.jiangxiU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.jiangxiP || localStorage.jiangxiU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -388,11 +226,15 @@
           } else if (port == '31071') {
             if (localStorage.guangxiP == undefined || localStorage.guangxiU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.guangxiP || localStorage.guangxiU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31095') {
             if (localStorage.shandongP == undefined || localStorage.shandongU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.shandongP || localStorage.shandongU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -400,11 +242,15 @@
           } else if (port == '31008') {
             if (localStorage.xinxigongsiP == undefined || localStorage.xinxigongsiU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.xinxigongsiP || localStorage.xinxigongsiU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31058') {
             if (localStorage.zhiyeP == undefined || localStorage.zhiyeU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.zhiyeP || localStorage.zhiyeU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -412,11 +258,15 @@
           } else if (port == '31104') {
             if (localStorage.nengjiaoP == undefined || localStorage.nengjiaoU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.nengjiaoP || localStorage.nengjiaoU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31007') {
             if (localStorage.heilongjiangP == undefined || localStorage.heilongjiangU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.heilongjiangP || localStorage.heilongjiangU) && localStorage.inputCode) {
               obj4.display = "block";
             } else {
               obj4.display = "none";
@@ -424,34 +274,27 @@
           } else if (port == '31110') {
             if (localStorage.chongqingP == undefined || localStorage.chongqingU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.chongqingP || localStorage.chongqingU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
           } else if (port == '31112') {
             if (localStorage.caiwuP == undefined || localStorage.caiwuU == undefined) {
               obj4.display = "block";
+            } else if ((localStorage.caiwuP || localStorage.caiwuU) && localStorage.inputCode) {
+              obj4.display = "block";
             } else {
               obj4.display = "none";
             }
-          }if (localStorage.inputCode) {
-            obj4.display = "block";
-          } else {
-            obj4.display = "none";
           }
-        } else {
-          if (localStorage.inputCode) {
-            obj4.display = "block";
-          } else {
-            obj4.display = "none";
-          }
+        } else if (password && localStorage.inputCode) {
+          obj4.display = "block"; // if (localStorage.inputCode) {
+          //   obj4.display = "block";
+          // } else {
+          //   obj4.display = "none";
+          // }
         }
-      } else {// if(localStorage.password){
-        // obj4.display = "none";
-        // console.log(localStorage.password)
-        // }else if(!localStorage.password){
-        // obj4.display = "block"; 
-        // }
-        // obj4.display = "block";
       }data.push(obj4);return data;
     }, doAction_uiControl0_acry19: function (data, elem) {
       if (data.eventType == "userName") {
@@ -545,8 +388,7 @@
                 localStorage.henanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.henanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31063') {
                 //西安热工院
-                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xianregongyuanP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xianregongyuanU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31064') {
                 //燃料公司
                 localStorage.ranliaoP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.ranliaoU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -558,12 +400,10 @@
                 localStorage.guangxiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.guangxiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31095') {
                 //山东
-                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.shandongP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.shandongU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31008') {
                 //信息公司
-                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.xinxigongsiP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.xinxigongsiU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31058') {
                 //置业
                 localStorage.zhiyeP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhiyeU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -575,7 +415,8 @@
                 localStorage.heilongjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.heilongjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31110') {
                 //重庆
-                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31112') {
                 //财务
                 localStorage.caiwuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.caiwuU = $(elem).find('.login_form_text').eq(0).find('input').val();
@@ -583,7 +424,8 @@
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';ysp.appMain.hideLoading();
+              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");
+              elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';ysp.appMain.hideLoading();
             } else {
               ysp.appMain.hideLoading();alert('登录失败，请重新登录！');
             }
@@ -619,7 +461,7 @@
     },
     getTemplate_uiControl0_acry19: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n         \n      </div>\n    )\n  }\n});\n';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      )\n    );\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \"login\"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:\"login\"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: \"loginButton\",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'userName',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'passWorld',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'ButtonN'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: '123'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      { className: \"D_login\" },\n      React.createElement(\n        \"div\",\n        { className: \"loginTitle\" },\n        React.createElement(\"div\", null),\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF\"\n        )\n      ),\n      React.createElement(\n        \"div\",\n        { style: { display: data[3].display }, ref: \"myInput\" },\n        React.createElement(\n          \"div\",\n          { className: \"loginText\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginTextp\" },\n          React.createElement(\"span\", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"freeow-br\" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                \"p\",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          \"div\",\n          { className: \"loginButton\" },\n          React.createElement(\n            \"button\",\n            { onClick: me.ButtonN },\n            \"\\u767B\\u5F55\"\n          )\n        )\n      )\n    );\n  }\n});";
     },
     getData_control38_UpuyAZ: function (elem) {
       ;var port = elem.ownerDocument.defaultView.location.port;;if (top.EAPI.isIOS()) {
@@ -835,7 +677,7 @@
                   var tag = dd[i].tagName;if (tag == 'FORM') {
                     dom = dd[i];
                   }
-                }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else {
                 alert('登录失败！请重新登录！');localStorage.inputCode = true;
               } // var _web = $(data)[7].querySelector("input[name='fldWebOfficeList']").value;
