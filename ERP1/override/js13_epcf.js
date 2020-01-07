@@ -11,7 +11,6 @@ UP : 5,
 ERICSSON: 6,
 MSPIE : 7,
 PALM : 8,
-CHROME : 9,
 OTHER_PLATFORM : 0,
 NT_PLATFORM : 1,
 WIN_PLATFORM : 2,
@@ -165,7 +164,7 @@ if(opt.indexOf("DESKTOP")>=0) optstring += "D";
 optstring += "C";
 if(optstring == "" || optstring.length<2) optstring="NDC";}
 var retVal;
-if(EPCM.getUAType() == EPCM.MSIE || EPCM.isModalDialogSupported()){
+if(EPCM.getUAType() == EPCM.MSIE || (window.showModalDialog && EPCM.getUAType() != EPCM.SAFARI)){
 var uipUrl=this._private.uipPopupComp + "?optstring=" + optstring;
 retVal="" + window.showModalDialog( uipUrl, null, this._private.uipPopupCompSize );
 switch(retVal){
@@ -185,10 +184,6 @@ case "2": return "DESKTOP";
 case "0": return "DESKTOP";
 default : return "DESKTOP";}
 }
-EPCM.isModalDialogSupported=function (){
-return window.showModalDialog &&
-EPCM.getUAType() != EPCM.SAFARI &&
-EPCM.getUAType() != EPCM.CHROME;}
 EPCM.SHOW_INPLACE=0;
 EPCM.SHOW_EXTERNAL=1;
 EPCM.SHOW_EXTERNAL_PORTAL=2;
@@ -207,7 +202,6 @@ if(EPCM.getGlobalDirty() ){
 switch( EPCM.popupOnUnsavedData() ){
 case "NEWWIN": openNewWin=true; mode=2; break;
 case "DESKTOP": openNewWin=false; break;
-case "CANCEL": return true;
 default: return false;}
 }}
 else{
@@ -811,7 +805,7 @@ EPCM.eventDistribute=function( consumers, eventObject, resultArray){
 var isRetValCollect=(resultArray != null);
 var eListener
 var retVal;
-for (var idx=0;idx<consumers.length;idx++){
+for (var idx in consumers){
 eListener=consumers[idx];
 retVal=null;
 try{
@@ -898,19 +892,6 @@ EPCM._private.implDSM.log("Client: ClientWindowId Registered \r\n" + wid, true )
 this.popupReceiptWindowId(wid);
 EPCM._private.implDSM.registerWindowId(wid);
 this.notifyMonitorWindowId(wid);}
-EPCM.DSM.registerAll=function(iVuID,key,tstamp){
-this.registerFullKey(key,tstamp);
-this.registerKeyByiViewID(iVuID,key,tstamp);}
-EPCM.DSM.registerKeyByiViewID=function(iVuID,key,tstamp){
-if (tstamp == null || tstamp == ""){
-this.registerKeyStoreByiViewID(iVuID,key);}
-else{
-this.registerAttrKeyStoreByiViewID(iVuID, this.constructAttrKey(key,tstamp));}
-}
-EPCM.DSM.registerKeyStoreByiViewID=function(iVuID,aKey){
-EPCM._private.implDSM.registerKeyStoreByiViewID(iVuID,aKey);}
-EPCM.DSM.registerAttrKeyStoreByiViewID=function(iVuID,aKey){
-EPCM._private.implDSM.registerAttrKeyStoreByiViewID(iVuID,aKey);}
 EPCM.DSM.removeSessionByGUSID=function (GUSID){ EPCM._private.implDSM.removeSessionByGUSID(GUSID);}
 EPCM.DSM.removeSessionKey=function (skey){
 EPCM._private.implDSM.removeSessionKey(skey);}
@@ -936,9 +917,6 @@ EPCM._private.implDSM.terminateByKey(skey,cmd);}
 EPCM.DSM.terminateByAttrKey=function(akey,cmdOrBool){
 var cmd=this.resolveCmd(cmdOrBool);
 EPCM._private.implDSM.terminateByAttrKey(akey,cmd);}
-EPCM.DSM.terminateByiViewID=function(iVuID,cmdOrBool){
-var cmd=this.resolveCmd(cmdOrBool);
-EPCM._private.implDSM.terminateByiViewID(iVuID,cmd);}
 EPCM.DSM.terminateByWindowId=function(wid,cmdOrBool){
 var cmd=this.resolveCmd(cmdOrBool);
 EPCM._private.implDSM.terminateByWindowId(wid,cmd);}
@@ -997,10 +975,8 @@ return this.constructAttrKey(key,tstamp);}
 EPCM.DSM3={
 SessStore : [],
 KeyStore : [],
-AttrKeyStore : [],
+AttrKeyStore: [],
 WinIdStore : [],
-iViewKeyStore : [],
-iViewAttrKeyStore : [],
 SerPropString: "",
 SerKeyString : "",
 AttrKeyString: "",
@@ -1009,14 +985,12 @@ SerPropSepar: ["#","&","="],
 SerKeySepar: ["&"],
 AttrKeySepar: ["#","&"],
 WinIdSepar: ["&"],
-NavigateAcrossSubFrames: false,
 LogoffStarted: false,
 NodeOpStarted: false,
 TerminatorUrl: null,
 FormName : "",
 FormId : "",
 ParamMapId : "",
-dsmMethodGetKey : "",
 DBGFLG_URN : "urn:com.sapportals.portal:dsm",
 DBGFLG_NAME: "debug",
 ForcedUserDebug: false,
@@ -1045,17 +1019,10 @@ this.TerminatorUrl=cfg.TerminatorURL;
 this.FormName="DSMSender" + EPCM.getInstanceId();
 this.FormId=this.FormName;
 this.ParamMapId="com.sap.portal.dsm.ParamMap:"+ EPCM.getInstanceId();
-this.dsmMethodGetKey=cfg.dsmMethodGetKey;
 var isHttp=(window.location.protocol == "http:");
-var isNavSubFrms=cfg.NavAcrossSubFramesUrl;
-if (isNavSubFrms == "disabled"){
 var smartEmptyUrl=(EPCM.getUAType() == EPCM.MSIE) ? this.EmptyAutoScript : "about:blank";
 this.EmptyUrlWindow=isHttp ? smartEmptyUrl : cfg.WinEmptyUrl;
-this.EmptyUrlFrame=isHttp ? "about:blank" : cfg.WinEmptyUrl;}
-else{
-this.NavigateAcrossSubFrames=true;
-this.EmptyUrlWindow=cfg.NavAcrossSubFramesUrl;
-this.EmptyUrlFrame=cfg.NavAcrossSubFramesUrl;}
+this.EmptyUrlFrame=isHttp ? "about:blank" : cfg.WinEmptyUrl;
 this.KeepAliveActive=cfg.KeepAliveActive;
 this.KeepAliveDelta=cfg.KeepAliveDelta * 1000;
 this.KeepAliveStopAfter=cfg.KeepAliveStopAfter * 1000;
@@ -1115,17 +1082,6 @@ var loWid=new String(wid)
 this.WinIdStore[loWid]=loWid;
 this.WinIdString=this.computeWinIdString();
 this.keepAliveNewDataArrived();}
-EPCM.DSM3.registerKeyStoreByiViewID=function(iVuID,aKey){
-var currKey=this.iViewKeyStore[iVuID];
-if(currKey == null || currKey == 'undefined'){
-this.iViewKeyStore[iVuID]=aKey;}
-}
-EPCM.DSM3.registerAttrKeyStoreByiViewID=function(iVuID,aKey){
-var currKey=this.iViewAttrKeyStore[iVuID];
-if(currKey == null || currKey == 'undefined'){
-var akeyCopy=this.copyAttrKey(aKey);
-this.iViewAttrKeyStore[iVuID]=akeyCopy;}
-}
 EPCM.DSM3.removeSessionByGUSID=function (GUSID){
 this.SessStore[GUSID]=null;
 this.SerPropString=this.computeSerPropString();}
@@ -1273,18 +1229,6 @@ if (store[elem] ){
 arr[elem]=formatterFunc(store[elem]);}
 }
 return arr;}
-EPCM.DSM3.terminateByiViewID=function(iVuID,cmd){
-var currKey=this.iViewKeyStore[iVuID];
-if(currKey != null && currKey != 'undefined'){
-this.terminateByKey(currKey,cmd);
-this.iViewKeyStore[iVuID]=null;
-return;}
-currKey=this.iViewAttrKeyStore[iVuID];
-if(currKey != null && currKey != 'undefined'){
-this.terminateByAttrKey(currKey,cmd);
-this.iViewAttrKeyStore[iVuID]=null;
-return;}
-}
 EPCM.DSM3.getAllToArray=function(){
 return this.getToArrayGeneric( this.SessStore, this.copySessInfo );}
 EPCM.DSM3.getAllKeysToArray=function(){
@@ -1370,13 +1314,12 @@ if(sl.SerKeyString.length > 0){
 ms.SerKeyString += this.SerKeySepar[0] + sl.SerKeyString;}
 if(sl.AttrKeyString.length > 0){
 ms.AttrKeyString += this.AttrKeySepar[0] + sl.AttrKeyString;}
-if(sl.WinIdString && sl.WinIdString.length > 0){
+if(sl.WinIdString.length > 0){
 ms.WinIdString += this.WinIdSepar[0] + sl.WinIdString;}
 sl.clearData();}
 EPCM.DSM3.clearData=function(){
 this.SerPropString=""; this.SerKeyString=""; this.AttrKeyString=""; this.WinIdString ="";
-this.SessStore=[]; this.KeyStore=[]; this.AttrKeyStore=[];this.WinIdStore=[];
-this.iViewKeyStore=[]; this.iViewAttrKeyStore=[];}
+this.SessStore=[]; this.KeyStore=[]; this.AttrKeyStore=[];this.WinIdStore=[];}
 EPCM.DSM3.isDataToSend=function(x){
 return((x.SerPropString && x.SerPropString != "")
 || (x.SerKeyString && x.SerKeyString != "")
@@ -1386,93 +1329,26 @@ EPCM.DSM3.getHiddenStyleAttribute=function(){
 switch(EPCM.getUAType()){
 case EPCM.MOZILLA :
 case EPCM.NETSCAPE:
-case EPCM.SAFARI :
-case EPCM.CHROME : return "position:absolute;top:0px;left:0px;visibility:hidden;";
+case EPCM.SAFARI : return "position:absolute;top:0px;left:0px;visibility:hidden;";
 default : return "DISPLAY:none";}
 }
 EPCM.DSM3.isXHRPostHackNeeded=function(){
 switch(EPCM.getUAType()){
 case EPCM.MOZILLA :
 case EPCM.NETSCAPE:
-case EPCM.SAFARI :
-case EPCM.CHROME : return true;
+case EPCM.SAFARI : return true;
 default : return false;}
 }
-EPCM.DSM3.preFetchEmptyUrlWindow=function(){
-var xmlHttp=this.getXmlHttpRequestObj();
-if (xmlHttp == null)
-throw new Error("Could not find any XMLHttpRequest alternative.");
-xmlHttp.open("GET", this.EmptyUrlWindow ,false);
-xmlHttp.send();}
-EPCM.DSM3.getXmlHttpRequestObj=function(){
-var xmlHttp=null;
-if (window.XMLHttpRequest){
-xmlHttp=new XMLHttpRequest();}
-else{
-if (window.ActiveXObject){
-xmlHttp=new ActiveXObject('MSXML2.XMLHTTP.3.0');}
-}
-return xmlHttp;}
 EPCM.DSM3.sendToTerminator=function(cmd, forceSendWithNoData){
-if (!(this.isDataToSend(this) || forceSendWithNoData)){
-return;}
-if (this.isXHRPostHackNeeded()){
+if (!(this.isDataToSend(this) || forceSendWithNoData )) return;
+if( this.isXHRPostHackNeeded() ){
 this.sendViaXHRPost(cmd);}
 else{
-
-if((typeof(this.dsmMethodGetKey) !== "undefined" && this.dsmMethodGetKey !== null && this.dsmMethodGetKey !="") &&
-(EPCM.getUAType() == EPCM.MSIE) && (EPCM._private.isDynamicTop)){
-this.sendViaFormGet(cmd);}
-else
-{
 this.sendViaFormPost(cmd);}
-}}
-EPCM.DSM3.sendViaFormGet=function(cmd){
-if (this.NavigateAcrossSubFrames){
-this.preFetchEmptyUrlWindow();}
-var myForm=document.getElementById(this.FormId);
-if (myForm == null){
-this.createSenderForm();}
-myForm=document.forms[this.FormName];
-myForm.Command.value=cmd;
-myForm.SerPropString.value=this.SerPropString;
-myForm.SerKeyString.value=this.SerKeyString;
-myForm.SerAttrKeyString.value=this.AttrKeyString;
-myForm.SerWinIdString.value=this.WinIdString;
-myForm.Autoclose.value="";
-myForm.DebugSet.value=this.DebugFlagSet;
-myForm.method="POST";
-myForm.action=this.TerminatorUrl +
-"?DsmMethodGetKey=" + encodeURIComponent(this.dsmMethodGetKey) +
-"&Command=" + encodeURIComponent(cmd) +
-"&SerPropString=" + encodeURIComponent(this.SerPropString) +
-"&SerKeyString=" + encodeURIComponent(this.SerKeyString) +
-"&SerAttrKeyString=" + encodeURIComponent(this.AttrKeyString) +
-"&SerWinIdString=" + encodeURIComponent(this.WinIdString) +
-"&Autoclose=" +((this.DbgWinHold) ? "" : "1000" )+
-"&DebugSet=" + encodeURIComponent(this.DebugFlagSet);
-if (this.CustomData){
-myForm.CustomData.value=this.CustomData;}
-var targetResult=this.targetResolver(cmd);
-if (!targetResult.newWin){
-myForm.target=targetResult.frameName;}
-if (targetResult.newWin){
-if (EPCM.DSM.isLogoff(cmd)){
-try{
-top.isLogoffFinalAllowed=false;}
-catch(ex) {}}
-var myTarget=this.TargetNameWindow + this.FormName;
-var myWinParams=(this.DbgWinHold) ? this.WinParamsDebug: this.WinParamsHidden;
-myForm.target=myTarget;
-myForm.Autoclose.value=(this.DbgWinHold) ? "": "1000";
-window.open(this.EmptyUrlWindow, myTarget, myWinParams);
-window.focus();}
-myForm.submit();}
+}
 EPCM.DSM3.sendViaFormPost=function(cmd){
-if (this.NavigateAcrossSubFrames){
-this.preFetchEmptyUrlWindow();}
 var myForm=document.getElementById(this.FormId);
-if (myForm == null){
+if(myForm == null){
 this.createSenderForm();}
 myForm=document.forms[this.FormName];
 myForm.Command.value=cmd;
@@ -1484,20 +1360,20 @@ myForm.Autoclose.value="";
 myForm.DebugSet.value=this.DebugFlagSet;
 myForm.method="POST";
 myForm.action=this.TerminatorUrl;
-if (this.CustomData){
+if(this.CustomData){
 myForm.CustomData.value=this.CustomData;}
 var targetResult=this.targetResolver(cmd);
-if (!targetResult.newWin){
+if(!targetResult.newWin){
 myForm.target=targetResult.frameName;}
 if (targetResult.newWin){
-if (EPCM.DSM.isLogoff(cmd)){
+if(EPCM.DSM.isLogoff(cmd)){
 try{
-top.isLogoffFinalAllowed=false;}
-catch(ex) {}}
+top.isLogoffFinalAllowed=false;
+}catch(ex){}}
 var myTarget=this.TargetNameWindow + this.FormName;
-var myWinParams=(this.DbgWinHold) ? this.WinParamsDebug: this.WinParamsHidden;
+var myWinParams=(this.DbgWinHold) ? this.WinParamsDebug : this.WinParamsHidden;
 myForm.target=myTarget;
-myForm.Autoclose.value=(this.DbgWinHold) ? "": "1000";
+myForm.Autoclose.value=(this.DbgWinHold) ? "" : "1000";
 window.open(this.EmptyUrlWindow, myTarget, myWinParams);
 window.focus();}
 myForm.submit();}
@@ -1543,9 +1419,6 @@ pm.push("CustomData=" + encodeURIComponent(this.CustomData));}
 return pm.join("&");}
 EPCM.DSM3.createSenderForm=function(){
 var div=document.createElement("DIV");
-if(div.style != null && div.style != 'undefined')
-div.style.setAttribute("display","none");
-else
 div.setAttribute("style",this.getHiddenStyleAttribute());
 div.innerHTML="<form name=\""+ this.FormName + "\" id=\""+ this.FormId + "\"  action=\"\" method=\"post\" target=\"\">" +
 "<input type=\"hidden\" name=\"Command\">" +
@@ -1595,7 +1468,7 @@ target.frameElem=frameElement;}
 if( this.createTargetIframe() ){
 target.newWin=false;
 target.frameName=this.TargetNameIframe;
-target.frameElem=top.document.getElementById(this.TargetNameIframe);}
+target.frameElem=frameElement;}
 else{
 target.newWin=true;}
 }
@@ -1775,7 +1648,7 @@ var func=fFunc.toString();
 var args=func.match(/\(\s*(.*)\)\s*/)[1];
 var argStr=args.replace(/(\w+)/g, '"$1"');
 if (argStr.length > 0) argStr += ", ";
-var bodyStr=func.match(/\{((.|\s)*)\}[\s\n]*$/)[1];
+var bodyStr=func.match(/\{((.|\n)*)\}[\s\n]*$/)[1];
 eval("fRef[fNames[0]] = new Function(" + argStr + "bodyStr)");
 for (var i=1; i<fNames.length; i++){
 fRef[fNames[i]]=fRef[fNames[0]];}

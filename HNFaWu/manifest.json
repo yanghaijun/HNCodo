@@ -24,8 +24,7 @@
           }
         ]
       }
-    ],
-    "user_agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36"
+    ]
   },
   "override_urls": [
     {
@@ -122,6 +121,6 @@
   "default_url": "http://ihn.chng.com.cn:10000/irj/portal",
   "scope": "HNFaWu",
   "start_url": "enterplorer://HNFaWu/local/index.html",
-  "update_time": 1577262261282,
+  "update_time": 1578383851629,
   "runtime_env": "1webview"
 }
