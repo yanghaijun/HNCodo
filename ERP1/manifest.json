@@ -35,7 +35,7 @@
       }
     ],
     "component_match_mode": "polling",
-    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5."
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A"
   },
   "override_urls": [
     {
@@ -51,6 +51,20 @@
       ],
       "target_url": "override/js13_epcf.js",
       "default_url": "http://ihn.chng.com.cn:20002/com.sap.portal.epcf.loader/script/optimize/js13_epcf.js?7.204000015"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/com\\.sap\\.portal\\.pagebuilder\\/html\\/EmptyDocument\\.html"
+      ],
+      "target_url": "override/EmptyDocument.html",
+      "default_url": "http://ihn.chng.com.cn:20002/com.sap.portal.pagebuilder/html/EmptyDocument.html"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/com\\.sap\\.portal\\.design\\.urdesigndata\\/themes\\/portal\\/sap_tradeshow_plus\\/common\\/emptyhover\\.html"
+      ],
+      "target_url": "override/emptyhover.html",
+      "default_url": "http://ihn.chng.com.cn:20002/com.sap.portal.design.urdesigndata/themes/portal/sap_tradeshow_plus/common/emptyhover.html"
     }
   ],
   "adapter_urls": [
@@ -69,5 +83,6 @@
   "default_url": "http://ihn.chng.com.cn:20002/irj/portal",
   "scope": "ERP1",
   "start_url": "enterplorer://ERP1/local/index.html",
-  "update_time": 1578381204777
+  "update_time": 1578557133665,
+  "runtime_env": "1webview"
 }
