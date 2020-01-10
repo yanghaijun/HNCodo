@@ -302,7 +302,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31003'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31017'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -424,8 +424,9 @@
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");
-              elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';ysp.appMain.hideLoading();
+              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;if (_web == null && port == '31017') {
+                _web = dom && dom.textContent.split("/")[1];
+              }localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';ysp.appMain.hideLoading();
             } else {
               ysp.appMain.hideLoading();alert('登录失败，请重新登录！');
             }
@@ -677,7 +678,9 @@
                   var tag = dd[i].tagName;if (tag == 'FORM') {
                     dom = dd[i];
                   }
-                }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
+                }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;if (_web == null && port == '31017') {
+                  _web = dom && dom.textContent.split("/")[1];
+                }localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else {
                 alert('登录失败！请重新登录！');localStorage.inputCode = true;
               } // var _web = $(data)[7].querySelector("input[name='fldWebOfficeList']").value;

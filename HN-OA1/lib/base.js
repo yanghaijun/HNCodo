@@ -76,7 +76,7 @@
       // if(topWin.EAPI.isIOS()){//调用IOS的方法，让IOS调用getTitle()方法，返回九宫格中的标题
       //   topWin.EAPI.postMessageToNative('sendTitleToJS','');
       // }
-      if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login' || aWin.location.href == 'http://59.110.171.69:' +port+'/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm') {
+      if (aWin.location.href == 'http://59.110.171.69:' + port + '/' || aWin.location.href == 'http://59.110.171.69:' + port + '/names.nsf?Login' || aWin.location.href == 'http://59.110.171.69:' +port+'/WebOfficeFrame/MoaWebMailAddress.nsf/fomLogin?OpenForm' || aWin.location.href == 'http://59.110.171.69:'+port+'/WebOffice/home4.nsf/fomlogin?OpenForm') {
         //获取用户名和密码，自动登录
         if (topWin.EAPI.isAndroid()) {
           var userName;
@@ -375,6 +375,9 @@
                   }
 
                   var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                  if (_web == null && port == '31017') {
+                    _web = dom && dom.textContent.split("/")[1];
+                  }
                   localStorage.allWeb = _web;
                   localStorage.allPort = port;
                   localStorage.removeItem("inputCode");

@@ -130,7 +130,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebConfigSet\\.nsf\\/.*d=MoaWebOffice\\.nsf&v=viwOutBox&expandLevel=1&dc=1&rc=refreshLeftExpandedPanel"
+        "http:\\/\\/59\\.110\\.171\\.69:.*\\/.*\\/MoaWebConfigSet\\.nsf\\/.*d=MoaWebOffice\\.nsf&v=viwOutBox&expandLevel=1&dc=1.*"
       ]
     }
   },
