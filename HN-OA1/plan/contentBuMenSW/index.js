@@ -284,7 +284,7 @@
           visible.querySelector('a[class="ui_close"]').click();
         }
       }if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split("/")[1];if (text.indexOf('草稿：') > -1) {
           text = 'caogao.doc';
         }if (text.indexOf('草稿2：') > -1) {
           text = 'caogao2.doc';
@@ -333,8 +333,7 @@
           }
         }if (text.indexOf("办理单2：") > -1) {
           text = "banlidan2.doc";
-        }
-        if (text.indexOf("办理单：") > -1) {
+        }if (text.indexOf("办理单：") > -1) {
           if (text.indexOf(".doc") > -1) {
             text = "banlidan.doc";
           } else if (text.indexOf(".ceb") > -1) {
@@ -348,13 +347,12 @@
           text = "bingwen.doc";
         }if (text.indexOf("签报单：") > -1) {
           text = "qianbaodan.doc";
-        }
-        var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
-          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
+          huaneng.fujian("OA", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
-          console.log(dbid); //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
+          //console.log(dbid); //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },
