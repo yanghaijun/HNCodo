@@ -302,7 +302,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31025'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31060'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -415,7 +415,8 @@
                 localStorage.heilongjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.heilongjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31110') {
                 //重庆
-                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31112') {
                 //财务
                 localStorage.caiwuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.caiwuU = $(elem).find('.login_form_text').eq(0).find('input').val();

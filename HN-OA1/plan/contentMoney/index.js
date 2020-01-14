@@ -280,13 +280,12 @@
           text = "bingwen.doc";
         }if (text.indexOf("签报单：") > -1) {
           text = "qianbaodan.doc";
-        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
-          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split("/")[1];if (top.EAPI.isAndroid()) {
+          huaneng.fujian("OA", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid,
-            "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },

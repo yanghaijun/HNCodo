@@ -303,7 +303,7 @@
         }
       } //点击附件方法
       if (data.eventType == 'fujian') {
-        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
+        var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split("/")[1];if (text.indexOf('草稿：') > -1) {
           text = 'caogao.doc';
         }if (text.indexOf('草稿2：') > -1) {
           text = 'caogao2.doc';
@@ -371,11 +371,11 @@
         //elem.ownerDocument.defaultView.huaneng.fujian(url, cookies, text); //elem.ownerDocument.defaultView.fujian(url, cookies, text);
         //EAPI.fujain(url, cookies, text);
         if (top.EAPI.isAndroid()) {
-          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+          huaneng.fujian("OA", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },

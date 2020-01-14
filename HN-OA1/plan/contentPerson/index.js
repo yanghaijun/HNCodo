@@ -224,8 +224,8 @@
         }var dialog = elem.ownerDocument.querySelector('table[class="ui_dialog"]') && elem.ownerDocument.querySelector('table[class="ui_dialog"]').querySelector(".ui_state_highlight");dialog && dialog.click();var port = elem.ownerDocument.defaultView.location.port;var _web = elem.ownerDocument.defaultView.location.href.split("/")[3];var url = "http://59.110.171.69:" + port + "/" + _web + "/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf";ysp.appMain.reloadPage(url);
       } //打开文件下载弹出框
       if (data.eventType == 'clickFJ') {
-        var lis = elem.ownerDocument.querySelector('.btns') && elem.ownerDocument.querySelector('.btns').querySelectorAll('li');var a = [];
-        for (var i = 0; i < lis.length; i++) {
+        var lis = elem.ownerDocument.querySelector('.btns') && elem.ownerDocument.querySelector('.btns').querySelectorAll('li');
+        var a = [];for (var i = 0; i < lis.length; i++) {
           if (lis[i].textContent == " 文件下载 ") {
             a.push(lis[i]);
           }
@@ -242,15 +242,16 @@
           text = 'caogao.doc';
         }if (text.indexOf('草稿2：') > -1) {
           text = 'caogao2.doc';
-        }if (text.indexOf("签报正文：") > -1) {
+        }
+        if (text.indexOf("签报正文：") > -1) {
           if (text.indexOf(".doc") > -1) {
             text = "QianBaoZW.doc";
           } else if (text.indexOf(".ceb") > -1) {
             text = "QianBaoZW.ceb";
           }
         }if (text.indexOf("正文：") > -1) {
-          var uiloading = elem.ownerDocument.querySelector(".ui_loading") && elem.ownerDocument.querySelector(".ui_loading").nextElementSibling;var fldswflag = uiloading && uiloading.contentDocument.documentElement.querySelector('input[name="fldswflag"]').value;var fldmodule = uiloading && uiloading.contentDocument.documentElement.querySelector('input[name="fldmodule"]').value;
-          if (text.indexOf(".doc") > -1) {
+          var uiloading = elem.ownerDocument.querySelector(".ui_loading") && elem.ownerDocument.querySelector(".ui_loading").nextElementSibling;var fldswflag = uiloading && uiloading.contentDocument.documentElement.querySelector('input[name="fldswflag"]').value;
+          var fldmodule = uiloading && uiloading.contentDocument.documentElement.querySelector('input[name="fldmodule"]').value;if (text.indexOf(".doc") > -1) {
             if (fldmodule == "收文") {
               if (fldswflag == "1") {
                 text = "zhengwen.doc";
@@ -302,12 +303,12 @@
           text = "bingwen.doc";
         }if (text.indexOf("签报单：") > -1) {
           text = "qianbaodan.doc";
-        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;if (top.EAPI.isAndroid()) {
-          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+        }var cookieValue = cookies;var dbid = data.dataCustom.dbid;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split("/")[1];if (top.EAPI.isAndroid()) {
+          huaneng.fujian("OA", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },

@@ -268,10 +268,10 @@
       }if (data.eventType == 'fujian') {
         var url = data.dataCustom.url;var cookies = data.dataCustom.cookies;var text = data.customData.text;if (text.indexOf('草稿：') > -1) {
           text = 'caogao.doc';
-        }
-        if (text.indexOf('草稿2：') > -1) {
+        }if (text.indexOf('草稿2：') > -1) {
           text = 'caogao2.doc';
-        }if (text.indexOf("签报正文：") > -1) {
+        }
+        if (text.indexOf("签报正文：") > -1) {
           if (text.indexOf(".doc") > -1) {
             text = "QianBaoZW.doc";
           } else if (text.indexOf(".ceb") > -1) {
@@ -328,14 +328,16 @@
           text = "bingwen.doc";
         }if (text.indexOf("Word病文：") > -1) {
           text = "bingwen.doc";
-        }if (text.indexOf("签报单：") > -1) {
+        }
+        if (text.indexOf("签报单：") > -1) {
           text = "qianbaodan.doc";
-        }var dbid = data.customData.dbid;var cookieValue = cookies;debugger;if (top.EAPI.isAndroid()) {
-          huaneng.fujian("OA", url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+        }var dbid = data.customData.dbid;
+        var cookieValue = cookies;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split("/")[1];if (top.EAPI.isAndroid()) {
+          huaneng.fujian("OA", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
         } else {
           //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
           //top.EAPI.postMessageToNative("openDocument", url);
-          top.EAPI.postMessageToNative("openDocument", { "dbname": url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], type: "OA" });
+          top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
         }
       }
     },
