@@ -302,7 +302,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31060'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31003'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }

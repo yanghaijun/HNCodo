@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "name": "index",
+      "app_id": "列表",
+      "icon": "local/img/OA.png",
+      "url": "http://ihn.chng.com.cn:10000/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521014121262&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+    },
+    {
+      "name": "登陆",
+      "app_id": "index",
+      "icon": "local/img/OA.png",
+      "url": "http://ihn.chng.com.cn:10000/irj/portal"
+    }
+  ]
+}
