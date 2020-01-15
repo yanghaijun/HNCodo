@@ -26,7 +26,7 @@
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.querySelectorAll('.input_table')[3];var basic2 = elem.querySelectorAll('.input_table')[5]; // var basic3 = elem.querySelector('#detailTable');
         // var basicTr3 = basic3.querySelectorAll('tr');
         var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')]; //data.data[2] = ['报销类型', '部门费用' + '-差旅费'];
-        data.data[2] = ['报销类型', '部门费用'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
+        data.data[2] = ['报销类型', '部门费用-' + basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input').value];
         } else {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];
