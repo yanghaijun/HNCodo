@@ -1,0 +1,58 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/ihn\\.chng\\.com\\.cn:10001.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+  },
+  "override_urls": [],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://fawu/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/irj\\/portal"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:10001/irj/portal"
+      ]
+    },
+    {
+      "title": "detail",
+      "url": "adapter://fawu/plan/detail/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/irj\\/servlet\\/prt\\/portal\\/prteventname\\/Navigate\\/prtroot\\/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom\\.sap\\.portal\\.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom\\.sap\\.portal\\.innerpage!2fcom\\.sap\\.portal\\.contentarea\\?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom\\.sap\\.netweaver\\.bc\\.uwl\\.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER\\.PRIVATE_DATASOURCE\\.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap\\.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap\\.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=%2B9I57qoGx7ozXI%2FnEz8haw%3D%3D"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=%2B9I57qoGx7ozXI%2FnEz8haw%3D%3D"
+      ]
+    }
+  ],
+  "name": "法务系统",
+  "default_url": "http://ihn.chng.com.cn:10001/irj/portal",
+  "scope": "fawu",
+  "start_url": "enterplorer://fawu/local/index.html",
+  "update_time": 1579082127635
+}

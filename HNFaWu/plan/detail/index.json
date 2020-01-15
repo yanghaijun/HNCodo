@@ -11,6 +11,10 @@
         "data": {
           "tagName": "HTML"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "path/ordinal",
@@ -32,6 +36,10 @@
       "location": {
         "data": {
           "tagName": "TBODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -74,6 +82,10 @@
       "location": {
         "data": {
           "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
