@@ -14,22 +14,37 @@
     getData_control11_WI26V4: function (elem) {
       if (!elem) {
         return false;
-      }var data = {};var Basic = elem.children[1]; //基本信息采集
-      debugger;var trs = Basic && Basic.querySelector('span.urLinStd').children;var BasicArr = [];for (var i = 0; i < trs.length; i++) {
-        if (trs.textContent !== '') {
-          var item = {};if (trs[i].children.length == 3) {
-            item.title = [trs[i].querySelectorAll('td')[0].textContent];item.content = [trs[i].querySelectorAll('td')[1].querySelector('input') && trs[i].querySelectorAll('td')[1].querySelector('input').value || ''];
-          }if (trs[i].children.length == 4) {
-            item.title = [trs[i].querySelectorAll('td')[0].textContent];item.content = [trs[i].querySelectorAll('td')[1].querySelector('input') && trs[i].querySelectorAll('td')[1].querySelector('input').value || ''];item.duo = trs[i].children[2].querySelector('input') && trs[i].children[2].querySelector('input').value || '';
-          }if (trs[i].children.length == 8) {
-            item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent];item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || ''];
-          }if (trs[i].children.length == 6) {
-            item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent];item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || ''];
-          }if (trs[i].children.length == 8) {
-            item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent, trs[i].children[6].textContent];item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || '', trs[i].children[7].querySelector('input') && trs[i].children[7].querySelector('input').value || ''];
-          }BasicArr.push(item);
-        }
-      } // 银行基本信息；
+      } // var data = {};
+      // var Basic = elem.children[1]; //基本信息采集
+      // var trs = Basic && Basic.querySelector('span.urLinStd').children;
+      // var BasicArr = [];
+      // for (var i = 0; i < trs.length; i++) {
+      //   if (trs.textContent !== '') {
+      //     var item = {};
+      //     if (trs[i].children.length == 3) {
+      //       item.title = [trs[i].querySelectorAll('td')[0].textContent];
+      //       item.content = [trs[i].querySelectorAll('td')[1].querySelector('input') && trs[i].querySelectorAll('td')[1].querySelector('input').value || ''];
+      //     }
+      //     if (trs[i].children.length == 4) {
+      //       item.title = [trs[i].querySelectorAll('td')[0].textContent];
+      //       item.content = [trs[i].querySelectorAll('td')[1].querySelector('input') && trs[i].querySelectorAll('td')[1].querySelector('input').value || ''];
+      //       item.duo = trs[i].children[2].querySelector('input') && trs[i].children[2].querySelector('input').value || '';
+      //     }
+      //     if (trs[i].children.length == 8) {
+      //       item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent];
+      //       item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || ''];
+      //     }
+      //     if (trs[i].children.length == 6) {
+      //       item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent];
+      //       item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || ''];
+      //     }
+      //     if (trs[i].children.length == 8) {
+      //       item.title = [trs[i].children[0].textContent, trs[i].children[3].textContent, trs[i].children[6].textContent];
+      //       item.content = [trs[i].children[1].querySelector('input') && trs[i].children[1].querySelector('input').value || '', trs[i].children[4].querySelector('input') && trs[i].children[4].querySelector('input').value || '', trs[i].children[7].querySelector('input') && trs[i].children[7].querySelector('input').value || ''];
+      //     }
+      //     BasicArr.push(item);
+      //   }
+      // } // 银行基本信息；
       // var Bank = elem.children[1].children[0].children[0].children[2];
       // var BankTrs = Bank && Bank.querySelector('span.urLinStd').querySelector('table.urFontStd tbody').querySelector('table.urFontStd tbody').children;
       // var BankArr = [];
@@ -47,6 +62,7 @@
       //       } else if (BankTrs[i].children[6].textContent == '') {
       //         item.title = [BankTrs[i].children[0].textContent, BankTrs[i].children[3].textContent];
       //         item.content = [BankTrs[i].children[1].querySelector('input') && BankTrs[i].children[1].querySelector('input').value || '', BankTrs[i].children[4].querySelector('input') && BankTrs[i].children[4].querySelector('input').value || ''];
+
       //       }
       //     }
       //     BankArr.push(item);
@@ -59,7 +75,6 @@
       //   if (ContractTrs.textContent !== '') {
       //     var item = {};
       //     if (i == 1) {
-
       //       var arr = ContractTrs[i].querySelector('div tbody ').children[0].textContent;
       //       arr = arr.split(':');
       //       arr.length = arr.length - 1;
@@ -75,18 +90,15 @@
       //       var ipt = ContractTrs[i].children[0].children[1].querySelector('div').children[0].children[0].children[0];
       //       item.content = [ipt.children[1].querySelectorAll('input')[0].value, ipt.children[4].querySelectorAll('input')[0].value, ipt.children[7].querySelectorAll('input')[0].value, ipt.children[10].querySelectorAll('input')[0].value];
       //     }
-
       //     ContractArr.push(item);
       //   }
       // } //付款资料
       // var Pay = elem.children[1].children[0].children[0].children[4];
       // var PayTrs = Pay && Pay.querySelector('span.urLinStd').querySelector('table.urFontStd tbody').querySelector('table.urFontStd tbody').children;
       // var PayArr = [];
-
       // for (var i = 0; i < PayTrs.length; i++) {
       //   if (PayTrs.textContent !== '') {
       //     if (i == 0) {
-
       //       var tr1 = PayTrs[i].querySelectorAll('table.urFontStd')[0].children[0].children;
       //       for (var k = 0; k < tr1.length; k++) {
       //         var item = {};
@@ -168,13 +180,11 @@
       // var History = elem.children[3].children[0].children[0].children[0];
       // var HistoryTrs = History && History.querySelectorAll('span.urLinStd')[0].querySelector('table.urFontStd tbody').children[2].querySelectorAll('span.urLinStd')[0].querySelector('table.urFontStd tbody').querySelector('tbody').children;
       // if (History) {
-
       //   var HistoryArr = [];
       //   var HistoryArr1 = [];
       //   if (HistoryTrs[i].children.length > 5) {
       //     for (var i = 1; i < HistoryTrs.length; i++) {
       //       if (HistoryTrs.textContent !== '') {
-
       //         var item = {};
       //         item.title = HistoryTrs[i].children[1].querySelector('span').textContent; // 属性值为文件预览地址 - 暂为空 
       //         item.state = HistoryTrs[i].children[2].querySelector('span').textContent;
@@ -187,7 +197,7 @@
       //     }
       //   }
       // }
-      data.Basic = BasicArr; // data.Bank = BankArr;
+      //data.Basic = BasicArr; // data.Bank = BankArr;
       // data.ContractArr = ContractArr;
       // data.PayArr = PayArr;
       // data.FileArr = FileArr;
@@ -195,11 +205,10 @@
       // data.ApproveArr = ApproveArr;
       // data.HistoryArr = HistoryArr; //data.HistoryArr1 = HistoryArr1 || false;
       // data.bohui = elem.ownerDocument.querySelector('#FDOE\\.TaskExecutionView\\.MessageArea1-txt') ? true : false;
-      return data;
+      //return data;
     },
     doAction_uiControl7_EPaEQJ: function (data, elem) {
       //FDOEEFPDBOMAACHH.FundsView.APPR_COMMENTS
-      //FDOEEFPDBOMAACHH.FundsView.NEXT_PROCESSDEFID
       //FDOEEFPDBOMAACHH.FundsView.tbtnAgree1
       //FDOEEFPDBOMAACHH.FundsView.tbtnDisagree1
       if (data.eventType == 'change') {
@@ -253,14 +262,28 @@
     getData_control8_81xko5: function (elem) {
       if (!elem) {
         return;
-      }var data = { bas: [], fujian: [] }; //var basics = elem.querySelectorAll('div[id="FDOEEFPDBOMAACHH.LyfjsCompView.PageHeader"]');
-      var basics = elem.children;var bas = [];var a = basics[1].querySelectorAll("span.urLinStd")[2].textContent;data.bas.push(a); //basics[1].querySelector();
-      return data;
+      }var data = { bas: [], history: [], idea: [], ideaEnding: [], ideaPerson: [] };var basics = elem.children; /****基本信息****/var a = basics[1].querySelectorAll("span.urLinStd")[2].textContent;data.bas.push(a); /***审批意见****/var textareaValue = basics[2] && basics[2].querySelector('textarea').value;data.idea.push(textareaValue);var inputValue = basics[2] && basics[2].querySelectorAll('input')[0].value;data.ideaEnding.push(inputValue);var personValue = basics[2] && basics[2].querySelectorAll('input')[2].value;data.ideaPerson.push(personValue); /**审批历史**/var trs = basics[3] && basics[3].querySelectorAll("tr");for (var i = 0; i < trs.length; i++) {
+        var a = [];if (trs[i].getAttribute("userdata")) {
+          var tds = trs[i].querySelectorAll("td");for (var j = 1; j < tds.length; j++) {
+            a.push(tds[j].textContent);
+          }data.history.push(a);
+        }
+      }return data;
     },
-    doAction_uiControl5_Qqv3JO: function (data, elem) {},
+    doAction_uiControl5_Qqv3JO: function (data, elem) {
+      if (data.eventType == 'change') {
+        var val = data.customData;var basics = elem.children;if (basics[2]) {
+          basics[2].querySelector('textarea').value = val;
+        }
+      }if (data.eventType == 'clickIdea') {
+        var basics = elem.children;if (basics[2]) {
+          basics[2].querySelector('a').click();
+        }
+      }
+    },
     getTemplate_uiControl5_Qqv3JO: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  render: function() {\n    var data = this.props.customData.bas || [];\n    return (\n      <div>\n        <div>\n        \t<div>\n            \u57FA\u672C\u8BE6\u60C5\n          </div>\n          <div>\n            {data}\n          </div>\n        </div>\n        \n        \n        \n        <div>\n          <div>\u9644\u4EF6\u7BA1\u7406</div>\n          <select>\n            <option>\u6DFB\u52A0</option>\n          \t<option>\u6DFB\u52A0\u6587\u4EF6</option>\n            <option>\u6DFB\u52A0URL</option>\n          </select>\n          \n        </div>\n        \n        \n      </div>\n    )\n  }\n});";
-      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n\n  render: function render() {\n    var data = this.props.customData.bas || [];\n    return React.createElement(\n      \"div\",\n      null,\n      React.createElement(\n        \"div\",\n        null,\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u57FA\\u672C\\u8BE6\\u60C5\"\n        ),\n        React.createElement(\n          \"div\",\n          null,\n          data\n        )\n      ),\n      React.createElement(\n        \"div\",\n        null,\n        React.createElement(\n          \"div\",\n          null,\n          \"\\u9644\\u4EF6\\u7BA1\\u7406\"\n        ),\n        React.createElement(\n          \"select\",\n          null,\n          React.createElement(\n            \"option\",\n            null,\n            \"\\u6DFB\\u52A0\"\n          ),\n          React.createElement(\n            \"option\",\n            null,\n            \"\\u6DFB\\u52A0\\u6587\\u4EF6\"\n          ),\n          React.createElement(\n            \"option\",\n            null,\n            \"\\u6DFB\\u52A0URL\"\n          )\n        )\n      )\n    );\n  }\n});";
+      var selfTemplate = "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.state={\n    }\n  }\n  \n  handlerChange(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'change',\n        data:target.value\n      })\n    }\n  }\n  \n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'clickIdea'\n      })\n    }\n  }\n  \n  //\u57FA\u672C\u4FE1\u606F\n  listFor(data,title){\n    var _this = this;\n    return (\n    \t<div>\n      \t<div>{title}</div>\n        <div>{data}</div>\n      </div>\n    )\n  }\n  //\u5BA1\u6279\u610F\u89C1\n  yijianFor(data,data1,data2,title){\n    var _this = this;\n    return(\n    \t<div className=\"ysp-deatil-idea\">\n        <div>{title}</div>\n        <div>\n        \t<ATextarea value = {data} onChange={_this.handlerChange.bind(_this)}></ATextarea>\n        </div>\n        <div>\n          <div>\n            <span>\u5BA1\u6279\u7ED3\u679C\uFF1A</span>\n            <span>{data1}</span>\n          </div>\n          <div>\n            <span>\u5BA1\u6279\u4EBA\uFF1A</span>\n            <span>{data2}</span>\n          </div>\n        </div>\n        <div onClick={_this.handlerClick.bind(_this)}>\u610F\u89C1\u63D0\u4EA4</div>\n      </div>\n    )\n  }\n  //\u5BA1\u6279\u5386\u53F2\n  historyFor(data,title){\n    var _this = this;\n    return(\n    \t<div>\n        <div>{title}</div>\n        <div>{data}</div>\n      </div>\n    )\n  }\n  \n  render(){\n    var _this = this;\n    if(_this.props.customData){\n      var Basic = this.props.customData && this.props.customData.bas;\n      var History = this.props.customData && this.props.customData.history;\n      var Idea = this.props.customData && this.props.customData.idea;\n      var IdeaEnding = this.props.customData && this.props.customData.ideaEnding;  \n      var IdeaPerson = this.props.customData && this.props.customData.ideaPerson;\n      return (\n        <div className = 'ysp-Detail'>\n          {this.listFor(Basic,'\u57FA\u672C\u4FE1\u606F')}\n          {this.yijianFor(Idea,IdeaEnding,IdeaPerson,'\u5BA1\u6279\u610F\u89C1')}\n          {this.historyFor(History,\"\u5BA1\u6279\u5386\u53F2\")}\n        </div>\n      )\n    }else{\n      return(\n      \t<div style={{textAlign:'center',margin:'20px',color:'red'}}>* \u6570\u636E\u672A\u52A0\u8F7D\u5B8C\u6216\u6D41\u7A0B\u63D0\u4EA4\u6210\u529F *</div>\n      )\n    }\n  }\n}";
+      return "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    _classCallCheck(this, _class);\n\n    var _this2 = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));\n\n    _this2.state = {};\n    return _this2;\n  }\n\n  _createClass(_class, [{\n    key: 'handlerChange',\n    value: function handlerChange(e) {\n      var target = e.target;\n      var handler = this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: 'change',\n          data: target.value\n        });\n      }\n    }\n  }, {\n    key: 'handlerClick',\n    value: function handlerClick() {\n      var handler = this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: 'clickIdea'\n        });\n      }\n    }\n\n    //\u57FA\u672C\u4FE1\u606F\n\n  }, {\n    key: 'listFor',\n    value: function listFor(data, title) {\n      var _this = this;\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          'div',\n          null,\n          title\n        ),\n        React.createElement(\n          'div',\n          null,\n          data\n        )\n      );\n    }\n    //\u5BA1\u6279\u610F\u89C1\n\n  }, {\n    key: 'yijianFor',\n    value: function yijianFor(data, data1, data2, title) {\n      var _this = this;\n      return React.createElement(\n        'div',\n        { className: 'ysp-deatil-idea' },\n        React.createElement(\n          'div',\n          null,\n          title\n        ),\n        React.createElement(\n          'div',\n          null,\n          React.createElement(ATextarea, { value: data, onChange: _this.handlerChange.bind(_this) })\n        ),\n        React.createElement(\n          'div',\n          null,\n          React.createElement(\n            'div',\n            null,\n            React.createElement(\n              'span',\n              null,\n              '\\u5BA1\\u6279\\u7ED3\\u679C\\uFF1A'\n            ),\n            React.createElement(\n              'span',\n              null,\n              data1\n            )\n          ),\n          React.createElement(\n            'div',\n            null,\n            React.createElement(\n              'span',\n              null,\n              '\\u5BA1\\u6279\\u4EBA\\uFF1A'\n            ),\n            React.createElement(\n              'span',\n              null,\n              data2\n            )\n          )\n        ),\n        React.createElement(\n          'div',\n          { onClick: _this.handlerClick.bind(_this) },\n          '\\u610F\\u89C1\\u63D0\\u4EA4'\n        )\n      );\n    }\n    //\u5BA1\u6279\u5386\u53F2\n\n  }, {\n    key: 'historyFor',\n    value: function historyFor(data, title) {\n      var _this = this;\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          'div',\n          null,\n          title\n        ),\n        React.createElement(\n          'div',\n          null,\n          data\n        )\n      );\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _this = this;\n      if (_this.props.customData) {\n        var Basic = this.props.customData && this.props.customData.bas;\n        var History = this.props.customData && this.props.customData.history;\n        var Idea = this.props.customData && this.props.customData.idea;\n        var IdeaEnding = this.props.customData && this.props.customData.ideaEnding;\n        var IdeaPerson = this.props.customData && this.props.customData.ideaPerson;\n        return React.createElement(\n          'div',\n          { className: 'ysp-Detail' },\n          this.listFor(Basic, '\u57FA\u672C\u4FE1\u606F'),\n          this.yijianFor(Idea, IdeaEnding, IdeaPerson, '\u5BA1\u6279\u610F\u89C1'),\n          this.historyFor(History, \"\u5BA1\u6279\u5386\u53F2\")\n        );\n      } else {\n        return React.createElement(\n          'div',\n          { style: { textAlign: 'center', margin: '20px', color: 'red' } },\n          '* \\u6570\\u636E\\u672A\\u52A0\\u8F7D\\u5B8C\\u6216\\u6D41\\u7A0B\\u63D0\\u4EA4\\u6210\\u529F *'\n        );\n      }\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
     }
   }, "detail");
 })(window, ysp);

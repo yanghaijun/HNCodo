@@ -598,3 +598,30 @@ li {
   width: 35%;
   text-align: right;
 }
+.ysp-deatil-idea {
+  padding: 10px;
+  border-bottom: 10px solid #ececec;
+  border-top: 10px solid #ececec;
+}
+.ysp-deatil-idea > div:nth-child(1) {
+  color: #105cc1;
+  font-size: 20px;
+}
+.ysp-deatil-idea textarea {
+  resize: none;
+}
+.ysp-deatil-idea > div:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-deatil-idea > div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 5px 0px;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+}
