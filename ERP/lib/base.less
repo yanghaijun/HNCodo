@@ -602,6 +602,42 @@ li{
 
 ///////////////以下为最新的样式//////////////////
 
+//附件管理
+.ysp-deatil-fujian{
+  padding: 10px;
+  border-top: 10px solid #ececec;
+  >div:nth-child(1){
+    color: #105cc1;
+    font-size: 20px;
+  }
+  .ysp-deatil-fujian-content{
+    padding: 5px;
+    >div:nth-child(1){
+      color: #105cc1;
+      font-size: bold;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow : hidden;
+  		text-overflow: ellipsis;
+    }
+    >div:nth-child(2),>div:nth-child(3){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    >div:nth-child(3){
+      border-bottom: 2px solid #ececec;
+      >span:nth-child(2){
+        background: #105cc1;
+        color: #fff;
+        border-radius: 5px;
+        padding: 3px 5px;
+      }
+    }
+  }
+}
 
 //审批意见
 .ysp-deatil-idea{
@@ -629,5 +665,26 @@ li{
     background: #105cc1;
     color: #fff;
     border-radius: 5px;
+  }
+}
+
+//审批历史
+.ysp-deatil-history{
+  padding: 10px;
+  border-bottom: 10px solid #ececec;
+  >div:nth-child(1){
+    color: #105cc1;
+    font-size: 20px;
+  }
+  .ysp-detail-history-content{
+    padding: 5px;
+    div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    >div:nth-child(2){
+      border-bottom: 1px solid #ececec;
+    }
   }
 }
