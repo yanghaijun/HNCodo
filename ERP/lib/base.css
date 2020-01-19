@@ -649,6 +649,7 @@ li {
   align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(2),
 .ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) {
@@ -677,12 +678,12 @@ li {
 .ysp-deatil-idea textarea {
   resize: none;
 }
-.ysp-deatil-idea > div:nth-child(3) {
+.ysp-deatil-idea .ysp-deatil-idea-end {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.ysp-deatil-idea > div:nth-child(4) {
+.ysp-deatil-idea .ysp-deatil-idea-commit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -707,6 +708,12 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
+}
+.ysp-deatil-history .ysp-detail-history-content div span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ysp-deatil-history .ysp-detail-history-content > div:nth-child(2) {
   border-bottom: 1px solid #ececec;
