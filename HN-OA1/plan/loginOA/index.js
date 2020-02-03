@@ -287,6 +287,14 @@
             } else {
               obj4.display = "none";
             }
+          } else if (port == '31097') {
+            if (localStorage.zhejiangP == undefined || localStorage.zhejiangU == undefined) {
+              obj4.display = "block";
+            } else if ((localStorage.zhejiangP || localStorage.zhejiangU) && localStorage.inputCode) {
+              obj4.display = "block";
+            } else {
+              obj4.display = "none";
+            }
           }
         } else if (password && localStorage.inputCode) {
           obj4.display = "block"; // if (localStorage.inputCode) {
@@ -302,7 +310,7 @@
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31003'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31097'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -420,6 +428,10 @@
               } else if (port == '31112') {
                 //财务
                 localStorage.caiwuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.caiwuU = $(elem).find('.login_form_text').eq(0).find('input').val();
+              } else if (port == '31097') {
+                //浙江(玉环)
+                localStorage.zhejiangP = $(elem).find('.login_form_text').eq(1).find('input').val();
+                localStorage.zhejiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }var dd = $(data);var dom;for (var i = 0; i < dd.length; i++) {
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
@@ -668,6 +680,12 @@
         } else if (port == '31112') {
           if (localStorage && localStorage.caiwuP && localStorage.caiwuU) {
             password = localStorage.caiwuP;userName = localStorage.caiwuU;
+          } else {
+            password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
+          }
+        } else if (port == '31097') {
+          if (localStorage && localStorage.zhejiangP && localStorage.zhejiangU) {
+            password = localStorage.zhejiangP;userName = localStorage.zhejiangU;
           } else {
             password = top.yspUser.getPassword();userName = top.yspUser.getUserName();
           }

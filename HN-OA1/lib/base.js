@@ -354,6 +354,14 @@
               userName = huaneng.getUserName();
           		password = huaneng.getPassword();
             }
+          } else if (port == '31097') {
+            if (localStorage && localStorage.zhejiangP && localStorage.zhejiangU) {
+              password = localStorage.zhejiangP;
+              userName = localStorage.zhejiangU;
+            } else {
+              userName = huaneng.getUserName();
+          		password = huaneng.getPassword();
+            }
           }
           if(password != '' && password != null && password != undefined && userName != '' && userName != null && userName != undefined){
               $.ajax({
