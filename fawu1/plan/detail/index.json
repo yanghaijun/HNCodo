@@ -1,0 +1,212 @@
+{
+  "version": "0.1",
+  "id": "detail",
+  "targetURL": "http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D07b46a803cc811ea951a00000177047f%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D07b46a803cc811ea951a00000177047f%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=Iig3%2BxliYmW257BRCoVguA%3D%3D",
+  "jsFile": "index.js",
+  "chineseName": "detail",
+  "description": "",
+  "controls": {
+    "control3_PDsowT": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": {
+              "text": [
+                "[合同审批][流程号:JC00238904][大柳煤矿输电线路维护协议 合同金额：CNY-人民币537600元][经办人][申请人:海潇]"
+              ],
+              "visText": [
+                "[合同审批][流程号:JC00238904][大柳煤矿输电线路维护协议 合同金额：CNY-人民币537600元][经办人][申请人:海潇]"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.urPgHT2 TABLE.urPgHTTbl TD.urPgHTTxt"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "content"
+    },
+    "control6_yuU9VP": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]",
+              "descendant::TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control6_yuU9VP"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context2_eb8Klv": {
+      "controls": [
+        "control3_PDsowT",
+        "control6_yuU9VP"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow10_sNbE5G": {
+      "toContexts": [
+        {
+          "toContextId": "context2_eb8Klv"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2_Sidg8K": {
+      "contextId": "context2_eb8Klv",
+      "layout": [
+        {
+          "id": "uiControl5_en6eIm",
+          "controlId": "control6_yuU9VP",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl5_en6eIm",
+                "onGetTemplate": "getTemplate_uiControl5_en6eIm"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl2_52ZKep",
+          "controlId": "control3_PDsowT",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_eb8Klv": [
+          "SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_eb8Klv": [
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D07b46a803cc811ea951a00000177047f%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D07b46a803cc811ea951a00000177047f%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=Iig3%2BxliYmW257BRCoVguA%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D07b46a803cc811ea951a00000177047f%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D07b46a803cc811ea951a00000177047f%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=Iig3%2BxliYmUzrLSA6U5cKw%3D%3D"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_eb8Klv": [
+          [
+            "NavigationTarget_navForms",
+            "RelativeNavBase",
+            "contentAreaDiv",
+            "divChangeContent",
+            "frmChangeContent",
+            "fullPageDiv",
+            "isolatedWorkArea",
+            "obnNavForm",
+            "obnNavIFrame"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_eb8Klv": [
+          [
+            "prtlPrtlFullPageAppBody"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_eb8Klv": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "-/SPAN/FORM",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SCRIPT",
+            "SPAN/FORM/INPUT-hidden"
+          ]
+        ]
+      }
+    }
+  }
+}
