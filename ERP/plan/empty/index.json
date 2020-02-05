@@ -1,45 +1,31 @@
 {
   "version": "0.1",
   "id": "empty",
-  "targetURL": "http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580790285101x38xIdd2183dfe470511eaa25100000177047fe681580790311377",
+  "targetURL": "http://ihn.chng.com.cn:20002/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
   "jsFile": "index.js",
   "chineseName": "empty",
   "description": "",
   "controls": {
-    "control4_T34sTt": {
+    "control12_8202fp": {
       "location": {
         "data": {
-          "tagName": "TD"
-        },
-        "userData": {
-          "data": [],
-          "force": false
+          "tagName": "BODY"
         },
         "locators": [
           {
             "id": "@class/word",
             "prob": 1,
-            "ordinal": [
-              1,
-              2
-            ],
-            "value": "BODY.prtlBody.urFontBaseFam.urScrl TABLE.SAPDialogWhl TBODY TR TD"
+            "value": "BODY.prtlBody.urFontBaseFam.urScrl"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
+            "value": "/HTML[1]/BODY[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control4_T34sTt"
+        "onGetData": "getData_control12_8202fp"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -49,38 +35,38 @@
     }
   },
   "contexts": {
-    "context4_c5SQwo": {
+    "context3_GLoDZa": {
       "controls": [
-        "control4_T34sTt"
+        "control12_8202fp"
       ],
       "anchors": [],
       "urlAnchor": []
     }
   },
   "flows": {
-    "flow11_36OGNA": {
+    "flow11_DWTc3a": {
       "toContexts": [
         {
-          "toContextId": "context4_c5SQwo"
+          "toContextId": "context3_GLoDZa"
         }
       ]
     }
   },
   "pages": {
-    "page4_60ZEpH": {
-      "contextId": "context4_c5SQwo",
+    "page3_eTfg9A": {
+      "contextId": "context3_GLoDZa",
       "layout": [
         {
-          "id": "uiControl3_McIFLF",
-          "controlId": "control4_T34sTt",
+          "id": "uiControl8_ZVh5nG",
+          "controlId": "control12_8202fp",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl3_McIFLF",
-                "onGetTemplate": "getTemplate_uiControl3_McIFLF"
+                "onDoAction": "doAction_uiControl8_ZVh5nG",
+                "onGetTemplate": "getTemplate_uiControl8_ZVh5nG"
               }
             }
           }
@@ -91,29 +77,28 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context4_c5SQwo": [
+        "context3_GLoDZa": [
           "SAP NetWeaver Portal"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context4_c5SQwo": [
-          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580790285101x38xIdd2183dfe470511eaa25100000177047fe681580790311377",
-          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580883390335x26xId1bc58cb747de11ea90e20000017704e3ec11580883427741"
+        "context3_GLoDZa": [
+          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context4_c5SQwo": [
+        "context3_GLoDZa": [
           []
         ]
       }
     },
     "page/classes": {
       "contexts": {
-        "context4_c5SQwo": [
+        "context3_GLoDZa": [
           [
             "SAPDialogWhl"
           ]
@@ -122,7 +107,7 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context4_c5SQwo": [
+        "context3_GLoDZa": [
           [
             "-/-/DIV",
             "-/-/SCRIPT",
@@ -131,7 +116,6 @@
             "-/DIV/H3",
             "-/DIV/H4",
             "-/DIV/HR",
-            "-/DIV/IFRAME",
             "-/DIV/IMG",
             "-/TABLE/TBODY",
             "TABLE/TBODY/TR",

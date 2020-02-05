@@ -10,86 +10,43 @@
   "chineseName": "",
   "description": "",
   "controls": {
-    "control2_FeQZ0w": {
+    "control7_sOeu55": {
       "location": {
         "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
+          "tagName": "TD"
         },
         "locators": [
           {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "柴油合同 合同金额：CNY-人民币42019.19元"
-              ],
-              "visText": [
-                "柴油合同 合同金额：CNY-人民币42019.19元"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "柴油合同 合同金额：CNY-人民币42019.19元"
-              ],
-              "visText": [
-                "柴油合同 合同金额：CNY-人民币42019.19元"
-              ]
-            }
-          },
-          {
             "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[3]/TD[3]/A[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              1,
-              2
-            ],
-            "value": "TABLE.urST3BdBrd.urST3Bd.urFontStd TD.urSTC.urST3TD.urCursorClickable.urSTTDRo2.urST4SelRo A.urLnkFunction.urTxtStd"
+            "prob": 4,
+            "value": [
+              "descendant::DIV[@id=\"aaaa.MyUWLCompView.RootElement\"]//TABLE[@id=\"aaaa.MyUWLCompView.TabStrip\"]//TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]",
+              "descendant::TABLE[@id=\"aaaa.MyUWLCompView.TabStrip\"]//TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]",
+              "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]"
+            ]
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[3]/TD[3]/A[1]"
-          },
-          {
-            "id": "style/color",
-            "value": [
-              255,
-              120,
-              0
-            ]
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]"
           }
         ]
       },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
+      "events": {
+        "onGetData": "getData_control7_sOeu55"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
       "frameXPath": "",
-      "componentType": "button"
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context3_qTz57Z": {
       "controls": [
-        "control2_FeQZ0w"
+        "control7_sOeu55"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -103,10 +60,10 @@
         }
       ]
     },
-    "flow9_ZbFQKT": {
+    "flow4_K3lxSe": {
       "fromContextId": "context3_qTz57Z",
-      "fromAction": "click",
-      "fromControlId": "control2_FeQZ0w",
+      "fromAction": "doAction",
+      "fromControlId": "control7_sOeu55",
       "toContexts": [
         {
           "toContextId": "context3_qTz57Z"
@@ -127,13 +84,17 @@
       "contextId": "context3_qTz57Z",
       "layout": [
         {
-          "id": "uiControl1_a7pT6K",
-          "controlId": "control2_FeQZ0w",
+          "id": "uiControl6_16RqSb",
+          "controlId": "control7_sOeu55",
           "display": {
-            "adapterId": "clickable",
-            "type": "button",
+            "adapterId": "custom",
+            "type": "custom",
             "adapter": {
-              "templateType": ""
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl6_16RqSb",
+                "onGetTemplate": "getTemplate_uiControl6_16RqSb"
+              }
             }
           }
         }
@@ -151,7 +112,8 @@
     "page/urls": {
       "contexts": {
         "context3_qTz57Z": [
-          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page"
+          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page",
+          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=Ly_Quh_pzDcUTt45KVBh*g--lpzLp0sWtSwMwtsbyHTxrg--"
         ]
       }
     },

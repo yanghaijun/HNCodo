@@ -15,8 +15,8 @@
       }
     },
     getTemplate_uiControl4_HyFuEX: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  onclick: function() {\n    this.props.customHandler({\n      data: 'dianwo'\n    });\n  },\n  render: function() {\n    return (\n      <button onClick={this.onclick}>\n        \u70B9\u6211\u8FDB\u5165\u5F85\u529E\u5217\u8868\n      </button>\n    )\n  }\n});";
-      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  onclick: function onclick() {\n    this.props.customHandler({\n      data: \'dianwo\'\n    });\n  },\n  render: function render() {\n    return React.createElement(\n      \'button\',\n      { onClick: this.onclick },\n      \'\\u70B9\\u6211\\u8FDB\\u5165\\u5F85\\u529E\\u5217\\u8868\'\n    );\n  }\n});';
+      var selfTemplate = "module.exports = React.createClass({\n  \n  componentDidMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  // onclick: function() {\n  //   this.props.customHandler({\n  //     data: 'dianwo'\n  //   });\n  // },\n  render: function() {\n    return (\n      <div></div>\n      /*\n      \t<button onClick={this.onclick}>\n        \t\u70B9\u6211\u8FDB\u5165\u5F85\u529E\u5217\u8868\n      \t</button>\n      */\n      \n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  componentDidMount: function componentDidMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  // onclick: function() {\n  //   this.props.customHandler({\n  //     data: 'dianwo'\n  //   });\n  // },\n  render: function render() {\n    return React.createElement('div', null)\n    /*\n    \t<button onClick={this.onclick}>\n      \t\u70B9\u6211\u8FDB\u5165\u5F85\u529E\u5217\u8868\n    \t</button>\n    */\n\n    ;\n  }\n});";
     }
   });
 })(window, ysp);
