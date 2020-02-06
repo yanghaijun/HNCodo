@@ -6,65 +6,6 @@
   "chineseName": "detail",
   "description": "",
   "controls": {
-    "control3_PDsowT": {
-      "location": {
-        "data": {
-          "tagName": "TD"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "ordinal": [
-              1,
-              2
-            ],
-            "value": {
-              "text": [
-                "[合同审批][流程号:JC00238904][大柳煤矿输电线路维护协议 合同金额：CNY-人民币537600元][经办人][申请人:海潇]"
-              ],
-              "visText": [
-                "[合同审批][流程号:JC00238904][大柳煤矿输电线路维护协议 合同金额：CNY-人民币537600元][经办人][申请人:海潇]"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              0,
-              2
-            ],
-            "value": "TABLE.urPgHT2 TABLE.urPgHTTbl TD.urPgHTTxt"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "content": true,
-      "monitored": false,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "content"
-    },
     "control6_yuU9VP": {
       "location": {
         "data": {
@@ -188,6 +129,10 @@
         "data": {
           "tagName": "TABLE"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -215,16 +160,324 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control12_om57w9": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TABLE[@id=\"FDOE.TaskExecutionView.TitleContainer\"]//DIV[@id=\"FDOE.TaskExecutionView.MenuBar\"]/SPAN[2]",
+              "descendant::DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TABLE[@id=\"FDOE.TaskExecutionView.TitleContainer\"]//DIV[@id=\"FDOE.TaskExecutionView.MenuBar\"]//SPAN",
+              "descendant::TABLE[@id=\"FDOE.TaskExecutionView.TitleContainer\"]//DIV[@id=\"FDOE.TaskExecutionView.MenuBar\"]//SPAN",
+              "descendant::DIV[@id=\"FDOE.TaskExecutionView.MenuBar\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "TR.lsCLRow DIV.urMenuItemTrn SPAN.lsMenuItem"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/SPAN[2]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_om57w9"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control13_xuZTaR": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.TransparentContainer\"]//TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBar\"]//TD[@id=\"FDOEEEMN.AttachmentListView.ToolBar-itms\"]/SPAN[1]",
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.TransparentContainer\"]//TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBar\"]//TD[@id=\"FDOEEEMN.AttachmentListView.ToolBar-itms\"]//SPAN",
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBar\"]//TD[@id=\"FDOEEEMN.AttachmentListView.ToolBar-itms\"]//SPAN",
+              "descendant::TD[@id=\"FDOEEEMN.AttachmentListView.ToolBar-itms\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 3,
+            "value": {
+              "elemId": "FDOEEEMN.AttachmentListView.ToolBarButtonChoiceAdd-r",
+              "tagName": "SPAN",
+              "prefix": "TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBar\"]//TD[@id=\"FDOEEEMN.AttachmentListView.ToolBar-itms\"]//",
+              "suffix": "",
+              "ratio": 0
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TD.urGrpBdyWeb1 TABLE.urTWhl SPAN.urTbarItmBtn"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control13_xuZTaR"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control18_QVRZTH": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.TransparentContainer\"]//TABLE[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable\"]//TD[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable-content\"]/TABLE[1]",
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.TransparentContainer\"]//TABLE[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable\"]//TD[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable-content\"]//TABLE",
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable\"]//TD[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable-content\"]//TABLE",
+              "descendant::TD[@id=\"FDOEEEMN.AttachmentListView.AttachmentsTable-content\"]//TABLE"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.urST.urST3WhlBrd.urST3WhlNoTit TD.urSTSStd TABLE.urST3BdBrd.urST3BdF.urFontStd"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control18_QVRZTH"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control17_O8QvCk": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@title",
+            "prob": 2,
+            "value": {
+              "text": [
+                "选择文件"
+              ]
+            }
+          },
+          {
+            "id": "elem/@name",
+            "prob": 1,
+            "value": "descendant::INPUT[@name=\"FDOEEEMN.AddAttachmentView.fileResource_0\"]"
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment\"]//DIV[@id=\"FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content\"]//DIV[@id=\"FDOEEEMN.AddAttachmentView.RootElement\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/FORM[1]/INPUT[1]",
+              "descendant::TABLE[@id=\"FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment\"]//DIV[@id=\"FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content\"]//DIV[@id=\"FDOEEEMN.AddAttachmentView.RootElement\"]//INPUT",
+              "descendant::DIV[@id=\"FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content\"]//DIV[@id=\"FDOEEEMN.AddAttachmentView.RootElement\"]//INPUT",
+              "descendant::DIV[@id=\"FDOEEEMN.AddAttachmentView.RootElement\"]//INPUT"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TBODY.urLinStd TD.urLayoutDefault INPUT.urUpld"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/FORM[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "file"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control17_O8QvCk"
+      },
+      "intendedRole": "custom",
+      "roles": "element,file,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control11_8SUgQf": {
+      "location": {
+        "data": {
+          "tagName": "A"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@title",
+            "prob": 2,
+            "value": {
+              "text": [
+                "上载文件 "
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::DIV[@id=\"FDOEEEMN.AddAttachmentView.RootElement\"]//DIV[@id=\"FDOEEEMN.AddAttachmentView.ButtonRow\"]//A[@id=\"FDOEEEMN.AddAttachmentView.ButtonUpload\"]",
+              "descendant::DIV[@id=\"FDOEEEMN.AddAttachmentView.ButtonRow\"]//A[@id=\"FDOEEEMN.AddAttachmentView.ButtonUpload\"]",
+              "descendant::A[@id=\"FDOEEEMN.AddAttachmentView.ButtonUpload\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.urFontStd SPAN.urBtnRow A.urNoUserSelect.urBtnRadius.urBtnEmph"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/SPAN[1]/A[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control11_8SUgQf"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control14_fr8i1z": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.urPgHT2 TABLE.urPgHTTbl TD.urPgHTTxt"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control14_fr8i1z"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context2_eb8Klv": {
       "controls": [
-        "control3_PDsowT",
         "control6_yuU9VP",
         "control8_3UDiar",
         "control10_d9Rpf1",
-        "control2_ngkDAf"
+        "control2_ngkDAf",
+        "control12_om57w9",
+        "control13_xuZTaR",
+        "control18_QVRZTH",
+        "control17_O8QvCk",
+        "control11_8SUgQf",
+        "control14_fr8i1z"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -257,6 +510,46 @@
           "toContextId": "context2_eb8Klv"
         }
       ]
+    },
+    "flow9_VPHpGf": {
+      "fromContextId": "context2_eb8Klv",
+      "fromAction": "doAction",
+      "fromControlId": "control12_om57w9",
+      "toContexts": [
+        {
+          "toContextId": "context2_eb8Klv"
+        }
+      ]
+    },
+    "flow12_oxdHJM": {
+      "fromContextId": "context2_eb8Klv",
+      "fromAction": "doAction",
+      "fromControlId": "control13_xuZTaR",
+      "toContexts": [
+        {
+          "toContextId": "context2_eb8Klv"
+        }
+      ]
+    },
+    "flow13_SiPvGT": {
+      "fromContextId": "context2_eb8Klv",
+      "fromAction": "doAction",
+      "fromControlId": "control2_ngkDAf",
+      "toContexts": [
+        {
+          "toContextId": "context2_eb8Klv"
+        }
+      ]
+    },
+    "flow8_rZ13Sc": {
+      "fromContextId": "context2_eb8Klv",
+      "fromAction": "doAction",
+      "fromControlId": "control17_O8QvCk",
+      "toContexts": [
+        {
+          "toContextId": "context2_eb8Klv"
+        }
+      ]
     }
   },
   "pages": {
@@ -279,13 +572,17 @@
           }
         },
         {
-          "id": "uiControl2_52ZKep",
-          "controlId": "control3_PDsowT",
+          "id": "uiControl12_aiUw8Z",
+          "controlId": "control14_fr8i1z",
           "display": {
-            "adapterId": "content",
-            "type": "content",
+            "adapterId": "custom",
+            "type": "custom",
             "adapter": {
-              "templateType": ""
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl12_aiUw8Z",
+                "onGetTemplate": "getTemplate_uiControl12_aiUw8Z"
+              }
             }
           }
         },
@@ -315,6 +612,81 @@
               "events": {
                 "onDoAction": "doAction_uiControl8_K9lTZ3",
                 "onGetTemplate": "getTemplate_uiControl8_K9lTZ3"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl10_00fUxm",
+          "controlId": "control12_om57w9",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl10_00fUxm",
+                "onGetTemplate": "getTemplate_uiControl10_00fUxm"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl11_6qUxMo",
+          "controlId": "control13_xuZTaR",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl11_6qUxMo",
+                "onGetTemplate": "getTemplate_uiControl11_6qUxMo"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl15_kiEk7c",
+          "controlId": "control17_O8QvCk",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl15_kiEk7c",
+                "onGetTemplate": "getTemplate_uiControl15_kiEk7c"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl9_xK5XvX",
+          "controlId": "control11_8SUgQf",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_xK5XvX",
+                "onGetTemplate": "getTemplate_uiControl9_xK5XvX"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl16_v1yBm7",
+          "controlId": "control18_QVRZTH",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl16_v1yBm7",
+                "onGetTemplate": "getTemplate_uiControl16_v1yBm7"
               }
             }
           }
@@ -353,7 +725,12 @@
           "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=jAonQ%2BdrQN2XYdEWdWZV%2Bw%3D%3D",
           "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dbe210f8026f311eaca980000017704e2%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3Dbe210f8026f311eaca980000017704e2%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=jAonQ%2BdrQN2XYdEWdWZV%2Bw%3D%3D",
           "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D74878bd48e3f11e9834900000177047e%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D74878bd48e3f11e9834900000177047e%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=jAonQ%2BdrQN2XYdEWdWZV%2Bw%3D%3D",
-          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=jAonQ%2BdrQN3PC9kpGOAmnw%3D%3D"
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=jAonQ%2BdrQN3PC9kpGOAmnw%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=EpR%2B5ja6JSYfmb4oXrlFmQ%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dbe210f8026f311eaca980000017704e2%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3Dbe210f8026f311eaca980000017704e2%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=EpR%2B5ja6JSYfmb4oXrlFmQ%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dbe210f8026f311eaca980000017704e2%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3Dbe210f8026f311eaca980000017704e2%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=EpR%2B5ja6JSZ7bRXy3y8qNw%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dbe210f8026f311eaca980000017704e2%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3Dbe210f8026f311eaca980000017704e2%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=EpR%2B5ja6JSbIHNmJ0VAwBg%3D%3D",
+          "ihn.chng.com.cn:10001/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D752dc62f27ac11eabd680000017704e3%40USER.PRIVATE_DATASOURCE.un%3Abpm_admin%26taskId%3D752dc62f27ac11eabd680000017704e3%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&HPIEmployeeID=EpR%2B5ja6JSZHmtlcLUyD%2BQ%3D%3D"
         ]
       }
     },

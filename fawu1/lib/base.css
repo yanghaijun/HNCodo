@@ -626,6 +626,11 @@ div[data-componentsid="uiControl6_16RqSb"] {
 .ysp-detail-header > div:nth-child(2) {
   width: 60%;
 }
+.detail-title {
+  min-height: 40px;
+  padding: 2px 5px;
+  background: #ececec;
+}
 .detail-yijian {
   padding: 10px;
 }
@@ -633,17 +638,21 @@ div[data-componentsid="uiControl6_16RqSb"] {
   resize: none;
 }
 .detail-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px;
-  border-radius: 10px;
-  background: #0a73cc;
+  border-bottom: 15px solid #ececec;
+}
+.detail-submit-button {
+  background: red;
   color: #fff;
-  margin: 0px 20px;
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+  padding: 4px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .detail-history {
   border-top: 20px solid #ececec;
+  border-bottom: 20px solid #ececec;
 }
 .detail-history .detail-history-title {
   padding: 10px;
@@ -656,8 +665,75 @@ div[data-componentsid="uiControl6_16RqSb"] {
   align-items: center;
   background: #0a73cc;
   color: #fff;
-  width: 38%;
-  padding: 2px 5px;
+  padding: 4px 5px;
   margin: 5px 20px;
   border-radius: 5px;
+  border: 1px solid #0a73cc;
+}
+.detail-history .detail-history-sjs {
+  border: 10px solid #ececec;
+  padding: 5px;
+}
+.detail-history .detail-history-sjs > div:nth-child(2),
+.detail-history .detail-history-sjs > div:nth-child(3),
+.detail-history .detail-history-sjs > div:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-fujian-parent-button {
+  height: 35px;
+  border-bottom: 1px solid #ececec;
+  margin: 5px;
+}
+.detail-fujian-do-button {
+  border-radius: 10px;
+  background: #0a73cc;
+  color: #fff;
+  padding: 4px 10px;
+  border: 1px solid #0a73cc;
+  margin-left: 10px;
+}
+.detail-fujian-add-button {
+  border-radius: 10px;
+  background: #0a73cc;
+  color: #fff;
+  padding: 4px 10px;
+  border: 1px solid #0a73cc;
+  margin-left: 10px;
+}
+.detail-fujain-table {
+  padding: 10px;
+  border: 10px solid #ececec;
+}
+.detail-fujain-table > div:nth-child(1) {
+  color: blue;
+}
+.detail-fujain-table > div:nth-child(1),
+.detail-fujain-table > div:nth-child(2) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
+}
+.detail-fujain-table > div:nth-child(3),
+.detail-fujain-table > div:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-fujian-chose-file {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-fujian-chose-file > span {
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.detail-fujain-chose-submit {
+  padding: 10px;
 }
