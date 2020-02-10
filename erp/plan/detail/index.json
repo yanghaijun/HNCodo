@@ -182,7 +182,7 @@
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
     },
-    "control13_aG5zkI": {
+    "control15_hcs1LK": {
       "location": {
         "data": {
           "tagName": "TD"
@@ -225,224 +225,7 @@
         ]
       },
       "events": {
-        "onGetData": "getData_control13_aG5zkI"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control14_t7iMeT": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              5,
-              7
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 4,
-            "value": [
-              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBar\"]//TD[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBar-itms\"]//A[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBarButtonChoice\"]",
-              "descendant::TD[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBar-itms\"]//A[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBarButtonChoice\"]",
-              "descendant::A[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.ToolBarButtonChoice\"]"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              2,
-              3
-            ],
-            "value": "TABLE.urTWhl SPAN.urTbarItmBtn A.urBtnStd"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[6]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/A[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control14_t7iMeT"
-      },
-      "intendedRole": "custom",
-      "roles": "element,link,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control17_AhT5oH": {
-      "location": {
-        "data": {
-          "tagName": "TBODY"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-tbd\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]/DIV[1]/DIV[1]/SPAN[1]/SPAN[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]",
-              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-tbd\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TBODY",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-tbd\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TBODY",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TBODY"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              4,
-              8
-            ],
-            "value": "SPAN.urFlowLayout TABLE.urST3WhlBrd TABLE.urST3BdBrd.urST3Bd.urFontStd TBODY"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[6]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control17_AhT5oH"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control18_tdN5Fu": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": [
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-tbd\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.FileContainer\"]/TBODY[1]/TR[2]/TD[1]/DIV[1]",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-tbd\"]//DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.FileContainer\"]//DIV",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.Tray-scrl\"]//TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.FileContainer\"]//DIV",
-              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHHECKC.AttachCompView.FileContainer\"]//DIV"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              3,
-              4
-            ],
-            "value": "TABLE.urGrpWhlWeb1 TD.urGrpBdyWeb1.urScrl DIV.urGrpBdyWeb1Pd"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[6]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control18_tdN5Fu"
-      },
-      "intendedRole": "custom",
-      "roles": "element,link,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control19_TrKJJ4": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "ordinal": [
-              1,
-              3
-            ],
-            "value": [
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]/DIV[1]",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV",
-              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.QTFYJSCompView.PageHeader\"]//DIV"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              0,
-              38
-            ],
-            "value": "SPAN.urLinStd DIV.urPgH DIV.urPgHITrans.urPLBeginPad.urPLEndPad.urPLTopPad.urPLBottomPad.lsTbarInPgH DIV"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[2]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control19_TrKJJ4"
-      },
-      "intendedRole": "custom",
-      "roles": "element,link,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
-      "componentType": "custom"
-    },
-    "control20_BTmSvH": {
-      "location": {
-        "data": {
-          "tagName": "TBODY"
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              4,
-              5
-            ],
-            "value": "SPAN.urLinStd TABLE.urST3WhlBrd.urST3WhlNoTit TABLE.urST3BdBrd.urST3Bd.urFontStd TBODY"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[3]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control20_BTmSvH"
+        "onGetData": "getData_control15_hcs1LK"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -458,12 +241,7 @@
         "control4_4NDmh0",
         "control3_qGKUJ1",
         "control8_81xko5",
-        "control13_aG5zkI",
-        "control14_t7iMeT",
-        "control17_AhT5oH",
-        "control18_tdN5Fu",
-        "control19_TrKJJ4",
-        "control20_BTmSvH"
+        "control15_hcs1LK"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -524,46 +302,6 @@
           "toContextId": "context2_pX25k6"
         }
       ]
-    },
-    "flow12_tccVsC": {
-      "fromContextId": "context2_pX25k6",
-      "fromAction": "doAction",
-      "fromControlId": "control14_t7iMeT",
-      "toContexts": [
-        {
-          "toContextId": "context2_pX25k6"
-        }
-      ]
-    },
-    "flow15_GustK5": {
-      "fromContextId": "context2_pX25k6",
-      "fromAction": "doAction",
-      "fromControlId": "control17_AhT5oH",
-      "toContexts": [
-        {
-          "toContextId": "context2_pX25k6"
-        }
-      ]
-    },
-    "flow16_9Kover": {
-      "fromContextId": "context2_pX25k6",
-      "fromAction": "doAction",
-      "fromControlId": "control18_tdN5Fu",
-      "toContexts": [
-        {
-          "toContextId": "context2_pX25k6"
-        }
-      ]
-    },
-    "flow17_sMmKX6": {
-      "fromContextId": "context2_pX25k6",
-      "fromAction": "doAction",
-      "fromControlId": "control19_TrKJJ4",
-      "toContexts": [
-        {
-          "toContextId": "context2_pX25k6"
-        }
-      ]
     }
   },
   "pages": {
@@ -616,6 +354,21 @@
           }
         },
         {
+          "id": "uiControl11_bMkppO",
+          "controlId": "control15_hcs1LK",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl11_bMkppO",
+                "onGetTemplate": "getTemplate_uiControl11_bMkppO"
+              }
+            }
+          }
+        },
+        {
           "id": "uiControl5_Qqv3JO",
           "controlId": "control8_81xko5",
           "display": {
@@ -626,96 +379,6 @@
               "events": {
                 "onDoAction": "doAction_uiControl5_Qqv3JO",
                 "onGetTemplate": "getTemplate_uiControl5_Qqv3JO"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl9_tSO3sG",
-          "controlId": "control13_aG5zkI",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl9_tSO3sG",
-                "onGetTemplate": "getTemplate_uiControl9_tSO3sG"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl10_Mm6btg",
-          "controlId": "control14_t7iMeT",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl10_Mm6btg",
-                "onGetTemplate": "getTemplate_uiControl10_Mm6btg"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl14_CUzF9J",
-          "controlId": "control18_tdN5Fu",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl14_CUzF9J",
-                "onGetTemplate": "getTemplate_uiControl14_CUzF9J"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl13_VNoO1F",
-          "controlId": "control17_AhT5oH",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl13_VNoO1F",
-                "onGetTemplate": "getTemplate_uiControl13_VNoO1F"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl15_LMEk0a",
-          "controlId": "control19_TrKJJ4",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl15_LMEk0a",
-                "onGetTemplate": "getTemplate_uiControl15_LMEk0a"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl16_C7T9HP",
-          "controlId": "control20_BTmSvH",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl16_C7T9HP",
-                "onGetTemplate": "getTemplate_uiControl16_C7T9HP"
               }
             }
           }
@@ -741,7 +404,8 @@
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D7b97358ce10211e9ac7c000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3D7b97358ce10211e9ac7c000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1578975526511&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581041472006&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581044279044&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
-          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581054868273&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581054868273&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
+          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581297013693&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
         ]
       }
     },

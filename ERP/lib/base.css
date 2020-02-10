@@ -598,95 +598,135 @@ li {
   width: 35%;
   text-align: right;
 }
-.detail-title {
+.ysp-detail-title {
   min-height: 40px;
   padding: 10px;
   background: #ececec;
 }
-.detail-history {
+.ysp-deatil-fujian {
+  padding: 10px;
   border-top: 10px solid #ececec;
-  padding: 5px;
 }
-.detail-history .detail-history-title {
+.ysp-deatil-fujian > div:nth-child(1) {
   color: #105cc1;
   font-size: 20px;
-  padding-bottom: 10px;
-}
-.detail-history .detail-history-data > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detail-history .detail-history-data > div:nth-child(2) {
   border-bottom: 2px solid #ececec;
 }
-.detail-history .detail-history-data > span {
+.ysp-deatil-fujian .ysp-deatil-fujian-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 0px;
+  margin-top: 10px;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 0px;
+  margin-top: 10px;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-commit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 0px;
+  margin-top: 10px;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-content {
+  padding: 5px;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(1) {
+  color: #105cc1;
+  font-size: bold;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.detail-idea {
+.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(2),
+.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) {
+  border-bottom: 2px solid #ececec;
+}
+.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) > span:nth-child(2) {
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+.ysp-deatil-idea {
   padding: 10px;
+  border-bottom: 10px solid #ececec;
   border-top: 10px solid #ececec;
 }
-.detail-idea .detail-idea-title {
+.ysp-deatil-idea > div:nth-child(1) {
   color: #105cc1;
   font-size: 20px;
-  padding-bottom: 10px;
 }
-.detail-idea textarea {
+.ysp-deatil-idea textarea {
   resize: none;
 }
-.detail-idea .detail-idea-sp {
+.ysp-deatil-idea .ysp-deatil-idea-end {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.detail-idea .detail-idea-sp select {
-  width: 70%;
-  margin: 0;
+.ysp-deatil-idea .ysp-deatil-idea-end > div:nth-child(1) {
+  display: flex;
+  align-items: center;
 }
-.detail-idea .detail-idea-submit {
-  color: #fff;
-  background: #105cc1;
-  border: 1px solid #105cc1;
-  padding: 8px 20px;
+.ysp-deatil-idea .ysp-deatil-idea-end > div:nth-child(1) select {
+  margin: 0px;
+}
+.ysp-deatil-idea .ysp-deatil-idea-commit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
+  padding: 5px 0px;
+  background: #105cc1;
+  color: #fff;
   border-radius: 5px;
 }
-.detail-fujian {
+.ysp-deatil-history {
   padding: 10px;
+  border-bottom: 10px solid #ececec;
 }
-.detail-fujian .detail-fujian-title {
+.ysp-deatil-history > div:nth-child(1) {
   color: #105cc1;
   font-size: 20px;
-  padding-bottom: 10px;
 }
-.detail-fujian-file {
-  padding: 10px;
+.ysp-deatil-history .ysp-detail-history-content {
+  padding: 5px;
 }
-.detail-fujian-data {
-  padding: 10px;
+.ysp-deatil-history .ysp-detail-history-content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
-.detail-fujian-data .detail-fujian-data-content > div:nth-child(1) {
-  color: #105cc1;
+.ysp-deatil-history .ysp-detail-history-content div span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 90%;
 }
-.detail-fujian-data .detail-fujian-data-content > div:nth-child(2),
-.detail-fujian-data .detail-fujian-data-content > div:nth-child(3) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detail-fujian-data .detail-fujian-data-content > div:nth-child(3) {
-  padding-bottom: 10px;
-}
-.detail-fujian-data .detail-fujian-data-content button {
-  padding: 3px 5px;
-  background: #105cc1;
-  color: #fff;
-  border: 1px solid #105cc1;
+.ysp-deatil-history .ysp-detail-history-content > div:nth-child(2) {
+  border-bottom: 1px solid #ececec;
 }
