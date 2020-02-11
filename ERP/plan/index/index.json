@@ -156,63 +156,53 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>"
     },
-    "control7_M0bpC9": {
+    "control13_B5zPVh": {
       "location": {
         "data": {
-          "tagName": "A"
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待办工作"
-              ],
-              "visText": [
-                "待办工作"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待办工作"
-              ],
-              "visText": [
-                "待办工作"
-              ]
-            }
-          },
-          {
             "id": "@id/word",
             "prob": 1,
-            "value": [
-              "descendant::DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]//DIV[@id=\"DetailedNavigationTree\"]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[3]/A[1]",
-              "descendant::DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]//DIV[@id=\"DetailedNavigationTree\"]//A",
-              "descendant::DIV[@id=\"nav_container_div\"]//DIV[@id=\"DetailedNavigationTree\"]//A",
-              "descendant::DIV[@id=\"DetailedNavigationTree\"]//A"
-            ]
+            "value": "descendant::TD[@id=\"nav_panel_td\"]//DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[2]/TD[3]/DIV[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "Tray5fc0955b-tbd",
+              "tagName": "TBODY",
+              "prefix": "DIV[@id=\"nav_panel_div\"]//DIV[@id=\"nav_container_div\"]//",
+              "suffix": "/TR[2]/TD[3]/DIV[1]",
+              "ratio": 0.466
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.urTrcWhlHdr TD.urTrcBodyHdr.urTrcBodyBdrHdr DIV.urTrcBodyHdr.urTrcBodyHdrBdr.urTrcBodyHdrPd"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[2]/TD[3]/DIV[1]/DIV[1]/DIV[2]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[3]/A[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[2]/TR[2]/TD[3]/DIV[1]"
           }
         ]
       },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
-      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>"
+      "events": {
+        "onGetData": "getData_control13_B5zPVh"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -220,7 +210,7 @@
       "controls": [
         "control10_TTenKO",
         "control2_5a64bK",
-        "control7_M0bpC9"
+        "control13_B5zPVh"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -260,6 +250,16 @@
           "toModelId": "detail"
         }
       ]
+    },
+    "flow9_A3H6To": {
+      "fromContextId": "context1_DTmQtc",
+      "fromAction": "doAction",
+      "fromControlId": "control13_B5zPVh",
+      "toContexts": [
+        {
+          "toContextId": "context1_DTmQtc"
+        }
+      ]
     }
   },
   "pages": {
@@ -282,13 +282,17 @@
           }
         },
         {
-          "id": "uiControl4_VGMa9B",
-          "controlId": "control7_M0bpC9",
+          "id": "uiControl9_9tkt7T",
+          "controlId": "control13_B5zPVh",
           "display": {
-            "adapterId": "clickable",
-            "type": "button",
+            "adapterId": "custom",
+            "type": "custom",
             "adapter": {
-              "templateType": ""
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_9tkt7T",
+                "onGetTemplate": "getTemplate_uiControl9_9tkt7T"
+              }
             }
           }
         },
@@ -1485,6 +1489,83 @@
             "sapPopupMainId_X",
             "urFrames",
             "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenuacba",
+            "HoverMenuacba-r",
+            "HoverMenuacba_",
+            "HoverMenubeccb",
+            "HoverMenubeccb-r",
+            "HoverMenubeccb_",
+            "Imagea",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkaae",
+            "Linkbac",
+            "Linked",
+            "MenuScroll",
+            "MessageBarde",
+            "MessageBarde-img",
+            "MessageBarde-txt",
+            "MessageBare",
+            "MessageBare-img",
+            "MessageBare-txt",
+            "MessageBareefbe",
+            "MessageBareefbe-img",
+            "MessageBareefbe-txt",
+            "MessageBarfd",
+            "MessageBarfd-img",
+            "MessageBarfd-txt",
+            "MessageBarfffa",
+            "MessageBarfffa-img",
+            "MessageBarfffa-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
           ]
         ],
         "context2_pX25k6": [
@@ -1754,6 +1835,61 @@
             "urMnu",
             "urMnuRowOff",
             "urMnuRowOn",
+            "urMnuScrDwn",
+            "urMnuScrUp",
+            "urMnuSub",
+            "urMnuTxt",
+            "urMsgBarErrBtm",
+            "urMsgBarImg",
+            "urMsgBarImgError",
+            "urMsgBarImgOk",
+            "urMsgBarStd",
+            "urMsgBarStdBtm",
+            "urPopUpTrB",
+            "urPopUpTrgInAct",
+            "urPopUpTrgWhl",
+            "urScrl",
+            "urTxtStd"
+          ],
+          [
+            "prtlDivListEntries",
+            "prtlDivScrollerLeft",
+            "prtlDivScrollerRight",
+            "prtlFocus",
+            "prtlHdrBrandImgContainer",
+            "prtlHdrLogoContainer",
+            "prtlHdrSep",
+            "prtlHdrWelcome",
+            "prtlHdrWhl",
+            "prtlHeaderCon",
+            "prtlHeaderFunctionsContainer",
+            "prtlHeaderFunctionsTable",
+            "prtlHeaderNotch",
+            "prtlHeaderNotchImgWidth",
+            "prtlTopNavAct",
+            "prtlTopNavContainer",
+            "prtlTopNavContentSep",
+            "prtlTopNavLnk",
+            "prtlTopNavNotch",
+            "prtlTopNavWhl",
+            "prtlTopNavndAct",
+            "prtlTopNavndLvl-a",
+            "prtlTopNavndLvlRight",
+            "prtlTopNavndLvlWhl",
+            "prtlTopNavstLvl-a",
+            "prtlTopNavstLvl-i",
+            "prtlTopNavstLvl-right",
+            "urBrcAct",
+            "urBrcDiv",
+            "urBrcWhl",
+            "urFontStd",
+            "urGrpBdyWeb",
+            "urGrpWhlWeb",
+            "urLnkDsbl",
+            "urLnkFunction",
+            "urMnu",
+            "urMnuRowDsbl",
+            "urMnuRowOff",
             "urMnuScrDwn",
             "urMnuScrUp",
             "urMnuSub",
