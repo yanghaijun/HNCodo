@@ -303,14 +303,14 @@
           //   obj4.display = "none";
           // }
         }
-      }data.push(obj4);return data;
+      }data.push(obj4);var obj5 = {};obj5.textA = localStorage.isA && localStorage.isA.split(",");obj5.textB = localStorage.isB && localStorage.isB.split(",");data.push(obj5);return data;
     }, doAction_uiControl0_acry19: function (data, elem) {
       if (data.eventType == "userName") {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(0).find('input').val(data);
       } else if (data.eventType == 'passWorld') {
         var data = data.dataCustom;var user = $(elem).find('.login_form_text').eq(1).find('input').val(data);
       } else if (data.eventType == 'ButtonN') {
-        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31097'; //var appTitle; //获取九宫格中的标题
+        ysp.appMain.showLoading();var port = elem.ownerDocument.defaultView.location.port; //var port = '31110'; //var appTitle; //获取九宫格中的标题
         //   if (top.EAPI.isIOS()) {
         //     appTitle = localStorage.getItem('appTitle');
         //   }
@@ -318,8 +318,7 @@
         //     appTitle = huaneng.sendTitleToJS();
         //   }
         $.ajax({ url: 'http://59.110.171.69:' + port + '/names.nsf?Login', type: 'post', data: { Username: $(elem).find('.login_form_text').eq(0).find('input').val(), Password: $(elem).find('.login_form_text').eq(1).find('input').val() }, success: function (data) {
-            //console.log(data);
-            //debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
+            //console.log(data); //debugger; // if ($(data)[7].querySelector("input[name='fldWebOfficeList']")) {
             //   localStorage.password = $(elem).find('.login_form_text').eq(1).find('input').val();
             //   localStorage.username = $(elem).find('.login_form_text').eq(0).find('input').val();
             //   elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/WebOffice/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
@@ -423,20 +422,27 @@
                 localStorage.heilongjiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.heilongjiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31110') {
                 //重庆
-                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.chongqingP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.chongqingU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31112') {
                 //财务
                 localStorage.caiwuP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.caiwuU = $(elem).find('.login_form_text').eq(0).find('input').val();
               } else if (port == '31097') {
                 //浙江(玉环)
-                localStorage.zhejiangP = $(elem).find('.login_form_text').eq(1).find('input').val();
-                localStorage.zhejiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
+                localStorage.zhejiangP = $(elem).find('.login_form_text').eq(1).find('input').val();localStorage.zhejiangU = $(elem).find('.login_form_text').eq(0).find('input').val();
               }var dd = $(data);var dom;for (var i = 0; i < dd.length; i++) {
                 var tag = dd[i].tagName;if (tag == 'FORM') {
                   dom = dd[i];
                 }
-              }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;if (_web == null && port == '31017') {
+              }var _webAll = dom && dom.querySelectorAll("input[name='fldWebOfficeList']") && dom.querySelectorAll("input[name='fldWebOfficeList']");var _web;if (_webAll) {
+                if (_webAll.length > 1) {
+                  var a = [];var b = [];for (var i = 0; i < _webAll.length; i++) {
+                    a.push(_webAll[i].value);b.push(_webAll[i].nextSibling.textContent);
+                  }localStorage.isA = a;localStorage.isB = b;ysp.appMain.hideLoading();return;
+                } else {
+                  _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                }
+              } //         var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+              if (_web == null && port == '31017') {
                 _web = dom && dom.textContent.split("/")[1];
               }localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';ysp.appMain.hideLoading();
             } else {
@@ -448,6 +454,10 @@
         // setTimeout(function () {
         //   ysp.appMain.hideLoading();
         // }, 500);
+      } //选择工作单位
+      if (data.eventType == 'chose') {
+        var index = data.customData;var port = elem.ownerDocument.defaultView.location.port; //var port = '31110';
+        localStorage.allWeb = index;localStorage.allPort = port;localStorage.removeItem("inputCode");localStorage.removeItem("isA");localStorage.removeItem("isB");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + index + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
       }if (data.eventType == 'login') {//获取用户名和密码，自动登录
         // if (top.EAPI.isAndroid()) {
         //   var userName = huaneng.getUserName();
@@ -468,13 +478,14 @@
         //     huaneng.showPasswordError();
         //   } else if (top.EAPI.isIOS()) {
         //     top.EAPI.postMessageToNative("OAPasswordIsError");
+
         //   }
         // }
       }
     },
     getTemplate_uiControl0_acry19: function () {
-      var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n         \n      </div>\n    )\n  }\n});\n';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      )\n    );\n  }\n});';
+      var selfTemplate = 'module.exports = React.createClass({\n  \n  componentWillMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:"login"\n      })\n    }\n  },\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate(){\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if(handler){\n      handler({\n        eventType:"loginButton",\n        data:text\n      })\n    }\n  },\n  userName:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'userName\',\n        data:target.value\n      })\n    }\n  },\n  passWorld:function(e){\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'passWorld\',\n        data:target.value\n      })\n    }\n  },\n  ButtonN:function(e){\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if(handler){\n        handler({\n          eventType:\'ButtonN\'\n        })\n    \t}\n  },\n  componentDidMount: function(){\n    this.props.customHandler({\n      eventType:\'123\'\n    })\n  },\n  handlerChose(e){\n    var _this = this;\n    var handler = _this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'chose\',\n        data:e.target.dataset.index\n      })\n    }\n  },\n  render: function() {\n    var me = this,data = this.props.customData\n    return (\n      <div className=\'D_login\'>\n        <div className=\'loginTitle\'>\n        \t<div>\n          \t\n          </div>\n          <div>\u529E\u516C\u81EA\u52A8\u5316\u7BA1\u7406\u7CFB\u7EDF</div>\n        </div>\n        \n        <div style={{display:data[3].display}} ref="myInput">\n          <div className=\'loginText\'><span></span><AInput  type={data[0].type} onChange={me.userName} value={data[0].userName}/></div>\n        <div className=\'loginTextp\'><span></span><AInput  type={data[1].type} onChange={me.passWorld} value={data[1].password}/></div>\n        <div className=\'freeow-br\'>\n        \t{data.map(function(q,l){\n           if(l>1){\n             return <p>{q.text}</p>\n           }\n          })}\n        </div>\n        <div className=\'loginButton\'><button onClick={me.ButtonN}>\u767B\u5F55</button></div>\n        </div>\n        \n        <div>\n        \t{\n            data && data[4] && data[4].textA ? <div className="loginMore">\n                <div>\u8BF7\u9009\u62E9\u5DE5\u4F5C\u5355\u4F4D</div>\n                {\n                  data[4].textB.map(function(d,i){\n                    return(\n                    \t<div data-index = {data[4].textA[i]} onClick={me.handlerChose.bind(me)}>{d}</div>\n                    )\n                  })\n                }\n              </div> : \'\'\n          }\n        </div> \n      </div>\n    )\n  }\n});\n';
+      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: "login"\n      });\n    }\n  },\n\n  // componentDidMount(){\n  //   var handler = this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:"login"\n  //     })\n  //   }\n  // },\n  componentDidUpdate: function componentDidUpdate() {\n    var handler = this.props.customHandler;\n    var text = this.props.customData && this.props.customData[2].text;\n    if (handler) {\n      handler({\n        eventType: "loginButton",\n        data: text\n      });\n    }\n  },\n\n  userName: function userName(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'userName\',\n        data: target.value\n      });\n    }\n  },\n  passWorld: function passWorld(e) {\n    var target = e.target;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'passWorld\',\n        data: target.value\n      });\n    }\n  },\n  ButtonN: function ButtonN(e) {\n    var _this = this;\n    var target = e.target;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'ButtonN\'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    this.props.customHandler({\n      eventType: \'123\'\n    });\n  },\n  handlerChose: function handlerChose(e) {\n    var _this = this;\n    var handler = _this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'chose\',\n        data: e.target.dataset.index\n      });\n    }\n  },\n\n  render: function render() {\n    var me = this,\n        data = this.props.customData;\n    return React.createElement(\n      "div",\n      { className: "D_login" },\n      React.createElement(\n        "div",\n        { className: "loginTitle" },\n        React.createElement("div", null),\n        React.createElement(\n          "div",\n          null,\n          "\\u529E\\u516C\\u81EA\\u52A8\\u5316\\u7BA1\\u7406\\u7CFB\\u7EDF"\n        )\n      ),\n      React.createElement(\n        "div",\n        { style: { display: data[3].display }, ref: "myInput" },\n        React.createElement(\n          "div",\n          { className: "loginText" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[0].type, onChange: me.userName, value: data[0].userName })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginTextp" },\n          React.createElement("span", null),\n          React.createElement(AInput, { type: data[1].type, onChange: me.passWorld, value: data[1].password })\n        ),\n        React.createElement(\n          "div",\n          { className: "freeow-br" },\n          data.map(function (q, l) {\n            if (l > 1) {\n              return React.createElement(\n                "p",\n                null,\n                q.text\n              );\n            }\n          })\n        ),\n        React.createElement(\n          "div",\n          { className: "loginButton" },\n          React.createElement(\n            "button",\n            { onClick: me.ButtonN },\n            "\\u767B\\u5F55"\n          )\n        )\n      ),\n      React.createElement(\n        "div",\n        null,\n        data && data[4] && data[4].textA ? React.createElement(\n          "div",\n          { className: "loginMore" },\n          React.createElement(\n            "div",\n            null,\n            "\\u8BF7\\u9009\\u62E9\\u5DE5\\u4F5C\\u5355\\u4F4D"\n          ),\n          data[4].textB.map(function (d, i) {\n            return React.createElement(\n              "div",\n              { "data-index": data[4].textA[i], onClick: me.handlerChose.bind(me) },\n              d\n            );\n          })\n        ) : \'\'\n      )\n    );\n  }\n});';
     },
     getData_control38_UpuyAZ: function (elem) {
       ;var port = elem.ownerDocument.defaultView.location.port;;if (top.EAPI.isIOS()) {
@@ -696,7 +707,16 @@
                   var tag = dd[i].tagName;if (tag == 'FORM') {
                     dom = dd[i];
                   }
-                }var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;if (_web == null && port == '31017') {
+                }var _webAll = dom && dom.querySelectorAll("input[name='fldWebOfficeList']") && dom.querySelectorAll("input[name='fldWebOfficeList']");var _web;if (_webAll) {
+                  if (_webAll.length > 1) {
+                    var a = [];var b = [];for (var i = 0; i < _webAll.length; i++) {
+                      a.push(_webAll[i].value);b.push(_webAll[i].nextSibling.textContent);
+                    }localStorage.isA = a;localStorage.isB = b;ysp.appMain.hideLoading();return;
+                  } else {
+                    _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                  }
+                } // var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                if (_web == null && port == '31017') {
                   _web = dom && dom.textContent.split("/")[1];
                 }localStorage.allWeb = _web;localStorage.allPort = port;localStorage.removeItem("inputCode");elem.ownerDocument.location.href = 'http://59.110.171.69:' + port + '/' + _web + '/MoaWebConfigSet.nsf/fomBoxList4?OpenForm&v=viwInBox&d=MoaWebOffice.nsf';
               } else {

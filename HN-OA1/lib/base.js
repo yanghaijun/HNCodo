@@ -381,8 +381,29 @@
                       dom = dd[i];
                     }
                   }
+                  
+                  var _webAll = dom && dom.querySelectorAll("input[name='fldWebOfficeList']") && dom.querySelectorAll("input[name='fldWebOfficeList']");
+                  var _web;
+                  if (_webAll) {
+                    if (_webAll.length > 1) {
+                      var a = [];
+                      var b = [];
 
-                  var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                      for (var i = 0; i < _webAll.length; i++) {
+                        a.push(_webAll[i].value);
+                        b.push(_webAll[i].nextSibling.textContent);
+                      }
+
+                      localStorage.isA = a;
+                      localStorage.isB = b;
+                      ysp.appMain.hideLoading();
+                      return;
+                    } else {
+                      _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
+                    }
+                  }
+
+                  // var _web = dom && dom.querySelector("input[name='fldWebOfficeList']") && dom.querySelector("input[name='fldWebOfficeList']").value;
                   if (_web == null && port == '31017') {
                     _web = dom && dom.textContent.split("/")[1];
                   }
