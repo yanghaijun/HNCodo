@@ -99,7 +99,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>"
     },
     "control3_qGKUJ1": {
@@ -297,6 +297,16 @@
       "fromContextId": "context2_pX25k6",
       "fromAction": "doAction",
       "fromControlId": "control8_81xko5",
+      "toContexts": [
+        {
+          "toContextId": "context2_pX25k6"
+        }
+      ]
+    },
+    "flow12_iGdw9o": {
+      "fromContextId": "context2_pX25k6",
+      "fromAction": "doAction",
+      "fromControlId": "control15_hcs1LK",
       "toContexts": [
         {
           "toContextId": "context2_pX25k6"

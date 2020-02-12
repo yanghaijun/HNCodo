@@ -4,7 +4,8 @@
   "targetURL": "http://ihn.chng.com.cn:20002/irj/portal",
   "jsFile": "index.js",
   "requires": {
-    "detail": "../detail/index.json"
+    "detail": "../detail/index.json",
+    "empty": "../empty/index.json"
   },
   "chineseName": "列表页面",
   "description": "",
@@ -258,6 +259,10 @@
       "toContexts": [
         {
           "toContextId": "context1_DTmQtc"
+        },
+        {
+          "toContextId": "context3_GLoDZa",
+          "toModelId": "empty"
         }
       ]
     }
