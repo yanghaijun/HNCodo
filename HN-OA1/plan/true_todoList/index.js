@@ -137,7 +137,11 @@
       ;setTimeout(function () {
         //console.log(elem);
         var port = elem.ownerDocument.defaultView.location.port;var pn = elem.ownerDocument.defaultView.location.pathname;var pname = pn.split('/')[1];var data = [];$(elem).children().each(function () {
-          data.push('http://59.110.171.69:' + port + $(this).children('td').eq(3).find('a').attr('href').replace('javascript:$ct.open(\"', '').replace('\")', ''));
+          if ($(this).children('td').eq(3).find('a').attr('class')) {
+            data.push('http://59.110.171.69:' + port + $(this).children('td').eq(3).find('a').attr('onclick').replace('$ct.open(\'', '').replace('\')', ''));
+          } else {
+            data.push('http://59.110.171.69:' + port + $(this).children('td').eq(3).find('a').attr('href').replace('javascript:$ct.open(\"', '').replace('\")', ''));
+          }
         }); //console.log(data);
         if (top.EAPI.isAndroid()) {
           top.huaneng.fujianCacheUrl(JSON.stringify({ type: 'OA', cookie: document.cookie, fujianUrl: data.toString(), weboffice: pname }));
