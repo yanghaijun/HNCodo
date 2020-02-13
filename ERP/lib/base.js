@@ -21,7 +21,6 @@
         aWin.close();
       }
 
-
 //       var _leafElems = ["IMG", "HR", "BR", "INPUT"];
 //       var leafElems = {};
 //       var _leafElemsLength = _leafElems.length;
