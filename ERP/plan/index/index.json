@@ -204,6 +204,55 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control3_lOS4Sp": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::TABLE[@id=\"GMLJ.UWLMainView.DisplayAreaUsedForSizing\"]//TABLE[@id=\"GMLJ.UWLMainView.MainContentArea\"]//TABLE[@id=\"GMLJ.UWLMainView.DefaultView\"]/TBODY[1]/TR[1]/TD[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 3,
+            "value": {
+              "elemId": "GMLJ.UWLMainView.DefaultView-scrollV-hdl",
+              "tagName": "DIV",
+              "prefix": "TABLE[@id=\"GMLJ.UWLMainView.MainContentArea\"]//TABLE[@id=\"GMLJ.UWLMainView.DefaultView\"]//",
+              "suffix": "/DIV[1]",
+              "ratio": 0
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TD.urSCBBdy DIV.urSCBBdr DIV.urSCBBtn"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_lOS4Sp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -211,7 +260,8 @@
       "controls": [
         "control10_TTenKO",
         "control2_5a64bK",
-        "control13_B5zPVh"
+        "control13_B5zPVh",
+        "control3_lOS4Sp"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -312,6 +362,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl6_deEmKd",
                 "onGetTemplate": "getTemplate_uiControl6_deEmKd"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl2_sSDL4v",
+          "controlId": "control3_lOS4Sp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_sSDL4v",
+                "onGetTemplate": "getTemplate_uiControl2_sSDL4v"
               }
             }
           }
@@ -1531,6 +1596,80 @@
             "MessageBarfffa",
             "MessageBarfffa-img",
             "MessageBarfffa-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenube",
+            "HoverMenube-r",
+            "HoverMenube_",
+            "HoverMenueae",
+            "HoverMenueae-r",
+            "HoverMenueae_",
+            "Imagef",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkdbed",
+            "Linkde",
+            "Linkee",
+            "MenuScroll",
+            "MessageBar",
+            "MessageBar-img",
+            "MessageBar-txt",
+            "MessageBarbc",
+            "MessageBarbc-img",
+            "MessageBarbc-txt",
+            "MessageBarbdff",
+            "MessageBarbdff-img",
+            "MessageBarbdff-txt",
+            "MessageBarf",
+            "MessageBarf-img",
+            "MessageBarf-txt",
             "NavigationTarget_navForms",
             "NotchTD",
             "OptionsCover",

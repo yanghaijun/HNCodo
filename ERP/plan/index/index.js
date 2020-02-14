@@ -61,6 +61,48 @@
     getTemplate_uiControl9_9tkt7T: function () {
       var selfTemplate = "module.exports = React.createClass({\n  hanlderClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  \n  componentDidMount(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  componentDidUpdate(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div>\n      </div>\n    )\n  }\n});";
       return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  hanlderClick: function hanlderClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n  componentDidMount: function componentDidMount() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n  componentDidUpdate: function componentDidUpdate() {\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement('div', null);\n  }\n});";
+    },
+    getData_control3_lOS4Sp: function (elem) {
+      if (!elem) {
+        return;
+      }
+    },
+    doAction_uiControl2_sSDL4v: function (data, elem) {
+      if (data.eventType == 'click') {
+        var evt = document.createEvent("MouseEvents");evt.initMouseEvent("mousewheel", true, true);elem.dispatchEvent(evt); //   var scrollFunc = function (e) {
+        //     var direct = 0;
+        //     e = e || window.event;
+        //     if (e.wheelDelta) {
+        //       //判断浏览器IE，谷歌滑轮事件             
+        //       if (e.wheelDelta > 0) {
+        //         //当滑轮向上滚动时
+        //         alert("滑轮向上滚动");
+        //       }
+        //       if (e.wheelDelta < 0) {
+        //         //当滑轮向下滚动时
+        //         alert("滑轮向下滚动");
+        //       }
+        //     } else if (e.detail) {
+        //       //Firefox滑轮事件
+        //       if (e.detail > 0) {
+        //         //当滑轮向上滚动时
+        //         alert("滑轮向上滚动");
+        //       }
+        //       if (e.detail < 0) {
+        //         //当滑轮向下滚动时
+        //         alert("滑轮向下滚动");
+        //       }
+        //     } //ScrollText(direct);
+        //   }; //给页面绑定滑轮滚动事件
+        //   if (document.addEventListener) {
+        //     document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        //   } //滚动滑轮触发scrollFunc方法
+        //   window.onmousewheel = document.onmousewheel = scrollFunc;
+      }
+    },
+    getTemplate_uiControl2_sSDL4v: function () {
+      var selfTemplate = 'module.exports = React.createClass({\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'click\'\n      })\n    }\n  },\n  render: function() {\n    return (\n      <div>\n        <button onClick={this.handlerClick.bind(this)}>\u70B9\u51FB\u4E0B\u7FFB</button>\n      </div>\n    )\n  }\n});';
+      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n  handlerClick: function handlerClick() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'click\'\n      });\n    }\n  },\n\n  render: function render() {\n    return React.createElement(\n      \'div\',\n      null,\n      React.createElement(\n        \'button\',\n        { onClick: this.handlerClick.bind(this) },\n        \'\\u70B9\\u51FB\\u4E0B\\u7FFB\'\n      )\n    );\n  }\n});';
     }
   }, "index");
 })(window, ysp);
