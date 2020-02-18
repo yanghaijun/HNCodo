@@ -1,0 +1,133 @@
+{
+  "version": "0.1",
+  "id": "empty",
+  "targetURL": "http://127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
+  "jsFile": "index.js",
+  "chineseName": "empty",
+  "description": "",
+  "controls": {
+    "control12_8202fp": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.prtlBody.urFontBaseFam.urScrl"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_8202fp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context3_GLoDZa": {
+      "controls": [
+        "control12_8202fp"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow11_DWTc3a": {
+      "toContexts": [
+        {
+          "toContextId": "context3_GLoDZa"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page3_eTfg9A": {
+      "contextId": "context3_GLoDZa",
+      "layout": [
+        {
+          "id": "uiControl8_ZVh5nG",
+          "controlId": "control12_8202fp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl8_ZVh5nG",
+                "onGetTemplate": "getTemplate_uiControl8_ZVh5nG"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context3_GLoDZa": [
+          "SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context3_GLoDZa": [
+          "127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
+          "127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1581474964892x78xWIDx15814749643771581475055427"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context3_GLoDZa": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context3_GLoDZa": [
+          [
+            "SAPDialogWhl"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context3_GLoDZa": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/TABLE",
+            "-/DIV/H2",
+            "-/DIV/H3",
+            "-/DIV/H4",
+            "-/DIV/HR",
+            "-/DIV/IMG",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD"
+          ]
+        ]
+      }
+    }
+  }
+}
