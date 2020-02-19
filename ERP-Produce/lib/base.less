@@ -612,87 +612,99 @@ li{
   background: #ececec;
 }
 
-// //审批历史
-// .detail-history{
-//   border-top: 10px solid #ececec;
-//   padding: 5px;
-//   .detail-history-title{
-//     color: #105cc1;
-//     font-size: 20px;
-//     padding-bottom: 10px;
-//   }
-//   .detail-history-data{
-//     >div{
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//     }
-//     >div:nth-child(2){
-//       border-bottom: 2px solid #ececec;
-//     }
-//     >span{
-//       overflow : hidden;
-//   		text-overflow: ellipsis;
-//       white-space: nowrap;
-//     }
-//   }
-// }
-
-// //审批意见
-// .detail-idea{
+//附件管理
+.ysp-detail-fujian{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  margin: 5px 20px;
+  padding: 5px 0px;
+}
+.ysp-detail-fujianChoseTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  >span:nth-child(2){
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.ysp-deatil-fujian-content{
+  padding: 5px;
+  >div:nth-child(1){
+    width: 85%;
+    color: #105cc1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  >div:nth-child(2),>div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+// .ysp-deatil-fujian{
 //   padding: 10px;
 //   border-top: 10px solid #ececec;
-//   .detail-idea-title{
+//   >div:nth-child(1){
 //     color: #105cc1;
 //     font-size: 20px;
-//     padding-bottom: 10px; 
+//     border-bottom: 2px solid #ececec;
 //   }
-//   textarea{
-//     resize: none;
-//   }
-//   .detail-idea-sp{
+//   .ysp-deatil-fujian-add{
 //     display: flex;
-//     justify-content: space-between;
+//     justify-content: center;
 //     align-items: center;
-//     select{
-//       width: 70%;
-//       margin: 0;
-//     }
-//   }
-//   .detail-idea-submit{
-//     color: #fff;
 //     background: #105cc1;
-//     border: 1px solid #105cc1;
-//     padding: 8px 20px;
-//     margin-top: 20px;
-//     border-radius: 5px;
-    
+//     color: #fff;
+//     border-radius: 10px;
+//     padding: 5px 0px;
+//     margin-top: 10px;
 //   }
-// }
-
-// //附件
-// .detail-fujian{
-//   padding: 10px;
-//   //border-top: 10px solid #ececec;
-//   .detail-fujian-title{
-//     color: #105cc1;
-//     font-size: 20px;
-//     padding-bottom: 10px;
+//   .ysp-deatil-fujian-file{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #105cc1;
+//     color: #fff;
+//     border-radius: 10px;
+//     padding: 5px 0px;
+//     margin-top: 10px;
 //   }
-// }
-// .detail-fujian-file{
-//   padding: 10px;
-// }
-// .detail-fujian-data{
-//   padding: 10px;
-//   .detail-fujian-data-content{
+//   .ysp-deatil-fujian-commit{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #105cc1;
+//     color: #fff;
+//     border-radius: 10px;
+//     padding: 5px 0px;
+//     margin-top: 10px;
+//   }
+//   .ysp-deatil-fujian-content{
+//     padding: 5px;
 //     >div:nth-child(1){
 //       color: #105cc1;
+//       font-size: bold;
+//       padding-bottom: 10px;
+//       display: flex;
+//       justify-content: flex-start;
+//       align-items: center;
 //       overflow : hidden;
 //   		text-overflow: ellipsis;
 //       white-space: nowrap;
-//       width: 90%;
-      
 //     }
 //     >div:nth-child(2),>div:nth-child(3){
 //       display: flex;
@@ -700,88 +712,16 @@ li{
 //       align-items: center;
 //     }
 //     >div:nth-child(3){
-//       padding-bottom: 10px;
-//     }
-//     button{
-//       padding: 3px 5px;
-//       background: #105cc1;
-//       color: #fff;
-//       border: 1px solid #105cc1;
+//       border-bottom: 2px solid #ececec;
+//       >span:nth-child(2){
+//         background: #105cc1;
+//         color: #fff;
+//         border-radius: 5px;
+//         padding: 3px 5px;
+//       }
 //     }
 //   }
 // }
-
-
-
-
-//附件管理
-.ysp-deatil-fujian{
-  padding: 10px;
-  border-top: 10px solid #ececec;
-  >div:nth-child(1){
-    color: #105cc1;
-    font-size: 20px;
-    border-bottom: 2px solid #ececec;
-  }
-  .ysp-deatil-fujian-add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #105cc1;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 0px;
-    margin-top: 10px;
-  }
-  .ysp-deatil-fujian-file{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #105cc1;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 0px;
-    margin-top: 10px;
-  }
-  .ysp-deatil-fujian-commit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #105cc1;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 0px;
-    margin-top: 10px;
-  }
-  .ysp-deatil-fujian-content{
-    padding: 5px;
-    >div:nth-child(1){
-      color: #105cc1;
-      font-size: bold;
-      padding-bottom: 10px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      overflow : hidden;
-  		text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    >div:nth-child(2),>div:nth-child(3){
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    >div:nth-child(3){
-      border-bottom: 2px solid #ececec;
-      >span:nth-child(2){
-        background: #105cc1;
-        color: #fff;
-        border-radius: 5px;
-        padding: 3px 5px;
-      }
-    }
-  }
-}
 
 //审批意见
 .ysp-deatil-idea{

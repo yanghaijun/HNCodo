@@ -609,73 +609,49 @@ li {
   padding: 10px;
   background: #ececec;
 }
-.ysp-deatil-fujian {
-  padding: 10px;
-  border-top: 10px solid #ececec;
-}
-.ysp-deatil-fujian > div:nth-child(1) {
-  color: #105cc1;
-  font-size: 20px;
-  border-bottom: 2px solid #ececec;
-}
-.ysp-deatil-fujian .ysp-deatil-fujian-add {
+.ysp-detail-fujian {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #105cc1;
   color: #fff;
-  border-radius: 10px;
+  margin: 5px 20px;
   padding: 5px 0px;
-  margin-top: 10px;
 }
-.ysp-deatil-fujian .ysp-deatil-fujian-file {
+.ysp-detail-fujianChoseTitle {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: #105cc1;
-  color: #fff;
-  border-radius: 10px;
-  padding: 5px 0px;
-  margin-top: 10px;
-}
-.ysp-deatil-fujian .ysp-deatil-fujian-commit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #105cc1;
-  color: #fff;
-  border-radius: 10px;
-  padding: 5px 0px;
-  margin-top: 10px;
-}
-.ysp-deatil-fujian .ysp-deatil-fujian-content {
   padding: 5px;
 }
-.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(1) {
-  color: #105cc1;
-  font-size: bold;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.ysp-detail-fujianChoseTitle > span:nth-child(2) {
+  width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(2),
-.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) {
+.ysp-deatil-fujian-content {
+  padding: 5px;
+}
+.ysp-deatil-fujian-content > div:nth-child(1) {
+  width: 85%;
+  color: #105cc1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-deatil-fujian-content > div:nth-child(2),
+.ysp-deatil-fujian-content > div:nth-child(3) {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) {
-  border-bottom: 2px solid #ececec;
-}
-.ysp-deatil-fujian .ysp-deatil-fujian-content > div:nth-child(3) > span:nth-child(2) {
-  background: #105cc1;
-  color: #fff;
-  border-radius: 5px;
-  padding: 3px 5px;
+.ysp-deatil-fujian-content > div:nth-child(2) span,
+.ysp-deatil-fujian-content > div:nth-child(3) span {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ysp-deatil-idea {
   padding: 10px;
