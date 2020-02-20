@@ -3,7 +3,7 @@
     getData_control0_qttZ77: function (elem) {
       if (!elem) {
         return false;
-      }var root = {};root.userName = elem.querySelector('#logonuidfield').value ? elem.querySelector('#logonuidfield').value : elem.querySelector(".urMsgBarErr") ? '' : localStorage.userName;root.pwd = elem.querySelector('#logonpassfield').value ? elem.querySelector('#logonpassfield').value : elem.querySelector(".urMsgBarErr") ? '' : localStorage.passWord;root.flag = elem.querySelector(".urMsgBarErr") ? true : false;return root;
+      }var root = {};root.userName = elem.querySelector('#logonuidfield').value ? elem.querySelector('#logonuidfield').value : elem.querySelector(".urMsgBarErr") ? '' : localStorage.ERPUserName;root.pwd = elem.querySelector('#logonpassfield').value ? elem.querySelector('#logonpassfield').value : elem.querySelector(".urMsgBarErr") ? '' : localStorage.ERPPassWord;root.flag = elem.querySelector(".urMsgBarErr") ? true : false;return root;
     },
     doAction_uiControl0_kJwtTI: function (data, elem) {
       if (data.eventType == 'change') {
@@ -16,11 +16,11 @@
         if (data.dataCustom == '重置') {
           elem.querySelector('#logonuidfield').value = '';elem.querySelector('#logonpassfield').value = '';
         } else if (data.dataCustom == '登录') {
-          elem.querySelector('.urBtnStdNew').click();localStorage.userName = elem.querySelector('#logonuidfield').value;localStorage.passWord = elem.querySelector('#logonpassfield').value;ysp.appMain.showLoading();
+          elem.querySelector('.urBtnStdNew').click();localStorage.ERPUserName = elem.querySelector('#logonuidfield').value;localStorage.ERPPassWord = elem.querySelector('#logonpassfield').value;
+          ysp.appMain.showLoading();
         }
       }if (data.eventType == 'didMount') {
-        elem.querySelector('#logonuidfield').value = localStorage.userName ? localStorage.userName : '';
-        elem.querySelector('#logonpassfield').value = localStorage.passWord ? localStorage.passWord : '';
+        elem.querySelector('#logonuidfield').value = localStorage.ERPUserName ? localStorage.ERPUserName : '';elem.querySelector('#logonpassfield').value = localStorage.ERPPassWord ? localStorage.ERPPassWord : '';
       } // if (data.eventType == 'System') {
       //   // elem.ownerDocument.defaultView.open('http://10.1.128.155:85/ReimbursePlatform/', 'ERP');
       //   elem.ownerDocument.defaultView.location.href = 'http://10.1.128.155:85/ReimbursePlatform/';
