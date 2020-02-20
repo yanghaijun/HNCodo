@@ -149,6 +149,28 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control3_IV7Qv7": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_IV7Qv7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -156,7 +178,8 @@
       "controls": [
         "control4_4NDmh0",
         "control8_81xko5",
-        "control15_hcs1LK"
+        "control15_hcs1LK",
+        "control3_IV7Qv7"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -229,6 +252,21 @@
           }
         },
         {
+          "id": "uiControl2_5vuwN4",
+          "controlId": "control3_IV7Qv7",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_5vuwN4",
+                "onGetTemplate": "getTemplate_uiControl2_5vuwN4"
+              }
+            }
+          }
+        },
+        {
           "id": "uiControl11_bMkppO",
           "controlId": "control15_hcs1LK",
           "display": {
@@ -281,7 +319,8 @@
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581044279044&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581054868273&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581297013693&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
-          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Def1412b34e1711ea9428000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Def1412b34e1711ea9428000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581575902796&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Def1412b34e1711ea9428000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Def1412b34e1711ea9428000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581575902796&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
+          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D811299accb9111e8b4d4000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3D811299accb9111e8b4d4000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1582169929601&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
         ]
       }
     },
