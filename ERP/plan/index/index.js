@@ -72,17 +72,17 @@
         var name = data.dataCustom;ysp.appMain.showLoading();if (name == "上翻") {
           elem && elem.querySelector('div[acf="Prev"]').click();setTimeout(function () {
             ysp.appMain.hideLoading();
-          }, 1500);
+          }, 1000);
         } else {
           elem && elem.querySelector('div[acf="Nxt"]').click();setTimeout(function () {
             ysp.appMain.hideLoading();
-          }, 1500);
+          }, 1000);
         }
       }
     },
     getTemplate_uiControl10_MlEMZh: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  handlerClick(e){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'click\',\n        data:e.target.dataset.name\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div>\n      \t{\n          data ? <div className="ysp-index-page">\n            <span onClick={this.handlerClick.bind(this)} data-name="\u4E0A\u7FFB">\u4E0A\u7FFB\u9875</span>\n            <span onClick={this.handlerClick.bind(this)} data-name="\u4E0B\u7FFB">\u4E0B\u7FFB\u9875</span>\n          </div> : \'\'\n        }\n      </div>\n      \n    )\n  }\n});';
-      return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  handlerClick: function handlerClick(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'click\',\n        data: e.target.dataset.name\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      "div",\n      null,\n      data ? React.createElement(\n        "div",\n        { className: "ysp-index-page" },\n        React.createElement(\n          "span",\n          { onClick: this.handlerClick.bind(this), "data-name": "\\u4E0A\\u7FFB" },\n          "\\u4E0A\\u7FFB\\u9875"\n        ),\n        React.createElement(\n          "span",\n          { onClick: this.handlerClick.bind(this), "data-name": "\\u4E0B\\u7FFB" },\n          "\\u4E0B\\u7FFB\\u9875"\n        )\n      ) : \'\'\n    );\n  }\n});';
+      return "\"use strict\";\n\nmodule.exports = React.createClass({\n  displayName: \"exports\",\n  handlerClick: function handlerClick(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click',\n        data: e.target.dataset.name\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData;\n    return React.createElement(\n      \"div\",\n      null,\n      data ? React.createElement(\n        \"div\",\n        { className: \"ysp-index-page\" },\n        React.createElement(\n          \"span\",\n          { onClick: this.handlerClick.bind(this), \"data-name\": \"\\u4E0A\\u7FFB\" },\n          \"\\u4E0A\\u7FFB\\u9875\"\n        ),\n        React.createElement(\n          \"span\",\n          { onClick: this.handlerClick.bind(this), \"data-name\": \"\\u4E0B\\u7FFB\" },\n          \"\\u4E0B\\u7FFB\\u9875\"\n        )\n      ) : ''\n    );\n  }\n});";
     }
   }, "index");
 })(window, ysp);
