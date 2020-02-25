@@ -15,8 +15,8 @@
     getData_control8_81xko5: function (elem) {
       if (!elem) {
         return;
-      }var data = { flagText: [], bas: [], fujianContent: [], fujianFile: [], fujianFlag: [], history: [], idea: [], ideaEnding: [], ideaPerson: [] }; //console.log(elem);
-      var basics = elem.children; //标题标示
+      }var data = { flagText: [], bas: [], fujianContent: [], fujianFile: [], fujianFlag: [], history: [], idea: [], ideaEnding: [], ideaPerson: [], vv: [], vv1: [], vv2: [], vv3: [] }; //console.log(elem);
+      data.vv.push(elem.ownerDocument.querySelector('input[name="sap-wd-secure-id"]').value);data.vv1.push(elem.ownerDocument.querySelector('input[name="sap-ext-sid"]').value);data.vv2.push(elem.ownerDocument.querySelector('input[name="sap-wd-norefresh"]').value);data.vv3.push(elem.ownerDocument.querySelector('input[name="sap-wd-cltwndid"]').value);var basics = elem.children; //标题标示
       var text = basics[0] && basics[0].querySelector('td[class="urPgHTTxt"]') && basics[0].querySelector('td[class="urPgHTTxt"]').textContent;data.flagText.push(text);var FJ; //附件
       var YJ; //意见
       var SP; //审批历史
@@ -174,6 +174,7 @@
       //       var a = [];
       //       if (trs[i].getAttribute("userdata")) {
       //         var tds = trs[i].querySelectorAll("td");
+
       //         for (var j = 1; j < tds.length; j++) {
       //           a.push(tds[j].textContent);
       //         }
@@ -230,6 +231,7 @@
       //   var a = [];
       //   for (var i = 0; i < ass.length; i++) {
       //     if (ass[i].textContent == "添加 ") {
+
       //       a.push(ass[i]);
       //     }
       //   }
@@ -238,6 +240,7 @@
       //   } else {
       //     data.fujianFlag.push(false);
       //   } /***审批意见****/
+
       //   var textareaValue = basics[2] && basics[2].querySelector('textarea') && basics[2].querySelector('textarea').value;
       //   data.idea.push(textareaValue);
       //   var inputValue = basics[2] && basics[2].querySelectorAll('input')[0] && basics[2].querySelectorAll('input')[0].value;
@@ -251,9 +254,10 @@
       //       if (trs[i].getAttribute("userdata")) {
       //         var tds = trs[i].querySelectorAll("td");
       //         for (var j = 1; j < tds.length; j++) {
-
       //           a.push(tds[j].textContent);
+
       //         }
+
       //         data.history.push(a);
       //       }
       //     }
@@ -327,11 +331,19 @@
             }
           }var text = b && b[index].querySelectorAll("td");text && text[1].querySelector("a").click();setTimeout(function () {
             ysp.appMain.hideLoading();
+          }, 3000);setTimeout(function () {
+            //debugger;
+            var hrefs = elem.ownerDocument.defaultView.location.href;var url = hrefs.split(";")[0];var fileUrl = ysp.fileUrl;var urls = fileUrl.split('../')[2];var hostUrl = url + '/' + urls;if (top.EAPI.isAndroid()) {
+              huaneng.fujian("ERP", hostUrl);
+            } else {
+              top.EAPI.postMessageToNative("openDocument", { "dbname": hostUrl, "type": "ERP" });
+            } // if (top.EAPI.isAndroid()) {
+            //     huaneng.fujian("ERP", pname + "/" + url.match(/MoaWeb.*nsf/)[0], dbid, text, cookieValue);
+            //   } else {
+            //     top.EAPI.postMessageToNative("openDocument", { "dbname": pname + "/" + url.match(/MoaWeb.*nsf/)[0], "dbid": dbid, "text": text, "cookie": cookies.split("LtpaToken=")[1], "type": "OA" });
+            //   }
           }, 1000);
-        }
-        //alert("title=" + title);
-        //alert("cookie=" + cookies); //top.EAPI.openWindow(url + '?_ysp_filepreview=1');
-        //top.EAPI.postMessageToNative("openDocument", url);
+        } // top.EAPI.openWindow(url + '?_ysp_filepreview=1'); //top.EAPI.postMessageToNative("openDocument", url);
       } //附件添加
       if (data.eventType == "fujianAdd") {
         ysp.appMain.showLoading();if (FJ) {
@@ -365,15 +377,13 @@
             ysp.appMain.hideLoading();
           }, 3000);
         }
-      } //审批意见
-      if (data.eventType == 'select') {
+      }if (data.eventType == 'select') {
         var index = data.customData.value;var text = data.customData.text;var keyIdOk;var keyIdNOk;if (YJ) {
           YJ.querySelectorAll('input')[0].click();
         }if (text == '煤炭合同') {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-1"]');
         }if (text == "其它费用结算") {
-          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-0"]');
-          keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-1"]');
+          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-1"]');
         }if (text == "燃料付款申请单") {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.fksqd_wd.ResultType-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.fksqd_wd.ResultType-key-1"]');
         }if (text == "燃煤结算") {
@@ -381,11 +391,9 @@
         }if (text == "燃料合同作废申请") {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_2566_-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_2566_-key-1"]');
         }if (text == "燃煤临购计划") {
-          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-1"]');
-          keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-0"]');
+          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-1"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-0"]');
         }if (text == "燃煤销售结算") {
-          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlgs.rmxsjs_wd.wd.model.ResultType-key-0"]');
-          keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlgs.rmxsjs_wd.wd.model.ResultType-key-1"]');
+          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlgs.rmxsjs_wd.wd.model.ResultType-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlgs.rmxsjs_wd.wd.model.ResultType-key-1"]');
         }if (text == "供应商新增申请") {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.gyssq_wd.Result-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.gyssq_wd.Result-key-1"]');
         }if (text == "供应商评估结果") {
@@ -404,7 +412,8 @@
           setTimeout(function () {
             keyIdNOk.each(function () {
               if (~$(this).text().indexOf('不同意')) {
-                var target = $(this)[0];var evt = target.ownerDocument.createEvent('MouseEvents');evt.initMouseEvent("mousemove", true, true);target.dispatchEvent(evt);target.click();
+                var target = $(this)[0];var evt = target.ownerDocument.createEvent('MouseEvents');evt.initMouseEvent("mousemove", true, true);
+                target.dispatchEvent(evt);target.click();
               }
             });
           }, 2000);

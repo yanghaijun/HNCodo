@@ -6543,7 +6543,11 @@ UCF_Page.prototype.setDragData = function(sData, sMimeType, sDragSessionId) {
 }
 ;
 UCF_Page.prototype.downloadFile = function(sUrl) {
-    UCF_JsUtil.downloadFile(sUrl);
+  //debugger;
+  //top.localStorage.setItem("fileUrl",sUrl);
+  ysp.fileUrl = sUrl;
+  	//change
+    //UCF_JsUtil.downloadFile(sUrl);
 }
 ;
 UCF_Page.prototype.scrollIntoView = function(sId, bAlignToTop) {
