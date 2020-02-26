@@ -323,8 +323,7 @@
         }
       } //附件查看
       if (data.eventType == 'fujianLook') {
-        ysp.appMain.showLoading();var title = data.customData.title;var index = parseInt(data.customData.index); //var cookies = elem.ownerDocument.cookie;
-        if (FJ) {
+        ysp.appMain.showLoading();var title = data.customData.title;var index = parseInt(data.customData.index);var cookies = elem.ownerDocument.cookie;if (FJ) {
           var trs = FJ && FJ.querySelectorAll("tr");var b = [];for (var i = 0; i < trs.length; i++) {
             if (trs[i].getAttribute("userdata")) {
               b.push(trs[i]);
@@ -333,8 +332,8 @@
             ysp.appMain.hideLoading();
           }, 3000);setTimeout(function () {
             //debugger;
-            var hrefs = elem.ownerDocument.defaultView.location.href;var url = hrefs.split(";")[0];var fileUrl = ysp.fileUrl;var urls = fileUrl.split('../')[2];var hostUrl = url + '/' + urls;if (top.EAPI.isAndroid()) {
-              huaneng.fujian("ERP", hostUrl);
+            var hrefs = elem.ownerDocument.defaultView.location.href;var url = hrefs.split(";")[0];var fileUrl = ysp.fileUrl;var urls = fileUrl.split('../')[2];var hostUrl = 'http://ihn.chng.com.cn:20002/webdynpro/dispatcher/' + urls;if (top.EAPI.isAndroid()) {
+              huaneng.fujian("ERP", hostUrl, title, cookies, '');
             } else {
               top.EAPI.postMessageToNative("openDocument", { "dbname": hostUrl, "type": "ERP" });
             } // if (top.EAPI.isAndroid()) {
@@ -366,8 +365,7 @@
         if (FJ) {
           var files = FJ && FJ.querySelector("input[type='file']");files && files.click();
         }
-      } //附件提交
-      if (data.eventType == 'fujianCommit') {
+      }if (data.eventType == 'fujianCommit') {
         ysp.appMain.showLoading();if (FJ) {
           var ass = FJ && FJ.querySelectorAll("a");var a = [];for (var i = 0; i < ass.length; i++) {
             if (ass[i].textContent == "确认") {
@@ -378,10 +376,11 @@
           }, 3000);
         }
       }if (data.eventType == 'select') {
-        var index = data.customData.value;var text = data.customData.text;var keyIdOk;var keyIdNOk;if (YJ) {
+        ysp.appMain.showLoading();var index = data.customData.value;var text = data.customData.text;var keyIdOk;var keyIdNOk;if (YJ) {
           YJ.querySelectorAll('input')[0].click();
         }if (text == '煤炭合同') {
-          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-1"]');
+          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-0"]');
+          keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmcght_wd.Result-key-1"]');
         }if (text == "其它费用结算") {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.qtfyjs_wd.Result-key-1"]');
         }if (text == "燃料付款申请单") {
@@ -412,12 +411,13 @@
           setTimeout(function () {
             keyIdNOk.each(function () {
               if (~$(this).text().indexOf('不同意')) {
-                var target = $(this)[0];var evt = target.ownerDocument.createEvent('MouseEvents');evt.initMouseEvent("mousemove", true, true);
-                target.dispatchEvent(evt);target.click();
+                var target = $(this)[0];var evt = target.ownerDocument.createEvent('MouseEvents');evt.initMouseEvent("mousemove", true, true);target.dispatchEvent(evt);target.click();
               }
             });
           }, 2000);
-        }
+        }setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 3000);
       }
     },
     getTemplate_uiControl5_Qqv3JO: function () {
