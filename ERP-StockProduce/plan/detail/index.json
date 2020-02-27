@@ -9,51 +9,6 @@
   "chineseName": "审批单内页",
   "description": "",
   "controls": {
-    "control4_4NDmh0": {
-      "location": {
-        "data": {
-          "tagName": "TD"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"FDOEEFPD.UuiContainerView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.FundsView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.FundsView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              1,
-              12
-            ],
-            "value": "TABLE.urPgHT2 TABLE.urPgHTTbl TD.urPgHTTxt"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control4_4NDmh0"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>"
-    },
     "control8_81xko5": {
       "location": {
         "data": {
@@ -155,6 +110,10 @@
         "data": {
           "tagName": "SPAN"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -202,6 +161,10 @@
         "data": {
           "tagName": "TABLE"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -236,16 +199,47 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control11_sbwirA": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              40
+            ],
+            "value": "BODY.urBdyStd.urBdyStdNoMrg TABLE"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control11_sbwirA"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context2_pX25k6": {
       "controls": [
-        "control4_4NDmh0",
         "control8_81xko5",
         "control15_hcs1LK",
         "control3_Vv9XLr",
-        "control10_GMvaHF"
+        "control10_GMvaHF",
+        "control11_sbwirA"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -253,20 +247,6 @@
   },
   "flows": {
     "flow4_vdpbXv": {
-      "toContexts": [
-        {
-          "toContextId": "context2_pX25k6"
-        },
-        {
-          "toContextId": "context1_DTmQtc",
-          "toModelId": "index"
-        }
-      ]
-    },
-    "flow7_fUNQPZ": {
-      "fromContextId": "context2_pX25k6",
-      "fromAction": "doAction",
-      "fromControlId": "control4_4NDmh0",
       "toContexts": [
         {
           "toContextId": "context2_pX25k6"
@@ -306,6 +286,16 @@
           "toContextId": "context2_pX25k6"
         }
       ]
+    },
+    "flow8_azOr71": {
+      "fromContextId": "context2_pX25k6",
+      "fromAction": "doAction",
+      "fromControlId": "control11_sbwirA",
+      "toContexts": [
+        {
+          "toContextId": "context2_pX25k6"
+        }
+      ]
     }
   },
   "pages": {
@@ -313,16 +303,16 @@
       "contextId": "context2_pX25k6",
       "layout": [
         {
-          "id": "uiControl3_yRrsbZ",
-          "controlId": "control4_4NDmh0",
+          "id": "uiControl7_mL29PR",
+          "controlId": "control11_sbwirA",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl3_yRrsbZ",
-                "onGetTemplate": "getTemplate_uiControl3_yRrsbZ"
+                "onDoAction": "doAction_uiControl7_mL29PR",
+                "onGetTemplate": "getTemplate_uiControl7_mL29PR"
               }
             }
           }
@@ -412,7 +402,8 @@
           "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dea29c04938d011ea8318000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Dea29c04938d011ea8318000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581297013693&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Def1412b34e1711ea9428000000388813%40USER.R3_DATASOURCE.IBM_WANGY%26taskId%3Def1412b34e1711ea9428000000388813%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1581575902796&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
           "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Decf3222230f511ea9c99000001c22166%40USER.R3_DATASOURCE.80039030%26taskId%3Decf3222230f511ea9c99000001c22166%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DPRC%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution",
-          "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dc965484230f511eab2b0000001c22166%40USER.R3_DATASOURCE.80039030%26taskId%3Dc965484230f511eab2b0000001c22166%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DPRC%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution"
+          "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dc965484230f511eab2b0000001c22166%40USER.R3_DATASOURCE.80039030%26taskId%3Dc965484230f511eab2b0000001c22166%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DPRC%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution",
+          "127.0.0.1:20006/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3Dfebd053330f511eaabf6000001c22166%40USER.R3_DATASOURCE.80039030%26taskId%3Dfebd053330f511eaabf6000001c22166%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DPRC%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution"
         ]
       }
     },
