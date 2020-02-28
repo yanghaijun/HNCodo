@@ -17,15 +17,17 @@
         return;
       }var data = { flagText: [], bas: [], fujianContent: [], fujianFile: [], fujianFlag: [], history: [], idea: [], ideaPerson: [] }; //console.log(elem);
       var basics = elem.children; //标题标示
-      var text = basics[0] && basics[0].querySelector('td[class="urPgHTTxt"]') && basics[0].querySelector('td[class="urPgHTTxt"]').textContent;data.flagText.push(text);if (localStorage.workflows == "信息项目结转") {
-        /***审批意见****/var textareaValue = basics[2] && basics[2].querySelector('textarea') && basics[2].querySelector('textarea').value;data.idea.push(textareaValue);var personValue = basics[2] && basics[2].querySelectorAll('input')[0] && basics[2].querySelectorAll('input')[0].value;data.ideaPerson.push(personValue); //审批历史
-        var trs = basics[3] && basics[3].querySelectorAll("tr");if (trs) {
-          for (var i = 0; i < trs.length; i++) {
-            var a = [];if (trs[i].getAttribute("userdata")) {
-              var tds = trs[i].querySelectorAll("td");for (var j = 1; j < tds.length; j++) {
-                a.push(tds[j].textContent);
-              }data.history.push(a);
-            }
+      var text = basics[0] && basics[0].querySelector('td[class="urPgHTTxt"]') && basics[0].querySelector('td[class="urPgHTTxt"]').textContent;data.flagText.push(text);var SP; //审批意见
+      var LS; //审批历史
+      if (localStorage.workflows == "信息项目结转") {
+        SP = basics && basics[2];LS = basics && basics[3];
+      } /***审批意见****/var textareaValue = SP && SP.querySelector('textarea') && SP.querySelector('textarea').value;data.idea.push(textareaValue);var personValue = SP && SP.querySelectorAll('input')[0] && SP.querySelectorAll('input')[0].value;data.ideaPerson.push(personValue); //审批历史
+      var trs = LS && LS.querySelectorAll("tr");if (trs) {
+        for (var i = 0; i < trs.length; i++) {
+          var a = [];if (trs[i].getAttribute("userdata")) {
+            var tds = trs[i].querySelectorAll("td");for (var j = 1; j < tds.length; j++) {
+              a.push(tds[j].textContent);
+            }data.history.push(a);
           }
         }
       } // if (text && text == "其它费用结算") {
@@ -109,6 +111,7 @@
       //   }
       //   if (a && a[0] && a[0].getAttribute("class") == "urBtnStd") {
       //     data.fujianFlag.push(true);
+
       //   } else {
       //     data.fujianFlag.push(false);
       //   } /***审批意见****/
@@ -117,7 +120,9 @@
       //   var inputValue = basics[4] && basics[4].querySelectorAll('input')[0] && basics[4].querySelectorAll('input')[0].value;
       //   data.ideaEnding.push(inputValue);
       //   var personValue = basics[4] && basics[4].querySelectorAll('input')[2] && basics[4].querySelectorAll('input')[2].value;
+
       //   data.ideaPerson.push(personValue); //审批历史
+
       //   var trs = basics[5] && basics[5].querySelectorAll("tr");
       //   if (trs) {
       //     for (var i = 0; i < trs.length; i++) {
@@ -129,6 +134,7 @@
       //         }
       //         data.history.push(a);
       //       }
+
       //     }
       //   }
       // } else if (text && text == "煤炭合同") {
@@ -152,6 +158,7 @@
       //   }
       // } else if (text && (text == '燃煤结算' || text == "燃料合同作废申请" || text == "燃煤临购计划")) {
       //   //////附件管理
+
       //   //var FJ = basics[1] && basics[1].children[0].lastElementChild.lastElementChild;
       //   if (text == "燃煤临购计划") {
       //     var FJ = basics[1] && basics[1].querySelector('[id="FDOEEFPDBOMAACHHGJLN.AttachCompView.Tray"]');
@@ -212,29 +219,29 @@
       return data;
     },
     doAction_uiControl5_Qqv3JO: function (data, elem) {
-      //意见填写
+      var basics = elem.children;var SP; //审批意见
+      var LS; //审批历史
+      if (localStorage.workflows == "信息项目结转") {
+        SP = basics && basics[2];LS = basics && basics[3];
+      } //意见填写
       if (data.eventType == 'change') {
-        var val = data.customData.value;var text = data.customData.text;var basics = elem.children;if (text == '信息项目结转') {
-          if (basics[2]) {
-            basics[2].querySelector('textarea').value = val;
-          }
+        var val = data.customData.value;var text = data.customData.text;if (SP) {
+          SP.querySelector('textarea').value = val;
         }
       } //意见提交
       if (data.eventType == 'clickIdea') {
-        ysp.appMain.showLoading();debugger;var text = data.customData.text;var name = data.customData.name;var basics = elem.children;if (text == "信息项目结转") {
-          if (name == "提交") {
-            if (basics[2]) {
-              var spans = basics[2].querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton1-r"]'); //spans && spans.querySelector("a").click();
-            }alert('提交成功');
-          }if (name == "驳回") {
-            if (basics[2]) {
-              var spans = basics[2].querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton3-r"]'); //spans && spans.querySelector("a").click();
-            }alert('驳回成功');
-          }if (name == "流程作废") {
-            if (basics[2]) {
-              var spans = basics[2].querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton2-r"]'); //spans && spans.querySelector("a").click();
-            }alert('流程作废成功');
-          }
+        ysp.appMain.showLoading();var text = data.customData.text;var name = data.customData.name;if (name == "提交") {
+          if (SP) {
+            var spans = SP.querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton1-r"]'); //spans && spans.querySelector("a").click();
+          }alert('提交成功');
+        }if (name == "驳回") {
+          if (SP) {
+            var spans = SP.querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton3-r"]'); //spans && spans.querySelector("a").click();
+          }alert('驳回成功');
+        }if (name == "流程作废") {
+          if (SP) {
+            var spans = SP.querySelector('span[id="FDOEEFPDBOMAACHH.XMJZCompView.ToolBarButton2-r"]'); //spans && spans.querySelector("a").click();
+          }alert('流程作废成功');
         }setTimeout(function () {
           ysp.appMain.hideLoading();ysp.appMain.back();
         }, 5000);
@@ -274,6 +281,7 @@
       // if (data.eventType == 'fujianLook') {
       //   alert("look");
       // } //附件添加
+
       // if (data.eventType == "fujianAdd") {
       //   ysp.appMain.showLoading();
       //   var text = data.customData;
@@ -311,7 +319,6 @@
       // if (data.eventType == "fujianFile") {
       //   var text = data.customData;
       //   var basics = elem.children;
-      //   if (text == '其它费用结算') {
       //     var FJ = basics[1] && basics[1].children[0].lastElementChild.lastElementChild;
       //   } else if (text == "燃料付款申请单") {
       //     var FJ = basics[1] && basics[1].children[0].lastElementChild.lastElementChild;
@@ -330,7 +337,6 @@
       //   } else if (text == "") {
       //     var FJ = basics[1] && basics[1].children[0].lastElementChild.lastElementChild;
       //   } else if (text == "燃煤结算" || text == '燃料合同作废申请') {
-      //   } else if (text == "燃煤临购计划") {
       //     var FJ = basics[1] && basics[1].querySelector('[id="FDOEEFPDBOMAACHHGJLN.AttachCompView.Tray"]');
       //   }
       //   var ass = FJ && FJ.querySelectorAll("a");
@@ -339,7 +345,6 @@
       //     if (ass[i].textContent == "确认") {
       //       a.push(ass[i]);
       //     }
-      //   }
       //   a && a[0].click();
       //   setTimeout(function () {
       //     ysp.appMain.hideLoading();
@@ -367,15 +372,14 @@
       //     if (basics[4]) {
       //       basics[4].querySelectorAll('input')[0].click();
       //     }
-
       //     keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.fksqd_wd.ResultType-key-0"]');
       //     keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.fksqd_wd.ResultType-key-1"]');
       //   }
       //   if (text == "燃煤结算") {
       //     if (basics[2]) {
-
       //       basics[2].querySelectorAll('input')[0].click();
       //     }
+
       //     keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmjs2_wd.Result-key-0"]');
       //     keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rl.rmjs2_wd.Result-key-1"]');
       //   }
@@ -385,16 +389,13 @@
       //     }
       //     keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_2566_-key-0"]');
       //     keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_2566_-key-1"]');
-      //   }
       //   if (text == "燃煤临购计划") {
       //     if (basics[2]) {
       //       basics[2].querySelectorAll('input')[0].click();
       //     }
-      //     keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-1"]');
       //     keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.sap.dictionary.string_3263_-key-0"]');
       //   }
       //   if (index == "1") {
-
       //     setTimeout(function () {
       //       keyIdOk.each(function () {
       //         if (~$(this).text().indexOf('同意')) {
@@ -415,7 +416,6 @@
       //           target.dispatchEvent(evt);
       //           target.click();
       //         }
-      //       });
       //     }, 2000);
       //   }
       // }
@@ -453,7 +453,7 @@
     },
     doAction_uiControl2_7R9TUx: function (data, elem) {
       if (data.eventType == 'click') {
-        ysp.appMain.showLoading();elem && elem.click();setTimeout(function () {
+        elem && elem.click();setTimeout(function () {
           $(elem.ownerDocument).find('[ct="POMNI"]').each(function () {
             if (~$(this).text().indexOf('附件')) {
               var target = $(this)[0];var evt = target.ownerDocument.createEvent('MouseEvents');evt.initMouseEvent("mousemove", true, true);target.dispatchEvent(evt);target.click();
@@ -465,8 +465,8 @@
       }
     },
     getTemplate_uiControl2_7R9TUx: function () {
-      var selfTemplate = "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.state={\n      flag: true\n    }\n  }\n  handlerClick(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n    this.setState({\n      flag: !this.state.flag\n    })\n  }\n  render(){\n    return (\n      <div>\n      \t{\n          (localStorage.setStyle == \"true\" && localStorage.workflows == \"\u4FE1\u606F\u9879\u76EE\u7ED3\u8F6C\") ? <div onClick={this.handlerClick.bind(this)} className=\"ysp-detail-fujian\">\n            \u70B9\u51FB{this.state.flag ? '\u663E\u793A' : '\u9690\u85CF'}\u9644\u4EF6\n          </div> : ''\n        }\n      </div>\n      \n    )\n  }\n}";
-      return "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    _classCallCheck(this, _class);\n\n    var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));\n\n    _this.state = {\n      flag: true\n    };\n    return _this;\n  }\n\n  _createClass(_class, [{\n    key: 'handlerClick',\n    value: function handlerClick() {\n      var handler = this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: 'click'\n        });\n      }\n      this.setState({\n        flag: !this.state.flag\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        localStorage.setStyle == \"true\" && localStorage.workflows == \"\u4FE1\u606F\u9879\u76EE\u7ED3\u8F6C\" ? React.createElement(\n          'div',\n          { onClick: this.handlerClick.bind(this), className: 'ysp-detail-fujian' },\n          '\\u70B9\\u51FB',\n          this.state.flag ? '\u663E\u793A' : '\u9690\u85CF',\n          '\\u9644\\u4EF6'\n        ) : ''\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
+      var selfTemplate = "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.state={\n      flag: true\n    }\n  }\n  handlerClick(){\n    ysp.appMain.showLoading();\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n    this.setState({\n      flag: !this.state.flag\n    })\n  }\n  render(){\n    return (\n      <div>\n      \t{\n          (localStorage.setStyle == \"true\" && localStorage.workflows == \"\u4FE1\u606F\u9879\u76EE\u7ED3\u8F6C\") ? <div onClick={this.handlerClick.bind(this)} className=\"ysp-detail-fujian\">\n            \u70B9\u51FB{this.state.flag ? '\u663E\u793A' : '\u9690\u85CF'}\u9644\u4EF6\n          </div> : ''\n        }\n      </div>\n      \n    )\n  }\n}";
+      return "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    _classCallCheck(this, _class);\n\n    var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));\n\n    _this.state = {\n      flag: true\n    };\n    return _this;\n  }\n\n  _createClass(_class, [{\n    key: 'handlerClick',\n    value: function handlerClick() {\n      ysp.appMain.showLoading();\n      var handler = this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: 'click'\n        });\n      }\n      this.setState({\n        flag: !this.state.flag\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        localStorage.setStyle == \"true\" && localStorage.workflows == \"\u4FE1\u606F\u9879\u76EE\u7ED3\u8F6C\" ? React.createElement(\n          'div',\n          { onClick: this.handlerClick.bind(this), className: 'ysp-detail-fujian' },\n          '\\u70B9\\u51FB',\n          this.state.flag ? '\u663E\u793A' : '\u9690\u85CF',\n          '\\u9644\\u4EF6'\n        ) : ''\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
     },
     getData_control10_GMvaHF: function (elem) {
       if (!elem) {
@@ -486,7 +486,7 @@
     },
     doAction_uiControl6_yrBfrq: function (data, elem) {
       if (data.eventType == 'click') {
-        var name = data.customData;var childrens = elem && elem.children;ysp.appMain.showLoading();if (name == "添加附件") {
+        var name = data.customData.name;var chosefile = data.customData.chose;var childrens = elem && elem.children;ysp.appMain.showLoading();if (name == "添加附件") {
           var divs = childrens && childrens[1] && childrens[1].querySelector('td[id="FDOEEEMN.AttachmentListView.ToolBar-itms"]');divs && divs.querySelector("a").click();setTimeout(function () {
             $(elem.ownerDocument).find('[ct="POMNI"]').each(function () {
               if (~$(this).text().indexOf('添加文件')) {
@@ -499,7 +499,9 @@
         } else if (name == "选择文件") {
           var divs = childrens && childrens[1] && childrens[1].querySelector('div[id="FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content"]');divs && divs.querySelectorAll("input")[0].click();ysp.appMain.hideLoading();
         } else {
-          var divs = childrens && childrens[1] && childrens[1].querySelector('div[id="FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content"]');divs && divs.querySelector('a[id="FDOEEEMN.AddAttachmentView.ButtonUpload"]').click();setTimeout(function () {
+          if (!chosefile) {
+            alert("请选择上传的文件！！");ysp.appMain.hideLoading();return;
+          }var divs = childrens && childrens[1] && childrens[1].querySelector('div[id="FDOEEEMN.AttachmentListView.ToolBarPopinAddAttachment_Content"]');divs && divs.querySelector('a[id="FDOEEEMN.AddAttachmentView.ButtonUpload"]').click();setTimeout(function () {
             ysp.appMain.hideLoading();
           }, 4000);
         }
@@ -508,8 +510,8 @@
       }
     },
     getTemplate_uiControl6_yrBfrq: function () {
-      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(e){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click',\n        data:e.target.dataset.name\n      })\n    }\n  },\n  handlerLook(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'look'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData || [];\n    return (\n      <div>\n        {\n          data && data.flag && data.flag[0] ? <div>\n            \t<div onClick={this.handlerClick.bind(this)} data-name=\"\u6DFB\u52A0\u9644\u4EF6\" className=\"ysp-detail-fujian\">\u6DFB\u52A0\u9644\u4EF6</div>\n              {\n                data && data.addfileflag && data.addfileflag[0] ? <div>\n                  \t<div onClick={this.handlerClick.bind(this)} data-name=\"\u9009\u62E9\u6587\u4EF6\" className=\"ysp-detail-fujian\">\u8BF7\u9009\u62E9\u6587\u4EF6</div>\n                    <div className=\"ysp-detail-fujianChoseTitle\">\n                      <span>\u6240\u9009\u6587\u4EF6\uFF1A</span>\n                      <span>{data && data.chosefile}</span>\n                    </div>\n                    <div onClick={this.handlerClick.bind(this)} data-name=\"\u786E\u5B9A\" className=\"ysp-detail-fujian\">\u786E\u5B9A</div>\n                  </div> : ''\n              }\n              {\n                data && data.fujianContent && data.fujianContent.length == 0 ? <div style={{'color':'red','text-align':'center','padding':'10px'}}>\u6682\u65E0\u9644\u4EF6\uFF01\uFF01</div> :\n                  data && data.fujianContent.map(function(d,i){\n                    return(\n                      <div className=\"ysp-deatil-fujian-content\">\n                        <div onClick={this.handlerLook.bind(this)}>{d[0]}</div>\n                        <div>\n                          <span>{d[1]}</span>\n                          <span>{d[2]}</span>\n                        </div>\n                        <div>\n                          <span>{d[3]}</span>\n                          <span>{d[5]}</span>\n                        </div>\n                      </div>\n                    )\n                  })\n                }\n            </div> : ''\n        }\n        \n      </div>\n    )\n  }\n});";
-      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click',\n        data: e.target.dataset.name\n      });\n    }\n  },\n  handlerLook: function handlerLook() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'look'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData || [];\n    return React.createElement(\n      'div',\n      null,\n      data && data.flag && data.flag[0] ? React.createElement(\n        'div',\n        null,\n        React.createElement(\n          'div',\n          { onClick: this.handlerClick.bind(this), 'data-name': '\\u6DFB\\u52A0\\u9644\\u4EF6', className: 'ysp-detail-fujian' },\n          '\\u6DFB\\u52A0\\u9644\\u4EF6'\n        ),\n        data && data.addfileflag && data.addfileflag[0] ? React.createElement(\n          'div',\n          null,\n          React.createElement(\n            'div',\n            { onClick: this.handlerClick.bind(this), 'data-name': '\\u9009\\u62E9\\u6587\\u4EF6', className: 'ysp-detail-fujian' },\n            '\\u8BF7\\u9009\\u62E9\\u6587\\u4EF6'\n          ),\n          React.createElement(\n            'div',\n            { className: 'ysp-detail-fujianChoseTitle' },\n            React.createElement(\n              'span',\n              null,\n              '\\u6240\\u9009\\u6587\\u4EF6\\uFF1A'\n            ),\n            React.createElement(\n              'span',\n              null,\n              data && data.chosefile\n            )\n          ),\n          React.createElement(\n            'div',\n            { onClick: this.handlerClick.bind(this), 'data-name': '\\u786E\\u5B9A', className: 'ysp-detail-fujian' },\n            '\\u786E\\u5B9A'\n          )\n        ) : '',\n        data && data.fujianContent && data.fujianContent.length == 0 ? React.createElement(\n          'div',\n          { style: { 'color': 'red', 'text-align': 'center', 'padding': '10px' } },\n          '\\u6682\\u65E0\\u9644\\u4EF6\\uFF01\\uFF01'\n        ) : data && data.fujianContent.map(function (d, i) {\n          return React.createElement(\n            'div',\n            { className: 'ysp-deatil-fujian-content' },\n            React.createElement(\n              'div',\n              { onClick: this.handlerLook.bind(this) },\n              d[0]\n            ),\n            React.createElement(\n              'div',\n              null,\n              React.createElement(\n                'span',\n                null,\n                d[1]\n              ),\n              React.createElement(\n                'span',\n                null,\n                d[2]\n              )\n            ),\n            React.createElement(\n              'div',\n              null,\n              React.createElement(\n                'span',\n                null,\n                d[3]\n              ),\n              React.createElement(\n                'span',\n                null,\n                d[5]\n              )\n            )\n          );\n        })\n      ) : ''\n    );\n  }\n});";
+      var selfTemplate = "module.exports = React.createClass({\n  handlerClick(e){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click',\n        data:{\n          name:e.target.dataset.name,\n          chosefile:e.target.dataset.chose\n        }\n      })\n    }\n  },\n  handlerLook(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'look'\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData || [];\n    return (\n      <div>\n        {\n          data && data.flag && data.flag[0] ? <div>\n            \t<div onClick={this.handlerClick.bind(this)} data-name=\"\u6DFB\u52A0\u9644\u4EF6\" className=\"ysp-detail-fujian\">\u6DFB\u52A0\u9644\u4EF6</div>\n              {\n                data && data.addfileflag && data.addfileflag[0] ? <div>\n                  \t<div onClick={this.handlerClick.bind(this)} data-name=\"\u9009\u62E9\u6587\u4EF6\" className=\"ysp-detail-fujian\">\u8BF7\u9009\u62E9\u6587\u4EF6</div>\n                    <div className=\"ysp-detail-fujianChoseTitle\">\n                      <span>\u6240\u9009\u6587\u4EF6\uFF1A</span>\n                      <span>{data && data.chosefile}</span>\n                    </div>\n                    <div onClick={this.handlerClick.bind(this)} data-chose = {data && data.chosefile} data-name=\"\u786E\u5B9A\" className=\"ysp-detail-fujian\">\u786E\u5B9A</div>\n                  </div> : ''\n              }\n              {\n                data && data.fujianContent && data.fujianContent.length == 0 ? <div style={{'color':'red','text-align':'center','padding':'10px'}}>\u6682\u65E0\u9644\u4EF6\uFF01\uFF01</div> :\n                  data && data.fujianContent.map(function(d,i){\n                    return(\n                      <div className=\"ysp-deatil-fujian-content\">\n                        <div onClick={this.handlerLook.bind(this)}>{d[0]}</div>\n                        <div>\n                          <span>{d[1]}</span>\n                          <span>{d[2]}</span>\n                        </div>\n                        <div>\n                          <span>{d[3]}</span>\n                          <span>{d[5]}</span>\n                        </div>\n                      </div>\n                    )\n                  })\n                }\n            </div> : ''\n        }\n        \n      </div>\n    )\n  }\n});";
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n  handlerClick: function handlerClick(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'click',\n        data: {\n          name: e.target.dataset.name,\n          chosefile: e.target.dataset.chose\n        }\n      });\n    }\n  },\n  handlerLook: function handlerLook() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'look'\n      });\n    }\n  },\n\n  render: function render() {\n    var data = this.props.customData || [];\n    return React.createElement(\n      'div',\n      null,\n      data && data.flag && data.flag[0] ? React.createElement(\n        'div',\n        null,\n        React.createElement(\n          'div',\n          { onClick: this.handlerClick.bind(this), 'data-name': '\\u6DFB\\u52A0\\u9644\\u4EF6', className: 'ysp-detail-fujian' },\n          '\\u6DFB\\u52A0\\u9644\\u4EF6'\n        ),\n        data && data.addfileflag && data.addfileflag[0] ? React.createElement(\n          'div',\n          null,\n          React.createElement(\n            'div',\n            { onClick: this.handlerClick.bind(this), 'data-name': '\\u9009\\u62E9\\u6587\\u4EF6', className: 'ysp-detail-fujian' },\n            '\\u8BF7\\u9009\\u62E9\\u6587\\u4EF6'\n          ),\n          React.createElement(\n            'div',\n            { className: 'ysp-detail-fujianChoseTitle' },\n            React.createElement(\n              'span',\n              null,\n              '\\u6240\\u9009\\u6587\\u4EF6\\uFF1A'\n            ),\n            React.createElement(\n              'span',\n              null,\n              data && data.chosefile\n            )\n          ),\n          React.createElement(\n            'div',\n            { onClick: this.handlerClick.bind(this), 'data-chose': data && data.chosefile, 'data-name': '\\u786E\\u5B9A', className: 'ysp-detail-fujian' },\n            '\\u786E\\u5B9A'\n          )\n        ) : '',\n        data && data.fujianContent && data.fujianContent.length == 0 ? React.createElement(\n          'div',\n          { style: { 'color': 'red', 'text-align': 'center', 'padding': '10px' } },\n          '\\u6682\\u65E0\\u9644\\u4EF6\\uFF01\\uFF01'\n        ) : data && data.fujianContent.map(function (d, i) {\n          return React.createElement(\n            'div',\n            { className: 'ysp-deatil-fujian-content' },\n            React.createElement(\n              'div',\n              { onClick: this.handlerLook.bind(this) },\n              d[0]\n            ),\n            React.createElement(\n              'div',\n              null,\n              React.createElement(\n                'span',\n                null,\n                d[1]\n              ),\n              React.createElement(\n                'span',\n                null,\n                d[2]\n              )\n            ),\n            React.createElement(\n              'div',\n              null,\n              React.createElement(\n                'span',\n                null,\n                d[3]\n              ),\n              React.createElement(\n                'span',\n                null,\n                d[5]\n              )\n            )\n          );\n        })\n      ) : ''\n    );\n  }\n});";
     },
     getData_control11_sbwirA: function (elem) {
       if (!elem) {

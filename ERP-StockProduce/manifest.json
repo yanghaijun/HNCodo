@@ -77,5 +77,5 @@
   "default_url": "http://127.0.0.1:20006/irj/portal",
   "scope": "ERP-StockProduce",
   "start_url": "enterplorer://ERP-StockProduce/local/index.html",
-  "update_time": 1582860030448
+  "update_time": 1582871711829
 }
