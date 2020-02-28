@@ -109,6 +109,9 @@ li {
   width: 25%;
   text-align: right;
   margin-right: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .Todo-list-content span:nth-child(2) {
   display: inline-block;
@@ -116,6 +119,7 @@ li {
   color: #001c59;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .Todo-list-content .show-false li:nth-child(5),
 .Todo-list-content .show-false li:nth-child(6),
@@ -736,4 +740,97 @@ div[data-componentsid="uiControl6_16RqSb"] {
 }
 .detail-fujain-chose-submit {
   padding: 10px;
+}
+.ysp-index-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  background: #fff;
+  height: 60px;
+  width: 100%;
+  border-top: 2px solid #ececec;
+}
+.ysp-index-page > span:nth-child(1) {
+  background: #105cc1;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.ysp-index-page > span:nth-child(2) {
+  border: 2px solid #ececec;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.ysp-deatil-idea {
+  padding: 10px;
+  border-bottom: 10px solid #ececec;
+  border-top: 10px solid #ececec;
+}
+.ysp-deatil-idea > div:nth-child(1) {
+  color: #105cc1;
+  font-size: 20px;
+}
+.ysp-deatil-idea textarea {
+  resize: none;
+}
+.ysp-deatil-idea .ysp-deatil-idea-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-deatil-idea .ysp-deatil-idea-end > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.ysp-deatil-idea .ysp-deatil-idea-end > div:nth-child(1) select {
+  margin: 0px;
+}
+.ysp-deatil-idea .ysp-deatil-idea-commit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 5px 0px;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+}
+.ysp-deatil-history {
+  padding: 10px;
+  border-bottom: 10px solid #ececec;
+}
+.ysp-deatil-history > div:nth-child(1) {
+  color: #105cc1;
+  font-size: 20px;
+  border-bottom: 2px solid #ececec;
+}
+.ysp-deatil-history > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 5px 0px;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+}
+.ysp-deatil-history .ysp-detail-history-content {
+  padding: 5px;
+}
+.ysp-deatil-history .ysp-detail-history-content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.ysp-deatil-history .ysp-detail-history-content div span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-deatil-history .ysp-detail-history-content > div:nth-child(4) {
+  border-bottom: 1px solid #ececec;
 }

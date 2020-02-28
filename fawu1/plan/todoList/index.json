@@ -15,6 +15,10 @@
         "data": {
           "tagName": "TD"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -41,12 +45,98 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control3_UPeiQR": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]",
+              "descendant::DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]",
+              "descendant::TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.urBorderBox.urTbsCnt SPAN.urFlowLayout SPAN.urLinStd"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control3_UPeiQR"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control15_lH66fo": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "aaaa.MyUWLCompView.Table_0",
+              "tagName": "TABLE",
+              "prefix": "DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]//",
+              "suffix": "/TBODY[1]/TR[1]",
+              "ratio": 0.805
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              37
+            ],
+            "value": "SPAN.urFlowLayout SPAN.urLinStd TABLE.urST.urST3WhlBrd.urST3WhlNoTit TBODY TR"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control15_lH66fo"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context3_qTz57Z": {
       "controls": [
-        "control7_sOeu55"
+        "control7_sOeu55",
+        "control3_UPeiQR",
+        "control15_lH66fo"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -77,12 +167,37 @@
           "toModelId": "empty"
         }
       ]
+    },
+    "flow14_AUAO3T": {
+      "fromContextId": "context3_qTz57Z",
+      "fromAction": "doAction",
+      "fromControlId": "control3_UPeiQR",
+      "toContexts": [
+        {
+          "toContextId": "context3_qTz57Z"
+        }
+      ]
     }
   },
   "pages": {
     "page3_RZKJxA": {
       "contextId": "context3_qTz57Z",
       "layout": [
+        {
+          "id": "uiControl2_xiSA19",
+          "controlId": "control3_UPeiQR",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl2_xiSA19",
+                "onGetTemplate": "getTemplate_uiControl2_xiSA19"
+              }
+            }
+          }
+        },
         {
           "id": "uiControl6_16RqSb",
           "controlId": "control7_sOeu55",
@@ -94,6 +209,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl6_16RqSb",
                 "onGetTemplate": "getTemplate_uiControl6_16RqSb"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl13_ssi0Vf",
+          "controlId": "control15_lH66fo",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl13_ssi0Vf",
+                "onGetTemplate": "getTemplate_uiControl13_ssi0Vf"
               }
             }
           }
@@ -113,7 +243,8 @@
       "contexts": {
         "context3_qTz57Z": [
           "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page",
-          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=Ly_Quh_pzDcUTt45KVBh*g--lpzLp0sWtSwMwtsbyHTxrg--"
+          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=Ly_Quh_pzDcUTt45KVBh*g--lpzLp0sWtSwMwtsbyHTxrg--",
+          "ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=D9RUatNyryjeml1E7cua5A--hpEo2KLNmLCr_bIbx5hAZg--"
         ]
       }
     },
@@ -203,6 +334,91 @@
             "aaaa.MyUWLCompView.taskDesc_editor.",
             "aaaa.MyUWLCompView.taskDesc_header",
             "ur-loading"
+          ],
+          [
+            "...assoc",
+            "...form",
+            "...ihub",
+            "...ihub_e",
+            "...ihub_j",
+            "...ihub_m",
+            "...ihub_n",
+            "...ihub_w",
+            "...page",
+            "...page-animations",
+            "...page-asso",
+            "...page-static",
+            "OFDPAIDG.FullWidthLayoutView.RootUIElementContainer",
+            "OFDPAIDG.FullWidthLayoutView.RootUIElementContainer:h",
+            "OFDPAIDG.FullWidthLayoutView._",
+            "UCF_System",
+            "aaaa.MyUWLCompView.LinkToAction.",
+            "aaaa.MyUWLCompView.RootElement",
+            "aaaa.MyUWLCompView.RootElement:h",
+            "aaaa.MyUWLCompView.RootElement:iView",
+            "aaaa.MyUWLCompView.Status",
+            "aaaa.MyUWLCompView.Status-CONTENT",
+            "aaaa.MyUWLCompView.Status_editor.",
+            "aaaa.MyUWLCompView.Status_header",
+            "aaaa.MyUWLCompView.Tab",
+            "aaaa.MyUWLCompView.Tab-cnt",
+            "aaaa.MyUWLCompView.Tab-focus",
+            "aaaa.MyUWLCompView.TabStrip",
+            "aaaa.MyUWLCompView.TabStrip-ITBA",
+            "aaaa.MyUWLCompView.TabStrip-ITBB",
+            "aaaa.MyUWLCompView.TabStrip-cnt",
+            "aaaa.MyUWLCompView.TabStrip-menu",
+            "aaaa.MyUWLCompView.TabStrip-next",
+            "aaaa.MyUWLCompView.TabStrip-panel",
+            "aaaa.MyUWLCompView.TabStrip-prev",
+            "aaaa.MyUWLCompView.TabStrip:-r",
+            "aaaa.MyUWLCompView.Tab_Content",
+            "aaaa.MyUWLCompView.Table_",
+            "aaaa.MyUWLCompView.Table_-colorDDHover",
+            "aaaa.MyUWLCompView.Table_-colorStdHover",
+            "aaaa.MyUWLCompView.Table_-content",
+            "aaaa.MyUWLCompView.Table_-contentTBody",
+            "aaaa.MyUWLCompView.Table_-hiddenData",
+            "aaaa.MyUWLCompView.Table_-scrollV",
+            "aaaa.MyUWLCompView.Table_-scrollV-Nxt",
+            "aaaa.MyUWLCompView.Table_-scrollV-Prev",
+            "aaaa.MyUWLCompView.Table_-scrollV-bar",
+            "aaaa.MyUWLCompView.Table_-scrollV-hdl",
+            "aaaa.MyUWLCompView.Table_-scrollV-spc",
+            "aaaa.MyUWLCompView.Table_-toolbar",
+            "aaaa.MyUWLCompView.Table_:",
+            "aaaa.MyUWLCompView.Table_:-r",
+            "aaaa.MyUWLCompView.Table_:.",
+            "aaaa.MyUWLCompView.ToolBar",
+            "aaaa.MyUWLCompView.ToolBar-itms",
+            "aaaa.MyUWLCompView.ToolBarButton",
+            "aaaa.MyUWLCompView.ToolBarButton-img",
+            "aaaa.MyUWLCompView.ToolBarButton-r",
+            "aaaa.MyUWLCompView._",
+            "aaaa.MyUWLCompView.applicant",
+            "aaaa.MyUWLCompView.applicant-CONTENT",
+            "aaaa.MyUWLCompView.applicant_editor.",
+            "aaaa.MyUWLCompView.applicant_header",
+            "aaaa.MyUWLCompView.createDate",
+            "aaaa.MyUWLCompView.createDate-CONTENT",
+            "aaaa.MyUWLCompView.createDate_editor.",
+            "aaaa.MyUWLCompView.createDate_header",
+            "aaaa.MyUWLCompView.description",
+            "aaaa.MyUWLCompView.description-CONTENT",
+            "aaaa.MyUWLCompView.description_header",
+            "aaaa.MyUWLCompView.processName",
+            "aaaa.MyUWLCompView.processName-CONTENT",
+            "aaaa.MyUWLCompView.processName_editor.",
+            "aaaa.MyUWLCompView.processName_header",
+            "aaaa.MyUWLCompView.processid",
+            "aaaa.MyUWLCompView.processid-CONTENT",
+            "aaaa.MyUWLCompView.processid_header",
+            "aaaa.MyUWLCompView.taskDesc",
+            "aaaa.MyUWLCompView.taskDesc-CONTENT",
+            "aaaa.MyUWLCompView.taskDesc_editor.",
+            "aaaa.MyUWLCompView.taskDesc_header",
+            "ur-loading",
+            "ur-scrolltip"
           ]
         ]
       }
@@ -250,6 +466,98 @@
             "urSCBBdr",
             "urSCBBdy",
             "urSCBBtn",
+            "urSCBDimHeight",
+            "urSCBDimMinHeight",
+            "urSCBDimWidth",
+            "urSCBDwn",
+            "urSCBUp",
+            "urSCBVHdl",
+            "urST",
+            "urSTBd",
+            "urSTBdBrd",
+            "urSTC",
+            "urSTFlt",
+            "urSTHC",
+            "urSTHCColorLvl",
+            "urSTHCMetricContent",
+            "urSTHCMetricSelCol",
+            "urSTHCMetricStd",
+            "urSTHTbl",
+            "urSTIcoFilter",
+            "urSTLbHdrBg",
+            "urSTLbSelIcon",
+            "urSTLbUnselIcon",
+            "urSTRowSelIcon",
+            "urSTRowUnSelIcon",
+            "urSTSC",
+            "urSTSCBSpc",
+            "urSTSCMetricInner",
+            "urSTSStd",
+            "urSTSelRo",
+            "urSTTD",
+            "urSTTDFlt",
+            "urSTTDFltIco",
+            "urSTTDIn",
+            "urSTTDRo",
+            "urSTTDSc",
+            "urSTToolbar",
+            "urSTWhlBrd",
+            "urSTWhlNoTit",
+            "urSTbvIconSortCursor",
+            "urSTddHoverColor",
+            "urSTstdHoverColor",
+            "urTWhl",
+            "urTbarItmBtn",
+            "urTbsCnt",
+            "urTbsDiv",
+            "urTbsDivDisplay",
+            "urTbsWhl",
+            "urTxtColor",
+            "urTxtStd"
+          ],
+          [
+            "lsLoadImg",
+            "lsTblEdf",
+            "lsTblEdfTd",
+            "lsTblEdfWhl",
+            "lsTblEdfWhlFL",
+            "lsTbsFirstSel",
+            "lsTbsLabelSel",
+            "lsTbsLastSel",
+            "lsTbsMenu",
+            "lsTbsOvfl",
+            "lsTbsPageNextDsbl",
+            "lsTbsPagePrevDsbl",
+            "lsTbsPanel",
+            "lsTbsPanelBtns",
+            "lsTbsPanelCnt",
+            "lsTbsTitleAlign",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnImgBgColor",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdMnuOnlyImg",
+            "urBtnStdValign",
+            "urBtnStdWithImg",
+            "urCursorClickable",
+            "urDataTipStd",
+            "urDataTipTxt",
+            "urFlowLayout",
+            "urFontRel",
+            "urFontStd",
+            "urImgBtn",
+            "urLayoutPadless",
+            "urLinStd",
+            "urLnkFunction",
+            "urLoadA",
+            "urMatrixLayout",
+            "urNoUserSelect",
+            "urSCB",
+            "urSCBBdr",
+            "urSCBBdy",
+            "urSCBBtn",
+            "urSCBBtnPressed",
             "urSCBDimHeight",
             "urSCBDimMinHeight",
             "urSCBDimWidth",
