@@ -712,3 +712,26 @@ li {
 .ysp-deatil-history .ysp-detail-history-content > div:nth-child(2) {
   border-bottom: 1px solid #ececec;
 }
+.ysp-index-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  background: #fff;
+  height: 60px;
+  width: 100%;
+  border-top: 2px solid #ececec;
+}
+.ysp-index-page > span:nth-child(1) {
+  background: #105cc1;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.ysp-index-page > span:nth-child(2) {
+  border: 2px solid #ececec;
+  padding: 5px 15px;
+  border-radius: 5px;
+}

@@ -798,3 +798,29 @@ li{
     }
   }
 }
+
+//翻页
+
+.ysp-index-page{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  background: #fff;
+  height: 60px;
+  width: 100%;
+	border-top: 2px solid #ececec;
+  >span:nth-child(1){
+    background: #105cc1;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  >span:nth-child(2){
+    border: 2px solid #ececec;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+}
