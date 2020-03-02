@@ -605,11 +605,6 @@ li {
 div[data-componentsid="uiControl6_16RqSb"] {
   background: #ececec;
 }
-.index_content {
-  margin: 10px 0px;
-  padding: 10px;
-  background: #fff;
-}
 .ysp-detail-header {
   display: flex;
   justify-content: space-between;
@@ -634,112 +629,6 @@ div[data-componentsid="uiControl6_16RqSb"] {
   min-height: 40px;
   padding: 2px 5px;
   background: #ececec;
-}
-.detail-yijian {
-  padding: 10px;
-}
-.detail-yijian textarea {
-  resize: none;
-}
-.detail-submit {
-  border-bottom: 15px solid #ececec;
-}
-.detail-submit-button {
-  background: red;
-  color: #fff;
-  border: 1px solid red;
-  margin: 0 auto;
-  display: block;
-  padding: 4px 20px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-.detail-history {
-  border-top: 20px solid #ececec;
-  border-bottom: 20px solid #ececec;
-}
-.detail-history .detail-history-title {
-  padding: 10px;
-  font-weight: bold;
-  border-bottom: 2px solid #ececec;
-}
-.detail-history .detail-history-sj {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: #0a73cc;
-  color: #fff;
-  padding: 4px 5px;
-  margin: 5px 20px;
-  border-radius: 5px;
-  border: 1px solid #0a73cc;
-}
-.detail-history .detail-history-sjs {
-  border: 10px solid #ececec;
-  padding: 5px;
-}
-.detail-history .detail-history-sjs > div:nth-child(2),
-.detail-history .detail-history-sjs > div:nth-child(3),
-.detail-history .detail-history-sjs > div:nth-child(4) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detail-fujian-parent-button {
-  height: 35px;
-  border-bottom: 1px solid #ececec;
-  margin: 5px;
-}
-.detail-fujian-do-button {
-  border-radius: 10px;
-  background: #0a73cc;
-  color: #fff;
-  padding: 4px 10px;
-  border: 1px solid #0a73cc;
-  margin-left: 10px;
-}
-.detail-fujian-add-button {
-  border-radius: 10px;
-  background: #0a73cc;
-  color: #fff;
-  padding: 4px 10px;
-  border: 1px solid #0a73cc;
-  margin-left: 10px;
-}
-.detail-fujain-table {
-  padding: 10px;
-  border: 10px solid #ececec;
-}
-.detail-fujain-table > div:nth-child(1) {
-  color: blue;
-}
-.detail-fujain-table > div:nth-child(1),
-.detail-fujain-table > div:nth-child(2) {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 95%;
-}
-.detail-fujain-table > div:nth-child(3),
-.detail-fujain-table > div:nth-child(4) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detail-fujian-chose-file {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detail-fujian-chose-file > span {
-  width: 65%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.detail-fujain-chose-submit {
-  padding: 10px;
 }
 .ysp-index-page {
   display: flex;
@@ -767,7 +656,6 @@ div[data-componentsid="uiControl6_16RqSb"] {
 .ysp-deatil-idea {
   padding: 10px;
   border-bottom: 10px solid #ececec;
-  border-top: 10px solid #ececec;
 }
 .ysp-deatil-idea > div:nth-child(1) {
   color: #105cc1;
@@ -833,4 +721,56 @@ div[data-componentsid="uiControl6_16RqSb"] {
 }
 .ysp-deatil-history .ysp-detail-history-content > div:nth-child(4) {
   border-bottom: 1px solid #ececec;
+}
+.ysp-detail-fujian {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  margin: 5px 20px;
+  padding: 5px 0px;
+}
+.ysp-detail-fujianChoseTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.ysp-detail-fujianChoseTitle > span:nth-child(2) {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-deatil-fujian-content {
+  padding: 15px;
+  border-bottom: 1px solid #ececec;
+}
+.ysp-deatil-fujian-content > div:nth-child(1) {
+  width: 97%;
+  color: #105cc1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-deatil-fujian-content > div:nth-child(2) {
+  padding-top: 10px;
+  width: 97%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-deatil-fujian-content > div:nth-child(3),
+.ysp-deatil-fujian-content > div:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-deatil-fujian-content > div:nth-child(3) > span:nth-child(1),
+.ysp-deatil-fujian-content > div:nth-child(4) > span:nth-child(1) {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

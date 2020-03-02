@@ -611,11 +611,11 @@ div[data-componentsid="uiControl6_16RqSb"]{
 }
 
 
-.index_content{
-  margin: 10px 0px;
-  padding: 10px;
-  background: #fff;
-}
+// .index_content{
+//   margin: 10px 0px;
+//   padding: 10px;
+//   background: #fff;
+// }
 
 
 .ysp-detail-header{
@@ -643,116 +643,6 @@ div[data-componentsid="uiControl6_16RqSb"]{
   padding: 2px 5px;
   background: #ececec;
 }
-.detail-yijian{
-  padding: 10px;
-  textarea{
-    resize: none;
-  }
-}
-.detail-submit{
-  border-bottom: 15px solid #ececec;
-}
-.detail-submit-button{
-  background: red;
-  color: #fff;
-  border: 1px solid red;
-  margin: 0 auto;
-  display: block;
-  padding: 4px 20px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-.detail-history{
-  border-top: 20px solid #ececec;
-  border-bottom: 20px solid #ececec;
-  .detail-history-title{
-    padding: 10px;
-    //font-size: 18px;
-    font-weight: bold;
-    border-bottom: 2px solid #ececec;
-  }
-  .detail-history-sj{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: #0a73cc;
-    color: #fff;
-    padding: 4px 5px;
-    margin: 5px 20px;
-    border-radius: 5px;
-    border: 1px solid #0a73cc;
-  }
-  .detail-history-sjs{
-    border: 10px solid #ececec;
-    padding: 5px;
-    >div:nth-child(2),>div:nth-child(3),>div:nth-child(4){
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-}
-.detail-fujian-parent-button{
-  height: 35px;
-  border-bottom: 1px solid #ececec;
-  margin: 5px;
-}
-.detail-fujian-do-button{
-  border-radius: 10px;
-  background: #0a73cc;
-  color: #fff;
-  padding: 4px 10px;
-  border: 1px solid #0a73cc;
-  margin-left: 10px;
-  
-}
-.detail-fujian-add-button{
-  border-radius: 10px;
-  background: #0a73cc;
-  color: #fff;
-  padding: 4px 10px;
-  border: 1px solid #0a73cc;
-  margin-left: 10px;
-}
-.detail-fujain-table{
-  padding: 10px;
-  border: 10px solid #ececec;
-  >div:nth-child(1){
-    color: blue;
-  }
-  >div:nth-child(1),>div:nth-child(2){
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 95%;
-  }
-  >div:nth-child(3),>div:nth-child(4){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.detail-fujian-chose-file{
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  >span{
-    width: 65%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-.detail-fujain-chose-submit{
-  //border: 10px solid #ececec;
-  // border-left: 10px solid #ececec;
-  // border-right: 10px solid #ececec;
-  padding: 10px;
-}
-
-
 
 //翻页样式
 .ysp-index-page{
@@ -783,7 +673,7 @@ div[data-componentsid="uiControl6_16RqSb"]{
 .ysp-deatil-idea{
   padding: 10px;
   border-bottom: 10px solid #ececec;
-  border-top: 10px solid #ececec;
+  //border-top: 10px solid #ececec;
   >div:nth-child(1){
     color: #105cc1;
     font-size: 20px;
@@ -850,6 +740,58 @@ div[data-componentsid="uiControl6_16RqSb"]{
     }
     >div:nth-child(4){
       border-bottom: 1px solid #ececec;
+    }
+  }
+}
+
+//附件管理
+.ysp-detail-fujian{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #105cc1;
+  color: #fff;
+  margin: 5px 20px;
+  padding: 5px 0px;
+}
+.ysp-detail-fujianChoseTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  >span:nth-child(2){
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.ysp-deatil-fujian-content{
+  padding: 15px;
+  border-bottom: 1px solid #ececec;
+  >div:nth-child(1){
+    width: 97%;
+    color: #105cc1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  >div:nth-child(2){
+    padding-top: 10px;
+    width: 97%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  >div:nth-child(3),>div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >span:nth-child(1){
+      width: 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }

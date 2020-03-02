@@ -646,9 +646,9 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-.ysp-deatil-fujian-content > div:nth-child(2) span,
-.ysp-deatil-fujian-content > div:nth-child(3) span {
-  width: 70%;
+.ysp-deatil-fujian-content > div:nth-child(2) > span:nth-child(1),
+.ysp-deatil-fujian-content > div:nth-child(3) > span:nth-child(1) {
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
