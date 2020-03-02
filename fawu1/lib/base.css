@@ -91,6 +91,7 @@ li {
 .Todo-list-content {
   margin-top: 20px;
   background: #eee;
+  margin-bottom: 40px;
 }
 .Todo-list-content .list-content-ul {
   padding: 18px;
@@ -705,22 +706,46 @@ div[data-componentsid="uiControl6_16RqSb"] {
   color: #fff;
   border-radius: 5px;
 }
-.ysp-deatil-history .ysp-detail-history-content {
+.ysp-deatil-history .ysp-detail-history-contents {
+  height: 200px;
+  overflow: auto;
+  position: relative;
+}
+.ysp-deatil-history .ysp-detail-history-contents .ysp-detail-history-content {
   padding: 5px;
 }
-.ysp-deatil-history .ysp-detail-history-content div {
+.ysp-deatil-history .ysp-detail-history-contents .ysp-detail-history-content div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
 }
-.ysp-deatil-history .ysp-detail-history-content div span {
+.ysp-deatil-history .ysp-detail-history-contents .ysp-detail-history-content div span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.ysp-deatil-history .ysp-detail-history-content > div:nth-child(4) {
+.ysp-deatil-history .ysp-detail-history-contents .ysp-detail-history-content > div:nth-child(4) {
   border-bottom: 1px solid #ececec;
+}
+.ysp-deatil-history .ysp-detail-history-content-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border-top: 2px solid #ececec;
+}
+.ysp-deatil-history .ysp-detail-history-content-page > span:nth-child(1) {
+  background: #105cc1;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.ysp-deatil-history .ysp-detail-history-content-page > span:nth-child(2) {
+  border: 2px solid #ececec;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 .ysp-detail-fujian {
   display: flex;
@@ -748,11 +773,22 @@ div[data-componentsid="uiControl6_16RqSb"] {
   border-bottom: 1px solid #ececec;
 }
 .ysp-deatil-fujian-content > div:nth-child(1) {
-  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ysp-deatil-fujian-content > div:nth-child(1) > span:nth-child(1) {
+  width: 80%;
   color: #105cc1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.ysp-deatil-fujian-content > div:nth-child(1) > span:nth-child(2) {
+  border-radius: 5px;
+  padding: 5px 8px;
+  background: #105cc1;
+  color: #fff;
 }
 .ysp-deatil-fujian-content > div:nth-child(2) {
   padding-top: 10px;
