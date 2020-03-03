@@ -73,9 +73,9 @@
       ]
     }
   ],
-  "name": "ERP系统",
+  "name": "股份ERP系统",
   "default_url": "http://127.0.0.1:20006/irj/portal",
   "scope": "ERP-StockProduce",
   "start_url": "enterplorer://ERP-StockProduce/local/index.html",
-  "update_time": 1583219861095
+  "update_time": 1583221878507
 }

@@ -73,9 +73,9 @@
       ]
     }
   ],
-  "name": "ERP系统",
+  "name": "集团ERP系统",
   "default_url": "http://ihn.chng.com.cn:20002/irj/portal",
   "scope": "ERP",
   "start_url": "enterplorer://ERP/local/index.html",
-  "update_time": 1582873560448
+  "update_time": 1583223466889
 }
