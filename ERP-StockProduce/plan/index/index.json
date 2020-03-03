@@ -221,47 +221,31 @@
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
     },
-    "control4_tKbAPN": {
+    "control14_AeAHaC": {
       "location": {
         "data": {
-          "tagName": "TR"
+          "tagName": "TBODY"
         },
         "locators": [
           {
             "id": "@id/word",
             "prob": 1,
-            "value": "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]"
-          },
-          {
-            "id": "@id/partialWord",
-            "prob": 1,
-            "disabled": true,
-            "value": {
-              "elemId": "aaaa.MyUWLCompView.Table_0",
-              "tagName": "TABLE",
-              "prefix": "DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]//",
-              "suffix": "/TBODY[1]/TR[1]",
-              "ratio": 0.803
-            }
+            "value": "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]/TABLE[1]/TBODY[1]"
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "ordinal": [
-              1,
-              37
-            ],
-            "value": "DIV.urTbsCnt TABLE.urFontStd TABLE.urST3WhlBrd.urST3WhlNoTit TBODY TR"
+            "value": "TABLE.urST3WhlBrd.urST3WhlNoTit TD.urST4CellBrd TABLE.urSCB TBODY"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]"
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/DIV[1]/TABLE[1]/TBODY[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control4_tKbAPN"
+        "onGetData": "getData_control14_AeAHaC"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -276,7 +260,7 @@
         "control2_5a64bK",
         "control13_B5zPVh",
         "control7_xJCVM0",
-        "control4_tKbAPN"
+        "control14_AeAHaC"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -382,16 +366,16 @@
           }
         },
         {
-          "id": "uiControl3_wCD8Le",
-          "controlId": "control4_tKbAPN",
+          "id": "uiControl10_GDH9Dw",
+          "controlId": "control14_AeAHaC",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl3_wCD8Le",
-                "onGetTemplate": "getTemplate_uiControl3_wCD8Le"
+                "onDoAction": "doAction_uiControl10_GDH9Dw",
+                "onGetTemplate": "getTemplate_uiControl10_GDH9Dw"
               }
             }
           }
@@ -1839,6 +1823,83 @@
             "MessageBaredebe",
             "MessageBaredebe-img",
             "MessageBaredebe-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenuafc",
+            "HoverMenuafc-r",
+            "HoverMenuafc_",
+            "HoverMenuddda",
+            "HoverMenuddda-r",
+            "HoverMenuddda_",
+            "Imagedbce",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkaacb",
+            "Linkaecf",
+            "Linkde",
+            "MenuScroll",
+            "MessageBarbecaf",
+            "MessageBarbecaf-img",
+            "MessageBarbecaf-txt",
+            "MessageBarbf",
+            "MessageBarbf-img",
+            "MessageBarbf-txt",
+            "MessageBardc",
+            "MessageBardc-img",
+            "MessageBardc-txt",
+            "MessageBarddfe",
+            "MessageBarddfe-img",
+            "MessageBarddfe-txt",
+            "MessageBarfb",
+            "MessageBarfb-img",
+            "MessageBarfb-txt",
             "NavigationTarget_navForms",
             "NotchTD",
             "OptionsCover",
