@@ -89,6 +89,7 @@ li{
   background: #eee;
   position: absolute;
   margin-bottom: 60px;
+  width: 100%;
   .list-content-ul{
     padding: 18px;
     background: #fff;
@@ -106,6 +107,10 @@ li{
     width: 25%;
     text-align: right;
     margin-right: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
     
   }
   span:nth-child(2){
@@ -114,6 +119,8 @@ li{
     color: rgb(0,28,89);
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
   }
 }
 .Todo-list-content{

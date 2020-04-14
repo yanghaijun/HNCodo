@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "index",
-  "targetURL": "http://ihn.chng.com.cn:20002/irj/portal",
+  "targetURL": "http://ihn.chng.com.cn:20000/irj/portal",
   "jsFile": "index.js",
   "requires": {
     "detail": "../detail/index.json",
@@ -84,42 +84,6 @@
       },
       "roles": "element",
       "text": "",
-      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>"
-    },
-    "control10_TTenKO": {
-      "location": {
-        "data": {
-          "tagName": "TBODY"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": [
-              "descendant::TABLE[@id=\"GMLJ.UWLMainView.MainContentArea\"]//TABLE[@id=\"GMLJ.UWLMainView.DefaultView\"]//TD[@id=\"GMLJ.UWLMainView.DefaultView-content\"]/SPAN[1]/TABLE[1]/TBODY[1]",
-              "descendant::TABLE[@id=\"GMLJ.UWLMainView.MainContentArea\"]//TABLE[@id=\"GMLJ.UWLMainView.DefaultView\"]//TD[@id=\"GMLJ.UWLMainView.DefaultView-content\"]//TBODY",
-              "descendant::TABLE[@id=\"GMLJ.UWLMainView.DefaultView\"]//TD[@id=\"GMLJ.UWLMainView.DefaultView-content\"]//TBODY",
-              "descendant::TD[@id=\"GMLJ.UWLMainView.DefaultView-content\"]//TBODY"
-            ]
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/SPAN[1]/SPAN[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control10_TTenKO"
-      },
-      "intendedRole": "custom",
-      "roles": "element,link,custom",
-      "ignoreVisibility": true,
-      "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>"
     },
     "control2_5a64bK": {
@@ -210,6 +174,10 @@
         "data": {
           "tagName": "TR"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -244,15 +212,67 @@
       "monitored": true,
       "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control4_kZIJlO": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::TD[@id=\"aaaa.MyUWLCompView.TabStrip-cnt\"]//DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 1,
+            "disabled": true,
+            "value": {
+              "elemId": "aaaa.MyUWLCompView.Table_0-content",
+              "tagName": "TD",
+              "prefix": "DIV[@id=\"aaaa.MyUWLCompView.Tab-cnt\"]//TABLE[@id=\"aaaa.MyUWLCompView.Tab_Content\"]//",
+              "suffix": "/SPAN[1]/TABLE[1]/TBODY[1]",
+              "ratio": 0.738
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              21
+            ],
+            "value": "TABLE.urFontStd TABLE.urST3WhlBrd.urST3WhlNoTit TABLE.urST3BdBrd.urST3Bd.urFontStd TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control4_kZIJlO"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='桌面内部页   '][contains(@id,'ivuFrm_page') and contains(@id,'ivu')]<<IFRAME>>//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context1_DTmQtc": {
       "controls": [
-        "control10_TTenKO",
         "control2_5a64bK",
         "control13_B5zPVh",
-        "control14_HemzT1"
+        "control14_HemzT1",
+        "control4_kZIJlO"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -279,20 +299,6 @@
         }
       ]
     },
-    "flow5_u7eywO": {
-      "fromContextId": "context1_DTmQtc",
-      "fromAction": "doAction",
-      "fromControlId": "control10_TTenKO",
-      "toContexts": [
-        {
-          "toContextId": "context1_DTmQtc"
-        },
-        {
-          "toContextId": "context2_pX25k6",
-          "toModelId": "detail"
-        }
-      ]
-    },
     "flow9_A3H6To": {
       "fromContextId": "context1_DTmQtc",
       "fromAction": "doAction",
@@ -314,6 +320,20 @@
       "toContexts": [
         {
           "toContextId": "context1_DTmQtc"
+        }
+      ]
+    },
+    "flow5_hNVMFN": {
+      "fromContextId": "context1_DTmQtc",
+      "fromAction": "doAction",
+      "fromControlId": "control4_kZIJlO",
+      "toContexts": [
+        {
+          "toContextId": "context1_DTmQtc"
+        },
+        {
+          "toContextId": "context2_pX25k6",
+          "toModelId": "detail"
         }
       ]
     }
@@ -353,16 +373,16 @@
           }
         },
         {
-          "id": "uiControl6_deEmKd",
-          "controlId": "control10_TTenKO",
+          "id": "uiControl3_HTiF2s",
+          "controlId": "control4_kZIJlO",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl6_deEmKd",
-                "onGetTemplate": "getTemplate_uiControl6_deEmKd"
+                "onDoAction": "doAction_uiControl3_HTiF2s",
+                "onGetTemplate": "getTemplate_uiControl3_HTiF2s"
               }
             }
           }
@@ -398,11 +418,11 @@
     "page/urls": {
       "contexts": {
         "context1_DTmQtc": [
-          "ihn.chng.com.cn:20002/irj/portal"
+          "ihn.chng.com.cn:20000/irj/portal"
         ],
         "context2_pX25k6": [
-          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521014121262&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
-          "ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521514748716&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+          "ihn.chng.com.cn:20000/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521014121262&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c",
+          "ihn.chng.com.cn:20000/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521514748716&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
         ]
       }
     },
@@ -1826,6 +1846,83 @@
             "MessageBarfe",
             "MessageBarfe-img",
             "MessageBarfe-txt",
+            "NavigationTarget_navForms",
+            "NotchTD",
+            "OptionsCover",
+            "RelativeNavBase",
+            "RightScroll",
+            "TLNDiv",
+            "TLNTable",
+            "back",
+            "divChangeContent",
+            "forward",
+            "frmChangeContent",
+            "header_notch",
+            "htmlbValueHelpFieldId",
+            "htmlb__",
+            "htmlb___",
+            "htmlb___-btn",
+            "htmlb___complete",
+            "htmlb__htmlb_",
+            "htmlb__htmlb__",
+            "htmlb__htmlb__-r",
+            "htmlb__htmlb__complete",
+            "htmlbevt_id",
+            "ivuFrm_pageivu",
+            "level",
+            "myTable",
+            "myTable-skipend",
+            "navNodeAnchor__",
+            "navNode__",
+            "obnNavForm",
+            "obnNavIFrame",
+            "pageMsgTimeoutCacheContent",
+            "pageMsgTimeoutNoCacheContent",
+            "pageTitleBar",
+            "pageTitleBar-skipend",
+            "personalizePortal",
+            "personalizePortalSep",
+            "readyState",
+            "sapPopupMainId_X",
+            "urFrames",
+            "welcome_message"
+          ],
+          [
+            "BreadCrumbDiv",
+            "HeightSpacer",
+            "HistoryListCover",
+            "HoverMenudd",
+            "HoverMenudd-r",
+            "HoverMenudd_",
+            "HoverMenuec",
+            "HoverMenuec-r",
+            "HoverMenuec_",
+            "Imageebe",
+            "LeftScroll",
+            "LevelDIV",
+            "LevelOneEnd",
+            "LevelOneEndSpace",
+            "LevelTwoEnd",
+            "LevelTwoEndSpace",
+            "Linkcba",
+            "Linkeac",
+            "Linkffd",
+            "MenuScroll",
+            "MessageBaraabf",
+            "MessageBaraabf-img",
+            "MessageBaraabf-txt",
+            "MessageBarbacf",
+            "MessageBarbacf-img",
+            "MessageBarbacf-txt",
+            "MessageBareb",
+            "MessageBareb-img",
+            "MessageBareb-txt",
+            "MessageBarebed",
+            "MessageBarebed-img",
+            "MessageBarebed-txt",
+            "MessageBarecefa",
+            "MessageBarecefa-img",
+            "MessageBarecefa-txt",
             "NavigationTarget_navForms",
             "NotchTD",
             "OptionsCover",

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://127.0.0.1:20006/irj/portal",
+  "targetURL": "http://ihn.chng.com.cn:20006/irj/portal",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -232,7 +232,7 @@
     "page/urls": {
       "contexts": {
         "context0_3oMPM5": [
-          "127.0.0.1:20006/irj/portal"
+          "ihn.chng.com.cn:20006/irj/portal"
         ]
       }
     },

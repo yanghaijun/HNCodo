@@ -1,0 +1,56 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/ihn\\.chng\\.com\\.cn:10001.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+  },
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/com\\.sap\\.ui\\.lightspeed\\/js\\/lightspeed\\.js.*"
+      ],
+      "target_url": "override/lightspeed.js"
+    }
+  ],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://fawu/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:10001\\/irj\\/portal"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:10001/irj/portal"
+      ]
+    }
+  ],
+  "name": "法务系统",
+  "default_url": "http://ihn.chng.com.cn:10001/irj/portal",
+  "scope": "fawu",
+  "start_url": "http://ihn.chng.com.cn:10001/irj/portal",
+  "update_time": 1584673145887
+}

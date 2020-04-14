@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "empty",
-  "targetURL": "http://127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
+  "targetURL": "http://ihn.chng.com.cn:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
   "jsFile": "index.js",
   "chineseName": "empty",
   "description": "",
@@ -89,8 +89,8 @@
     "page/urls": {
       "contexts": {
         "context3_GLoDZa": [
-          "127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
-          "127.0.0.1:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1581474964892x78xWIDx15814749643771581475055427"
+          "ihn.chng.com.cn:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580801642634x12xWIDx15808016417671580801728075",
+          "ihn.chng.com.cn:20006/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1581474964892x78xWIDx15814749643771581475055427"
         ]
       }
     },

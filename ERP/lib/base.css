@@ -93,6 +93,7 @@ li {
   background: #eee;
   position: absolute;
   margin-bottom: 60px;
+  width: 100%;
 }
 .Todo-list-content .list-content-ul {
   padding: 18px;
@@ -111,6 +112,10 @@ li {
   width: 25%;
   text-align: right;
   margin-right: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
 }
 .Todo-list-content span:nth-child(2) {
   display: inline-block;
@@ -118,6 +123,8 @@ li {
   color: #001c59;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
 }
 .Todo-list-content .show-false li:nth-child(5),
 .Todo-list-content .show-false li:nth-child(6),
