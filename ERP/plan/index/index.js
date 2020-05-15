@@ -78,8 +78,8 @@
     doAction_uiControl3_HTiF2s: function (data, elem) {
       if (data.eventType == 'click') {
         //localStorage.removeItem('setStyle');
-        debugger;var index = data.dataCustom.index;var liucheng = data.dataCustom.lc;var index = parseInt(index) + 2; //index ++;
-        localStorage.setItem('liuchengText', liucheng);debugger;elem.children[index].querySelectorAll('td')[3].querySelector('a').click();ysp.appMain.showLoading();
+        var index = data.dataCustom.index;var liucheng = data.dataCustom.lc;var index = parseInt(index) + 2; //index ++;
+        localStorage.liuchengText = liucheng;elem.children[index].querySelectorAll('td')[3].querySelector('a').click();ysp.appMain.showLoading();
       }
     },
     getTemplate_uiControl3_HTiF2s: function () {
