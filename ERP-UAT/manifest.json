@@ -1,0 +1,81 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "version": "0.0.1",
+  "runtime_version": "2.7.0",
+  "description": "",
+  "options": {
+    "resource_intercept": {
+      "type": [],
+      "ignore": []
+    },
+    "resource_inject": [],
+    "unadapted": {
+      "timeout": 300000,
+      "rules": [
+        {
+          "match": "*",
+          "type": "block"
+        }
+      ]
+    },
+    "resource_filter": [
+      {
+        "url_match": [
+          "^http:\\/\\/ihn\\.chng\\.com\\.cn:20002.*"
+        ],
+        "charset": "utf-8",
+        "Accept-Language": "zh-Hans-CN",
+        "replaces": [
+          {
+            "regexp": "\\btop\\b",
+            "sub_str": "_ysp_top"
+          }
+        ]
+      }
+    ],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+  },
+  "override_urls": [
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/com\\.sap\\.portal\\.ui\\.uiservice\\/script\\/dynamicTree\\.js\\?4a26073b84287c8652992538114a7acc"
+      ],
+      "target_url": "override/dynamicTree.js"
+    },
+    {
+      "origin_url": [
+        "http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/com\\.sap\\.ui\\.lightspeed\\/js\\/lightspeed\\.js.*"
+      ],
+      "target_url": "override/lightspeed.js"
+    }
+  ],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://ERP/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/irj\\/portal"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:20002/irj/portal"
+      ]
+    },
+    {
+      "title": "detail",
+      "url": "adapter://ERP/plan/detail/index.json",
+      "matcher": [
+        "^http:\\/\\/ihn\\.chng\\.com\\.cn:20002\\/irj\\/servlet\\/prt\\/portal\\/prteventname\\/Navigate\\/prtroot\\/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom\\.sap\\.portal\\.innerpage!2fcom\\.sap\\.portal\\.contentarea\\?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom\\.sap\\.netweaver\\.bc\\.uwl\\.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER\\.R3_DATASOURCE\\.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap\\.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap\\.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521014121262&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+      ],
+      "demo": [
+        "http://ihn.chng.com.cn:20002/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D6c26291820e711e8a66a000000388813%40USER.R3_DATASOURCE.YSP01%26taskId%3D6c26291820e711e8a66a000000388813%26isSubstituted%3Dfalse%26locale%3Den_US%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution&CurrentWindowId=WID1521014121262&NavMode=1&PrevNavTarget=navurl%3A%2F%2Fa0f3b3769c8e751010937ffb2d86eb1c"
+      ]
+    }
+  ],
+  "name": "集团ERP系统",
+  "default_url": "http://ihn.chng.com.cn:20002/irj/portal",
+  "scope": "ERP",
+  "start_url": "enterplorer://ERP/local/index.html",
+  "update_time": 1589440599432
+}
