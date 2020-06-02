@@ -1,0 +1,144 @@
+{
+  "version": "0.1",
+  "id": "empty",
+  "targetURL": "http://ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580790285101x38xIdd2183dfe470511eaa25100000177047fe681580790311377",
+  "jsFile": "index.js",
+  "chineseName": "empty",
+  "description": "",
+  "controls": {
+    "control4_T34sTt": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "BODY.prtlBody.urFontBaseFam.urScrl TABLE.SAPDialogWhl TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control4_T34sTt"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context4_c5SQwo": {
+      "controls": [
+        "control4_T34sTt"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow11_36OGNA": {
+      "toContexts": [
+        {
+          "toContextId": "context4_c5SQwo"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page4_60ZEpH": {
+      "contextId": "context4_c5SQwo",
+      "layout": [
+        {
+          "id": "uiControl3_McIFLF",
+          "controlId": "control4_T34sTt",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl3_McIFLF",
+                "onGetTemplate": "getTemplate_uiControl3_McIFLF"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context4_c5SQwo": [
+          "SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context4_c5SQwo": [
+          "ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580790285101x38xIdd2183dfe470511eaa25100000177047fe681580790311377",
+          "ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580883390335x26xId1bc58cb747de11ea90e20000017704e3ec11580883427741"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context4_c5SQwo": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context4_c5SQwo": [
+          [
+            "SAPDialogWhl"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context4_c5SQwo": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/TABLE",
+            "-/DIV/H2",
+            "-/DIV/H3",
+            "-/DIV/H4",
+            "-/DIV/HR",
+            "-/DIV/IFRAME",
+            "-/DIV/IMG",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD"
+          ]
+        ]
+      }
+    }
+  }
+}

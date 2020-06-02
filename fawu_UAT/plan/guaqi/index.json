@@ -1,0 +1,181 @@
+{
+  "version": "0.1",
+  "id": "guaqi",
+  "targetURL": "http://ihn.chng.com.cn:10008/webdynpro/dispatcher/sap.com/tc~bpem~wdui~taskinstance/ATaskExecution?taskId=a0696aaf7dfa11ea8532000000962486#",
+  "jsFile": "index.js",
+  "chineseName": "意见挂起",
+  "description": "意见挂起",
+  "controls": {
+    "control11_nmdcG4": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendWindow.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]/TBODY[1]",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendWindow.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TBODY",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TBODY",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "SPAN.urFlowLayout SPAN.urLinStd TABLE.urGrpWhlBox.urGrpWhlBrd TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control11_nmdcG4"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context2_9OQ3qi": {
+      "controls": [
+        "control11_nmdcG4"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow6_IT1I8K": {
+      "toContexts": [
+        {
+          "toContextId": "context2_9OQ3qi"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2_uDN6IA": {
+      "contextId": "context2_9OQ3qi",
+      "layout": [
+        {
+          "id": "uiControl9_bDQU3o",
+          "controlId": "control11_nmdcG4",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl9_bDQU3o",
+                "onGetTemplate": "getTemplate_uiControl9_bDQU3o"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_9OQ3qi": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_9OQ3qi": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_9OQ3qi": [
+          [
+            "FDOEEFPDBOMAACHH.SuspendView.Button",
+            "FDOEEFPDBOMAACHH.SuspendView.Button-img",
+            "FDOEEFPDBOMAACHH.SuspendView.Group_Header",
+            "FDOEEFPDBOMAACHH.SuspendView.Label",
+            "FDOEEFPDBOMAACHH.SuspendView.TextEdit",
+            "FDOEEFPDBOMAACHH.SuspendView.TransparentContainer",
+            "FDOEEFPDBOMAACHH.SuspendView._",
+            "FDOEEFPDBOMAACHH.SuspendView._-endpoint",
+            "FDOEEFPDBOMAACHH.SuspendView._-sections"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_9OQ3qi": [
+          [
+            "lsCLRow",
+            "lsNoResize",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdWithImg",
+            "urCLTxtCell",
+            "urFlowLayout",
+            "urGrpBdyBox",
+            "urGrpBdyBoxPd",
+            "urGrpTtlWeb",
+            "urImgBtn",
+            "urInlineMetricTop",
+            "urL",
+            "urLinStd",
+            "urNoUserSelect",
+            "urScrl",
+            "urTedWhl",
+            "urTedWhlEnbl"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_9OQ3qi": [
+          [
+            "-/-/TBODY",
+            "-/TBODY/TR",
+            "DIV/SPAN/SPAN",
+            "SPAN/A/IMG",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/WBR",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/SPAN",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/COLGROUP",
+            "TD/TABLE/TBODY",
+            "TD/TABLE/TFOOT",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/LABEL",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TD/TEXTAREA"
+          ]
+        ]
+      }
+    }
+  }
+}

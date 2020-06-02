@@ -1,0 +1,102 @@
+getData_control5_mqRXxb: |
+  $.ajax({
+    url: 'http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage?windowId=' + elem.ownerDocument.defaultView.EPCM.getUniqueWindowId(),
+    type: 'get',
+    success: function (data) {
+      top.sap_sid = $(data).find('input[name="sap-ext-sid"]').val();
+    }
+  });
+doAction_uiControl4_HyFuEX: |
+  var type = data.eventType;
+  if (type == 'click') {
+    if (top.sap_sid) {
+      elem.ownerDocument.defaultView.open('http://ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=' + top.sap_sid);
+    } else {
+      $.ajax({
+        url: 'http://ihn.chng.com.cn:10001/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage?windowId=' + elem.ownerDocument.defaultView.EPCM.getUniqueWindowId(),
+        type: 'get',
+        success: function (data) {
+          top.sap_sid = $(data).find('input[name="sap-ext-sid"]').val();
+          elem.ownerDocument.defaultView.open('http://ihn.chng.com.cn:10001/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=' + top.sap_sid);
+        }
+      });
+    }
+  }
+getTemplate_uiControl4_HyFuEX: "module.exports = React.createClass({\n  \n  componentDidMount(){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click'\n      })\n    }\n  },\n  // onclick: function() {\n  //   this.props.customHandler({\n  //     data: 'dianwo'\n  //   });\n  // },\n  render: function() {\n    return (\n      <div></div>\n      /*\n      \t<button onClick={this.onclick}>\n        \t点我进入待办列表\n      \t</button>\n      */\n      \n    )\n  }\n});"
+getData_control7_sOeu55: >
+  if (!elem) {
+    return;
+  }
+
+  setTimeout(function () {
+    ysp.appMain.hideLoading();
+  }, 1000);
+
+  var data = [];
+
+  var tbody =
+  elem.ownerDocument.querySelector('tbody[id="aaaa.MyUWLCompView.Table_0-contentTBody"]');
+
+  var trs = tbody && tbody.querySelectorAll('tr');
+
+  for (var i = 0; i < trs.length; i++) {
+    if (trs[i].getAttribute('udat')) {
+      var obj = {};
+      obj.No = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[1].textContent;
+      obj.desc = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[2].textContent;
+      obj.workFlow = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[3].textContent;
+      obj.person = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[4].textContent;
+      obj.flag = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[5].textContent;
+      obj.date = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[6].textContent;
+      obj.companyName = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[7].textContent;
+      obj.stepDesc = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[8].textContent;
+      obj.flowSource = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[9].textContent;
+      obj.companyNo = trs[i].querySelectorAll('td') && trs[i].querySelectorAll('td')[10].textContent;
+      obj.index = i;
+      data.push(obj);
+    }
+  }
+
+  return data;
+doAction_uiControl6_16RqSb: |
+  var type = data.eventType;
+  var index = parseInt(data.customData.index);
+  var flow = data.customData.flow;
+  localStorage.workFlowTitle = flow;
+  if (type == 'click') {
+    ysp.appMain.showLoading();
+    var tbody = elem.ownerDocument.querySelector('tbody[id="aaaa.MyUWLCompView.Table_0-contentTBody"]');
+    var trs = tbody && tbody.querySelectorAll('tr');
+    ysp.detailControl = true; //重载了lightspeed.js,见14083行开始的代码
+
+    trs && trs[index].querySelectorAll("td") && trs[index].querySelectorAll("td")[2].querySelector("a").click();
+  }
+getTemplate_uiControl6_16RqSb: "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n    this.index = 0;\n  }\n  onClick=(e)=>{\n    if(e.target.nodeName !== 'UL'){\n      if(e.target.nodeName == 'LI'){\n        e.target = e.target.parentElement;\n      }\n      if(e.target.nodeName == 'SPAN'){\n        e.target = e.target.parentElement.parentElement;\n      }\n      if(e.target.nodeName == 'I'){\n        return;\n      }\n    }\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        data:{\n          index:e.target.dataset.index,\n          flow:e.target.dataset.flow\n        },\n        eventType:'click'\n      })\n    }\n  }\n  render(){\n    var _this = this;\n    var data = this.props.customData;\n    if(data && data && data.length >0){\n        return (\n        <div className='Todo-list-content'>\n         {data && data.map((item,index)=>{\n              return (\n              \t<ul className='list-content-ul show-false' onClick={_this.onClick.bind(_this)} data-index={item.index} data-flow = {item.workFlow}>\n            <li className='title'>{item.desc}</li>\n           <li><span className='content-title'>流程号</span><span>{item.No}</span></li>\n           <li><span className='content-title'>业务流程</span><span>{item.workFlow}</span></li>\n           <li><span className='content-title'>申请人</span><span>{item.person}</span></li>\n           <li><span className='content-title'>是否挂起</span><span>{item.flag}</span></li>\n           <li><span className='content-title'>公司名称</span><span>{item.companyName}</span></li>\n           <li><span className='content-title'>步骤描述</span><span>{item.stepDesc}</span></li>\n           <li><span className='content-title'>流程来源</span><span>{item.flowSource}</span></li>\n           <li><span className='content-title'>公司编码</span><span>{item.companyNo}</span></li>\n                <i className='list-icon-done' onClick={(e)=>{\n                  var ul = e.target.parentElement;\n                  if(ul.classList.contains('show-false')){\n                    ul.className = 'list-content-ul show-true';\n                    ul.querySelector('i').className = 'list-icon-up';\n                  }else{\n                    ul.className = 'list-content-ul show-false';\n                    ul.querySelector('i').className = 'list-icon-done';\n                  }\n              }}>\n            </i>\n              </ul>\n              )\n            })}\n        </div>\n      )\n    }else{\n      return (\n      \t<div className='Todo-list-content' style={{color:'red',textAlign:'center','left':'0','right':'0'}}> * 暂无待办事项 * </div>\n      )\n    }\n    \n  }\n}\n\n\n\n\n\n"
+getData_control3_UPeiQR: |
+  if (!elem) {
+    return false;
+  }
+doAction_uiControl2_xiSA19: ''
+getTemplate_uiControl2_xiSA19: "import {Component} from 'react';\nexport default class extends Component{\n  constructor(){\n    super();\n  }\n  // componentDidMount(){\n  //   var _this = this\n  //   var handler = _this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:'click'\n  //     })\n  //   }\n  // }\n  // componentWillMount(){\n  //   var _this = this\n  //   var handler = _this.props.customHandler;\n  //   if(handler){\n  //     handler({\n  //       eventType:'click'\n  //     })\n  //   }\n  // }\n  render(){\n    return (\n    \t<div className = 'TodoList-head'>\n      \t<span></span>\n        <span>待办工作</span>\n      </div>\n    )\n  }\n}"
+getData_control15_lH66fo: |
+  if (!elem) {
+    return;
+  }
+  return true;
+doAction_uiControl13_ssi0Vf: |
+  if (data.eventType == 'click') {
+    var name = data.dataCustom; //ysp.appMain.showLoading();
+
+    if (name == "上翻") {
+      //setTimeout(function () {
+      ysp.appMain.hideLoading(); //}, 1000);
+
+      elem && elem.querySelector('div[acf="Prev"]').click();
+    } else {
+      //setTimeout(function () {
+      ysp.appMain.hideLoading(); //}, 1000);
+
+      elem && elem.querySelector('div[acf="Nxt"]').click();
+    }
+  }
+getTemplate_uiControl13_ssi0Vf: "module.exports = React.createClass({\n  handlerClick(e){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'click',\n        data:e.target.dataset.name\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    return (\n      <div>\n      \t{\n          data ? <div className=\"ysp-index-page\">\n            <span onClick={this.handlerClick.bind(this)} data-name=\"上翻\">上翻页</span>\n            <span onClick={this.handlerClick.bind(this)} data-name=\"下翻\">下翻页</span>\n          </div> : ''\n        }\n      </div>\n      \n    )\n  }\n});"
