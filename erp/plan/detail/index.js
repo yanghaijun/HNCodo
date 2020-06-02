@@ -347,7 +347,9 @@
         }
       } //意见提交
       if (data.eventType == 'clickIdea') {
-        ysp.appMain.showLoading();if (text == '非招标比价结果审批_47A1物资') {} else {
+        ysp.appMain.showLoading();if (text == '非招标比价结果审批_47A1物资') {
+          var dd = elem.firstElementChild.firstElementChild.firstElementChild;var cc = dd.children[2];cc && cc.querySelector('a[id="FDOEEFPDBOMAACHH.ProcessCompView.ToolBarButton"]') && cc.querySelector('a[id="FDOEEFPDBOMAACHH.ProcessCompView.ToolBarButton"]').click();
+        } else {
           if (YJ) {
             YJ.querySelector('a').click();
           }
@@ -449,8 +451,7 @@
         }if (text == "供应商评估结果") {
           keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlht.rmgyspg_wd.wd.comp.ResultType-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.www.hnjt.rlht.rmgyspg_wd.wd.comp.ResultType-key-1"]');
         }if (text == "燃煤年度采购计划维护") {
-          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.rmndcgjh_wd.wd.comp.ResultType-key-0"]');
-          keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.rmndcgjh_wd.wd.comp.ResultType-key-1"]');
+          keyIdOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.rmndcgjh_wd.wd.comp.ResultType-key-0"]');keyIdNOk = $(elem.ownerDocument).find('[id="SVSDK.com.hnjt.rl.rmndcgjh_wd.wd.comp.ResultType-key-1"]');
         }if (index == "1") {
           setTimeout(function () {
             keyIdOk.each(function () {
