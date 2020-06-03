@@ -1,0 +1,193 @@
+{
+  "version": "0.1",
+  "id": "zuofei",
+  "targetURL": "http://ihn.chng.com.cn:10008/webdynpro/dispatcher/sap.com/tc~bpem~wdui~taskinstance/ATaskExecution?taskId=a0696aaf7dfa11ea8532000000962486#",
+  "jsFile": "index.js",
+  "chineseName": "作废",
+  "description": "作废",
+  "controls": {
+    "control14_rX2tuW": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//DIV[@id=\"FDOEEFPDBOMAACHHBJBJ.DialogView.Window\"]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHBJBJ.DialogView.Window\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.urBdyStd.urBdyStdNoMrg DIV.urPWOuterBorder"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 176,
+              "height": 88
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control14_rX2tuW"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context6_gKUxN8": {
+      "controls": [
+        "control14_rX2tuW"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow9_OE2lq7": {
+      "toContexts": [
+        {
+          "toContextId": "context6_gKUxN8"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page6_aDOhii": {
+      "contextId": "context6_gKUxN8",
+      "layout": [
+        {
+          "id": "uiControl12_kWtpO7",
+          "controlId": "control14_rX2tuW",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl12_kWtpO7",
+                "onGetTemplate": "getTemplate_uiControl12_kWtpO7"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context6_gKUxN8": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context6_gKUxN8": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context6_gKUxN8": [
+          [
+            "FDOEEFPDBOMAACHHBJBJ.DialogContent.RootUIElementContainer",
+            "FDOEEFPDBOMAACHHBJBJ.DialogContent.TransparentContainer",
+            "FDOEEFPDBOMAACHHBJBJ.DialogContent._",
+            "FDOEEFPDBOMAACHHBJBJ.DialogContent.image",
+            "FDOEEFPDBOMAACHHBJBJ.DialogContent.text",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-btns",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-cnt",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-cntTD",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-cnttbl",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-fhet",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-fhte",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-ftr",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-minmax",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-rsz",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-spr",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-ttl",
+            "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-ttltxt"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context6_gKUxN8": [
+          [
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urInlineMetricTop",
+            "urLayoutDefault",
+            "urLinStd",
+            "urMatrixLayout",
+            "urNoUserSelect",
+            "urPWButton",
+            "urPWButtonImage",
+            "urPWButtonTable",
+            "urPWContent",
+            "urPWContentTable",
+            "urPWFloatRight",
+            "urPWFooterBottomLine",
+            "urPWMaximize",
+            "urPWResize",
+            "urPWResizeNW",
+            "urPWSeperator",
+            "urPWTitle",
+            "urPWTitleText",
+            "urPWWave",
+            "urPWWaveTop",
+            "urTxtColor",
+            "urTxtStd",
+            "urTxtVAlign"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context6_gKUxN8": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/IMG",
+            "TD/A/SPAN",
+            "TD/DIV/TABLE",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE"
+          ]
+        ]
+      }
+    }
+  }
+}

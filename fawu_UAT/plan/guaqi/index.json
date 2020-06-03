@@ -11,6 +11,10 @@
         "data": {
           "tagName": "TBODY"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -116,6 +120,30 @@
             "FDOEEFPDBOMAACHH.SuspendView._",
             "FDOEEFPDBOMAACHH.SuspendView._-endpoint",
             "FDOEEFPDBOMAACHH.SuspendView._-sections"
+          ],
+          [
+            "FDOEEFPDBOMAACHH.SuspendView.Button",
+            "FDOEEFPDBOMAACHH.SuspendView.Button-img",
+            "FDOEEFPDBOMAACHH.SuspendView.Group",
+            "FDOEEFPDBOMAACHH.SuspendView.Group_Header",
+            "FDOEEFPDBOMAACHH.SuspendView.Label",
+            "FDOEEFPDBOMAACHH.SuspendView.RootElement",
+            "FDOEEFPDBOMAACHH.SuspendView.TextEdit",
+            "FDOEEFPDBOMAACHH.SuspendView.TransparentContainer",
+            "FDOEEFPDBOMAACHH.SuspendView._",
+            "FDOEEFPDBOMAACHH.SuspendView._-endpoint",
+            "FDOEEFPDBOMAACHH.SuspendView._-sections",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-cnt",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-cntTD",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-cnttbl",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-fhet",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-fhte",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-ftr",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-minmax",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-rsz",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-spr",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-ttl",
+            "FDOEEFPDBOMAACHH.SuspendWindow.Window-ttltxt"
           ]
         ]
       }
@@ -144,6 +172,42 @@
             "urScrl",
             "urTedWhl",
             "urTedWhlEnbl"
+          ],
+          [
+            "lsCLRow",
+            "lsNoResize",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdWithImg",
+            "urCLTxtCell",
+            "urFlowLayout",
+            "urGrpBdyBox",
+            "urGrpBdyBoxPd",
+            "urGrpTtlWeb",
+            "urGrpWhlBox",
+            "urGrpWhlBrd",
+            "urImgBtn",
+            "urInlineMetricTop",
+            "urL",
+            "urLinStd",
+            "urNoUserSelect",
+            "urPWButton",
+            "urPWButtonImage",
+            "urPWContent",
+            "urPWContentTable",
+            "urPWFloatRightNoBtn",
+            "urPWFooter",
+            "urPWMaximize",
+            "urPWResize",
+            "urPWResizeNW",
+            "urPWSeperator",
+            "urPWTitle",
+            "urPWTitleText",
+            "urScrl",
+            "urTedWhl",
+            "urTedWhlEnbl"
           ]
         ]
       }
@@ -167,6 +231,36 @@
             "TD/TABLE/COLGROUP",
             "TD/TABLE/TBODY",
             "TD/TABLE/TFOOT",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/LABEL",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TD/TEXTAREA"
+          ],
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "DIV/DIV/DIV",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "SPAN/A/IMG",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/TABLE",
+            "SPAN/SPAN/WBR",
+            "SPAN/TABLE/TBODY",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/IMG",
+            "TD/DIV/SPAN",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/COLGROUP",
+            "TD/TABLE/TBODY",
+            "TD/TABLE/TFOOT",
+            "TR/TD/A",
             "TR/TD/DIV",
             "TR/TD/IMG",
             "TR/TD/LABEL",
