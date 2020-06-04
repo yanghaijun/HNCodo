@@ -21,7 +21,6 @@
       return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n  componentDidMount: function componentDidMount() {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'click\'\n      });\n    }\n  },\n\n  // onclick: function() {\n  //   this.props.customHandler({\n  //     data: \'dianwo\'\n  //   });\n  // },\n  render: function render() {\n    return React.createElement(\'div\', null)\n    /*\n    \t<button onClick={this.onclick}>\n      \t\u70B9\u6211\u8FDB\u5165\u5F85\u529E\u5217\u8868\n    \t</button>\n    */\n\n    ;\n  }\n});';
     },
     getData_control7_sOeu55: function (elem) {
-      'use strict';
       if (!elem) {
         return;
       }setTimeout(function () {
@@ -33,8 +32,7 @@
       }return data;
     },
     doAction_uiControl6_16RqSb: function (data, elem) {
-      'use strict';
-      var type = data.eventType;var index = parseInt(data.customData.index);var flow = data.customData.flow;localStorage.workFlowTitle = flow;if (type == 'click') {
+      var type = data.eventType;var index = parseInt(data.customData.index);var flow = data.customData.flow;localStorage.fawuWorkFlowTitle = flow;if (type == 'click') {
         ysp.appMain.showLoading();var tbody = elem.ownerDocument.querySelector('tbody[id="aaaa.MyUWLCompView.Table_0-contentTBody"]');var trs = tbody && tbody.querySelectorAll('tr');ysp.detailControl = true; //重载了lightspeed.js,见14083行开始的代码
         trs && trs[index].querySelectorAll("td") && trs[index].querySelectorAll("td")[2].querySelector("a").click();
       }

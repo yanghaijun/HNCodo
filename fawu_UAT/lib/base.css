@@ -696,7 +696,7 @@ div[data-componentsid="uiControl6_16RqSb"] {
   font-size: 20px;
   border-bottom: 2px solid #ececec;
 }
-.ysp-deatil-history > div:nth-child(2) {
+.ysp-deatil-history .ysp-deatil-history-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -724,6 +724,7 @@ div[data-componentsid="uiControl6_16RqSb"] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 60%;
 }
 .ysp-deatil-history .ysp-detail-history-contents .ysp-detail-history-content > div:nth-child(4) {
   border-bottom: 1px solid #ececec;
@@ -809,4 +810,30 @@ div[data-componentsid="uiControl6_16RqSb"] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.ysp-choose-person {
+  padding: 20px;
+}
+.ysp-choose-person div:nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ysp-choose-person .ysp-choose-persons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ysp-choose-person .ysp-choose-persons span {
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  height: 40px;
+  line-height: 40px;
+  background: #105cc1;
+  color: #fff;
+}
+.ysp-choose-person .ysp-choose-person-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

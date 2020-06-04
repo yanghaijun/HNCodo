@@ -716,7 +716,7 @@ div[data-componentsid="uiControl6_16RqSb"]{
     font-size: 20px;
     border-bottom: 2px solid #ececec;
   }
-  >div:nth-child(2){
+  .ysp-deatil-history-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -726,6 +726,16 @@ div[data-componentsid="uiControl6_16RqSb"]{
     color: #fff;
     border-radius: 5px;
   }
+  // >div:nth-child(2){
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin-top: 20px;
+  //   padding: 5px 0px;
+  //   background: #105cc1;
+  //   color: #fff;
+  //   border-radius: 5px;
+  // }
   .ysp-detail-history-contents{
     height: 200px;
     overflow: auto;
@@ -741,6 +751,7 @@ div[data-componentsid="uiControl6_16RqSb"]{
           overflow : hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          width: 60%;
         }
       }
       >div:nth-child(4){
@@ -833,5 +844,33 @@ div[data-componentsid="uiControl6_16RqSb"]{
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+  }
+}
+
+//提交选择人员
+.ysp-choose-person{
+  padding: 20px;
+  div:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ysp-choose-persons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span{
+      width: 100%;
+      border-bottom: 1px solid #ececec;
+      height: 40px;
+      line-height: 40px;
+      background: #105cc1;
+      color: #fff;
+    }
+  }
+  .ysp-choose-person-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
