@@ -818,6 +818,8 @@ div[data-componentsid="uiControl6_16RqSb"] {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
 .ysp-choose-person .ysp-choose-persons {
   display: flex;
@@ -826,14 +828,99 @@ div[data-componentsid="uiControl6_16RqSb"] {
 }
 .ysp-choose-person .ysp-choose-persons span {
   width: 100%;
+  text-align: center;
   border-bottom: 1px solid #ececec;
   height: 40px;
   line-height: 40px;
   background: #105cc1;
   color: #fff;
 }
+.ysp-choose-person .ysp-choose-no-persons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ysp-choose-person .ysp-choose-no-persons span {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  height: 40px;
+  line-height: 40px;
+}
 .ysp-choose-person .ysp-choose-person-button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 15px;
+}
+.ysp-choose-person .ysp-choose-person-button > span:nth-child(1) {
+  width: 45%;
+  text-align: center;
+  color: #fff;
+  background: #105cc1;
+  border-radius: 5px;
+  padding: 4px 0px;
+}
+.ysp-choose-person .ysp-choose-person-button > span:nth-child(2) {
+  width: 45%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 4px 0px;
+  border: 2px solid #ececec;
+}
+.ysp-liucheng-guqi {
+  padding: 20px;
+}
+.ysp-liucheng-guqi > span:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.ysp-liucheng-guqi textarea {
+  resize: none;
+}
+.ysp-liucheng-guqi .ysp-liucheng-guqi-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.ysp-liucheng-guqi .ysp-liucheng-guqi-button > span:nth-child(1) {
+  width: 45%;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.ysp-liucheng-guqi .ysp-liucheng-guqi-button > span:nth-child(2) {
+  width: 45%;
+  border: 2px solid #ececec;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+.ysp-liucheng-zuofei {
+  padding: 10px;
+  text-align: center;
+}
+.ysp-liucheng-zuofei .ysp-liucheng-zuofei-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.ysp-liucheng-zuofei .ysp-liucheng-zuofei-button > span:nth-child(1) {
+  width: 45%;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 4px 0px;
+}
+.ysp-liucheng-zuofei .ysp-liucheng-zuofei-button > span:nth-child(2) {
+  width: 45%;
+  border: 2px solid #ececec;
+  border-radius: 5px;
+  text-align: center;
+  padding: 4px 0px;
 }
