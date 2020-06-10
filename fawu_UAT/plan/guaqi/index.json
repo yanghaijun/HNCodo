@@ -3,6 +3,9 @@
   "id": "guaqi",
   "targetURL": "http://ihn.chng.com.cn:10008/webdynpro/dispatcher/sap.com/tc~bpem~wdui~taskinstance/ATaskExecution?taskId=a0696aaf7dfa11ea8532000000962486#",
   "jsFile": "index.js",
+  "requires": {
+    "indexs": "../indexs/index.json"
+  },
   "chineseName": "意见挂起",
   "description": "意见挂起",
   "controls": {
@@ -66,6 +69,20 @@
       "toContexts": [
         {
           "toContextId": "context2_9OQ3qi"
+        }
+      ]
+    },
+    "flow19_AXXhwK": {
+      "fromContextId": "context2_9OQ3qi",
+      "fromAction": "doAction",
+      "fromControlId": "control11_nmdcG4",
+      "toContexts": [
+        {
+          "toContextId": "context2_9OQ3qi"
+        },
+        {
+          "toContextId": "context9_F8EzgA",
+          "toModelId": "indexs"
         }
       ]
     }
