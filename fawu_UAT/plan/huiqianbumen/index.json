@@ -1,0 +1,254 @@
+{
+  "version": "0.1",
+  "id": "huiqianbumen",
+  "targetURL": "http://ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtpos/pcd!253aportal!255fcontent!252fevery!255fuser!252fgeneral!252fdefaultAjaxframeworkContent!252fcom!252esap!252eportal!252eafpDesktop!252fframeworkPages!252fframeworkpage!252fcom!252esap!252eportal!252einnerpage!252fcom!252esap!252eportal!252econtentarea!7b!3b1!7d/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=pcd%3A%2F%2Fportal_content%2Fcom.hnjt.HNJT%2FFWLC%2FiView%2FFWJYHQBMApp&DynamicParameter=BUKRS%3D4902%26INGRP%3D002%26HTTYPE%3DQTFP%26ACTIVE%3DMODIFY%26PROCESSID%3DQ200004436%26CURRENTUSERID%3DHTPX_121%26ZYWLSBH%3DHN2020490200001%26PROCESSDEFID%3DHNJT_CLM_100%26TASKBUKRS%3D4902%26FROMALL%3D1&CurrentWindowId=WID1591840664286&NavMode=1",
+  "jsFile": "index.js",
+  "chineseName": "选择会签部门",
+  "description": "会签部门",
+  "controls": {
+    "control31_OMFF2l": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"zzzzAIDG.FullWidthLayoutView.RootUIElementContainer\"]//DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement:iView\"]",
+              "descendant::TABLE[@id=\"zzzzAIDG.FullWidthLayoutView.RootUIElementContainer\"]//DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement:iView\"]",
+              "descendant::DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement:iView\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control31_OMFF2l"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context11_TK4lIO": {
+      "controls": [
+        "control31_OMFF2l"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow24_4c3Om7": {
+      "toContexts": [
+        {
+          "toContextId": "context11_TK4lIO"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page11_nGSCXt": {
+      "contextId": "context11_TK4lIO",
+      "layout": [
+        {
+          "id": "uiControl29_viGJ9H",
+          "controlId": "control31_OMFF2l",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl29_viGJ9H",
+                "onGetTemplate": "getTemplate_uiControl29_viGJ9H"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context11_TK4lIO": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context11_TK4lIO": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context11_TK4lIO": [
+          [
+            "aaaa.FWJYHQBMCompView.Button",
+            "aaaa.FWJYHQBMCompView.Button-img",
+            "aaaa.FWJYHQBMCompView.CHECK",
+            "aaaa.FWJYHQBMCompView.CHECK-CONTENT",
+            "aaaa.FWJYHQBMCompView.CHECK_editor.",
+            "aaaa.FWJYHQBMCompView.CHECK_editor.-img",
+            "aaaa.FWJYHQBMCompView.CHECK_editor.-lbl",
+            "aaaa.FWJYHQBMCompView.CHECK_editor.-r",
+            "aaaa.FWJYHQBMCompView.CHECK_header",
+            "aaaa.FWJYHQBMCompView.Header",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-colorDDHover",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-colorStdHover",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-content",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-contentTBody",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-hiddenData",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV-Nxt",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV-Prev",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV-bar",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV-hdl",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE-scrollV-spc",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE:",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE:-r",
+            "aaaa.FWJYHQBMCompView.JYHQBM_TABLE:.",
+            "aaaa.FWJYHQBMCompView.ROLENAME",
+            "aaaa.FWJYHQBMCompView.ROLENAME-CONTENT",
+            "aaaa.FWJYHQBMCompView.ROLENAME_editor.",
+            "aaaa.FWJYHQBMCompView.ROLENAME_header",
+            "aaaa.FWJYHQBMCompView.TransparentContainer",
+            "aaaa.FWJYHQBMCompView._"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context11_TK4lIO": [
+          [
+            "lsTblEdf",
+            "lsTblEdfTd",
+            "lsTblEdfWhl",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdWithImg",
+            "urC",
+            "urCImgOff",
+            "urCLbl",
+            "urCWhl",
+            "urCursorClickable",
+            "urFlowLayout",
+            "urFontRel",
+            "urFontStd",
+            "urImgBtn",
+            "urLinStd",
+            "urNoUserSelect",
+            "urSCB",
+            "urSCBBdr",
+            "urSCBBdy",
+            "urSCBBtn",
+            "urSCBDimHeight",
+            "urSCBDimMinHeight",
+            "urSCBDimWidth",
+            "urSCBDwnDsbl",
+            "urSCBUpDsbl",
+            "urSCBVHdl",
+            "urST",
+            "urSTBd",
+            "urSTBdBrd",
+            "urSTC",
+            "urSTFlt",
+            "urSTHC",
+            "urSTHCColorLvl",
+            "urSTHCMetricContent",
+            "urSTHCMetricSelCol",
+            "urSTHCMetricStd",
+            "urSTHTbl",
+            "urSTIcoFilter",
+            "urSTLbHdrBg",
+            "urSTLbSelIcon",
+            "urSTLbTitBg",
+            "urSTLbUnselIcon",
+            "urSTRowSelIcon",
+            "urSTRowUnSelDsblIcon",
+            "urSTRowUnSelIcon",
+            "urSTSC",
+            "urSTSCBSpc",
+            "urSTSCMetricInner",
+            "urSTSStd",
+            "urSTSel",
+            "urSTSelRo",
+            "urSTTD",
+            "urSTTDBtn",
+            "urSTTDFlt",
+            "urSTTDFltIco",
+            "urSTTDIn",
+            "urSTTDRo",
+            "urSTTDSc",
+            "urSTTit",
+            "urSTWhlBrd",
+            "urSTbvIconSortCursor",
+            "urSTddHoverColor",
+            "urSTstdHoverColor",
+            "urTxtColor",
+            "urTxtStd"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context11_TK4lIO": [
+          [
+            "-/-/SPAN",
+            "-/SPAN/SPAN",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "SPAN/A/IMG",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/IMG",
+            "SPAN/SPAN/TABLE",
+            "SPAN/SPAN/WBR",
+            "SPAN/TABLE/TBODY",
+            "SPAN/TABLE/THEAD",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/DIV",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
+            "TD/SPAN/INPUT-checkbox",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/COLGROUP",
+            "TD/TABLE/TBODY",
+            "TH/TABLE/TBODY",
+            "THEAD/TR/TH",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TH/DIV",
+            "TR/TH/SPAN",
+            "TR/TH/TABLE"
+          ]
+        ]
+      }
+    }
+  }
+}

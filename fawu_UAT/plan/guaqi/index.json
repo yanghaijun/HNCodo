@@ -161,6 +161,16 @@
             "FDOEEFPDBOMAACHH.SuspendWindow.Window-spr",
             "FDOEEFPDBOMAACHH.SuspendWindow.Window-ttl",
             "FDOEEFPDBOMAACHH.SuspendWindow.Window-ttltxt"
+          ],
+          [
+            "FDOEEFPDBOMAACHH.SuspendView.Button",
+            "FDOEEFPDBOMAACHH.SuspendView.Button-img",
+            "FDOEEFPDBOMAACHH.SuspendView.Label",
+            "FDOEEFPDBOMAACHH.SuspendView.TextEdit",
+            "FDOEEFPDBOMAACHH.SuspendView.TransparentContainer",
+            "FDOEEFPDBOMAACHH.SuspendView._",
+            "FDOEEFPDBOMAACHH.SuspendView._-endpoint",
+            "FDOEEFPDBOMAACHH.SuspendView._-sections"
           ]
         ]
       }
@@ -225,6 +235,24 @@
             "urScrl",
             "urTedWhl",
             "urTedWhlEnbl"
+          ],
+          [
+            "lsCLRow",
+            "lsNoResize",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdWithImg",
+            "urCLTxtCell",
+            "urFlowLayout",
+            "urImgBtn",
+            "urL",
+            "urLinStd",
+            "urNoUserSelect",
+            "urScrl",
+            "urTedWhl",
+            "urTedWhlEnbl"
           ]
         ]
       }
@@ -283,6 +311,28 @@
             "TR/TD/LABEL",
             "TR/TD/SPAN",
             "TR/TD/TABLE",
+            "TR/TD/TEXTAREA"
+          ],
+          [
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/SPAN/SPAN",
+            "-/TABLE/COLGROUP",
+            "-/TABLE/TBODY",
+            "-/TABLE/TFOOT",
+            "DIV/SPAN/SPAN",
+            "SPAN/A/IMG",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/WBR",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/SPAN",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/LABEL",
+            "TR/TD/SPAN",
             "TR/TD/TEXTAREA"
           ]
         ]

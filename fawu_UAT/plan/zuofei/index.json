@@ -11,6 +11,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -127,6 +131,26 @@
             "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-spr",
             "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-ttl",
             "FDOEEFPDBOMAACHHBJBJ.DialogView.Window-ttltxt"
+          ],
+          [
+            "FDOEEFPDBOMAACHHBJBL.DialogContent.RootUIElementContainer",
+            "FDOEEFPDBOMAACHHBJBL.DialogContent.TransparentContainer",
+            "FDOEEFPDBOMAACHHBJBL.DialogContent._",
+            "FDOEEFPDBOMAACHHBJBL.DialogContent.image",
+            "FDOEEFPDBOMAACHHBJBL.DialogContent.text",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-btns",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-cnt",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-cntTD",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-cnttbl",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-fhet",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-fhte",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-ftr",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-minmax",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-rsz",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-spr",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-ttl",
+            "FDOEEFPDBOMAACHHBJBL.DialogView.Window-ttltxt"
           ]
         ]
       }
@@ -139,6 +163,33 @@
             "urBtnRadius",
             "urBtnStd",
             "urInlineMetricTop",
+            "urLayoutDefault",
+            "urLinStd",
+            "urMatrixLayout",
+            "urNoUserSelect",
+            "urPWButton",
+            "urPWButtonImage",
+            "urPWButtonTable",
+            "urPWContent",
+            "urPWContentTable",
+            "urPWFloatRight",
+            "urPWFooterBottomLine",
+            "urPWMaximize",
+            "urPWResize",
+            "urPWResizeNW",
+            "urPWSeperator",
+            "urPWTitle",
+            "urPWTitleText",
+            "urPWWave",
+            "urPWWaveTop",
+            "urTxtColor",
+            "urTxtStd",
+            "urTxtVAlign"
+          ],
+          [
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
             "urLayoutDefault",
             "urLinStd",
             "urMatrixLayout",

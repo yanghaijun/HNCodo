@@ -33,7 +33,7 @@
     },
     doAction_uiControl6_16RqSb: function (data, elem) {
       var type = data.eventType;var index = parseInt(data.customData.index);var flow = data.customData.flow;localStorage.fawuWorkFlowTitle = flow;if (type == 'click') {
-        ysp.appMain.showLoading();var tbody = elem.ownerDocument.querySelector('tbody[id="aaaa.MyUWLCompView.Table_0-contentTBody"]');var trs = tbody && tbody.querySelectorAll('tr');ysp.detailControl = true; //重载了lightspeed.js,见14083行开始的代码
+        ysp.appMain.showLoading();var tbody = elem.ownerDocument.querySelector('tbody[id="aaaa.MyUWLCompView.Table_0-contentTBody"]');var trs = tbody && tbody.querySelectorAll('tr'); //ysp.detailControl = true; //重载了lightspeed.js,见14083行开始的代码
         trs && trs[index].querySelectorAll("td") && trs[index].querySelectorAll("td")[2].querySelector("a").click();
       }
     },

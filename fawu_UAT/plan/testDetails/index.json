@@ -1,0 +1,478 @@
+{
+  "version": "0.1",
+  "id": "testDetails",
+  "targetURL": "http://ihn.chng.com.cn:10008/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D7e35f03d2d2611eaacd9000000962486%40USER.PRIVATE_DATASOURCE.un%3AHTPX_121%26taskId%3D7e35f03d2d2611eaacd9000000962486%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution",
+  "jsFile": "index.js",
+  "requires": {
+    "guaqi": "../guaqi/index.json",
+    "zuofei": "../zuofei/index.json",
+    "tijiao": "../tijiao/index.json",
+    "huiqianbumen": "../huiqianbumen/index.json"
+  },
+  "chineseName": "详情页面",
+  "description": "详情页面",
+  "controls": {
+    "control25_GHk9ii": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]",
+              "descendant::TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control25_GHk9ii"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control26_ihRsKe": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]",
+              "descendant::DIV[@id=\"...page\"]//TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TR",
+              "descendant::TABLE[@id=\"FDOE.TaskExecutionView.RootElement\"]//DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TR",
+              "descendant::DIV[@id=\"FDOE.TaskExecutionView.PageHeader\"]//TR"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.urPgH TABLE.urPgHT2 TABLE.urPgHTTbl TBODY TR"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control26_ihRsKe"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control27_p2zAUA": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": [
+              "descendant::DIV[@id=\"FDOEEFPD.UuiContainerView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.PageHeader\"]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.RootElement\"]//DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.PageHeader\"]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.HtAllView.PageHeader\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "SPAN.urFlowLayout SPAN.urLinStd DIV.urPgH"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[2]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/SPAN[1]/SPAN[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control27_p2zAUA"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control28_sCSrzT": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendWindow.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]/TBODY[1]/TR[2]/TD[1]",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendWindow.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TD",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.SuspendView.RootElement\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TD",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.SuspendView.Group\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "SPAN.urLinStd TABLE.urGrpWhlBox.urGrpWhlBrd TD.urGrpBdyBox.urGrpBdyBoxPd"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]"
+          }
+        ]
+      },
+      "intendedRole": "modal",
+      "roles": "element,modal",
+      "monitored": false,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "modal"
+    },
+    "control29_DV8IrJ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//DIV[@id=\"FDOEEFPDBOMAACHHBJBL.DialogView.Window\"]/DIV[1]",
+              "descendant::DIV[@id=\"...page\"]//DIV[@id=\"FDOEEFPDBOMAACHHBJBL.DialogView.Window\"]//DIV",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHHBJBL.DialogView.Window\"]//DIV"
+            ]
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 3,
+            "value": {
+              "elemId": "FDOEEFPDBOMAACHHBJBL.DialogView.Window-ib",
+              "tagName": "DIV",
+              "prefix": "DIV[@id=\"...page\"]//DIV[@id=\"FDOEEFPDBOMAACHHBJBL.DialogView.Window\"]//",
+              "suffix": "",
+              "ratio": 0
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.urBdyStd.urBdyStdNoMrg DIV.urPWOuterBorder DIV.urPWInnerBorder"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 178,
+              "height": 85
+            }
+          }
+        ]
+      },
+      "intendedRole": "modal",
+      "roles": "element,modal",
+      "monitored": false,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "modal"
+    },
+    "control30_WWXloq": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::TABLE[@id=\"zzzzAIDG.FullWidthLayoutView.RootUIElementContainer\"]//DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement:iView\"]//DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement\"]",
+              "descendant::DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement:iView\"]//DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement\"]",
+              "descendant::DIV[@id=\"aaaa.FWJYHQBMCompView.RootElement\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "intendedRole": "modal",
+      "roles": "element,link,modal",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
+      "componentType": "modal"
+    }
+  },
+  "contexts": {
+    "context10_fwWXGO": {
+      "controls": [
+        "control25_GHk9ii",
+        "control26_ihRsKe",
+        "control27_p2zAUA",
+        "control28_sCSrzT",
+        "control29_DV8IrJ",
+        "control30_WWXloq"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow20_tma7by": {
+      "toContexts": [
+        {
+          "toContextId": "context10_fwWXGO"
+        }
+      ]
+    },
+    "flow21_yuP7uO": {
+      "fromContextId": "context10_fwWXGO",
+      "fromAction": "doAction",
+      "fromControlId": "control27_p2zAUA",
+      "toContexts": [
+        {
+          "toContextId": "context10_fwWXGO"
+        },
+        {
+          "toContextId": "context2_9OQ3qi",
+          "toModelId": "guaqi"
+        },
+        {
+          "toContextId": "context6_gKUxN8",
+          "toModelId": "zuofei"
+        },
+        {
+          "toContextId": "context7_31wJo9",
+          "toModelId": "tijiao"
+        },
+        {
+          "toContextId": "context11_TK4lIO",
+          "toModelId": "huiqianbumen"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page10_EOQry3": {
+      "contextId": "context10_fwWXGO",
+      "layout": [
+        {
+          "id": "uiControl23_gWeNVM",
+          "controlId": "control25_GHk9ii",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl23_gWeNVM",
+                "onGetTemplate": "getTemplate_uiControl23_gWeNVM"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl24_Cvo6nz",
+          "controlId": "control26_ihRsKe",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl24_Cvo6nz",
+                "onGetTemplate": "getTemplate_uiControl24_Cvo6nz"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl25_TkIXbN",
+          "controlId": "control27_p2zAUA",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl25_TkIXbN",
+                "onGetTemplate": "getTemplate_uiControl25_TkIXbN"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl26_qVK0aW",
+          "controlId": "control28_sCSrzT",
+          "display": {
+            "adapterId": "modal",
+            "type": "modal",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": []
+        },
+        {
+          "id": "uiControl27_JUbmSb",
+          "controlId": "control29_DV8IrJ",
+          "display": {
+            "adapterId": "modal",
+            "type": "modal",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": []
+        },
+        {
+          "id": "uiControl28_stAnUP",
+          "controlId": "control30_WWXloq",
+          "display": {
+            "adapterId": "modal",
+            "type": "modal",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": []
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context10_fwWXGO": [
+          "SAP NetWeaver Portal"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context10_fwWXGO": [
+          "ihn.chng.com.cn:10008/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D7e35f03d2d2611eaacd9000000962486%40USER.PRIVATE_DATASOURCE.un%3AHTPX_121%26taskId%3D7e35f03d2d2611eaacd9000000962486%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution",
+          "ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtpos/pcd!253aportal!255fcontent!252fevery!255fuser!252fgeneral!252fdefaultAjaxframeworkContent!252fcom!252esap!252eportal!252eafpDesktop!252fframeworkPages!252fframeworkpage!252fcom!252esap!252eportal!252einnerpage!252fcom!252esap!252eportal!252econtentarea!7b!3b1!7d/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=pcd%3A%2F%2Fportal_content%2Fcom.hnjt.HNJT%2FFWLC%2FiView%2FFWJYHQBMApp&DynamicParameter=BUKRS%3D4902%26INGRP%3D002%26HTTYPE%3DQTFP%26ACTIVE%3DMODIFY%26PROCESSID%3DQ200004436%26CURRENTUSERID%3DHTPX_121%26ZYWLSBH%3DHN2020490200001%26PROCESSDEFID%3DHNJT_CLM_100%26TASKBUKRS%3D4902%26FROMALL%3D1&CurrentWindowId=WID1591840664286&NavMode=1"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context10_fwWXGO": [
+          [
+            "NavigationTarget_navForms",
+            "RelativeNavBase",
+            "contentAreaDiv",
+            "divChangeContent",
+            "frmChangeContent",
+            "fullPageDiv",
+            "isolatedWorkArea",
+            "obnNavForm",
+            "obnNavIFrame"
+          ],
+          [
+            "NavigationTarget_navForms",
+            "RelativeNavBase",
+            "URLSPW-",
+            "contentAreaDiv",
+            "divChangeContent",
+            "frmChangeContent",
+            "fullPageDiv",
+            "isolatedWorkArea",
+            "obnNavForm",
+            "obnNavIFrame",
+            "urPopupWindowBlockLayer"
+          ],
+          [
+            "NavigationTarget_navForms",
+            "RelativeNavBase",
+            "contentAreaDiv",
+            "divChangeContent",
+            "frmChangeContent",
+            "fullPageDiv",
+            "isolatedWorkArea",
+            "isolatedWorkAreaForm",
+            "obnNavForm",
+            "obnNavIFrame"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context10_fwWXGO": [
+          [
+            "prtlPrtlFullPageAppBody"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context10_fwWXGO": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "-/SPAN/FORM",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SCRIPT",
+            "SPAN/FORM/INPUT-hidden"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "-/SPAN/FORM",
+            "DIV/DIV/FORM",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SCRIPT",
+            "DIV/FORM/INPUT-hidden",
+            "SPAN/FORM/INPUT-hidden"
+          ]
+        ]
+      }
+    }
+  }
+}

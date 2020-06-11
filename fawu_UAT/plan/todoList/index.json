@@ -5,7 +5,8 @@
   "jsFile": "index.js",
   "requires": {
     "empty": "../empty/index.json",
-    "testDetail": "../testDetail/index.json"
+    "testDetail": "../testDetail/index.json",
+    "testDetails": "../testDetails/index.json"
   },
   "chineseName": "todoList",
   "description": "",
@@ -173,6 +174,10 @@
         {
           "toContextId": "context5_WTga0P",
           "toModelId": "testDetail"
+        },
+        {
+          "toContextId": "context10_fwWXGO",
+          "toModelId": "testDetails"
         }
       ]
     },
