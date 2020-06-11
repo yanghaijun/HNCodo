@@ -974,7 +974,7 @@ div[data-componentsid="uiControl6_16RqSb"]{
 
 //建议会签部门
 
-.ysp-huiqian{
+.ysp-huiqian-hetong{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -993,6 +993,28 @@ div[data-componentsid="uiControl6_16RqSb"]{
     overflow : hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+}
+.ysp-huiqian-jishu{
+  padding: 10px;
+  >div:nth-child(1){
+    font-weight: bold;
+  }
+  .ysp-huiqian-jishu-bumen{
+    background: #ececec;
+    >div{
+      display: flex;
+      justify-content: space-around;
+    	align-items: center;
+      height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    >div:nth-child(2){
+      border-bottom: 1px solid #ececec;
+    }
   }
 }
 
