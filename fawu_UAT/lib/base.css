@@ -998,3 +998,11 @@ div[data-componentsid="uiControl6_16RqSb"] {
   border-radius: 5px;
   margin-top: 20px;
 }
+.ysp-xiangqing {
+  padding: 10px;
+  margin-top: 10px;
+  background: #ececec;
+}
+.ysp-xiangqing div {
+  border-bottom: 1px solid #ececec;
+}
