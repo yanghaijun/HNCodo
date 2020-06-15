@@ -998,11 +998,19 @@ div[data-componentsid="uiControl6_16RqSb"] {
   border-radius: 5px;
   margin-top: 20px;
 }
-.ysp-xiangqing {
+.ysp-xiangqing-all {
   padding: 10px;
   margin-top: 10px;
   background: #ececec;
 }
-.ysp-xiangqing div {
-  border-bottom: 1px solid #ececec;
+.ysp-xiangqing-all .ysp-xiangqing {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #fff;
+}
+.ysp-xiangqing-all .ysp-xiangqing > span:nth-child(2) {
+  margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
