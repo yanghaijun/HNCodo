@@ -1052,6 +1052,7 @@ div[data-componentsid="uiControl6_16RqSb"]{
   }
 }
 
+//详情
 .ysp-xiangqing-all{
   padding: 10px;
   margin-top: 10px;
@@ -1060,11 +1061,38 @@ div[data-componentsid="uiControl6_16RqSb"]{
     height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    >span:nth-child(1){
+      width: 50%;
+    }
     >span:nth-child(2){
       margin-left: 5px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+  }
+}
+
+//详情tab
+.ysp-xiangqing-tab-all{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 10px solid #ececec;
+  .ysp-xiangqing-tab{
+    background: #105cc1;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .ysp-xiangqing-tabs{
+		border: 1px solid #ececec;
+    border-radius: 5px;
+    padding: 5px;
   }
 }
