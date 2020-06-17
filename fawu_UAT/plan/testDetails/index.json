@@ -290,7 +290,8 @@
       "fromControlId": "control27_p2zAUA",
       "toContexts": [
         {
-          "toContextId": "context10_fwWXGO"
+          "toContextId": "context10_fwWXGO",
+          "toModelId": "testDetails"
         },
         {
           "toContextId": "context2_9OQ3qi",
@@ -303,6 +304,9 @@
         {
           "toContextId": "context7_31wJo9",
           "toModelId": "tijiao"
+        },
+        {
+          "toContextId": "context10_fwWXGO"
         },
         {
           "toContextId": "context11_TK4lIO",

@@ -40,12 +40,55 @@
       "monitored": false,
       "frameXPath": "//iframe[@name='isolatedWorkArea'][@id='isolatedWorkArea']<<IFRAME>>",
       "componentType": "custom"
+    },
+    "control32_LWmgzt": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window\"]//DIV[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnttbl\"]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnttbl\"]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnttbl\"]/TBODY[1]/TR[1]/TD[1]"
+            ]
+          },
+          {
+            "id": "@id/partialWord",
+            "prob": 3,
+            "value": {
+              "elemId": "FDOEEFPDBOMAACHH.NextAppWin.Window-cntTD",
+              "tagName": "TD",
+              "prefix": "DIV[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.NextAppWin.Window-cnttbl\"]//",
+              "suffix": "",
+              "ratio": 0
+            }
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control32_LWmgzt"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context11_TK4lIO": {
       "controls": [
-        "control31_OMFF2l"
+        "control31_OMFF2l",
+        "control32_LWmgzt"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -85,6 +128,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl29_viGJ9H",
                 "onGetTemplate": "getTemplate_uiControl29_viGJ9H"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl30_xBhWEK",
+          "controlId": "control32_LWmgzt",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl30_xBhWEK",
+                "onGetTemplate": "getTemplate_uiControl30_xBhWEK"
               }
             }
           }
@@ -189,6 +247,54 @@
             "FDOEEFPDBOMAACHH.NextAppWin.Window-spr",
             "FDOEEFPDBOMAACHH.NextAppWin.Window-ttl",
             "FDOEEFPDBOMAACHH.NextAppWin.Window-ttltxt"
+          ],
+          [
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-cnt",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-cntTD",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-cnttbl",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-fhet",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-fhte",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-ftr",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-minmax",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-rsz",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-spr",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-ttl",
+            "FDOEEFPDBOMAACHH.NextAppWin.Window-ttltxt",
+            "FDOEEFPDBOMAACHH.NextApproverView.Button",
+            "FDOEEFPDBOMAACHH.NextApproverView.DISPLAYNAME",
+            "FDOEEFPDBOMAACHH.NextApproverView.DISPLAYNAME-CONTENT",
+            "FDOEEFPDBOMAACHH.NextApproverView.DISPLAYNAME_editor.",
+            "FDOEEFPDBOMAACHH.NextApproverView.DISPLAYNAME_header",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-colorDDHover",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-colorStdHover",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-content",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-contentTBody",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-hiddenData",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV-Nxt",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV-Prev",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV-bar",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV-hdl",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE-scrollV-spc",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE:",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE:-r",
+            "FDOEEFPDBOMAACHH.NextApproverView.EMPL_TABLE:.",
+            "FDOEEFPDBOMAACHH.NextApproverView.Group",
+            "FDOEEFPDBOMAACHH.NextApproverView.Group_Header",
+            "FDOEEFPDBOMAACHH.NextApproverView.RadioButton.",
+            "FDOEEFPDBOMAACHH.NextApproverView.RadioButton.-img",
+            "FDOEEFPDBOMAACHH.NextApproverView.RadioButton.-lbl",
+            "FDOEEFPDBOMAACHH.NextApproverView.RadioButton.-r",
+            "FDOEEFPDBOMAACHH.NextApproverView.RootElement",
+            "FDOEEFPDBOMAACHH.NextApproverView.UPOST",
+            "FDOEEFPDBOMAACHH.NextApproverView.UPOST-CONTENT",
+            "FDOEEFPDBOMAACHH.NextApproverView.UPOST_editor.",
+            "FDOEEFPDBOMAACHH.NextApproverView.UPOST_header",
+            "FDOEEFPDBOMAACHH.NextApproverView._",
+            "FDOEEFPDBOMAACHH.NextApproverView.isCheck",
+            "FDOEEFPDBOMAACHH.NextApproverView.isCheck-CONTENT",
+            "FDOEEFPDBOMAACHH.NextApproverView.isCheck_header"
           ]
         ]
       }
@@ -436,6 +542,86 @@
             "urSTstdHoverColor",
             "urTxtColor",
             "urTxtStd"
+          ],
+          [
+            "lsCWhlTbl",
+            "lsTblEdf",
+            "lsTblEdfTd",
+            "lsTblEdfWhl",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urC",
+            "urCLbl",
+            "urCWhl",
+            "urCursorClickable",
+            "urFlowLayout",
+            "urFontStd",
+            "urGrpBdyWeb",
+            "urGrpBdyWebPd",
+            "urGrpTtlWeb",
+            "urGrpWhlBrd",
+            "urGrpWhlWeb",
+            "urLinStd",
+            "urNoUserSelect",
+            "urPWButton",
+            "urPWButtonImage",
+            "urPWContent",
+            "urPWContentTable",
+            "urPWFloatRightNoBtn",
+            "urPWFooter",
+            "urPWMaximize",
+            "urPWResize",
+            "urPWResizeNW",
+            "urPWSeperator",
+            "urPWTitle",
+            "urPWTitleText",
+            "urRImgOff",
+            "urSCB",
+            "urSCBBdr",
+            "urSCBBdy",
+            "urSCBBtn",
+            "urSCBDimHeight",
+            "urSCBDimMinHeight",
+            "urSCBDimWidth",
+            "urSCBDwnDsbl",
+            "urSCBUpDsbl",
+            "urSCBVHdl",
+            "urST",
+            "urSTBd",
+            "urSTBdBrd",
+            "urSTC",
+            "urSTFlt",
+            "urSTHC",
+            "urSTHCColorLvl",
+            "urSTHCMetricContent",
+            "urSTHCMetricSelCol",
+            "urSTHCMetricStd",
+            "urSTLbHdrBg",
+            "urSTLbSelIcon",
+            "urSTLbUnselIcon",
+            "urSTRowSelIcon",
+            "urSTRowUnSelIcon",
+            "urSTSC",
+            "urSTSCBSpc",
+            "urSTSCMetricInner",
+            "urSTSStd",
+            "urSTSel",
+            "urSTSelRo",
+            "urSTTD",
+            "urSTTDBtn",
+            "urSTTDFlt",
+            "urSTTDFltIco",
+            "urSTTDIn",
+            "urSTTDRo",
+            "urSTTDSc",
+            "urSTWhlBrd",
+            "urSTWhlNoTit",
+            "urSTddHoverColor",
+            "urSTstdHoverColor",
+            "urTxtColor",
+            "urTxtStd"
           ]
         ]
       }
@@ -515,6 +701,41 @@
             "TR/TD/TABLE",
             "TR/TH/DIV",
             "TR/TH/TABLE"
+          ],
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "DIV/DIV/DIV",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/IMG",
+            "SPAN/SPAN/TABLE",
+            "SPAN/SPAN/WBR",
+            "SPAN/TABLE/TBODY",
+            "SPAN/TABLE/THEAD",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/DIV",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
+            "TD/SPAN/INPUT-checkbox",
+            "TD/SPAN/SPAN",
+            "TD/TABLE/COLGROUP",
+            "TD/TABLE/TBODY",
+            "TH/DIV/SPAN",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TH/DIV"
           ]
         ]
       }
