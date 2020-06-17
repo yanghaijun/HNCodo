@@ -84,56 +84,45 @@
       if (text == "合同审批") {
         var trs = XQ && XQ.querySelectorAll('tr');for (var i = 0; i < trs.length; i++) {
           if (trs[i].getAttribute('class') == 'lsCLRow') {
-            if (trs[i].querySelector('table')) {
+            // if (trs[i].querySelector('table')) {
+            //   continue;
+            // }
+            if (trs[i].querySelector('tr[class="lsCLRow"]')) {
               continue;
-            } //var tds = trs[i].querySelectorAll('td[sectionid="FDOEEFPDBOMAACHHKJIC.QtSpdCompView.TransparentContainer"]');
-            var tds = [];var aa = trs[i].querySelectorAll('td');for (var k = 0; k < aa.length; k++) {
-              if (aa[k].getAttribute('sectionid') && aa[k].getAttribute('class') == 'urCLTxtCell') {
-                tds.push(aa[k]);
+            }var tds = [];var aa = trs[i].querySelectorAll('td');for (var k = 0; k < aa.length; k++) {
+              if (aa[k].getAttribute('sectionid')) {
+                if (!aa[k].querySelector('table')) {
+                  tds.push(aa[k]);
+                }
               }
             }for (var j = 0; j < tds.length; j++) {
               var a = [];var b = [];if (j % 2 == 0) {
                 if (tds[j].querySelector('input')) {
-                  a.push(tds[j].querySelector('input').value);
+                  if (tds[j].querySelector('input[type="checkbox"]')) {
+                    b.push(tds[j].innerText.trim());
+                  } else {
+                    b.push(tds[j].querySelector('input').value);
+                  }
                 } else {
                   a.push(tds[j].innerText.trim());
                 }data.xiangqing.push(a);
               }if (j % 2 == 1) {
                 if (tds[j].querySelector('input')) {
-                  b.push(tds[j].querySelector('input').value);
+                  if (tds[j].querySelector('input[type="checkbox"]')) {
+                    b.push(tds[j].innerText.trim());
+                  } else {
+                    b.push(tds[j].innerText.trim() + '' + tds[j].querySelector('input').value);
+                  }
                 } else {
                   b.push(tds[j].innerText.trim());
                 }data.xiangqing1.push(b);
               }
-            } // 				var tds = trs[i].querySelectorAll('td');
-            //       for (var j = 0; j < tds.length; j++) {
-            //         if (tds[j].getAttribute('sectionid')) {
-            //           var a = [];
-            //           var b = [];
-            //           if (j % 2 == 0) {
-            //             if (tds[j].querySelector('input')) {
-            //               a.push(tds[j].querySelector('input').value);
-            //             } else {
-            //               a.push(tds[j].textContent);
-            //             }
-            //             data.xiangqing.push(a);
-            //           } else {
-            //             if (tds[j].querySelector('input')) {
-            //               b.push(tds[j].querySelector('input').value);
-            //             } else {
-            //               b.push(tds[j].textContent);
-            //             }
-            //             data.xiangqing1.push(b);
-            //           }
-            //         }
-            //       }
+            }
           }
         } //详情tab切换
         var div = XQ && XQ.querySelector('div[id="FDOEEFPDBOMAACHH.HtAllView.TabStrip1-panel"]');var divs = div && div.querySelectorAll('div[ct="TSITM"]');for (var i = 0; i < divs.length; i++) {
-          var a = [];var b = [];a.push(divs[i].innerText.trim());var flag = divs[i].querySelector('span[class="urNoUserSelect lsTbsLabel2Sel"]') ? true : false;b.push(flag);data.xiangqingtitle.push(a);
-          data.xiangqingtitleflag.push(b);
-        }
-        // a.push(divs[divs.length - 2].innerText.trim());
+          var a = [];var b = [];a.push(divs[i].innerText.trim());var flag = divs[i].querySelector('span[class="urNoUserSelect lsTbsLabel2Sel"]') ? true : false;b.push(flag);data.xiangqingtitle.push(a);data.xiangqingtitleflag.push(b);
+        } // a.push(divs[divs.length - 2].innerText.trim());
         // b.push(divs[divs.length - 1].innerText.trim());
         // data.xiangqingtitle.push(a);
         // data.xiangqingtitle.push(b);
@@ -195,8 +184,10 @@
         }
       } //详情tab切换
       if ('xiangqing' == types) {
-        debugger;var index = parseInt(data.dataCustom.index);
-        var div = XQ && XQ.querySelector('div[id="FDOEEFPDBOMAACHH.HtAllView.TabStrip1-panel"]');var divs = div && div.querySelectorAll('div[ct="TSITM"]');divs && divs[index].click(); // for (var i = 0; i < divs.length; i++) {
+        ysp.appMain.showLoading();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 2000);
+        var index = parseInt(data.dataCustom.index);var div = XQ && XQ.querySelector('div[id="FDOEEFPDBOMAACHH.HtAllView.TabStrip1-panel"]');var divs = div && div.querySelectorAll('div[ct="TSITM"]');divs && divs[index].click(); // for (var i = 0; i < divs.length; i++) {
         //   var a = [];
         //   a.push(divs[i].innerText.trim());
         //   data.xiangqingtitle.push(a);
