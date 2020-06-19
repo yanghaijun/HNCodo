@@ -1048,3 +1048,8 @@ div[data-componentsid="uiControl6_16RqSb"] {
   border-radius: 5px;
   padding: 5px;
 }
+.ysp-xiangqing-table-title {
+  padding: 10px 10px 0px 10px;
+  border-top: 10px solid #ececec;
+  font-weight: bold;
+}

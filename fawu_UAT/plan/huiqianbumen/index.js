@@ -60,14 +60,18 @@
     doAction_uiControl30_xBhWEK: function (data, elem) {
       var type = data.eventType; //选择人员方法
       if (type == 'click') {
-        var index = parseInt(data.customData);var trs = elem.querySelectorAll("tr");var a = [];for (var i = 0; i < trs.length; i++) {
+        ysp.appMain.showLoading();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 2000);var index = parseInt(data.customData);var trs = elem.querySelectorAll("tr");var a = [];for (var i = 0; i < trs.length; i++) {
           if (trs[i].getAttribute('udat')) {
             a.push(trs[i]);
           }
         }a[index] && a[index].querySelector('input').click();
       } //按钮方法
       if (type == 'button') {
-        var title = data.customData.title;var ass = elem.querySelectorAll('a');if (title == '确认') {
+        var title = data.customData.title;var ass = elem.querySelectorAll('a');ysp.appMain.showLoading();setTimeout(function () {
+          ysp.appMain.hideLoading();
+        }, 2000);if (title == '确认') {
           var flags = data.customData.flags.split(',');var a = [];for (var i = 0; i < flags.length; i++) {
             if (flags[i] == 'true') {
               a.push(true);
