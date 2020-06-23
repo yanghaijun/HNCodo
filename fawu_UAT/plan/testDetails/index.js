@@ -152,18 +152,16 @@
       } else if (text == '计划外立项') {
         var trs = XQ && XQ.querySelectorAll('tr');for (var i = 0; i < trs.length; i++) {
           if (trs[i].getAttribute('class') == 'lsCLRow') {
-            // if (trs[i].querySelector('table')) {
-            //   continue;
-            // }
-            // if (trs[i].querySelector('tr[class="lsCLRow"]')) {
-            //   continue;
-            // }
             var tds = [];var aa = trs[i].querySelectorAll('td');for (var k = 0; k < aa.length; k++) {
               if (aa[k].getAttribute('sectionid')) {
                 if (!aa[k].querySelector('table')) {
                   if (!aa[k].querySelector('img')) {
                     tds.push(aa[k]);
-                  }if (aa[k].querySelector('img') && aa[k].querySelector('input')) {
+                  }if (aa[k].querySelector('img') && aa[k].querySelector('input[type="checkbox"]')) {
+                    if (aa[k].querySelector('input').value == "true") {
+                      tds.push(aa[k]);
+                    }
+                  }if (aa[k].querySelector('img') && aa[k].querySelector('input[type="text"]')) {
                     tds.push(aa[k]);
                   }
                 }
@@ -182,7 +180,9 @@
               }if (j % 2 == 1) {
                 if (tds[j].querySelector('input')) {
                   if (tds[j].querySelector('input[type="checkbox"]')) {
-                    b.push(tds[j].innerText.trim());
+                    if (tds[j].querySelector('input[type="checkbox"]').value == "true") {
+                      b.push(tds[j].innerText.trim());
+                    }
                   } else {
                     b.push(tds[j].innerText.trim() + '' + tds[j].querySelector('input').value);
                   }
