@@ -7,7 +7,8 @@
     "guaqi": "../guaqi/index.json",
     "zuofei": "../zuofei/index.json",
     "tijiao": "../tijiao/index.json",
-    "huiqianbumen": "../huiqianbumen/index.json"
+    "huiqianbumen": "../huiqianbumen/index.json",
+    "empty": "../empty/index.json"
   },
   "chineseName": "详情页面",
   "description": "详情页面",
@@ -282,6 +283,10 @@
       "toContexts": [
         {
           "toContextId": "context10_fwWXGO"
+        },
+        {
+          "toContextId": "context4_c5SQwo",
+          "toModelId": "empty"
         }
       ]
     },

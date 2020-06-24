@@ -998,14 +998,24 @@ div[data-componentsid="uiControl6_16RqSb"] {
 }
 .ysp-huiqian-bumen-all .ysp-huiqian-bumen-query {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 40px;
   line-height: 40px;
+  margin-top: 20px;
+}
+.ysp-huiqian-bumen-all .ysp-huiqian-bumen-query > span:nth-child(1) {
+  width: 45%;
   background: #105cc1;
   color: #fff;
   border-radius: 5px;
-  margin-top: 20px;
+  text-align: center;
+}
+.ysp-huiqian-bumen-all .ysp-huiqian-bumen-query > span:nth-child(2) {
+  width: 45%;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  text-align: center;
 }
 .ysp-xiangqing-all {
   padding: 10px;

@@ -7,7 +7,7 @@
     },
     doAction_uiControl23_gWeNVM: function (data, elem) {
       if (data.eventType == "click") {
-        ysp.appMain.showLoading();elem.ownerDocument.defaultView.parent.close(); // elem.ownerDocument.defaultView.open('http://ihn.chng.com.cn:10008/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=' + top.sap_sid);
+        ysp.appMain.showLoading();elem.ownerDocument.defaultView.parent.close();elem.ownerDocument.defaultView.open('http://ihn.chng.com.cn:10008/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=' + top.sap_sid);
       }
     },
     getTemplate_uiControl23_gWeNVM: function () {
@@ -344,7 +344,8 @@
       } //填写意见
       if ("change" == types) {
         var val = data.customData.value;if (YJ) {
-          YJ.querySelector("textarea").value = val;
+          YJ.querySelector("textarea").innerText = val;
+          YJ.querySelector("textarea").focus;
         }
       } //审批意见翻页
       if ('historyPage' == types) {
@@ -378,6 +379,12 @@
             spans && spans[index].click();
           }
         } else if (title == " 转出") {
+          if (idea == "") {
+            alert('请填写意见！！');return;
+          } else {
+            spans && spans[index].click();
+          }
+        } else if (title == " 提交") {
           if (idea == "") {
             alert('请填写意见！！');return;
           } else {
