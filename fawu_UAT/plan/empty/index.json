@@ -4,7 +4,8 @@
   "targetURL": "http://ihn.chng.com.cn:10008/irj/servlet/prt/portal/prtroot/com.sap.portal.dsm.Terminator?ParamMapCmd=LOAD&ParamMapKey=comsapportaldsmParamMapGx1580790285101x38xIdd2183dfe470511eaa25100000177047fe681580790311377",
   "jsFile": "index.js",
   "requires": {
-    "todoList": "../todoList/index.json"
+    "todoList": "../todoList/index.json",
+    "error": "../error/index.json"
   },
   "chineseName": "empty",
   "description": "",
@@ -69,6 +70,10 @@
         {
           "toContextId": "context3_qTz57Z",
           "toModelId": "todoList"
+        },
+        {
+          "toContextId": "context12_8EeQWa",
+          "toModelId": "error"
         }
       ]
     }

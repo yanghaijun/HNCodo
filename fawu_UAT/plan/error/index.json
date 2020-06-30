@@ -1,0 +1,129 @@
+{
+  "version": "0.1",
+  "id": "error",
+  "targetURL": "http://ihn.chng.com.cn:10008/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=WaOqsvROR2vQgwnyp_N0eg--BLwKb_S9RX3EZFVcwoop8w--",
+  "jsFile": "index.js",
+  "chineseName": "错误页面",
+  "description": "错误页面",
+  "controls": {
+    "control34_qTJ0T3": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control34_qTJ0T3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context12_8EeQWa": {
+      "controls": [
+        "control34_qTJ0T3"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow27_HWo3JU": {
+      "toContexts": [
+        {
+          "toContextId": "context12_8EeQWa"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page12_0R9cJ9": {
+      "contextId": "context12_8EeQWa",
+      "layout": [
+        {
+          "id": "uiControl32_PgWySm",
+          "controlId": "control34_qTJ0T3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl32_PgWySm",
+                "onGetTemplate": "getTemplate_uiControl32_PgWySm"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context12_8EeQWa": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context12_8EeQWa": [
+          "ihn.chng.com.cn:10008/webdynpro/resources/sap.com/pb/PageBuilder?PagePath=pcd%3Aportal_content%2Fcom.hnjt.HNJT%2Fcom.hnjt.XTGL%2Fcom.hnjt.Role%2FZHNJT_CLM_TY001%2FGRGZ1%2F____%2FNew_Page&sap-ext-sid=WaOqsvROR2vQgwnyp_N0eg--BLwKb_S9RX3EZFVcwoop8w--"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context12_8EeQWa": [
+          [
+            "_SSR_Error"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context12_8EeQWa": [
+          []
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context12_8EeQWa": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/BR",
+            "-/DIV/DIV",
+            "-/DIV/P",
+            "-/DIV/TABLE",
+            "DIV/P/BR",
+            "DIV/P/I",
+            "DIV/P/TABLE",
+            "DIV/TABLE/TBODY",
+            "P/TABLE/TBODY",
+            "P/TABLE/THEAD",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TD",
+            "TR/TD/IMG"
+          ]
+        ]
+      }
+    }
+  }
+}
