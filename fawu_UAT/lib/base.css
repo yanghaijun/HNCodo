@@ -1090,3 +1090,20 @@ div[data-componentsid="uiControl6_16RqSb"] {
   color: #fff;
   border-radius: 5px;
 }
+.ysp-shouquan-fujian {
+  padding: 10px;
+  background: #ececec;
+  min-height: 40px;
+}
+.ysp-shouquan-fujian div {
+  color: #105cc1;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-shouquan-fujian > div:last-child {
+  border-bottom: none;
+}

@@ -8,7 +8,8 @@
     "zuofei": "../zuofei/index.json",
     "tijiao": "../tijiao/index.json",
     "huiqianbumen": "../huiqianbumen/index.json",
-    "empty": "../empty/index.json"
+    "empty": "../empty/index.json",
+    "powerFuJian": "../powerFuJian/index.json"
   },
   "chineseName": "详情页面",
   "description": "详情页面",
@@ -362,6 +363,10 @@
         {
           "toContextId": "context11_TK4lIO",
           "toModelId": "huiqianbumen"
+        },
+        {
+          "toContextId": "context13_Ib4AE3",
+          "toModelId": "powerFuJian"
         }
       ]
     }

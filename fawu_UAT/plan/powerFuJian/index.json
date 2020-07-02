@@ -1,0 +1,404 @@
+{
+  "version": "0.1",
+  "id": "powerFuJian",
+  "targetURL": "http://ihn.chng.com.cn:10008/webdynpro/resources/www.hnjt.com/hnjt~basis~ht_filemanage_wd/FilemtApp#",
+  "jsFile": "index.js",
+  "chineseName": "授权附件",
+  "description": "授权附件",
+  "controls": {
+    "control35_Xzn7tr": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"...page\"]//DIV[@id=\"GAHJ.FilemtView.RootElement\"]",
+              "descendant::DIV[@id=\"GAHJ.FilemtView.RootElement\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control35_Xzn7tr"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control36_IUfhOp": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 4,
+            "value": [
+              "descendant::TABLE[@id=\"GAHJ.FilemtView.AFFIXTable\"]//TD[@id=\"GAHJ.FilemtView.AFFIXTable-content\"]//TBODY[@id=\"GAHJ.FilemtView.AFFIXTable-contentTBody\"]",
+              "descendant::TD[@id=\"GAHJ.FilemtView.AFFIXTable-content\"]//TBODY[@id=\"GAHJ.FilemtView.AFFIXTable-contentTBody\"]",
+              "descendant::TBODY[@id=\"GAHJ.FilemtView.AFFIXTable-contentTBody\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.urST.urST3WhlBrd.urST3WhlNoTit TD.urSTSStd TABLE.urST3BdBrd.urST3Bd.urFontStd TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[2]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control36_IUfhOp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context13_Ib4AE3": {
+      "controls": [
+        "control35_Xzn7tr",
+        "control36_IUfhOp"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow26_rIKKOq": {
+      "toContexts": [
+        {
+          "toContextId": "context13_Ib4AE3"
+        }
+      ]
+    },
+    "flow28_MPtcup": {
+      "fromContextId": "context13_Ib4AE3",
+      "fromAction": "doAction",
+      "fromControlId": "control35_Xzn7tr",
+      "toContexts": [
+        {
+          "toContextId": "context13_Ib4AE3"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page13_rNqmyF": {
+      "contextId": "context13_Ib4AE3",
+      "layout": [
+        {
+          "id": "uiControl33_zN4e68",
+          "controlId": "control35_Xzn7tr",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl33_zN4e68",
+                "onGetTemplate": "getTemplate_uiControl33_zN4e68"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl34_oc9BxV",
+          "controlId": "control36_IUfhOp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl34_oc9BxV",
+                "onGetTemplate": "getTemplate_uiControl34_oc9BxV"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context13_Ib4AE3": [
+          "FilemtApp"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context13_Ib4AE3": [
+          "ihn.chng.com.cn:10008/webdynpro/resources/www.hnjt.com/hnjt~basis~ht_filemanage_wd/FilemtApp"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context13_Ib4AE3": [
+          [
+            "...assoc",
+            "...form",
+            "...ihub",
+            "...ihub_e",
+            "...ihub_j",
+            "...ihub_m",
+            "...ihub_n",
+            "...ihub_w",
+            "...page",
+            "...page-animations",
+            "...page-asso",
+            "...page-static",
+            "GAHJ.FilemtView.AFFIXTable",
+            "GAHJ.FilemtView.AFFIXTable-colorDDHover",
+            "GAHJ.FilemtView.AFFIXTable-colorStdHover",
+            "GAHJ.FilemtView.AFFIXTable-content",
+            "GAHJ.FilemtView.AFFIXTable-contentTBody",
+            "GAHJ.FilemtView.AFFIXTable-emptyTableText",
+            "GAHJ.FilemtView.AFFIXTable-hiddenData",
+            "GAHJ.FilemtView.AFFIXTable-scrollV",
+            "GAHJ.FilemtView.AFFIXTable-scrollV-Nxt",
+            "GAHJ.FilemtView.AFFIXTable-scrollV-Prev",
+            "GAHJ.FilemtView.AFFIXTable-scrollV-bar",
+            "GAHJ.FilemtView.AFFIXTable-scrollV-hdl",
+            "GAHJ.FilemtView.AFFIXTable-scrollV-spc",
+            "GAHJ.FilemtView.AFFIXTable-toolbar",
+            "GAHJ.FilemtView.Area_Content",
+            "GAHJ.FilemtView.Button",
+            "GAHJ.FilemtView.CREATEDATE",
+            "GAHJ.FilemtView.CREATEDATE-CONTENT",
+            "GAHJ.FilemtView.CREATEDATE_header",
+            "GAHJ.FilemtView.CREATEUSER",
+            "GAHJ.FilemtView.CREATEUSER-CONTENT",
+            "GAHJ.FilemtView.CREATEUSER_header",
+            "GAHJ.FilemtView.DISPLAYNAME",
+            "GAHJ.FilemtView.DISPLAYNAME-CONTENT",
+            "GAHJ.FilemtView.DISPLAYNAME_header",
+            "GAHJ.FilemtView.DropDownByKey",
+            "GAHJ.FilemtView.DropDownByKey-btn",
+            "GAHJ.FilemtView.DropDownByKey-r",
+            "GAHJ.FilemtView.FILEDESC",
+            "GAHJ.FilemtView.FILEDESC-r",
+            "GAHJ.FilemtView.FILEDESC_label",
+            "GAHJ.FilemtView.FILENAME",
+            "GAHJ.FilemtView.FILENAME-CONTENT",
+            "GAHJ.FilemtView.FILENAME_header",
+            "GAHJ.FilemtView.FILESIZE",
+            "GAHJ.FilemtView.FILESIZE-CONTENT",
+            "GAHJ.FilemtView.FILESIZE_header",
+            "GAHJ.FilemtView.FILE_RESOURCE_label",
+            "GAHJ.FilemtView.FileUpload",
+            "GAHJ.FilemtView.FileUpload-r",
+            "GAHJ.FilemtView.Group",
+            "GAHJ.FilemtView.Group_Header",
+            "GAHJ.FilemtView.PageHeader",
+            "GAHJ.FilemtView.RootElement",
+            "GAHJ.FilemtView.RootElement:h",
+            "GAHJ.FilemtView.Tab",
+            "GAHJ.FilemtView.Tab-cnt",
+            "GAHJ.FilemtView.Tab-focus",
+            "GAHJ.FilemtView.TabStrip",
+            "GAHJ.FilemtView.TabStrip-ITBA",
+            "GAHJ.FilemtView.TabStrip-ITBB",
+            "GAHJ.FilemtView.TabStrip-cnt",
+            "GAHJ.FilemtView.TabStrip-menu",
+            "GAHJ.FilemtView.TabStrip-next",
+            "GAHJ.FilemtView.TabStrip-panel",
+            "GAHJ.FilemtView.TabStrip-prev",
+            "GAHJ.FilemtView.TabStrip:-r",
+            "GAHJ.FilemtView.Tab_Content",
+            "GAHJ.FilemtView.TransContainer_",
+            "GAHJ.FilemtView._",
+            "SVSDK.com.sap.dictionary.string__-r",
+            "UCF_System",
+            "ur-loading"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context13_Ib4AE3": [
+          [
+            "lsEdfHlpBtn",
+            "lsEdfHlpBtnCoB",
+            "lsEdfHlpRadius",
+            "lsEdfLeftBrdRadius",
+            "lsEdfTxtHlpBtn",
+            "lsLoadImg",
+            "lsTbarInPgH",
+            "lsTbsEndMoreSel",
+            "lsTbsFirstSel",
+            "lsTbsLabel",
+            "lsTbsLabelSel",
+            "lsTbsLast",
+            "lsTbsMenu",
+            "lsTbsOvfl",
+            "lsTbsPageNextDsbl",
+            "lsTbsPagePrevDsbl",
+            "lsTbsPanel",
+            "lsTbsPanelBtns",
+            "lsTbsPanelCnt",
+            "lsTbsStartEndSel",
+            "lsTbsTitleAlign",
+            "urBorderBox",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urCoBWhl",
+            "urCobIlb",
+            "urEdfMaskOn",
+            "urEdfTxtEnbl",
+            "urEdfTxtRadius",
+            "urEdfWhl",
+            "urFlowLayout",
+            "urFontStd",
+            "urGrpBdyWeb",
+            "urGrpBdyWebPd",
+            "urGrpTtlWeb",
+            "urGrpWhlBrd",
+            "urGrpWhlWeb",
+            "urInlineMetricTop",
+            "urL",
+            "urLblVAlign",
+            "urLinStd",
+            "urLoadA",
+            "urMsgBarImgInfo",
+            "urNoUserSelect",
+            "urPLBeginPad",
+            "urPLBottomPad",
+            "urPLEndPad",
+            "urPLTopPad",
+            "urPgH",
+            "urPgHIStd",
+            "urPgHT",
+            "urPgHTEnd",
+            "urPgHTTbl",
+            "urPgHTTxt",
+            "urSCB",
+            "urSCBBdr",
+            "urSCBBdy",
+            "urSCBBtn",
+            "urSCBDimHeight",
+            "urSCBDimWidth",
+            "urSCBDwnDsbl",
+            "urSCBUpDsbl",
+            "urSCBVHdl",
+            "urST",
+            "urSTBd",
+            "urSTBdBrd",
+            "urSTC",
+            "urSTHC",
+            "urSTHCColorLvl",
+            "urSTHCMetricContent",
+            "urSTHCMetricSelCol",
+            "urSTHCMetricStd",
+            "urSTLbHdrBg",
+            "urSTRowUnSelDsblIcon",
+            "urSTSC",
+            "urSTSCBSpc",
+            "urSTSCMetricInner",
+            "urSTSCStdBottom",
+            "urSTSCStdInner",
+            "urSTSCStdOuter",
+            "urSTSStd",
+            "urSTTD",
+            "urSTTDRo",
+            "urSTTDSc",
+            "urSTToolbar",
+            "urSTWhlBrd",
+            "urSTWhlNoTit",
+            "urSTddHoverColor",
+            "urSTstdHoverColor",
+            "urTbsCnt",
+            "urTbsDiv",
+            "urTbsDivDisplay",
+            "urTbsWhl",
+            "urTxtColor",
+            "urTxtStd",
+            "urUpld"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context13_Ib4AE3": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/STYLE",
+            "-/-/TABLE",
+            "-/DIV/DIV",
+            "-/SPAN/FORM",
+            "-/SPAN/SPAN",
+            "-/TABLE/TBODY",
+            "DIV/DIV/DIV",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/XMP",
+            "DIV/SPAN/DIV",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "SPAN/DIV/DIV",
+            "SPAN/DIV/TABLE",
+            "SPAN/FORM/INPUT-hidden",
+            "SPAN/SPAN/DIV",
+            "SPAN/SPAN/TABLE",
+            "SPAN/SPAN/WBR",
+            "SPAN/TABLE/TBODY",
+            "SPAN/TABLE/THEAD",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/SPAN",
+            "TD/DIV/DIV",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
+            "TD/FORM/INPUT-file",
+            "TD/SPAN/IMG",
+            "TD/SPAN/INPUT-null",
+            "TD/SPAN/INPUT-text",
+            "TD/SPAN/SPAN",
+            "TD/SPAN/XMP",
+            "TD/TABLE/COLGROUP",
+            "TD/TABLE/TBODY",
+            "TH/DIV/DIV",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/FORM",
+            "TR/TD/IMG",
+            "TR/TD/LABEL",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TH/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}
