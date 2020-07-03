@@ -1107,3 +1107,24 @@ div[data-componentsid="uiControl6_16RqSb"] {
 .ysp-shouquan-fujian > div:last-child {
   border-bottom: none;
 }
+.ysp-shouquan-tijiao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.ysp-shouquan-tijiao > span:nth-child(1) {
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  width: 40%;
+  text-align: center;
+  padding: 4px 0px;
+}
+.ysp-shouquan-tijiao > span:nth-child(2) {
+  color: #fff;
+  background: #105cc1;
+  width: 40%;
+  text-align: center;
+  padding: 4px 0px;
+  border-radius: 5px;
+}

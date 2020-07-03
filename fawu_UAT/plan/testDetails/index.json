@@ -9,7 +9,8 @@
     "tijiao": "../tijiao/index.json",
     "huiqianbumen": "../huiqianbumen/index.json",
     "empty": "../empty/index.json",
-    "powerFuJian": "../powerFuJian/index.json"
+    "powerFuJian": "../powerFuJian/index.json",
+    "shouquanTiJiao": "../shouquanTiJiao/index.json"
   },
   "chineseName": "详情页面",
   "description": "详情页面",
@@ -367,6 +368,10 @@
         {
           "toContextId": "context13_Ib4AE3",
           "toModelId": "powerFuJian"
+        },
+        {
+          "toContextId": "context14_mapCdI",
+          "toModelId": "shouquanTiJiao"
         }
       ]
     }

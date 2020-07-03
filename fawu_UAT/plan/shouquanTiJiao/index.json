@@ -1,0 +1,262 @@
+{
+  "version": "0.1",
+  "id": "shouquanTiJiao",
+  "targetURL": "http://ihn.chng.com.cn:10008/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultAjaxframeworkContent!2fcom.sap.portal.afpDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=ROLES%3A%2F%2Fportal_content%2Fevery_user%2Fgeneral%2Fuwl%2Fcom.sap.netweaver.bc.uwl.uwlSapWebDynproLaunch&DynamicParameter=System%3DSAP_LocalSystem%26wi_id%3D51186637297f11e7a59b000000962486%40USER.PRIVATE_DATASOURCE.un%3AHTPX_121%26taskId%3D51186637297f11e7a59b000000962486%26isSubstituted%3Dfalse%26locale%3Dzh_CN%26timezone%3DGMT%2B08%3A00%26System%3DSAP_LocalSystem%26WebDynproDeployableObject%3Dsap.com%252Ftc%257Ebpem%257Ewdui%257Etaskinstance%26WebDynproApplication%3DATaskExecution&System=SAP_LocalSystem&WebDynproDeployableObject=sap.com%2Ftc%7Ebpem%7Ewdui%7Etaskinstance&WebDynproApplication=ATaskExecution",
+  "jsFile": "index.js",
+  "chineseName": "授权提交页面",
+  "description": "授权提交页面",
+  "controls": {
+    "control37_rmXs5r": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]/TABLE[1]/TBODY[1]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TBODY",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TBODY",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TBODY"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control37_rmXs5r"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "custom"
+    },
+    "control38_XKOewR": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]/TABLE[1]",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnt\"]//TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TABLE",
+              "descendant::TABLE[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl\"]//DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TABLE",
+              "descendant::DIV[@id=\"FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement\"]//TABLE"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.urPWInnerBorder DIV.urPWContent TABLE.urPWContentTable TBODY TR TD TABLE"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/TABLE[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control38_XKOewR"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[contains(@name,'URLSPW-')][contains(@id,'URLSPW-')]<<IFRAME>>",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context14_mapCdI": {
+      "controls": [
+        "control37_rmXs5r",
+        "control38_XKOewR"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow29_7S2rn2": {
+      "toContexts": [
+        {
+          "toContextId": "context14_mapCdI"
+        }
+      ]
+    },
+    "flow30_sEy5vl": {
+      "fromContextId": "context14_mapCdI",
+      "fromAction": "doAction",
+      "fromControlId": "control37_rmXs5r",
+      "toContexts": [
+        {
+          "toContextId": "context14_mapCdI"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page14_G884tU": {
+      "contextId": "context14_mapCdI",
+      "layout": [
+        {
+          "id": "uiControl35_5xnX50",
+          "controlId": "control37_rmXs5r",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl35_5xnX50",
+                "onGetTemplate": "getTemplate_uiControl35_5xnX50"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl36_17h5Js",
+          "controlId": "control38_XKOewR",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl36_17h5Js",
+                "onGetTemplate": "getTemplate_uiControl36_17h5Js"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context14_mapCdI": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context14_mapCdI": [
+          ""
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context14_mapCdI": [
+          [
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.Button",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.Button-img",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.HorizontalGutter",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.RootElement",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.TextView",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.TextView-ovfl",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView.TransparentContainer",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView._",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView._-endpoint",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreView._-sections",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnt",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cntTD",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-cnttbl",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-fhet",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-fhte",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-ftr",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-minmax",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-rsz",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-spr",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-ttl",
+            "FDOEEFPDBOMAACHH.AuthorizePrintPreWin.Window-ttltxt"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context14_mapCdI": [
+          [
+            "lsCLRow",
+            "urBtnCntTxt",
+            "urBtnRadius",
+            "urBtnStd",
+            "urBtnStdWithImg",
+            "urCLTxtCell",
+            "urFlowLayout",
+            "urHColor",
+            "urHDImg",
+            "urHSpcMed",
+            "urHSpcStdAreaDivImg",
+            "urImgBtn",
+            "urLinStd",
+            "urNoUserSelect",
+            "urPWButton",
+            "urPWButtonImage",
+            "urPWContent",
+            "urPWContentTable",
+            "urPWFloatRightNoBtn",
+            "urPWFooter",
+            "urPWMaximize",
+            "urPWResize",
+            "urPWResizeNW",
+            "urPWSeperator",
+            "urPWTitle",
+            "urPWTitleText",
+            "urTxtColor",
+            "urTxtH",
+            "urTxtStd",
+            "urTxtVAlign"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context14_mapCdI": [
+          [
+            "-/-/DIV",
+            "-/DIV/DIV",
+            "-/DIV/TABLE",
+            "DIV/DIV/DIV",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/COLGROUP",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/TFOOT",
+            "SPAN/A/IMG",
+            "SPAN/A/SPAN",
+            "SPAN/SPAN/A",
+            "SPAN/SPAN/WBR",
+            "TABLE/COLGROUP/COL",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/IMG",
+            "TD/DIV/IMG",
+            "TD/DIV/SPAN",
+            "TD/DIV/TABLE",
+            "TD/P/BR",
+            "TD/P/SPAN",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IMG",
+            "TR/TD/P",
+            "TR/TD/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}
