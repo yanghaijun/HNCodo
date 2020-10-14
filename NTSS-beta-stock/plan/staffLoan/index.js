@@ -23,17 +23,17 @@
     },
 
     getData_control2_nMD6MN: function (elem) {
-      'use strict';
-
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.ownerDocument.querySelectorAll('.input_table')[3];var basic2 = elem.ownerDocument.querySelectorAll('.input_table')[5]; // var basic3 = elem.querySelector('#detailTable');
         // var basicTr3 = basic3.querySelectorAll('tr');
         var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['借款人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')]; // data.data[2] = ['报销类型',basic2.querySelectorAll('tr')[2].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')+'-差旅费'];
-        data.data[2] = ['借款类型', '部门费用-差旅费'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input').length > 0) {
+        //data.data[2] = ['借款类型', '部门费用-差旅费'];
+        data.data[2] = ['借款类型', basic2.querySelectorAll('tr')[2] && basic2.querySelectorAll('tr')[2].querySelectorAll('td')[3] && basic2.querySelectorAll('tr')[2].querySelectorAll('td')[3].textContent.trim()];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input').length > 0) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelectorAll('input')[0].value.replace(/\s+/g, '')];
         } else {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];
-        }data.data[5] = ['借款金额', basic2.querySelectorAll('tr')[2].querySelectorAll('td')[1].textContent.replace(/\s+/g, '') + '元'];data.data[6] = ['借款凭证', basic4.querySelectorAll('tr').length + '张'];for (var i = 0; i < basic4.querySelectorAll('tr').length; i++) {
+        } //data.data[5] = ['借款金额', basic2.querySelectorAll('tr')[2].querySelectorAll('td')[1].textContent.replace(/\s+/g, '') + '元'];
+        data.data[5] = ['借款金额', basic2.querySelector('td[id="baseBorrowMoney"]').textContent.trim() + '元'];data.data[6] = ['借款凭证', basic4.querySelectorAll('tr').length + '张'];for (var i = 0; i < basic4.querySelectorAll('tr').length; i++) {
           if (basic4.querySelectorAll('tr')[i].querySelectorAll('a').length > 1) {
             if (basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpg') > -1 || basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('png') > -1 || basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpeg') > -1) {
               data.file[i] = ['jpg', basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.replace(/\s+/g, '')];
@@ -61,7 +61,6 @@
           data.upload = false;
         } // for(var i=0;i<approval.querySelectorAll('tr').length;i++){
         //   if(i==0){
-
         //     var ths = [];
         //     for(var j=0;j<approval.querySelectorAll('tr')[i].querySelectorAll('th').length;j++){
         //       ths.push(approval.querySelectorAll('tr')[i].querySelectorAll('th')[j].textContent.replace(/\s+/g, ''));  
@@ -85,8 +84,6 @@
       }
     },
     doAction_uiControl2_li6doq: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'arrow') {
         elem.querySelector('#detailTable').querySelectorAll('tr')[1].querySelector('.searchLine').click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -123,6 +120,7 @@
     },
     getData_control60_sai2SN: function (elem) {
       'use strict';
+
       ;var data = [];if (elem) {
         if (elem.querySelectorAll('input')[0].parentNode.style.display != 'none') {
           data.push(elem.querySelectorAll('input')[0].value.replace(/\s+/g, ''));data.push(elem.querySelectorAll('input')[1].value.replace(/\s+/g, ''));
@@ -131,6 +129,7 @@
     },
     doAction_uiControl48_17cXto: function (data, elem) {
       'use strict';
+
       if (data.eventType == 'save') {
         elem.querySelectorAll('input')[0].click();
       } else if (data.eventType == 'submit') {
