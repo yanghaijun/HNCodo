@@ -165,29 +165,26 @@
     },
 
     getData_control33_13OgQC: function (elem) {
-      'use strict';
-
       ;if (!elem) {
         return;
-      }return elem.querySelector('textarea').value;
+      }return elem.querySelector('textarea') && elem.querySelector('textarea').value;
     },
     doAction_uiControl27_oOQT9X: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'blur') {
         var val = data.dataCustom;elem.querySelector('textarea').value = val;
       }
     },
     getTemplate_uiControl27_oOQT9X: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  blur:function(e){\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'blur\',\n        data:e.target.value\n      })\n    }\n  },\n  render: function() {\n    var data = this.props.customData;\n    var _this = this;\n    if(data || data==\'\'){\n      return (\n        <div className=\'yijian\'>\n         <div style={{margin:\'10px 0\'}}><span className=\'icon-title\'>\u5BA1\u6279\u610F\u89C1\uFF1A</span></div>\n          <div style={{margin:\'10px\'}}> <ATextarea onBlur={_this.blur} value={data} /></div>\n\n        </div>\n      )\n    }else{\n      return (\n      \t<div> </div>\n      )\n    }\n    \n  }\n});';
-      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  blur: function blur(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'blur\',\n        data: e.target.value\n      });\n    }\n  },\n  render: function render() {\n    var data = this.props.customData;\n    var _this = this;\n    if (data || data == \'\') {\n      return React.createElement(\n        \'div\',\n        { className: \'yijian\' },\n        React.createElement(\n          \'div\',\n          { style: { margin: \'10px 0\' } },\n          React.createElement(\n            \'span\',\n            { className: \'icon-title\' },\n            \'\\u5BA1\\u6279\\u610F\\u89C1\\uFF1A\'\n          )\n        ),\n        React.createElement(\n          \'div\',\n          { style: { margin: \'10px\' } },\n          \' \',\n          React.createElement(ATextarea, { onBlur: _this.blur, value: data })\n        )\n      );\n    } else {\n      return React.createElement(\n        \'div\',\n        null,\n        \' \'\n      );\n    }\n  }\n});';
+      return "'use strict';\n\nmodule.exports = React.createClass({\n  displayName: 'exports',\n\n  blur: function blur(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'blur',\n        data: e.target.value\n      });\n    }\n  },\n  render: function render() {\n    var data = this.props.customData;\n    var _this = this;\n    if (data || data == '') {\n      return React.createElement(\n        'div',\n        { className: 'yijian' },\n        React.createElement(\n          'div',\n          { style: { margin: '10px 0' } },\n          React.createElement(\n            'span',\n            { className: 'icon-title' },\n            '\\u5BA1\\u6279\\u610F\\u89C1\\uFF1A'\n          )\n        ),\n        React.createElement(\n          'div',\n          { style: { margin: '10px' } },\n          ' ',\n          React.createElement(ATextarea, { onBlur: _this.blur, value: data })\n        )\n      );\n    } else {\n      return React.createElement(\n        'div',\n        null,\n        ' '\n      );\n    }\n  }\n});";
     },
 
     getData_control40_Ail8LR: function (elem) {
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.ownerDocument.querySelectorAll('.input_table')[3];var basic2 = elem.ownerDocument.querySelectorAll('.input_table')[5]; // var basic3 = elem.querySelector('#detailTable');
         // var basicTr3 = basic3.querySelectorAll('tr');
-        var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')];data.data[2] = ['报销类型', '部门费用-' + basic2.querySelectorAll('tr')[1].querySelector('#majorName') && basic2.querySelectorAll('tr')[1].querySelector('#majorName').value];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
+        var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')]; // data.data[2] = ['报销类型', '部门费用-' + basic2.querySelectorAll('tr')[1].querySelector('#majorName') && basic2.querySelectorAll('tr')[1].querySelector('#majorName') && basic2.querySelectorAll('tr')[1].querySelector('#majorName').value];
+        data.data[2] = ['报销类型', basic2.querySelector('div[class="inputOutSide"]') && basic2.querySelector('div[class="inputOutSide"]').textContent.trim()];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input')) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelector('input').value];
         } else {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];
@@ -195,11 +192,11 @@
           data.data[5] = ['报销金额', elem.querySelector('#sumAmount').textContent.substr(1, elem.querySelector('#sumAmount').textContent.length).replace(/\s+/g, '') + '元'];
         } else {
           data.data[5] = ['报销金额', elem.querySelector('#sumAmount').textContent.replace(/\s+/g, '') + '元'];
-        }data.data[6] = ['报销凭证', basic4.querySelectorAll('tr').length + '张'];for (var i = 0; i < basic4.querySelectorAll('tr').length; i++) {
+        }data.data[6] = ['报销凭证', basic4.querySelectorAll('tr').length + '张'];debugger;for (var i = 0; i < basic4.querySelectorAll('tr').length; i++) {
           if (basic4.querySelectorAll('tr')[i].querySelectorAll('a').length > 1) {
             if (basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpg') > -1 || basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('png') > -1 || basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpeg') > -1) {
               data.file[i] = ['jpg', basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.replace(/\s+/g, '')];
-            } else if (basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('pdf') > -1) {
+            } else if (basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('pdf') > -1 || basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('PDF') > -1) {
               data.file[i] = ['pdf', basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.replace(/\s+/g, '')];
             } else if (basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('doc') > -1) {
               data.file[i] = ['word', basic4.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.replace(/\s+/g, '')];
@@ -207,7 +204,7 @@
           } else {
             if (basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('jpg') > -1 || basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('png') > -1 || basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('jpeg') > -1) {
               data.file[i] = ['jpg', basic4.querySelectorAll('tr')[i].querySelector('a').textContent.replace(/\s+/g, '')];
-            } else if (basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('pdf') > -1) {
+            } else if (basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('pdf') > -1 || basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('PDF') > -1) {
               data.file[i] = ['pdf', basic4.querySelectorAll('tr')[i].querySelector('a').textContent.replace(/\s+/g, '')];
             } else if (basic4.querySelectorAll('tr')[i].querySelector('a').textContent.indexOf('doc') > -1) {
               data.file[i] = ['word', basic4.querySelectorAll('tr')[i].querySelector('a').textContent.replace(/\s+/g, '')];
@@ -365,8 +362,6 @@
       return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  save: function save(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'save\'\n      });\n    }\n  },\n  submit: function submit(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'submit\'\n      });\n      handler({\n        eventType: \'section-trigger\',\n        data: \'control10_Tvwwvz\'\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    var data = this.props.customData || [];\n    return data.length > 0 ? React.createElement(\n      \'div\',\n      { className: \'bottomButton\' },\n      React.createElement(\n        \'li\',\n        { onClick: _this.save },\n        data[0]\n      ),\n      React.createElement(\n        \'li\',\n        { onClick: _this.submit },\n        data[1]\n      )\n    ) : \'\';\n  }\n});';
     },
     getData_control76_FzWBLy: function (elem) {
-      'use strict';
-
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.ownerDocument.querySelectorAll('.input_table')[2];var basic2 = elem.ownerDocument.querySelectorAll('.input_table')[3];var basic3 = elem.querySelector('#detailTable');var basicTr3 = basic3.querySelectorAll('tr');var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['报销人', basic1.querySelectorAll('tr')[0].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '')];data.data[2] = ['报销类型', basic2.querySelectorAll('tr')[2].querySelectorAll('td')[1].textContent.replace(/\s+/g, '') + '-差旅费'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[1].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input').length > 0) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input')[0].value.replace(/\s+/g, '')];
@@ -414,8 +409,6 @@
       }
     },
     doAction_uiControl62_CgSqus: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'arrow') {
         elem.querySelector('#detailTable').querySelectorAll('tr')[1].querySelector('.searchLine').click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
