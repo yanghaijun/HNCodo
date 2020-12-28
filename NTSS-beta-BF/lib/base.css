@@ -1,0 +1,1676 @@
+.zhehang_lfj {
+  overflow: hidden;
+}
+.zhehang_lfj .spanTitle {
+  float: left;
+  padding: 10px 0;
+  line-height: 30px!important;
+}
+.zhehang_lfj .spanContent {
+  padding: 10px 0;
+  min-height: 30px!important;
+  line-height: 30px!important;
+  height: auto!important;
+}
+body {
+  background: #ffffff;
+}
+.loading {
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  font-size: 16px;
+  font-weight: bolder;
+  z-index: 1000;
+}
+body,
+li,
+ul,
+span,
+div,
+p,
+a,
+input {
+  padding: 0;
+  margin: 0;
+}
+.lfjnone {
+  display: none!important;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+li {
+  list-style-type: none;
+}
+.ysp-login {
+  height: 100vh;
+  padding: 0 10% ;
+}
+.ysp-login input {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+}
+.ysp-login i {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+.ysp-login button {
+  padding: 10px 55px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.ysp-login .userName,
+.ysp-login .pwdName {
+  position: relative;
+}
+.ysp-login .user-icon {
+  background: url(../local/img/user.png) no-repeat center center;
+  background-size: 88%;
+  position: absolute;
+  top: 8px;
+}
+.ysp-login .pwd-icon {
+  background: url(../local/img/pwd.png) no-repeat center center;
+  background-size: 88%;
+  position: absolute;
+  top: 8px;
+}
+.ysp-login .login-head {
+  text-align: center;
+  padding: 50% 0;
+  color: #065187;
+  font-size: 24px;
+}
+.ysp-login .selected {
+  margin-top: 80px;
+  font-size: 16px;
+}
+.ysp-login .selected span:nth-child(1) {
+  color: #aaa;
+}
+.ysp-login .selected span:nth-child(2) {
+  color: #333;
+  padding: 10px;
+}
+.ysp-login .selected span:nth-child(2) {
+  color: #065187;
+}
+.ysp-login .bth {
+  overflow: hidden;
+  margin-top: 35px;
+}
+.ysp-login .reset {
+  border: 1px solid #063185;
+  background: #fff;
+  color: #063185;
+}
+.ysp-login .login {
+  float: right;
+  color: #fff;
+  border: none;
+  background: #105cc1;
+}
+.ysp-login .login.active {
+  background-color: #2b357c;
+  color: #fff;
+}
+/*_________________TodoList - SAP待办列表____________________*/
+.editor-state [data-ysp="component"] {
+  padding-top: 0;
+  min-height: 0;
+  border: 0;
+  padding: 0;
+}
+.TodoList-head2 {
+  background: #fff;
+  overflow: hidden;
+  height: 35px;
+  position: relative;
+}
+.TodoList-head2 > div:nth-child(1) {
+  width: 100%;
+  float: left;
+}
+.TodoList-head2 > div:nth-child(1) span {
+  color: #9A9A9A;
+}
+.TodoList-head2 > div:nth-child(1) .active {
+  border-bottom: 1px solid #2B74CF;
+  color: #1E7FD0;
+}
+.TodoList-head2 > div:nth-child(1) span {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+}
+.TodoList-head2 > div:nth-child(2) {
+  display: inline-block;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.TodoList-head2 > div:nth-child(2) > span {
+  height: 20px;
+  display: inline-block;
+  margin: 0 20px 0 0;
+  padding-left: 20px;
+  text-align: right;
+  line-height: 20px;
+  float: right;
+  border-left: 1px solid #F4F4F4;
+  color: #FFB837;
+}
+.TodoList-head {
+  text-align: center;
+  background: #105cc1;
+  color: #fff;
+  padding: 10px;
+}
+.TodoList-head span {
+  display: inline-block;
+  text-align: center;
+}
+.TodoList-head span:nth-child(1) {
+  min-width: 20px;
+  margin-left: -11%;
+  margin-right: 22px;
+}
+.TodoList-head span:nth-child(2) {
+  width: 33%;
+}
+.yuetop {
+  top: 32px;
+}
+.Todo-serch {
+  z-index: 1000000;
+  width: 100%;
+  position: fixed;
+  font-size: 16px;
+  padding: 0;
+  overflow: hidden;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  line-height: 41px;
+}
+.Todo-serch .serch-head-icon {
+  background: #fff;
+}
+.Todo-serch .serch-head-icon .icon-title {
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
+}
+.Todo-serch .serch-right {
+  float: right;
+  margin-right: 20px;
+  color: #005aa0;
+}
+.Todo-serch .active {
+  display: block;
+}
+.Todo-serch .unactive {
+  display: none;
+}
+.Todo-serch .serch-content {
+  background: #fff;
+  margin: 5px 18px;
+  padding-bottom: 10px;
+  height: 100vh;
+  margin-bottom: 0px;
+  position: relative;
+}
+.Todo-serch .serch-content ul li {
+  width: 100%;
+  overflow: hidden;
+}
+.Todo-serch .serch-content ul li span {
+  width: 30%;
+  display: inline-block;
+}
+.Todo-serch .serch-content ul li input {
+  display: inline-block;
+  width: 65%;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+.Todo-serch .serch-content ul li select {
+  display: inline-block;
+  width: 65%;
+  background-color: #fff;
+  border: 0;
+}
+.Todo-serch .serch-content ul li input[type=color],
+.Todo-serch .serch-content ul li input[type=date],
+.Todo-serch .serch-content ul li input[type=datetime-local],
+.Todo-serch .serch-content ul li input[type=datetime],
+.Todo-serch .serch-content ul li input[type=email],
+.Todo-serch .serch-content ul li input[type=month],
+.Todo-serch .serch-content ul li input[type=number],
+.Todo-serch .serch-content ul li input[type=password],
+.Todo-serch .serch-content ul li input[type=search],
+.Todo-serch .serch-content ul li input[type=tel],
+.Todo-serch .serch-content ul li input[type=text],
+.Todo-serch .serch-content ul li input[type=time],
+.Todo-serch .serch-content ul li input[type=url],
+.Todo-serch .serch-content ul li input[type=week],
+.Todo-serch .serch-content ul li textarea {
+  margin-bottom: 5px!important;
+}
+.Todo-serch .serch-content .serch-bottom {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  text-align: inherit;
+  padding: 10px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.Todo-serch .serch-content .serch-bottom button {
+  width: 45%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.Todo-serch .serch-content .serch-bottom .clear {
+  border: 1px solid #063185;
+  background: #fff;
+  color: #063185;
+}
+.Todo-serch .serch-content .serch-bottom .commit-serch {
+  float: right;
+  color: #fff;
+  border: none;
+  background: #105cc1;
+}
+.yuecon {
+  margin-top: 100px;
+}
+.yuecon1 {
+  margin-top: 50px;
+}
+.Todo-list-content {
+  z-index: 10000;
+  position: relative;
+  background: #eee;
+}
+.Todo-list-content .list-content-ul {
+  padding: 12px;
+  background: #fff;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+.Todo-list-content .list-content-ul li span {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Todo-list-content .list-bottom {
+  width: 100%;
+  height: 50px;
+  line-height: 72px;
+  text-align: center;
+  background: #FCFCFC;
+  overflow: hidden;
+}
+.Todo-list-content .list-bottom li {
+  float: left;
+  color: #929292;
+  font-size: 12px;
+}
+.Todo-list-content .list-bottom .li1 {
+  width: 100%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li1:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat center center;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li2 {
+  width: 48%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li2:first-child::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background: rgba(211, 211, 211, 0.5);
+  top: 10px;
+  right: 0px;
+}
+.Todo-list-content .list-bottom .li2:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li2:last-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3 {
+  width: 33%;
+  position: relative;
+}
+.Todo-list-content .list-bottom .li3:first-child::after,
+.Todo-list-content .list-bottom .li3:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background: rgba(211, 211, 211, 0.5);
+  top: 10px;
+  right: 0px;
+}
+.Todo-list-content .list-bottom .li3:last-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/return.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3:first-child::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/details.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .list-bottom .li3:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url(../local/img/confirm.png) no-repeat;
+  background-size: 20px 20px;
+  top: 5px;
+  margin: auto;
+}
+.Todo-list-content .title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.Todo-list-content .content-title {
+  display: inline-block;
+  width: 30%!important;
+  margin-right: 10px;
+  font-family: PingFangSC-Medium;
+  color: #87939f;
+  letter-spacing: 0;
+}
+.Todo-list-content span:nth-child(2) {
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  color: #87939f;
+  letter-spacing: 0;
+}
+.ysp-Detail {
+  background: #ededed;
+  font-size: 15px;
+}
+.ysp-Detail ul,
+.ysp-Detail li {
+  padding: 0;
+  margin: 0;
+}
+.ysp-Detail ul,
+.ysp-Detail .approvalTr,
+.ysp-Detail .file {
+  padding: 0 18px;
+}
+.ysp-Detail .icon-title {
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.ysp-Detail .ysp-Basic {
+  background: #fff;
+  padding-top: 10px;
+}
+.ysp-Detail .Basic,
+.ysp-Detail .loan,
+.ysp-Detail .cashier {
+  padding-bottom: 10px;
+  background: #fff;
+  margin-top: 5px;
+}
+.ysp-Detail .Basic li div .title,
+.ysp-Detail .loan li div .title,
+.ysp-Detail .cashier li div .title {
+  display: inline-block;
+  width: 30%;
+  overflow: hidden;
+  padding: 8px 0;
+}
+.ysp-Detail .Basic li div .content,
+.ysp-Detail .loan li div .content,
+.ysp-Detail .cashier li div .content {
+  overflow: hidden;
+  display: inline-block;
+  width: 70%;
+  padding: 8px 5px ;
+  border-bottom: 1px solid #eee;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ysp-cashier,
+.ysp-loan {
+  background: #fff;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.ysp-cashie {
+  padding-top: 10px;
+  background: #fff;
+}
+.ysp-loan {
+  margin-bottom: 20px;
+}
+.ysp-file {
+  padding-top: 10px;
+  background: #fff;
+  margin: 20px 0;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.ysp-file .file {
+  margin: 0 18px;
+  padding: 3px 10px;
+  background: #e5e5e5;
+  margin-top: 20px!important;
+  color: #acacac;
+}
+.ysp-file .file i {
+  display: inline-block;
+  width: 34px;
+  margin-right: 10px;
+  height: 34px;
+  background: url(../local/img/OA.png) no-repeat;
+  background-size: 100%;
+}
+.ysp-file .file .center {
+  padding-left: 10px;
+  display: inline-block;
+  width: 50%;
+}
+.ysp-file .file .center div:nth-child(1) {
+  color: #343434;
+  font-size: 15px;
+}
+.ysp-file .file .right {
+  display: inline-block;
+  width: 35%;
+  text-align: right;
+}
+.ysp-approvalTr {
+  padding-top: 10px;
+  background: #fff;
+  padding-bottom: 10px;
+}
+.ysp-approvalTr .approvalTr {
+  margin: 0 18px;
+  padding: 3px 10px;
+  background: #e5e5e5;
+  margin-top: 20px!important;
+  color: #aaa;
+}
+.ysp-approvalTr .approvalTr .left {
+  display: inline-block;
+  width: 70%;
+}
+.ysp-approvalTr .approvalTr .left div:nth-child(1) {
+  color: #343434;
+}
+.ysp-approvalTr .approvalTr .right {
+  padding-left: 25px;
+  display: inline-block;
+  width: 30%;
+  float: right;
+  height: 48px;
+  line-height: 48px;
+}
+.ysp-approvalTr .approvalTr .right span:nth-child(2) {
+  padding: 0 5px;
+}
+.ysp-approvalTr .approvalTr .right .clickIcon {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: url(../local/img/mingxi.png) no-repeat center center;
+  background-size: 55%;
+}
+.show-false ul li:nth-last-child(1),
+.show-false ul li:nth-last-child(2) {
+  display: none;
+}
+.show-btn-common {
+  text-align: center;
+  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.show-btn-common i.icon-false {
+  display: inline-block;
+  width: 15px ;
+  height: 15px;
+  background: url(../local/img/shouqi.png) no-repeat center center;
+  background-size: 100%;
+  margin-right: 15px;
+}
+.show-btn-common i.icon-true {
+  display: inline-block;
+  width: 20px ;
+  height: 15px;
+  background: url(../local/img/xianshi.png) no-repeat center center;
+  background-size: 100%;
+  margin-right: 15px;
+}
+.show-btn-common div {
+  display: inline-block;
+}
+[data-componentsid=uiControl5_Lt5dZk] {
+  background: #eee;
+}
+.fixed-btn {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: 1001;
+}
+.fixed-btn div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.fixed-btn div ul:nth-child(1) {
+  background: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #005aa0;
+}
+.fixed-btn div ul:nth-child(1) li {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.fixed-btn div ul:nth-child(1) li:nth-child(3) {
+  border: none;
+}
+.fixed-btn div ul:nth-child(2) {
+  color: #acacac;
+  margin: 10px;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.two-ul {
+  color: #acacac;
+  margin: 10px;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.commit {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  background: #fff;
+}
+.commit button {
+  padding: 8px 16%;
+  border: 1px solid #333;
+  margin-right: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.commit button:nth-child(1) {
+  border: 1px solid #3075f5;
+}
+.commit button:nth-child(2) {
+  border: 1px solid #3075f5;
+  background: #3075f5;
+  color: #fff;
+}
+.commit i {
+  width: 20px;
+  float: right;
+  margin-right: 10px;
+  height: 100%;
+}
+.fixed-segment {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+.fixed-segment > div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.fixed-segment > div ul:nth-child(1) {
+  background: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0;
+}
+.fixed-segment > div ul:nth-child(1) li {
+  padding-left: 20px;
+}
+.fixed-segment > div ul:nth-child(2) {
+  padding: 10px;
+  margin: 10px;
+}
+.yuecon {
+  margin-top: 100px;
+}
+.yuecon1 {
+  margin-top: 50px;
+}
+.Todo-list-content {
+  position: relative;
+  z-index: 10000;
+}
+.Todo-list-content .show-false li:nth-child(3),
+.Todo-list-content .show-false li:nth-child(4),
+.Todo-list-content .show-false li:nth-child(5),
+.Todo-list-content .show-false li:nth-child(6) {
+  display: none;
+}
+.Todo-list-content .show-false .show-true li:nth-child(3),
+.Todo-list-content .show-false .show-true li:nth-child(4),
+.Todo-list-content .show-false .show-true li:nth-child(5),
+.Todo-list-content .show-false .show-true li:nth-child(6) {
+  display: block;
+}
+.Todo-list-content .list-icon-up {
+  width: 20px;
+  height: 20px;
+  background: url(../local/img/up.png) no-repeat center center;
+  background-size: 79%;
+}
+.Todo-list-content .list-icon-done {
+  width: 20px;
+  height: 20px;
+  background: url(../local/img/done.png) no-repeat center center;
+  background-size: 79%;
+}
+.bg_none {
+  min-height: 70vh;
+  background: #FFF;
+}
+.fixed-btn-commit ul:nth-child(1) li:nth-child(3) {
+  border-bottom: 1px solid #eee!important;
+}
+.fixed-btn-commit .commit {
+  margin-top: 0;
+}
+.fixed-btn-select ul:nth-child(1) li:nth-child(3) {
+  border-bottom: 1px solid #eee!important;
+}
+.weng_none {
+  display: none !important;
+}
+.weng_divs {
+  border-top: 1px solid #ddd;
+  margin-top: 14px;
+}
+.weng_divs ul li {
+  width: 50%;
+  display: inline-block;
+}
+.weng_divs ul li .backss {
+  width: 20px;
+  height: 20px;
+  background: url(../local/img/backs.png) no-repeat center center;
+  background-size: 72%;
+  position: absolute;
+  left: 32px;
+  top: 2px;
+}
+.weng_divs ul li .agree {
+  width: 20px;
+  height: 20px;
+  background: url(../local/img/agrees.png) no-repeat center center;
+  background-size: 72%;
+  position: absolute;
+  left: 32px;
+  top: 2px;
+}
+.weng_divs ul li div {
+  text-align: center;
+  color: #08c;
+}
+.weng_sucessMesbx {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+}
+.weng_sucessMesbx div {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.weng_sucessMesbx div h5 {
+  padding: 5px;
+  background-color: #105cc1;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+}
+.weng_sucessMesbx div p {
+  text-align: center;
+}
+.weng_sucessMesbx div p:nth-child(1) {
+  margin: 30px 0;
+}
+.weng_sucessMesbx div p:last-child button {
+  padding: 6px 20px;
+  background-color: transparent;
+  border: 1px solid #105cc1;
+  border-radius: 4px;
+  color: #105cc1;
+}
+.weng_sucessMesbx div p:last-child button:first-child {
+  background-color: #105cc1;
+  color: #fff;
+}
+.selecs {
+  display: -webkit-inline-box;
+  width: 33%;
+  /* margin: 0px; */
+  margin-top: 10px;
+  height: 45px;
+}
+.btn {
+  width: 24%;
+  height: 36px;
+  font-size: 16px;
+}
+.sucessMesbx {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+}
+.sucessMesbx div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 150px;
+  margin-left: -100px;
+  margin-top: -75px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.sucessMesbx div h5 {
+  padding-left: 15px;
+  background-color: #00a0e9;
+  line-height: 35px;
+  color: #fff;
+}
+.sucessMesbx div p {
+  text-align: center;
+}
+.sucessMesbx div p:nth-child(1) {
+  margin: 30px 0;
+}
+.sucessMesbx div p:last-child button {
+  padding: 6px 20px;
+  background-color: #00a0e9;
+  border: 1px solid #00a0e9;
+  border-radius: 4px;
+  color: #fff;
+}
+div[data-componentsid="uiControl2_Qo50KS"] {
+  line-height: 41px;
+}
+.faqiBox_lfj input {
+  font-size: 16px;
+}
+.faqiBox_lfj .icon-title {
+  display: block;
+  margin: 10px 0;
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
+}
+.faqiBox_lfj .Basic,
+.faqiBox_lfj .loan,
+.faqiBox_lfj .cashier {
+  padding-bottom: 10px;
+  background: #fff;
+  margin-top: 5px;
+  margin: 10px 0 ;
+}
+.faqiBox_lfj .Basic li,
+.faqiBox_lfj .loan li,
+.faqiBox_lfj .cashier li {
+  margin: 0 10px;
+}
+.faqiBox_lfj .Basic li div,
+.faqiBox_lfj .loan li div,
+.faqiBox_lfj .cashier li div {
+  overflow: hidden;
+}
+.faqiBox_lfj .Basic li div .title,
+.faqiBox_lfj .loan li div .title,
+.faqiBox_lfj .cashier li div .title {
+  float: left;
+  display: block;
+  width: 30%;
+  overflow: hidden;
+  padding: 8px 0;
+}
+.faqiBox_lfj .Basic li div .content,
+.faqiBox_lfj .loan li div .content,
+.faqiBox_lfj .cashier li div .content {
+  overflow: hidden;
+  display: block;
+  float: right;
+  width: 70%;
+  padding: 8px 5px ;
+  border-bottom: 1px solid #eee;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 40px;
+}
+.faqiBox_lfj .Basic li div .content select,
+.faqiBox_lfj .loan li div .content select,
+.faqiBox_lfj .cashier li div .content select {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  padding-right: 30px;
+}
+.faqiBox_lfj .Basic li div .content input,
+.faqiBox_lfj .loan li div .content input,
+.faqiBox_lfj .cashier li div .content input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: none;
+}
+.faqiBox_lfj .Basic li div .content textarea,
+.faqiBox_lfj .loan li div .content textarea,
+.faqiBox_lfj .cashier li div .content textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  padding: 10px;
+}
+.bar2_lfj {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.bar2_lfj div:nth-child(1) {
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+}
+.bar2_lfj div:nth-child(1) span {
+  background: #3075f5;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.bar2_lfj div:nth-child(2) {
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+}
+.bar2_lfj div:nth-child(2) span {
+  border: 1px solid #3075f5;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  color: #3075f5;
+}
+button[data-type='fileUpload'] {
+  background: url(../local/img/upload.png) no-repeat 90%;
+  background-size: 20px;
+  width: 100%;
+  border: 0;
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
+  text-align: left;
+}
+.bcfj_lfj {
+  width: 100%;
+  border: 0;
+  background: #105cc1;
+  color: #fff;
+  border-radius: 5px;
+}
+#uiControl24_CvwqF0body {
+  padding: 0 0 10px 0;
+}
+.weng_sucessMesbx2 h5 {
+  padding-left: 15px;
+  background-color: #00a0e9;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+}
+.weng_sucessMesbx2 p {
+  text-align: center;
+  margin: 30px 0;
+}
+.weng_sucessMesbx2 p:last-child button {
+  padding: 6px 20px;
+  background-color: #00a0e9;
+  border: 1px solid #00a0e9;
+  border-radius: 4px;
+  color: #fff;
+}
+.fjsc_lfj {
+  background: url(../local/img/upload.png) no-repeat 90%;
+  background-size: 20px;
+  width: 100%;
+  border: 0;
+  border-left: 5px solid #105cc1;
+  padding-left: 15px;
+  text-align: left;
+}
+.fjscwj_lfj {
+  margin: 20px ;
+}
+.ysp-file2 {
+  background: #fff;
+  margin: 20px 0;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.ysp-file2 .file {
+  margin: 0 18px;
+  padding: 3px 10px;
+  background: #e5e5e5;
+  margin-top: 20px!important;
+  color: #acacac;
+  position: relative;
+}
+.ysp-file2 .file i {
+  display: inline-block;
+  width: 34px;
+  margin-right: 10px;
+  height: 34px;
+  background: url(../local/img/OA.png) no-repeat;
+  background-size: 100%;
+}
+.ysp-file2 .file .center {
+  padding-left: 10px;
+  display: inline-block;
+  width: 50%;
+}
+.ysp-file2 .file .center div:nth-child(1) {
+  color: #343434;
+  font-size: 15px;
+}
+.ysp-file2 .file .right {
+  display: inline-block;
+  width: 35%;
+  text-align: right;
+  position: absolute;
+  rigth: 10px;
+}
+.ysp-file2 .file .right span {
+  font-size: 18px;
+  color: #69a3d1;
+}
+.yijian .icon-title {
+  border-left: 5px solid #0a73cc;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #0a73cc;
+}
+#uiControl21_U2qVCEbody {
+  padding: 0;
+}
+#uiControl21_U2qVCE {
+  box-shadow: none;
+  margin: 10px;
+}
+/****addd********/
+.detailTitle {
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d86be;
+}
+#expenseDetail {
+  padding: 10px;
+}
+#expenseDetail ul {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#expenseDetail ul:last-child {
+  border-bottom: 0;
+}
+#expenseDetail ul .td {
+  display: flex;
+}
+#expenseDetail ul .td div {
+  padding: 8px 0;
+}
+#expenseDetail ul .td div:first-child {
+  width: 40%;
+}
+#expenseDetail .extraInfo .td {
+  display: block;
+}
+#expenseDetail .extraInfo .td div:first-child {
+  width: 100%;
+}
+.head-yue {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000001;
+  background-color: #eee;
+}
+#uiControl53_16gOKm,
+#uiControl56_mMhBFs,
+#uiControl60_Om54N7,
+#uiControl63_5mdvNx,
+#uiControl46_BCdrhQ {
+  background: #FFFFFF;
+}
+div[data-ysp-modelid="travelClaim"],
+div[data-ysp-modelid="reimbursement"],
+div[data-ysp-modelid="dailyReimbursementForm"],
+div[data-ysp-modelid="EmployeeLoanSheet"],
+div[data-ysp-modelid="staffLoan"] {
+  background: #FFFFFF;
+}
+div[data-ysp-modelid="travelClaim"] .details,
+div[data-ysp-modelid="reimbursement"] .details,
+div[data-ysp-modelid="dailyReimbursementForm"] .details,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details,
+div[data-ysp-modelid="staffLoan"] .details {
+  margin-top: 50px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsHead,
+div[data-ysp-modelid="reimbursement"] .details .detailsHead,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead,
+div[data-ysp-modelid="staffLoan"] .details .detailsHead {
+  font-size: 18px;
+  color: #0E75CD;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 15px;
+  position: relative;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsHead:before,
+div[data-ysp-modelid="reimbursement"] .details .detailsHead:before,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead:before,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead:before,
+div[data-ysp-modelid="staffLoan"] .details .detailsHead:before {
+  content: "";
+  background: #0A73CC;
+  width: 5px;
+  height: 20px;
+  position: absolute;
+  left: -15px;
+  top: 3px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent {
+  margin-top: 15px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable {
+  width: calc(90%);
+  margin-left: 15px;
+  margin-right: 15px;
+  height: auto;
+  border: 1px solid #d5ebfc;
+  overflow: scroll;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable {
+  width: auto;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr {
+  background: #EAF3FA;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr td {
+  white-space: nowrap;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #CCE2F2;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr:first-child {
+  background: #D5EBFC;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li {
+  position: relative;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li span,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li span,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li span,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li span,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li span {
+  vertical-align: bottom;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  overflow: hidden;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanTitle {
+  width: 30%;
+  margin-left: 15px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent {
+  width: 65%;
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.1);
+  overflow-x: scroll;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent::-webkit-scrollbar {
+  display: none;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanArrow {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(../local/img/arrow.png) no-repeat center center;
+  background-size: 8px 13px;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .arr,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .arr,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .arr,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .arr,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .arr {
+  transform: rotate(-90deg);
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent li .nor,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent li .nor,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .nor,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .nor,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .nor {
+  transform: rotate(0deg);
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox {
+  padding: 10px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d5ebfc;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 {
+  width: 100%;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr {
+  background: #EAF3FA;
+  font-size: 14px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td {
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #CCE2F2;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 5px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2) {
+  width: 50%;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child {
+  width: 25%;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child {
+  width: 25%;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child {
+  background: #D5EBFC;
+  font-size: 16px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .uploadButton {
+  width: 100%;
+  height: 40px;
+  background: #0a73cc;
+  border-radius: 4px;
+  color: #FFFFFF;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #f1f1f1;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  position: relative;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li span {
+  overflow: hidden;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanBg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .jpg {
+  background: url(../local/img/png.png) no-repeat;
+  background-size: 25px 25px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .word {
+  background: url(../local/img/word.png) no-repeat;
+  background-size: 25px 25px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .pdf {
+  background: url(../local/img/pdf.png) no-repeat;
+  background-size: 25px 25px;
+}
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanName {
+  display: inline-block;
+  width: 65%;
+  margin-left: 20%;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .shadow,
+div[data-ysp-modelid="reimbursement"] .alertWindow .shadow,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .shadow,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .shadow,
+div[data-ysp-modelid="staffLoan"] .alertWindow .shadow {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99991;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent {
+  z-index: 99999;
+  position: absolute;
+  top: 250px;
+  left: 10%;
+  width: 80%;
+  height: 250px;
+  background: #FFFFFF;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertHead {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: #0a73cc;
+  color: #ffffff;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton {
+  overflow: hidden;
+  margin: 5px 8px;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li {
+  float: left;
+  width: 48%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular;
+  font-weight: bolder;
+  border: 1px solid #0a73cc;
+  text-align: center;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:first-child {
+  background: #FFFFFF;
+  color: #0a73cc;
+}
+div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:last-child {
+  background: #0a73cc;
+  margin-left: 3%;
+  color: #FFFFFF;
+}
+div[data-ysp-modelid="travelClaim"] .bottomButton,
+div[data-ysp-modelid="reimbursement"] .bottomButton,
+div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton,
+div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton,
+div[data-ysp-modelid="staffLoan"] .bottomButton {
+  overflow: hidden;
+  margin: 5px 8px;
+}
+div[data-ysp-modelid="travelClaim"] .bottomButton li,
+div[data-ysp-modelid="reimbursement"] .bottomButton li,
+div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li,
+div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li,
+div[data-ysp-modelid="staffLoan"] .bottomButton li {
+  float: left;
+  width: 48%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular;
+  font-weight: bolder;
+  border: 1px solid #0a73cc;
+  text-align: center;
+}
+div[data-ysp-modelid="travelClaim"] .bottomButton li:first-child,
+div[data-ysp-modelid="reimbursement"] .bottomButton li:first-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li:first-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li:first-child,
+div[data-ysp-modelid="staffLoan"] .bottomButton li:first-child {
+  background: #FFFFFF;
+  color: #0a73cc;
+}
+div[data-ysp-modelid="travelClaim"] .bottomButton li:last-child,
+div[data-ysp-modelid="reimbursement"] .bottomButton li:last-child,
+div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li:last-child,
+div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li:last-child,
+div[data-ysp-modelid="staffLoan"] .bottomButton li:last-child {
+  background: #0a73cc;
+  margin-left: 3%;
+  color: #FFFFFF;
+}
+div[data-ysp-modelid="travelClaim"] .bottomButton .alone,
+div[data-ysp-modelid="reimbursement"] .bottomButton .alone,
+div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton .alone,
+div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton .alone,
+div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
+  width: 94%;
+}

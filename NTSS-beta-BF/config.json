@@ -1,0 +1,16 @@
+{
+  "companyName": "外包人员专用",
+  "projectName": "华能集团",
+  "rtVersion": "2.7.1",
+  "studioVersion": "2.2.1-beta.3",
+  "macAddress": "10:f0:05:30:78:5c",
+  "isUploaded": false,
+  "menu": [
+    {
+      "name": "index",
+      "app_id": "index",
+      "icon": "img/OA.png",
+      "url": "http://59.110.171.69:31039/ReimbursePlatform/"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "special_models": [
+    {
+      "path": "plan/Login/index.json"
+    }
+  ],
+  "common_js": [
+    {
+      "path": "lib/base.js"
+    },
+    {
+      "path": "lib/customTemplate.js"
+    }
+  ],
+  "common_css": [
+    {
+      "path": "lib/base.css"
+    }
+  ],
+  "path": "file:///Users/yuhao/Documents/enterplorer/enterprises/577dea5f65cde032c3cb2145/apps/HNJT/common.json"
+}

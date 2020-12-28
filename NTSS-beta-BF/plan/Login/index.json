@@ -1,0 +1,185 @@
+{
+  "version": "0.1",
+  "id": "Login",
+  "targetURL": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp",
+  "jsFile": "index.js",
+  "requires": {
+    "TodoList": "../TodoList/index.json",
+    "error": "../error/index.json"
+  },
+  "chineseName": "登陆页面",
+  "description": "",
+  "controls": {
+    "control0_sowRTW": {
+      "location": {
+        "data": {
+          "tagName": "FORM"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"loginbox\"]//FORM[@id=\"loginform\"]",
+              "descendant::FORM[@id=\"loginform\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.bg FORM.form-vertical"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/FORM[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_sowRTW"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context0_FoGTAd": {
+      "controls": [
+        "control0_sowRTW"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/index.jsp"
+      ]
+    }
+  },
+  "flows": {
+    "flow0_Nt1xxb": {
+      "toContexts": [
+        {
+          "toContextId": "context0_FoGTAd"
+        }
+      ]
+    },
+    "flow1_gbIUZu": {
+      "fromContextId": "context0_FoGTAd",
+      "fromAction": "doAction",
+      "fromControlId": "control0_sowRTW",
+      "toContexts": [
+        {
+          "toContextId": "context0_FoGTAd"
+        },
+        {
+          "toContextId": "context1_RXxJco",
+          "toModelId": "TodoList"
+        },
+        {
+          "toContextId": "context3_J8pGA4",
+          "toModelId": "error"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_QwsFhp": {
+      "contextId": "context0_FoGTAd",
+      "layout": [
+        {
+          "id": "uiControl0_qquLh1",
+          "controlId": "control0_sowRTW",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_qquLh1",
+                "onGetTemplate": "getTemplate_uiControl0_qquLh1"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_FoGTAd": [
+          "报销业务管理系统--登录"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_FoGTAd": [
+          "59.110.171.69:31039/ReimbursePlatform/index.jsp"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_FoGTAd": [
+          [
+            "loginbox",
+            "loginform",
+            "psw",
+            "tiJiaoForDengLu",
+            "userName"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_FoGTAd": [
+          [
+            "bg",
+            "btn",
+            "btn-info",
+            "control-group",
+            "controls",
+            "errorInfo",
+            "flip-link",
+            "form-actions",
+            "form-vertical",
+            "main_input_box",
+            "normal_text",
+            "psw",
+            "pull-left",
+            "userName"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_FoGTAd": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/FORM/DIV",
+            "DIV/SPAN/INPUT-submit",
+            "FORM/DIV/DIV",
+            "FORM/DIV/H3",
+            "FORM/DIV/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}
