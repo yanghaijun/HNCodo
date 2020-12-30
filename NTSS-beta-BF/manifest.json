@@ -188,28 +188,40 @@
   ],
   "adapter_urls": [
     {
-      "title": "TodoList",
-      "url": "adapter://NTSS-beta/plan/TodoList/index.json",
-      "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/reimburse\\/singleLoginForSDAction\\.action.*"
-      ],
-      "demo": []
-    },
-    {
       "title": "Login",
-      "url": "adapter://NTSS-beta/plan/Login/index.json",
+      "url": "adapter://NTSS-beta-BF/plan/Login/index.json",
       "matcher": [
         "^http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/index\\.jsp"
       ],
       "demo": [
-        "http://59.110.171.69:31039/ReimbursePlatform/index.jsp"
+        "http://59.1100.171.69:31039/ReimbursePlatform/index.jsp"
+      ]
+    },
+    {
+      "title": "TodoList",
+      "url": "adapter://NTSS-beta-BF/plan/TodoList/index.json",
+      "matcher": [
+        "^http:\\/\\/223\\.71\\.99\\.53:85\\/ReimbursePlatform\\/myReimburse\\/index\\.action"
+      ],
+      "demo": [
+        "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action"
+      ]
+    },
+    {
+      "title": "checkList",
+      "url": "adapter://NTSS-beta-BF/plan/checkList/index.json",
+      "matcher": [
+        "^http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/reimburse\\/loginAction\\.action"
+      ],
+      "demo": [
+        "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
       ]
     }
   ],
-  "name": "华能集团北方公司",
+  "name": "北方公司报销",
   "default_url": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp",
   "scope": "NTSS-beta-BF",
   "start_url": "enterplorer://NTSS-beta-BF/local/index.html",
-  "update_time": 1579062125826,
+  "update_time": 1609143546369,
   "runtime_env": "1webview"
 }

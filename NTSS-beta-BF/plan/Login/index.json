@@ -5,10 +5,12 @@
   "jsFile": "index.js",
   "requires": {
     "TodoList": "../TodoList/index.json",
-    "error": "../error/index.json"
+    "error": "../error/index.json",
+    "checkList": "../checkList/index.json"
   },
   "chineseName": "登陆页面",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control0_sowRTW": {
       "location": {
@@ -83,6 +85,10 @@
         {
           "toContextId": "context3_J8pGA4",
           "toModelId": "error"
+        },
+        {
+          "toContextId": "context13_xMCZhe",
+          "toModelId": "checkList"
         }
       ]
     }

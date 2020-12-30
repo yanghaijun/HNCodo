@@ -7,10 +7,16 @@
   "isUploaded": false,
   "menu": [
     {
-      "name": "index",
-      "app_id": "index",
-      "icon": "img/OA.png",
-      "url": "http://59.110.171.69:31039/ReimbursePlatform/"
+      "name": "login",
+      "app_id": "login",
+      "icon": "local/img/OA.png",
+      "url": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp"
+    },
+    {
+      "name": "checkList",
+      "app_id": "checkList",
+      "icon": "local/img/OA.png",
+      "url": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
     }
   ]
 }

@@ -698,7 +698,9 @@
           "10.1.128.155:85/ReimbursePlatform/myReimburse/index.action",
           "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
           "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
-          ""
+          "",
+          "127.0.0.1:31039/ReimbursePlatform/index.jsp",
+          "text/html,chromewebdata"
         ]
       }
     },
@@ -1221,7 +1223,8 @@
             "icon-edit",
             "icon-home",
             "path"
-          ]
+          ],
+          []
         ]
       }
     },
@@ -1457,7 +1460,12 @@
             "-/-/A",
             "-/-/SPAN",
             "-/A/I"
-          ]
+          ],
+          [
+            "-/-/PRE",
+            "-/PRE/SCRIPT"
+          ],
+          []
         ]
       }
     }

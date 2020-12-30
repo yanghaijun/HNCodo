@@ -12,6 +12,7 @@
   },
   "chineseName": "我要查单",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control46_ztTQCM": {
       "location": {
@@ -207,6 +208,50 @@
       "monitored": false,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control80_ty3E37": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "报账单综合查询"
+              ],
+              "visText": [
+                "报账单综合查询"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m_content DIV.breadcrumb SPAN.path"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": " 报账单综合查询 ",
+      "frameXPath": ""
     }
   },
   "contexts": {
@@ -218,7 +263,7 @@
         "control61_BTKyg4"
       ],
       "anchors": [
-        "control46_ztTQCM"
+        "control80_ty3E37"
       ],
       "urlAnchor": []
     }
@@ -353,14 +398,16 @@
     "page/title": {
       "contexts": {
         "context13_xMCZhe": [
-          "首页"
+          "首页",
+          ""
         ]
       }
     },
     "page/urls": {
       "contexts": {
         "context13_xMCZhe": [
-          "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+          "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+          "59.110.171.69:31039/ReimbursePlatform/index.jsp"
         ]
       }
     },
@@ -401,7 +448,8 @@
             "tableList",
             "tempCode",
             "totalPage"
-          ]
+          ],
+          []
         ]
       }
     },
@@ -633,7 +681,8 @@
             "user_off",
             "validatebox-text",
             "wbg"
-          ]
+          ],
+          []
         ]
       }
     },
@@ -696,6 +745,10 @@
             "TR/TD/SPAN",
             "UL/LI/DIV",
             "UL/LI/UL"
+          ],
+          [
+            "-/-/PRE",
+            "-/PRE/SCRIPT"
           ]
         ]
       }

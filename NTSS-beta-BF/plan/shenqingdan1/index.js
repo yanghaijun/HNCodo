@@ -13,7 +13,7 @@
       }return data;
     },
     doAction_uiControl14_1t6QxA: function (data, elem) {
-      var event = data.eventType;var href = elem.ownerDocument.location.href;if (event == 'jk') {
+      var event = data.eventType;var href = elem.ownerDocument.location.href;debugger;if (event == 'jk') {
         $(elem).children('li').eq(0).find("ul").eq(0).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 2000);
@@ -22,13 +22,13 @@
           ysp.appMain.hideLoading();
         }, 2000);
       } else if (event == 'cd') {
-        $(elem).children('li').eq(2).find('div').eq(0).click();if (href.indexOf('#bx') > -1 || href.indexOf('#cx') > -1) {
+        $(elem).children('li').eq(3).find('div').eq(0).click();if (href.indexOf('#bx') > -1 || href.indexOf('#cx') > -1) {
           elem.ownerDocument.location.href = href.substr(0, href.length - 3) + '#cx';
         } else {
           elem.ownerDocument.location.href = href + '#cx';
         }
       } else if (event == 'bx') {
-        $(elem).children('li').eq(2).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
+        $(elem).children('li').eq(3).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 4000);if (href.indexOf('#bx') > -1 || href.indexOf('#cx') > -1) {
           elem.ownerDocument.location.href = href.substr(0, href.length - 3) + '#bx';
