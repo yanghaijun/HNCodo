@@ -8,7 +8,8 @@
     "TodoList": "../TodoList/index.json",
     "backs": "../backs/index.json",
     "shenqingdan1": "../shenqingdan1/index.json",
-    "checkList": "../checkList/index.json"
+    "checkList": "../checkList/index.json",
+    "businessChar": "../businessChar/index.json"
   },
   "chineseName": "待办列表",
   "description": "",
@@ -520,6 +521,10 @@
         {
           "toContextId": "context13_xMCZhe",
           "toModelId": "checkList"
+        },
+        {
+          "toContextId": "context18_xRs3dI",
+          "toModelId": "businessChar"
         }
       ]
     },
@@ -700,7 +705,8 @@
           "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
           "",
           "127.0.0.1:31039/ReimbursePlatform/index.jsp",
-          "text/html,chromewebdata"
+          "text/html,chromewebdata",
+          "127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },

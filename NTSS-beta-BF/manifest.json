@@ -25,7 +25,7 @@
     "resource_filter": [
       {
         "url_match": [
-          "^http:\\/\\/59\\.110\\.171\\.69:31039.*"
+          "^http:\\/\\/127\\.0\\.0\\.1:31039.*"
         ],
         "charset": "utf-8",
         "Accept-Language": "zh-Hans-CN",
@@ -43,145 +43,145 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/attachment\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/attachment\\.js.*"
       ],
       "target_url": "override/attachment.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/bill\\/alertBox\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/bill\\/alertBox\\.js.*"
       ],
       "target_url": "override/alertBox.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/js\\/jquery\\.firstebox\\.modified\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/js\\/jquery\\.firstebox\\.modified\\.js.*"
       ],
       "target_url": "override/firsteboxModified.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\/jquery\\.easyui\\.min\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\/jquery\\.easyui\\.min\\.js.*"
       ],
       "target_url": "override/easyui.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/js\\/global\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/js\\/global\\.js.*"
       ],
       "target_url": "override/global.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\/jquery-1\\.7\\.2\\.min\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\/jquery-1\\.7\\.2\\.min\\.js.*"
       ],
       "target_url": "override/jquery-172.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/My97DatePicker\\/WdatePicker\\.js"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/My97DatePicker\\/WdatePicker\\.js"
       ],
       "target_url": "override/WdatePicker.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/My97DatePicker\\/skin\\/WdatePicker\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/My97DatePicker\\/skin\\/WdatePicker\\.css.*"
       ],
       "target_url": "override/WdatePicker.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/css\\/firstebox\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/jquery\\.firstebox\\/css\\/firstebox\\.css.*"
       ],
       "target_url": "override/firstebox.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/select2\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/select2\\.css.*"
       ],
       "target_url": "override/select2.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/font-awesome\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/font-awesome\\.css.*"
       ],
       "target_url": "override/font-awesome.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/icons\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/icons\\.css.*"
       ],
       "target_url": "override/icons.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/main\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/main\\.css.*"
       ],
       "target_url": "override/main.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/bootstrap\\.min\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/bootstrap\\.min\\.css.*"
       ],
       "target_url": "override/bootstrap.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/uniform\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/reimburse\\/uniform\\.css.*"
       ],
       "target_url": "override/uniform.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/select2\\.min\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/select2\\.min\\.js.*"
       ],
       "target_url": "override/select2.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/matrix\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/matrix\\.js.*"
       ],
       "target_url": "override/matrix.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/jquery-barcode\\.min\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/jquery-barcode\\.min\\.js.*"
       ],
       "target_url": "override/jquery-barcode.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/demo\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/demo\\.css.*"
       ],
       "target_url": "override/demo.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/icon\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/icon\\.css.*"
       ],
       "target_url": "override/easyUI_icon.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/display\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/display\\.js.*"
       ],
       "target_url": "override/display.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/easyui\\.css.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/styles\\/easyUI\\/easyui\\.css.*"
       ],
       "target_url": "override/easyui.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/common\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/common\\.js.*"
       ],
       "target_url": "override/common.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/validation\\.js.*"
+        "http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/resources\\/scripts\\/reimburse\\/validation\\.js.*"
       ],
       "target_url": "override/validation.js"
     }
@@ -191,7 +191,7 @@
       "title": "Login",
       "url": "adapter://NTSS-beta-BF/plan/Login/index.json",
       "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/index\\.jsp"
+        "^http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/index\\.jsp"
       ],
       "demo": [
         "http://59.1100.171.69:31039/ReimbursePlatform/index.jsp"
@@ -211,17 +211,17 @@
       "title": "checkList",
       "url": "adapter://NTSS-beta-BF/plan/checkList/index.json",
       "matcher": [
-        "^http:\\/\\/59\\.110\\.171\\.69:31039\\/ReimbursePlatform\\/reimburse\\/loginAction\\.action"
+        "^http:\\/\\/127\\.0\\.0\\.1:31039\\/ReimbursePlatform\\/reimburse\\/loginAction\\.action"
       ],
       "demo": [
-        "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+        "http://127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
       ]
     }
   ],
   "name": "北方公司报销",
-  "default_url": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp",
+  "default_url": "http://127.0.0.1:31039/ReimbursePlatform/index.jsp",
   "scope": "NTSS-beta-BF",
   "start_url": "enterplorer://NTSS-beta-BF/local/index.html",
-  "update_time": 1609143546369,
+  "update_time": 1610525668374,
   "runtime_env": "1webview"
 }

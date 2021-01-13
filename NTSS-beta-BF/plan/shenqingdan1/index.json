@@ -6,7 +6,8 @@
   "requires": {
     "detail_jkd": "../detail_jkd/index.json",
     "checkList": "../checkList/index.json",
-    "TodoList": "../TodoList/index.json"
+    "TodoList": "../TodoList/index.json",
+    "businessChar": "../businessChar/index.json"
   },
   "chineseName": "申请单1",
   "description": "",
@@ -472,6 +473,10 @@
         {
           "toContextId": "context1_RXxJco",
           "toModelId": "TodoList"
+        },
+        {
+          "toContextId": "context18_xRs3dI",
+          "toModelId": "businessChar"
         }
       ]
     },
@@ -624,7 +629,8 @@
     "page/urls": {
       "contexts": {
         "context8_GgSlXb": [
-          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action"
+          "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
+          "127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },

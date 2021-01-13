@@ -129,7 +129,8 @@ li{
   background: #fff;
   overflow: hidden;
   height: 35px;
-  position: relative;
+  //position: relative;
+  width:100%;
   // div{
   //   height: 35px;
   //   span{
@@ -137,8 +138,10 @@ li{
   //   }
   // }
   >div:nth-child(1){
-    width:100%;
-    float: left;
+    //float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     span{
       color:#9A9A9A;
     }
@@ -147,8 +150,8 @@ li{
       color:#1E7FD0;
     }
     span{
-      width: 25%;
-      display: inline-block;
+      //width: 30%;
+      //display: inline-block;
       text-align: center;
       height: 35px;
       line-height: 35px;

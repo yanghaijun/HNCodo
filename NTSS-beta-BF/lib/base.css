@@ -132,11 +132,12 @@ li {
   background: #fff;
   overflow: hidden;
   height: 35px;
-  position: relative;
+  width: 100%;
 }
 .TodoList-head2 > div:nth-child(1) {
-  width: 100%;
-  float: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .TodoList-head2 > div:nth-child(1) span {
   color: #9A9A9A;
@@ -146,8 +147,6 @@ li {
   color: #1E7FD0;
 }
 .TodoList-head2 > div:nth-child(1) span {
-  width: 25%;
-  display: inline-block;
   text-align: center;
   height: 35px;
   line-height: 35px;

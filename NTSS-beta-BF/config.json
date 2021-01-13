@@ -10,13 +10,13 @@
       "name": "login",
       "app_id": "login",
       "icon": "local/img/OA.png",
-      "url": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp"
+      "url": "http://127.0.0.1:31039/ReimbursePlatform/index.jsp"
     },
     {
       "name": "checkList",
       "app_id": "checkList",
       "icon": "local/img/OA.png",
-      "url": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+      "url": "http://127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
     }
   ]
 }
