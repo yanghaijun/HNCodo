@@ -1148,21 +1148,27 @@ div[data-ysp-modelid="travelClaim"],
 div[data-ysp-modelid="reimbursement"],
 div[data-ysp-modelid="dailyReimbursementForm"],
 div[data-ysp-modelid="EmployeeLoanSheet"],
-div[data-ysp-modelid="staffLoan"] {
+div[data-ysp-modelid="staffLoan"],
+div[data-ysp-modelid="businessShenDetial"],
+div[data-ysp-modelid="businessCharDetail"] {
   background: #FFFFFF;
 }
 div[data-ysp-modelid="travelClaim"] .details,
 div[data-ysp-modelid="reimbursement"] .details,
 div[data-ysp-modelid="dailyReimbursementForm"] .details,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details,
-div[data-ysp-modelid="staffLoan"] .details {
+div[data-ysp-modelid="staffLoan"] .details,
+div[data-ysp-modelid="businessShenDetial"] .details,
+div[data-ysp-modelid="businessCharDetail"] .details {
   margin-top: 50px;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsHead,
 div[data-ysp-modelid="reimbursement"] .details .detailsHead,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead,
-div[data-ysp-modelid="staffLoan"] .details .detailsHead {
+div[data-ysp-modelid="staffLoan"] .details .detailsHead,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsHead,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsHead {
   font-size: 18px;
   color: #0E75CD;
   font-weight: bold;
@@ -1174,7 +1180,9 @@ div[data-ysp-modelid="travelClaim"] .details .detailsHead:before,
 div[data-ysp-modelid="reimbursement"] .details .detailsHead:before,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsHead:before,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsHead:before,
-div[data-ysp-modelid="staffLoan"] .details .detailsHead:before {
+div[data-ysp-modelid="staffLoan"] .details .detailsHead:before,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsHead:before,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsHead:before {
   content: "";
   background: #0A73CC;
   width: 5px;
@@ -1187,14 +1195,18 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent {
   margin-top: 15px;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .contentTable,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .contentTable {
   width: calc(90%);
   margin-left: 15px;
   margin-right: 15px;
@@ -1206,21 +1218,27 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .deta
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .contentTable .detailsTable,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .contentTable .detailsTable {
   width: auto;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable tr,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .contentTable .detailsTable tr,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .contentTable .detailsTable tr {
   background: #EAF3FA;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .detailsTable tr td,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr td,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr td,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr td,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr td {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .contentTable .detailsTable tr td,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .contentTable .detailsTable tr td {
   white-space: nowrap;
   padding: 14px;
   text-align: center;
@@ -1230,21 +1248,27 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent .contentTable .deta
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .contentTable .detailsTable tr:first-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .contentTable .detailsTable tr:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .contentTable .detailsTable tr:first-child,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr:first-child {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .contentTable .detailsTable tr:first-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .contentTable .detailsTable tr:first-child {
   background: #D5EBFC;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent li,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li {
   position: relative;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent li span,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li span,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li span,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li span,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li span {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li span,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li span,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li span {
   vertical-align: bottom;
   display: inline-block;
   height: 50px;
@@ -1256,7 +1280,9 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanTitle,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanTitle,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanTitle,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanTitle,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanTitle {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .spanTitle,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .spanTitle {
   width: 30%;
   margin-left: 15px;
 }
@@ -1264,7 +1290,9 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanContent,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanContent,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanContent,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanContent,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .spanContent,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .spanContent {
   width: 65%;
   border-bottom: 0.2px solid rgba(0, 0, 0, 0.1);
   overflow-x: scroll;
@@ -1273,14 +1301,18 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanContent::-w
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanContent::-webkit-scrollbar,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanContent::-webkit-scrollbar,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanContent::-webkit-scrollbar,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent::-webkit-scrollbar {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .spanContent::-webkit-scrollbar,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .spanContent::-webkit-scrollbar {
   display: none;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent li .spanArrow,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .spanArrow,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .spanArrow,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .spanArrow,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanArrow {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .spanArrow,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .spanArrow {
   display: block;
   width: 50px;
   height: 50px;
@@ -1295,14 +1327,18 @@ div[data-ysp-modelid="travelClaim"] .details .detailsContent li .arr,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .arr,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .arr,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .arr,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .arr {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .arr,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .arr,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .arr {
   transform: rotate(-90deg);
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent li .nor,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent li .nor,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent li .nor,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent li .nor,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent li .nor {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent li .nor,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent li .nor,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent li .nor {
   transform: rotate(0deg);
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox,
@@ -1310,11 +1346,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox {
   padding: 10px;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1,
@@ -1322,11 +1362,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 {
   width: 100%;
   height: auto;
   border: 1px solid #d5ebfc;
@@ -1336,11 +1380,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 {
   width: 100%;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
@@ -1348,11 +1396,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr {
   background: #EAF3FA;
   font-size: 14px;
 }
@@ -1361,11 +1413,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td {
   vertical-align: middle;
   text-align: center;
   border: 1px solid #CCE2F2;
@@ -1378,11 +1434,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2) {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2),
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:nth-child(2) {
   width: 50%;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
@@ -1390,11 +1450,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:last-child {
   width: 25%;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
@@ -1402,11 +1466,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr td:first-child {
   width: 25%;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
@@ -1414,11 +1482,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .content
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .contentTable1 .detailsTable1 tr:first-child {
   background: #D5EBFC;
   font-size: 16px;
 }
@@ -1427,11 +1499,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox .uploadB
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox .uploadButton,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox .uploadButton,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox .uploadButton,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox .uploadButton,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox .uploadButton,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox .uploadButton,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox .uploadButton,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox .uploadButton,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .uploadButton {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox .uploadButton,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox .uploadButton {
   width: 100%;
   height: 40px;
   background: #0a73cc;
@@ -1446,11 +1522,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li {
   width: 100%;
   height: 45px;
   line-height: 45px;
@@ -1466,11 +1546,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li span,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li span,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li span,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li span,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li span,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li span,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li span,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li span,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li span,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li span {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li span,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li span {
   overflow: hidden;
 }
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .dropBox li .spanBg,
@@ -1478,11 +1562,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .span
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .spanBg,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .spanBg,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li .spanBg,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li .spanBg,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .spanBg,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .spanBg,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .spanBg,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .spanBg,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanBg {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li .spanBg,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li .spanBg {
   display: block;
   width: 25px;
   height: 25px;
@@ -1495,11 +1583,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .jpg,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .jpg,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .jpg,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li .jpg,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li .jpg,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .jpg,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .jpg,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .jpg,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .jpg,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .jpg {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li .jpg,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li .jpg {
   background: url(../local/img/png.png) no-repeat;
   background-size: 25px 25px;
 }
@@ -1508,11 +1600,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .word
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .word,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .word,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li .word,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li .word,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .word,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .word,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .word,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .word,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .word {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li .word,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li .word {
   background: url(../local/img/word.png) no-repeat;
   background-size: 25px 25px;
 }
@@ -1521,11 +1617,15 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .pdf,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .pdf,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .pdf,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li .pdf,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li .pdf,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .pdf,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .pdf,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .pdf,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .pdf,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .pdf {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li .pdf,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li .pdf {
   background: url(../local/img/pdf.png) no-repeat;
   background-size: 25px 25px;
 }
@@ -1534,20 +1634,26 @@ div[data-ysp-modelid="reimbursement"] .details .detailsContent .dropBox li .span
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .dropBox li .spanName,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .dropBox li .spanName,
 div[data-ysp-modelid="staffLoan"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .dropBox li .spanName,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .dropBox li .spanName,
 div[data-ysp-modelid="travelClaim"] .details .detailsContent .fileBox li .spanName,
 div[data-ysp-modelid="reimbursement"] .details .detailsContent .fileBox li .spanName,
 div[data-ysp-modelid="dailyReimbursementForm"] .details .detailsContent .fileBox li .spanName,
 div[data-ysp-modelid="EmployeeLoanSheet"] .details .detailsContent .fileBox li .spanName,
-div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanName {
+div[data-ysp-modelid="staffLoan"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="businessShenDetial"] .details .detailsContent .fileBox li .spanName,
+div[data-ysp-modelid="businessCharDetail"] .details .detailsContent .fileBox li .spanName {
   display: inline-block;
-  width: 65%;
+  width: 80%;
   margin-left: 20%;
 }
 div[data-ysp-modelid="travelClaim"] .alertWindow .shadow,
 div[data-ysp-modelid="reimbursement"] .alertWindow .shadow,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .shadow,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .shadow,
-div[data-ysp-modelid="staffLoan"] .alertWindow .shadow {
+div[data-ysp-modelid="staffLoan"] .alertWindow .shadow,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .shadow,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .shadow {
   width: 100%;
   height: 100%;
   background-color: #000;
@@ -1563,7 +1669,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent,
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent {
   z-index: 99999;
   position: absolute;
   top: 250px;
@@ -1576,7 +1684,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertHead,
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertHead,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertHead,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertHead,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertHead {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent .alertHead,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent .alertHead {
   width: 100%;
   height: 45px;
   line-height: 45px;
@@ -1588,7 +1698,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton,
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent .alertButton,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent .alertButton {
   overflow: hidden;
   margin: 5px 8px;
 }
@@ -1596,7 +1708,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li,
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent .alertButton li,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent .alertButton li {
   float: left;
   width: 48%;
   height: 40px;
@@ -1612,7 +1726,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li:f
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li:first-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li:first-child,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:first-child {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent .alertButton li:first-child,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent .alertButton li:first-child {
   background: #FFFFFF;
   color: #0a73cc;
 }
@@ -1620,7 +1736,9 @@ div[data-ysp-modelid="travelClaim"] .alertWindow .alertContent .alertButton li:l
 div[data-ysp-modelid="reimbursement"] .alertWindow .alertContent .alertButton li:last-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .alertWindow .alertContent .alertButton li:last-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .alertWindow .alertContent .alertButton li:last-child,
-div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:last-child {
+div[data-ysp-modelid="staffLoan"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="businessShenDetial"] .alertWindow .alertContent .alertButton li:last-child,
+div[data-ysp-modelid="businessCharDetail"] .alertWindow .alertContent .alertButton li:last-child {
   background: #0a73cc;
   margin-left: 3%;
   color: #FFFFFF;
@@ -1629,7 +1747,9 @@ div[data-ysp-modelid="travelClaim"] .bottomButton,
 div[data-ysp-modelid="reimbursement"] .bottomButton,
 div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton,
-div[data-ysp-modelid="staffLoan"] .bottomButton {
+div[data-ysp-modelid="staffLoan"] .bottomButton,
+div[data-ysp-modelid="businessShenDetial"] .bottomButton,
+div[data-ysp-modelid="businessCharDetail"] .bottomButton {
   overflow: hidden;
   margin: 5px 8px;
 }
@@ -1637,7 +1757,9 @@ div[data-ysp-modelid="travelClaim"] .bottomButton li,
 div[data-ysp-modelid="reimbursement"] .bottomButton li,
 div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li,
-div[data-ysp-modelid="staffLoan"] .bottomButton li {
+div[data-ysp-modelid="staffLoan"] .bottomButton li,
+div[data-ysp-modelid="businessShenDetial"] .bottomButton li,
+div[data-ysp-modelid="businessCharDetail"] .bottomButton li {
   float: left;
   width: 48%;
   height: 40px;
@@ -1653,7 +1775,9 @@ div[data-ysp-modelid="travelClaim"] .bottomButton li:first-child,
 div[data-ysp-modelid="reimbursement"] .bottomButton li:first-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li:first-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li:first-child,
-div[data-ysp-modelid="staffLoan"] .bottomButton li:first-child {
+div[data-ysp-modelid="staffLoan"] .bottomButton li:first-child,
+div[data-ysp-modelid="businessShenDetial"] .bottomButton li:first-child,
+div[data-ysp-modelid="businessCharDetail"] .bottomButton li:first-child {
   background: #FFFFFF;
   color: #0a73cc;
 }
@@ -1661,7 +1785,9 @@ div[data-ysp-modelid="travelClaim"] .bottomButton li:last-child,
 div[data-ysp-modelid="reimbursement"] .bottomButton li:last-child,
 div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton li:last-child,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton li:last-child,
-div[data-ysp-modelid="staffLoan"] .bottomButton li:last-child {
+div[data-ysp-modelid="staffLoan"] .bottomButton li:last-child,
+div[data-ysp-modelid="businessShenDetial"] .bottomButton li:last-child,
+div[data-ysp-modelid="businessCharDetail"] .bottomButton li:last-child {
   background: #0a73cc;
   margin-left: 3%;
   color: #FFFFFF;
@@ -1670,6 +1796,8 @@ div[data-ysp-modelid="travelClaim"] .bottomButton .alone,
 div[data-ysp-modelid="reimbursement"] .bottomButton .alone,
 div[data-ysp-modelid="dailyReimbursementForm"] .bottomButton .alone,
 div[data-ysp-modelid="EmployeeLoanSheet"] .bottomButton .alone,
-div[data-ysp-modelid="staffLoan"] .bottomButton .alone {
+div[data-ysp-modelid="staffLoan"] .bottomButton .alone,
+div[data-ysp-modelid="businessShenDetial"] .bottomButton .alone,
+div[data-ysp-modelid="businessCharDetail"] .bottomButton .alone {
   width: 94%;
 }

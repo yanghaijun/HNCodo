@@ -7,7 +7,8 @@
     "shenqingdan1": "../shenqingdan1/index.json",
     "TodoList": "../TodoList/index.json",
     "checkList": "../checkList/index.json",
-    "businessShen": "../businessShen/index.json"
+    "businessShen": "../businessShen/index.json",
+    "businessCharDetail": "../businessCharDetail/index.json"
   },
   "chineseName": "出差单查",
   "description": "出差单查单",
@@ -151,6 +152,10 @@
         "data": {
           "tagName": "H1"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "text",
@@ -244,6 +249,20 @@
         {
           "toContextId": "context19_6194A5",
           "toModelId": "businessShen"
+        }
+      ]
+    },
+    "flow79_9L7PF3": {
+      "fromContextId": "context18_xRs3dI",
+      "fromAction": "doAction",
+      "fromControlId": "control83_0Ie6RZ",
+      "toContexts": [
+        {
+          "toContextId": "context18_xRs3dI"
+        },
+        {
+          "toContextId": "context21_9okxeM",
+          "toModelId": "businessCharDetail"
         }
       ]
     }

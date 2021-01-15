@@ -1,72 +1,13 @@
 {
   "version": "0.1",
-  "id": "businessShen",
+  "id": "businessCharDetail",
   "targetURL": "http://127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action",
   "jsFile": "index.js",
-  "requires": {
-    "TodoList": "../TodoList/index.json",
-    "checkList": "../checkList/index.json",
-    "businessShenDetial": "../businessShenDetial/index.json"
-  },
-  "chineseName": "出差单审",
-  "description": "出差审批审单",
+  "chineseName": "出差审批查单详情",
+  "description": "出差审批查单详情",
   "firstPaintEnable": false,
   "controls": {
-    "control86_vrmSqy": {
-      "location": {
-        "data": {
-          "tagName": "H1"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "出差审批审单"
-              ],
-              "visText": [
-                "出差审批审单"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/H1[1]",
-              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//H1",
-              "descendant::DIV[@id=\"tableList\"]//H1"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.tableList DIV.accountHeader H1.h1_white.fl"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/H1[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "text": "出差审批审单",
-      "frameXPath": "",
-      "customJS": "if(!elem){\n  return false;\n}\nreturn elem.textContent == \"出差审批审单\" ? true : false;"
-    },
-    "control87_ne4VGE": {
+    "control92_dvfUdH": {
       "location": {
         "data": {
           "tagName": "DIV"
@@ -79,26 +20,22 @@
           {
             "id": "@id/word",
             "prob": 1,
-            "value": [
-              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]/DIV[1]/DIV[2]/DIV[1]/DIV[1]",
-              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV",
-              "descendant::DIV[@id=\"tableList\"]//DIV"
-            ]
+            "value": "descendant::FORM[@id=\"erForm\"]/DIV[1]/DIV[1]/DIV[2]/DIV[1]"
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.m_content DIV.m_content_inner DIV.tableList"
+            "value": "DIV.m_content DIV.m_content_inner DIV.breadcrumb"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control87_ne4VGE"
+        "onGetData": "getData_control92_dvfUdH"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -106,10 +43,10 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control88_dObx7q": {
+    "control93_Q2ctcE": {
       "location": {
         "data": {
-          "tagName": "UL"
+          "tagName": "DIV"
         },
         "userData": {
           "data": [],
@@ -118,122 +55,141 @@
         "locators": [
           {
             "id": "@id/word",
-            "prob": 2,
+            "prob": 1,
+            "value": "descendant::FORM[@id=\"erForm\"]/DIV[1]/DIV[1]/DIV[2]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.main_wrap DIV.m_content DIV.m_content_inner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control93_Q2ctcE"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control94_mRmmCy": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "出差审批单"
+              ],
+              "visText": [
+                "出差审批单"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
             "value": [
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]/LI[1]/UL[1]",
-              "descendant::DIV[@id=\"good\"]//UL[@id=\"navigate\"]//UL",
-              "descendant::UL[@id=\"navigate\"]//UL"
+              "descendant::FORM[@id=\"erForm\"]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]",
+              "descendant::FORM[@id=\"erForm\"]//SPAN"
             ]
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "ordinal": [
-              0,
-              4
-            ],
-            "value": "DIV.main_wrap DIV.header_left_wrap UL.tree LI UL"
+            "value": "DIV.m_content DIV.m_content_inner DIV.breadcrumb SPAN"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[4]/DIV[1]/UL[1]/LI[1]/UL[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
           }
         ]
       },
-      "events": {
-        "onGetData": "getData_control88_dObx7q"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
+      "roles": "element",
+      "text": " 出差审批单 ",
       "frameXPath": "",
-      "componentType": "custom"
+      "customJS": "if(!elem){return fasle} return elem.textContent == \" 出差审批单 \" ? true : false;"
     }
   },
   "contexts": {
-    "context19_6194A5": {
+    "context21_9okxeM": {
       "controls": [
-        "control87_ne4VGE",
-        "control88_dObx7q"
+        "control92_dvfUdH",
+        "control93_Q2ctcE"
       ],
       "anchors": [
-        "control86_vrmSqy"
+        "control94_mRmmCy"
       ],
       "urlAnchor": []
     }
   },
   "flows": {
-    "flow73_XE6Lq0": {
+    "flow80_RVbKea": {
       "toContexts": [
         {
-          "toContextId": "context19_6194A5"
+          "toContextId": "context21_9okxeM"
         }
       ]
     },
-    "flow74_rEdodW": {
-      "fromContextId": "context19_6194A5",
+    "flow81_Ci1T7e": {
+      "fromContextId": "context21_9okxeM",
       "fromAction": "doAction",
-      "fromControlId": "control88_dObx7q",
+      "fromControlId": "control92_dvfUdH",
       "toContexts": [
         {
-          "toContextId": "context19_6194A5"
-        },
-        {
-          "toContextId": "context1_RXxJco",
-          "toModelId": "TodoList"
-        },
-        {
-          "toContextId": "context13_xMCZhe",
-          "toModelId": "checkList"
-        }
-      ]
-    },
-    "flow75_eOvvml": {
-      "fromContextId": "context19_6194A5",
-      "fromAction": "doAction",
-      "fromControlId": "control87_ne4VGE",
-      "toContexts": [
-        {
-          "toContextId": "context19_6194A5"
-        },
-        {
-          "toContextId": "context20_CndBl1",
-          "toModelId": "businessShenDetial"
+          "toContextId": "context21_9okxeM"
         }
       ]
     }
   },
   "pages": {
-    "page19_6NAa7v": {
-      "contextId": "context19_6194A5",
+    "page21_BONbmr": {
+      "contextId": "context21_9okxeM",
       "layout": [
         {
-          "id": "uiControl72_7yzBxa",
-          "controlId": "control88_dObx7q",
+          "id": "uiControl76_UUodwU",
+          "controlId": "control92_dvfUdH",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl72_7yzBxa",
-                "onGetTemplate": "getTemplate_uiControl72_7yzBxa"
+                "onDoAction": "doAction_uiControl76_UUodwU",
+                "onGetTemplate": "getTemplate_uiControl76_UUodwU"
               }
             }
           }
         },
         {
-          "id": "uiControl71_yeUCtI",
-          "controlId": "control87_ne4VGE",
+          "id": "uiControl77_AypmT4",
+          "controlId": "control93_Q2ctcE",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl71_yeUCtI",
-                "onGetTemplate": "getTemplate_uiControl71_yeUCtI"
+                "onDoAction": "doAction_uiControl77_AypmT4",
+                "onGetTemplate": "getTemplate_uiControl77_AypmT4"
               }
             }
           }
@@ -244,55 +200,91 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context19_6194A5": [
+        "context21_9okxeM": [
           "首页"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context19_6194A5": [
+        "context21_9okxeM": [
           "127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context19_6194A5": [
+        "context21_9okxeM": [
           [
-            "DataTables_Table__paginate",
+            "ComCar",
+            "Person",
             "_easyui_combobox_",
             "_easyui_tree_",
+            "a_attachment_id",
+            "addBackTravel",
+            "addGoTravel",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
             "attachment_myQuery_hint",
-            "clean",
-            "combobox",
+            "back",
+            "backTravel",
+            "backTravel_arriva_",
+            "backTravel_del_",
+            "backTravel_departure_",
+            "backTravel_table",
+            "backTravel_tr_",
+            "backTravel_transit_",
+            "businessTraveler",
+            "businessTravelerName",
+            "carShip",
+            "commonAttachmentTableList",
             "companyCode",
+            "companyCodeForMyTree",
             "companyId",
+            "compny",
             "controlMenu",
-            "currentPage",
-            "dataForm",
-            "endDate",
+            "departureDate",
+            "dept",
+            "erForm",
+            "goTravel",
+            "goTravel_arriva_",
+            "goTravel_del_",
+            "goTravel_departure_",
+            "goTravel_table",
+            "goTravel_tr_",
+            "goTravel_transit_",
             "good",
-            "listForm",
+            "infoTrTd_",
+            "lineTable",
             "loginWatson",
             "mustDo",
             "myQuery_hint",
             "myUserActualPwd",
+            "mypostion",
             "navigate",
             "offOfPage",
-            "packUp",
-            "page",
-            "pageSizes",
-            "query_hint",
-            "search",
-            "startDate",
+            "other",
+            "peopleNumber",
+            "plane",
+            "popup",
+            "position",
+            "processId",
+            "remarks",
+            "returnDate",
             "submit_hint",
-            "tableList",
-            "totalPage",
-            "travelMethod",
-            "travelNo",
+            "td_",
+            "tr_aaefee",
+            "tr_aaefeeadf",
+            "tr_aaefeeae",
+            "tr_aaefeece",
+            "train",
+            "travelDays",
             "travelPlace",
-            "travelStatus",
+            "travelReasons",
             "travelType"
           ]
         ]
@@ -300,38 +292,38 @@
     },
     "page/classes": {
       "contexts": {
-        "context19_6194A5": [
+        "context21_9okxeM": [
           [
             "Wdate",
-            "accountHeader",
-            "alignC",
+            "addStay",
+            "alignL",
+            "alignR",
             "attachment_myQuery_hint",
-            "black",
+            "baoXiaoIcon",
+            "baseIcon",
+            "basebox",
             "bold",
+            "border_b",
+            "box",
             "breadcrumb",
             "bt",
             "bt_green",
+            "childBox",
             "clearB",
-            "col_yellow",
-            "combo",
-            "combo-arrow",
-            "combo-f",
+            "clearL",
+            "closeCon",
             "combo-p",
             "combo-panel",
-            "combo-text",
-            "combo-value",
-            "combobox-f",
             "combobox-gitem",
             "combobox-group",
             "combobox-item",
-            "da_content_div_bg",
-            "disabled",
+            "deleteDetails",
             "droppable",
-            "easyui-combobox",
             "fl",
-            "h_white",
             "header",
             "header_left_wrap",
+            "icon",
+            "icon-edit",
             "icon-home",
             "in",
             "input_table",
@@ -343,16 +335,21 @@
             "m_content_main",
             "main_wrap",
             "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
             "myQuery_hint",
             "nowarp",
             "num_Todo",
+            "p",
             "panel",
             "panel-body",
             "panel-body-noheader",
             "path",
             "query_hint",
-            "tableList",
-            "tableOn",
+            "red",
+            "showDetail",
+            "tablebox",
+            "tital",
             "topBorder",
             "tree",
             "tree-collapsed",
@@ -369,7 +366,6 @@
             "user",
             "user_info",
             "user_off",
-            "validatebox-text",
             "wbg"
           ]
         ]
@@ -377,7 +373,7 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context19_6194A5": [
+        "context21_9okxeM": [
           [
             "-/-/DIV",
             "-/-/FORM",
@@ -394,6 +390,7 @@
             "DIV/A/I",
             "DIV/A/SPAN",
             "DIV/DIV/A",
+            "DIV/DIV/BR",
             "DIV/DIV/DIV",
             "DIV/DIV/FORM",
             "DIV/DIV/H1",
@@ -404,34 +401,26 @@
             "DIV/DIV/TITLE",
             "DIV/DIV/UL",
             "DIV/FORM/DIV",
-            "DIV/SPAN/A",
+            "DIV/FORM/INPUT-hidden",
             "DIV/TABLE/TBODY",
             "DIV/UL/LI",
-            "FORM/DIV/BR",
             "FORM/DIV/DIV",
-            "FORM/DIV/TABLE",
             "LI/DIV/SPAN",
             "LI/UL/LI",
-            "SPAN/SPAN/SPAN",
             "TABLE/TBODY/TR",
             "TBODY/TR/TD",
             "TBODY/TR/TH",
-            "TD/DIV/DIV",
-            "TD/DIV/INPUT-hidden",
-            "TD/DIV/STYLE",
             "TD/SELECT/OPTION",
-            "TD/SPAN/INPUT-hidden",
-            "TD/SPAN/INPUT-text",
-            "TD/SPAN/SPAN",
             "TR/TD/A",
             "TR/TD/BUTTON",
-            "TR/TD/DIV",
-            "TR/TD/INPUT-button",
-            "TR/TD/INPUT-null",
-            "TR/TD/INPUT-reset",
+            "TR/TD/H2",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-hidden",
             "TR/TD/INPUT-text",
             "TR/TD/SELECT",
             "TR/TD/SPAN",
+            "TR/TD/TEXTAREA",
+            "TR/TH/SPAN",
             "UL/LI/DIV",
             "UL/LI/UL"
           ]
