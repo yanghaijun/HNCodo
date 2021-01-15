@@ -253,6 +253,43 @@
       "roles": "element",
       "text": " 报账单综合查询 ",
       "frameXPath": ""
+    },
+    "control98_PL0zH2": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]/DIV[1]",
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"page\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.list_Table DIV.black DIV.black"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[12]/TR[1]/TD[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control98_PL0zH2"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -261,7 +298,8 @@
         "control47_FS7IZd",
         "control49_n31ik2",
         "control50_K78z7e",
-        "control61_BTKyg4"
+        "control61_BTKyg4",
+        "control98_PL0zH2"
       ],
       "anchors": [
         "control80_ty3E37"
@@ -377,6 +415,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl41_2PEF1E",
                 "onGetTemplate": "getTemplate_uiControl41_2PEF1E"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl81_X4ugWC",
+          "controlId": "control98_PL0zH2",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl81_X4ugWC",
+                "onGetTemplate": "getTemplate_uiControl81_X4ugWC"
               }
             }
           }
@@ -714,6 +767,79 @@
             "combobox-item",
             "da_content_div_bg",
             "disabled",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
             "droppable",
             "easyui-combobox",
             "ellipsis",

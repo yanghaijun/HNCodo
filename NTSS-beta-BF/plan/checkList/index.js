@@ -212,6 +212,30 @@
     getTemplate_uiControl47_IHaJvT: function () {
       var selfTemplate = 'module.exports = React.createClass({\n  componentWillMount(){\n    ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n  componentDidMount(){\n    ysp.appMain.hideLoading();\n  },\n  render: function() {\n    return (\n      <div>\n      \t{/*\n        \t<div className="loading">\u6570\u636E\u52A0\u8F7D\u4E2D\uFF0C\u8BF7\u7A0D\u540E... ...</div>\n        */}\n      </div>\n      \n    )\n  }\n});';
       return '"use strict";\n\nmodule.exports = React.createClass({\n  displayName: "exports",\n  componentWillMount: function componentWillMount() {\n    ysp.appMain.showLoading();\n    // setTimeout(function(){\n    //   ysp.appMain.hideLoading();\n    // },5000);\n  },\n  componentDidMount: function componentDidMount() {\n    ysp.appMain.hideLoading();\n  },\n\n  render: function render() {\n    return React.createElement("div", null);\n  }\n});';
+    },
+    getData_control98_PL0zH2: function (elem) {
+      if (!elem) {
+        return false;
+      }return true;
+    },
+    doAction_uiControl81_X4ugWC: function (data, elem) {
+      if (data.eventType = 'page') {
+        ysp.appMain.showLoading();var text = data.customData;var el = elem.querySelectorAll('a');var aa = [];var bb = [];for (var i = 0; i < el.length; i++) {
+          if (el[i].textContent == "上一页") {
+            aa.push(el[i]);
+          } else if (el[i].textContent == "下一页") {
+            bb.push(el[i]);
+          }
+        }if (text == "上一页") {
+          aa[0].click();ysp.appMain.hideLoading();
+        }if (text == "下一页") {
+          bb[0].click();ysp.appMain.hideLoading();
+        }
+      }
+    },
+    getTemplate_uiControl81_X4ugWC: function () {
+      var selfTemplate = 'import {Component} from \'react\';\nexport default class extends Component{\n  constructor(){\n    super();\n  }\n  goPage=(e)=>{\n    var handler = this.props.customHandler;\n    var target = e.target;\n    if(handler){\n      handler({\n        eventType:\'page\',\n        data:target.getAttribute(\'data-text\')\n      })\n    }\n  }\n  render(){\n    var _this = this;\n    return(\n      <div className="goPage">\n        <span onClick={_this.goPage} data-text = "\u4E0A\u4E00\u9875">\u4E0A\u4E00\u9875</span>\n        <span onClick={_this.goPage} data-text = "\u4E0B\u4E00\u9875">\u4E0B\u4E00\u9875</span>\n      </div>\n    )\n  }\n}\n';
+      return '\'use strict\';\n\nObject.defineProperty(exports, "__esModule", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require(\'react\');\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn\'t been initialised - super() hasn\'t been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    _classCallCheck(this, _class);\n\n    var _this2 = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));\n\n    _this2.goPage = function (e) {\n      var handler = _this2.props.customHandler;\n      var target = e.target;\n      if (handler) {\n        handler({\n          eventType: \'page\',\n          data: target.getAttribute(\'data-text\')\n        });\n      }\n    };\n\n    return _this2;\n  }\n\n  _createClass(_class, [{\n    key: \'render\',\n    value: function render() {\n      var _this = this;\n      return React.createElement(\n        \'div\',\n        { className: \'goPage\' },\n        React.createElement(\n          \'span\',\n          { onClick: _this.goPage, \'data-text\': \'\\u4E0A\\u4E00\\u9875\' },\n          \'\\u4E0A\\u4E00\\u9875\'\n        ),\n        React.createElement(\n          \'span\',\n          { onClick: _this.goPage, \'data-text\': \'\\u4E0B\\u4E00\\u9875\' },\n          \'\\u4E0B\\u4E00\\u9875\'\n        )\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;';
     }
   }, "checkList");
 })(window, ysp);

@@ -1801,3 +1801,21 @@ div[data-ysp-modelid="businessShenDetial"] .bottomButton .alone,
 div[data-ysp-modelid="businessCharDetail"] .bottomButton .alone {
   width: 94%;
 }
+.goPage {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  background: #ffffff;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.goPage span {
+  background: #0a73cc;
+  color: #ffffff;
+  padding: 0px 20px;
+  border-radius: 5px;
+}

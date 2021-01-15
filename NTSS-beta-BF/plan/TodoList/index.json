@@ -428,6 +428,43 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control96_GmJqBf": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]/DIV[1]",
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"page\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.list_Table DIV.black DIV.black"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/TABLE[1]/TBODY[12]/TR[1]/TD[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control96_GmJqBf"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -440,7 +477,8 @@
         "control14_rapNLN",
         "control19_MdNPFF",
         "control45_L3SP1I",
-        "control79_pQpCQE"
+        "control79_pQpCQE",
+        "control96_GmJqBf"
       ],
       "anchors": [
         "control7_Zv69Km",
@@ -584,6 +622,21 @@
             }
           },
           "layout": []
+        },
+        {
+          "id": "uiControl79_rExZzf",
+          "controlId": "control96_GmJqBf",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl79_rExZzf",
+                "onGetTemplate": "getTemplate_uiControl79_rExZzf"
+              }
+            }
+          }
         },
         {
           "id": "uiControl9_y1NyIS",
@@ -1230,7 +1283,78 @@
             "icon-home",
             "path"
           ],
-          []
+          [],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "alignL",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
+            "droppable",
+            "easyui-combobox",
+            "ellipsis",
+            "export",
+            "fl",
+            "fr",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ]
         ]
       }
     },

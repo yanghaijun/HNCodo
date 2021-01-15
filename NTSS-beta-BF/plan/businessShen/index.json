@@ -149,13 +149,51 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control95_r28h2n": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]/DIV[1]",
+              "descendant::FORM[@id=\"listForm\"]//DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"tableList\"]//DIV[@id=\"page\"]//DIV",
+              "descendant::DIV[@id=\"page\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.list_Table DIV.black DIV.black"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/TABLE[1]/TBODY[12]/TR[1]/TD[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control95_r28h2n"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context19_6194A5": {
       "controls": [
         "control87_ne4VGE",
-        "control88_dObx7q"
+        "control88_dObx7q",
+        "control95_r28h2n"
       ],
       "anchors": [
         "control86_vrmSqy"
@@ -202,6 +240,16 @@
           "toModelId": "businessShenDetial"
         }
       ]
+    },
+    "flow82_y0MXfX": {
+      "fromContextId": "context19_6194A5",
+      "fromAction": "doAction",
+      "fromControlId": "control95_r28h2n",
+      "toContexts": [
+        {
+          "toContextId": "context19_6194A5"
+        }
+      ]
     }
   },
   "pages": {
@@ -234,6 +282,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl71_yeUCtI",
                 "onGetTemplate": "getTemplate_uiControl71_yeUCtI"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl78_eEOkcZ",
+          "controlId": "control95_r28h2n",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl78_eEOkcZ",
+                "onGetTemplate": "getTemplate_uiControl78_eEOkcZ"
               }
             }
           }
@@ -326,6 +389,76 @@
             "combobox-item",
             "da_content_div_bg",
             "disabled",
+            "droppable",
+            "easyui-combobox",
+            "fl",
+            "h_white",
+            "header",
+            "header_left_wrap",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "tableList",
+            "tableOn",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "validatebox-text",
+            "wbg"
+          ],
+          [
+            "Wdate",
+            "accountHeader",
+            "alignC",
+            "attachment_myQuery_hint",
+            "black",
+            "bold",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "clearB",
+            "col_yellow",
+            "combo",
+            "combo-arrow",
+            "combo-f",
+            "combo-p",
+            "combo-panel",
+            "combo-text",
+            "combo-value",
+            "combobox-f",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "da_content_div_bg",
             "droppable",
             "easyui-combobox",
             "fl",
