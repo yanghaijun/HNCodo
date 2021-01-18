@@ -60,52 +60,52 @@
         // 当目标页面加载完onload时执行, aWin为当前页面的window对象, doc为当前页面的document对象
         onTargetLoad: function onTargetLoad(aWin, doc) {
 
-            if (aWin.location.href == 'http://59.110.171.69:31039/ReimbursePlatform/index.jsp') {
-                setInterval(function () {
-                    if (topWin.frames[1] && topWin.frames[1].document.querySelectorAll('iframe[name="browserFrame2"]').length > 0 && topWin.frames[1].document.querySelector('iframe[name="browserFrame2"]').contentWindow.document.body.textContent == '') {
-                        ysp.customHelper.login();
-                        location.reload();
-                    }
-                }, 2000);
-            }
-          //http://59.110.171.69:31002/ReimbursePlatform/myReimburse/loadToDoList4Ajax.action
-          $.ajax({
-            url:'http://59.110.171.69:31039/ReimbursePlatform/myReimburse/loadToDoList4Ajax.action',
-            type:'post',
-            data:'',
-            success:function(){}
-          })
+          //   if (aWin.location.href == 'http://59.110.171.69:31039/ReimbursePlatform/index.jsp') {
+          //       setInterval(function () {
+          //           if (topWin.frames[1] && topWin.frames[1].document.querySelectorAll('iframe[name="browserFrame2"]').length > 0 && topWin.frames[1].document.querySelector('iframe[name="browserFrame2"]').contentWindow.document.body.textContent == '') {
+          //               ysp.customHelper.login();
+          //               location.reload();
+          //           }
+          //       }, 2000);
+          //   }
+          // //http://59.110.171.69:31002/ReimbursePlatform/myReimburse/loadToDoList4Ajax.action
+          // $.ajax({
+          //   url:'http://59.110.171.69:31039/ReimbursePlatform/myReimburse/loadToDoList4Ajax.action',
+          //   type:'post',
+          //   data:'',
+          //   success:function(){}
+          // })
         },
 
         // 目标页面加载前执行, aWin为当前页面的window对象, doc为当前页面的document对象
         beforeTargetLoad: function beforeTargetLoad(aWin, doc) {
-            aWin.addEventListener('DOMContentLoaded', function () {
-                if (!topWin.EAPI.isStudio()) {
-                    if (aWin.location.href == 'http://59.110.171.69:31039/ReimbursePlatform/index.jsp') {
-                        //alert('1111')
-                        topWin.EAPI.localStorage.getItem('login', 'yunshipei').then(function (loginValue) {
-                            topWin.loginStatus = loginValue;
-                        });
-                        topWin.EAPI.localStorage.getItem('user', 'yunshipei').then(function (userValue) {
-                            topWin.user = userValue;
-                        });
-                        topWin.EAPI.localStorage.getItem('pwd', 'yunshipei').then(function (pwdValue) {
-                            topWin.pwd = pwdValue;
-                            console.log(topWin.pwd);
-                        });
-                        var timer = setInterval(function () {
-                            if (doc.querySelector('#userName') && topWin.loginStatus == '成功') {
-                                doc.querySelector('#userName').value = topWin.user;
-                                doc.querySelector('#psw').value = topWin.pwd;
-                                setTimeout(function () {
-                                    topWin.document.body.querySelector('.login').click();
-                                }, 100);
-                                clearInterval(timer);
-                            }
-                        }, 1000);
-                    }
-                }
-            }, false);
+            // aWin.addEventListener('DOMContentLoaded', function () {
+            //     if (!topWin.EAPI.isStudio()) {
+            //         if (aWin.location.href == 'http://59.110.171.69:31039/ReimbursePlatform/index.jsp') {
+            //             //alert('1111')
+            //             topWin.EAPI.localStorage.getItem('login', 'yunshipei').then(function (loginValue) {
+            //                 topWin.loginStatus = loginValue;
+            //             });
+            //             topWin.EAPI.localStorage.getItem('user', 'yunshipei').then(function (userValue) {
+            //                 topWin.user = userValue;
+            //             });
+            //             topWin.EAPI.localStorage.getItem('pwd', 'yunshipei').then(function (pwdValue) {
+            //                 topWin.pwd = pwdValue;
+            //                 console.log(topWin.pwd);
+            //             });
+            //             var timer = setInterval(function () {
+            //                 if (doc.querySelector('#userName') && topWin.loginStatus == '成功') {
+            //                     doc.querySelector('#userName').value = topWin.user;
+            //                     doc.querySelector('#psw').value = topWin.pwd;
+            //                     setTimeout(function () {
+            //                         topWin.document.body.querySelector('.login').click();
+            //                     }, 100);
+            //                     clearInterval(timer);
+            //                 }
+            //             }, 1000);
+            //         }
+            //     }
+            // }, false);
             ysp.appMain.showLoading();
             setTimeout(function () {
                 ysp.appMain.hideLoading();
