@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "businessCharDetail",
-  "targetURL": "http://127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action",
+  "targetURL": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
   "jsFile": "index.js",
   "chineseName": "出差审批查单详情",
   "description": "出差审批查单详情",
@@ -208,7 +208,7 @@
     "page/urls": {
       "contexts": {
         "context21_9okxeM": [
-          "127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action"
+          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },

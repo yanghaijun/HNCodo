@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "businessChar",
-  "targetURL": "http://127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action#bx",
+  "targetURL": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action#bx",
   "jsFile": "index.js",
   "requires": {
     "shenqingdan1": "../shenqingdan1/index.json",
@@ -368,8 +368,8 @@
     "page/urls": {
       "contexts": {
         "context18_xRs3dI": [
-          "127.0.0.1:31039/ReimbursePlatform/reimburse/loginAction.action",
-          "127.0.0.1:31039/ReimbursePlatform/myReimburse/index.action"
+          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+          "59.110.171.69:31039/ReimbursePlatform/myReimburse/index.action"
         ]
       }
     },
