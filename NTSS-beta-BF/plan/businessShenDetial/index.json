@@ -137,6 +137,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -163,6 +167,38 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control102_NMNKql": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.mainBody"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control102_NMNKql"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -170,7 +206,8 @@
       "controls": [
         "control84_pIJH4T",
         "control90_p9qkLN",
-        "control91_VKz9t5"
+        "control91_VKz9t5",
+        "control102_NMNKql"
       ],
       "anchors": [
         "control89_Igulln"
@@ -200,6 +237,36 @@
       "fromContextId": "context20_CndBl1",
       "fromAction": "doAction",
       "fromControlId": "control90_p9qkLN",
+      "toContexts": [
+        {
+          "toContextId": "context20_CndBl1"
+        }
+      ]
+    },
+    "flow83_DVoH2L": {
+      "fromContextId": "context20_CndBl1",
+      "fromAction": "doAction",
+      "fromControlId": "control91_VKz9t5",
+      "toContexts": [
+        {
+          "toContextId": "context20_CndBl1"
+        }
+      ]
+    },
+    "flow84_uG9bue": {
+      "fromContextId": "context20_CndBl1",
+      "fromAction": "section",
+      "fromControlId": "control91_VKz9t5",
+      "toContexts": [
+        {
+          "toContextId": "context20_CndBl1"
+        }
+      ]
+    },
+    "flow85_Sv0Lt5": {
+      "fromContextId": "context20_CndBl1",
+      "fromAction": "doAction",
+      "fromControlId": "control102_NMNKql",
       "toContexts": [
         {
           "toContextId": "context20_CndBl1"
@@ -242,6 +309,21 @@
           }
         },
         {
+          "id": "uiControl85_tfLUbv",
+          "controlId": "control102_NMNKql",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl85_tfLUbv",
+                "onGetTemplate": "getTemplate_uiControl85_tfLUbv"
+              }
+            }
+          }
+        },
+        {
           "id": "uiControl75_wvn4HL",
           "controlId": "control91_VKz9t5",
           "display": {
@@ -263,14 +345,16 @@
     "page/title": {
       "contexts": {
         "context20_CndBl1": [
-          "首页"
+          "首页",
+          ""
         ]
       }
     },
     "page/urls": {
       "contexts": {
         "context20_CndBl1": [
-          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+          ""
         ]
       }
     },
@@ -415,6 +499,232 @@
             "travelPlace",
             "travelReasons",
             "travelType"
+          ],
+          [
+            "ComCar",
+            "Person",
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_overlay",
+            "TB_title",
+            "TB_window",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "addBackTravel",
+            "addGoTravel",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "back",
+            "backTravel",
+            "backTravel_arriva_",
+            "backTravel_del_",
+            "backTravel_departure_",
+            "backTravel_table",
+            "backTravel_tr_",
+            "backTravel_transit_",
+            "businessTraveler",
+            "businessTravelerName",
+            "carShip",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyCodeForMyTree",
+            "companyId",
+            "compny",
+            "controlMenu",
+            "departureDate",
+            "dept",
+            "erForm",
+            "goTravel",
+            "goTravel_arriva_",
+            "goTravel_del_",
+            "goTravel_departure_",
+            "goTravel_table",
+            "goTravel_tr_",
+            "goTravel_transit_",
+            "good",
+            "infoTrTd_",
+            "lineTable",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "other",
+            "peopleNumber",
+            "plane",
+            "popup",
+            "position",
+            "processId",
+            "remarks",
+            "returnDate",
+            "submit_hint",
+            "train",
+            "travelDays",
+            "travelPlace",
+            "travelReasons",
+            "travelType"
+          ],
+          [
+            "ComCar",
+            "Person",
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_overlay",
+            "TB_title",
+            "TB_window",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "addBackTravel",
+            "addGoTravel",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "back",
+            "backTravel",
+            "backTravel_arriva_",
+            "backTravel_del_",
+            "backTravel_departure_",
+            "backTravel_table",
+            "backTravel_tr_",
+            "backTravel_transit_",
+            "businessTraveler",
+            "businessTravelerName",
+            "carShip",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyCodeForMyTree",
+            "companyId",
+            "compny",
+            "controlMenu",
+            "departureDate",
+            "dept",
+            "erForm",
+            "goTravel",
+            "goTravel_arriva_",
+            "goTravel_del_",
+            "goTravel_departure_",
+            "goTravel_table",
+            "goTravel_tr_",
+            "goTravel_transit_",
+            "good",
+            "infoTrTd_",
+            "lineTable",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "other",
+            "peopleNumber",
+            "plane",
+            "popup",
+            "position",
+            "processId",
+            "remarks",
+            "returnDate",
+            "submit_hint",
+            "td_",
+            "tr_aaedfefcc",
+            "train",
+            "travelDays",
+            "travelPlace",
+            "travelReasons",
+            "travelType"
+          ],
+          [
+            "ComCar",
+            "Person",
+            "TB_ajaxWindowTitle",
+            "TB_closeAjaxWindow",
+            "TB_closeWindowButton",
+            "TB_iframeContent",
+            "TB_overlay",
+            "TB_title",
+            "TB_window",
+            "_easyui_combobox_",
+            "_easyui_tree_",
+            "a_attachment_id",
+            "addBackTravel",
+            "addGoTravel",
+            "ajaxAttachmentForm",
+            "approvalLink",
+            "attList",
+            "attachmentEntityId",
+            "attachmentList",
+            "attachmentListTbody",
+            "attachment_myQuery_hint",
+            "back",
+            "backTravel",
+            "backTravel_arriva_",
+            "backTravel_del_",
+            "backTravel_departure_",
+            "backTravel_table",
+            "backTravel_tr_",
+            "backTravel_transit_",
+            "businessTraveler",
+            "businessTravelerName",
+            "carShip",
+            "commonAttachmentTableList",
+            "companyCode",
+            "companyCodeForMyTree",
+            "companyId",
+            "compny",
+            "controlMenu",
+            "departureDate",
+            "dept",
+            "erForm",
+            "goTravel",
+            "goTravel_arriva_",
+            "goTravel_del_",
+            "goTravel_departure_",
+            "goTravel_table",
+            "goTravel_tr_",
+            "goTravel_transit_",
+            "good",
+            "infoTrTd_",
+            "lineTable",
+            "loginWatson",
+            "mustDo",
+            "myQuery_hint",
+            "myUserActualPwd",
+            "mypostion",
+            "navigate",
+            "offOfPage",
+            "other",
+            "peopleNumber",
+            "plane",
+            "popup",
+            "position",
+            "processId",
+            "remarks",
+            "returnDate",
+            "submit_hint",
+            "td_",
+            "tr_aaeedccac",
+            "train",
+            "travelDays",
+            "travelPlace",
+            "travelReasons",
+            "travelType"
           ]
         ]
       }
@@ -423,6 +733,82 @@
       "contexts": {
         "context20_CndBl1": [
           [
+            "Wdate",
+            "addStay",
+            "alignL",
+            "alignR",
+            "attachment_myQuery_hint",
+            "baoXiaoIcon",
+            "baseIcon",
+            "basebox",
+            "bold",
+            "border_b",
+            "box",
+            "breadcrumb",
+            "bt",
+            "bt_green",
+            "childBox",
+            "clearB",
+            "clearL",
+            "closeCon",
+            "combo-p",
+            "combo-panel",
+            "combobox-gitem",
+            "combobox-group",
+            "combobox-item",
+            "deleteDetails",
+            "droppable",
+            "fl",
+            "header",
+            "header_left_wrap",
+            "icon",
+            "icon-edit",
+            "icon-home",
+            "in",
+            "input_table",
+            "list_Table",
+            "logo",
+            "m_content",
+            "m_content_inner",
+            "m_content_inner_main",
+            "m_content_main",
+            "main_wrap",
+            "modal-backdrop",
+            "myAccount",
+            "myAccount_con",
+            "myQuery_hint",
+            "nowarp",
+            "num_Todo",
+            "p",
+            "panel",
+            "panel-body",
+            "panel-body-noheader",
+            "path",
+            "query_hint",
+            "red",
+            "showDetail",
+            "tablebox",
+            "tital",
+            "topBorder",
+            "tree",
+            "tree-collapsed",
+            "tree-expanded",
+            "tree-file",
+            "tree-folder",
+            "tree-folder-open",
+            "tree-hit",
+            "tree-icon",
+            "tree-indent",
+            "tree-node",
+            "tree-node-selected",
+            "tree-title",
+            "user",
+            "user_info",
+            "user_off",
+            "wbg"
+          ],
+          [
+            "TB_overlayBG",
             "Wdate",
             "addStay",
             "alignL",
@@ -510,6 +896,57 @@
             "-/-/SCRIPT",
             "-/DIV/A",
             "-/DIV/DIV",
+            "-/DIV/IMG",
+            "-/DIV/LINK",
+            "-/DIV/META",
+            "-/DIV/SCRIPT",
+            "-/DIV/STYLE",
+            "-/FORM/INPUT-hidden",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/STYLE",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TITLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "LI/DIV/SPAN",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/SELECT/OPTION",
+            "TR/TD/A",
+            "TR/TD/BUTTON",
+            "TR/TD/H2",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TD/TEXTAREA",
+            "TR/TH/SPAN",
+            "UL/LI/DIV",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/FORM",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/DIV",
+            "-/DIV/IFRAME",
             "-/DIV/IMG",
             "-/DIV/LINK",
             "-/DIV/META",

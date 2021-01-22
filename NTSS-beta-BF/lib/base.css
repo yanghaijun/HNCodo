@@ -1819,3 +1819,6 @@ div[data-ysp-modelid="businessCharDetail"] .bottomButton .alone {
   padding: 0px 20px;
   border-radius: 5px;
 }
+.displayNone {
+  display: none !important;
+}
