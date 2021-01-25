@@ -716,6 +716,7 @@ li {
 .Todo-list-content {
   position: relative;
   z-index: 10000;
+  margin-bottom: 60px;
 }
 .Todo-list-content .show-false li:nth-child(3),
 .Todo-list-content .show-false li:nth-child(4),

@@ -12,12 +12,13 @@
       return tabPage;
     },
     doAction_uiControl39_2TQxnI: function (data, elem) {
-      var event = data.eventType;var href = elem.ownerDocument.location.href;debugger;if (event == 'jk') {
+      var event = data.eventType;var href = elem.ownerDocument.location.href;if (event == 'jk') {
         $(elem).children('li').eq(0).find("ul").eq(0).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 2000);
       } else if (event == 'sd') {
-        $(elem).children('li').eq(1).find('div').eq(0).click();ysp.appMain.showLoading();setTimeout(function () {
+        $(elem).children('li').eq(1).find('div').eq(0).click();
+        ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 2000);
       } else if (event == 'cd') {
