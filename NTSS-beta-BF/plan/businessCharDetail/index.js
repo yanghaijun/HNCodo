@@ -21,6 +21,8 @@
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic = elem.ownerDocument.querySelector('.myAccount');var basic0 = basic && elem.ownerDocument.querySelector('.myAccount_con'); //出差行程 出差方式
         var basic1 = basic && basic.querySelectorAll('.input_table')[0]; //出差信息
+        // var tables = basic0 && basic0.querySelector("#goTravel_table");
+        // var basic2 = tables && tables.querySelectorAll("tr")[2]; 
         var basic2 = basic0 && basic0.querySelector('#goTravel'); //出差行程    去程
         var basic3 = basic0 && basic0.querySelector('#backTravel'); //出差行程  返程
         var basic4 = basic0 && basic0.querySelectorAll('.input_table')[1]; // 出差方式
@@ -31,7 +33,7 @@
           }
         }var fujians = elem.ownerDocument.querySelector('#attachmentListTbody'); //附件
         var approval = elem.ownerDocument.querySelector('#approvalLink').querySelector('table'); //审批记录
-        data.data[0] = ['公司代码', basic1 && basic1.querySelector('#compny') && basic1.querySelector('#compny').textContent.trim()];data.data[1] = ['出差人', basic1 && basic1.querySelector('#dept') && basic1.querySelector('#dept').textContent.trim() + '-' + basic1.querySelectorAll('tr')[1].children[1].textContent];data.data[2] = ['出差类型', basic1 && basic1.querySelector('#travelType') && basic1.querySelector('#travelType').value == "0" ? "出差" : "培训"];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.trim()];data.data[4] = ['单据状态', basic1.querySelectorAll('tr')[2].children[5].textContent.trim()];data.data[5] = ['出发日期', basic1.querySelector('#departureDate').value.trim()];data.data[6] = ['返回日期', basic1.querySelector('#returnDate').value.trim()];data.data[7] = ['出差天数', basic1.querySelector('#travelDays').value.trim()];data.data[8] = ['出差地点', basic1.querySelector('#travelPlace').value.trim()];data.data[9] = ['出差事由', basic1.querySelector('#travelReasons').value.trim()];data.data[10] = ['去程出发城市', basic2.querySelector('#goTravel_departure_0').value.trim()];data.data[11] = ['去程到达城市', basic2.querySelector('#goTravel_arriva_0').value.trim()];data.data[12] = ['返程出发城市', basic3.querySelector('#backTravel_departure_1').value.trim()];data.data[13] = ['返程到达城市', basic3.querySelector('#backTravel_arriva_1').value.trim()];data.data[14] = ['出差方式', aa[0] == "train" ? "火车" : aa[0] == "plane" ? "飞机" : aa[0] == "carShip" ? "汽车轮船" : aa[0] == "ComCar" ? "公司派车" : "其它"]; //以下为附件
+        data.data[0] = ['公司代码', basic1 && basic1.querySelector('#compny') && basic1.querySelector('#compny').textContent.trim()];data.data[1] = ['出差人', basic1 && basic1.querySelector('#dept') && basic1.querySelector('#dept').textContent.trim() + '-' + basic1.querySelectorAll('tr')[1].children[1].textContent];data.data[2] = ['出差类型', basic1 && basic1.querySelector('#travelType') && basic1.querySelector('#travelType').value == "0" ? "出差" : "培训"];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.trim()];data.data[4] = ['单据状态', basic1.querySelectorAll('tr')[2].children[5].textContent.trim()];data.data[5] = ['出发日期', basic1.querySelector('#departureDate') && basic1.querySelector('#departureDate').value.trim()];data.data[6] = ['返回日期', basic1.querySelector('#returnDate') && basic1.querySelector('#returnDate').value.trim()];data.data[7] = ['出差天数', basic1.querySelector('#travelDays') && basic1.querySelector('#travelDays').value.trim()];data.data[8] = ['出差地点', basic1.querySelector('#travelPlace') && basic1.querySelector('#travelPlace').value.trim()];data.data[9] = ['出差事由', basic1.querySelector('#travelReasons') && basic1.querySelector('#travelReasons').value.trim()];data.data[10] = ['去程出发城市', basic2.querySelector('#goTravel_departure_0') && basic2.querySelector('#goTravel_departure_0').value.trim()];data.data[11] = ['去程到达城市', basic2.querySelector('#goTravel_arriva_0') && basic2.querySelector('#goTravel_arriva_0').value.trim()];data.data[12] = ['返程出发城市', basic3.querySelector('#backTravel_departure_1') && basic3.querySelector('#backTravel_departure_1').value.trim()];data.data[13] = ['返程到达城市', basic3.querySelector('#backTravel_arriva_1') && basic3.querySelector('#backTravel_arriva_1').value.trim()];data.data[14] = ['出差方式', aa[0] == "train" ? "火车" : aa[0] == "plane" ? "飞机" : aa[0] == "carShip" ? "汽车轮船" : aa[0] == "ComCar" ? "公司派车" : "其它"]; //以下为附件
         for (var i = 0; i < fujians.querySelectorAll('tr').length; i++) {
           if (fujians.querySelectorAll('tr')[i].querySelectorAll('a').length > 1) {
             if (fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpg') > -1 || fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('png') > -1 || fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpeg') > -1) {
@@ -61,12 +63,12 @@
         } //以下为审批记录
         for (var i = 0; i < approval.querySelectorAll('tr').length - 1; i++) {
           if (i == 0) {
-            var ths = [];for (var j = 0; j < approval.querySelectorAll('tr')[i].querySelectorAll('th').length; j++) {
+            var ths = [];
+            for (var j = 0; j < approval.querySelectorAll('tr')[i].querySelectorAll('th').length; j++) {
               ths.push(approval.querySelectorAll('tr')[i].querySelectorAll('th')[j].textContent.replace(/\s+/g, ''));
             }data.approval.push(ths);
           } else {
-            var tds = [];
-            for (var j = 0; j < approval.querySelectorAll('tr')[i].querySelectorAll('td').length; j++) {
+            var tds = [];for (var j = 0; j < approval.querySelectorAll('tr')[i].querySelectorAll('td').length; j++) {
               if (approval.querySelectorAll('tr')[i].querySelectorAll('td')[j].querySelectorAll('input').length > 0 && j != 0) {
                 tds.push(approval.querySelectorAll('tr')[i].querySelectorAll('td')[j].querySelectorAll('input')[0].value);
               } else if (approval.querySelectorAll('tr')[i].querySelectorAll('td')[j].querySelectorAll('select').length > 0) {
