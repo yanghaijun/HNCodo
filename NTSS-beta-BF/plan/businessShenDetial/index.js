@@ -94,10 +94,12 @@
     getData_control91_VKz9t5: function (elem) {
       ;if (elem) {
         var data = {};var buttons = elem.ownerDocument.querySelectorAll('.input_table')[0].querySelectorAll('button');for (var i = 0; i < buttons.length; i++) {
-          if (buttons[i].textContent == "同 意") {
-            data.oneFlag = true;
-          } else if (buttons[i].textContent == "退 回") {
-            data.twoFlag = true;
+          if (buttons[i].getAttribute("style") != "display:none;") {
+            if (buttons[i].textContent == "同 意") {
+              data.oneFlag = true;
+            } else if (buttons[i].textContent == "退 回") {
+              data.twoFlag = true;
+            }
           }
         }return data;
       }

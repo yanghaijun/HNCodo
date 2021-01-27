@@ -222,6 +222,6 @@
   "default_url": "http://59.110.171.69:31039/ReimbursePlatform/index.jsp",
   "scope": "NTSS-beta-BF",
   "start_url": "enterplorer://NTSS-beta-BF/local/index.html",
-  "update_time": 1611713661065,
+  "update_time": 1611733312906,
   "runtime_env": "1webview"
 }
