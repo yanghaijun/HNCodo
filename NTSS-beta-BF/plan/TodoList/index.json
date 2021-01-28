@@ -757,9 +757,9 @@
           "223.71.99.53:85/ReimbursePlatform/reimburse/loginAction.action",
           "223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
           "",
-          "59.110.171.69:31039/ReimbursePlatform/index.jsp",
+          "123.56.3.72:31036/ReimbursePlatform/index.jsp",
           "text/html,chromewebdata",
-          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+          "123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },

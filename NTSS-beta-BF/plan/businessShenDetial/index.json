@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "businessShenDetial",
-  "targetURL": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+  "targetURL": "http://123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action",
   "jsFile": "index.js",
   "chineseName": "出差审批单详单",
   "description": "出差审批单详单",
@@ -353,7 +353,7 @@
     "page/urls": {
       "contexts": {
         "context20_CndBl1": [
-          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+          "123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action",
           ""
         ]
       }

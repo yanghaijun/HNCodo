@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "checkList",
-  "targetURL": "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
+  "targetURL": "http://123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action",
   "jsFile": "index.js",
   "requires": {
     "TodoList": "../TodoList/index.json",
@@ -464,9 +464,9 @@
     "page/urls": {
       "contexts": {
         "context13_xMCZhe": [
-          "http://59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action",
-          "59.110.171.69:31039/ReimbursePlatform/index.jsp",
-          "59.110.171.69:31039/ReimbursePlatform/reimburse/loginAction.action"
+          "http://123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action",
+          "123.56.3.72:31036/ReimbursePlatform/index.jsp",
+          "123.56.3.72:31036/ReimbursePlatform/reimburse/loginAction.action"
         ]
       }
     },
