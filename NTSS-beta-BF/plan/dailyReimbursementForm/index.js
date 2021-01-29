@@ -1,25 +1,21 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
     getData_control58_av3IDC: function (elem) {
-      'use strict';
-
       ;if (!elem) {
         return false;
       } //console.log(elem)
       return elem.ownerDocument.querySelector('.breadcrumb').querySelector('span').textContent.replace(/\s+/g, '');
     },
     doAction_uiControl44_SyTNfN: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'click') {
-        elem.ownerDocument.querySelector('#_easyui_tree_8').click();ysp.appMain.showLoading();setTimeout(function () {
+        elem.ownerDocument.querySelector('#_easyui_tree_10').click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 2000);
       }
     },
     getTemplate_uiControl44_SyTNfN: function () {
       var selfTemplate = "import { back } from 'appRenderer';\nvar HeaderCustom = React.createClass({\n  click:function(){                                \n    var callBack = this.props.customHandler;          \n    if(callBack) {                                    \n      callBack({\n        eventType:'click'                         \n      })\n    }\n  },\n\trender(){\n    var _this=this;\n  \treturn(\n    \t<header className=\"navbar navbar-primary header\" style={{background:\"#0a73cc\"}}>\n        <h2 className=\"navbar-title navbar-center\">{this.props.customData}</h2>\n        <div className=\"navbar-nav navbar-left\">\n          <a onClick={_this.click}className=\"navbar-nav-item\">\n            <span className=\"navbar-nav-title\"></span>\n            <span className=\"icon icon-left-nav navbar-icon\"></span>\n          </a>\n        </div>\n      </header>\n    )\n  }\n})\n\nmodule.exports = HeaderCustom;\n";
-      return '\'use strict\';\n\nvar _appRenderer = require(\'appRenderer\');\n\nvar HeaderCustom = React.createClass({\n  displayName: \'HeaderCustom\',\n\n  click: function click() {\n    var callBack = this.props.customHandler;\n    if (callBack) {\n      callBack({\n        eventType: \'click\'\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    return React.createElement(\n      \'header\',\n      { className: \'navbar navbar-primary header\', style: { background: "#0a73cc" } },\n      React.createElement(\n        \'h2\',\n        { className: \'navbar-title navbar-center\' },\n        this.props.customData\n      ),\n      React.createElement(\n        \'div\',\n        { className: \'navbar-nav navbar-left\' },\n        React.createElement(\n          \'a\',\n          { onClick: _this.click, className: \'navbar-nav-item\' },\n          React.createElement(\'span\', { className: \'navbar-nav-title\' }),\n          React.createElement(\'span\', { className: \'icon icon-left-nav navbar-icon\' })\n        )\n      )\n    );\n  }\n});\n\nmodule.exports = HeaderCustom;';
+      return "'use strict';\n\nvar _appRenderer = require('appRenderer');\n\nvar HeaderCustom = React.createClass({\n  displayName: 'HeaderCustom',\n\n  click: function click() {\n    var callBack = this.props.customHandler;\n    if (callBack) {\n      callBack({\n        eventType: 'click'\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    return React.createElement(\n      'header',\n      { className: 'navbar navbar-primary header', style: { background: \"#0a73cc\" } },\n      React.createElement(\n        'h2',\n        { className: 'navbar-title navbar-center' },\n        this.props.customData\n      ),\n      React.createElement(\n        'div',\n        { className: 'navbar-nav navbar-left' },\n        React.createElement(\n          'a',\n          { onClick: _this.click, className: 'navbar-nav-item' },\n          React.createElement('span', { className: 'navbar-nav-title' }),\n          React.createElement('span', { className: 'icon icon-left-nav navbar-icon' })\n        )\n      )\n    );\n  }\n});\n\nmodule.exports = HeaderCustom;";
     },
     getData_control59_MOBJiQ: function (elem) {
       ;if (elem) {

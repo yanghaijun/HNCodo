@@ -27,9 +27,9 @@
         var basic3 = basic0 && basic0.querySelector('#backTravel'); //出差行程  返程
         var basic4 = basic0 && basic0.querySelectorAll('.input_table')[1]; // 出差方式
         var checks = basic4 && basic4.querySelectorAll('input[type="checkbox"]'); //判断出差方式
-        var aa = [];for (var i = 0; i < checks.length; i++) {
+        var aaStyle = [];for (var i = 0; i < checks.length; i++) {
           if (checks[i].checked) {
-            aa.push(checks[i].id);
+            aaStyle.push(checks[i].id);
           }
         }var fujians = elem.ownerDocument.querySelector('#attachmentListTbody'); //附件
         var approval = elem.ownerDocument.querySelector('#approvalLink').querySelector('table'); //审批记录
@@ -41,15 +41,62 @@
           data.data[9] = ['出差事由', basic1.querySelector('#travelReasons') && basic1.querySelector('#travelReasons').value.trim()];
         } else {
           data.data[9] = ['出差事由', basic1.querySelectorAll("tr")[4].querySelectorAll("td")[1].textContent];
-        }var goTravel = basic2.querySelector('#goTravel_departure_0');if (goTravel != null) {
-          data.data[10] = ['去程出发城市', basic2.querySelector('#goTravel_departure_0') && basic2.querySelector('#goTravel_departure_0').value.trim()];data.data[11] = ['去程到达城市', basic2.querySelector('#goTravel_arriva_0') && basic2.querySelector('#goTravel_arriva_0').value.trim()];
-        } else {
-          var trs = basic2.querySelector("#goTravel_tr_0");data.data[10] = ['去程出发城市', trs.querySelectorAll("td")[0].textContent.trim()];data.data[11] = ['去程到达城市', trs.querySelectorAll("td")[2].textContent.trim()];
-        }var backTravel = basic3.querySelector('#backTravel_departure_1');if (backTravel != null) {
-          data.data[12] = ['返程出发城市', basic3.querySelector('#backTravel_departure_1') && basic3.querySelector('#backTravel_departure_1').value.trim()];data.data[13] = ['返程到达城市', basic3.querySelector('#backTravel_arriva_1') && basic3.querySelector('#backTravel_arriva_1').value.trim()];
-        } else {
-          var trs = basic3.querySelector("#backTravel_tr_1");data.data[12] = ['返程出发城市', trs.querySelectorAll("td")[0].textContent.trim()];data.data[13] = ['返程到达城市', trs.querySelectorAll("td")[2].textContent.trim()];
-        }data.data[14] = ['出差方式', aa[0] == "train" ? "火车" : aa[0] == "plane" ? "飞机" : aa[0] == "carShip" ? "汽车轮船" : aa[0] == "ComCar" ? "公司派车" : "其它"]; //以下为附件
+        } //去程
+        var trs = basic2.querySelector("#goTravel_table") && basic2.querySelector("#goTravel_table").querySelectorAll("tr");var aa = [];for (var i = 0; i < trs.length; i++) {
+          if (trs[i].getAttribute("id")) {
+            aa.push(trs[i]);
+          }
+        }var goTraOne = [];var goTraTwo = [];for (var j = 0; j < aa.length; j++) {
+          if (aa.length - j == 1) {
+            if (aa[j].querySelectorAll("td")[0].querySelector("input")) {
+              goTraOne.push(aa[j].querySelectorAll("td")[0].querySelector("input").value.trim());
+            } else {
+              goTraOne.push(aa[j].querySelectorAll("td")[0].textContent.trim());
+            }if (aa[j].querySelectorAll("td")[2].querySelector("input")) {
+              goTraTwo.push(aa[j].querySelectorAll("td")[2].querySelector("input").value.trim());
+            } else {
+              goTraTwo.push(aa[j].querySelectorAll("td")[2].textContent.trim());
+            }
+          } else {
+            if (aa[j].querySelectorAll("td")[0].querySelector("input")) {
+              goTraOne.push(aa[j].querySelectorAll("td")[0].querySelector("input").value.trim() + "、");
+            } else {
+              goTraOne.push(aa[j].querySelectorAll("td")[0].textContent.trim() + "、");
+            }if (aa[j].querySelectorAll("td")[2].querySelector("input")) {
+              goTraTwo.push(aa[j].querySelectorAll("td")[2].querySelector("input").value.trim() + "、");
+            } else {
+              goTraTwo.push(aa[j].querySelectorAll("td")[2].textContent.trim() + "、");
+            }
+          }
+        }data.data[10] = ['去程出发城市', goTraOne];data.data[11] = ['去程到达城市', goTraTwo]; //返程
+        var trss = basic3.querySelector("#backTravel_table") && basic3.querySelector("#backTravel_table").querySelectorAll("tr");var aaa = [];for (var k = 0; k < trss.length; k++) {
+          if (trss[k].getAttribute("id")) {
+            aaa.push(trss[k]);
+          }
+        }var backTraOne = [];var backTraTwo = [];for (var f = 0; f < aaa.length; f++) {
+          if (aaa.length - f == 1) {
+            if (aaa[f].querySelectorAll("td")[0].querySelector("input")) {
+              backTraOne.push(aaa[f].querySelectorAll("td")[0].querySelector("input").value.trim());
+            } else {
+              backTraOne.push(aaa[f].querySelectorAll("td")[0].textContent.trim());
+            }if (aaa[f].querySelectorAll("td")[2].querySelector("input")) {
+              backTraTwo.push(aaa[f].querySelectorAll("td")[2].querySelector("input").value.trim());
+            } else {
+              backTraTwo.push(aaa[f].querySelectorAll("td")[2].textContent.trim());
+            }
+          } else {
+            if (aaa[f].querySelectorAll("td")[0].querySelector("input")) {
+              backTraOne.push(aaa[f].querySelectorAll("td")[0].querySelector("input").value.trim() + '、');
+            } else {
+              backTraOne.push(aaa[f].querySelectorAll("td")[0].textContent.trim() + '、');
+            }
+            if (aaa[f].querySelectorAll("td")[2].querySelector("input")) {
+              backTraTwo.push(aaa[f].querySelectorAll("td")[2].querySelector("input").value.trim() + '、');
+            } else {
+              backTraTwo.push(aaa[f].querySelectorAll("td")[2].textContent.trim() + '、');
+            }
+          }
+        }data.data[12] = ['返程出发城市', backTraOne];data.data[13] = ['返程到达城市', backTraTwo];data.data[14] = ['出差方式', aaStyle[0] == "train" ? "火车" : aaStyle[0] == "plane" ? "飞机" : aaStyle[0] == "carShip" ? "汽车轮船" : aaStyle[0] == "ComCar" ? "公司派车" : "其它"]; //以下为附件
         for (var i = 0; i < fujians.querySelectorAll('tr').length; i++) {
           if (fujians.querySelectorAll('tr')[i].querySelectorAll('a').length > 1) {
             if (fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpg') > -1 || fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('png') > -1 || fujians.querySelectorAll('tr')[i].querySelectorAll('a')[1].textContent.indexOf('jpeg') > -1) {
