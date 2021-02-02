@@ -1,18 +1,14 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
     getData_control54_KFEPqw: function (elem) {
-      'use strict';
-
       ;if (!elem) {
         return false;
       } //console.log(elem)
       return elem.ownerDocument.querySelector('.breadcrumb').querySelector('span').textContent;
     },
     doAction_uiControl42_JZiqkn: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'click') {
-        elem.ownerDocument.querySelector('#_easyui_tree_8').click();ysp.appMain.showLoading();setTimeout(function () {
+        elem.ownerDocument.querySelector('#_easyui_tree_10').click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
         }, 4000);
       }
@@ -23,13 +19,11 @@
     },
 
     getData_control2_nMD6MN: function (elem) {
-      'use strict';
-
       ;if (elem) {
         var data = {};data.data = [];data.file = [];data.approval = [];var basic1 = elem.ownerDocument.querySelectorAll('.input_table')[3];var basic2 = elem.ownerDocument.querySelectorAll('.input_table')[5]; // var basic3 = elem.querySelector('#detailTable');
         // var basicTr3 = basic3.querySelectorAll('tr');
         var basic4 = elem.querySelector('#attachmentListTbody');var approval = elem.querySelector('#approvalLink').querySelector('table');data.data[0] = ['借款人', basic1.querySelectorAll('tr')[1].children[3].textContent.replace(/\s+/g, '') + '-' + basic1.querySelectorAll('tr')[3].children[1].textContent.replace(/\s+/g, '')];data.data[1] = ['创建日期', basic1.querySelectorAll('tr')[2].children[3].textContent.replace(/\s+/g, '')]; // data.data[2] = ['报销类型',basic2.querySelectorAll('tr')[2].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')+'-差旅费'];
-        data.data[2] = ['借款类型', '部门费用-差旅费'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input').length > 0) {
+        data.data[2] = ['借款类型', '不涉及'];data.data[3] = ['单据号', basic1.querySelectorAll('tr')[2].children[1].textContent.replace(/\s+/g, '')];if (basic2.querySelectorAll('tr')[1].querySelectorAll('td')[1].querySelectorAll('input').length > 0) {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].querySelectorAll('input')[0].value.replace(/\s+/g, '')];
         } else {
           data.data[4] = ['说明', basic2.querySelectorAll('tr')[0].querySelectorAll('td')[1].textContent.replace(/\s+/g, '')];
@@ -61,7 +55,6 @@
           data.upload = false;
         } // for(var i=0;i<approval.querySelectorAll('tr').length;i++){
         //   if(i==0){
-
         //     var ths = [];
         //     for(var j=0;j<approval.querySelectorAll('tr')[i].querySelectorAll('th').length;j++){
         //       ths.push(approval.querySelectorAll('tr')[i].querySelectorAll('th')[j].textContent.replace(/\s+/g, ''));  
@@ -85,8 +78,6 @@
       }
     },
     doAction_uiControl2_li6doq: function (data, elem) {
-      'use strict';
-
       if (data.eventType == 'arrow') {
         elem.querySelector('#detailTable').querySelectorAll('tr')[1].querySelector('.searchLine').click();ysp.appMain.showLoading();setTimeout(function () {
           ysp.appMain.hideLoading();
@@ -98,31 +89,20 @@
           }
         }, 1000);
       } else if (data.eventType == 'preview') {
-        var _url = data.dataCustom[0];var type = '.' + data.dataCustom[1].replace(/\./, "");var options = { docName: '文档', docType: type, downloadUrl: _url };if (ysp.appMain.isIOS()) {
-          top.EAPI.openWindow(_url + '?_ysp_filepreview=1'); // var jsonStr = {
-          //   "type" : "document",
-          //   "downloadUrl" : _url,
-          //   "downloadHttpHeaders" : {},
-          //   "downloadHttpParams" : [],
-          //   "downloadType" : "get",
-          //   "docName" : "image.jpeg",
-          //   "docType" : type 
-          // };
-          // alert(jsonStr);
-          // alert(1);
-          // top.EAPI.openDocument(JSON.stringify(jsonStr));
-          // alert(2);
+        var _url = data.dataCustom[0];var type = '.' + data.dataCustom[1].replace(/\./, "");var _name = data.dataCustom[2];var cookies = elem.ownerDocument.cookie;var options = { docName: '文档', docType: type, downloadUrl: _url };if (ysp.appMain.isIOS()) {
+          top.EAPI.postMessageToNative("openDocument", { "url": _url, "type": "baoxiao" });
         } else {
-          console.log(JSON.stringify(options));top.yspUser.openDocument(JSON.stringify(options));
+          huaneng.fujian("baoxiao", _url, _name, '', cookies);
         }
       }
     },
     getTemplate_uiControl2_li6doq: function () {
-      var selfTemplate = 'module.exports = React.createClass({\n  upload: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'upload\'\n      })\n    }\n  },\n  arrow: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'arrow\'\n      })\n    }\n  },\n  arrowFile: function(e) {\n    var target = e.target;\n    if(target.getAttribute(\'class\')==\'spanArrow\'){\n      target.setAttribute(\'class\',\'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'block\';\n    }else{\n      target.setAttribute(\'class\',\'spanArrow\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'none\';\n    }\n  },\n  arrowApproval: function(e) {\n    var target = e.target;\n    if(target.getAttribute(\'class\')==\'spanArrow\'){\n      target.setAttribute(\'class\',\'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'block\';\n    }else{\n      target.setAttribute(\'class\',\'spanArrow\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'none\';\n    }\n  },\n  preview: function(e) {\n    var target = e.currentTarget;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'preview\',\n        data:[\n          target.getAttribute(\'data-href\'),\n          target.getAttribute(\'data-type\')\n        ]\n      })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n    return (\n      <div className="details">\n       \t<div className="detailsHead">\u57FA\u672C\u4FE1\u606F</div>\n        <ul className="detailsContent">\n          {data.data.map(function(d,i){\n            return(i<5?<li><span className="spanTitle">{d[0]}</span><span className="spanContent">{d[1]}</span></li>:\'\')\n          })}\n          <li><span className="spanTitle">{data.data[5][0]}</span><span className="spanContent">{data.data[5][1]}</span></li>\n          <li><span className="spanTitle">{data.data[6][0]}</span><span className="spanContent">{data.data[6][1]}</span><span onClick={_this.arrowFile} className="spanArrow"></span></li>\n          <div className="fileBox" style={{\'display\':\'none\'}}>\n            {data.file.map(function(d,i){\n              return(<li onClick={_this.preview} data-href={d[3]} data-type={d[2]}><span className={"spanBg"+\' \'+d[0]}></span><span className="spanName">{d[1]}</span></li>)\n            })}\n            {data.upload?<div onClick={_this.upload} className=\'uploadButton\'>\u589E\u52A0\u9644\u4EF6</div>:\'\'}\n          </div>\n            \n        </ul>\n      </div>\n    )\n  }\n});';
-      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  upload: function upload(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'upload\'\n      });\n    }\n  },\n  arrow: function arrow(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'arrow\'\n      });\n    }\n  },\n  arrowFile: function arrowFile(e) {\n    var target = e.target;\n    if (target.getAttribute(\'class\') == \'spanArrow\') {\n      target.setAttribute(\'class\', \'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'block\';\n    } else {\n      target.setAttribute(\'class\', \'spanArrow\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'none\';\n    }\n  },\n  arrowApproval: function arrowApproval(e) {\n    var target = e.target;\n    if (target.getAttribute(\'class\') == \'spanArrow\') {\n      target.setAttribute(\'class\', \'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'block\';\n    } else {\n      target.setAttribute(\'class\', \'spanArrow\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'none\';\n    }\n  },\n  preview: function preview(e) {\n    var target = e.currentTarget;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'preview\',\n        data: [target.getAttribute(\'data-href\'), target.getAttribute(\'data-type\')]\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    var data = this.props.customData;\n    return React.createElement(\n      \'div\',\n      { className: \'details\' },\n      React.createElement(\n        \'div\',\n        { className: \'detailsHead\' },\n        \'\\u57FA\\u672C\\u4FE1\\u606F\'\n      ),\n      React.createElement(\n        \'ul\',\n        { className: \'detailsContent\' },\n        data.data.map(function (d, i) {\n          return i < 5 ? React.createElement(\n            \'li\',\n            null,\n            React.createElement(\n              \'span\',\n              { className: \'spanTitle\' },\n              d[0]\n            ),\n            React.createElement(\n              \'span\',\n              { className: \'spanContent\' },\n              d[1]\n            )\n          ) : \'\';\n        }),\n        React.createElement(\n          \'li\',\n          null,\n          React.createElement(\n            \'span\',\n            { className: \'spanTitle\' },\n            data.data[5][0]\n          ),\n          React.createElement(\n            \'span\',\n            { className: \'spanContent\' },\n            data.data[5][1]\n          )\n        ),\n        React.createElement(\n          \'li\',\n          null,\n          React.createElement(\n            \'span\',\n            { className: \'spanTitle\' },\n            data.data[6][0]\n          ),\n          React.createElement(\n            \'span\',\n            { className: \'spanContent\' },\n            data.data[6][1]\n          ),\n          React.createElement(\'span\', { onClick: _this.arrowFile, className: \'spanArrow\' })\n        ),\n        React.createElement(\n          \'div\',\n          { className: \'fileBox\', style: { \'display\': \'none\' } },\n          data.file.map(function (d, i) {\n            return React.createElement(\n              \'li\',\n              { onClick: _this.preview, \'data-href\': d[3], \'data-type\': d[2] },\n              React.createElement(\'span\', { className: "spanBg" + \' \' + d[0] }),\n              React.createElement(\n                \'span\',\n                { className: \'spanName\' },\n                d[1]\n              )\n            );\n          }),\n          data.upload ? React.createElement(\n            \'div\',\n            { onClick: _this.upload, className: \'uploadButton\' },\n            \'\\u589E\\u52A0\\u9644\\u4EF6\'\n          ) : \'\'\n        )\n      )\n    );\n  }\n});';
+      var selfTemplate = 'module.exports = React.createClass({\n  upload: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'upload\'\n      })\n    }\n  },\n  arrow: function(e) {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'arrow\'\n      })\n    }\n  },\n  arrowFile: function(e) {\n    var target = e.target;\n    if(target.getAttribute(\'class\')==\'spanArrow\'){\n      target.setAttribute(\'class\',\'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'block\';\n    }else{\n      target.setAttribute(\'class\',\'spanArrow\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'none\';\n    }\n  },\n  arrowApproval: function(e) {\n    var target = e.target;\n    if(target.getAttribute(\'class\')==\'spanArrow\'){\n      target.setAttribute(\'class\',\'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'block\';\n    }else{\n      target.setAttribute(\'class\',\'spanArrow\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'none\';\n    }\n  },\n  preview: function(e) {\n    var target = e.currentTarget;\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\'preview\',\n        data:[\n          target.getAttribute(\'data-href\'),\n          target.getAttribute(\'data-type\'),\n          target.getAttribute(\'data-name\')\n        ]\n      })\n    }\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.customData;\n    return (\n      <div className="details">\n       \t<div className="detailsHead">\u57FA\u672C\u4FE1\u606F</div>\n        <ul className="detailsContent">\n          {data.data.map(function(d,i){\n            return(i<5?<li><span className="spanTitle">{d[0]}</span><span className="spanContent">{d[1]}</span></li>:\'\')\n          })}\n          <li><span className="spanTitle">{data.data[5][0]}</span><span className="spanContent">{data.data[5][1]}</span></li>\n          <li><span className="spanTitle">{data.data[6][0]}</span><span className="spanContent">{data.data[6][1]}</span><span onClick={_this.arrowFile} className="spanArrow"></span></li>\n          <div className="fileBox" style={{\'display\':\'none\'}}>\n            {data.file.map(function(d,i){\n              return(<li onClick={_this.preview} data-name={d[1]} data-href={d[3]} data-type={d[2]}><span className={"spanBg"+\' \'+d[0]}></span><span className="spanName">{d[1]}</span></li>)\n            })}\n            {data.upload?<div onClick={_this.upload} className=\'uploadButton\'>\u589E\u52A0\u9644\u4EF6</div>:\'\'}\n          </div>\n            \n        </ul>\n      </div>\n    )\n  }\n});';
+      return '\'use strict\';\n\nmodule.exports = React.createClass({\n  displayName: \'exports\',\n\n  upload: function upload(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'upload\'\n      });\n    }\n  },\n  arrow: function arrow(e) {\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'arrow\'\n      });\n    }\n  },\n  arrowFile: function arrowFile(e) {\n    var target = e.target;\n    if (target.getAttribute(\'class\') == \'spanArrow\') {\n      target.setAttribute(\'class\', \'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'block\';\n    } else {\n      target.setAttribute(\'class\', \'spanArrow\');\n      target.ownerDocument.querySelector(\'.fileBox\').style.display = \'none\';\n    }\n  },\n  arrowApproval: function arrowApproval(e) {\n    var target = e.target;\n    if (target.getAttribute(\'class\') == \'spanArrow\') {\n      target.setAttribute(\'class\', \'spanArrow arr\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'block\';\n    } else {\n      target.setAttribute(\'class\', \'spanArrow\');\n      target.ownerDocument.querySelector(\'.dropBox\').style.display = \'none\';\n    }\n  },\n  preview: function preview(e) {\n    var target = e.currentTarget;\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: \'preview\',\n        data: [target.getAttribute(\'data-href\'), target.getAttribute(\'data-type\'), target.getAttribute(\'data-name\')]\n      });\n    }\n  },\n  render: function render() {\n    var _this = this;\n    var data = this.props.customData;\n    return React.createElement(\n      \'div\',\n      { className: \'details\' },\n      React.createElement(\n        \'div\',\n        { className: \'detailsHead\' },\n        \'\\u57FA\\u672C\\u4FE1\\u606F\'\n      ),\n      React.createElement(\n        \'ul\',\n        { className: \'detailsContent\' },\n        data.data.map(function (d, i) {\n          return i < 5 ? React.createElement(\n            \'li\',\n            null,\n            React.createElement(\n              \'span\',\n              { className: \'spanTitle\' },\n              d[0]\n            ),\n            React.createElement(\n              \'span\',\n              { className: \'spanContent\' },\n              d[1]\n            )\n          ) : \'\';\n        }),\n        React.createElement(\n          \'li\',\n          null,\n          React.createElement(\n            \'span\',\n            { className: \'spanTitle\' },\n            data.data[5][0]\n          ),\n          React.createElement(\n            \'span\',\n            { className: \'spanContent\' },\n            data.data[5][1]\n          )\n        ),\n        React.createElement(\n          \'li\',\n          null,\n          React.createElement(\n            \'span\',\n            { className: \'spanTitle\' },\n            data.data[6][0]\n          ),\n          React.createElement(\n            \'span\',\n            { className: \'spanContent\' },\n            data.data[6][1]\n          ),\n          React.createElement(\'span\', { onClick: _this.arrowFile, className: \'spanArrow\' })\n        ),\n        React.createElement(\n          \'div\',\n          { className: \'fileBox\', style: { \'display\': \'none\' } },\n          data.file.map(function (d, i) {\n            return React.createElement(\n              \'li\',\n              { onClick: _this.preview, \'data-name\': d[1], \'data-href\': d[3], \'data-type\': d[2] },\n              React.createElement(\'span\', { className: "spanBg" + \' \' + d[0] }),\n              React.createElement(\n                \'span\',\n                { className: \'spanName\' },\n                d[1]\n              )\n            );\n          }),\n          data.upload ? React.createElement(\n            \'div\',\n            { onClick: _this.upload, className: \'uploadButton\' },\n            \'\\u589E\\u52A0\\u9644\\u4EF6\'\n          ) : \'\'\n        )\n      )\n    );\n  }\n});';
     },
     getData_control60_sai2SN: function (elem) {
       'use strict';
+
       ;var data = [];if (elem) {
         if (elem.querySelectorAll('input')[0].parentNode.style.display != 'none') {
           data.push(elem.querySelectorAll('input')[0].value.replace(/\s+/g, ''));data.push(elem.querySelectorAll('input')[1].value.replace(/\s+/g, ''));
@@ -131,6 +111,7 @@
     },
     doAction_uiControl48_17cXto: function (data, elem) {
       'use strict';
+
       if (data.eventType == 'save') {
         elem.querySelectorAll('input')[0].click();
       } else if (data.eventType == 'submit') {

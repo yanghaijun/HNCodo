@@ -3,6 +3,9 @@
   "id": "staffLoan",
   "targetURL": "http://223.71.99.53:85/ReimbursePlatform/myReimburse/index.action",
   "jsFile": "index.js",
+  "requires": {
+    "TodoList": "../TodoList/index.json"
+  },
   "chineseName": "员工借款单",
   "description": "",
   "firstPaintEnable": false,
@@ -212,6 +215,10 @@
       "toContexts": [
         {
           "toContextId": "context14_D636DG"
+        },
+        {
+          "toContextId": "context1_RXxJco",
+          "toModelId": "TodoList"
         }
       ]
     },
